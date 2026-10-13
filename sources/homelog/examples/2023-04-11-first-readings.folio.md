@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
   type: "HomeLogEntry"
-  sha256: "TODO"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
 ---
 **7:15 AM** — <ref id="note_1">First day using the new cuff and the meter app together. Dr said check BP twice a week and sugar in the mornings.</ref>
 

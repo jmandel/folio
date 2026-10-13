@@ -51,3 +51,23 @@ Resolved at Stage 0a → 0b handoff (2026-10-13):
 
 ## Stage 0c follow-up (orchestrator)
 - **Inpatient eGFR in cohort 1**: excluded from the chronic decline slope (acute illness, e.g. the DKA admission AKI). The cohort definition must say so explicitly; this is itself a realistic trap for the verifier.
+
+## Stage 0e (2026-10-13): review fixes
+
+- **Medication changes adopted into truth**: losartan 50 → 100 mg (maximum dose) at Northgate on
+  2025-08-18, so finerenone in 2026-07 is added on top of maximal ARB; metformin 1000 → 500 mg BID at
+  Northgate on 2026-02-11 (eGFR 41). HomeLog's 2026-05-02 list agrees with both.
+- **Labs adopted**: K 4.6 on 2026-02-09 (baseline before finerenone); the 4-week check on 2026-08-10
+  has Cr 1.50 / eGFR 40 with the K 5.2; 2026-09-14 has Cr 1.52 / eGFR 39 with the K 5.8, then the CONF
+  repeat 5.7. The 2-week recheck due 2026-09-28 was never drawn; finerenone stays held at 2026-10-13.
+- **Riverside DKA course**: losartan held with chlorthalidone (volume depletion, K 5.0); glargine 14 u
+  given 2 h before the drip stopped (09:00 CST, after the 06:10 BMP showed the gap closed); venous
+  pCO₂ 28 (Winter's formula). Glargine stops at discharge.
+- **Riverside `held`**: one meaning (paused, someone decides later). The new `restart_advice` field
+  says which way the author leans; empagliflozin at discharge is `advise_against`.
+- **Northgate diagnoses**: `billing_dx` and `referral_dx` are top-level entries, per the
+  disclosure-boundary rule.
+- **Schema hashes**: real SHA-256 in every example (`bun work/schema-hashes.ts`); `check-examples.ts`
+  fails on a stale hash.
+- **NPIs** (1999000017, 1999000042, the spec's 1952384017) fail the NPI Luhn check. Kept: they can
+  never collide with real NPIs. A validator that checks NPIs must allowlist them.

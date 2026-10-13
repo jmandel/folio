@@ -44,8 +44,9 @@ originating system.
 |---|---|---|---|
 | ~2014 | HTN onset | **B** | Problem list, onset "2014" (year precision) |
 | ~2016 | T2DM onset | **B** | Problem list, onset "2016" (year precision) |
+| 2019-03-18 | Northgate adds HTN to its problem list with onset 2014 (year precision) | **B** | Problem event, `2014-01-01`/`year`, no SNOMED (line predates 2020) |
 | 2019 | Depression (MDD, recurrent, mild) dx; sertraline 100 mg daily | **B** | Problem + med, flagged sensitive (behavioral health) |
-| 2021-01-14 | Baseline labs: Cr 0.98 mg/dL, eGFR reported ">60" (both CKD-EPI 2009 rows; computed 65 / 76), A1c 7.4% | **C**, B (imported) | C stores eGFR as text ">60" with numeric sentinel; B imports copy |
+| 2021-01-14 | Baseline labs: Cr 0.98 mg/dL, eGFR reported ">60" (both CKD-EPI 2009 rows; computed 65 / 75), A1c 7.4% | **C**, B (imported) | C stores eGFR as text ">60" with numeric sentinel; B imports copy |
 | 2021-01-14 | Meds at baseline: metformin 1000 mg BID, lisinopril 20 mg, atorvastatin 40 mg, sertraline 100 mg | **B** | Med events |
 | 2021-06-03 | Dry cough 2 months → lisinopril stopped, losartan 50 mg started | **B** | Med events + intolerance entry "lisinopril: cough". Prose: "No lip, tongue or throat swelling." |
 | 2021-07-01 | Lakeview reporting rule changes: eGFR ≥ 60 was printed ">60"; from now numeric up to 90, ">90" above | **C** | Documented in C's schema only |
@@ -53,32 +54,34 @@ originating system.
 | 2022-01-10 | Lakeview switches to race-free CKD-EPI 2021 | **C** | New result code for eGFR; old code retired |
 | 2022-02-07 | Cr 1.18, eGFR 54, UACR 85 mg/g → **CKD stage 3a** added | **C**, **B** | B problem event; C results |
 | 2022-05-16 | BP above goal → chlorthalidone 12.5 mg added | **B** | Med event |
-| 2022-09-12 | K 6.1 (hemolyzed) → recollected same day K 4.6 | **C**, B | C: supersedes its first requisition item, restating the 6.1 row as withdrawn (`RESULT_STATUS` 'C') with a pointer to the redraw; B imported both, then supersedes its 6.1 copy with a corrected copy ("Result invalidated") |
+| 2022-09-12 | K 6.1 (hemolyzed) → recollected same day K 4.6 | **C**, B | C: supersedes its first requisition item, restating the 6.1 row as withdrawn (`RESULT_STATUS` 'C') with a pointer to the redraw; the redraw is its own requisition (`REPEAT_REASON` 'HEM'). B imported both, then supersedes its 6.1 copy with a corrected copy ("Result invalidated") |
 | 2023-03-06 | eGFR 49, A1c 7.9 → empagliflozin 10 mg started; metformin unchanged | **B**, C | Med event; prose gives reason "CKD + DM, cardiorenal benefit" |
 | 2023-04 → | Home BP readings ~2×/week; home glucose meter (set to mmol/L until 2024-02) | **P** | App readings, local time without offset |
 | 2024-02-10 | Meter switched to mg/dL | **P** | Unit field changes mid-series |
 | 2024-10-29 → 11-01 | Gastroenteritis, poor intake; keeps taking empagliflozin | **P** | Symptom notes (prose only): "can't keep food down, still taking my pills" |
-| 2024-11-01 21:40 CDT (= 11-02 02:40Z) | ED: nausea, vomiting, Kussmaul breathing; glucose 182 mg/dL, pH 7.21, HCO₃ 11, anion gap 24, β-hydroxybutyrate 6.2 mmol/L, Na 129, K 5.0, Cr 1.41, eGFR 43, platelets 268, lipase 28 (resulted after the ED note), troponin <0.01 | **A** | ED note: "R/O pancreatitis" (working), "No evidence of ACS". H&P: "Pancreatitis ruled out: lipase 28" |
-| 2024-11-02 01:30 → 11-05 11:30 | Admitted: **euglycemic DKA, SGLT2i-associated**, precipitant gastroenteritis + reduced intake; insulin infusion; empagliflozin and metformin **held**, chlorthalidone held; losartan, atorvastatin and sertraline continued. Daylight time ends 11-03 02:00 (UTC−5 → UTC−6) | **A** | Admission H&P, progress notes, endocrinology consult, discharge summary (each re-lists meds) |
-| 2024-11-05 | Discharge: metformin resumed; chlorthalidone resumed; empagliflozin "held — do not resume until PCP review"; Na 133 at discharge | **A** | Discharge summary. Prose: "would not restart" ; structured status still `held` |
+| 2024-11-01 21:40 CDT (= 11-02 02:40Z) | ED: nausea, vomiting, Kussmaul breathing; glucose 182 mg/dL, venous pH 7.21, pCO₂ 28 mmHg, HCO₃ 11, anion gap 24, β-hydroxybutyrate 6.2 mmol/L, Na 129, K 5.0, Cr 1.41, eGFR 43, platelets 268, lipase 28 (resulted after the ED note), troponin <0.01 | **A** | ED note: "R/O pancreatitis" (working), "No evidence of ACS". H&P: "Pancreatitis ruled out: lipase 28" |
+| 2024-11-02 01:30 → 11-05 11:30 | Admitted: **euglycemic DKA, SGLT2i-associated**, precipitant gastroenteritis + reduced intake; insulin infusion with dextrose; anion gap closed on the 11-03 06:10 BMP, glargine 14 u given 07:00, infusion stopped 09:00 (2 h overlap); glargine + correction lispro until discharge. Empagliflozin and metformin **held**; chlorthalidone and losartan held for volume depletion (K 5.0, Cr 1.41); atorvastatin and sertraline continued. Daylight time ends 11-03 02:00 (UTC−5 → UTC−6) | **A** | Admission H&P, progress notes, endocrinology consult, discharge summary (each re-lists meds) |
+| 2024-11-05 | Discharge: metformin, chlorthalidone and losartan resumed; glargine stopped (no insulin at discharge); empagliflozin "held — do not resume until PCP review"; Na 133 at discharge | **A** | Discharge summary: status `held` with `restart_advice: "advise_against"`; prose "I would not restart it" |
 | 2024-11-12 | PCP follow-up: empagliflozin **discontinued**; adverse reaction entry "empagliflozin: euglycemic DKA"; sick-day rules taught | **B** | Med event, allergy/intolerance event, terse note |
-| 2025-08-18 | A1c 8.6 → insulin glargine 10 units nightly started | **B**, C | Med event |
+| 2025-08-18 | A1c 8.6 → insulin glargine 10 units nightly started; BP above goal with albuminuria → losartan 50 → 100 mg (maximum dose) | **B**, C | Med events |
 | 2025-08-18 | Platelets 212 | **C**, B | C: "212" unit code K/uL; B import: 212000 "cells/uL" |
 | 2025-10 → | Self-adjusts glargine: 10 units, 12 if that day's glucose was over 200 mg/dL (earlier dose logs show 10) | **P** | My Medicines list "how I take it" (patient's words); dose logs. No clinic knows |
 | 2025-11-03 | Atorvastatin 80 mg entered on Linda's chart in error (meant for another patient), voided next day | **B** | Med event, then retraction event |
-| 2026-02-09 | Cr 1.45, eGFR 41, UACR 320 mg/g, Na 132, A1c 8.2 | **C**, B | CKD now stage 3b by labs; B problem list still says "CKD stage 3a" |
+| 2026-02-09 | Cr 1.45, eGFR 41, K 4.6, UACR 320 mg/g, Na 132, A1c 8.2 | **C**, B | CKD now stage 3b by labs; B problem list still says "CKD stage 3a" |
+| 2026-02-11 | eGFR < 45 → metformin reduced 1000 → 500 mg BID (max 1000 mg/day at eGFR 30–44) | **B**, P | B `med_event` `change` (phone); P's list (2026-05-02) shows 500 mg, 1 tablet twice a day |
 | 2026-03-28 | OTC ibuprofen (Advil 200 mg, 2 tablets about twice a week for knee pain, taking since about 2025) appears on her own medicine list | **P** | My Medicines list, `over_the_counter`. No clinic knows |
 | 2026-05-04 | Referral to Lakeview nephrology: "eGFR decline, albuminuria, prior SGLT2i euDKA — re-challenge?" | **B** | Referral event + short letter |
 | 2026-06 | Lakeview intake (agent-to-agent): clarifying questions — see below | **C** ↔ B, P | Exchange stage |
-| 2026-07-13 | Nephrology visit: CKD 3b A3 confirmed; finerenone 10 mg started; SGLT2i **not** re-tried for now ("revisit after sick-day plan proven"); problem list updated | **C** | Coded visit rows + short note |
+| 2026-07-13 | Nephrology visit: CKD 3b A3 confirmed; albuminuria persists on maximum losartan, K 4.6 (Feb) → finerenone 10 mg prescribed (`START_DATE` 07-14); K and creatinine in 4 weeks; SGLT2i **not** re-tried for now ("revisit after sick-day plan proven"); problem list updated | **C** | Coded visit rows + short note |
 | 2026-07-20 | Northgate phone reconciliation adds finerenone from Lakeview's visit summary | B | Outside med line, Lakeview drug id only (no RxNorm); never updated afterwards |
-| 2026-08-10 | K 5.2 → finerenone continued | **C** | Result |
-| 2026-09-14 | K 5.8 (not hemolyzed, confirmed on redraw 5.7) → finerenone **held**, recheck in 2 weeks | **C**, B | C: status-history row 1 → 3 (the original order row still says 1). B imports the K results only; its outside finerenone line still shows active |
+| 2026-08-10 | 4-week check: K 5.2, Cr 1.50, eGFR 40 → finerenone continued, recheck in 5 weeks | **C**, B | Results |
+| 2026-09-14 | Morning K 5.8 (not hemolyzed; Cr 1.52, eGFR 39), confirmed on same-day redraw 5.7 (`REPEAT_REASON` 'CONF') → finerenone **held**, recheck K in 2 weeks | **C**, B | C: two requisition items and a phone contact with a status-history row 1 → 3 (the original order row still says 1). B imports the results; its outside finerenone line still shows active |
+| 2026-09-28 | Planned K recheck not drawn (she has not gone to the lab) | | Nothing recorded anywhere; finerenone stays held |
 | 2026-10-13 | Now | | |
 
 ### Current truth (2026-10-13)
 
-- **Active meds:** metformin 1000 mg BID, losartan 50 mg, chlorthalidone 12.5 mg, atorvastatin 40 mg,
+- **Active meds:** metformin 500 mg BID (since 2026-02-11), losartan 100 mg, chlorthalidone 12.5 mg, atorvastatin 40 mg,
   sertraline 100 mg, insulin glargine 10 u nightly as prescribed (she takes 12 u on days her glucose was
   over 200; known only to P), ibuprofen 400 mg OTC about twice a week (known only to P).
 - **Held:** finerenone 10 mg (since 2026-09-14, intent to resume).
@@ -87,8 +90,9 @@ originating system.
   (sensitive), history of euglycemic DKA 2024 (resolved).
 - **Allergies / intolerances:** lisinopril — cough (intolerance, not allergy; no angioedema);
   empagliflozin — euglycemic DKA (adverse reaction, high severity).
-- **Latest labs:** Cr 1.45 mg/dL, eGFR 41 (2026-02-09); K 5.7 (2026-09-14 redraw); A1c 8.2 (2026-02-09);
-  UACR 320 mg/g.
+- **Latest labs:** Cr 1.52 mg/dL, eGFR 39 (2026-09-14); K 5.7 (2026-09-14 redraw, confirming 5.8 the
+  same morning; both valid); Na 132, A1c 8.2, UACR 320 mg/g (2026-02-09). The 2-week K recheck due
+  2026-09-28 has not been drawn, so there is no newer K and finerenone stays held.
 
 ## Where facts live (modality matrix)
 
@@ -99,15 +103,16 @@ originating system.
 | DKA precipitant (gastroenteritis, poor intake) | A (H&P), P (symptom notes) | | | |
 | Patient kept taking empagliflozin while sick | **P only** | | | |
 | Pancreatitis / ACS ruled out | A | | lipase/troponin values structured in A | |
-| Empagliflozin held vs discontinued | A prose "would not restart" | A `held` | B `discontinued` | A and B disagree by design |
+| Empagliflozin held vs discontinued | | | A `held` + `restart_advice: "advise_against"` ("would not restart"); B `discontinued` | A and B disagree by design |
 | Euglycemic DKA as adverse reaction | | | B | A has it as a diagnosis, B as a reaction |
 | β-hydroxybutyrate, pH, anion gap | | A | | |
 | Outpatient labs | | C | | C → B import (same accession) |
 | Home BP / glucose | | P | | |
 | CKD stage | B problem (stale 3a) | C results imply 3b | C visit (3b, 2026-07) | B vs C disagree until 2026-07 |
-| Depression, sertraline | | | B | Sertraline re-listed in every A document; P lists sertraline (no depression) |
+| Depression, sertraline | | | B | Sertraline re-listed in every A document; P lists sertraline (no depression); C's 2026-07-13 note names sertraline in its own span (after Q3 below) |
 | OTC ibuprofen use | | P (self-reported list) | | Unknown to A, B, C |
 | Glargine self-adjusted dose | P ("12 if my sugar was over 200") | P dose logs | | B says 10 u nightly |
+| Metformin dose reduction (2026-02) | | | B med event (+ note) | P list agrees (500 mg, 1 twice a day); A's 2024 documents show the old 1000 mg BID |
 | Finerenone held | | C status-history row | C note | B outside line still active (never reconciled) |
 | Re-challenge decision | C note | | | |
 

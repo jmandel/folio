@@ -51,7 +51,7 @@ Schema: [`schema/homelog-v1.d.ts`](schema/homelog-v1.d.ts), entry type `HomeLogE
 - **T14** duplicates: a typed reading can duplicate a synced one; a superseded day page restates every
   reading, so counting entries across all items, not just current ones, double-counts.
 - **T1-flavoured disagreement**: her list keeps Jardiance as `stopped` with her reason; she has no
-  "held" status. Her list also disagrees with the clinics on purpose: metformin as 2 × 500 mg, a
-  sliding Lantus dose ("12 if my sugar was over 200"), and OTC Advil that no clinic knows about.
+  "held" status. Her list also disagrees with the clinics on purpose: a sliding Lantus dose ("12 if
+  my sugar was over 200"), and OTC Advil that no clinic knows about.
 - **T19** sertraline is one `my_med` entry (`med_5`), so it can be disclosed alone, without any
   depression problem or note — which is what Linda does in the referral exchange.

@@ -12,21 +12,22 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "TODO"
+  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
 ---
 New patient. Referred by Northgate FM (Dr. Reyes) for eGFR decline, albuminuria, prior SGLT2i euDKA.
 
 <ref id="dx_ckd">CKD G3b A3</ref>, diabetic and hypertensive. eGFR 54 → 41 since 2022, UACR 85 → 320 mg/g.
-BP 136/82 on losartan 50 and chlorthalidone 12.5.
+BP 136/82 on losartan 100 (maximum dose since 8/2025) and chlorthalidone 12.5. K 4.6 in 2/2026.
+A1c 8.2 on metformin 500 BID (reduced 2/2026 for eGFR) and glargine 10 u nightly.
 
-<ref id="dx_na">Na 132</ref>, mild. Chlorthalidone likely; sertraline (disclosed at intake) may contribute.
-No change today.
+<ref id="dx_na">Na 132</ref>, mild. Chlorthalidone likely; <ref id="na_sertraline">sertraline (disclosed
+at intake) may contribute</ref>. No change today.
 
 Euglycemic DKA 11/2024 on empagliflozin, details per Riverside records.
 <ref id="sglt2_decision">Not re-trying an SGLT2i for now. Revisit after her sick-day plan is proven.</ref>
 
-Plan: start <ref id="rx_finerenone">finerenone 10 mg daily</ref>. K and creatinine in 4 weeks. Continue
-losartan. Return 3 months.
+Albuminuria persists on maximum ARB, so: start <ref id="rx_finerenone">finerenone 10 mg daily</ref>.
+K and creatinine in 4 weeks. Continue losartan 100. Return 3 months.
 
 ```json payload
 {

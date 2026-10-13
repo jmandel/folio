@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
   type: "HomeLogEntry"
-  sha256: "TODO"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
 ---
 **3:30 PM** — <ref id="note_1">Marcus changed the meter so it shows the numbers the same way the clinic does. Morning one was still the old way.</ref>
 

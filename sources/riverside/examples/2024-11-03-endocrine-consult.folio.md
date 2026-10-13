@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts"
   type: "RiversideEntry"
-  sha256: "TODO"
+  sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
 ## Endocrinology consult
 
@@ -22,10 +22,11 @@ schema:
 with ketoacidosis after several days of vomiting and very little food. Admission glucose was 182 with
 <ref id="bhb_1">beta-hydroxybutyrate 6.2</ref>. Never on insulin; no prior DKA.
 
-**Course.** <ref id="bhb_2">Beta-hydroxybutyrate 2.1</ref> yesterday afternoon and
-<ref id="bhb_3">0.3 this morning</ref>. <ref id="bmp_am">Anion gap 11 and bicarbonate 21 this
-morning</ref>. The <ref id="iv_insulin">insulin infusion</ref> was stopped at 04:30 after the gap
-closed; she is now on <ref id="sc_lispro">correction-scale insulin lispro</ref> and tolerating clear
+**Course.** <ref id="bhb_2">Beta-hydroxybutyrate 2.1</ref> at midday yesterday and
+<ref id="bhb_3">0.3 this morning</ref>. <ref id="bmp_am">Anion gap 11 and bicarbonate 21 on the 06:10
+panel</ref>. With the gap closed she was given <ref id="sc_glargine">insulin glargine 14 units</ref> at
+07:00, and the <ref id="iv_insulin">insulin infusion</ref> was stopped two hours later, at 09:00. She is
+now on glargine with <ref id="sc_lispro">correction-scale insulin lispro</ref> and tolerating clear
 liquids.
 
 **Assessment.** <ref id="dx_edka">Euglycemic DKA due to empagliflozin, now resolved</ref>. The
@@ -38,7 +39,8 @@ suggests type 1 diabetes or insulin deficiency beyond that.
    her nephrologist later wants an SGLT2 inhibitor for kidney protection, that should be a deliberate
    decision with written sick-day guidance in place first.
 2. <ref id="med_metformin">Metformin can resume</ref> once she is eating and creatinine is stable.
-3. No basal insulin needed at discharge if glucose stays under 200 on metformin.
+3. Continue glargine 14 units daily while inpatient. No basal insulin needed at discharge if glucose
+   stays under 200 on metformin.
 4. A1c with her next outpatient labs.
 
 ```json payload
@@ -120,7 +122,15 @@ suggests type 1 diabetes or insulin deficiency beyond that.
     "route": "IV",
     "dose_text": "per DKA protocol, 0.1 units/kg/h",
     "started": "2024-11-02T04:05:00Z",
-    "stopped": "2024-11-03T10:30:00Z"
+    "stopped": "2024-11-03T15:00:00Z"
+  },
+  "sc_glargine": {
+    "type": "inpatient_med",
+    "drug_name": "insulin glargine",
+    "rxnorm_ingredient": "274783",
+    "route": "SubQ",
+    "dose_text": "14 units daily",
+    "started": "2024-11-03T13:00:00Z"
   },
   "sc_lispro": {
     "type": "inpatient_med",
@@ -128,7 +138,7 @@ suggests type 1 diabetes or insulin deficiency beyond that.
     "rxnorm_ingredient": "86009",
     "route": "SubQ",
     "dose_text": "low-dose correction scale before meals",
-    "started": "2024-11-03T14:15:00Z"
+    "started": "2024-11-03T15:00:00Z"
   },
   "alg_lisinopril": {
     "type": "allergy",
@@ -144,6 +154,7 @@ suggests type 1 diabetes or insulin deficiency beyond that.
     "dose_text": "1000 mg",
     "sig": "1 tab PO BID with meals",
     "status": "held",
+    "restart_advice": "resume_when_able",
     "instructions": "May resume when eating and creatinine stable"
   },
   "med_empa": {
@@ -153,6 +164,7 @@ suggests type 1 diabetes or insulin deficiency beyond that.
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",
+    "restart_advice": "advise_against",
     "instructions": "Recommend against restarting at discharge"
   },
   "med_losartan": {
@@ -161,7 +173,7 @@ suggests type 1 diabetes or insulin deficiency beyond that.
     "rxnorm_ingredient": "52175",
     "dose_text": "50 mg",
     "sig": "1 tab PO daily",
-    "status": "continue"
+    "status": "held"
   },
   "med_chlorthalidone": {
     "type": "home_med",

@@ -37,7 +37,7 @@ File names use the local clinical date; the ED note's `effective` is `2024-11-02
 
 | Trap | How it shows up |
 |---|---|
-| T1 held vs discontinued | Discharge summary: empagliflozin `status: "held"`; "would not restart" only in prose. Northgate stops it a week later. |
+| T1 held vs discontinued | Discharge summary: empagliflozin `status: "held"` with `restart_advice: "advise_against"` ("I would not restart it"): held, not stopped, because her PCP decides. Northgate stops it a week later. Other held lines (metformin, losartan, chlorthalidone in the H&P) carry `"resume_when_able"`. |
 | T7 platelets | Stored as `"268"` with unit `10*3/uL`. |
 | T9 text values | Every lab value is a string; troponin is `"<0.01"`. |
 | T10 time zones | ED arrival 21:40 local on 11/01 is `2024-11-02T02:40:00Z`; daylight time ends mid-stay (UTC-5 to UTC-6 on 11/03). |

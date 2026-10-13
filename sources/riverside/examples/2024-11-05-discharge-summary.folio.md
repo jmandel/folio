@@ -13,7 +13,7 @@ author:
 schema:
   url: "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts"
   type: "RiversideEntry"
-  sha256: "TODO"
+  sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
 ## Discharge summary
 
@@ -28,10 +28,12 @@ ruled out</ref> (normal lipase).
 **Hospital course.** Ms. Okafor presented with ketoacidosis and a glucose of only 182 after
 <ref id="precipitant">three days of vomiting and diarrhea with very little to eat or drink</ref>, while
 on empagliflozin. Initial pH 7.21, bicarbonate 11, anion gap 24, beta-hydroxybutyrate 6.2. She was
-treated with an insulin infusion and dextrose-containing fluids; the gap closed early on 11/03 and the
-infusion was stopped. <ref id="bhb_3">Beta-hydroxybutyrate was 0.3 on 11/03.</ref> Endocrinology saw
-her and advised against restarting SGLT2 inhibitors. Diet advanced on 11/04 without trouble; glucose
-130s–170s on correction insulin alone. <ref id="bmp_dc">Sodium 133 and creatinine 1.33 this
+treated with an insulin infusion and dextrose-containing fluids. The gap had closed by the morning of
+11/03; she was given basal glargine and the infusion was stopped two hours later.
+<ref id="bhb_3">Beta-hydroxybutyrate was 0.3 on 11/03.</ref> Endocrinology saw her and advised against
+restarting SGLT2 inhibitors. Losartan and chlorthalidone were held for volume depletion. Diet advanced
+on 11/04 without trouble; glucose 130s–170s on glargine and correction insulin. Glargine was stopped
+this morning with metformin resumed. <ref id="bmp_dc">Sodium 133 and creatinine 1.33 this
 morning.</ref>
 
 **Medications at discharge**
@@ -40,6 +42,7 @@ morning.</ref>
   restart it.</ref>
 - <ref id="med_metformin">Metformin: resume</ref> at the usual dose.
 - <ref id="med_chlorthalidone">Chlorthalidone: resume</ref>; sodium has recovered to 133.
+- <ref id="med_losartan">Losartan: resume</ref>; creatinine is back near her usual.
 - All other home medications unchanged. No insulin at discharge.
 
 **Follow-up:** <ref id="fu_pcp">primary care within 1 week</ref> to decide about empagliflozin and
@@ -149,6 +152,7 @@ recheck a basic metabolic panel.
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",
+    "restart_advice": "advise_against",
     "instructions": "Do not resume until reviewed by PCP"
   },
   "med_losartan": {

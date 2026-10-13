@@ -8,7 +8,7 @@ recorded: "2021-01-14T13:18:44-06:00"
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "LabReportRow"
-  sha256: "TODO"
+  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
 ---
 
 ```json payload

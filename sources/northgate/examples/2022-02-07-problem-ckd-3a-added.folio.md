@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
   type: "ChartEvent"
-  sha256: "TODO"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 <ref id="prob_1">eGFR 54, UACR 85 today; eGFR 55 in 9/2021. CKD 3a.</ref>
 

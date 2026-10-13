@@ -15,7 +15,8 @@ log), C = Lakeview Labs & Kidney Care (coded tables), P = HomeLog (patient app).
 ### T1. Held vs discontinued
 - **Hero:** empagliflozin at discharge 2024-11-05 is `held` in A; B discontinues it 2024-11-12.
   Finerenone is `held` in C since 2026-09-14 and is meant to resume.
-- **Appears as:** A: `status: "held"` plus prose "would not restart". B: `med_event` with
+- **Appears as:** A: `status: "held"` with `restart_advice: "advise_against"` and the prose "I would not
+  restart it": held, not stopped, because her PCP makes the decision. B: `med_event` with
   `action: "stop"` and `stop_reason`. C: a `MED_STATUS_HIST` row with `NEW_STATUS = 3` (1 = active,
   2 = discontinued, 3 = on hold, 9 = entered in error) while the original `MED_ORDER` row, in an earlier
   item that is not superseded, still says 1. B also carries finerenone as an `origin: "outside"` line
@@ -38,8 +39,8 @@ log), C = Lakeview Labs & Kidney Care (coded tables), P = HomeLog (patient app).
   an item that `supersedes` its first requisition item and restates the 6.1 row as withdrawn ('C') with
   a pointer to the redraw result; the redraw is its own requisition item. B's imported 6.1 copy is
   likewise superseded by a corrected copy (`result_status` 'C', "Result invalidated"). Both originals
-  stay in the history view. Also 2026-09-14: K 5.8 then confirmed 5.7 on redraw — a *confirmation*,
-  not a correction (both values valid).
+  stay in the history view. Also 2026-09-14: K 5.8 then 5.7 on a same-day redraw that C marks
+  `REPEAT_REASON` 'CONF' — a *confirmation*, not a correction (both rows stay 'F', both values valid).
 - **Naive mapper:** reports hyperkalemia 6.1 in 2022 (reads superseded items, or ignores C's 'C'
   status), or drops the 2026 5.8 as if it were superseded.
 - **Key catches it:** lab series for K; cohort "confirmed K ≥ 5.5" includes Linda only for 2026.
@@ -67,7 +68,7 @@ log), C = Lakeview Labs & Kidney Care (coded tables), P = HomeLog (patient app).
 
 ### T7. Platelets ×10³
 - **Hero:** 2025-08-18: C stores `"212"` with unit code `K/uL`; B's import stores `"212000"` with
-  `cells/uL`. A shows the third convention on its own 2024-11-01 value: `"268"` labelled `10*3/uL`.
+  `cells/uL` and rewrites the reference range to match (`"150000-450000"`); WBC is rewritten the same way. A shows the third convention on its own 2024-11-01 value: `"268"` labelled `10*3/uL`.
 - **Naive mapper:** compares 212 to 212000 and calls one thrombocytopenic, or dedupes them as different.
 - **Key catches it:** lab key normalized to 10³/µL; cohort "platelets ≥ 100" includes her.
 
@@ -99,8 +100,11 @@ log), C = Lakeview Labs & Kidney Care (coded tables), P = HomeLog (patient app).
   48643-1, are the MDRD race-specific codes, so a mapper trusting LOINC gets the equation wrong too.
   From 2022-01-10, one row with CKD-EPI 2021 race-free under a new local code with no LOINC. A reporting
   rule changes as well: ≥ 60 is printed ">60" until 2021-06-30 and as a number from 2021-07-01 (T9).
-- **Naive mapper:** takes the AA row (or the max) and shows a false decline 64 → 54 that is partly an equation artifact, or misses
-  the series break by matching only one code.
+- **Naive mapper:** takes the AA row (or the max) and shows a false decline 64 → 54 that is partly an
+  equation artifact, or misses the series break by matching only one code.
+- **Wrinkle:** B's CKD 3a diagnosis (2022-02-07) cites "eGFR 55 in 9/2021", the non-AA row, although
+  Linda is Black and her AA value was 64. CKD-EPI 2021 (58 → 54) still supports stage 3, so the
+  diagnosis stands; a mapper must not "fix" it.
 - **Key catches it:** eGFR key is CKD-EPI 2021 recomputed from creatinine for the whole series
   (2021-01-14 → 68, 2021-09-20 → 58), with original reported values kept alongside. The decline-rate cohort uses the
   recomputed series.
@@ -131,7 +135,11 @@ log), C = Lakeview Labs & Kidney Care (coded tables), P = HomeLog (patient app).
 
 ### T14. Duplicates across sources
 - **Hero:** every C result also appears in B as an imported copy with B's own item id; B keeps C's
-  accession number in `external_ref`. Separately, home meds are re-listed in every A document (T15).
+  accession number in `external_ref` (example pair: C's and B's 2025-08-18 items, accession
+  LV25-230-00157). Results of orders C voided (T4) are not sent to B. Within A, one result is copied
+  into several documents, sometimes with different statuses: BHB 0.3 (accession L24308-0098) is
+  'preliminary' in the consult and 'final' in the discharge summary; the most advanced status wins.
+  Separately, home meds are re-listed in every A document (T15).
 - **Naive mapper:** two A1c values per date; merged chart shows each lab twice; med list from A
   documents counted per document.
 - **Key catches it:** each lab key entry lists its sources but appears once.

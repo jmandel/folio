@@ -169,6 +169,10 @@ Items are never edited. To change the record, the issuer publishes a new item.
   SHOULD flag this as a conflict rather than pick one.
 - A reader may see a superseding item before the item it supersedes (or never see the original). It MUST
   remember the replaced id so that a late-arriving original is hidden.
+- Items never point forward: an item does not say that it has been replaced. A reader learns of a
+  replacement or retraction only from the replacing or retracting item, so a view built from part of
+  an issuer's log can show items that are already superseded. Source-native pointers in a payload
+  (an id of a replacement result row, for example) may name rows in items the reader does not have.
 
 Times on correction items:
 

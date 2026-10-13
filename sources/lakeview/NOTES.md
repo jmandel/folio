@@ -2,6 +2,8 @@
 
 > Stage 0c: the problems below were resolved (or left open) in `work/decisions.md` under "Stage 0c";
 > see `work/stage0c-receipt.md` for what changed. This file is kept as the Stage 0b record.
+> Stage 0e changed several values recorded below (see `work/stage0e-receipt.md`); the examples,
+> schemas and `truth/` are authoritative.
 
 ## Decisions the story did not settle
 
@@ -16,7 +18,7 @@
 3. **HERO inconsistency, eGFR ">60".** 2021-01-14 eGFR is reported as ">60", but 2021-09-20 reports 64
    numerically. I added a reporting rule: until 2021-06-30 values ≥ 60 print as ">60"; from 2021-07-01
    numbers up to 90, ">90" above. Computed CKD-EPI 2009 values for 2021-01-14 (Cr 0.98, age 55) are 65
-   (non-AA) and 76 (AA), so both rows print ">60".
+   (non-AA) and 75 (AA), so both rows print ">60".
 4. **Lakeview's 'C' result status means "withdrawn", the opposite of HL7 v2 OBX-11 'C'.** Deliberate
    (it is what makes T2/T3 bite) and stated in the docstring. Northgate's schema uses HL7's meaning for
    its imported copies; Lakeview's HL7 interface is assumed to translate (Northgate retracts its copy).

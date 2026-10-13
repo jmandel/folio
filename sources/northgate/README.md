@@ -25,10 +25,17 @@ Issuer `did:web:northgate-fm.example` · patient id `NFM-00731552` · schema
 
 ## Entry types
 
-`visit` · `vital_set` · `med_event` · `problem_event` · `allergy_event` · `list_reviewed` ·
-`imported_result` · `referral_event` · `chart_correction`
+`visit` · `billing_dx` · `vital_set` · `med_event` · `problem_event` · `allergy_event` ·
+`list_reviewed` · `imported_result` · `referral_event` · `referral_dx` · `chart_correction`
+
+Diagnoses attached to a visit note or a referral are their own entries (`billing_dx`, `referral_dx`),
+never a list inside the `visit` or `referral_event` entry, so each can be withheld on its own.
 
 ## Traps that live here
+
+Most rows are shown in [the examples](#examples). Three are not, and describe records the Stage 1
+generator produces: T5's `list_reviewed` events, T9's `">60"` eGFR import from 2021-01-14, and T19's
+`restricted` lines.
 
 | Trap | How it shows up in Northgate |
 |---|---|
@@ -36,7 +43,7 @@ Issuer `did:web:northgate-fm.example` · patient id `NFM-00731552` · schema
 | T3 corrected result | K 6.1 (hemolyzed, 2022-09-12) and its redraw K 4.6 are both filed; when Lakeview invalidates the 6.1, Northgate supersedes its 6.1 item with a corrected copy (`result_status` 'C', value "Result invalidated"). The 6.1 stays in the history view. |
 | T4 entered in error | Atorvastatin 80 mg `start` on 2025-11-03, retracted the next day as `wrong_patient`. |
 | T5 stale problem list | "Chronic kidney disease stage 3a" (`PL-11902`, 2022-02-07) is never updated. `list_reviewed` events (including at the 2026-05-04 referral visit) make it look freshly confirmed. |
-| T7 platelets ×10³ | Imported platelet count 2025-08-18 filed as `"212000"` `cells/uL` (Lakeview: 212 K/uL). |
+| T7 platelets ×10³ | Imported platelet count 2025-08-18 filed as `"212000"` `cells/uL`, range `"150000-450000"` (Lakeview: 212 K/uL); WBC the same way. |
 | T9 numbers as text | `imported_result.value` is text: `">60"` for 2021-01-14 eGFR. BP is `"152/94"` text in `vital_set.bp`. |
 | T10 / T17 fuzzy onset | Problem and allergy onsets are full dates plus `precision`: HTN `2014-01-01`/`year`, T2DM `2016-01-01`/`year`. |
 | T11 eGFR equation change | Until 2022-01-10 each creatinine comes with two eGFR entries (`EGFR-NAA`, `EGFR-AA`) carrying the MDRD LOINCs 48642-3 / 48643-1 that Lakeview sends, although the comment says CKD-EPI 2009; after, one race-free entry under a new code with no LOINC. |
@@ -45,15 +52,21 @@ Issuer `did:web:northgate-fm.example` · patient id `NFM-00731552` · schema
 | T14 duplicates | Every Lakeview result appears here again under a Northgate item id; `external_ref.accession` matches Lakeview's. |
 | T16 local codes | `imported_result.test.loinc` only when Lakeview sent one; outside finerenone has only `drug.outside_code` (`lakeview-drug`), no RxNorm. |
 | T18 two shapes | Lisinopril = `intolerance`/`low`; empagliflozin = `adverse_reaction`/`high` (the hospital records the same DKA as a diagnosis). |
-| T19 sensitive | Depression problem and sertraline line carry `restricted: "BH"`. |
+| T19 sensitive | Depression problem, sertraline line and any behavioral-health billing or referral diagnosis carry `restricted: "BH"`. |
 
 ## Examples
 
 | File | Shows |
 |---|---|
+| [2019-03-18-problem-htn-added](examples/2019-03-18-problem-htn-added.folio.md) | year-precision onset (`2014-01-01`/`year`); no SNOMED on a pre-2020 line |
 | [2021-06-03-lisinopril-intolerance](examples/2021-06-03-lisinopril-intolerance.folio.md) | allergy event, intolerance vs allergy, negation in prose, month-precision onset |
 | [2021-09-20-lakeview-renal-panel](examples/2021-09-20-lakeview-renal-panel.folio.md) | imported result report, no narrative, two eGFR rows, `external_ref` |
 | [2022-02-07-problem-ckd-3a-added](examples/2022-02-07-problem-ckd-3a-added.folio.md) | the problem line that goes stale |
-| [2024-11-12-hospital-follow-up-note](examples/2024-11-12-hospital-follow-up-note.folio.md) | terse visit note; billing dx ≠ problem list; narrative-only span |
+| [2022-09-12-potassium-invalidated](examples/2022-09-12-potassium-invalidated.folio.md) | corrected copy that `supersedes` the imported K 6.1 (`result_status` 'C', "Result invalidated") |
+| [2024-11-12-hospital-follow-up-note](examples/2024-11-12-hospital-follow-up-note.folio.md) | terse visit note; `billing_dx` entries ≠ problem list; narrative-only span |
+| [2024-11-12-empagliflozin-adverse-reaction](examples/2024-11-12-empagliflozin-adverse-reaction.folio.md) | allergy-list `adverse_reaction`, `high` (the hospital has the same DKA as a diagnosis) |
 | [2024-11-12-empagliflozin-stopped](examples/2024-11-12-empagliflozin-stopped.folio.md) | `stop` with `adverse_reaction` (contrast: hospital says `held`) |
+| [2025-08-18-lakeview-a1c-cbc](examples/2025-08-18-lakeview-a1c-cbc.folio.md) | imported copy of Lakeview's accession LV25-230-00157; platelets and WBC rewritten to `cells/uL` |
 | [2025-11-04-atorvastatin-80-voided](examples/2025-11-04-atorvastatin-80-voided.folio.md) | void via `retracts` + `chart_correction` |
+| [2026-02-11-metformin-dose-reduced](examples/2026-02-11-metformin-dose-reduced.folio.md) | `change` event on an existing line (`ML-18806`): the latest event per `med_id` gives the current dose |
+| [2026-07-20-finerenone-outside](examples/2026-07-20-finerenone-outside.folio.md) | `origin: "outside"` line with only a Lakeview drug id; never updated after Lakeview's hold |

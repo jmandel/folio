@@ -9,10 +9,12 @@
 // 3. Envelope `effective`/`effective_end` carry an offset or are a (possibly partial) date;
 //    `recorded` carries an offset. Ref and entry ids match the id pattern.
 // 4. `supersedes`/`retracts` hold ULIDs.
+// 5. `schema.sha256` is the SHA-256 of the schema file (fix with `bun work/schema-hashes.ts`).
 
 import { readdirSync, readFileSync, writeFileSync, mkdtempSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
+import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
 
 const ROOT = resolve(import.meta.dir, "..");
@@ -21,7 +23,7 @@ const ROOT = resolve(import.meta.dir, "..");
 const NARRATIVE_ONLY: Record<string, string[]> = {
   riverside: ["precipitant"],
   northgate: ["sick_day"],
-  lakeview: ["sglt2_decision"],
+  lakeview: ["sglt2_decision", "na_sertraline"],
   homelog: [],
 };
 
@@ -95,6 +97,9 @@ for (const source of readdirSync(join(ROOT, "sources"))) {
       const typeName = field(front, "type");
       const schemaFile = schemas.find((s) => url.endsWith("/" + s));
       if (!schemaFile || !typeName) { problems.push(`${where}: schema url/type not resolvable`); continue; }
+      const sha = field(front, "sha256");
+      const actual = createHash("sha256").update(readFileSync(join(schemaDir, schemaFile))).digest("hex");
+      if (sha !== actual) problems.push(`${where}: schema.sha256 is not the hash of ${schemaFile} (run bun work/schema-hashes.ts)`);
       const schemaPath = join(schemaDir, schemaFile).replace(/\.d\.ts$/, "");
       const ts = join(work, `ex${n++}.ts`);
       writeFileSync(

@@ -56,6 +56,10 @@ interface Medication {
   otc?: boolean;                                        // bought without a prescription (ibuprofen); usually only P knows
   history: { at: FuzzyDate; status: "active" | "held" | "stopped" | "entered-in-error";
              reason?: string; by: SourceKey; intendResume?: boolean;   // T1, T4
+             doseText?: string; dose?: { value: number; unit: string }; frequency?: string;
+                                                        // set on a dose change (losartan 50 → 100 mg 2025-08,
+                                                        // metformin 1000 → 500 mg BID 2026-02); the top-level
+                                                        // dose is the starting one
              takenAs?: string }[];                      // how the patient actually takes it when that differs
                                                         // from the prescription (self-adjusted glargine), by: "P"
   laggingLines?: { source: SourceKey; showsStatus: "active" | "held" | "stopped"; since: FuzzyDate }[];
@@ -110,7 +114,7 @@ All keys are computed as of an evaluation time `t` (default 2026-10-13) and stor
 
 | View | Rule |
 |---|---|
-| **Active meds** | Every `Medication` whose latest history entry at `t` is `active` or `held` (with `status`); `entered-in-error` meds never appear. One entry per drug+strength, `sources` = all sources that recorded it. Patient-reported OTC meds are included (`otc: true`, sources `["P"]`). The dose is the prescribed one; a patient-reported `takenAs` is carried next to it. Lagging lines are not used. |
+| **Active meds** | Every `Medication` whose latest history entry at `t` is `active` or `held` (with `status`); `entered-in-error` meds never appear. One entry per drug+strength, `sources` = all sources that recorded it. Patient-reported OTC meds are included (`otc: true`, sources `["P"]`). The dose is the currently prescribed one (the latest history entry that sets a dose, else the starting dose); a patient-reported `takenAs` is carried next to it. Lagging lines are not used. |
 | **Problem list** | Conditions whose latest status at `t` is `active`, with the most specific stage *recorded by any source* (not lab-inferred); `ruled-out` and `resolved` excluded (resolved shown in a separate history list). Onset keeps its precision. |
 | **Latest labs** | Per analyte, the most recent `final` result at `t`; corrected-away and entered-in-error excluded; confirmations both count but latest wins; one entry even if copied to other sources. eGFR is the CKD-EPI 2021 value. |
 | **Lab series** | All `final` results per analyte in canonical units, deduplicated across copies. |

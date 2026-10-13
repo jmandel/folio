@@ -209,8 +209,9 @@ export interface Allergy {
  * summary it is the instruction **after discharge**. Only the latest discharge summary of an encounter
  * says what the patient should take at home.
  *
- * Entry keys are not stable across documents; match lines across documents by `rxnorm_ingredient` and
- * `dose_text`.
+ * Entry keys are chosen per document. They often repeat across the documents of a stay (`med_empa`),
+ * but nothing guarantees it: match lines across documents by `rxnorm_ingredient` and `dose_text`, never
+ * by key.
  */
 export interface HomeMed {
   type: 'home_med';
@@ -236,14 +237,25 @@ export interface HomeMed {
    *   of ED notes. Does not mean the patient is taking it now.
    * - 'continue': keep taking (or keep giving in hospital). In a discharge summary this includes a drug
    *   that was held during the stay and is restarted at discharge.
-   * - 'held': do not take for now. Not stopped: the author expects someone to decide later whether to
-   *   restart. `instructions` usually says who decides and when. Riverside has no separate status for
-   *   "held, and I recommend against restarting"; that opinion, when present, is only in the narrative.
+   * - 'held': do not take for now. Not stopped: someone decides later whether to restart, and
+   *   `restart_advice` says which way this author leans. `instructions` usually says who decides and
+   *   when.
    * - 'stopped': discontinued by this author.
    * - 'new': started during this stay, to continue.
    * - 'changed': same drug, new dose or directions; `dose_text`/`sig` show the new ones.
    */
   status: 'not_reconciled' | 'continue' | 'held' | 'stopped' | 'new' | 'changed';
+
+  /**
+   * On 'held' lines only: what this author advises about restarting. Absent on other statuses, and on
+   * held lines where the author gave no advice.
+   * - 'resume_when_able': restart once the reason for holding has passed (eating again, creatinine back
+   *   to baseline). `instructions` usually names the condition.
+   * - 'prescriber_decides': no advice either way; the outpatient prescriber decides.
+   * - 'advise_against': the author recommends not restarting. The line is held rather than stopped
+   *   because the outpatient prescriber makes the final decision. The patient is not taking the drug.
+   */
+  restart_advice?: 'resume_when_able' | 'prescriber_decides' | 'advise_against';
 
   /** Free-text instruction attached to the status, e.g. "Do not resume until reviewed by PCP". Absent if none. */
   instructions?: string;
@@ -325,7 +337,7 @@ export interface ResultValue {
    */
   unit?: string;
 
-  /** Reference range as displayed, text, e.g. "70-99", "<0.04". Absent if the lab gives none. */
+  /** Reference range as displayed, text, in the same unit as `value`, e.g. "70-99", "<0.04". Absent if the lab gives none. */
   ref_range?: string;
 
   /**

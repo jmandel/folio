@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
   type: "ChartEvent"
-  sha256: "TODO"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 <ref id="alg_1">Dry cough since ~April on lisinopril.</ref> No lip, tongue or throat swelling.
 

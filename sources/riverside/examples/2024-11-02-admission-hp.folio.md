@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts"
   type: "RiversideEntry"
-  sha256: "TODO"
+  sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
 ## Admission history and physical
 
@@ -53,9 +53,10 @@ the epigastric tenderness noted in the ED has resolved with antiemetics.
 2. <ref id="dx_panc">Pancreatitis ruled out</ref>: <ref id="lipase">lipase 28</ref>, pain resolved.
 3. <ref id="dx_na">Hyponatremia</ref>, sodium 129, hypovolemic. <ref id="med_chlorthalidone">Hold
    chlorthalidone.</ref> Should correct with fluids.
-4. Hypertension: BP soft-normal. <ref id="med_losartan">Continue losartan</ref>; potassium 5.0 will
-   fall on insulin.
-5. CKD: creatinine 1.41, near her usual per patient. Avoid nephrotoxins.
+4. Hypertension: BP soft-normal. <ref id="med_losartan">Hold losartan</ref> while volume depleted,
+   with potassium 5.0 and creatinine above her usual; resume when eating and creatinine is back to
+   baseline.
+5. CKD: creatinine 1.41; her usual is about 1.3 per her primary care records. Avoid nephrotoxins.
 6. <ref id="hx_mdd">Depression is stable.</ref> <ref id="med_sertraline">Continue sertraline
    100 mg daily.</ref>
 7. <ref id="med_atorvastatin">Continue atorvastatin.</ref>
@@ -174,6 +175,7 @@ the epigastric tenderness noted in the ED has resolved with antiemetics.
     "dose_text": "1000 mg",
     "sig": "1 tab PO BID with meals",
     "status": "held",
+    "restart_advice": "resume_when_able",
     "instructions": "Hold while acidotic and NPO"
   },
   "med_empa": {
@@ -190,7 +192,9 @@ the epigastric tenderness noted in the ED has resolved with antiemetics.
     "rxnorm_ingredient": "52175",
     "dose_text": "50 mg",
     "sig": "1 tab PO daily",
-    "status": "continue"
+    "status": "held",
+    "restart_advice": "resume_when_able",
+    "instructions": "Hold for volume depletion; resume when eating and creatinine at baseline"
   },
   "med_chlorthalidone": {
     "type": "home_med",
@@ -199,6 +203,7 @@ the epigastric tenderness noted in the ED has resolved with antiemetics.
     "dose_text": "12.5 mg",
     "sig": "1/2 tab PO daily",
     "status": "held",
+    "restart_advice": "resume_when_able",
     "instructions": "Hold for hyponatremia and volume depletion"
   },
   "med_atorvastatin": {

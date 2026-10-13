@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
   type: "HomeLogEntry"
-  sha256: "TODO"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
 supersedes:
   - "01K32Y3SP83XC8N4W8T61981JQ"
 ---

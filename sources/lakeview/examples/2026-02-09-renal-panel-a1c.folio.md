@@ -8,7 +8,7 @@ recorded: "2026-02-09T15:40:27-06:00"
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "LabReportRow"
-  sha256: "TODO"
+  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
 ---
 
 ```json payload
@@ -42,6 +42,18 @@ schema:
     "REQ_ID": "RQ-2602090412",
     "ORDER_CODE": "LK-NA",
     "ORDER_NAME": "Sodium",
+    "ACCESSION": "LV26-040-00093",
+    "SPECIMEN_TYPE": "SER",
+    "SPECIMEN_COND": "OK",
+    "ORDER_STATUS": 4,
+    "STATUS_AT": "2026-02-09T11:06:00-06:00"
+  },
+  "ord_k": {
+    "type": "LAB_ORDER",
+    "ORDER_ID": "OR-9420315",
+    "REQ_ID": "RQ-2602090412",
+    "ORDER_CODE": "LK-K",
+    "ORDER_NAME": "Potassium",
     "ACCESSION": "LV26-040-00093",
     "SPECIMEN_TYPE": "SER",
     "SPECIMEN_COND": "OK",
@@ -115,6 +127,21 @@ schema:
     "UNIT_CODE": "mmol/L",
     "REF_RANGE_TEXT": "134-144",
     "ABN_FLAG": "L",
+    "RESULT_STATUS": "F",
+    "RESULTED_AT": "2026-02-09T11:06:00-06:00"
+  },
+  "res_k": {
+    "type": "LAB_RESULT",
+    "RESULT_ID": "RS-97710453",
+    "ORDER_ID": "OR-9420315",
+    "TEST_CODE": "LK-K",
+    "TEST_NAME": "Potassium, serum",
+    "LOINC": "2823-3",
+    "VALUE_TEXT": "4.6",
+    "VALUE_NUM": 4.6,
+    "UNIT_CODE": "mmol/L",
+    "REF_RANGE_TEXT": "3.5-5.1",
+    "ABN_FLAG": "N",
     "RESULT_STATUS": "F",
     "RESULTED_AT": "2026-02-09T11:06:00-06:00"
   },

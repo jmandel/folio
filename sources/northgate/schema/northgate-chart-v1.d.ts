@@ -6,8 +6,12 @@
  * set, one medication change, one problem-list change, one allergy-list change, one list review,
  * one interfaced lab result report, one referral step, or one void.
  *
- * Most items carry exactly one payload entry. An imported result report carries one entry per
- * result component (a renal panel has a creatinine entry and one or more eGFR entries).
+ * Most items carry exactly one payload entry. Three kinds carry several: an imported result report has
+ * one entry per result component (a renal panel has a creatinine entry and one or more eGFR entries); a
+ * signed visit note has its `visit` entry plus one `billing_dx` entry per billed diagnosis; a referral
+ * step has its `referral_event` entry plus one `referral_dx` entry per diagnosis on the referral.
+ * Diagnoses are separate entries, never lists inside another entry, so a patient can share a visit note
+ * or referral while withholding one diagnosis (for example a behavioral-health code).
  *
  * There is no "current state" record. The current medication list, problem list and allergy list
  * are what you get by replaying the events in `effective` order for each list-line id (`med_id`,
@@ -31,9 +35,11 @@ export type ChartEvent =
   | MedEvent
   | ProblemEvent
   | AllergyEvent
+  | BillingDx
   | ListReviewed
   | ImportedResult
   | ReferralEvent
+  | ReferralDx
   | ChartCorrection;
 
 /**
@@ -65,8 +71,9 @@ export interface FuzzyDate {
 
 /**
  * A visit note: the clinician's signed note for one office, telehealth or nurse visit. The item
- * narrative is the note itself, which is usually a few terse lines. The structured events from the
- * same visit (vitals, medication and problem changes) are separate items sharing the `visit_id`.
+ * narrative is the note itself, which is usually a few terse lines. The visit's billing diagnoses are
+ * `billing_dx` entries in the same item. The structured events from the same visit (vitals, medication
+ * and problem changes) are separate items sharing the `visit_id`.
  */
 export interface Visit {
   type: 'visit';
@@ -85,13 +92,30 @@ export interface Visit {
 
   /** Reason for visit as typed at scheduling or check-in, e.g. "Hosp f/u". Free text. */
   reason: string;
+}
 
-  /**
-   * Billing diagnoses addressed at this visit, ICD-10-CM codes with Northgate's display text.
-   * These are what was billed, not the problem list: a code here does not add, change or confirm a
-   * problem. Follow-up and screening codes (Z codes) appear here and never on the problem list.
-   */
-  billing_dx: { icd10cm: string; display: string }[];
+/**
+ * One billing diagnosis of a visit, in the visit note's item (one entry per code). These are what was
+ * billed, not the problem list: a code here does not add, change or confirm a problem. Follow-up and
+ * screening codes (Z codes) appear here and never on the problem list.
+ */
+export interface BillingDx {
+  type: 'billing_dx';
+
+  /** The visit billed (the `visit` entry in the same item). */
+  visit_id: string;
+
+  /** Position on the claim, 1 = primary. */
+  rank: number;
+
+  /** ICD-10-CM code, with the dot. */
+  icd10cm: string;
+
+  /** Northgate's display text for the code. */
+  display: string;
+
+  /** Restricted-chart category; see `Restriction`. Set on behavioral-health codes. */
+  restricted?: Restriction;
 }
 
 /**
@@ -361,6 +385,9 @@ export interface ListReviewed {
  * Values are filed as the interface delivered them, with two exceptions applied by Northgate's
  * interface translation table (see `unit`).
  *
+ * Results of orders that Lakeview voided as entered in error are not sent over the interface, so they
+ * never appear here.
+ *
  * When Lakeview sends a correction for a report Northgate already filed, Northgate publishes a new
  * item that `supersedes` the old one and restates every component of the report as corrected, with
  * `result_status` 'C' on the components that changed. This includes a value the lab withdrew without
@@ -395,8 +422,9 @@ export interface ImportedResult {
    *
    * Northgate's interface translation table rewrites two analytes on the way in: platelet and
    * white-cell counts arrive from Lakeview in "K/uL" (thousands per microliter) and are filed
-   * multiplied by 1000 in "cells/uL". So a Lakeview platelet count of 212 K/uL is filed here as
-   * value "212000", unit "cells/uL". All other analytes keep Lakeview's unit.
+   * multiplied by 1000 in "cells/uL", reference range included. So a Lakeview platelet count of 212 K/uL
+   * (range 150-450) is filed here as value "212000", unit "cells/uL", range "150000-450000". All other
+   * analytes keep Lakeview's unit.
    */
   unit: string;
 
@@ -473,9 +501,6 @@ export interface ReferralEvent {
   /** Clinical question as typed in the referral form. Restated on every event. */
   question: string;
 
-  /** Diagnoses on the referral, ICD-10-CM. Chosen from the problem list at the time of 'created'. */
-  dx: { icd10cm: string; display: string }[];
-
   /**
    * Urgency requested.
    * - 'routine': next available.
@@ -485,6 +510,26 @@ export interface ReferralEvent {
 
   /** Appointment date, on 'scheduled' only. Full date. */
   appointment_on?: string;
+}
+
+/**
+ * One diagnosis on a referral, chosen from the problem list when the referral was created. Each
+ * referral step's item restates them, one entry per code, next to its `referral_event` entry.
+ */
+export interface ReferralDx {
+  type: 'referral_dx';
+
+  /** The referral (the `referral_event` entry in the same item). */
+  referral_id: string;
+
+  /** ICD-10-CM code, with the dot. */
+  icd10cm: string;
+
+  /** Display text as on the problem list. */
+  display: string;
+
+  /** Restricted-chart category; see `Restriction`. */
+  restricted?: Restriction;
 }
 
 /**

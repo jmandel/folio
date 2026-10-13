@@ -2,6 +2,8 @@
 
 > Stage 0c: the problems below were resolved (or left open) in `work/decisions.md` under "Stage 0c";
 > see `work/stage0c-receipt.md` for what changed. This file is kept as the Stage 0b record.
+> Stage 0e changed several values recorded below (see `work/stage0e-receipt.md`); the examples,
+> schemas and `truth/` are authoritative.
 
 ## Story problems (truth/HERO.md, truth/TRAPS.md)
 

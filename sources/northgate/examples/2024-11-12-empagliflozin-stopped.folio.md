@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
   type: "ChartEvent"
-  sha256: "TODO"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 <ref id="med_1">Euglycemic DKA 11/2024 (Riverside admission). Was held in hospital; stopping.</ref>
 

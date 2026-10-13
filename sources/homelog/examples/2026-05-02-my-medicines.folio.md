@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
   type: "HomeLogEntry"
-  sha256: "TODO"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
 supersedes:
   - "01KMTFFYM012DNBYBDSS7S2EVN"
 ---
@@ -26,22 +26,23 @@ My Medicines, saved 2 May 2026.
     "name": "Metformin",
     "picked_from_search": { "rxnorm": "861007", "display": "metformin hydrochloride 500 MG Oral Tablet" },
     "strength_text": "500 mg",
-    "how_i_take_it": "2 pills in the morning, 2 at supper",
+    "how_i_take_it": "1 in the morning, 1 at supper",
     "status": "taking",
     "started": "2016",
-    "kind": "prescription"
+    "kind": "prescription",
+    "note": "Dr Reyes cut it in half in February because of my kidneys"
   },
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
     "name": "Losartan",
     "picked_from_search": { "rxnorm": "52175", "display": "losartan" },
-    "strength_text": "50 mg",
+    "strength_text": "100 mg",
     "how_i_take_it": "1 in the morning",
     "status": "taking",
     "started": "2021-06",
     "kind": "prescription",
-    "note": "Replaced the lisinopril"
+    "note": "Replaced the lisinopril. Went up to 100 last August"
   },
   "med_3": {
     "type": "my_med",
@@ -68,7 +69,7 @@ My Medicines, saved 2 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_5",
     "name": "Sertraline",
-    "picked_from_search": { "rxnorm": "312941", "display": "sertraline 100 MG Oral Tablet" },
+    "picked_from_search": { "rxnorm": "312938", "display": "sertraline 100 MG Oral Tablet" },
     "strength_text": "100 mg",
     "how_i_take_it": "1 in the morning",
     "status": "taking",
@@ -79,7 +80,7 @@ My Medicines, saved 2 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_6",
     "name": "Lantus",
-    "picked_from_search": { "rxnorm": "261551", "display": "insulin glargine 100 UNT/ML" },
+    "picked_from_search": { "rxnorm": "847230", "display": "3 ML insulin glargine 100 UNT/ML Pen Injector" },
     "strength_text": "100 units/mL pen",
     "how_i_take_it": "10 units at bedtime, 12 if my sugar was over 200 that day",
     "status": "taking",
@@ -93,6 +94,7 @@ My Medicines, saved 2 May 2026.
     "strength_text": "200 mg",
     "how_i_take_it": "2 when my knee acts up, maybe twice a week",
     "status": "taking",
+    "started": "2025",
     "kind": "over_the_counter"
   },
   "med_8": {
