@@ -40,7 +40,8 @@ interface Patient {
 interface Encounter {
   id: string; source: SourceKey; kind: "office" | "ed" | "inpatient" | "telehealth" | "lab-only" | "home";
   start: FuzzyDate; end?: FuzzyDate; reason: string; clinician?: string;
-  documents: { kind: "ed-note" | "h&p" | "progress" | "discharge" | "office-note" | "letter" | "patient-note";
+  documents: { kind: "ed-note" | "h&p" | "progress" | "consult" | "discharge" | "office-note" | "letter"
+                    | "patient-note";
                at: FuzzyDate; factIds: string[] }[];   // which facts each document mentions (drives prose + re-snapshots, T15)
 }
 
@@ -52,21 +53,29 @@ interface Condition {
 
 interface Medication {
   id: string; rxnorm: Coding; doseText: string; dose?: { value: number; unit: string }; frequency: string;
+  otc?: boolean;                                        // bought without a prescription (ibuprofen); usually only P knows
   history: { at: FuzzyDate; status: "active" | "held" | "stopped" | "entered-in-error";
-             reason?: string; by: SourceKey; intendResume?: boolean }[];   // T1, T4
+             reason?: string; by: SourceKey; intendResume?: boolean;   // T1, T4
+             takenAs?: string }[];                      // how the patient actually takes it when that differs
+                                                        // from the prescription (self-adjusted glargine), by: "P"
+  laggingLines?: { source: SourceKey; showsStatus: "active" | "held" | "stopped"; since: FuzzyDate }[];
+                                                        // a source's copy that was never updated (B's outside finerenone line, T1)
   visibility: Visibility; traps?: TrapId[];
 }
 
 interface LabResult {
-  id: string; analyte: "creatinine" | "egfr" | "potassium" | "sodium" | "glucose" | "a1c" | "uacr"
-          | "platelets" | "bhb" | "ph" | "bicarbonate" | "anion-gap" | "lipase" | "troponin";
+  id: string; analyte: "creatinine" | "egfr" | "potassium" | "sodium" | "chloride" | "bicarbonate"
+          | "anion-gap" | "bun" | "glucose" | "a1c" | "uacr" | "platelets" | "wbc" | "hemoglobin"
+          | "bhb" | "ph" | "pco2" | "lipase" | "troponin";
   loinc?: Coding; collectedAt: FuzzyDate; specimen: "serum" | "plasma" | "urine" | "whole-blood" | "capillary";
   value: number; comparator?: "<" | ">" ;              // T9
   unit: string;                                         // canonical
   status: "final" | "corrected-away" | "entered-in-error";
   replacedBy?: string; confirms?: string;               // T3: correction vs confirmation
   derivedFrom?: string[];                               // eGFR ← creatinine (T11)
-  reported?: { equation: "ckd-epi-2009-nonaa" | "ckd-epi-2009-aa" | "ckd-epi-2021"; value: number }[]; // T11
+  reported?: { equation: "ckd-epi-2009-nonaa" | "ckd-epi-2009-aa" | "ckd-epi-2021"; value: number;
+               comparator?: ">";                       // C printed ≥ 60 as ">60" until 2021-06-30 (T9)
+               loinc?: string }[];                      // as the source coded it: MDRD codes on 2009 rows (T11)
   orderedBy: SourceKey; performedBy: SourceKey; copies?: SourceKey[];   // T14
   annotations?: string[];                               // "hemolyzed"
   visibility: Visibility; traps?: TrapId[];
@@ -101,7 +110,7 @@ All keys are computed as of an evaluation time `t` (default 2026-10-13) and stor
 
 | View | Rule |
 |---|---|
-| **Active meds** | Every `Medication` whose latest history entry at `t` is `active` or `held` (with `status`); `entered-in-error` meds never appear. One entry per drug+strength, `sources` = all sources that recorded it. |
+| **Active meds** | Every `Medication` whose latest history entry at `t` is `active` or `held` (with `status`); `entered-in-error` meds never appear. One entry per drug+strength, `sources` = all sources that recorded it. Patient-reported OTC meds are included (`otc: true`, sources `["P"]`). The dose is the prescribed one; a patient-reported `takenAs` is carried next to it. Lagging lines are not used. |
 | **Problem list** | Conditions whose latest status at `t` is `active`, with the most specific stage *recorded by any source* (not lab-inferred); `ruled-out` and `resolved` excluded (resolved shown in a separate history list). Onset keeps its precision. |
 | **Latest labs** | Per analyte, the most recent `final` result at `t`; corrected-away and entered-in-error excluded; confirmations both count but latest wins; one entry even if copied to other sources. eGFR is the CKD-EPI 2021 value. |
 | **Lab series** | All `final` results per analyte in canonical units, deduplicated across copies. |

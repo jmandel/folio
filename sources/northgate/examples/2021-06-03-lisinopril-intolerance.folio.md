@@ -1,0 +1,33 @@
+---
+folio: "0.1"
+id: "01F798J2HR71HFE865V215DE1C"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00731552"
+effective: "2021-06-03T10:35:00-05:00"
+recorded: "2021-06-03T10:41:07-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "TODO"
+---
+<ref id="alg_1">Dry cough since ~April on lisinopril.</ref> No lip, tongue or throat swelling.
+
+```json payload
+{
+  "alg_1": {
+    "type": "allergy_event",
+    "allergy_id": "AL-2207",
+    "action": "add",
+    "substance": { "name": "lisinopril", "rxnorm": "29046" },
+    "reaction_type": "intolerance",
+    "reactions": ["Cough"],
+    "severity": "low",
+    "onset": { "date": "2021-04-01", "precision": "month" },
+    "visit_id": "V-2021-060317"
+  }
+}
+```
