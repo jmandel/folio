@@ -1,0 +1,10 @@
+{
+  "name": "folio",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "check:examples": "bun work/check-examples.ts",
+    "check:hashes": "bun work/schema-hashes.ts --check"
+  }
+}

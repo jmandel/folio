@@ -38,6 +38,8 @@ show comes from a run in this repo.
 | Spec | Small normative spec in `spec/`, kept in step with code, published on the site. |
 | Repo | Public `jmandel/folio`; commit and push at stage boundaries; deploy site when a stage passes. |
 | Check-ins | Gate at the end of each stage: short report, link/screenshot, open decisions. |
+| Schema size (Gate 0) | 230–560 lines of mostly docstrings is fine; honest documentation is the point. |
+| Population prose (Gate 0) | LLM-written for all notes, via the CLI agent runner, recorded. The agent runner therefore moves from Stage 3 into Stage 1. |
 
 ## 3. Design constraints carried from the review of the drafts
 
