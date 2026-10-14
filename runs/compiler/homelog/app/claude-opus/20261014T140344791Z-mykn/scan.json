@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/views/views.d.ts in/INSTRUCTIONS.md in/harness/*\",\"description\":\"Read views and harness\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && sed -i 's/(?:of a\\\\\\\\s+)?(?:tablets?/(?:of\\\\\\\\s+)?(?:an?\\\\\\\\s+)?(?:tablets?/' transform.ts && grep -n 'of\\\\\\\\\\\\\\\\s+)?' transform.ts && bun"
+  }
+ ],
+ "blocking": 0
+}

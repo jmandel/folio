@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Dear Dr. at Lakeview Kidney Care,
+Dear Lakeview Kidney Care,
 
-Thank you for seeing this pt with Type 2 diabetes, essential hypertension and chronic kidney disease stage 3a. <ref id="referral">Most recent eGFR is 43 with UACR 101 mg/g, and I would appreciate your evaluation and management of the CKD.</ref>
+Thank you for seeing this pt with chronic kidney disease stage 3a, type 2 diabetes and essential hypertension. <ref id="referral">Most recent eGFR is 43 with UACR 101 mg/g. Requesting CKD evaluation and management.</ref>
 
-BP and diabetes are being followed here. Please send your recommendations after the visit and call with any questions.
+Kidney function has slowly declined over the past few years while diabetes and BP have been followed here. Please advise on further workup and any changes you would suggest. Recent labs are available on request.
 
 Thank you,
 Jaya Patel, NP

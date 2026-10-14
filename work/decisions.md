@@ -77,3 +77,76 @@ Resolved at Stage 0a → 0b handoff (2026-10-13):
 - **Feed authentication**: out of scope for the demo; spec/sync.md names it as a deployment requirement (OAuth/SMART), nothing more.
 - **Node log persistence across restarts**: not needed; nodes serve a directory.
 - **Key binding for agent exchanges**: decide in Stage 6.
+
+## Stage 3 round 3 (2026-10-14): truth and key fixes after the round-2 audit
+
+Each change was checked against the regenerated raw items (corpus/), not only the truth.
+
+- **HomeLog strength text in the product's unit.** The generator wrote every tablet strength as "<n> mg", so
+  levothyroxine 75 mcg appeared as "75 mg" next to a picked RxNorm product "levothyroxine sodium 0.075 MG Oral
+  Tablet". It now writes the catalog unit ("75 mcg"; pens "<n> mg pen" / "100 units/mL pen"). Reason: a mapper that
+  read the record's own RxNorm code was scored wrong.
+- **No restart after an adverse reaction.** p218 was restarted on empagliflozin for HFrEF three months after
+  SGLT2i-associated DKA: the DKA's SGLT2i line is created later in the simulation, back-dated, after the visit loop had
+  already planned a later start. The visit loop now skips a planned SGLT2i start on or after a planned DKA date.
+  ACE-inhibitor angioedema (p010 and others): the visit loop kept escalating and holding the lisinopril line after the
+  (back-dated) ED visit. The simulation now treats every ACE inhibitor as stopped from the day after a planned
+  angioedema date, and the angioedema follow-up reuses an existing amlodipine line (raising its dose) instead of
+  opening a second one. `buildTruth` now checks plausibility on every build and fails on: two active lines of one
+  ingredient at once; a start or re-activation after an allergy or adverse-reaction entry for the same ingredient,
+  or after an adverse reaction to a drug of the same class.
+- **Duplicate active-meds answers.** s04 (amlodipine twice: baseline line plus the angioedema replacement) and p104
+  (dapagliflozin twice: Lakeview's back-dated start plus Northgate's later start). Fixed by the rules above (amlodipine
+  line reused; Lakeview does not open an SGLT2i line when one exists anywhere in the simulation).
+- **Merged-chart status from structured records only.** When no source's structured record carries the truth's
+  current status for a medication (e.g. a resumption written only as "resumed today" in a visit note), the merged-key
+  row is reported in a separate "prose-only" category, not counted as a wrong row.
+- **Underdetermined cases become accepted equivalents or exclusions, stated in the views (v3):**
+  - a once-daily-at-night direction written only as "nightly" (Riverside) is accepted as QHS or QD;
+  - a patient-list entry with a strength but no directions has no dose (the key no longer asserts one);
+  - a patient list that names one drug twice with different statuses is not scored for that drug (excluded rows:
+    matched mapper rows are neither right, wrong nor extra).
+- All 165 notes whose requests changed were regenerated with the Stage 1 note pipeline (`bun run prose`, sonnet).
+  `check:corpus` finds 0 problems.
+
+## Stage 3 round 3: freeze and held-out design (recorded before the fresh cohort was generated)
+
+- **Key and scorer code frozen** at hash `26ee28163e5c6e69` (sha256 over packages/compiler/src/{keys,score,evaluate,data}.ts,
+  first 16 hex). Every round-3 compile record carries it; any later change shows as a different hash.
+- **Fresh held-out cohort**: `FOLIO_COHORT=fresh`, seed `folio-stage3-fresh-final`, 180 patients, ids f001…, trap-targeted
+  quotas (packages/truth/src/cohort.ts), written to corpus-fresh/ with notes from the Stage 1 note pipeline. Only
+  aggregate trap counts are looked at (to size it); no record, key row or mapper output from it is looked at for
+  triage. All round-3 headline numbers come from it; the main corpus's old test split is reported as a secondary table.
+  (An earlier seed, `folio-stage3-fresh-2026-10-14`, was used to debug generator plausibility and is not used.)
+- **Generator plausibility**: population patients that break a plausibility rule are regenerated from a derived seed
+  with the same archetypes (packages/truth/src/plausibility.ts); baseline SGLT2i is not given to planned-DKA patients
+  (random draws kept, so only p047, p116, p260 of the main cohort changed; their notes were regenerated).
+- **Cache gate**: a cached (deployable) mapper must also have (wrong + extra rows) / rows < 1% in every view on the
+  main cohort's dev split at the latest as-of date (report.ts DEV_GATE), besides type-checking, running without
+  errors, determinism and a clean isolation scan.
+- **Compile loop**: scores each new mapper on the main dev split only; held-out scoring is a separate step (`bun run score`).
+
+## Stage 3 round 3: fixes after the round-3 audit (post-hoc; no new mappers run)
+
+- **Northgate allergy mechanism (post-hoc key fix, made after the fresh scoring).** Northgate's schema defines
+  `reaction_type: 'allergy'` as immune-mediated, and views v3 say to report `immune` when the source says so; the
+  frozen key (26ee28163e5c6e69) accepted only `non_immune`/`unknown` for those rows, so mappers that followed the
+  documentation were scored wrong on every Northgate lisinopril (ACE-inhibitor angioedema) row. The per-source key and
+  the matching merged-key rows (allergy rows of type 'allergy' that Northgate records) now accept `immune` too. The
+  conflict was visible on the main dev split (2/10 rows, every backend) before the fresh scoring and was not fixed then.
+  New key/scorer hash `6a1a96c2620f6108` (the hash also covers a scorer synonym "mm[Hg]" = "mmHg" for the projected US Core units).
+  All runs were rescored; frozen-key results are kept in results/stage3/evals-fresh-frozen-26ee28163e5c6e69/,
+  evals-main-*-frozen-26ee28163e5c6e69/, scorecard-frozen-key.json and secondary-main-frozen-key.json, and SCORECARD.md
+  shows both where they differ. The dev cache gate had been applied with the frozen key and selected against these
+  mappers; the cache was not rebuilt.
+- **Northgate referral diagnoses (renderer, for future cohorts).** `referral_dx` used the billing code (E11.22 for type 2
+  diabetes with CKD) while the problem line kept E11.9 (e.g. fresh patient f007), although the schema says referral
+  diagnoses are chosen from the problem list. The renderer now uses the problem line's code. The committed corpora
+  (corpus/, corpus-fresh/) were not regenerated, so they still show the inconsistency.
+- **Note quality.** Some LLM-written notes call lisinopril an "ARB" (fresh patients f030, f102). Not fixed; recorded
+  for the note pipeline's checks.
+- **US Core view.** `uscore.d.ts` prescribed LOINC 53060-9 for beta-hydroxybutyrate (not a LOINC code; now 6873-4,
+  "Beta hydroxybutyrate [Moles/volume] in Serum or Plasma", checked with tx.fhir.org) and used the analyte unit "mmHg"
+  as the UCUM code (now `mm[Hg]`). The US Core mappers were not recompiled.
+- **Disclosure.** The fresh cohort's quotas were changed once after the freeze, after looking at aggregate trap counts
+  only (dka_prec 26→36, dka_noprec 10→12).

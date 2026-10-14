@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. No new complaints.
-BP 133/75, pulse 85, wt 216 lb.
-Labs today: eGFR 43, K 4.4, A1c 8%.
-Diet and activity reviewed. No changes today.
-RTC 3 mo.
+Annual exam. Doing well, no new complaints.
+
+BP 140/79, pulse 85, wt 216 lb.
+Labs today: eGFR 43, K 4.2, A1c 8%.
+Reviewed diet, activity and BP log. RTC 3 mo.
 
 ```json payload
 {

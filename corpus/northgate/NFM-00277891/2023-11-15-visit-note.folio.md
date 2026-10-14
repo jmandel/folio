@@ -14,12 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP f/u. BP 143/80, pulse 78, wt 157 lb.
+BP f/u. BP 150/84, pulse 78, wt 157 lb.
 
-eGFR 68, K 4.6 today.
+eGFR 68, K 4.4 today.
 
-Lisinopril: held today (K 5.6 confirmed on repeat); review 11/29.
-Pt aware.
+BP still above goal, losartan 50 mg started earlier today.
+
+Later labs: losartan held today (K 5.6 confirmed on repeat); review 11/29.
 
 ```json payload
 {

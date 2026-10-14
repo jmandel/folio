@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JN7N2G80DKWQHPW6612NS784"
+id: "01JN7N2G809E1EJ2V8RYJNWXP0"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0067326"
 effective: "2025-02-28T12:40:00-06:00"
@@ -14,19 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+Follow-up visit. <ref id="dx_ckd">CKD G3b A2</ref> with <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>.
 
-eGFR 40 today, K 4.2. Slow drift down, no acute change.
+<ref id="bp_sys">BP 145/80, HR 79, weight 96.8 kg.</ref> Weight stable. No new complaints.
 
-<ref id="bp_sys">BP 145/80, HR 79, weight 96.8 kg.</ref> Above goal, will keep watching home readings.
+eGFR 40 today, K 4.2. Slow drift in kidney function, no acute change.
 
-No complaints today. Labs and return in 3 months.
+Labs again before next visit. Return in 3 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2025-02-28T12:40:00-06:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +35,7 @@ No complaints today. Labs and return in 3 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +43,7 @@ No complaints today. Labs and return in 3 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ No complaints today. Labs and return in 3 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +59,7 @@ No complaints today. Labs and return in 3 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 145,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ No complaints today. Labs and return in 3 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +77,7 @@ No complaints today. Labs and return in 3 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 79,
     "UNIT_CODE": "/min",
@@ -86,7 +86,7 @@ No complaints today. Labs and return in 3 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-106218",
+    "VISIT_ID": "NV-110547",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 96.8,
     "UNIT_CODE": "kg",

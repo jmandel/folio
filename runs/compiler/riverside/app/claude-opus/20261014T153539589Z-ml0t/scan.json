@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'));print(len(d), [len(g['items']) for g in d]); print([ (i['id'],i['recorded"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2>&1 | head -400\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && sed -i 's|console.log(JSON.stringify(transform(items, \\\"2024-01-14\\\").medications.map(m=>\\\\[m.ingredient,m.status\\\\])));|console.log(JSON."
+  }
+ ],
+ "blocking": 0
+}

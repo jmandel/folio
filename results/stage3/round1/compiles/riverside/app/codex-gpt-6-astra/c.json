@@ -1,0 +1,58 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "condition": "c",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T124107126Z-c7wz",
+   "ok": true,
+   "durationMs": 242779,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 735360,
+    "cached_input_tokens": 659328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8381,
+    "reasoning_output_tokens": 2319
+   },
+   "feedbackItems": 7,
+   "evalPath": "results/stage3/evals/20261014T124107126Z-c7wz.json",
+   "summary": "tsc=ok det=true errors=0/32 P=100.0% R=99.8% medi:100.0% prob:100.0% alle:77.1% labs:100.0% vita:100.0% 0.280ms/item"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T124510879Z-749g",
+   "ok": true,
+   "durationMs": 392448,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 700158,
+    "cached_input_tokens": 622976,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 12402,
+    "reasoning_output_tokens": 5256
+   },
+   "feedbackItems": 2,
+   "evalPath": "results/stage3/evals/20261014T124510879Z-749g.json",
+   "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.293ms/item"
+  }
+ ],
+ "final": "20261014T124510879Z-749g",
+ "startedFrom": "20261014T121114803Z-akao",
+ "note": "CALIBRATION ONLY: key-based counterexamples from the dev split were fed back (cheating-for-calibration upper bound)."
+}

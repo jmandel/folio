@@ -1,0 +1,61 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "condition": "b",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T143002544Z-0iak",
+   "ok": true,
+   "costUsd": 0.3261802,
+   "durationMs": 53278,
+   "numTurns": 15,
+   "usage": {
+    "input_tokens": 20,
+    "cache_creation_input_tokens": 58928,
+    "cache_read_input_tokens": 367382,
+    "output_tokens": 5369
+   },
+   "feedbackItems": 28,
+   "evalPath": "results/stage3/evals/20261014T143002544Z-0iak.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 53/284, prob 0/79, alle 0/33, labs 0/1817, vita 0/241"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T143057136Z-kpsx",
+   "ok": true,
+   "costUsd": 0.2776888,
+   "durationMs": 65201,
+   "numTurns": 16,
+   "usage": {
+    "input_tokens": 26,
+    "cache_creation_input_tokens": 45690,
+    "cache_read_input_tokens": 449468,
+    "output_tokens": 4993
+   },
+   "feedbackItems": 24,
+   "evalPath": "results/stage3/evals/20261014T143057136Z-kpsx.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 53/284, prob 0/79, alle 0/33, labs 0/1817, vita 0/241"
+  }
+ ],
+ "rep": 1,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T143057136Z-kpsx",
+ "startedFrom": "20261014T142715000Z-ovzs",
+ "note": "Prose-check discrepancies on dev-split items fed back."
+}

@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../../out && cat > ../../out/transform.ts <<HEREDOC\ncd ../..; sh in/harness/check.sh 2023-12-31 2>&1 | head -150\"}"
+  }
+ ],
+ "blocking": 0
+}

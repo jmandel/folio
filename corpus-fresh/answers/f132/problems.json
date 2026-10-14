@@ -1,0 +1,54 @@
+{
+  "patient": "f132",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2010", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2021-10-27", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2017", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2026-02-23", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2026-02-23",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_48"]
+      },
+      {
+        "condition": "Angioedema",
+        "icd10": "T78.3XXA",
+        "snomed": "41291007",
+        "onset": { "value": "2023-11-24", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_52"]
+      }
+    ],
+    "resolved": []
+  }
+}

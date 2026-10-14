@@ -1,0 +1,46 @@
+{
+ "source": "homelog",
+ "schema_sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34",
+ "view_set": "uscore",
+ "view_set_hash": "e295b9fc544f55d069f9f39ad83dedcba1da21bf4ebb2e306b1525ea2f1ef120",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "chosen": {
+  "condition": "a",
+  "runId": "20261014T122930125Z-4aix",
+  "eval": "results/stage3/evals/20261014T122930125Z-4aix.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 59,
+  "precision": 0.9940476190476191,
+  "recall": 0.9940476190476191,
+  "ms_per_item": 0.01718447141518275
+ },
+ "samples_from_training_patients": [
+  "p207/2026-07-15-day.folio.md",
+  "p071/2024-09-06-my-medicines.folio.md",
+  "p143/2026-04-15-day.folio.md",
+  "p071/2023-11-24-my-medicines.folio.md",
+  "p071/2024-11-21-day.folio.md",
+  "p143/2026-04-08-my-medicines.folio.md",
+  "p207/2026-07-01-my-medicines.folio.md",
+  "p071/2023-11-24-day.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T122930125Z-4aix",
+   "rounds": [
+    {
+     "runId": "20261014T122930125Z-4aix",
+     "summary": "tsc=ok det=true errors=0/59 P=99.4% R=99.4% medi:99.4% prob:n/a alle:n/a labs:n/a vita:n/a 0.017ms/item"
+    }
+   ]
+  }
+ }
+}

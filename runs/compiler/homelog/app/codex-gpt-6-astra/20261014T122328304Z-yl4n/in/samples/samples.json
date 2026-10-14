@@ -1,0 +1,508 @@
+[
+  {
+    "patient": "HL-U-42392",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01KXMRNX1GVWJD1ANVTR3TZ0WQ",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42392",
+        "effective": "2026-07-15",
+        "recorded": "2026-07-16T06:09:02Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42392",
+          "name": "Curtis Williams",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "**4:42 PM** — <ref id=\"note_1\">Back and knee pain flared up again today. Took Advil again and it helps.</ref>",
+        "payload": {
+          "glu_1": {
+            "type": "glucose_reading",
+            "measured_at": "2026-07-15T07:34",
+            "value": 165,
+            "unit": "mg/dL",
+            "meal_marker": "fasting",
+            "entry_method": "meter_sync"
+          },
+          "bp_1": {
+            "type": "bp_reading",
+            "measured_at": "2026-07-15T07:44",
+            "systolic_mmhg": 148,
+            "diastolic_mmhg": 84,
+            "pulse_bpm": 77,
+            "entry_method": "cuff_sync",
+            "arm": "right"
+          },
+          "note_1": {
+            "type": "diary_note",
+            "written_at": "2026-07-15T16:42",
+            "symptom_tags": [
+              "pain"
+            ],
+            "severity": 2
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01KWFBSES8WMPZATNV7BGY43H6",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42392",
+        "effective": "2026-07-01",
+        "recorded": "2026-07-01T17:31:53Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42392",
+          "name": "Curtis Williams",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "My Medicines, saved 1 July 2026.",
+        "payload": {
+          "med_1": {
+            "type": "my_med",
+            "homelog_med_id": "med_1",
+            "name": "Lisinopril",
+            "picked_from_search": {
+              "rxnorm": "314077",
+              "display": "lisinopril 20 MG Oral Tablet"
+            },
+            "strength_text": "20 mg",
+            "how_i_take_it": "morning",
+            "status": "stopped",
+            "stopped": "2025-12",
+            "kind": "prescription",
+            "note": "dry cough"
+          },
+          "med_2": {
+            "type": "my_med",
+            "homelog_med_id": "med_2",
+            "name": "Glucophage",
+            "strength_text": "1000 mg",
+            "how_i_take_it": "morning and supper",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_3": {
+            "type": "my_med",
+            "homelog_med_id": "med_3",
+            "name": "Cozaar",
+            "picked_from_search": {
+              "rxnorm": "979492",
+              "display": "losartan potassium 50 MG Oral Tablet"
+            },
+            "strength_text": "50 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_4": {
+            "type": "my_med",
+            "homelog_med_id": "med_4",
+            "name": "Advil",
+            "picked_from_search": {
+              "rxnorm": "310965",
+              "display": "ibuprofen 200 MG Oral Tablet"
+            },
+            "strength_text": "200 mg",
+            "how_i_take_it": "2 when my back hurts, a few times a week",
+            "status": "taking",
+            "kind": "over_the_counter"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "HL-U-42323",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01J74MZ4N8JJSBEGYYEXVVC33A",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42323",
+        "effective": "2024-09-06",
+        "recorded": "2024-09-06T21:48:41Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42323",
+          "name": "Anjali Perez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "supersedes": [
+          "01HG1G48V80YVH344CVR2C3M7A"
+        ],
+        "narrative": "My Medicines, saved 6 September 2024.",
+        "payload": {
+          "med_1": {
+            "type": "my_med",
+            "homelog_med_id": "med_1",
+            "name": "Zestril",
+            "picked_from_search": {
+              "rxnorm": "314077",
+              "display": "lisinopril 20 MG Oral Tablet"
+            },
+            "strength_text": "20 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_2": {
+            "type": "my_med",
+            "homelog_med_id": "med_2",
+            "name": "Norvasc",
+            "picked_from_search": {
+              "rxnorm": "197361",
+              "display": "amlodipine 5 MG Oral Tablet"
+            },
+            "strength_text": "5 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_3": {
+            "type": "my_med",
+            "homelog_med_id": "med_3",
+            "name": "Glucophage",
+            "strength_text": "1000 mg",
+            "how_i_take_it": "morning and supper",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_4": {
+            "type": "my_med",
+            "homelog_med_id": "med_4",
+            "name": "Zoloft",
+            "picked_from_search": {
+              "rxnorm": "312938",
+              "display": "sertraline 100 MG Oral Tablet"
+            },
+            "strength_text": "100 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_5": {
+            "type": "my_med",
+            "homelog_med_id": "med_5",
+            "name": "Synthroid",
+            "strength_text": "75 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01HG1G48V80YVH344CVR2C3M7A",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42323",
+        "effective": "2023-11-24",
+        "recorded": "2023-11-24T20:25:21Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42323",
+          "name": "Anjali Perez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "My Medicines, saved 24 November 2023.",
+        "payload": {
+          "med_1": {
+            "type": "my_med",
+            "homelog_med_id": "med_1",
+            "name": "Zestril",
+            "strength_text": "20 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_2": {
+            "type": "my_med",
+            "homelog_med_id": "med_2",
+            "name": "Norvasc",
+            "picked_from_search": {
+              "rxnorm": "197361",
+              "display": "amlodipine 5 MG Oral Tablet"
+            },
+            "strength_text": "5 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_3": {
+            "type": "my_med",
+            "homelog_med_id": "med_3",
+            "name": "Metformin",
+            "picked_from_search": {
+              "rxnorm": "861004",
+              "display": "metformin hydrochloride 1000 MG Oral Tablet"
+            },
+            "strength_text": "1000 mg",
+            "how_i_take_it": "morning and supper",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_4": {
+            "type": "my_med",
+            "homelog_med_id": "med_4",
+            "name": "Zoloft",
+            "picked_from_search": {
+              "rxnorm": "312938",
+              "display": "sertraline 100 MG Oral Tablet"
+            },
+            "strength_text": "100 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_5": {
+            "type": "my_med",
+            "homelog_med_id": "med_5",
+            "name": "Synthroid",
+            "strength_text": "75 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JD9BQKH0QK5PCMVWJ1CPFRF4",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42323",
+        "effective": "2024-11-21",
+        "recorded": "2024-11-22T07:17:40Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42323",
+          "name": "Anjali Perez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "**6:23 PM** — <ref id=\"note_1\">Changed the setting on my meter so the numbers show the same way the clinic's do. Before it was showing the small numbers.</ref>",
+        "payload": {
+          "note_1": {
+            "type": "diary_note",
+            "written_at": "2024-11-21T18:23",
+            "symptom_tags": []
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01HG2P5XP886Q7N0EEPX034VH2",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-42323",
+        "effective": "2023-11-24",
+        "recorded": "2023-11-25T07:30:21Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-42323",
+          "name": "Anjali Perez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "",
+        "payload": {
+          "glu_1": {
+            "type": "glucose_reading",
+            "measured_at": "2023-11-24T06:00",
+            "value": 7.8,
+            "unit": "mmol/L",
+            "meal_marker": "fasting",
+            "entry_method": "meter_sync"
+          },
+          "bp_1": {
+            "type": "bp_reading",
+            "measured_at": "2023-11-24T06:03",
+            "systolic_mmhg": 140,
+            "diastolic_mmhg": 90,
+            "pulse_bpm": 71,
+            "entry_method": "cuff_sync",
+            "arm": "left"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "HL-U-77677",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01KPAKBG08E1F2AF62GPX7GQNQ",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-77677",
+        "effective": "2026-04-15",
+        "recorded": "2026-04-16T07:33:41Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-77677",
+          "name": "Ida Lopez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "",
+        "payload": {
+          "glu_1": {
+            "type": "glucose_reading",
+            "measured_at": "2026-04-15T08:34",
+            "value": 138,
+            "unit": "mg/dL",
+            "meal_marker": "fasting",
+            "entry_method": "meter_sync"
+          },
+          "bp_1": {
+            "type": "bp_reading",
+            "measured_at": "2026-04-15T08:44",
+            "systolic_mmhg": 146,
+            "diastolic_mmhg": 86,
+            "pulse_bpm": 66,
+            "entry_method": "cuff_sync",
+            "arm": "right"
+          },
+          "dose_1": {
+            "type": "dose_log",
+            "at": "2026-04-15T21:46",
+            "homelog_med_id": "med_7",
+            "med_name": "Lantus",
+            "status": "taken",
+            "amount": 14,
+            "amount_unit": "units"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01KNPRJGC80ZDF52Z74Q8797K7",
+        "issuer": "did:web:homelog.example",
+        "patient": "HL-U-77677",
+        "effective": "2026-04-08",
+        "recorded": "2026-04-08T14:40:05Z",
+        "author": {
+          "id": "urn:homelog:user:HL-U-77677",
+          "name": "Ida Lopez",
+          "role": "Patient"
+        },
+        "schema": {
+          "url": "https://homelog.example/folio/schemas/homelog-v1.d.ts",
+          "type": "HomeLogEntry",
+          "sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+        },
+        "narrative": "My Medicines, saved 8 April 2026.",
+        "payload": {
+          "med_1": {
+            "type": "my_med",
+            "homelog_med_id": "med_1",
+            "name": "Glucophage",
+            "strength_text": "1000 mg",
+            "how_i_take_it": "morning and supper",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_2": {
+            "type": "my_med",
+            "homelog_med_id": "med_2",
+            "name": "Glipizide",
+            "picked_from_search": {
+              "rxnorm": "310490",
+              "display": "glipizide 5 MG Oral Tablet"
+            },
+            "strength_text": "5 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_3": {
+            "type": "my_med",
+            "homelog_med_id": "med_3",
+            "name": "Lipitor",
+            "picked_from_search": {
+              "rxnorm": "617310",
+              "display": "atorvastatin 20 MG Oral Tablet"
+            },
+            "strength_text": "20 mg",
+            "how_i_take_it": "bedtime",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_4": {
+            "type": "my_med",
+            "homelog_med_id": "med_4",
+            "name": "Farxiga",
+            "picked_from_search": {
+              "rxnorm": "1488569",
+              "display": "dapagliflozin 10 MG Oral Tablet"
+            },
+            "strength_text": "10 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_5": {
+            "type": "my_med",
+            "homelog_med_id": "med_5",
+            "name": "Dulaglutide",
+            "picked_from_search": {
+              "rxnorm": "1551291",
+              "display": "dulaglutide"
+            },
+            "strength_text": "1.5 mg pen",
+            "how_i_take_it": "once a week, Sunday",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_6": {
+            "type": "my_med",
+            "homelog_med_id": "med_6",
+            "name": "Losartan",
+            "picked_from_search": {
+              "rxnorm": "979480",
+              "display": "losartan potassium 100 MG Oral Tablet"
+            },
+            "strength_text": "100 mg",
+            "how_i_take_it": "morning",
+            "status": "taking",
+            "kind": "prescription"
+          },
+          "med_7": {
+            "type": "my_med",
+            "homelog_med_id": "med_7",
+            "name": "Lantus",
+            "strength_text": "100 units/mL pen",
+            "how_i_take_it": "10 units at bedtime",
+            "status": "taking",
+            "kind": "prescription"
+          }
+        }
+      }
+    ]
+  }
+]

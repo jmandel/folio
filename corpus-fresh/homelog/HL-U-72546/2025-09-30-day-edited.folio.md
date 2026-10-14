@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01K6H8SYD0KRT4291HN2CHSCRS"
+issuer: "did:web:homelog.example"
+patient: "HL-U-72546"
+effective: "2025-09-30"
+recorded: "2025-10-02T01:32:52Z"
+author:
+  id: "urn:homelog:user:HL-U-72546"
+  name: "Lois Wilson"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01K6F2KWC8H1E9ZCZYXKNV2VK7"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2025-09-30T08:26",
+    "value": 170,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2025-09-30T08:36",
+    "systolic_mmhg": 141,
+    "diastolic_mmhg": 86,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2025-09-30T21:24",
+    "homelog_med_id": "med_4",
+    "med_name": "Lantus",
+    "status": "taken",
+    "amount": 18,
+    "amount_unit": "units"
+  }
+}
+```

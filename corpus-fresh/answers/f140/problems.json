@@ -1,0 +1,73 @@
+{
+  "patient": "f140",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2007", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2012", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2007", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2021-11-18", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2021-11-18",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_38"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+        "icd10": "E11.10",
+        "snomed": "420422005",
+        "onset": { "value": "2023-02-21", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_112"],
+        "resolved_on": "2023-02-23"
+      },
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2025-01-15", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_154"],
+        "resolved_on": "2025-01-18"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2025-01-15", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_155"],
+        "resolved_on": "2025-01-18"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls -R in | head -50; wc -l in/previous/* in/schema/* in/views/*; grep -n \\\"^## \\\\|^- Narrative\\\\|^- Your\\\\|^- Quote\\\" in/feedback.md\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/previous/fb.ts in/previous/show.ts in/previous/edge.ts; cat in/harness/check.sh; ls out 2>/dev/null\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sed -n 912,2000p in/feedback.md | grep -v '^\\\\s*$' | head -5; sh in/harness/check.sh 2>&1 | head -80\"}"
+  }
+ ],
+ "blocking": 0
+}

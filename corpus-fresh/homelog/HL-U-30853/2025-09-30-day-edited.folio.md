@@ -1,0 +1,30 @@
+---
+folio: "0.1"
+id: "01K6H98ABRHN1QSZ82PAEF68KK"
+issuer: "did:web:homelog.example"
+patient: "HL-U-30853"
+effective: "2025-09-30"
+recorded: "2025-10-02T01:40:43Z"
+author:
+  id: "urn:homelog:user:HL-U-30853"
+  name: "Donna Carter"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01K6F9HM2RNQ46J4CJ6J2BATWC"
+---
+
+```json payload
+{
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2025-09-30T06:19",
+    "systolic_mmhg": 153,
+    "diastolic_mmhg": 87,
+    "entry_method": "typed"
+  }
+}
+```

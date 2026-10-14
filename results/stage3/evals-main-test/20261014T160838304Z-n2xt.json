@@ -1,0 +1,702 @@
+{
+ "runId": "20261014T160838304Z-n2xt",
+ "source": "northgate",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 178,
+  "items": 8722,
+  "ms": 398.9182939999998,
+  "msPerItem": 0.04573702063746844,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 5909,
+   "fp": 0,
+   "fn": 0,
+   "rows": 828,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 2647,
+   "fp": 0,
+   "fn": 0,
+   "rows": 638,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 0.9553571428571429,
+   "recall": 0.9553571428571429,
+   "tp": 214,
+   "fp": 10,
+   "fn": 10,
+   "rows": 32,
+   "wrongRows": 10,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 57953,
+   "fp": 0,
+   "fn": 0,
+   "rows": 11243,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 9580,
+   "fp": 0,
+   "fn": 0,
+   "rows": 1503,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9553571428571429,
+    "recall": 0.9553571428571429,
+    "tp": 214,
+    "fp": 10,
+    "fn": 10,
+    "rows": 32,
+    "wrongRows": 10,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.dose": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.frequency": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.patient_reported": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.evidence": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status_since": {
+   "ok": 53,
+   "total": 53
+  },
+  "medications.stop_reason": {
+   "ok": 34,
+   "total": 34
+  },
+  "medications.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.status": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.onset": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.evidence": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.ckd_stage": {
+   "ok": 69,
+   "total": 69
+  },
+  "allergies.reaction_type": {
+   "ok": 22,
+   "total": 32
+  },
+  "allergies.mechanism": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.criticality": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.onset": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.reaction": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.evidence": {
+   "ok": 32,
+   "total": 32
+  },
+  "labs.value": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.unit": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.status": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.evidence": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.egfr_equation": {
+   "ok": 1738,
+   "total": 1738
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.pulse_bpm": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.weight_kg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.evidence": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.repeat_systolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  },
+  "vitals.repeat_diastolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 0.9988588382973868,
+   "recall": 0.9988588382973868,
+   "tp": 8753,
+   "fp": 10,
+   "fn": 10
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 67550,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 27,
+   "errors": 0,
+   "patients": 26,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 53,
+   "errors": 0,
+   "patients": 45,
+   "patientsWithError": 0
+  },
+  "T16": {
+   "facts": 2785,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T10": {
+   "facts": 252,
+   "errors": 0,
+   "patients": 162,
+   "patientsWithError": 0
+  },
+  "T17": {
+   "facts": 252,
+   "errors": 0,
+   "patients": 162,
+   "patientsWithError": 0
+  },
+  "T5": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T11": {
+   "facts": 2499,
+   "errors": 0,
+   "patients": 91,
+   "patientsWithError": 0
+  },
+  "T12": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 28,
+   "errors": 10,
+   "patients": 26,
+   "patientsWithError": 10
+  },
+  "T14": {
+   "facts": 11427,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T9": {
+   "facts": 161,
+   "errors": 0,
+   "patients": 59,
+   "patientsWithError": 0
+  },
+  "T3": {
+   "facts": 81,
+   "errors": 0,
+   "patients": 38,
+   "patientsWithError": 0
+  },
+  "T7": {
+   "facts": 680,
+   "errors": 0,
+   "patients": 142,
+   "patientsWithError": 0
+  },
+  "T4": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 22,
+   "patientsWithError": 0
+  },
+  "T2": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "NFM-00731552",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_empagliflozin"
+   ],
+   "items": [
+    "01JCGHC7KGRYX1DZWYB8RTCAM0",
+    "01JCGRDX98E6RHXQAQPDH4AFAX",
+    "01KQSV32J01HGE25EW3DBZWSJY",
+    "01KT4VNA50BYQC6PG4EHFXEYAR",
+    "01KY04E7906KSV6KB84DWQJWPN"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JCGHC7KGRYX1DZWYB8RTCAM0",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "NFM-00474892",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_161"
+   ],
+   "items": [
+    "01GTYXPSQGQXK5T83E8R9BEFDB",
+    "01GTZ4CFM02WBX3PM6GKWWN6Z3"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GTYXPSQGQXK5T83E8R9BEFDB",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "NFM-00727449",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_139"
+   ],
+   "items": [
+    "01JNEPN2CG8HE37C18QHP65PND",
+    "01JNFAS1T0MM2CMWGZB1RB7GF7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JNEPN2CG8HE37C18QHP65PND",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p057",
+   "local": "NFM-00039111",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_146"
+   ],
+   "items": [
+    "01JWV2XB5GTS8H7CFVB311A8ET",
+    "01JWVASFH0AX4CC14FMNE9FDCX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JWV2XB5GTS8H7CFVB311A8ET",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "NFM-00696822",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_118"
+   ],
+   "items": [
+    "01JENYNRZGPAHYN2PZD1N4TD6V",
+    "01JEPKA7R0T193WVEWPJ9VSNFW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JENYNRZGPAHYN2PZD1N4TD6V",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p103",
+   "local": "NFM-00988119",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_130"
+   ],
+   "items": [
+    "01KHP39BSG9EP0QN7KEC5M2C0N",
+    "01KHPGKEJ05TZBJH738X0TWF93"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KHP39BSG9EP0QN7KEC5M2C0N",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p114",
+   "local": "NFM-00113020",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_98"
+   ],
+   "items": [
+    "01KGTF7JBGN361KKJ4552QJB4V",
+    "01KGTTN7H0YXKNVBD6ZPRQ97DQ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KGTF7JBGN361KKJ4552QJB4V",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p116",
+   "local": "NFM-00135456",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_80"
+   ],
+   "items": [
+    "01JBWCSD0GACQGG3C669RTEKB4",
+    "01JBWR7260T3EM70FXAGAY1GFJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBWCSD0GACQGG3C669RTEKB4",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "NFM-00245775",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_65"
+   ],
+   "items": [
+    "01KFK436WGSDM9KN10QN22XYSB",
+    "01KFKNW3Z0KBVTB20VTDYKCQQC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KFK436WGSDM9KN10QN22XYSB",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "NFM-00727793",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "a_102"
+   ],
+   "items": [
+    "01J7Y3WACGFC2N150W9QR8NSYM",
+    "01J7YEAVF0ZVR9ZRH9RK3ZY9EW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J7Y3WACGFC2N150W9QR8NSYM",
+     "entry_id": "alg_1"
+    }
+   ]
+  }
+ ]
+}

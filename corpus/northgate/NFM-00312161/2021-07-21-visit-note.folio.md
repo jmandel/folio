@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. Doing OK, no new symptoms.
+DM2 f/u. Feels well.
+
 BP 136/82, pulse 67, wt 213 lb.
 Labs today: eGFR 47, K 4.4, A1c 8%.
-Diet reviewed with pt.
-RTC 3 mo.
+Reviewed diet and home glucose log. RTC 3 mo.
 
 ```json payload
 {

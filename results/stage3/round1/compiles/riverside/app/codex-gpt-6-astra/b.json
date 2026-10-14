@@ -1,0 +1,58 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "condition": "b",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T122804498Z-1h3e",
+   "ok": true,
+   "durationMs": 354468,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 750350,
+    "cached_input_tokens": 671616,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10603,
+    "reasoning_output_tokens": 3954
+   },
+   "feedbackItems": 16,
+   "evalPath": "results/stage3/evals/20261014T122804498Z-1h3e.json",
+   "summary": "tsc=ok det=true errors=0/32 P=99.1% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.279ms/item"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T123359975Z-s982",
+   "ok": true,
+   "durationMs": 165411,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 619616,
+    "cached_input_tokens": 545920,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5282,
+    "reasoning_output_tokens": 1301
+   },
+   "feedbackItems": 14,
+   "evalPath": "results/stage3/evals/20261014T123359975Z-s982.json",
+   "summary": "tsc=ok det=true errors=0/32 P=99.1% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.281ms/item"
+  }
+ ],
+ "final": "20261014T123359975Z-s982",
+ "startedFrom": "20261014T121114803Z-akao",
+ "note": "Prose-check discrepancies on dev-split items fed back."
+}

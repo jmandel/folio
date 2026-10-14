@@ -17,8 +17,8 @@ schema:
 Annual exam. No new complaints.
 BP 145/83, repeat 142/82, pulse 74, wt 221 lb.
 Today: eGFR 64, K 4.1, A1c 8.1%.
-Metformin dose changed to 1000 mg twice daily today (A1c 8.1). Lisinopril dose changed to 40 mg daily today (BP above goal).
-RTC 5 mo.
+A1c 8.1, so metformin changed to 1000 mg twice daily today. BP above goal, lisinopril changed to 40 mg daily today.
+RTC 3 mo, recheck BP.
 
 ```json payload
 {

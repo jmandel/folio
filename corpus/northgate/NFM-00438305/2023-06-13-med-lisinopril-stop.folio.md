@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">Lisinopril stopped today (angioedema).</ref>
+<ref id="med_1">Lisinopril stopped today, angioedema.</ref> Pt told not to take any more.
 
 ```json payload
 {
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "stop_reason": "adverse_reaction",
     "reason_text": "angioedema",
-    "visit_id": "V-2023-061391"
+    "visit_id": "V-2023-061359"
   }
 }
 ```

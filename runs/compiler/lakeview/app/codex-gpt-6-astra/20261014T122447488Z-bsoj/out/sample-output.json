@@ -1,0 +1,935 @@
+{
+  "patient": "LV-0022263",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [
+      {
+        "drug_name": "finerenone 10 mg tablet",
+        "status": "held",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "rx_finerenone"
+          },
+          {
+            "item_id": "01KJTW43W0YPW5H5P5N6BJY7EK",
+            "entry_id": "hold_finerenone"
+          }
+        ],
+        "ingredient": "finerenone",
+        "status_since": "2026-03-03",
+        "dose": {
+          "value": 10,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "status_reason_text": "K 6 / 5.9 confirmed"
+      }
+    ],
+    "problems": [
+      {
+        "condition": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+        "icd10cm": "E11.22",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "dx_dm"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "dx_dm"
+          }
+        ],
+        "onset": {
+          "value": "2017",
+          "precision": "year"
+        }
+      },
+      {
+        "condition": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "icd10cm": "I12.9",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "dx_htn"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "dx_htn"
+          }
+        ],
+        "onset": {
+          "value": "2014",
+          "precision": "year"
+        }
+      },
+      {
+        "condition": "Chronic kidney disease, stage 3b",
+        "icd10cm": "N18.32",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "dx_ckd"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "visit"
+          }
+        ],
+        "ckd_stage": "G3b",
+        "albuminuria": "A3"
+      }
+    ],
+    "allergies": [],
+    "labs": [],
+    "vitals": [
+      {
+        "setting": "clinic",
+        "local_time": "2026-01-27T11:04",
+        "evidence": [
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "visit"
+          },
+          {
+            "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+            "entry_id": "wt"
+          }
+        ],
+        "systolic_mmhg": 126,
+        "diastolic_mmhg": 80,
+        "pulse_bpm": 70,
+        "weight_kg": 82.2
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2026-07-13T10:44",
+        "evidence": [
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "visit"
+          },
+          {
+            "item_id": "01KXET9XP0F0PSF8A9RZEX0VCS",
+            "entry_id": "wt"
+          }
+        ],
+        "systolic_mmhg": 122,
+        "diastolic_mmhg": 80,
+        "pulse_bpm": 74,
+        "weight_kg": 80.7
+      }
+    ]
+  }
+}
+{
+  "patient": "LV-0005043",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [],
+    "problems": [],
+    "allergies": [],
+    "labs": [
+      {
+        "analyte": "a1c",
+        "value": 7.3,
+        "unit": "%",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "cholesterol",
+        "value": 224,
+        "unit": "mg/dL",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_chol"
+          }
+        ],
+        "loinc": "2093-3"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.13,
+        "unit": "mg/dL",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 60,
+        "comparator": ">",
+        "unit": "mL/min/1.73m2",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_egfr_n"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "hdl",
+        "value": 52,
+        "unit": "mg/dL",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_hdl"
+          }
+        ],
+        "loinc": "2085-9"
+      },
+      {
+        "analyte": "ldl",
+        "value": 146,
+        "unit": "mg/dL",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_ldl"
+          }
+        ],
+        "loinc": "13457-7"
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.7,
+        "unit": "mmol/L",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_k"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_k"
+          }
+        ]
+      },
+      {
+        "analyte": "triglycerides",
+        "value": 132,
+        "unit": "mg/dL",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_trig"
+          }
+        ],
+        "loinc": "2571-8"
+      },
+      {
+        "analyte": "uacr",
+        "value": 8,
+        "unit": "mg/g",
+        "collected": "2019-06-22T07:47:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "ord_uacr"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01DE0F9QS0DGSH8QRDR2EGXTAC",
+            "entry_id": "res_uacr"
+          }
+        ]
+      },
+      {
+        "analyte": "a1c",
+        "value": 6.6,
+        "unit": "%",
+        "collected": "2020-02-13T07:36:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.15,
+        "unit": "mg/dL",
+        "collected": "2020-02-13T07:36:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 60,
+        "comparator": ">",
+        "unit": "mL/min/1.73m2",
+        "collected": "2020-02-13T07:36:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "res_egfr_n"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.6,
+        "unit": "mmol/L",
+        "collected": "2020-02-13T07:36:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "ord_k"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01E0ZVTQK0TGZY5K3SBEP61MSA",
+            "entry_id": "res_k"
+          }
+        ]
+      },
+      {
+        "analyte": "a1c",
+        "value": 6.6,
+        "unit": "%",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "cholesterol",
+        "value": 185,
+        "unit": "mg/dL",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_chol"
+          }
+        ],
+        "loinc": "2093-3"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.16,
+        "unit": "mg/dL",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 60,
+        "comparator": ">",
+        "unit": "mL/min/1.73m2",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_egfr_n"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "hdl",
+        "value": 28,
+        "unit": "mg/dL",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_hdl"
+          }
+        ],
+        "loinc": "2085-9"
+      },
+      {
+        "analyte": "ldl",
+        "value": 144,
+        "unit": "mg/dL",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_ldl"
+          }
+        ],
+        "loinc": "13457-7"
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.7,
+        "unit": "mmol/L",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_k"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_k"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 135,
+        "unit": "mmol/L",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_na"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_na"
+          }
+        ],
+        "loinc": "2951-2"
+      },
+      {
+        "analyte": "triglycerides",
+        "value": 65,
+        "unit": "mg/dL",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_lipid"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_trig"
+          }
+        ],
+        "loinc": "2571-8"
+      },
+      {
+        "analyte": "uacr",
+        "value": 14,
+        "unit": "mg/g",
+        "collected": "2020-12-23T07:19:00-06:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "ord_uacr"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01ET8N58202HFDNQWT4FYYYYZG",
+            "entry_id": "res_uacr"
+          }
+        ]
+      },
+      {
+        "analyte": "a1c",
+        "value": 6.7,
+        "unit": "%",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.14,
+        "unit": "mg/dL",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 71,
+        "unit": "mL/min/1.73m2",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_egfr_n"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "hemoglobin",
+        "value": 14.6,
+        "unit": "g/dL",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_cbc"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_hgb"
+          }
+        ],
+        "loinc": "718-7"
+      },
+      {
+        "analyte": "platelets",
+        "value": 259,
+        "unit": "10*3/uL",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_cbc"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_plt"
+          }
+        ],
+        "loinc": "777-3"
+      },
+      {
+        "analyte": "potassium",
+        "value": 4,
+        "unit": "mmol/L",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_k"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_k"
+          }
+        ]
+      },
+      {
+        "analyte": "wbc",
+        "value": 7.4,
+        "unit": "10*3/uL",
+        "collected": "2021-10-19T07:21:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "ord_cbc"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FJCMYFR0PNMFGHV5GN7VR6QS",
+            "entry_id": "res_wbc"
+          }
+        ],
+        "loinc": "6690-2"
+      },
+      {
+        "analyte": "a1c",
+        "value": 7.2,
+        "unit": "%",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.15,
+        "unit": "mg/dL",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 74,
+        "unit": "mL/min/1.73m2",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "res_egfr"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2021"
+      },
+      {
+        "analyte": "sodium",
+        "value": 136,
+        "unit": "mmol/L",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "ord_na"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "res_na"
+          }
+        ],
+        "loinc": "2951-2"
+      },
+      {
+        "analyte": "uacr",
+        "value": 9,
+        "unit": "mg/g",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "ord_uacr"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01HWTTV5T09G13GF3CPD8B8SM3",
+            "entry_id": "res_uacr"
+          }
+        ],
+        "loinc": "9318-7"
+      }
+    ],
+    "vitals": []
+  }
+}

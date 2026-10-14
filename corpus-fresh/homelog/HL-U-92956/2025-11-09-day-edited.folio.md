@@ -1,0 +1,38 @@
+---
+folio: "0.1"
+id: "01K9R85GK82BNXH68HDMPWFV0W"
+issuer: "did:web:homelog.example"
+patient: "HL-U-92956"
+effective: "2025-11-09"
+recorded: "2025-11-11T01:23:29Z"
+author:
+  id: "urn:homelog:user:HL-U-92956"
+  name: "Evelyn Khan"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01K9PBSW38PAPF11KTCHYGED7Q"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2025-11-09T08:32",
+    "value": 140,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2025-11-09T08:42",
+    "systolic_mmhg": 146,
+    "diastolic_mmhg": 86,
+    "entry_method": "typed"
+  }
+}
+```

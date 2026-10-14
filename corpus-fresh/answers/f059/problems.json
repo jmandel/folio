@@ -1,0 +1,64 @@
+{
+  "patient": "f059",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2014-07", "precision": "month" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2018-12-27", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2015", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.4",
+        "snomed": "700379002",
+        "onset": { "value": "2020-05-29", "precision": "day" },
+        "stage": "4 A3",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-07-28",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_33"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Pneumonia",
+        "icd10": "J18.9",
+        "snomed": "233604007",
+        "onset": { "value": "2023-09-19", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_165"],
+        "resolved_on": "2023-09-22"
+      }
+    ]
+  }
+}

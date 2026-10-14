@@ -1,0 +1,88 @@
+{
+  "patient": "f025",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "chlorthalidone",
+      "rxnorm_ingredient": "2409",
+      "product": "chlorthalidone 25 MG Oral Tablet",
+      "rxnorm_product": "197499",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-08-17",
+      "sources": ["B", "P"],
+      "basis": ["m_64"]
+    },
+    {
+      "medication": "ibuprofen",
+      "rxnorm_ingredient": "5640",
+      "product": "ibuprofen 200 MG Oral Tablet",
+      "rxnorm_product": "310965",
+      "dose": { "value": 400, "unit": "mg" },
+      "dose_text": "400 mg (2 × 200 mg)",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2025",
+      "otc": true,
+      "taken_as": "2 when my back hurts, a few times a week",
+      "sources": ["P"],
+      "basis": ["m_65"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-11-06",
+      "sources": ["B", "P"],
+      "basis": ["m_23"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sensitive": "behavioral-health",
+      "sources": ["B", "P"],
+      "basis": ["m_8"]
+    }
+  ]
+}

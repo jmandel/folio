@@ -1,0 +1,41 @@
+{
+ "source": "homelog",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p225/2025-01-18-day.folio.md",
+  "p225/2024-10-20-my-medicines.folio.md",
+  "p065/2026-05-10-day.folio.md",
+  "p065/2026-02-11-my-medicines.folio.md",
+  "p065/2026-03-15-day.folio.md",
+  "p225/2024-04-28-my-medicines.folio.md",
+  "p065/2026-02-19-day.folio.md",
+  "p065/2026-02-20-day.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T140344791Z-mykn",
+   "ok": true,
+   "costUsd": 1.3095822,
+   "durationMs": 340172,
+   "numTurns": 12,
+   "usage": {
+    "input_tokens": 24,
+    "cache_creation_input_tokens": 61470,
+    "cache_read_input_tokens": 509631,
+    "output_tokens": 35790
+   },
+   "evalPath": "results/stage3/evals/20261014T140344791Z-mykn.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 3/371, prob –, alle –, labs –, vita 0/10462"
+  }
+ ],
+ "rep": 3,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T140344791Z-mykn"
+}

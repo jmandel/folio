@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J77BAS60XX3Q29QFCHJJW5NM"
+id: "01J77BAS608WYE0H08JKKWK47N"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-04T04:37:00Z"
@@ -17,20 +17,20 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnoses.** <ref id="dx_dka">Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved.</ref> <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref> with a normal lipase of 30.
+**Diagnosis:** <ref id="dx_dka">euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved</ref>.
 
-**Hospital course.** The patient came to the ED with nausea, fatigue and deep, fast breathing, and was found to have a severe anion gap acidosis with a glucose of only 186. They take empagliflozin at home. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. They were treated with an insulin infusion and D5 lactated Ringer's, then transitioned to subcutaneous glargine. The anion gap closed by the morning of 9/4. Sodium was 128 on arrival and has stayed mildly low, 131 on the day of discharge.
+**Hospital course.** The patient was admitted on 9/3 acidotic with a near-normal glucose of 186, anion gap 22 and bicarbonate 14. They were treated with an insulin infusion per DKA protocol and D5 lactated Ringer's, then transitioned to subcutaneous glargine on 9/4. The anion gap closed by 9/4 and stayed closed. <ref id="dx_pancreatitis">Acute pancreatitis was ruled out</ref> with a lipase of 30. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. They have been eating well and feel back to normal.
 
-**Condition at discharge.** Vitals at 11:30: BP 121/73, HR 98, RR 19, T 98.9 F, SpO2 96%. The final panel at 06:02 on 9/7 shows sodium 131, potassium 4.2, chloride 98, bicarbonate 22, anion gap 11, urea nitrogen 18, creatinine 0.80, eGFR 80 and glucose 167. The patient is eating and walking without symptoms. Allergies: NKDA.
+**Condition at discharge.** Vitals at 11:30: BP 121/73, HR 98, RR 19, T 98.9 F, SpO2 96%. Basic metabolic panel on 9/7 at 06:02: sodium 131, potassium 4.2, chloride 98, bicarbonate 22, anion gap 11, urea nitrogen 18, creatinine 0.80, eGFR 80, glucose 167. Allergy list: NKDA.
 
 **Discharge medications**
 
-- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the primary care physician.</ref>
-- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
-- <ref id="med_losartan">Losartan 100 mg daily: continue.</ref>
-- <ref id="med_furosemide">Furosemide 40 mg daily: continue.</ref>
-- Carvedilol 12.5 mg twice daily: continue.
-- Spironolactone 25 mg daily: continue.
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the PCP</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
+- <ref id="med_losartan">Losartan 100 mg daily: continue</ref>
+- Carvedilol 12.5 mg twice daily: continue
+- Spironolactone 25 mg daily: continue
+- <ref id="med_furosemide">Furosemide 40 mg daily: continue</ref>
 
 **Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
@@ -38,7 +38,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6196344",
+    "encounter_id": "RRH-ENC-6905994",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -75,7 +75,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24251-6885",
+    "accession": "L24251-4150",
     "collected": "2024-09-07T11:02:00Z",
     "specimen": "serum",
     "status": "final",

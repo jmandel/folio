@@ -1,0 +1,259 @@
+{
+ "runId": "20261014T154025060Z-lt22",
+ "source": "homelog",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 60,
+  "items": 4315,
+  "ms": 88.12544399999997,
+  "msPerItem": 0.020423046118192345,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 0.9994845360824742,
+   "tp": 1939,
+   "fp": 0,
+   "fn": 1,
+   "rows": 279,
+   "wrongRows": 1,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 30489,
+   "fp": 0,
+   "fn": 0,
+   "rows": 7506,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 0.9994845360824742,
+    "tp": 1939,
+    "fp": 0,
+    "fn": 1,
+    "rows": 279,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 268,
+   "total": 269
+  },
+  "medications.status": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.dose": {
+   "ok": 268,
+   "total": 268
+  },
+  "medications.patient_reported": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.otc": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.evidence": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.status_since": {
+   "ok": 8,
+   "total": 8
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.pulse_bpm": {
+   "ok": 3979,
+   "total": 3979
+  },
+  "vitals.evidence": {
+   "ok": 7506,
+   "total": 7506
+  },
+  "vitals.glucose_mg_dl": {
+   "ok": 3514,
+   "total": 3514
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 1,
+   "recall": 0.9999691510365252,
+   "tp": 32415,
+   "fp": 0,
+   "fn": 1
+  },
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 13,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 1,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T13": {
+   "facts": 15,
+   "errors": 0,
+   "patients": 14,
+   "patientsWithError": 0
+  },
+  "T6": {
+   "facts": 875,
+   "errors": 0,
+   "patients": 17,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 51,
+   "errors": 0,
+   "patients": 9,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 6,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "p104",
+   "local": "HL-U-45450",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "finerenone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "finerenone"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_120"
+   ],
+   "items": [
+    "01HYC0YRE0EQFMRJ0EHA4PQJ1X",
+    "01JDQC7XY820K7TVR4W9YAFHHS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDQC7XY820K7TVR4W9YAFHHS",
+     "entry_id": "med_7"
+    }
+   ]
+  }
+ ]
+}

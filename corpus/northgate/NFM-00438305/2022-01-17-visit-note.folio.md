@@ -14,10 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. No new concerns per pt.
+Annual exam. No new concerns, feels well.
+
 BP 132/85, pulse 62, wt 217 lb.
-Exam unremarkable. Diet and activity reviewed.
-RTC 1 yr.
+
+Counseled on diet and daily walking. Labs ordered per routine.
+
+RTC 9 mo.
 
 ```json payload
 {

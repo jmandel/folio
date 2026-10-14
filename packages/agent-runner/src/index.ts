@@ -77,7 +77,8 @@ async function runOnce(task: AgentTask, runId: string, runsRoot: string, attempt
   }
   writeFileSync(join(runDir, "prompt.md"), task.prompt.trimEnd() + PROMPT_FOOTER);
 
-  const cmd = buildCommand(task, runDir);
+  const base = buildCommand(task, runDir);
+  const cmd = task.wrapCommand ? task.wrapCommand(base, runDir) : base;
   const onLine = opts.onEvent && ((l: string) => { for (const e of parseLines(l)) opts.onEvent!(e); });
   const spec = { cmd, runDir, timeoutMs: task.timeoutMs ?? DEFAULT_TIMEOUT_MS, onLine };
   const startedAt = new Date();

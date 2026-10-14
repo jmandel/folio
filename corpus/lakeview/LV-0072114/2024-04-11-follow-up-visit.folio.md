@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HV7R7E50T0SFW2PVF858Z5W6"
+id: "01HV7R7E501M5S6WMY6H424PKC"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0072114"
 effective: "2024-04-11T15:00:00-05:00"
@@ -14,19 +14,17 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>, <ref id="dx_htn">hypertension</ref>. No complaints.
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">type 2 diabetes (onset 2014)</ref>, <ref id="dx_htn">essential hypertension (onset 2006)</ref>.
 
-<ref id="bp_sys">BP 131/80, HR 87, weight 70.1 kg</ref>. Weight down about 1 kg.
+eGFR 40 today, K 4.8. <ref id="bp_sys">BP 131/80, HR 87, weight 70.1 kg</ref>.
 
-eGFR 40 today, K 4.8. Unchanged from the last check.
-
-Return 5 months.
+Doing well, weight steady. Return in 4–5 months with labs.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2024-04-11T15:00:00-05:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +33,7 @@ Return 5 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +41,7 @@ Return 5 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +49,7 @@ Return 5 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +57,7 @@ Return 5 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 131,
     "UNIT_CODE": "mmHg",
@@ -68,7 +66,7 @@ Return 5 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +75,7 @@ Return 5 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 87,
     "UNIT_CODE": "/min",
@@ -86,7 +84,7 @@ Return 5 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-108278",
+    "VISIT_ID": "NV-112686",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 70.1,
     "UNIT_CODE": "kg",

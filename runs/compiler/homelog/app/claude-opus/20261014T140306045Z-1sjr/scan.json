@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'))\nfor g in d:\n  for i in g['items']: print(g['patient'],i['id'],i['effectiv"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh 2>&1 | python3 -c \\\"\nimport json,sys\ntxt=sys.stdin.read()\ndec=json.JSONDecoder();i=0\nwhile i<len(txt):\n  j=txt.find('{"
+  }
+ ],
+ "blocking": 0
+}

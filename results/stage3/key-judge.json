@@ -1,0 +1,83 @@
+{
+ "runId": "20261014T135017132Z-r02v",
+ "changes": [
+  {
+   "change": 1,
+   "before_justified": "no",
+   "after_justified": "yes",
+   "v2_rule_faithful": "partly",
+   "reasons": "Views v1 states the rule directly in the MedicationRow header: 'One row per drug ingredient. If the source has several lines, orders or prescriptions for the same ingredient over time (stopped and restarted, re-entered), report the most recent one, i.e. the one whose own latest event is latest.' A key with two rows for one ingredient (two truth medications) contradicts this, so BEFORE was not justified. Northgate already grouped its lines by ingredient before the change (keys-before-changes.ts:163-174). Lakeview, Riverside and HomeLog did not. AFTER (keys-after-changes.ts:132-139) collapses rows by ingredient, or by the name as written when the ingredient can't be derived. That matches the rule, and the ordering is sound for Northgate (ms(cur.at)) and Lakeview (sortKey(last.at)), which both use the latest event. Views v2 keeps the same text word for word (views-v2.d.ts:104-107), and keys-v2.ts:151-158 keeps the same code, so the rule carries over. Three implementation details aren't grounded in the views, which is why I mark v2 'partly' faithful. (a) HomeLog recency is order = (stopped ? 0 : 1000) + list position (keys-v2.ts:502). 'Taking beats stopped' is a fair reading of 'latest event', but list position isn't documented as recency anywhere in homelog-v1.d.ts. The entry's own `started`/`stopped` dates are what the view's 'own latest event' points to, and a stopped entry with a recent `stopped` date could in principle out-date a taking entry with an old `started` date. (b) Riverside rows have no `order`, so ties are broken by truth-medication order. The snapshot rule gives no 'latest event' between two lines in one snapshot, so the choice is arbitrary. (c) In keys-v2.ts the one-per-ingredient reduction (151-158) runs BEFORE the publication-scope filter (159-162). If the newer row's items weren't yet recorded by asOf, it wins the reduction and is then removed. The older, published row has already been discarded, so the ingredient disappears entirely, but a mapper following the views would report the older line. This is an edge case, but it's a real ordering bug.",
+   "doc_citations": [
+    "views-v1.d.ts:84-87 'One row per drug ingredient. If the source has several lines, orders or prescriptions for the same ingredient over time (stopped and restarted, re-entered), report the most recent one, i.e. the one whose own latest event is latest.'",
+    "views-v1.d.ts:88-89 'Include medications that are stopped (status 'stopped') if the source still shows them'",
+    "views-v1.d.ts:92-95 snapshot rule: 'the latest in-scope snapshot is the source's list'",
+    "views-v2.d.ts:104-107 (identical one-row-per-ingredient rule)",
+    "homelog-v1.d.ts:13-15 'Holds one `my_med` entry per medicine on the list, including ones marked stopped. Each save restates the whole list'",
+    "homelog-v1.d.ts:213-217 MyMed.started / MyMed.stopped (the entry's own dated events)",
+    "keys-before-changes.ts:163-174 (Northgate already one line per ingredient); no dedup for C/A/P",
+    "keys-after-changes.ts:132-139, 201, 286, 440",
+    "keys-v2.ts:151-162 (dedup precedes publication filter), 502 (HomeLog order = status priority + list index)"
+   ],
+   "reasonable_alternative_readings": [
+    "On a HomeLog list, rank two entries for the same ingredient by their `stopped`/`started` dates rather than by status priority and list position (this differs from the key only in unusual cases).",
+    "Read 'Include medications that are stopped if the source still shows them' (v1:88-89) as keeping a stopped entry that is still shown next to a current one. But the more specific one-row-per-ingredient rule (v1:84-87) overrides this, so it is not a strong reading.",
+    "If a list holds two simultaneous current lines for one ingredient (two strengths), keep one row and omit `dose`, since 'the source gives no single amount' (v1:129), instead of picking one line."
+   ]
+  },
+  {
+   "change": 2,
+   "before_justified": "ambiguous",
+   "after_justified": "yes",
+   "v2_rule_faithful": "yes",
+   "reasons": "The v1 status definitions pull in two directions. 'active' includes 'on a patient's own list, says they are', which on a literal reading covers MyMed.status 'taking'. That makes BEFORE defensible as the literal mapping of the coded status. 'held' is defined as 'paused with intent (or at least possibility) of resuming; the patient should not be taking it now'. The note 'doctor told me to stop for now' fits this almost word for word: a clinician told them to stop ('should not be taking it now'), and 'for now' expresses a possible resume. The source documentation settles which reading a careful mapper should prefer. homelog-v1.d.ts:208-209 warns: 'HomeLog has no \"paused\" status; patients usually mark a paused medicine 'stopped' and explain in `note`, or leave it 'taking'.' So the schema itself says 'taking' does not reliably mean taking, and that the note is where a pause is explained. The note is a structured payload field (MyMed.note, homelog-v1.d.ts:225-226), not narrative, so the v1 rule that narrative cannot be the only basis for a row (v1:25-26) doesn't block using it. The patient's own words also mean they no longer 'say they are' taking it, which removes the literal support for 'active'. AFTER is therefore justified, and is the better reading. BEFORE is a reading a literal-minded mapper could reasonably have made, so I mark it ambiguous rather than wrong. v2 adds the rule explicitly (views-v2.d.ts:137-138), and keys-v2.ts:495-501 implements it. A 'taking' entry whose note matches /stop for now|on hold|paused/ becomes 'held'; status_since is omitted because the list gives no hold date, which matches 'Omit if the source does not say'. The regex is narrower than v2's 'paused or stopped for now' (for example, 'stopped for now' does not match 'stop for now'). The generator only ever writes the exact phrase 'doctor told me to stop for now' for held medications (generator-excerpts.ts:18), so on this data the implementation is faithful.",
+   "doc_citations": [
+    "views-v1.d.ts:111 \"'active': the patient should be taking it (or, on a patient's own list, says they are).\"",
+    "views-v1.d.ts:112-113 \"'held': paused with intent (or at least possibility) of resuming; the patient should not be taking it now. Not the same as stopped.\"",
+    "views-v1.d.ts:148 'Free-text reason for the current status (hold or stop) as the source wrote it'",
+    "views-v1.d.ts:25-26 'Narrative text may be used to understand an entry but must not be the only basis for a row.'",
+    "homelog-v1.d.ts:204-211 \"Whether the patient is taking it now, by their account ... HomeLog has no \\\"paused\\\" status; patients usually mark a paused medicine 'stopped' and explain in `note`, or leave it 'taking'.\"",
+    "homelog-v1.d.ts:225-226 'Patient's free-text note (why stopped, who prescribed, side effects).'",
+    "views-v2.d.ts:137-138 'On a patient's own list, a medicine marked as being taken but annotated as paused or stopped for now (e.g. a note \"doctor told me to stop for now\") is 'held'.'",
+    "generator-excerpts.ts:16-18 (held -> status 'taking' + note 'doctor told me to stop for now')",
+    "keys-before-changes.ts:413; keys-after-changes.ts:434-439; keys-v2.ts:495-501"
+   ],
+   "reasonable_alternative_readings": [
+    "'active': take the coded status 'taking' at face value under v1:111 ('on a patient's own list, says they are'), and put the note in status_reason_text.",
+    "'stopped': the patient says they stopped, and homelog-v1.d.ts:208-209 says paused medicines are usually filed as stopped. This is weaker, because 'for now' signals a possible resume, which v1 defines as 'held', not 'stopped'.",
+    "'unknown': the coded status and the note contradict each other. This is weak, because v1 reserves 'unknown' for lists that record no decision."
+   ]
+  },
+  {
+   "change": 3,
+   "before_justified": "ambiguous",
+   "after_justified": "no",
+   "v2_rule_faithful": "partly",
+   "reasons": "BEFORE: v1's ProblemRow says 'An adverse effect of a drug (however the source records it, including as an ICD-10 T-code diagnosis) is an AllergyIntoleranceRow of type 'adverse_reaction', not a problem. The illness it caused (e.g. ketoacidosis) is still a problem.' 'However the source records it', with ketoacidosis as the example, suggests that a diagnosis such as 'Euglycemic DKA, SGLT2 inhibitor-associated' should also produce an allergy-type row. On the other hand, riverside-doc-v1.d.ts:116-118 says Riverside records an adverse drug effect 'as its own diagnosis (an ICD-10 T-code), not as an allergy'. A mapper could reasonably conclude that only T-code entries carry the adverse effect, and that a drug-attributed condition label is just a problem. So BEFORE was a reasonable reading, not a clearly wrong one: ambiguous. AFTER (keys-after-changes.ts:358-366) adds the row, which is itself defensible, but the details of the rule aren't supported by v1. (1) The substance is the truth allergy's substance ('found from the truth'). The Riverside diagnosis names only a class. v1 says the mapper 'never invents, infers from other sources'; substance is 'generic ingredient name ... for drugs; as written otherwise'. Read literally, that gives 'SGLT2 inhibitor' / 'ACE inhibitor' as written. Narrowing to the one drug of that class on the same document's home list is a plausible in-source inference, but v1 never says to do it. For angioedema, the truth allergy's substance is hard-coded to lisinopril (generator-excerpts.ts:37), while the patient's actual ACE inhibitor is `home(['acei'])[0]` (line 32). If the patient takes a different ACE inhibitor, the key's substance doesn't match anything Riverside records. (2) Whether the row exists depends on another source. The truth allergy, and so the AFTER row, is only created `if (ax.inB)`, i.e. when Northgate recorded the reaction later (generator-excerpts.ts:38-40, 63-71). If the patient isn't a Northgate patient, the same Riverside documents produce no allergy row. A per-source key can't depend on what another organization recorded. (3) The dx loop doesn't check the diagnosis status or label. Any dx entry for the manifesting condition triggers the row, even if that document's label doesn't attribute it to a drug, or the status is working or ruled-out. (4) Type 'allergy' for ACE-inhibitor angioedema matches v1's type list ('allergy': immune-mediated (hives, rash, angioedema, ...)). But it conflicts with v1's ProblemRow bullet ('An adverse effect of a drug ... is an AllergyIntoleranceRow of type 'adverse_reaction'') and with pharmacology (bradykinin-mediated, not immune). v1 leaves this point ambiguous. 'adverse_reaction' for DKA is supported (v1:218-219 names 'drug-associated ketoacidosis'). Overall, AFTER is not justified by v1. V2 states the rule explicitly (views-v2.d.ts:198-202, 240-243): the specific drug when named; otherwise the single same-class drug on the same item's medication list; otherwise the class as written. It replaces type with reaction_type, putting ACE-inhibitor angioedema under 'hypersensitivity' (253-254) and ketoacidosis under 'serious_adverse_event' (257-258), plus a mechanism field ('non_immune' for both, 265-266). keys-v2.ts:391-414 implements the core rule faithfully. It matches class labels, skips working and ruled-out diagnoses, takes the substance from the encounter's re-listed home list (homeList, 351-357), or the class string when there isn't exactly one match, and sets reaction_type per class. Rows no longer depend on a truth allergy existing, so the Northgate dependence is gone. Remaining gaps: (a) The dx loop marks `seen` but never checks it (keys-v2.ts:412). If a later Riverside encounter's allergy list already carries the same allergy (recorded at Northgate, visible to Riverside), the key expects two rows for the same substance, while the view is 'One substance the patient should avoid'. The AFTER key avoided this with `if (!a || seen.has(a.id)) continue`. (b) 'Specific drug when the record names it' is only handled through the class regex. A label naming an ingredient (e.g. 'empagliflozin-associated DKA') without the class phrase isn't matched unless the truth subtype is sglt2i. (c) The medication list is the encounter-level renderer list rather than the item's own home_med entries; per the generator these are identical (every document re-lists them). (d) mechanism accepts 'unknown' as well as 'non_immune', although v2 explicitly classifies both cases as 'non_immune'. That is lenient, though defensible under 'Use this when in doubt'.",
+   "doc_citations": [
+    "views-v1.d.ts:4-7 'a mapper reports only what its own source says, and never invents, infers from other sources, or \"corrects\" what the source records.'",
+    "views-v1.d.ts:171-173 \"An adverse effect of a drug (however the source records it, including as an ICD-10 T-code diagnosis) is an `AllergyIntoleranceRow` of type 'adverse_reaction', not a problem. The illness it caused (e.g. ketoacidosis) is still a problem.\"",
+    "views-v1.d.ts:209 'Substance: generic ingredient name, lower case, for drugs (\"lisinopril\"); as written otherwise.'",
+    "views-v1.d.ts:214-220 \"'allergy': immune-mediated (hives, rash, angioedema, anaphylaxis, bronchospasm) ... 'adverse_reaction': ... (e.g. drug-associated ketoacidosis, lactic acidosis).\"",
+    "riverside-doc-v1.d.ts:112 'e.g. \"R/O pancreatitis\", \"Euglycemic DKA, SGLT2 inhibitor-associated\"'",
+    "riverside-doc-v1.d.ts:116-118 'An adverse drug effect is coded as its own diagnosis (an ICD-10 T-code), not as an allergy.'",
+    "riverside-doc-v1.d.ts:15-18 'Every document re-lists the home medications and allergies.'",
+    "riverside-doc-v1.d.ts:129-138 diagnosis status working/ruled_out/active/resolved",
+    "views-v2.d.ts:198-202 'Drug-caused diagnoses ... yields an `AllergyIntoleranceRow` for the drug (see there) in addition to a ProblemRow'",
+    "views-v2.d.ts:240-243 'Its substance is the specific drug when the record names it; when the diagnosis names only a drug class, it is the one drug of that class on the patient's medication list in the same item if there is exactly one; otherwise the class as written'",
+    "views-v2.d.ts:236 'One substance the patient should avoid, or be careful with'",
+    "views-v2.d.ts:253-258 reaction_type definitions (ACE-inhibitor angioedema -> 'hypersensitivity'; ketoacidosis -> 'serious_adverse_event')",
+    "views-v2.d.ts:265-267 mechanism 'non_immune' for ACE-inhibitor angioedema and drug-associated ketoacidosis; 'unknown' when in doubt",
+    "generator-excerpts.ts:32-40 (allergy substance hard-coded lisinopril-10; allergy exists only if ax.inB)",
+    "generator-excerpts.ts:63-71 (SGLT2i adverse-reaction allergy exists only if ax.inB)",
+    "keys-after-changes.ts:358-366; keys-v2.ts:351-357, 384-418 (412: seen.add without seen.has check)"
+   ],
+   "reasonable_alternative_readings": [
+    "Under v1, produce no allergy row from a condition diagnosis: Riverside says adverse drug effects are T-code diagnoses (riverside-doc-v1.d.ts:116-118), so only T-code entries count (the BEFORE reading).",
+    "Under v1, produce a row whose substance is the class as written ('SGLT2 inhibitor', 'ACE inhibitor'), following 'as written otherwise' (v1:209) and the ban on inference.",
+    "Under v1, produce a row whose substance is the one drug of the named class on the same document's home medication list. This is an in-source inference and later became the v2 rule.",
+    "Under v1, type ACE-inhibitor angioedema 'adverse_reaction' (v1:171-172 says a drug's adverse effect is 'adverse_reaction'; ACE-inhibitor angioedema isn't immune-mediated), rather than 'allergy' (v1:215 lists angioedema).",
+    "Under v2, merge the diagnosis-derived row with an allergy-list row for the same substance rather than emitting two rows."
+   ]
+  }
+ ]
+}

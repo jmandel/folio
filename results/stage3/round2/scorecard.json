@@ -1,0 +1,7850 @@
+{
+ "keys_sha256": "bb7c7cb090a2d081",
+ "as_of": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "split": "test (stratified, held out)",
+ "headline": [
+  {
+   "source": "northgate",
+   "view": "medications",
+   "rows": 2165,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 2165,
+     "extra": 0,
+     "runs": [
+      "20261014T135845477Z-2w5l",
+      "20261014T135845899Z-rczc",
+      "20261014T135846342Z-l939"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 2165,
+     "extra": 0,
+     "runs": [
+      "20261014T140434389Z-zv85",
+      "20261014T140513740Z-oz3y",
+      "20261014T140540130Z-jlue"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 2165,
+     "extra": 0,
+     "runs": [
+      "20261014T142128352Z-8fcg",
+      "20261014T142410689Z-3cbh",
+      "20261014T142501451Z-w7f1"
+     ]
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "view": "problems",
+   "rows": 1753,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 1753,
+     "extra": 0,
+     "runs": [
+      "20261014T135845477Z-2w5l",
+      "20261014T135845899Z-rczc",
+      "20261014T135846342Z-l939"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 1753,
+     "extra": 0,
+     "runs": [
+      "20261014T140434389Z-zv85",
+      "20261014T140513740Z-oz3y",
+      "20261014T140540130Z-jlue"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 1753,
+     "extra": 0,
+     "runs": [
+      "20261014T142128352Z-8fcg",
+      "20261014T142410689Z-3cbh",
+      "20261014T142501451Z-w7f1"
+     ]
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "view": "allergies",
+   "rows": 66,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 66,
+     "extra": 0,
+     "runs": [
+      "20261014T135845477Z-2w5l",
+      "20261014T135845899Z-rczc",
+      "20261014T135846342Z-l939"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 66,
+     "extra": 0,
+     "runs": [
+      "20261014T140434389Z-zv85",
+      "20261014T140513740Z-oz3y",
+      "20261014T140540130Z-jlue"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 66,
+     "extra": 0,
+     "runs": [
+      "20261014T142128352Z-8fcg",
+      "20261014T142410689Z-3cbh",
+      "20261014T142501451Z-w7f1"
+     ]
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "view": "labs",
+   "rows": 23884,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 23884,
+     "extra": 0,
+     "runs": [
+      "20261014T135845477Z-2w5l",
+      "20261014T135845899Z-rczc",
+      "20261014T135846342Z-l939"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 23884,
+     "extra": 0,
+     "runs": [
+      "20261014T140434389Z-zv85",
+      "20261014T140513740Z-oz3y",
+      "20261014T140540130Z-jlue"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 23884,
+     "extra": 0,
+     "runs": [
+      "20261014T142128352Z-8fcg",
+      "20261014T142410689Z-3cbh",
+      "20261014T142501451Z-w7f1"
+     ]
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "view": "vitals",
+   "rows": 3228,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 3228,
+     "extra": 0,
+     "runs": [
+      "20261014T135845477Z-2w5l",
+      "20261014T135845899Z-rczc",
+      "20261014T135846342Z-l939"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 3228,
+     "extra": 0,
+     "runs": [
+      "20261014T140434389Z-zv85",
+      "20261014T140513740Z-oz3y",
+      "20261014T140540130Z-jlue"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 3228,
+     "extra": 0,
+     "runs": [
+      "20261014T142128352Z-8fcg",
+      "20261014T142410689Z-3cbh",
+      "20261014T142501451Z-w7f1"
+     ]
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "view": "medications",
+   "rows": 43,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 43,
+     "extra": 0,
+     "runs": [
+      "20261014T135846512Z-t45v",
+      "20261014T135846686Z-moot",
+      "20261014T135846855Z-h6aj"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 43,
+     "extra": 0,
+     "runs": [
+      "20261014T140541422Z-t8m7",
+      "20261014T140559921Z-8lsl",
+      "20261014T140805914Z-7jnl"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 43,
+     "extra": 0,
+     "runs": [
+      "20261014T142528755Z-3i9p",
+      "20261014T142616921Z-4xt7",
+      "20261014T142654003Z-mbfe"
+     ]
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "view": "problems",
+   "rows": 245,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 245,
+     "extra": 0,
+     "runs": [
+      "20261014T135846512Z-t45v",
+      "20261014T135846686Z-moot",
+      "20261014T135846855Z-h6aj"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 245,
+     "extra": 0,
+     "runs": [
+      "20261014T140541422Z-t8m7",
+      "20261014T140559921Z-8lsl",
+      "20261014T140805914Z-7jnl"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 245,
+     "extra": 0,
+     "runs": [
+      "20261014T142528755Z-3i9p",
+      "20261014T142616921Z-4xt7",
+      "20261014T142654003Z-mbfe"
+     ]
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "view": "labs",
+   "rows": 24045,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 24045,
+     "extra": 0,
+     "runs": [
+      "20261014T135846512Z-t45v",
+      "20261014T135846686Z-moot",
+      "20261014T135846855Z-h6aj"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 24045,
+     "extra": 0,
+     "runs": [
+      "20261014T140541422Z-t8m7",
+      "20261014T140559921Z-8lsl",
+      "20261014T140805914Z-7jnl"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 24045,
+     "extra": 0,
+     "runs": [
+      "20261014T142528755Z-3i9p",
+      "20261014T142616921Z-4xt7",
+      "20261014T142654003Z-mbfe"
+     ]
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "view": "vitals",
+   "rows": 617,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 617,
+     "extra": 0,
+     "runs": [
+      "20261014T135846512Z-t45v",
+      "20261014T135846686Z-moot",
+      "20261014T135846855Z-h6aj"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 617,
+     "extra": 0,
+     "runs": [
+      "20261014T140541422Z-t8m7",
+      "20261014T140559921Z-8lsl",
+      "20261014T140805914Z-7jnl"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 617,
+     "extra": 0,
+     "runs": [
+      "20261014T142528755Z-3i9p",
+      "20261014T142616921Z-4xt7",
+      "20261014T142654003Z-mbfe"
+     ]
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "view": "medications",
+   "rows": 284,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 284,
+     "extra": 0,
+     "runs": [
+      "20261014T135846919Z-s27j",
+      "20261014T135846981Z-3dxu",
+      "20261014T135847018Z-9l9w"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 284,
+     "extra": 0,
+     "runs": [
+      "20261014T140810015Z-5ukf",
+      "20261014T140912286Z-hgve",
+      "20261014T140928466Z-x10r"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0.12441314553990611,
+     "min": 0,
+     "max": 0.18661971830985916,
+     "n": 3,
+     "rows": 284,
+     "extra": 0,
+     "runs": [
+      "20261014T142715000Z-ovzs",
+      "20261014T142736609Z-aur6",
+      "20261014T142749742Z-l677"
+     ]
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "view": "problems",
+   "rows": 79,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 79,
+     "extra": 0,
+     "runs": [
+      "20261014T135846919Z-s27j",
+      "20261014T135846981Z-3dxu",
+      "20261014T135847018Z-9l9w"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 79,
+     "extra": 0,
+     "runs": [
+      "20261014T140810015Z-5ukf",
+      "20261014T140912286Z-hgve",
+      "20261014T140928466Z-x10r"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 79,
+     "extra": 0,
+     "runs": [
+      "20261014T142715000Z-ovzs",
+      "20261014T142736609Z-aur6",
+      "20261014T142749742Z-l677"
+     ]
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "view": "allergies",
+   "rows": 33,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 33,
+     "extra": 0,
+     "runs": [
+      "20261014T135846919Z-s27j",
+      "20261014T135846981Z-3dxu",
+      "20261014T135847018Z-9l9w"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 33,
+     "extra": 0,
+     "runs": [
+      "20261014T140810015Z-5ukf",
+      "20261014T140912286Z-hgve",
+      "20261014T140928466Z-x10r"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0.1717171717171717,
+     "min": 0,
+     "max": 0.5151515151515151,
+     "n": 3,
+     "rows": 33,
+     "extra": 0,
+     "runs": [
+      "20261014T142715000Z-ovzs",
+      "20261014T142736609Z-aur6",
+      "20261014T142749742Z-l677"
+     ]
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "view": "labs",
+   "rows": 1817,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 1817,
+     "extra": 0,
+     "runs": [
+      "20261014T135846919Z-s27j",
+      "20261014T135846981Z-3dxu",
+      "20261014T135847018Z-9l9w"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 1817,
+     "extra": 0,
+     "runs": [
+      "20261014T140810015Z-5ukf",
+      "20261014T140912286Z-hgve",
+      "20261014T140928466Z-x10r"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0.009356081452944413,
+     "min": 0,
+     "max": 0.018712162905888827,
+     "n": 3,
+     "rows": 1817,
+     "extra": 0,
+     "runs": [
+      "20261014T142715000Z-ovzs",
+      "20261014T142736609Z-aur6",
+      "20261014T142749742Z-l677"
+     ]
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "view": "vitals",
+   "rows": 241,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 241,
+     "extra": 0,
+     "runs": [
+      "20261014T135846919Z-s27j",
+      "20261014T135846981Z-3dxu",
+      "20261014T135847018Z-9l9w"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 241,
+     "extra": 0,
+     "runs": [
+      "20261014T140810015Z-5ukf",
+      "20261014T140912286Z-hgve",
+      "20261014T140928466Z-x10r"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 241,
+     "extra": 0,
+     "runs": [
+      "20261014T142715000Z-ovzs",
+      "20261014T142736609Z-aur6",
+      "20261014T142749742Z-l677"
+     ]
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "view": "medications",
+   "rows": 371,
+   "cells": {
+    "claude-opus": {
+     "mean": 0.0071877807726864335,
+     "min": 0.005390835579514825,
+     "max": 0.008086253369272238,
+     "n": 3,
+     "rows": 371,
+     "extra": 0,
+     "runs": [
+      "20261014T140224958Z-eu4v",
+      "20261014T140306045Z-1sjr",
+      "20261014T140344791Z-mykn"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0.025157232704402514,
+     "min": 0.0026954177897574125,
+     "max": 0.03773584905660377,
+     "n": 3,
+     "rows": 371,
+     "extra": 0,
+     "runs": [
+      "20261014T141950438Z-6r7k",
+      "20261014T142023573Z-5iol",
+      "20261014T142111215Z-6z0a"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0.016172506738544475,
+     "min": 0.005390835579514825,
+     "max": 0.03773584905660377,
+     "n": 3,
+     "rows": 371,
+     "extra": 0,
+     "runs": [
+      "20261014T142817403Z-u57v",
+      "20261014T142926055Z-93jx",
+      "20261014T143008354Z-vxvw"
+     ]
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "view": "vitals",
+   "rows": 10462,
+   "cells": {
+    "claude-opus": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 10462,
+     "extra": 0,
+     "runs": [
+      "20261014T140224958Z-eu4v",
+      "20261014T140306045Z-1sjr",
+      "20261014T140344791Z-mykn"
+     ]
+    },
+    "codex-gpt-6-astra": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 10462,
+     "extra": 0,
+     "runs": [
+      "20261014T141950438Z-6r7k",
+      "20261014T142023573Z-5iol",
+      "20261014T142111215Z-6z0a"
+     ]
+    },
+    "claude-sonnet": {
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3,
+     "rows": 10462,
+     "extra": 0,
+     "runs": [
+      "20261014T142817403Z-u57v",
+      "20261014T142926055Z-93jx",
+      "20261014T143008354Z-vxvw"
+     ]
+    }
+   }
+  }
+ ],
+ "traps": [
+  {
+   "source": "northgate",
+   "trap": "T1",
+   "patients": 44,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 402,
+     "pe": 0,
+     "p": 44
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 402,
+     "pe": 0,
+     "p": 44
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 402,
+     "pe": 0,
+     "p": 44
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T2",
+   "patients": 18,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T3",
+   "patients": 38,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T4",
+   "patients": 22,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 96,
+     "pe": 0,
+     "p": 22
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 96,
+     "pe": 0,
+     "p": 22
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 96,
+     "pe": 0,
+     "p": 22
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T5",
+   "patients": 18,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 126,
+     "pe": 0,
+     "p": 18
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 126,
+     "pe": 0,
+     "p": 18
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 126,
+     "pe": 0,
+     "p": 18
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T12",
+   "patients": 18,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T17",
+   "patients": 162,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T18",
+   "patients": 26,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 165,
+     "pe": 0,
+     "p": 26
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 165,
+     "pe": 0,
+     "p": 26
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 165,
+     "pe": 0,
+     "p": 26
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T19",
+   "patients": 26,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 225,
+     "pe": 0,
+     "p": 26
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 225,
+     "pe": 0,
+     "p": 26
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 225,
+     "pe": 0,
+     "p": 26
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T7",
+   "patients": 142,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T9",
+   "patients": 59,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T10",
+   "patients": 162,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 2115,
+     "pe": 0,
+     "p": 162
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T11",
+   "patients": 91,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 22491,
+     "pe": 0,
+     "p": 91
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 22491,
+     "pe": 0,
+     "p": 91
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 22491,
+     "pe": 0,
+     "p": 91
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T14",
+   "patients": 161,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    }
+   }
+  },
+  {
+   "source": "northgate",
+   "trap": "T16",
+   "patients": 161,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 20283,
+     "pe": 0,
+     "p": 161
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 20283,
+     "pe": 0,
+     "p": 161
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 20283,
+     "pe": 0,
+     "p": 161
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T1",
+   "patients": 8,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 48,
+     "pe": 0,
+     "p": 8
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 48,
+     "pe": 0,
+     "p": 8
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 48,
+     "pe": 0,
+     "p": 8
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T2",
+   "patients": 18,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 114,
+     "pe": 0,
+     "p": 18
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T3",
+   "patients": 38,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 456,
+     "pe": 0,
+     "p": 38
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T4",
+   "patients": 20,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 108,
+     "pe": 0,
+     "p": 20
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 108,
+     "pe": 0,
+     "p": 20
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 108,
+     "pe": 0,
+     "p": 20
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T5",
+   "patients": 40,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 264,
+     "pe": 0,
+     "p": 40
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 264,
+     "pe": 0,
+     "p": 40
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 264,
+     "pe": 0,
+     "p": 40
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T7",
+   "patients": 142,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 4458,
+     "pe": 0,
+     "p": 142
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T9",
+   "patients": 59,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 1449,
+     "pe": 0,
+     "p": 59
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T11",
+   "patients": 91,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 22482,
+     "pe": 0,
+     "p": 91
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 22482,
+     "pe": 0,
+     "p": 91
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 22482,
+     "pe": 0,
+     "p": 91
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T14",
+   "patients": 161,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 73260,
+     "pe": 0,
+     "p": 161
+    }
+   }
+  },
+  {
+   "source": "lakeview",
+   "trap": "T16",
+   "patients": 164,
+   "inSamples": true,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 20280,
+     "pe": 0,
+     "p": 164
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 20280,
+     "pe": 0,
+     "p": 164
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 20280,
+     "pe": 0,
+     "p": 164
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T1",
+   "patients": 15,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 90,
+     "pe": 0,
+     "p": 15
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 90,
+     "pe": 0,
+     "p": 15
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 90,
+     "pe": 0,
+     "p": 15
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T12",
+   "patients": 13,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 66,
+     "pe": 0,
+     "p": 13
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 66,
+     "pe": 0,
+     "p": 13
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 66,
+     "pe": 0,
+     "p": 13
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T15",
+   "patients": 35,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 852,
+     "pe": 0,
+     "p": 35
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 852,
+     "pe": 0,
+     "p": 35
+    },
+    "claude-sonnet": {
+     "e": 106,
+     "f": 852,
+     "pe": 26,
+     "p": 35
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T18",
+   "patients": 14,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 198,
+     "pe": 0,
+     "p": 14
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 198,
+     "pe": 0,
+     "p": 14
+    },
+    "claude-sonnet": {
+     "e": 17,
+     "f": 198,
+     "pe": 10,
+     "p": 14
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T19",
+   "patients": 1,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 12,
+     "pe": 0,
+     "p": 1
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 12,
+     "pe": 0,
+     "p": 1
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 12,
+     "pe": 0,
+     "p": 1
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T10",
+   "patients": 35,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 6186,
+     "pe": 0,
+     "p": 35
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 6186,
+     "pe": 0,
+     "p": 35
+    },
+    "claude-sonnet": {
+     "e": 51,
+     "f": 6186,
+     "pe": 10,
+     "p": 35
+    }
+   }
+  },
+  {
+   "source": "riverside",
+   "trap": "T14",
+   "patients": 31,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 5451,
+     "pe": 0,
+     "p": 31
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 5451,
+     "pe": 0,
+     "p": 31
+    },
+    "claude-sonnet": {
+     "e": 51,
+     "f": 5451,
+     "pe": 10,
+     "p": 31
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "trap": "T1",
+   "patients": 6,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 21,
+     "pe": 0,
+     "p": 6
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 21,
+     "pe": 0,
+     "p": 6
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 21,
+     "pe": 0,
+     "p": 6
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "trap": "T6",
+   "patients": 17,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 5310,
+     "pe": 0,
+     "p": 17
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 5310,
+     "pe": 0,
+     "p": 17
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 5310,
+     "pe": 0,
+     "p": 17
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "trap": "T13",
+   "patients": 14,
+   "inSamples": true,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 51,
+     "pe": 0,
+     "p": 14
+    },
+    "codex-gpt-6-astra": {
+     "e": 23,
+     "f": 51,
+     "pe": 11,
+     "p": 14
+    },
+    "claude-sonnet": {
+     "e": 12,
+     "f": 51,
+     "pe": 11,
+     "p": 14
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "trap": "T19",
+   "patients": 1,
+   "inSamples": false,
+   "volume": false,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 9,
+     "pe": 0,
+     "p": 1
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 9,
+     "pe": 0,
+     "p": 1
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 9,
+     "pe": 0,
+     "p": 1
+    }
+   }
+  },
+  {
+   "source": "homelog",
+   "trap": "T14",
+   "patients": 9,
+   "inSamples": false,
+   "volume": true,
+   "per": {
+    "claude-opus": {
+     "e": 0,
+     "f": 153,
+     "pe": 0,
+     "p": 9
+    },
+    "codex-gpt-6-astra": {
+     "e": 0,
+     "f": 153,
+     "pe": 0,
+     "p": 9
+    },
+    "claude-sonnet": {
+     "e": 0,
+     "f": 153,
+     "pe": 0,
+     "p": 9
+    }
+   }
+  }
+ ],
+ "prose": [
+  {
+   "source": "northgate",
+   "backend": "claude-opus",
+   "condition": "a",
+   "run": "20261014T135845477Z-2w5l",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "backend": "claude-opus",
+   "condition": "b",
+   "run": "20261014T140447694Z-zfjt",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "run": "20261014T140434389Z-zv85",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "run": "20261014T142321679Z-p4d3",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "run": "20261014T142128352Z-8fcg",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "run": "20261014T142350606Z-t163",
+   "proseRunId": "20261014T135528945Z-amir",
+   "items": 40,
+   "facts": 68,
+   "discrepancies": 9,
+   "confirmed": 0,
+   "falseAlarms": 9,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01ES9QFAJ065DKE5MB4WFQDX87",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 59,
+      "date": "2020-12-11",
+      "ref": "prob_1",
+      "quote": "eGFR 59 on 7/20 and again today"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 50,
+      "ref": "referral",
+      "quote": "eGFR 50"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Chronic kidney disease",
+      "status": "active",
+      "ref": null,
+      "quote": "type 2 diabetes and chronic kidney disease"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 66,
+      "ref": "referral",
+      "quote": "Most recent eGFR is 66"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FHR3CC30CFBP6YW26TDDBX7T",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "uacr",
+      "value": 522,
+      "ref": "referral",
+      "quote": "UACR is 522 mg/g"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 44,
+      "ref": "med_1",
+      "quote": "eGFR 44."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01G8BWTEHGSTDYEYBYVYX58EDN",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 45,
+      "ref": "med_1",
+      "quote": "eGFR 45."
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2019-10-07",
+      "ref": "prob_1",
+      "quote": "eGFR 48 (10/7/19)"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01E6YG8Z20MPVDV7NRFX8FNJPC",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 47,
+      "date": "2020-04-27",
+      "ref": "prob_1",
+      "quote": "47 today"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-opus",
+   "condition": "a",
+   "run": "20261014T135846512Z-t45v",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-opus",
+   "condition": "b",
+   "run": "20261014T135846512Z-t45v",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "run": "20261014T140541422Z-t8m7",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "run": "20261014T140541422Z-t8m7",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "run": "20261014T142528755Z-3i9p",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "run": "20261014T142528755Z-3i9p",
+   "proseRunId": "20261014T135529372Z-v9qo",
+   "items": 40,
+   "facts": 255,
+   "discrepancies": 14,
+   "confirmed": 0,
+   "falseAlarms": 14,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+     "kind": "value",
+     "fact": {
+      "view": "labs",
+      "analyte": "egfr",
+      "value": 48,
+      "date": "2021-11-22",
+      "ref": null,
+      "quote": "Today eGFR 48"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic diabetic ketoacidosis",
+      "status": "resolved",
+      "ref": "dx_dka_hx",
+      "quote": "Prior euglycemic DKA"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+     "kind": "missing",
+     "fact": {
+      "view": "problems",
+      "condition": "Diabetes",
+      "status": "active",
+      "ref": "dx_dm",
+      "quote": "diabetic"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-opus",
+   "condition": "a",
+   "run": "20261014T135846919Z-s27j",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-opus",
+   "condition": "b",
+   "run": "20261014T140748893Z-1n8w",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "run": "20261014T140810015Z-5ukf",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "run": "20261014T143046506Z-4i0i",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "run": "20261014T142715000Z-ovzs",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 33,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "run": "20261014T143057136Z-kpsx",
+   "proseRunId": "20261014T135529458Z-tvl1",
+   "items": 40,
+   "facts": 299,
+   "discrepancies": 7,
+   "confirmed": 0,
+   "falseAlarms": 7,
+   "errorsInScope": 33,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "kind": "missing",
+     "fact": {
+      "view": "allergies",
+      "substance": "SGLT2 inhibitor",
+      "reaction_type": "serious_adverse_event",
+      "ref": "dx_edka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "wbc",
+      "value": 15.8,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "white blood cells 15.8"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "hemoglobin",
+      "value": 13.4,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "hemoglobin 13.4"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "missing",
+     "fact": {
+      "view": "labs",
+      "analyte": "platelets",
+      "value": 217,
+      "date": "2026-01-25",
+      "ref": "cbc",
+      "quote": "platelets 217"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KFT0FWE0Z9B8NVJF13GBRRXV",
+     "kind": "value",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 138,
+      "diastolic_mmhg": 83,
+      "ref": null,
+      "quote": "BP 138/83"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KH1E8F70R20N4PZGYTAMWNNA",
+     "kind": "status",
+     "fact": {
+      "view": "problems",
+      "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+      "status": "resolved",
+      "ref": "dx_dka",
+      "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved biochemically"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "kind": "missing",
+     "fact": {
+      "view": "vitals",
+      "systolic_mmhg": 145,
+      "diastolic_mmhg": 87,
+      "ref": null,
+      "quote": "BP 145/87"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-opus",
+   "condition": "a",
+   "run": "20261014T140224958Z-eu4v",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-opus",
+   "condition": "b",
+   "run": "20261014T140224958Z-eu4v",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "run": "20261014T141950438Z-6r7k",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "run": "20261014T141950438Z-6r7k",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "run": "20261014T142817403Z-u57v",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "run": "20261014T142817403Z-u57v",
+   "proseRunId": "20261014T135530294Z-ro14",
+   "items": 40,
+   "facts": 16,
+   "discrepancies": 2,
+   "confirmed": 0,
+   "falseAlarms": 2,
+   "errorsInScope": 0,
+   "errorsFlagged": 0,
+   "examples": [
+    {
+     "item_id": "01M2MBBAH85HDG07B4DSAWE1EH",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "finerenone",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm to stop the new kidney pill (Kerendia) for now"
+     },
+     "confirmed": false
+    },
+    {
+     "item_id": "01JC5964MRDZ8EPVWGG8DV2CS5",
+     "kind": "missing",
+     "fact": {
+      "view": "medications",
+      "ingredient": "empagliflozin",
+      "status": "held",
+      "ref": "note_1",
+      "quote": "I'm not to take it until Dr Reyes sees me"
+     },
+     "confirmed": false
+    }
+   ]
+  }
+ ],
+ "fhir": [
+  {
+   "source": "northgate",
+   "backend": "claude-opus",
+   "run": "20261014T143022875Z-l512",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 8660,
+     "fp": 0,
+     "fn": 0,
+     "rows": 2165,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 99164,
+     "fp": 0,
+     "fn": 0,
+     "rows": 23884,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 1630,
+    "errors": 0,
+    "warnings": 5138,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      1630
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      1630
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      1516
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      237
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      114
+     ],
+     [
+      "A definition for CodeSystem '…' could not be found, so the code cannot be validated",
+      7
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      4
+     ]
+    ]
+   }
+  },
+  {
+   "source": "northgate",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143236688Z-rb1c",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 8660,
+     "fp": 0,
+     "fn": 0,
+     "rows": 2165,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 99164,
+     "fp": 0,
+     "fn": 0,
+     "rows": 23884,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 1630,
+    "errors": 0,
+    "warnings": 5138,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      1630
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      1630
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      1516
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      237
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      114
+     ],
+     [
+      "A definition for CodeSystem '…' could not be found, so the code cannot be validated",
+      7
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      4
+     ]
+    ]
+   }
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-opus",
+   "run": "20261014T143039261Z-a0zl",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 172,
+     "fp": 0,
+     "fn": 0,
+     "rows": 43,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 99832,
+     "fp": 0,
+     "fn": 0,
+     "rows": 24045,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 1976,
+    "errors": 0,
+    "warnings": 6242,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      1976
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      1976
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      1972
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      312
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      4
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "source": "lakeview",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143327087Z-69l0",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 172,
+     "fp": 0,
+     "fn": 0,
+     "rows": 43,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 99832,
+     "fp": 0,
+     "fn": 0,
+     "rows": 24045,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 1976,
+    "errors": 0,
+    "warnings": 6242,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      1976
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      1976
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      1972
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      312
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      4
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-opus",
+   "run": "20261014T143102452Z-s6h8",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 1136,
+     "fp": 0,
+     "fn": 0,
+     "rows": 284,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 7455,
+     "fp": 0,
+     "fn": 0,
+     "rows": 1817,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 980,
+    "errors": 1,
+    "warnings": 3030,
+    "topErrors": [
+     [
+      "Constraint failed: bdl-#: 'FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)'",
+      1
+     ]
+    ],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      980
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      980
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      856
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      124
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      88
+     ],
+     [
+      "A definition for CodeSystem '…' could not be found, so the code cannot be validated",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "source": "riverside",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143346140Z-rnob",
+   "views": {
+    "medications": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 1136,
+     "fp": 0,
+     "fn": 0,
+     "rows": 284,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": 1,
+     "recall": 1,
+     "tp": 7455,
+     "fp": 0,
+     "fn": 0,
+     "rows": 1817,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 980,
+    "errors": 0,
+    "warnings": 3028,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      980
+     ],
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      980
+     ],
+     [
+      "Best Practice Recommendation: In general, all observations should have a performer",
+      856
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      124
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {#_m#} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the ",
+      88
+     ]
+    ]
+   }
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-opus",
+   "run": "20261014T143130921Z-c36o",
+   "views": {
+    "medications": {
+     "precision": 0.9990900818926297,
+     "recall": 0.9981818181818182,
+     "tp": 1098,
+     "fp": 1,
+     "fn": 2,
+     "rows": 371,
+     "wrongRows": 2,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 128,
+    "errors": 0,
+    "warnings": 416,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      128
+     ],
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      124
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      124
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      34
+     ],
+     [
+      "A definition for CodeSystem '…' could not be found, so the code cannot be validated",
+      5
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {tbl} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the U",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "source": "homelog",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143451369Z-c7j9",
+   "views": {
+    "medications": {
+     "precision": 0.9990900818926297,
+     "recall": 0.9981818181818182,
+     "tp": 1098,
+     "fp": 1,
+     "fn": 2,
+     "rows": 371,
+     "wrongRows": 2,
+     "extraRows": 0
+    },
+    "problems": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "allergies": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "precision": null,
+     "recall": null,
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "rows": 0,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   },
+   "validation": {
+    "resources": 128,
+    "errors": 0,
+    "warnings": 414,
+    "topErrors": [],
+    "topWarnings": [
+     [
+      "Constraint failed: dom-#: '…' (defined in http://hl#.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      128
+     ],
+     [
+      "Unable to validate code '…' in system '…' because the validator is running without terminology services",
+      124
+     ],
+     [
+      "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v#.#), but the definition doesn't include any codes, so the code has not been valid",
+      124
+     ],
+     [
+      "No code provided, and a code should be provided from the value set '…' (http://cts.nlm.nih.gov/fhir/ValueSet/#.#.#.#.#|#)",
+      34
+     ],
+     [
+      "A definition for CodeSystem '…' could not be found, so the code cannot be validated",
+      3
+     ],
+     [
+      "UCUM Codes that contain human readable annotations like {tbl} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the U",
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "end_to_end": [
+  {
+   "label": "reference (hand-written)",
+   "runIds": {
+    "northgate": "fixture:northgate-reference.ts",
+    "lakeview": "fixture:lakeview-reference.ts",
+    "riverside": "fixture:riverside-reference.ts",
+    "homelog": "fixture:homelog-reference.ts"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9906117504542702,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "opus a run 1",
+   "runIds": {
+    "northgate": "20261014T135845477Z-2w5l",
+    "lakeview": "20261014T135846512Z-t45v",
+    "riverside": "20261014T135846919Z-s27j",
+    "homelog": "20261014T140224958Z-eu4v"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9876207729468599,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "opus a run 2",
+   "runIds": {
+    "northgate": "20261014T135845899Z-rczc",
+    "lakeview": "20261014T135846686Z-moot",
+    "riverside": "20261014T135846981Z-3dxu",
+    "homelog": "20261014T140306045Z-1sjr"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9879190576864996,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "opus a run 3",
+   "runIds": {
+    "northgate": "20261014T135846342Z-l939",
+    "lakeview": "20261014T135846855Z-h6aj",
+    "riverside": "20261014T135847018Z-9l9w",
+    "homelog": "20261014T140344791Z-mykn"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9876207729468599,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "codex a run 1",
+   "runIds": {
+    "northgate": "20261014T140434389Z-zv85",
+    "lakeview": "20261014T140541422Z-t8m7",
+    "riverside": "20261014T140810015Z-5ukf",
+    "homelog": "20261014T141950438Z-6r7k"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 17,
+     "extraRows": 9,
+     "precision": 0.9875832828588734,
+     "recall": 0.9929963459196103
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "codex a run 2",
+   "runIds": {
+    "northgate": "20261014T140513740Z-oz3y",
+    "lakeview": "20261014T140559921Z-8lsl",
+    "riverside": "20261014T140912286Z-hgve",
+    "homelog": "20261014T142023573Z-5iol"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9876207729468599,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "codex a run 3",
+   "runIds": {
+    "northgate": "20261014T140540130Z-jlue",
+    "lakeview": "20261014T140805914Z-7jnl",
+    "riverside": "20261014T140928466Z-x10r",
+    "homelog": "20261014T142111215Z-6z0a"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 18,
+     "extraRows": 9,
+     "precision": 0.9842995169082126,
+     "recall": 0.9926918392204629
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 1,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "sonnet a run 1",
+   "runIds": {
+    "northgate": "20261014T142128352Z-8fcg",
+    "lakeview": "20261014T142528755Z-3i9p",
+    "riverside": "20261014T142715000Z-ovzs",
+    "homelog": "20261014T142817403Z-u57v"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9876207729468599,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 20,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 0.9984776210291282
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 2,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "sonnet a run 2",
+   "runIds": {
+    "northgate": "20261014T142410689Z-3cbh",
+    "lakeview": "20261014T142616921Z-4xt7",
+    "riverside": "20261014T142736609Z-aur6",
+    "homelog": "20261014T142926055Z-93jx"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 7,
+     "extraRows": 9,
+     "precision": 0.9876207729468599,
+     "recall": 0.9960414129110841
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  },
+  {
+   "label": "sonnet a run 3",
+   "runIds": {
+    "northgate": "20261014T142501451Z-w7f1",
+    "lakeview": "20261014T142654003Z-mbfe",
+    "riverside": "20261014T142749742Z-l677",
+    "homelog": "20261014T143008354Z-vxvw"
+   },
+   "patients": 182,
+   "views": {
+    "medications": {
+     "rows": 815,
+     "wrongRows": 23,
+     "extraRows": 14,
+     "precision": 0.9769253820797124,
+     "recall": 0.9926918392204629
+    },
+    "problems": {
+     "rows": 675,
+     "wrongRows": 0,
+     "extraRows": 2,
+     "precision": 0.9980591945657448,
+     "recall": 1
+    },
+    "allergies": {
+     "rows": 32,
+     "wrongRows": 1,
+     "extraRows": 0,
+     "precision": 0.9921875,
+     "recall": 0.9921875
+    },
+    "labs": {
+     "rows": 12513,
+     "wrongRows": 10,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 0.9992388105145641
+    },
+    "vitals": {
+     "rows": 9501,
+     "wrongRows": 0,
+     "extraRows": 0,
+     "precision": 1,
+     "recall": 1
+    }
+   },
+   "hero": {
+    "medications": {
+     "rows": 8,
+     "wrongRows": 1,
+     "extraRows": 1
+    },
+    "problems": {
+     "rows": 7,
+     "wrongRows": 0,
+     "extraRows": 1
+    },
+    "allergies": {
+     "rows": 2,
+     "wrongRows": 0,
+     "extraRows": 0
+    },
+    "labs": {
+     "rows": 79,
+     "wrongRows": 1,
+     "extraRows": 0
+    },
+    "vitals": {
+     "rows": 750,
+     "wrongRows": 0,
+     "extraRows": 0
+    }
+   }
+  }
+ ],
+ "fields": {
+  "medications.ingredient": {
+   "claude-opus": {
+    "ok": 8553,
+    "total": 8553
+   },
+   "codex-gpt-6-astra": {
+    "ok": 8553,
+    "total": 8553
+   },
+   "claude-sonnet": {
+    "ok": 8553,
+    "total": 8553
+   }
+  },
+  "medications.status": {
+   "claude-opus": {
+    "ok": 8587,
+    "total": 8589
+   },
+   "codex-gpt-6-astra": {
+    "ok": 8587,
+    "total": 8589
+   },
+   "claude-sonnet": {
+    "ok": 8586,
+    "total": 8589
+   }
+  },
+  "medications.dose": {
+   "claude-opus": {
+    "ok": 8544,
+    "total": 8550
+   },
+   "codex-gpt-6-astra": {
+    "ok": 8524,
+    "total": 8550
+   },
+   "claude-sonnet": {
+    "ok": 8535,
+    "total": 8550
+   }
+  },
+  "medications.frequency": {
+   "claude-opus": {
+    "ok": 7476,
+    "total": 7476
+   },
+   "codex-gpt-6-astra": {
+    "ok": 7476,
+    "total": 7476
+   },
+   "claude-sonnet": {
+    "ok": 7370,
+    "total": 7476
+   }
+  },
+  "medications.patient_reported": {
+   "claude-opus": {
+    "ok": 8589,
+    "total": 8589
+   },
+   "codex-gpt-6-astra": {
+    "ok": 8589,
+    "total": 8589
+   },
+   "claude-sonnet": {
+    "ok": 8589,
+    "total": 8589
+   }
+  },
+  "medications.evidence": {
+   "claude-opus": {
+    "ok": 8589,
+    "total": 8589
+   },
+   "codex-gpt-6-astra": {
+    "ok": 8589,
+    "total": 8589
+   },
+   "claude-sonnet": {
+    "ok": 8589,
+    "total": 8589
+   }
+  },
+  "problems.status": {
+   "claude-opus": {
+    "ok": 6231,
+    "total": 6231
+   },
+   "codex-gpt-6-astra": {
+    "ok": 6231,
+    "total": 6231
+   },
+   "claude-sonnet": {
+    "ok": 6231,
+    "total": 6231
+   }
+  },
+  "problems.evidence": {
+   "claude-opus": {
+    "ok": 6231,
+    "total": 6231
+   },
+   "codex-gpt-6-astra": {
+    "ok": 6231,
+    "total": 6231
+   },
+   "claude-sonnet": {
+    "ok": 6231,
+    "total": 6231
+   }
+  },
+  "allergies.reaction_type": {
+   "claude-opus": {
+    "ok": 297,
+    "total": 297
+   },
+   "codex-gpt-6-astra": {
+    "ok": 297,
+    "total": 297
+   },
+   "claude-sonnet": {
+    "ok": 280,
+    "total": 297
+   }
+  },
+  "allergies.mechanism": {
+   "claude-opus": {
+    "ok": 297,
+    "total": 297
+   },
+   "codex-gpt-6-astra": {
+    "ok": 297,
+    "total": 297
+   },
+   "claude-sonnet": {
+    "ok": 297,
+    "total": 297
+   }
+  },
+  "allergies.criticality": {
+   "claude-opus": {
+    "ok": 216,
+    "total": 216
+   },
+   "codex-gpt-6-astra": {
+    "ok": 216,
+    "total": 216
+   },
+   "claude-sonnet": {
+    "ok": 216,
+    "total": 216
+   }
+  },
+  "allergies.reaction": {
+   "claude-opus": {
+    "ok": 216,
+    "total": 216
+   },
+   "codex-gpt-6-astra": {
+    "ok": 216,
+    "total": 216
+   },
+   "claude-sonnet": {
+    "ok": 215,
+    "total": 216
+   }
+  },
+  "allergies.evidence": {
+   "claude-opus": {
+    "ok": 297,
+    "total": 297
+   },
+   "codex-gpt-6-astra": {
+    "ok": 297,
+    "total": 297
+   },
+   "claude-sonnet": {
+    "ok": 297,
+    "total": 297
+   }
+  },
+  "labs.value": {
+   "claude-opus": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "codex-gpt-6-astra": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "claude-sonnet": {
+    "ok": 149187,
+    "total": 149238
+   }
+  },
+  "labs.unit": {
+   "claude-opus": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "codex-gpt-6-astra": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "claude-sonnet": {
+    "ok": 149187,
+    "total": 149238
+   }
+  },
+  "labs.status": {
+   "claude-opus": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "codex-gpt-6-astra": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "claude-sonnet": {
+    "ok": 149187,
+    "total": 149238
+   }
+  },
+  "labs.evidence": {
+   "claude-opus": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "codex-gpt-6-astra": {
+    "ok": 149238,
+    "total": 149238
+   },
+   "claude-sonnet": {
+    "ok": 149187,
+    "total": 149238
+   }
+  },
+  "labs.egfr_equation": {
+   "claude-opus": {
+    "ok": 22401,
+    "total": 22401
+   },
+   "codex-gpt-6-astra": {
+    "ok": 22401,
+    "total": 22401
+   },
+   "claude-sonnet": {
+    "ok": 22401,
+    "total": 22401
+   }
+  },
+  "vitals.systolic_mmhg": {
+   "claude-opus": {
+    "ok": 28548,
+    "total": 28548
+   },
+   "codex-gpt-6-astra": {
+    "ok": 28548,
+    "total": 28548
+   },
+   "claude-sonnet": {
+    "ok": 28548,
+    "total": 28548
+   }
+  },
+  "vitals.diastolic_mmhg": {
+   "claude-opus": {
+    "ok": 28548,
+    "total": 28548
+   },
+   "codex-gpt-6-astra": {
+    "ok": 28548,
+    "total": 28548
+   },
+   "claude-sonnet": {
+    "ok": 28548,
+    "total": 28548
+   }
+  },
+  "vitals.pulse_bpm": {
+   "claude-opus": {
+    "ok": 28509,
+    "total": 28509
+   },
+   "codex-gpt-6-astra": {
+    "ok": 28509,
+    "total": 28509
+   },
+   "claude-sonnet": {
+    "ok": 28509,
+    "total": 28509
+   }
+  },
+  "vitals.weight_kg": {
+   "claude-opus": {
+    "ok": 12252,
+    "total": 12252
+   },
+   "codex-gpt-6-astra": {
+    "ok": 12252,
+    "total": 12252
+   },
+   "claude-sonnet": {
+    "ok": 12252,
+    "total": 12252
+   }
+  },
+  "vitals.evidence": {
+   "claude-opus": {
+    "ok": 43644,
+    "total": 43644
+   },
+   "codex-gpt-6-astra": {
+    "ok": 43644,
+    "total": 43644
+   },
+   "claude-sonnet": {
+    "ok": 43644,
+    "total": 43644
+   }
+  },
+  "medications.status_since": {
+   "claude-opus": {
+    "ok": 384,
+    "total": 384
+   },
+   "codex-gpt-6-astra": {
+    "ok": 384,
+    "total": 384
+   },
+   "claude-sonnet": {
+    "ok": 384,
+    "total": 384
+   }
+  },
+  "medications.stop_reason": {
+   "claude-opus": {
+    "ok": 195,
+    "total": 195
+   },
+   "codex-gpt-6-astra": {
+    "ok": 195,
+    "total": 195
+   },
+   "claude-sonnet": {
+    "ok": 195,
+    "total": 195
+   }
+  },
+  "medications.sensitivity": {
+   "claude-opus": {
+    "ok": 216,
+    "total": 216
+   },
+   "codex-gpt-6-astra": {
+    "ok": 216,
+    "total": 216
+   },
+   "claude-sonnet": {
+    "ok": 216,
+    "total": 216
+   }
+  },
+  "problems.onset": {
+   "claude-opus": {
+    "ok": 5259,
+    "total": 5259
+   },
+   "codex-gpt-6-astra": {
+    "ok": 5259,
+    "total": 5259
+   },
+   "claude-sonnet": {
+    "ok": 5259,
+    "total": 5259
+   }
+  },
+  "problems.sensitivity": {
+   "claude-opus": {
+    "ok": 216,
+    "total": 216
+   },
+   "codex-gpt-6-astra": {
+    "ok": 216,
+    "total": 216
+   },
+   "claude-sonnet": {
+    "ok": 216,
+    "total": 216
+   }
+  },
+  "problems.ckd_stage": {
+   "claude-opus": {
+    "ok": 747,
+    "total": 747
+   },
+   "codex-gpt-6-astra": {
+    "ok": 747,
+    "total": 747
+   },
+   "claude-sonnet": {
+    "ok": 747,
+    "total": 747
+   }
+  },
+  "allergies.onset": {
+   "claude-opus": {
+    "ok": 198,
+    "total": 198
+   },
+   "codex-gpt-6-astra": {
+    "ok": 198,
+    "total": 198
+   },
+   "claude-sonnet": {
+    "ok": 198,
+    "total": 198
+   }
+  },
+  "vitals.repeat_systolic_mmhg": {
+   "claude-opus": {
+    "ok": 1938,
+    "total": 1938
+   },
+   "codex-gpt-6-astra": {
+    "ok": 1938,
+    "total": 1938
+   },
+   "claude-sonnet": {
+    "ok": 1938,
+    "total": 1938
+   }
+  },
+  "vitals.repeat_diastolic_mmhg": {
+   "claude-opus": {
+    "ok": 1938,
+    "total": 1938
+   },
+   "codex-gpt-6-astra": {
+    "ok": 1938,
+    "total": 1938
+   },
+   "claude-sonnet": {
+    "ok": 1938,
+    "total": 1938
+   }
+  },
+  "medications.otc": {
+   "claude-opus": {
+    "ok": 1113,
+    "total": 1113
+   },
+   "codex-gpt-6-astra": {
+    "ok": 1113,
+    "total": 1113
+   },
+   "claude-sonnet": {
+    "ok": 1113,
+    "total": 1113
+   }
+  },
+  "vitals.glucose_mg_dl": {
+   "claude-opus": {
+    "ok": 15096,
+    "total": 15096
+   },
+   "codex-gpt-6-astra": {
+    "ok": 15096,
+    "total": 15096
+   },
+   "claude-sonnet": {
+    "ok": 15096,
+    "total": 15096
+   }
+  }
+ },
+ "cached": [
+  {
+   "path": "mappers/3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/claude-opus/transform.ts",
+   "runId": "20261014T143102452Z-s6h8",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T143346140Z-rnob",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-opus/transform.ts",
+   "runId": "20261014T140748893Z-1n8w",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-sonnet/transform.ts",
+   "runId": "20261014T143057136Z-kpsx",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T143046506Z-4i0i",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/claude-opus/transform.ts",
+   "runId": "20261014T143022875Z-l512",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T143236688Z-rb1c",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-opus/transform.ts",
+   "runId": "20261014T140447694Z-zfjt",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-sonnet/transform.ts",
+   "runId": "20261014T142350606Z-t163",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T142321679Z-p4d3",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/claude-opus/transform.ts",
+   "runId": "20261014T143039261Z-a0zl",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T143327087Z-69l0",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-opus/transform.ts",
+   "runId": "20261014T135846512Z-t45v",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-sonnet/transform.ts",
+   "runId": "20261014T142528755Z-3i9p",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T140541422Z-t8m7",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/claude-opus/transform.ts",
+   "runId": "20261014T143130921Z-c36o",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34/f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T143451369Z-c7j9",
+   "condition": "a",
+   "rep": 1
+  },
+  {
+   "path": "mappers/481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-opus/transform.ts",
+   "runId": "20261014T140224958Z-eu4v",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/claude-sonnet/transform.ts",
+   "runId": "20261014T142817403Z-u57v",
+   "condition": "b",
+   "rep": 1
+  },
+  {
+   "path": "mappers/481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34/9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84/codex-gpt-6-astra/transform.ts",
+   "runId": "20261014T141950438Z-6r7k",
+   "condition": "b",
+   "rep": 1
+  }
+ ],
+ "records": [
+  {
+   "source": "riverside",
+   "viewSet": "uscore",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143102452Z-s6h8",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143102452Z-s6h8",
+     "costUsd": 1.6230741999999998,
+     "durationMs": 448716
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "uscore",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143346140Z-rnob",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143346140Z-rnob",
+     "durationMs": 746065
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T135847018Z-9l9w",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135847018Z-9l9w",
+     "costUsd": 1.8745556,
+     "durationMs": 413100
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 2,
+   "final": "20261014T143913321Z-j69w",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143913321Z-j69w",
+     "costUsd": 1.6729452000000002,
+     "durationMs": 385977
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135846919Z-s27j",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846919Z-s27j",
+     "costUsd": 2.1516004000000004,
+     "durationMs": 469875
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 3,
+   "final": "20261014T144126357Z-83qw",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T144126357Z-83qw",
+     "costUsd": 1.3532660000000003,
+     "durationMs": 310027
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135846919Z-s27j",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T135846981Z-3dxu",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846981Z-3dxu",
+     "costUsd": 1.8994984,
+     "durationMs": 431690
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 1,
+   "final": "20261014T143832247Z-uzvk",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143832247Z-uzvk",
+     "costUsd": 1.5232654,
+     "durationMs": 346780
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140748893Z-1n8w",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140638040Z-t7b8",
+     "costUsd": 0.8795788000000001,
+     "durationMs": 69616,
+     "feedbackItems": 24
+    },
+    {
+     "runId": "20261014T140748893Z-1n8w",
+     "costUsd": 0.9011655999999999,
+     "durationMs": 82164,
+     "feedbackItems": 24
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T142749742Z-l677",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142749742Z-l677",
+     "costUsd": 0.5157233,
+     "durationMs": 168331
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142715000Z-ovzs",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142715000Z-ovzs",
+     "costUsd": 0.48328000000000004,
+     "durationMs": 166251
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143203603Z-okt4",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143203603Z-okt4",
+     "costUsd": 0.1487756,
+     "durationMs": 31370,
+     "feedbackItems": 9
+    },
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T142736609Z-aur6",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142736609Z-aur6",
+     "costUsd": 0.4605189000000001,
+     "durationMs": 164605
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143057136Z-kpsx",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143002544Z-0iak",
+     "costUsd": 0.3261802,
+     "durationMs": 53278,
+     "feedbackItems": 28
+    },
+    {
+     "runId": "20261014T143057136Z-kpsx",
+     "costUsd": 0.2776888,
+     "durationMs": 65201,
+     "feedbackItems": 24
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T140928466Z-x10r",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140928466Z-x10r",
+     "durationMs": 1099978
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140810015Z-5ukf",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140810015Z-5ukf",
+     "durationMs": 1131742
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140810015Z-5ukf",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T140912286Z-hgve",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140912286Z-hgve",
+     "durationMs": 1212268
+    }
+   ]
+  },
+  {
+   "source": "riverside",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143046506Z-4i0i",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142703096Z-1yfl",
+     "durationMs": 222040,
+     "feedbackItems": 24
+    },
+    {
+     "runId": "20261014T143046506Z-4i0i",
+     "durationMs": 275074,
+     "feedbackItems": 24
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "uscore",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143022875Z-l512",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143022875Z-l512",
+     "costUsd": 1.2201761999999998,
+     "durationMs": 263208
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "uscore",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143236688Z-rb1c",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143236688Z-rb1c",
+     "durationMs": 1042929
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T135846342Z-l939",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846342Z-l939",
+     "costUsd": 1.4758236,
+     "durationMs": 342259
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 2,
+   "final": "20261014T143532572Z-d57e",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143532572Z-d57e",
+     "costUsd": 1.2969648000000003,
+     "durationMs": 358766
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135845477Z-2w5l",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135845477Z-2w5l",
+     "costUsd": 1.3120232,
+     "durationMs": 309163
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 3,
+   "final": "20261014T143606796Z-g0me",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143606796Z-g0me",
+     "costUsd": 1.271563,
+     "durationMs": 314075
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135845477Z-2w5l",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T135845899Z-rczc",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135845899Z-rczc",
+     "costUsd": 1.6067576,
+     "durationMs": 382192
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "types-only",
+   "rep": 1,
+   "final": "20261014T143523397Z-k4gh",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143523397Z-k4gh",
+     "costUsd": 1.462343,
+     "durationMs": 375952
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140447694Z-zfjt",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140400489Z-71pb",
+     "costUsd": 0.4886574,
+     "durationMs": 41797,
+     "feedbackItems": 3
+    },
+    {
+     "runId": "20261014T140447694Z-zfjt",
+     "costUsd": 0.5512072,
+     "durationMs": 46017,
+     "feedbackItems": 3
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T142501451Z-w7f1",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142501451Z-w7f1",
+     "costUsd": 0.4084683,
+     "durationMs": 128416
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142128352Z-8fcg",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142128352Z-8fcg",
+     "costUsd": 0.3650135,
+     "durationMs": 113339
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142128352Z-8fcg",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T142410689Z-3cbh",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142410689Z-3cbh",
+     "costUsd": 0.3991021,
+     "durationMs": 126020
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142350606Z-t163",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142327387Z-iite",
+     "costUsd": 0.1582994,
+     "durationMs": 17924,
+     "feedbackItems": 3
+    },
+    {
+     "runId": "20261014T142350606Z-t163",
+     "costUsd": 0.14988439999999997,
+     "durationMs": 13826,
+     "feedbackItems": 3
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T140540130Z-jlue",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140540130Z-jlue",
+     "durationMs": 1180224
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140434389Z-zv85",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140434389Z-zv85",
+     "durationMs": 953160
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140434389Z-zv85",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T140513740Z-oz3y",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140513740Z-oz3y",
+     "durationMs": 967732
+    }
+   ]
+  },
+  {
+   "source": "northgate",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142321679Z-p4d3",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142037581Z-9cfu",
+     "durationMs": 154466,
+     "feedbackItems": 3
+    },
+    {
+     "runId": "20261014T142321679Z-p4d3",
+     "durationMs": 88939,
+     "feedbackItems": 3
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "uscore",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143039261Z-a0zl",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143039261Z-a0zl",
+     "costUsd": 0.896832,
+     "durationMs": 164554
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "uscore",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143327087Z-69l0",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143327087Z-69l0",
+     "durationMs": 613874
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T135846855Z-h6aj",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846855Z-h6aj",
+     "costUsd": 1.0786204,
+     "durationMs": 214865
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135846512Z-t45v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846512Z-t45v",
+     "costUsd": 1.2378627999999998,
+     "durationMs": 255631
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135846512Z-t45v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T135846686Z-moot",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T135846686Z-moot",
+     "costUsd": 1.0847548,
+     "durationMs": 294724
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T135846512Z-t45v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T142654003Z-mbfe",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142654003Z-mbfe",
+     "costUsd": 0.30189800000000006,
+     "durationMs": 79347
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142528755Z-3i9p",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142528755Z-3i9p",
+     "costUsd": 0.31209960000000003,
+     "durationMs": 81517
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142528755Z-3i9p",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T142616921Z-4xt7",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142616921Z-4xt7",
+     "costUsd": 0.3159955,
+     "durationMs": 76104
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142528755Z-3i9p",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T140805914Z-7jnl",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140805914Z-7jnl",
+     "durationMs": 732774
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140541422Z-t8m7",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140541422Z-t8m7",
+     "durationMs": 922225
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140541422Z-t8m7",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T140559921Z-8lsl",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140559921Z-8lsl",
+     "durationMs": 824905
+    }
+   ]
+  },
+  {
+   "source": "lakeview",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140541422Z-t8m7",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "uscore",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143130921Z-c36o",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143130921Z-c36o",
+     "costUsd": 1.1636384,
+     "durationMs": 273615
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "uscore",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143451369Z-c7j9",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143451369Z-c7j9",
+     "durationMs": 662332
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T140344791Z-mykn",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140344791Z-mykn",
+     "costUsd": 1.3095822,
+     "durationMs": 340172
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140224958Z-eu4v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140224958Z-eu4v",
+     "costUsd": 1.2238918,
+     "durationMs": 305626
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140735387Z-wgf8",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140735387Z-wgf8",
+     "costUsd": 0.16787259999999998,
+     "durationMs": 30538,
+     "feedbackItems": 1
+    },
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T140306045Z-1sjr",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T140306045Z-1sjr",
+     "costUsd": 1.201428,
+     "durationMs": 296165
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-opus",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T140224958Z-eu4v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T143008354Z-vxvw",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143008354Z-vxvw",
+     "costUsd": 0.26608620000000005,
+     "durationMs": 79070
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142817403Z-u57v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142817403Z-u57v",
+     "costUsd": 0.255262,
+     "durationMs": 80743
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142943912Z-7k1d",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142943912Z-7k1d",
+     "costUsd": 0.09114869999999999,
+     "durationMs": 19130,
+     "feedbackItems": 2
+    },
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T142926055Z-93jx",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142926055Z-93jx",
+     "costUsd": 0.2875899,
+     "durationMs": 92926
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "claude-sonnet",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T142817403Z-u57v",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 3,
+   "final": "20261014T142111215Z-6z0a",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142111215Z-6z0a",
+     "durationMs": 857588
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T141950438Z-6r7k",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T141950438Z-6r7k",
+     "durationMs": 900944
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "c",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T143456335Z-u4ro",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T143456335Z-u4ro",
+     "durationMs": 252588,
+     "feedbackItems": 1
+    },
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "a",
+   "variant": "full",
+   "rep": 2,
+   "final": "20261014T142023573Z-5iol",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "20261014T142023573Z-5iol",
+     "durationMs": 798979
+    }
+   ]
+  },
+  {
+   "source": "homelog",
+   "viewSet": "app",
+   "backend": "codex-gpt-6-astra",
+   "condition": "b",
+   "variant": "full",
+   "rep": 1,
+   "final": "20261014T141950438Z-6r7k",
+   "keysSha256": "bb7c7cb090a2d081",
+   "rounds": [
+    {
+     "runId": "",
+     "durationMs": 0,
+     "feedbackItems": 0
+    }
+   ]
+  }
+ ]
+}

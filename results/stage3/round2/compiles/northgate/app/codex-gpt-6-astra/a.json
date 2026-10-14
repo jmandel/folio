@@ -1,0 +1,43 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "condition": "a",
+ "schemaSha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p038/2021-07-15-referral-created.folio.md",
+  "p038/2020-08-24-visit-note.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597-corrected.folio.md",
+  "p133/2025-10-31-void.folio.md",
+  "p038/2020-08-24-problem-1-add.folio.md",
+  "p038/2021-07-15-med-glargine-start.folio.md",
+  "p038/2020-08-24-vitals.folio.md",
+  "p038/2021-07-15-medications-reviewed.folio.md",
+  "p016/2021-09-07-allergy-lisinopril.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T140434389Z-zv85",
+   "ok": true,
+   "durationMs": 953160,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 967259,
+    "cached_input_tokens": 903296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 33205,
+    "reasoning_output_tokens": 8458
+   },
+   "evalPath": "results/stage3/evals/20261014T140434389Z-zv85.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/2165, prob 0/1753, alle 0/66, labs 0/23884, vita 0/3228"
+  }
+ ],
+ "rep": 1,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T140434389Z-zv85"
+}

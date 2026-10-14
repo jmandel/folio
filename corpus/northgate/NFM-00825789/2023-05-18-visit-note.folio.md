@@ -14,10 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. Doing well, no new concerns.
+Annual exam. Doing well, no new complaints.
 BP 127/75, pulse 72, wt 159 lb.
-Labs today: eGFR 40, K 4.2, UACR 315 mg/g, A1c 6.1%, LDL 76 mg/dL.
-BP at goal. No changes today. RTC 6 mo.
+Today: eGFR 40, K 4.2, UACR 315 mg/g, A1c 6.1%, LDL 76 mg/dL.
+Went over results with pt, UACR still elevated, will keep following.
+RTC 3 mo.
 
 ```json payload
 {

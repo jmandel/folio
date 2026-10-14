@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">BP above goal. Lisinopril increased to 40 mg daily.</ref>
+<ref id="med_1">BP above goal. Lisinopril increased to 40 mg daily.</ref> Pt informed.
 
 ```json payload
 {
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2020-071331"
+    "visit_id": "V-2020-071361"
   }
 }
 ```

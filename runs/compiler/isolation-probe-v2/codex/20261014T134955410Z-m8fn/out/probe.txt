@@ -1,0 +1,128 @@
+== github via proxy
+curl: (7) Failed to connect to github.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+000
+== github direct
+curl: (6) Could not resolve host: github.com
+000
+== raw.githubusercontent via proxy
+curl: (7) Failed to connect to raw.githubusercontent.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+000
+== model API via proxy
+curl: (7) Failed to connect to chatgpt.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+000
+== model API direct
+curl: (6) Could not resolve host: chatgpt.com
+000
+== home
+total 4
+drwxr-xr-x 7 jmandel jmandel  140 Oct 14 08:49 .
+drwxr-xr-x 3 nobody  nobody  4096 May 26  2020 ..
+drwx------ 2 jmandel jmandel   40 Oct 14 08:49 .cache
+drwx------ 2 jmandel jmandel   60 Oct 14 08:49 .claude
+drwx------ 7 jmandel jmandel  540 Oct 14 08:49 .codex
+drwx------ 4 jmandel jmandel   80 Oct 14 08:49 .local
+drwx------ 3 jmandel jmandel   60 Oct 14 08:49 hobby
+/home/jmandel/.claude:
+total 4
+drwx------ 2 jmandel jmandel   60 Oct 14 08:49 .
+drwxr-xr-x 7 jmandel jmandel  140 Oct 14 08:49 ..
+-rw------- 1 jmandel jmandel 2897 Oct 14 04:58 .credentials.json
+
+/home/jmandel/.codex:
+total 3036
+drwx------ 7 jmandel jmandel     540 Oct 14 08:49 .
+drwxr-xr-x 7 jmandel jmandel     140 Oct 14 08:49 ..
+-rw------- 1 jmandel jmandel       3 Oct 14 08:49 .sandbox_migration
+-rw------- 1 jmandel jmandel    4150 Oct  5 14:01 auth.json
+drwxr-xr-x 4 jmandel jmandel      80 Oct 14 08:49 cache
+-rw-r--r-- 1 jmandel jmandel      55 Oct 14 08:49 config.toml
+-rw-r--r-- 1 jmandel jmandel    4096 Oct 14 08:49 goals_1.sqlite
+-rw-r--r-- 1 jmandel jmandel   32768 Oct 14 08:49 goals_1.sqlite-shm
+-rw-r--r-- 1 jmandel jmandel   74192 Oct 14 08:49 goals_1.sqlite-wal
+-rw-r--r-- 1 jmandel jmandel      36 Oct 14 08:49 installation_id
+-rw-r--r-- 1 jmandel jmandel   49152 Oct 14 08:49 logs_2.sqlite
+-rw-r--r-- 1 jmandel jmandel   32768 Oct 14 08:49 logs_2.sqlite-shm
+-rw-r--r-- 1 jmandel jmandel  115392 Oct 14 08:49 logs_2.sqlite-wal
+-rw-r--r-- 1 jmandel jmandel    4096 Oct 14 08:49 memories_1.sqlite
+-rw-r--r-- 1 jmandel jmandel   32768 Oct 14 08:49 memories_1.sqlite-shm
+-rw-r--r-- 1 jmandel jmandel   86552 Oct 14 08:49 memories_1.sqlite-wal
+-rw-r--r-- 1 jmandel jmandel  447879 Oct 14 08:49 models_cache.json
+drwxr-xr-x 3 jmandel jmandel    4096 Jul  9 16:28 packages
+-rw-r--r-- 1 jmandel jmandel    4096 Oct 14 08:49 queue_1.sqlite
+-rw-r--r-- 1 jmandel jmandel   32768 Oct 14 08:49 queue_1.sqlite-shm
+-rw-r--r-- 1 jmandel jmandel   82432 Oct 14 08:49 queue_1.sqlite-wal
+drwxr-xr-x 2 jmandel jmandel      60 Oct 14 08:49 shell_snapshots
+drwxr-xr-x 3 jmandel jmandel      60 Oct 14 08:49 skills
+-rw-r--r-- 1 jmandel jmandel    4096 Oct 14 08:49 state_5.sqlite
+-rw-r--r-- 1 jmandel jmandel   32768 Oct 14 08:49 state_5.sqlite-shm
+-rw-r--r-- 1 jmandel jmandel 2031192 Oct 14 08:49 state_5.sqlite-wal
+drwxr-xr-x 3 jmandel jmandel      60 Oct 14 08:49 tmp
+/home/jmandel/hobby:
+folio
+
+/home/jmandel/hobby/folio:
+== repo files
+cat: /home/jmandel/hobby/folio/truth/TRAPS.md: No such file or directory
+ls: cannot access '/home/jmandel/hobby/folio/.worktrees/stage3/truth': No such file or directory
+ls: cannot access '/home/jmandel/.claude/projects': No such file or directory
+== /tmp and /run/user
+/run/user/1000:
+total 0
+drwxr-xr-x 2 jmandel jmandel 40 Oct 14 08:49 .
+drwxr-xr-x 3 nobody  nobody  60 Aug 27 19:11 ..
+
+/tmp:
+total 4
+drwxr-xr-x  9 jmandel jmandel  180 Oct 14 08:50 .
+dr-xr-xr-x 21 nobody  nobody  4096 May 13 12:27 ..
+dr-xr-xr-x  2 jmandel jmandel   40 Oct 14 08:50 .agents
+dr-xr-xr-x  2 jmandel jmandel   40 Oct 14 08:50 .aws
+dr-xr-xr-x  2 jmandel jmandel   40 Oct 14 08:50 .codex
+dr-xr-xr-x  2 jmandel jmandel   40 Oct 14 08:50 .git
+drwxr-xr-x 10 jmandel jmandel  220 Oct 14 08:50 codex-bwrap-synthetic-mount-targets-1000
+d---------  2 jmandel jmandel   40 Oct 14 08:50 codex-daemon-1000
+drwx------  2 jmandel jmandel   80 Oct 14 08:49 folio-net
+== dbus
+Failed to set bus address: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user)
+DBUS=
+== env
+ALL_PROXY=http://127.0.0.1:18080
+CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+CLOJURE_HOME=/usr/share/clojure
+CLOUDSDK_ROOT_DIR=/opt/google-cloud-cli
+CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS=1
+CODEX_CI=1
+CODEX_SANDBOX_NETWORK_DISABLED=1
+CODEX_SESSION_ID=01a13aad-43cf-7662-a92e-71e6043b2332
+CODEX_THREAD_ID=01a13aad-43cf-7662-a92e-71e6043b2332
+CODEX_VERSION=0.162.1
+COLORTERM=
+DEBUGINFOD_URLS=https://debuginfod.archlinux.org 
+DISABLE_ERROR_REPORTING=1
+DISABLE_TELEMETRY=1
+GH_PAGER=cat
+GIT_PAGER=cat
+GOOGLE_CLOUD_SDK_HOME=/opt/google-cloud-cli
+GRADLE_HOME=/usr/share/java/gradle
+HOME=/home/jmandel
+HTTPS_PROXY=http://127.0.0.1:18080
+HTTP_PROXY=http://127.0.0.1:18080
+LANG=C.UTF-8
+LC_ALL=C.UTF-8
+LC_CTYPE=C.UTF-8
+NIX_PROFILES=/nix/var/nix/profiles/default /home/jmandel/.nix-profile
+NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+NO_COLOR=1
+NO_PROXY=localhost,127.0.0.1
+PAGER=cat
+PATH=/home/jmandel/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/jmandel/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/jmandel/.codex/tmp/arg0/codex-arg0G18yye:/home/jmandel/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/jmandel/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PWD=/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/isolation-probe-v2/codex/20261014T134955410Z-m8fn
+SHLVL=1
+TERM=dumb
+USER=jmandel
+VSSCRIPT_PATH=/usr/lib/python3.14/site-packages/vapoursynth/libvsscript.so
+XDG_DATA_DIRS=/home/jmandel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/home/jmandel/.nix-profile/share:/nix/var/nix/profiles/default/share
+_=/usr/bin/env
+__ETC_PROFILE_NIX_SOURCED=1
+http_proxy=http://127.0.0.1:18080
+https_proxy=http://127.0.0.1:18080

@@ -100,7 +100,7 @@ export function latestLabs(p: Patient, t = T_MS) {
 
 export function vitalsSeries(p: Patient, t = T_MS) {
   const tz = p.demographics.tz;
-  const clinic = [], hospital = [], home_bp = [], home_glucose = [];
+  const clinic: Record<string, unknown>[] = [], hospital: Record<string, unknown>[] = [], home_bp: Record<string, unknown>[] = [], home_glucose: Record<string, unknown>[] = [];
   for (const v of [...p.vitals].sort((a, b) => ms(a.at) - ms(b.at))) {
     if (ms(v.at) > t || v.duplicateOf) continue;
     const base = { local_time: wall(v.at, tz), sources: [v.source], basis: [v.id] };

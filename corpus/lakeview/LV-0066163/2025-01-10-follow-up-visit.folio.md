@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JH8XGNM0MBV797HTFJZSGTC8"
+id: "01JH8XGNM0QNK0DD4JF1QW3145"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0066163"
 effective: "2025-01-10T09:20:00-06:00"
@@ -14,17 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref> in a patient with <ref id="dx_dm">type 2 diabetes</ref>.
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref> in the setting of <ref id="dx_dm">type 2 diabetes</ref>.
 
-<ref id="bp_sys">BP 131/80, HR 75, weight 84.3 kg</ref>. eGFR 35 today, K 4.3. Kidney function stable since the last visit.
+eGFR 35 today, K 4.3. Kidney function stable compared with the last visit.
 
-No complaints today. Continue current plan. Return in a few months with labs.
+<ref id="bp_sys">BP 131/80, HR 75, weight 84.3 kg.</ref> No new symptoms, no edema.
+
+Labs again at next visit. Return in 3 to 4 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2025-01-10T09:20:00-06:00",
     "PROVIDER_NPI": "1999000042",
@@ -33,7 +35,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -41,7 +43,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -49,7 +51,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 131,
     "UNIT_CODE": "mmHg",
@@ -58,7 +60,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -67,7 +69,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 75,
     "UNIT_CODE": "/min",
@@ -76,7 +78,7 @@ No complaints today. Continue current plan. Return in a few months with labs.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100833",
+    "VISIT_ID": "NV-119765",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 84.3,
     "UNIT_CODE": "kg",

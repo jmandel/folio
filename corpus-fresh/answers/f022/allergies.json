@@ -1,0 +1,27 @@
+{
+  "patient": "f022",
+  "view": "allergies",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "substance": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "type": "adverse-reaction",
+      "reaction": "euglycemic diabetic ketoacidosis",
+      "criticality": "high",
+      "onset": { "value": "2025-01-20", "precision": "day" },
+      "sources": ["A", "B"],
+      "basis": ["a_160"]
+    },
+    {
+      "substance": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "type": "allergy",
+      "reaction": "angioedema of lips and tongue",
+      "criticality": "high",
+      "onset": { "value": "2022-07-11", "precision": "day" },
+      "sources": ["A", "B"],
+      "basis": ["a_168"]
+    }
+  ]
+}

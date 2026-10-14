@@ -1,0 +1,86 @@
+{
+  "patient": "f059",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022-12-14",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_86"]
+    },
+    {
+      "medication": "chlorthalidone",
+      "rxnorm_ingredient": "2409",
+      "product": "chlorthalidone 25 MG Oral Tablet",
+      "rxnorm_product": "197499",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021-08-09",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_61"]
+    },
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-09-22",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2020-01-06",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_22"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 40 MG Oral Tablet",
+      "rxnorm_product": "197884",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 100 MG Oral Tablet",
+      "rxnorm_product": "312938",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    }
+  ]
+}

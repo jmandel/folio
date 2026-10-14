@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Essential hypertension, onset 2012.</ref> Hx per pt, added at first visit here.
+<ref id="prob_1">Essential HTN, since ~2012 per pt.</ref> Added at first visit.
 
 ```json payload
 {

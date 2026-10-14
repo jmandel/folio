@@ -13,12 +13,13 @@ import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 import { parseArgs } from "node:util";
 import { build } from "../corpus.ts";
+import { corpusDir } from "../../../truth/src/cohort.ts";
 import { parseItem, REPO, schemaPath, type SourceDir } from "../item.ts";
 import { ledgerNarrative, loadLedger } from "../prose.ts";
 import { parseSpans, validateNarrative } from "../validate.ts";
 
 const { values } = parseArgs({ options: { "skip-tsc": { type: "boolean", default: false } } });
-const CORPUS = join(REPO, "corpus");
+const CORPUS = join(REPO, corpusDir());
 const DIRS: SourceDir[] = ["riverside", "northgate", "lakeview", "homelog"];
 const TYPES: Record<SourceDir, string[]> = { riverside: ["RiversideEntry"], northgate: ["ChartEvent"], lakeview: ["LabReportRow", "ClinicRow"], homelog: ["HomeLogEntry"] };
 const NARRATIVE_ONLY: Record<SourceDir, string[]> = { riverside: ["precipitant"], northgate: ["sick_day"], lakeview: ["sglt2_decision", "na_sertraline"], homelog: [] };

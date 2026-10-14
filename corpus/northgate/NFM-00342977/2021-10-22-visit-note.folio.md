@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FJNF8XA0ZV9ZMQ6J4DHT9JEM"
+id: "01FJNF8XA03YTR7YWAJDQ8PJGH"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00342977"
 effective: "2021-10-22T15:40:00-05:00"
@@ -14,23 +14,25 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit. No new complaints.
+Chronic care visit. Feels well.
+
 BP 127/81, pulse 86, wt 175 lb.
+
 Labs 10/19: eGFR 75, K 4, A1c 6.7%.
-Discussed results with pt.
-RTC 3 mo.
+
+Reviewed with pt. RTC 3 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-102219",
+    "visit_id": "V-2021-102298",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-102219",
+    "visit_id": "V-2021-102298",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

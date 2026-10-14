@@ -17,7 +17,7 @@ schema:
 Chronic care visit. Doing OK, no complaints.
 BP 141/85, repeat 137/85, pulse 67, wt 219 lb.
 Today: eGFR 64, K 4.6, UACR 9 mg/g, A1c 7.6%, LDL 75 mg/dL.
-Will recheck BP at next visit.
+Results reviewed with pt.
 RTC 4 mo.
 
 ```json payload

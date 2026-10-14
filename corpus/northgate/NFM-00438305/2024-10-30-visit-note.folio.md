@@ -14,10 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit. Pt feels well, no new symptoms.
-BP 135/82, pulse 85, wt 216 lb.
-Reviewed diet and activity. Pt has no questions.
-RTC 6 mo.
+Chronic care visit. No headache, chest pain or SOB.
+
+BP 142/86, repeat 138/86, pulse 85, wt 216 lb. BP above goal.
+
+Losartan: started 50 mg daily today (BP above goal). Pt to check BP at home and bring log.
+
+RTC 6 wk.
 
 ```json payload
 {

@@ -1,0 +1,517 @@
+{
+ "runId": "20261014T155711358Z-zdkg",
+ "source": "homelog",
+ "viewSet": "app",
+ "split": "dev",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 30,
+  "items": 6081,
+  "ms": 145.3594680000001,
+  "msPerItem": 0.023903875678342394,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9954086317722681,
+   "recall": 0.9944954128440368,
+   "tp": 1084,
+   "fp": 5,
+   "fn": 6,
+   "rows": 157,
+   "wrongRows": 6,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 16423,
+   "fp": 0,
+   "fn": 0,
+   "rows": 4153,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 0.9945054945054945,
+    "recall": 0.9945054945054945,
+    "tp": 181,
+    "fp": 1,
+    "fn": 1,
+    "rows": 26,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 3919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1018,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.9955898566703418,
+    "recall": 0.9944933920704846,
+    "tp": 903,
+    "fp": 4,
+    "fn": 5,
+    "rows": 131,
+    "wrongRows": 5,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 12504,
+    "fp": 0,
+    "fn": 0,
+    "rows": 3135,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 154,
+   "total": 155
+  },
+  "medications.status": {
+   "ok": 153,
+   "total": 157
+  },
+  "medications.dose": {
+   "ok": 146,
+   "total": 147
+  },
+  "medications.patient_reported": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.otc": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.evidence": {
+   "ok": 157,
+   "total": 157
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 1999,
+   "total": 1999
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 1999,
+   "total": 1999
+  },
+  "vitals.pulse_bpm": {
+   "ok": 1965,
+   "total": 1965
+  },
+  "vitals.evidence": {
+   "ok": 4153,
+   "total": 4153
+  },
+  "vitals.glucose_mg_dl": {
+   "ok": 2154,
+   "total": 2154
+  },
+  "medications.status_since": {
+   "ok": 3,
+   "total": 3
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.9997144814984011,
+   "recall": 0.9996573973619597,
+   "tp": 17507,
+   "fp": 5,
+   "fn": 6
+  }
+ },
+ "traps": {
+  "T6": {
+   "facts": 560,
+   "errors": 0,
+   "patients": 7,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 150,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 4,
+   "errors": 4,
+   "patients": 3,
+   "patientsWithError": 3
+  },
+  "T13": {
+   "facts": 4,
+   "errors": 1,
+   "patients": 4,
+   "patientsWithError": 1
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "p177",
+   "local": "HL-U-68804",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "losartan",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_46"
+   ],
+   "items": [
+    "01HHSMXFZGJY2VS17BKGJJQ86Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HHSMXFZGJY2VS17BKGJJQ86Z",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p032",
+   "local": "HL-U-62713",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_39"
+   ],
+   "items": [
+    "01K7ZBV9RGVEZKJTWDGCMZEB3B",
+    "01KY02X30G1E29YKCVNEDT0DVJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KY02X30G1E29YKCVNEDT0DVJ",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p151",
+   "local": "HL-U-99900",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_179"
+   ],
+   "items": [
+    "01K6G4MYZ0H35QY9S7953N6QKM",
+    "01KR6VCATRKEF7EY37B188RRKP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KR6VCATRKEF7EY37B188RRKP",
+     "entry_id": "med_7"
+    }
+   ]
+  },
+  {
+   "patient": "p177",
+   "local": "HL-U-68804",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "losartan",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_46"
+   ],
+   "items": [
+    "01HHSMXFZGJY2VS17BKGJJQ86Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HHSMXFZGJY2VS17BKGJJQ86Z",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p257",
+   "local": "HL-U-26004",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "finerenone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_123"
+   ],
+   "items": [
+    "01KTM04VE0Y4WB2W41EPRJSMR1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KTM04VE0Y4WB2W41EPRJSMR1",
+     "entry_id": "med_9"
+    }
+   ]
+  },
+  {
+   "patient": "p289",
+   "local": "HL-U-88924",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "finerenone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_108"
+   ],
+   "items": [
+    "01KAH62G8GGTTKFTPVY99VJD31",
+    "01KMGBJT1R6EDKRFBZSAT76D05"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KMGBJT1R6EDKRFBZSAT76D05",
+     "entry_id": "med_6"
+    }
+   ]
+  }
+ ]
+}

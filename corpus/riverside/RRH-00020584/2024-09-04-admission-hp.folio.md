@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J6XZ37S0S5282TNCSTN5H36A"
+id: "01J6XZ37S000YFRYJBKSAMAK99"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-04T05:29:00Z"
@@ -18,27 +18,26 @@ schema:
 
 **Reason for admission:** euglycemic diabetic ketoacidosis.
 
-**History of present illness.** The patient was seen in the ED with nausea, fatigue and fast, deep breathing, and was found to be acidotic with a near-normal glucose of 186. They take empagliflozin at home. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. Insulin infusion at 0.1 units/kg/h with D5 lactated Ringer's at 150 mL/h was started at 19:58 and both are running.
+**History of present illness.** The patient is a person with type 2 diabetes who came to the ED with several days of nausea, fatigue and fast breathing. They were found to be acidotic with a glucose of 186. They take empagliflozin 10 mg daily at home. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
 
 **Allergies:** NKDA.
 
-**Exam.** At 00:19: BP 127/76, HR 81, RR 16, T 99 F, SpO2 98%. Looks tired but comfortable, mucous membranes slightly dry, lungs clear, abdomen soft and non-tender.
+**Exam.** Vitals at 00:19: BP 127/76, HR 81, RR 16, T 99 F, SpO2 98%. Comfortable on the ward, breathing more easily than in the ED. Mucous membranes slightly dry. Abdomen soft and non-tender.
 
-**Results.** On the 19:11 panel sodium 128, potassium 5.6, chloride 92, bicarbonate 14, anion gap 22, urea nitrogen 39, creatinine 0.85, glucose 186. Lipase 30.
+**Results.** Sodium 128, potassium 5.6, chloride 92, bicarbonate 14, anion gap 22, urea nitrogen 39, creatinine 0.85, glucose 186 on the 19:11 panel. Lipase 30.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated.</ref> Continue the insulin infusion and D5 lactated Ringer's. <ref id="med_empagliflozin">Hold empagliflozin.</ref> <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
-2. <ref id="dx_pancreatitis">Pancreatitis ruled out</ref>: lipase 30.
-3. Hyponatremia, sodium 128, with volume depletion. <ref id="med_furosemide">Hold furosemide</ref> for volume depletion.
-4. Hyperkalemia, potassium 5.6. <ref id="med_losartan">Hold losartan</ref> for volume depletion and potassium; resume when eating.
-5. Continue carvedilol and spironolactone.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol, running since 19:58, with D5 lactated Ringer's at 150 mL/h because glucose is near normal. <ref id="med_empagliflozin">Empagliflozin is held.</ref> <ref id="med_metformin">Metformin is held</ref> while acidotic and NPO.
+2. <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref>: lipase 30 and the abdominal discomfort has settled.
+3. Volume depletion with hyponatremia (sodium 128) and potassium of 5.6. <ref id="med_furosemide">Hold furosemide</ref> for volume depletion. <ref id="med_losartan">Hold losartan</ref> for volume depletion and potassium; resume when eating.
+4. Carvedilol and spironolactone are continued.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6196344",
+    "encounter_id": "RRH-ENC-6905994",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -73,7 +72,7 @@ schema:
   "lipase": {
     "type": "result",
     "test": { "local_code": "LIPASE", "loinc": "3040-3", "name": "Lipase" },
-    "accession": "L24247-5690",
+    "accession": "L24247-5179",
     "collected": "2024-09-04T00:11:00Z",
     "specimen": "serum",
     "status": "final",
@@ -84,7 +83,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24247-6568",
+    "accession": "L24247-6475",
     "collected": "2024-09-04T00:11:00Z",
     "specimen": "serum",
     "status": "final",

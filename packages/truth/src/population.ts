@@ -11,8 +11,10 @@ import {
   type HomeLogPlan, type LabDraw, localDate, type MedHistoryEntry, type Medication, ms, type MyMedPlan, type NarrativeFact,
   type Patient, type SourceKey, type Vital,
 } from "./model.ts";
+import type { TrapId } from "./model.ts";
 import { FAMILY, GIVEN_F, GIVEN_M } from "./names.ts";
 import { Rng } from "./rng.ts";
+import { plausibility } from "./plausibility.ts";
 
 export type Archetype =
   | "ckd_prog_sglt2" | "ckd_prog_sglt2_held" | "ckd_inpatient_dip" | "dka_prec" | "dka_noprec" | "hyperk_conf" | "hyperk_hem"
@@ -87,7 +89,7 @@ class Gen {
   // Clinical state
   dm = false; htn = false; ckd = false; hld = false; hf = false; mdd = false; oa = false; obesity = false; hypothyroid = false;
   eT = 80; rateRecent = 1; rateOld = 1; uacr0 = 12; uacrGrowth = 1.05;
-  a1c = 7; sbp0 = 136; aceiAvoid = false; dkaHistory = false; nephStart?: string; nephDoc = "lv:marsh";
+  a1c = 7; sbp0 = 136; aceiAvoid = false; aceiStopFrom?: string; dkaHistory = false; nephStart?: string; nephDoc = "lv:marsh";
   maskedFrom?: string;
   lastA1cBump = "1900-01-01";
   neph = false;
@@ -120,6 +122,9 @@ class Gen {
   // ─── meds ──────────────────────────────────────────────────────────────────────────────────
   status(m: Medication, when: string): string | undefined {
     const t = ms(when.includes("T") ? when : when + "T23:59:00-05:00");
+    // A planned ACE-inhibitor angioedema stops every ACE inhibitor from that date, for all later simulation steps
+    // (the ED visit itself is written later in the run, back-dated).
+    if (this.aceiStopFrom && drug(m.product).klass === "acei" && t > ms(addDays(this.aceiStopFrom, 3) + "T23:59:59-05:00")) return "stopped";
     let s: string | undefined, best = -Infinity;
     for (const h of m.history) { const k = sortKey(h.at); if (k <= t && k >= best) { best = k; s = h.status; } }
     return s;
@@ -343,7 +348,12 @@ export function generatePatient(spec: PatientSpec): Patient {
   if (g.mdd) baseMed(r.pick(["sertraline-50", "sertraline-100", "escitalopram-10"]), { sensitive: true });
   if (g.hypothyroid) baseMed("levothyroxine-75");
   const sglt2Planned = has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || has("dka_prec") || has("dka_noprec") || has("ckd_inpatient_dip") || has("sick_day") || (g.dm && g.ckd && r.chance(0.35)) || (g.hf && r.chance(0.5));
-  if (sglt2Planned && (has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || r.chance(0.4))) baseMed(r.pick(["empagliflozin-10", "dapagliflozin-10"]));
+  // Not a baseline SGLT2i for a planned DKA: that patient's SGLT2i comes from the DKA plan (it may predate the first visit).
+  // (Random draws are made as before so other patients' streams do not shift.)
+  if (sglt2Planned && (has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || r.chance(0.4))) {
+    const prod = r.pick(["empagliflozin-10", "dapagliflozin-10"]);
+    if (!has("dka_prec") && !has("dka_noprec")) baseMed(prod);
+  }
 
   // ─── Primary-care simulation ────────────────────────────────────────────────────────────────
   const visits: string[] = [];
@@ -359,7 +369,7 @@ export function generatePatient(spec: PatientSpec): Patient {
   const pickVisit = (lo: number, hi = visits.length - 1) => visits[Math.max(0, Math.min(visits.length - 1, r.int(Math.min(lo, hi), hi)))];
   const plan: Record<string, string> = {};
   if (has("acei_cough") && visits.length > 1) plan.cough = pickVisit(1, Math.min(4, visits.length - 1));
-  if (has("acei_angio") && visits.length > 1) plan.angio = addDays(pickVisit(1, Math.max(1, visits.length - 3)), r.int(10, 40));
+  if (has("acei_angio") && visits.length > 1) { plan.angio = addDays(pickVisit(1, Math.max(1, visits.length - 3)), r.int(10, 40)); g.aceiStopFrom = plan.angio; }
   if (has("dka_prec") || has("dka_noprec")) plan.dka = weekday(addDays("2022-09-01", r.int(0, 1300)), r);
   if (has("aki_hyperk")) plan.aki = addDays("2023-01-15", r.int(0, 1200));
   if (has("pneumonia") || has("ckd_inpatient_dip")) plan.pna = addDays(has("ckd_inpatient_dip") ? "2025-03-01" : "2022-01-10", r.int(0, has("ckd_inpatient_dip") ? 420 : 1500));
@@ -456,7 +466,8 @@ export function generatePatient(spec: PatientSpec): Patient {
       if (m) { doc.factIds.push(m.id); g.a1c = r1(g.a1c - (0.6 + vr.next() * 0.6)); }
     } else if (g.dm) g.a1c = r1(Math.min(10.5, Math.max(6.1, g.a1c + vr.normal(0.12, 0.3))));
     if (has("insulin_ckd") && date >= addDays(T, -540)) g.a1c = r1(8.2 + vr.next() * 1.1);
-    if (plan.sglt2 && date >= plan.sglt2 && !g.meds.some((m) => drug(m.product).klass === "sglt2i") && !g.dkaHistory) {
+    // Never after a planned SGLT2i-associated DKA: the DKA's own SGLT2i line is created later in the simulation (back-dated).
+    if (plan.sglt2 && date >= plan.sglt2 && !g.meds.some((m) => drug(m.product).klass === "sglt2i") && !g.dkaHistory && !(plan.dka && date >= plan.dka)) {
       const m = g.startMed(r.pick(["empagliflozin-10", "dapagliflozin-10"]), tick(), "B", { reason: g.ckd ? "CKD + DM, cardiorenal benefit" : g.hf ? "HFrEF" : "A1c above goal", vis: homeVis });
       doc.factIds.push(m.id);
     }
@@ -469,7 +480,7 @@ export function generatePatient(spec: PatientSpec): Patient {
       const raas = g.activeClass(date, ["acei", "arb"])[0];
       const prod = raas ? g.currentProduct(raas, start) : undefined;
       let m: Medication | undefined;
-      if (!raas) m = g.startMed(g.aceiAvoid || r.chance(0.5) ? "losartan-50" : "lisinopril-10", tick(), "B", { reason: "BP above goal", vis: homeVis });
+      if (!raas) m = g.startMed(g.aceiAvoid || (g.aceiStopFrom && date >= g.aceiStopFrom) || r.chance(0.5) ? "losartan-50" : "lisinopril-10", tick(), "B", { reason: "BP above goal", vis: homeVis });
       else if (prod && ["lisinopril-10", "lisinopril-20", "losartan-50"].includes(prod)) {
         const next = { "lisinopril-10": "lisinopril-20", "lisinopril-20": "lisinopril-40", "losartan-50": "losartan-100" }[prod]!;
         g.change(raas, tick(), "B", { product: next, dose: { value: drug(next).strength, unit: "mg" }, doseText: `${drug(next).strength} mg`, reason: "BP above goal" });
@@ -488,7 +499,7 @@ export function generatePatient(spec: PatientSpec): Patient {
         const onsetMonth = addDays(date, -vr.int(35, 90)).slice(0, 7);
         const a = { id: g.uid("a"), substance: ingredientCoding("lisinopril-10")!, type: "intolerance" as const, reaction: "dry cough", reactions: ["Cough"], criticality: "low" as const,
           onset: onsetMonth, recordedAt: tick(), recordedBy: "B" as SourceKey, negatedFindings: ["angioedema", "lip, tongue or throat swelling"],
-          visibility: { B: "both" as const, ...(inA ? { A: "structured" as const } : {}), ...(inP ? { P: "prose" as const } : {}) }, traps: ["T12", "T18"] };
+          visibility: { B: "both" as const, ...(inA ? { A: "structured" as const } : {}), ...(inP ? { P: "prose" as const } : {}) }, traps: ["T12", "T18"] as TrapId[] };
         g.allergies.push(a);
         const nf: NarrativeFact = { id: g.uid("nf"), at: a.recordedAt, kind: "negation", polarity: "negated", about: [a.id], statement: "Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).",
           evidence: [["no (lip|tongue|throat|facial|mouth)|no angioedema|without (angioedema|swelling)|denies (any )?(lip|tongue|throat|facial)? ?swelling"]], visibility: { B: "prose" }, traps: ["T12"] };
@@ -760,7 +771,10 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
         const e = g.bEncounter(addMinutes(a.recordedAt, -20), "ED follow-up: angioedema");
         e.documents[0].factIds.push(a.id, lis.id, ang.id);
         e.addressed = [{ conditionId: ang.id }];
-        const alt = g.startMed("amlodipine-5", addMinutes(a.recordedAt, 3), "B", { reason: "replacing lisinopril (angioedema)", vis: ax.homeVis });
+        // Already on amlodipine: raise its dose instead of opening a second amlodipine line.
+        const onCcb = g.activeClass(a.recordedAt, ["ccb"])[0] ?? g.meds.find((m) => m.setting !== "inpatient" && drug(m.product).klass === "ccb");
+        const alt = onCcb ?? g.startMed("amlodipine-5", addMinutes(a.recordedAt, 3), "B", { reason: "replacing lisinopril (angioedema)", vis: ax.homeVis });
+        if (onCcb && g.currentProduct(onCcb, a.recordedAt) === "amlodipine-5") g.change(onCcb, addMinutes(a.recordedAt, 3), "B", { product: "amlodipine-10", dose: { value: 10, unit: "mg" }, doseText: "10 mg", reason: "replacing lisinopril (angioedema)" });
         e.documents[0].factIds.push(alt.id);
         lis.history.push({ at: addMinutes(a.recordedAt, 2), status: "stopped", by: "B", stopReason: "adverse_reaction", reason: "angioedema" });
       }
@@ -894,7 +908,7 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
       if (ax.c.dm) e.addressed = [{ conditionId: ax.c.dm.id }];
       g.set(sg, addMinutes(fu, 22), "B", "stopped", { stopReason: "adverse_reaction", reason: "euglycemic DKA" });
       const a = { id: g.uid("a"), substance: sg.rxnorm!, type: "adverse-reaction" as const, reaction: "euglycemic diabetic ketoacidosis", reactions: ["Diabetic ketoacidosis"], criticality: "high" as const,
-        onset: date, recordedAt: addMinutes(fu, 25), recordedBy: "B" as SourceKey, manifestation: dka.id, visibility: { B: "both" as const, A: "structured" as const }, traps: ["T18"] };
+        onset: date, recordedAt: addMinutes(fu, 25), recordedBy: "B" as SourceKey, manifestation: dka.id, visibility: { B: "both" as const, A: "structured" as const }, traps: ["T18"] as TrapId[] };
       g.allergies.push(a);
       e.documents[0].factIds.push(dka.id, sg.id, a.id);
       const sv = g.vitalSet(addMinutes(fu, -10), "B", g.clinicSbp(localDate(fu)), 78);
@@ -1057,7 +1071,8 @@ function nephrology(g: Gen, x: { c: Record<string, Condition>; ckdLine?: Conditi
     const t0 = addMinutes(start, 25);
     if (i === 0) {
       const sg = g.activeClass(d, ["sglt2i"])[0];
-      if (!sg && !g.dkaHistory && eg >= 20 && r.chance(0.6)) {
+      // No second SGLT2i line: a later primary-care start may already exist in the simulation.
+      if (!sg && !g.dkaHistory && eg >= 20 && r.chance(0.6) && !g.meds.some((m) => m.setting !== "inpatient" && drug(m.product).klass === "sglt2i")) {
         const m = g.startMed("dapagliflozin-10", t0, "C", { reason: "CKD with albuminuria", vis: ["C", ...x.homeVis] });
         clinicMeds.push(m); facts.push(m.id);
       } else if (g.dkaHistory) {
@@ -1180,7 +1195,8 @@ function homeLog(g: Gen, o: { masked: boolean; mmol: boolean; nsaid: boolean; ty
       entries.push({
         medId: m.id, name: typed ? (d.klass === "thiazide" ? "water pill" : d.brand ?? d.ingredient) : (d.brand && r.chance(0.4) ? d.brand : d.ingredient[0].toUpperCase() + d.ingredient.slice(1)),
         ...(typed ? {} : { picked: { rxnorm: d.scd ?? d.ingredientRx, display: d.scd ? d.scdName : d.ingredient } }),
-        strengthText: d.form === "pen" ? (d.unit === "units/mL" ? "100 units/mL pen" : `${d.strength} mg pen`) : `${d.strength} mg`,
+        // The strength in the product's own unit (levothyroxine is mcg), matching the picked RxNorm product.
+        strengthText: d.form === "pen" ? (d.unit === "units/mL" ? "100 units/mL pen" : `${d.strength} ${d.unit} pen`) : `${d.strength} ${d.unit}`,
         howITakeIt: m.history.find((h) => h.takenAs)?.takenAs ?? (d.form === "pen" ? (d.klass === "glp1ra" ? "once a week, Sunday" : `${m.dose?.value ?? 10} units at bedtime`) : m.frequency === "BID" ? "morning and supper" : m.frequency === "QHS" ? "bedtime" : "morning"),
         status: st === "stopped" ? "stopped" : "taking",
         ...(st === "stopped" ? { stopped: localDate(m.history.filter((h) => h.status === "stopped").pop()!.at).slice(0, 7), note: m.history.filter((h) => h.status === "stopped").pop()!.reason } : {}),
@@ -1194,12 +1210,12 @@ function homeLog(g: Gen, o: { masked: boolean; mmol: boolean; nsaid: boolean; ty
 
 // ─── the population ─────────────────────────────────────────────────────────────────────────────
 
-export function assignArchetypes(seed: string, n: number): Archetype[][] {
+export function assignArchetypes(seed: string, n: number, quotas?: Record<Archetype, number>): Archetype[][] {
   const rng = new Rng(`${seed}/archetypes`);
   const out: Archetype[][] = Array.from({ length: n }, () => []);
-  const scale = n / 295;
+  const scale = quotas ? 1 : n / 295;
   const exclusive: Archetype[][] = [["ckd_prog_sglt2", "ckd_prog_sglt2_held", "ckd_inpatient_dip", "dka_prec", "dka_noprec", "insulin_ckd"]];
-  for (const [a, q] of Object.entries(QUOTAS) as [Archetype, number][]) {
+  for (const [a, q] of Object.entries(quotas ?? QUOTAS) as [Archetype, number][]) {
     const count = Math.round(q * scale);
     const group = exclusive.find((gr) => gr.includes(a));
     const order = rng.shuffle([...Array(n).keys()]);
@@ -1217,9 +1233,15 @@ export function assignArchetypes(seed: string, n: number): Archetype[][] {
   return out;
 }
 
-export function generatePopulation(seed: string, n: number, startIndex = 1): Patient[] {
-  const arche = assignArchetypes(seed, n);
-  return arche.map((a, i) => generatePatient({ id: `p${String(startIndex + i).padStart(3, "0")}`, role: "population", seed: `${seed}/patient/${startIndex + i}`, arche: a }));
+export function generatePopulation(seed: string, n: number, idPrefix = "p", startIndex = 1, quotas?: Record<Archetype, number>): Patient[] {
+  const arche = assignArchetypes(seed, n, quotas);
+  // A patient that breaks a plausibility rule (plausibility.ts) is regenerated from a derived seed, same archetypes.
+  return arche.map((a, i) => {
+    const id = `${idPrefix}${String(startIndex + i).padStart(3, "0")}`;
+    let p = generatePatient({ id, role: "population", seed: `${seed}/patient/${startIndex + i}`, arche: a });
+    for (let k = 1; k <= 8 && plausibility(p).length; k++) p = generatePatient({ id, role: "population", seed: `${seed}/patient/${startIndex + i}/retry${k}`, arche: a });
+    return p;
+  });
 }
 
 export { EVAL_DATE };

@@ -1,0 +1,131 @@
+{
+ "runId": "20261014T121114794Z-jcxp",
+ "source": "lakeview",
+ "viewSet": "app",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 161,
+  "items": 2125,
+  "ms": 219.71562199999997,
+  "msPerItem": 0.1033955868235294,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 119,
+   "fp": 0,
+   "fn": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 269,
+   "fp": 0,
+   "fn": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 34344,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 1795,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 36527,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 343,
+   "fp": 0,
+   "fn": 0
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 36184,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T1": {
+   "facts": 9,
+   "errors": 0
+  },
+  "T5": {
+   "facts": 43,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 10979,
+   "errors": 0
+  },
+  "T9": {
+   "facts": 159,
+   "errors": 0
+  },
+  "T11": {
+   "facts": 2307,
+   "errors": 0
+  },
+  "T16": {
+   "facts": 2663,
+   "errors": 0
+  },
+  "T3": {
+   "facts": 69,
+   "errors": 0
+  },
+  "T7": {
+   "facts": 650,
+   "errors": 0
+  },
+  "T2": {
+   "facts": 16,
+   "errors": 0
+  },
+  "T4": {
+   "facts": 19,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": []
+}

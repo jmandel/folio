@@ -1,0 +1,88 @@
+{
+  "patient": "f031",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-11-20",
+      "sources": ["B", "P"],
+      "basis": ["m_25"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 10 MG Oral Tablet",
+      "rxnorm_product": "314076",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "naproxen",
+      "rxnorm_ingredient": "7258",
+      "product": "naproxen sodium 220 MG Oral Tablet",
+      "rxnorm_product": "849574",
+      "dose": { "value": 220, "unit": "mg" },
+      "dose_text": "220-440 mg",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2023",
+      "otc": true,
+      "taken_as": "1 or 2 for my knee, most days",
+      "sources": ["P"],
+      "basis": ["m_61"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sensitive": "behavioral-health",
+      "sources": ["B", "P"],
+      "basis": ["m_8"]
+    }
+  ]
+}

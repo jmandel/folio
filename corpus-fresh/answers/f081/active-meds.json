@@ -1,0 +1,61 @@
+{
+  "patient": "f081",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 10 MG Oral Tablet",
+      "rxnorm_product": "308135",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-06-30",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_70"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-01-25",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "naproxen",
+      "rxnorm_ingredient": "7258",
+      "product": "naproxen sodium 220 MG Oral Tablet",
+      "rxnorm_product": "849574",
+      "dose": { "value": 220, "unit": "mg" },
+      "dose_text": "220-440 mg",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2025",
+      "otc": true,
+      "taken_as": "1 or 2 for my knee, most days",
+      "sources": ["P"],
+      "basis": ["m_176"]
+    }
+  ]
+}

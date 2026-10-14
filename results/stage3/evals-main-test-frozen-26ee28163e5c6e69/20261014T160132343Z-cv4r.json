@@ -1,0 +1,493 @@
+{
+ "runId": "20261014T160132343Z-cv4r",
+ "source": "northgate",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 178,
+  "items": 8722,
+  "ms": 907.1253600000006,
+  "msPerItem": 0.10400428342123373,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 5909,
+   "fp": 0,
+   "fn": 0,
+   "rows": 828,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 2647,
+   "fp": 0,
+   "fn": 0,
+   "rows": 638,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 0.9821428571428571,
+   "recall": 0.9821428571428571,
+   "tp": 220,
+   "fp": 4,
+   "fn": 4,
+   "rows": 32,
+   "wrongRows": 4,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 57953,
+   "fp": 0,
+   "fn": 0,
+   "rows": 11243,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 9580,
+   "fp": 0,
+   "fn": 0,
+   "rows": 1503,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.dose": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.frequency": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.patient_reported": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.evidence": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status_since": {
+   "ok": 53,
+   "total": 53
+  },
+  "medications.stop_reason": {
+   "ok": 34,
+   "total": 34
+  },
+  "medications.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.status": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.onset": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.evidence": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.ckd_stage": {
+   "ok": 69,
+   "total": 69
+  },
+  "allergies.reaction_type": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.mechanism": {
+   "ok": 28,
+   "total": 32
+  },
+  "allergies.criticality": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.onset": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.reaction": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.evidence": {
+   "ok": 32,
+   "total": 32
+  },
+  "labs.value": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.unit": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.status": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.evidence": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.egfr_equation": {
+   "ok": 1738,
+   "total": 1738
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.pulse_bpm": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.weight_kg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.evidence": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.repeat_systolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  },
+  "vitals.repeat_diastolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 0.9995435353189547,
+   "recall": 0.9995435353189547,
+   "tp": 8759,
+   "fp": 4,
+   "fn": 4
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 67550,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 27,
+   "errors": 0,
+   "patients": 26,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 53,
+   "errors": 0,
+   "patients": 45,
+   "patientsWithError": 0
+  },
+  "T16": {
+   "facts": 2785,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T10": {
+   "facts": 252,
+   "errors": 0,
+   "patients": 162,
+   "patientsWithError": 0
+  },
+  "T17": {
+   "facts": 252,
+   "errors": 0,
+   "patients": 162,
+   "patientsWithError": 0
+  },
+  "T5": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T11": {
+   "facts": 2499,
+   "errors": 0,
+   "patients": 91,
+   "patientsWithError": 0
+  },
+  "T12": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 28,
+   "errors": 0,
+   "patients": 26,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 11427,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T9": {
+   "facts": 161,
+   "errors": 0,
+   "patients": 59,
+   "patientsWithError": 0
+  },
+  "T3": {
+   "facts": 81,
+   "errors": 0,
+   "patients": 38,
+   "patientsWithError": 0
+  },
+  "T7": {
+   "facts": 680,
+   "errors": 0,
+   "patients": 142,
+   "patientsWithError": 0
+  },
+  "T4": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 22,
+   "patientsWithError": 0
+  },
+  "T2": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "s04",
+   "local": "NFM-00438305",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "mechanism",
+     "expected": "non_immune|unknown",
+     "actual": "immune"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "a_34"
+   ],
+   "items": [
+    "01H2TYPMDG2EWZ2F5SCE091BMA",
+    "01H2VDJ5709FNTR3HR9KZ77878"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H2TYPMDG2EWZ2F5SCE091BMA",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p010",
+   "local": "NFM-00277891",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "mechanism",
+     "expected": "non_immune|unknown",
+     "actual": "immune"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "a_64"
+   ],
+   "items": [
+    "01GX3ZSEQGX905NM0S549CRBVF",
+    "01GX4BX310C75FG2VZ3NGXV1EX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GX3ZSEQGX905NM0S549CRBVF",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "NFM-00312161",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "mechanism",
+     "expected": "non_immune|unknown",
+     "actual": "immune"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "a_111"
+   ],
+   "items": [
+    "01HH53S9MG4HWDG1MKPNGVHV7J",
+    "01HH5JDG20WFXEB3Y7J4KEXB8X"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HH53S9MG4HWDG1MKPNGVHV7J",
+     "entry_id": "alg_1"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "NFM-00785765",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "mechanism",
+     "expected": "non_immune|unknown",
+     "actual": "immune"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "a_171"
+   ],
+   "items": [
+    "01GMXTF6NGF3GDYSMNFW74WH13",
+    "01GMYBAT800398MDNMVJB25QC9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMXTF6NGF3GDYSMNFW74WH13",
+     "entry_id": "alg_1"
+    }
+   ]
+  }
+ ]
+}

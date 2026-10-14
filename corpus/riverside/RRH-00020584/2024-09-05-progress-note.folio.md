@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J716AEX07KD66MKWYAWK9XPC"
+id: "01J716AEX061C5F2B3KG2QMH42"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-05T12:37:00Z"
@@ -16,24 +16,23 @@ schema:
 ---
 ## Progress note
 
-**Interval.** The patient is eating and feels much better, with no nausea or abdominal pain. Allergies: NKDA.
+**Interval.** The patient is eating and feels well, with no nausea or abdominal pain. Allergy list: NKDA.
 
-**Exam.** At 07:17: BP 125/75, HR 98, RR 21, T 98.8 F, SpO2 94%. Comfortable at rest, lungs clear, abdomen soft.
+**Exam.** Vitals at 07:17: BP 125/75, HR 98, RR 21, T 98.8 F, SpO2 94%. Lungs are clear and the patient is comfortable at rest. Abdomen soft and non-tender.
 
-**Results.** The 06:25 panel shows sodium 131, potassium 4.0, chloride 98, bicarbonate 24, anion gap 9, urea nitrogen 22, creatinine 0.79, eGFR 81 and glucose 124.
+**Results.** <ref id="bmp">The 06:25 panel shows sodium 131, potassium 4.0, chloride 98, bicarbonate 24, anion gap 9, urea nitrogen 22, creatinine 0.79, eGFR 81, glucose 124</ref>.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. The <ref id="bmp">06:25 panel</ref> shows a normal anion gap and bicarbonate of 24. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily, started 9/4 at 07:00, continues.</ref>
-2. Sodium remains mildly low at 131; we will keep following it.
-3. Home empagliflozin, metformin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
-4. Continue to monitor oxygen saturation, which is 94% this morning, and respiratory rate.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. The gap remains closed with bicarbonate 24. Continue <ref id="sc_glargine">insulin glargine 18 units daily</ref>, started 9/4.
+2. Metformin, empagliflozin, losartan and furosemide remain held. Carvedilol and spironolactone are continued.
+3. Sodium is stable at 131. Respiratory rate and oxygen saturation will be rechecked this afternoon.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6196344",
+    "encounter_id": "RRH-ENC-6905994",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -61,7 +60,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24249-5882",
+    "accession": "L24249-6569",
     "collected": "2024-09-05T11:25:00Z",
     "specimen": "serum",
     "status": "final",

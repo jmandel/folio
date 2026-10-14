@@ -15,10 +15,11 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam. No new complaints.
+
 BP 141/82, repeat 139/78, pulse 81, wt 215 lb.
 Labs today: eGFR 48, K 4.8, A1c 8.6%, LDL 97 mg/dL.
-Metformin dose changed to 1000 mg twice daily today (A1c 8.6).
-RTC 3 mo.
+A1c up, so metformin dose changed to 1000 mg twice daily today (A1c 8.6).
+Pt agrees. RTC 3 mo.
 
 ```json payload
 {

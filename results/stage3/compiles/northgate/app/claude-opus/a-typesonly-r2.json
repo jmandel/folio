@@ -1,0 +1,43 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "0a1ea0c80173ae02df7ac36e107f12d45c37cce3c4ab36d3217e3d5b84e8e39e",
+ "viewSetHash": "d3f0920ebb40e2f60db193bd7e8b7bdffbb80be5d248114b816cf98859892f0b",
+ "samples": [
+  "p038/2021-07-15-referral-created.folio.md",
+  "p038/2020-08-24-visit-note.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597-corrected.folio.md",
+  "p133/2025-10-31-void.folio.md",
+  "p038/2020-08-24-problem-1-add.folio.md",
+  "p038/2021-07-15-med-glargine-start.folio.md",
+  "p038/2020-08-24-vitals.folio.md",
+  "p038/2021-07-15-medications-reviewed.folio.md",
+  "p016/2021-09-07-allergy-lisinopril.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T160838304Z-n2xt",
+   "ok": true,
+   "costUsd": 1.9604570000000003,
+   "durationMs": 703838,
+   "numTurns": 14,
+   "usage": {
+    "input_tokens": 24,
+    "cache_creation_input_tokens": 87140,
+    "cache_read_input_tokens": 648205,
+    "output_tokens": 56680
+   },
+   "evalPath": "results/stage3/evals-main-dev/20261014T160838304Z-n2xt.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/605, prob 0/521, alle 2/10, labs 0/6361, vita 0/896"
+  }
+ ],
+ "rep": 2,
+ "variant": "types-only",
+ "keysSha256": "26ee28163e5c6e69",
+ "final": "20261014T160838304Z-n2xt"
+}

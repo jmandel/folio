@@ -1,0 +1,38 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "condition": "a",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T121408782Z-z7dy",
+   "ok": true,
+   "costUsd": 0.4436685,
+   "durationMs": 152230,
+   "numTurns": 8,
+   "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 52871,
+    "cache_read_input_tokens": 181765,
+    "output_tokens": 21398
+   },
+   "evalPath": "results/stage3/evals/20261014T121408782Z-z7dy.json",
+   "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.157ms/item"
+  }
+ ],
+ "final": "20261014T121408782Z-z7dy"
+}

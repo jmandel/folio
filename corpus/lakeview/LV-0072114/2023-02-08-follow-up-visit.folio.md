@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GRSG7700Q5ZK721SH325RWQB"
+id: "01GRSG7700WQF551BB5R0WMD1M"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0072114"
 effective: "2023-02-08T09:00:00-06:00"
@@ -14,19 +14,17 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. Feels well.
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">diabetic</ref> (type 2, onset 2014) and <ref id="dx_htn">hypertensive since 2006</ref>.
 
-<ref id="bp_sys">BP 143/80, HR 78, weight 71.4 kg</ref>. BP a little above goal today.
+eGFR 43 today, K 4.9, UACR 335 mg/g. <ref id="bp_sys">BP 143/80, HR 78, weight 71.4 kg</ref>, a little above goal.
 
-eGFR 43, K 4.9, UACR 335 mg/g. Albuminuria remains in the A3 range.
-
-Home BP readings to bring next time. Return 4 months.
+Feels well, no swelling. Recheck labs in 3–4 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2023-02-08T09:00:00-06:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +33,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +41,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +49,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +57,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 143,
     "UNIT_CODE": "mmHg",
@@ -68,7 +66,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +75,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 78,
     "UNIT_CODE": "/min",
@@ -86,7 +84,7 @@ Home BP readings to bring next time. Return 4 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104966",
+    "VISIT_ID": "NV-105633",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 71.4,
     "UNIT_CODE": "kg",

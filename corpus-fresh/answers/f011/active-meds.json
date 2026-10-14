@@ -1,0 +1,111 @@
+{
+  "patient": "f011",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 10 MG Oral Tablet",
+      "rxnorm_product": "308135",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "carvedilol",
+      "rxnorm_ingredient": "20352",
+      "product": "carvedilol 12.5 MG Oral Tablet",
+      "rxnorm_product": "200032",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2026-09-16",
+      "intend_resume": true,
+      "sources": ["A", "B", "C", "P"],
+      "basis": ["m_12"]
+    },
+    {
+      "medication": "furosemide",
+      "rxnorm_ingredient": "4603",
+      "product": "furosemide 40 MG Oral Tablet",
+      "rxnorm_product": "313988",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "semaglutide",
+      "rxnorm_ingredient": "1991302",
+      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2024-12-09",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_106"]
+    },
+    {
+      "medication": "spironolactone",
+      "rxnorm_ingredient": "9997",
+      "product": "spironolactone 25 MG Oral Tablet",
+      "rxnorm_product": "313096",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_11"]
+    }
+  ]
+}

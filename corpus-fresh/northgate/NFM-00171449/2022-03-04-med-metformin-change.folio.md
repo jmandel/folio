@@ -1,0 +1,34 @@
+---
+folio: "0.1"
+id: "01FXB0Y3XGA5W527E53TZ6ARF4"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00171449"
+effective: "2022-03-04T11:51:00-06:00"
+recorded: "2022-03-04T11:51:42-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:jpatel"
+  name: "Jaya Patel, NP"
+  role: "Nurse practitioner"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+<ref id="med_1">A1c 8.1. Metformin up to 1000 mg BID.</ref> Pt aware.
+
+```json payload
+{
+  "med_1": {
+    "type": "med_event",
+    "med_id": "ML-41891",
+    "action": "change",
+    "origin": "northgate",
+    "drug": { "name": "metformin hydrochloride 1000 MG Oral Tablet", "rxnorm": "861004" },
+    "dose": { "value": 1000, "unit": "mg" },
+    "frequency": "BID",
+    "sig": "Take 1 tablet by mouth twice daily with meals",
+    "reason_text": "A1c 8.1",
+    "visit_id": "V-2022-030457"
+  }
+}
+```

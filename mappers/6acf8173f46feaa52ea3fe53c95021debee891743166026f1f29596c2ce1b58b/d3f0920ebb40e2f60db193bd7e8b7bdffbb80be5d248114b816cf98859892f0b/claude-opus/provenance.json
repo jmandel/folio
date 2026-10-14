@@ -1,0 +1,121 @@
+{
+ "source": "northgate",
+ "schema_sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "view_set": "app",
+ "view_set_hash": "d3f0920ebb40e2f60db193bd7e8b7bdffbb80be5d248114b816cf98859892f0b",
+ "backend": "claude-opus",
+ "model": "opus",
+ "keys_sha256": "26ee28163e5c6e69",
+ "chosen": {
+  "condition": "a",
+  "rep": 1,
+  "runId": "20261014T153538312Z-nujp",
+  "eval": "results/stage3/evals-fresh-test/20261014T153538312Z-nujp.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0,
+  "isolation_scan": "no network, IPC or web-tool calls"
+ },
+ "held_out": {
+  "patients": 176,
+  "as_of": [
+   "2023-06-30",
+   "2025-03-31",
+   "2026-10-13"
+  ],
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 19249,
+    "fp": 0,
+    "fn": 0,
+    "rows": 2664,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 8396,
+    "fp": 0,
+    "fn": 0,
+    "rows": 2004,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1246,
+    "fp": 0,
+    "fn": 0,
+    "rows": 178,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 142339,
+    "fp": 0,
+    "fn": 0,
+    "rows": 27625,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 22954,
+    "fp": 0,
+    "fn": 0,
+    "rows": 3574,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "ms_per_item": 0.033100607485020396
+ },
+ "samples_from_training_patients": [
+  "p038/2021-07-15-referral-created.folio.md",
+  "p038/2020-08-24-visit-note.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597-corrected.folio.md",
+  "p133/2025-10-31-void.folio.md",
+  "p038/2020-08-24-problem-1-add.folio.md",
+  "p038/2021-07-15-med-glargine-start.folio.md",
+  "p038/2020-08-24-vitals.folio.md",
+  "p038/2021-07-15-medications-reviewed.folio.md",
+  "p016/2021-09-07-allergy-lisinopril.folio.md"
+ ],
+ "all_runs": [
+  {
+   "condition": "a",
+   "rep": 3,
+   "final": "20261014T153539049Z-zvsb",
+   "rounds": [
+    "20261014T153539049Z-zvsb"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 1,
+   "final": "20261014T153538312Z-nujp",
+   "rounds": [
+    "20261014T153538312Z-nujp"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 2,
+   "final": "20261014T153538677Z-z4fp",
+   "rounds": [
+    "20261014T153538677Z-z4fp"
+   ]
+  }
+ ]
+}

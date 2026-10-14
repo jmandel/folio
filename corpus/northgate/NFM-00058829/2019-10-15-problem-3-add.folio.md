@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Obesity, onset 2015 per pt.</ref> Added at first visit here.
+<ref id="prob_1">Obesity, onset 2015 per pt.</ref> Added at first visit.
 
 ```json payload
 {
@@ -25,7 +25,7 @@ schema:
     "description": "Obesity",
     "icd10cm": "E66.9",
     "onset": { "date": "2015-01-01", "precision": "year" },
-    "visit_id": "V-2019-101522"
+    "visit_id": "V-2019-101527"
   }
 }
 ```

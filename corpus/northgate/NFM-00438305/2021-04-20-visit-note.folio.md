@@ -14,10 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. Pt feels well, no new complaints.
-BP 141/94, pulse 69, wt 213 lb. BP above goal today.
-Discussed home BP checks and bringing the log to next visit.
-RTC 1 yr, sooner if BP stays high.
+Annual exam. Doing OK, no new complaints.
+
+BP 141/94, pulse 69, wt 213 lb. BP up today, will recheck at next visit.
+
+Reviewed diet, exercise, routine screening.
+
+RTC 1 yr.
 
 ```json payload
 {

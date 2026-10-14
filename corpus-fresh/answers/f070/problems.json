@@ -1,0 +1,63 @@
+{
+  "patient": "f070",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2008-03-04", "precision": "day" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2012", "precision": "year" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2015", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2016-05-28", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2023-03-13", "precision": "day" },
+        "stage": "3a A3",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-08-21",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_26"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Pneumonia",
+        "icd10": "J18.9",
+        "snomed": "233604007",
+        "onset": { "value": "2025-09-16", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_121"],
+        "resolved_on": "2025-09-21"
+      }
+    ]
+  }
+}

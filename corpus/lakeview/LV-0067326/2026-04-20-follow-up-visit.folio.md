@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KPPFKE10F65C96913KD1XM6S"
+id: "01KPPFKE10DQ5D7NAXJ0S04VKQ"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0067326"
 effective: "2026-04-20T10:20:00-05:00"
@@ -14,19 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">type 2 diabetes</ref>, <ref id="dx_htn">essential hypertension</ref>.
+Follow-up for <ref id="dx_ckd">CKD G3b A2</ref> in a patient with <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>.
 
-eGFR 37 today, K 4.4, UACR 100 mg/g. Slow decline, albuminuria about the same.
+<ref id="bp_sys">BP 141/80, HR 79, weight 97.3 kg.</ref> Feels well, no new symptoms.
 
-<ref id="bp_sys">BP 141/80, HR 79, weight 97.3 kg.</ref> No new symptoms.
+eGFR 37, K 4.7, UACR 100 mg/g today.
 
-Repeat labs and return in 4 months.
+Kidney function continues to decline slowly. Labs in 3 months, return 5 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2026-04-20T10:20:00-05:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +35,7 @@ Repeat labs and return in 4 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +43,7 @@ Repeat labs and return in 4 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ Repeat labs and return in 4 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +59,7 @@ Repeat labs and return in 4 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 141,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ Repeat labs and return in 4 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +77,7 @@ Repeat labs and return in 4 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 79,
     "UNIT_CODE": "/min",
@@ -86,7 +86,7 @@ Repeat labs and return in 4 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-116915",
+    "VISIT_ID": "NV-104507",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 97.3,
     "UNIT_CODE": "kg",

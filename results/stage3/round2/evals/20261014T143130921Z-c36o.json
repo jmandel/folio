@@ -1,0 +1,348 @@
+{
+ "runId": "20261014T143130921Z-c36o",
+ "source": "homelog",
+ "viewSet": "uscore",
+ "split": "test",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 60,
+  "items": 12945,
+  "ms": 121.49662499999992,
+  "msPerItem": 0.009385602549246808,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9990900818926297,
+   "recall": 0.9981818181818182,
+   "tp": 1098,
+   "fp": 1,
+   "fn": 2,
+   "rows": 371,
+   "wrongRows": 2,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 14,
+    "fp": 0,
+    "fn": 0,
+    "rows": 5,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 258,
+    "fp": 0,
+    "fn": 0,
+    "rows": 87,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.9987908101571947,
+    "recall": 0.9975845410628019,
+    "tp": 826,
+    "fp": 1,
+    "fn": 2,
+    "rows": 279,
+    "wrongRows": 2,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.status": {
+   "ok": 371,
+   "total": 371
+  },
+  "medications.dose": {
+   "ok": 356,
+   "total": 358
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.9990867579908675,
+   "recall": 0.9990867579908675,
+   "tp": 1094,
+   "fp": 1,
+   "fn": 1
+  },
+  "narrated": {
+   "precision": 1,
+   "recall": 0.8,
+   "tp": 4,
+   "fp": 0,
+   "fn": 1
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 3,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T13": {
+   "facts": 17,
+   "errors": 0,
+   "patients": 14,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 7,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "HL-U-58213",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 10,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_empagliflozin"
+   ],
+   "items": [
+    "01JC5964MRDZ8EPVWGG8DV2CS5",
+    "01KMTFFYM012DNBYBDSS7S2EVN",
+    "01KQN2FD70GFSXF3DM02V7HGMX"
+   ],
+   "evidence": []
+  },
+  {
+   "patient": "p240",
+   "local": "HL-U-24269",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "levothyroxine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 75,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 75,
+      "unit": "mcg"
+     }
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01KCS99978WDW5VKWKXWK321C0"
+   ],
+   "evidence": []
+  }
+ ],
+ "fhir": {
+  "resources": 279,
+  "conformant": 279,
+  "problems": {}
+ }
+}

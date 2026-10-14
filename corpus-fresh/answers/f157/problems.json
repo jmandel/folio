@@ -1,0 +1,53 @@
+{
+  "patient": "f157",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2011", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2004", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Primary osteoarthritis of knee",
+        "icd10": "M17.9",
+        "snomed": "239873007",
+        "onset": { "value": "2017-01-25", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2023-04-09", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_116"],
+        "resolved_on": "2023-04-12"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2023-04-09", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_117"],
+        "resolved_on": "2023-04-12"
+      }
+    ]
+  }
+}

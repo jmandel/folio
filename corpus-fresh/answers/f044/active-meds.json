@@ -1,0 +1,111 @@
+{
+  "patient": "f044",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022-01-06",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_20"]
+    },
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 20 MG Oral Tablet",
+      "rxnorm_product": "617310",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "glipizide",
+      "rxnorm_ingredient": "4821",
+      "product": "glipizide 5 MG Oral Tablet",
+      "rxnorm_product": "310490",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-06-09",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-06-09",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-06-09",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "semaglutide",
+      "rxnorm_ingredient": "1991302",
+      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2024-02-23",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_27"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_11"]
+    }
+  ]
+}

@@ -1,0 +1,1117 @@
+{
+ "runId": "20261014T120659892Z-edxa",
+ "source": "northgate",
+ "viewSet": "app",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 181,
+  "items": 8470,
+  "ms": 286.9432019999999,
+  "msPerItem": 0.03387759173553718,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 1,
+   "recall": 0.992533718689788,
+   "tp": 4121,
+   "fp": 0,
+   "fn": 31
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 1995,
+   "fp": 0,
+   "fn": 0
+  },
+  "allergies": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 105,
+   "fp": 0,
+   "fn": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 34130,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 7840,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 1,
+   "recall": 0.9993571398946539,
+   "tp": 48191,
+   "fp": 0,
+   "fn": 31
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 0.9950328473001122,
+   "tp": 6210,
+   "fp": 0,
+   "fn": 31
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 41981,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 30,
+   "errors": 0
+  },
+  "T1": {
+   "facts": 46,
+   "errors": 0
+  },
+  "T16": {
+   "facts": 2659,
+   "errors": 0
+  },
+  "T10": {
+   "facts": 239,
+   "errors": 0
+  },
+  "T17": {
+   "facts": 239,
+   "errors": 0
+  },
+  "T5": {
+   "facts": 17,
+   "errors": 0
+  },
+  "T11": {
+   "facts": 2308,
+   "errors": 0
+  },
+  "T12": {
+   "facts": 22,
+   "errors": 0
+  },
+  "T18": {
+   "facts": 31,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 10979,
+   "errors": 0
+  },
+  "T9": {
+   "facts": 159,
+   "errors": 0
+  },
+  "T3": {
+   "facts": 69,
+   "errors": 0
+  },
+  "T7": {
+   "facts": 650,
+   "errors": 0
+  },
+  "T4": {
+   "facts": 20,
+   "errors": 0
+  },
+  "T2": {
+   "facts": 16,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "NFM-00731552",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_glargine"
+   ],
+   "items": [
+    "01K2YTJFEGP8WKXSCRFXTGNCYM",
+    "01K2Z2HHJ0JFDPKD8BX3N0NCBM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K2YTJFEGP8WKXSCRFXTGNCYM",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p006",
+   "local": "NFM-00128158",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_60"
+   ],
+   "items": [
+    "01H643VP9GM29MV3N3MTZAXCHA",
+    "01H64BC3N026QF2JYXKRE2A5ZE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H643VP9GM29MV3N3MTZAXCHA",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p017",
+   "local": "NFM-00713158",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_16"
+   ],
+   "items": [
+    "01GJR5H15GJ8QXB8NJ10YZNF1S",
+    "01GJRNAYM0KAKAGHEJ86CH1WN5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GJR5H15GJ8QXB8NJ10YZNF1S",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p018",
+   "local": "NFM-00304836",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_18"
+   ],
+   "items": [
+    "01J82S9Y3G5513JWVAKP3GS3ZN",
+    "01J82ZX1Z0AE32BJXPG3DR9PEC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J82S9Y3G5513JWVAKP3GS3ZN",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p032",
+   "local": "NFM-00283863",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_39"
+   ],
+   "items": [
+    "01K0F3SQ8GT5NNVE9S6AW4ZY8X",
+    "01K0FJMGM0PCJWJKS9ZJR9QD1T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K0F3SQ8GT5NNVE9S6AW4ZY8X",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p038",
+   "local": "NFM-00873737",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_35"
+   ],
+   "items": [
+    "01FANWQQ1G45S836T6M3PC8HCZ",
+    "01FAP9VJK0YGVGV2H42E3Y70D3"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FANWQQ1G45S836T6M3PC8HCZ",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p045",
+   "local": "NFM-00601519",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_70"
+   ],
+   "items": [
+    "01H3D37DEGK7RYQRSZ3QX7Z0CY",
+    "01H3DPJVQ0PZE6876H46PZ6G8X",
+    "01M0JMM06GEX5XY0YJV36D495J",
+    "01M0JY85H0S3H6G4VYQBK9XEBT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3D37DEGK7RYQRSZ3QX7Z0CY",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01M0JMM06GEX5XY0YJV36D495J",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p053",
+   "local": "NFM-00939231",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_55"
+   ],
+   "items": [
+    "01JQ6TWE7GEV2D7QQ1FCTWCV5N",
+    "01JQ74M8R0M54F1EYB74AW7559"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JQ6TWE7GEV2D7QQ1FCTWCV5N",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "NFM-00532846",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_104"
+   ],
+   "items": [
+    "01H7ZF0CVG5J7JMC9KY14FXP2Q",
+    "01H800PQX01SZZZDHH24525Q7X"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H7ZF0CVG5J7JMC9KY14FXP2Q",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p108",
+   "local": "NFM-00968157",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_71"
+   ],
+   "items": [
+    "01JWV4DP1GM3JXQQ2YAR9D4EYF",
+    "01JWVPR5M0HGQ5YD7RES0MHEQT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JWV4DP1GM3JXQQ2YAR9D4EYF",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p135",
+   "local": "NFM-00831906",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_77"
+   ],
+   "items": [
+    "01KWYP58FGPWZPWVSQX34FF08M",
+    "01KWZATTD0B2J9JNHKCBCGE5G6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KWYP58FGPWZPWVSQX34FF08M",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p139",
+   "local": "NFM-00665649",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_53"
+   ],
+   "items": [
+    "01F60HP11G56F9J8D3XS5C0NKT",
+    "01F60YP7D0QABP56884VWWDV36",
+    "01JSYB88BG2R39JKM2V9AW4RFC",
+    "01JSYWAEW0P5E1VCS2Z6Z16D20"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F60HP11G56F9J8D3XS5C0NKT",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01JSYB88BG2R39JKM2V9AW4RFC",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p153",
+   "local": "NFM-00628169",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_45"
+   ],
+   "items": [
+    "01F4HTGJBG4AJX17H9W8R1W396",
+    "01F4J709C00N9P9VK51PCHRSFM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F4HTGJBG4AJX17H9W8R1W396",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p167",
+   "local": "NFM-00957031",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_106"
+   ],
+   "items": [
+    "01J8JT9B2GJJ0Z2AQAT0SPBQJ6",
+    "01J8K6WQ90168KGF79BRHJB276"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J8JT9B2GJJ0Z2AQAT0SPBQJ6",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p168",
+   "local": "NFM-00116302",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_76"
+   ],
+   "items": [
+    "01FCVB5W9GQ92J5T20S517V22J",
+    "01FCVZCSF05K57JADGHV83X44M",
+    "01GHVNE0SG74PKE1THJZDX2HJZ",
+    "01GHW3JV105XS9HZQBXQNAVWAD"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FCVB5W9GQ92J5T20S517V22J",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01GHVNE0SG74PKE1THJZDX2HJZ",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p170",
+   "local": "NFM-00359511",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_46"
+   ],
+   "items": [
+    "01JEP71V3GYVARGF49F7DYMBZQ",
+    "01JEPBW6J0BJTV97ZCEAXG4W74"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JEP71V3GYVARGF49F7DYMBZQ",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p174",
+   "local": "NFM-00528755",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_75"
+   ],
+   "items": [
+    "01HV4WFPSGQV6WEWZ506DHJXW0",
+    "01HV5CJS70PW8Q1JNDQQJ1RABA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HV4WFPSGQV6WEWZ506DHJXW0",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p175",
+   "local": "NFM-00993518",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_96"
+   ],
+   "items": [
+    "01HQV0EYVG473M06WRYPJJMS0K",
+    "01HQV6WJY055KMFEZV99AATXQY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HQV0EYVG473M06WRYPJJMS0K",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p180",
+   "local": "NFM-00850400",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_39"
+   ],
+   "items": [
+    "01K07P90KGXVTGRQEM8K25Q8Y5",
+    "01K085Z8W0S9AF80YBWF6D5520"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K07P90KGXVTGRQEM8K25Q8Y5",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p192",
+   "local": "NFM-00096311",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_55"
+   ],
+   "items": [
+    "01F0V87ASGXKTA0QDH4XMNXX3N",
+    "01F0VE0TB0EM2Z2TKD44EYQGGT",
+    "01G3XVSRZGNXZN1GZVV5YM13HM",
+    "01G3YCGZY0Z7EVN3VQNPPHG9QW",
+    "01K8NQPWQG0RN4T13XX0EHPZEF",
+    "01K8NVNS90YZHTRAX12HCTYYYB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F0V87ASGXKTA0QDH4XMNXX3N",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01G3XVSRZGNXZN1GZVV5YM13HM",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01K8NQPWQG0RN4T13XX0EHPZEF",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p205",
+   "local": "NFM-00296957",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_79"
+   ],
+   "items": [
+    "01G6WYS8KGWHZ42CEC7BWQQ4G9",
+    "01G6X9X1C08H0MS28XNVHM33ZM",
+    "01HR56KZ7GWGJMN6VWQ92TZKZQ",
+    "01HR5N7E70V646NSN4KV2TE5ND",
+    "01KE7FDQFGRCBPQP0QWNP9N8B6",
+    "01KE7YKGD0YTWQG7246G9294PJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G6WYS8KGWHZ42CEC7BWQQ4G9",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01HR56KZ7GWGJMN6VWQ92TZKZQ",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01KE7FDQFGRCBPQP0QWNP9N8B6",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p223",
+   "local": "NFM-00770227",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_45"
+   ],
+   "items": [
+    "01JCKFJWBGDBVNH6WK91TF48XE",
+    "01JCKXQPK00ZH9KJ2FS0XP8FS2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JCKFJWBGDBVNH6WK91TF48XE",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p247",
+   "local": "NFM-00341949",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_31"
+   ],
+   "items": [
+    "01DEW9D2JGG7HDQ5C7EN2Q60D9",
+    "01DEWE1Y80HT67S57WK7Q9JT23",
+    "01J6DC4ASGQJ7AC9QPD9AG825A",
+    "01J6DYGMZ0CG5A9WTZ01KVZS61",
+    "01KCHT7S1G57DA6MKAE8CKAPF8",
+    "01KCJ21BC00CEXAECF9F0K9ASP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DEW9D2JGG7HDQ5C7EN2Q60D9",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01J6DC4ASGQJ7AC9QPD9AG825A",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01KCHT7S1G57DA6MKAE8CKAPF8",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p251",
+   "local": "NFM-00673781",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_86"
+   ],
+   "items": [
+    "01JJ80VAAG80Y7P6DC8BF0NSSS",
+    "01JJ8GTQJ0SG0QPAMNNJ7G3VWW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JJ80VAAG80Y7P6DC8BF0NSSS",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "NFM-00850967",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_104"
+   ],
+   "items": [
+    "01KPNVQGDGSEX6Q4X9FBAPBT65",
+    "01KPP3ZQG039Y1YTEZ3BY8GAFG"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KPNVQGDGSEX6Q4X9FBAPBT65",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p258",
+   "local": "NFM-00377621",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_135"
+   ],
+   "items": [
+    "01JQA10W2GA9CJHR99CT23PJQC",
+    "01JQAFR0802XJHVECCT8AD5YTS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JQA10W2GA9CJHR99CT23PJQC",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "NFM-00437946",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_136"
+   ],
+   "items": [
+    "01K5YFBDQGP2V0P8DY0P9QVNRY",
+    "01K5YPJP404A3DNNWVTQ1XY6RJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K5YFBDQGP2V0P8DY0P9QVNRY",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p270",
+   "local": "NFM-00472987",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_84"
+   ],
+   "items": [
+    "01JXZDPY6G1GDBVQ0ERDE3ZXCP",
+    "01JXZJZYD03JMD46VGK3N6HP90"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JXZDPY6G1GDBVQ0ERDE3ZXCP",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p276",
+   "local": "NFM-00920167",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_140"
+   ],
+   "items": [
+    "01M0JGYT6GQT409WPWVZ0B51NY",
+    "01M0JY6AY0B413BBCHEJ2QZE1A"
+   ],
+   "evidence": [
+    {
+     "item_id": "01M0JGYT6GQT409WPWVZ0B51NY",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "NFM-00020297",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_85"
+   ],
+   "items": [
+    "01FM36YQVG087G2B8AFPTM9YGS",
+    "01FM3RTJP0ENYNX2FSQYCNA443",
+    "01HM9NTPZGBS01793257HK13TZ",
+    "01HM9VQVQ05Q0EZ310NEHAHKAG",
+    "01KH49QS1GPDD28Y5CQ42E908Q",
+    "01KH4V8MA0RTQZXSR245YP9J1C"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FM36YQVG087G2B8AFPTM9YGS",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01HM9NTPZGBS01793257HK13TZ",
+     "entry_id": "med_1"
+    },
+    {
+     "item_id": "01KH49QS1GPDD28Y5CQ42E908Q",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p294",
+   "local": "NFM-00826248",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "m_78"
+   ],
+   "items": [
+    "01KVR5215G35RPJH4B14H3NYKC",
+    "01KVRJ4240NKGSVGX6JP8EHM2T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KVR5215G35RPJH4B14H3NYKC",
+     "entry_id": "med_1"
+    }
+   ]
+  }
+ ]
+}

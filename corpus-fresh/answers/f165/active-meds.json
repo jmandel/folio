@@ -1,0 +1,76 @@
+{
+  "patient": "f165",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2021",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979492",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2025-09-04",
+      "intend_resume": true,
+      "sources": ["A", "B", "P"],
+      "basis": ["m_95"]
+    },
+    {
+      "medication": "naproxen",
+      "rxnorm_ingredient": "7258",
+      "product": "naproxen sodium 220 MG Oral Tablet",
+      "rxnorm_product": "849574",
+      "dose": { "value": 220, "unit": "mg" },
+      "dose_text": "220-440 mg",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2026",
+      "otc": true,
+      "taken_as": "1 or 2 for my knee, most days",
+      "sources": ["P"],
+      "basis": ["m_102"]
+    }
+  ]
+}

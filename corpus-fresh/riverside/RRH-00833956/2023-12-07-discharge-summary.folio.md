@@ -1,0 +1,165 @@
+---
+folio: "0.1"
+id: "01HH39GQM00AXQFQBHCQ23WRD0"
+issuer: "did:web:riverside-regional.example"
+patient: "RRH-00833956"
+effective: "2023-12-05T01:02:00Z"
+effective_end: "2023-12-07T20:15:00Z"
+recorded: "2023-12-07T23:24:00Z"
+author:
+  id: "urn:riverside-regional:staff:32017"
+  name: "Grace Whitaker, MD"
+  role: "Hospitalist"
+schema:
+  url: "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts"
+  type: "RiversideEntry"
+  sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+---
+## Discharge summary
+
+**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** The patient was admitted on 12/4 with nausea, rapid breathing and a high anion gap acidosis with a glucose of only 158. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> Treatment was an insulin infusion per DKA protocol with dextrose-containing fluids, followed by a transition to subcutaneous basal insulin on 12/5. Endocrinology saw the patient and advised against restarting an SGLT2 inhibitor. The gap closed by the morning of 12/5 and the patient has since eaten well without nausea.
+
+**Condition at discharge.** Vitals at 11:15 on the day of discharge: BP 121/73, HR 91, RR 17, T 98.2 F, SpO2 94%. Comfortable and walking independently. Basic metabolic panel on 12/7 at 06:10: sodium 137, potassium 4.3, chloride 101, bicarbonate 23, anion gap 13, urea nitrogen 23, creatinine 1.43, eGFR 40, glucose 162. Creatinine is slightly above the 12/6 value of 1.30 and should be rechecked as an outpatient.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- Dulaglutide 0.5 mg subcutaneously weekly: continue.
+- Insulin glargine 10 units subcutaneously nightly: continue.
+- Losartan 50 mg daily: continue.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel. The patient was told to return for vomiting, poor intake, abdominal pain or fast breathing.
+
+```json payload
+{
+  "enc": {
+    "type": "encounter",
+    "encounter_id": "RRH-ENC-6699975",
+    "document_kind": "discharge_summary",
+    "class": "inpatient",
+    "service": "Hospital Medicine",
+    "arrived": "2023-12-04T21:41:00Z",
+    "admitted": "2023-12-05T01:02:00Z",
+    "discharged": "2023-12-07T20:15:00Z",
+    "disposition": "home"
+  },
+  "dx_dka": {
+    "type": "diagnosis",
+    "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+    "icd10cm": "E11.10",
+    "riverside_dx": { "code": "RRH-DX-4471", "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated" },
+    "status": "resolved",
+    "rank": "principal"
+  },
+  "vs_1": {
+    "type": "vitals",
+    "taken": "2023-12-07T17:15:00Z",
+    "bp": { "systolic_mmhg": 121, "diastolic_mmhg": 73 },
+    "heart_rate_bpm": 91,
+    "resp_rate_per_min": 17,
+    "temp_f": 98.2,
+    "spo2_pct": 94,
+    "weight_kg": 70.2
+  },
+  "bmp_dc": {
+    "type": "panel",
+    "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
+    "accession": "L23341-2931",
+    "collected": "2023-12-07T12:10:00Z",
+    "specimen": "serum",
+    "status": "final",
+    "components": [
+      { "test": { "local_code": "NA", "loinc": "2951-2", "name": "Sodium" }, "value": "137", "unit": "mmol/L", "ref_range": "136-145" },
+      { "test": { "local_code": "K", "loinc": "2823-3", "name": "Potassium" }, "value": "4.3", "unit": "mmol/L", "ref_range": "3.5-5.1" },
+      { "test": { "local_code": "CL", "loinc": "2075-0", "name": "Chloride" }, "value": "101", "unit": "mmol/L", "ref_range": "98-107" },
+      {
+        "test": { "local_code": "CO2", "loinc": "2028-9", "name": "Bicarbonate (total CO2)" },
+        "value": "23",
+        "unit": "mmol/L",
+        "ref_range": "22-29"
+      },
+      { "test": { "local_code": "AGAP", "loinc": "33037-3", "name": "Anion gap" }, "value": "13", "unit": "mmol/L", "ref_range": "7-16" },
+      { "test": { "local_code": "BUN", "loinc": "3094-0", "name": "Urea nitrogen" }, "value": "23", "unit": "mg/dL", "ref_range": "8-23" },
+      {
+        "test": { "local_code": "CREAT", "loinc": "2160-0", "name": "Creatinine" },
+        "value": "1.43",
+        "unit": "mg/dL",
+        "ref_range": "0.57-1.00",
+        "flag": "H"
+      },
+      {
+        "test": { "local_code": "EGFR", "loinc": "98979-8", "name": "eGFR (CKD-EPI 2021)" },
+        "value": "40",
+        "unit": "mL/min/1.73m2",
+        "ref_range": ">59",
+        "flag": "L"
+      },
+      {
+        "test": { "local_code": "GLU", "loinc": "2345-7", "name": "Glucose" },
+        "value": "162",
+        "unit": "mg/dL",
+        "ref_range": "70-99",
+        "flag": "H"
+      }
+    ]
+  },
+  "alg_nkda": {
+    "type": "allergy",
+    "substance": "NKDA",
+    "severity": "unknown"
+  },
+  "med_metformin": {
+    "type": "home_med",
+    "drug_name": "metformin 1000 mg tablet",
+    "rxnorm_ingredient": "6809",
+    "dose_text": "1000 mg",
+    "sig": "1 tab PO BID with meals",
+    "status": "continue"
+  },
+  "med_empagliflozin": {
+    "type": "home_med",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
+    "dose_text": "10 mg",
+    "sig": "1 tab PO daily",
+    "status": "held",
+    "restart_advice": "advise_against",
+    "instructions": "Do not resume until reviewed by PCP"
+  },
+  "med_dulaglutide": {
+    "type": "home_med",
+    "drug_name": "dulaglutide pen",
+    "rxnorm_ingredient": "1551291",
+    "dose_text": "0.5 mg",
+    "sig": "0.5 mg SubQ weekly",
+    "status": "continue"
+  },
+  "med_glargine": {
+    "type": "home_med",
+    "drug_name": "insulin glargine 100 units/mL pen",
+    "rxnorm_ingredient": "274783",
+    "dose_text": "10 units",
+    "sig": "10 units SubQ nightly",
+    "status": "continue"
+  },
+  "med_losartan": {
+    "type": "home_med",
+    "drug_name": "losartan 50 mg tablet",
+    "rxnorm_ingredient": "52175",
+    "dose_text": "50 mg",
+    "sig": "1 tab PO daily",
+    "status": "continue"
+  },
+  "fu_pcp": {
+    "type": "follow_up",
+    "with": "Primary care (Northgate Family Medicine)",
+    "when_text": "within 1 week",
+    "purpose": "Decide whether to restart empagliflozin; recheck basic metabolic panel"
+  }
+}
+```

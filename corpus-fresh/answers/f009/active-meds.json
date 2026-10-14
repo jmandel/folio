@@ -1,0 +1,59 @@
+{
+  "patient": "f009",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2024-12-30",
+      "sources": ["A", "B"],
+      "basis": ["m_87"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2024-10-13",
+      "sources": ["A", "B"],
+      "basis": ["m_4"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2024-10-13",
+      "sources": ["A", "B"],
+      "basis": ["m_5"]
+    }
+  ]
+}

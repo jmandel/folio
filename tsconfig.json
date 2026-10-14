@@ -11,10 +11,19 @@
     ],
     "allowImportingTsExtensions": true
   },
+  "include": [
+    "packages/**/*.ts",
+    "work/*.ts",
+    "sources/**/*.d.ts"
+  ],
   "exclude": [
-    "node_modules",
-    "**/node_modules",
+    "runs",
     "site",
-    "build"
+    "corpus",
+    "corpus-fresh",
+    "build",
+    "results",
+    "node_modules",
+    "packages/**/test/fixtures"
   ]
 }

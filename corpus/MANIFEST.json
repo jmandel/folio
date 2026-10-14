@@ -20,7 +20,7 @@
    },
    "northgate": {
     "patients": 293,
-    "items": 13964
+    "items": 13968
    },
    "lakeview": {
     "patients": 272,
@@ -44,16 +44,16 @@
    "riverside+homelog": 1,
    "lakeview+homelog": 1
   },
-  "items": 25372,
+  "items": 25376,
   "narrative": {
    "fixture": 21,
    "app": 151,
-   "prose": 5283,
+   "prose": 5290,
    "template": 0,
-   "none": 19917
+   "none": 19914
   },
-  "prose_requests": 5283,
-  "prose_accepted": 5283
+  "prose_requests": 5290,
+  "prose_accepted": 5290
  },
  "traps": {
   "T1": {
@@ -1241,7 +1241,7 @@
   },
   "T13": {
    "name": "prose-only facts",
-   "assigned": 94,
+   "assigned": 93,
    "rendered": 27,
    "patients": [
     "hero",
@@ -1324,7 +1324,6 @@
     "p237",
     "p239",
     "p240",
-    "p241",
     "p248",
     "p250",
     "p251",
@@ -2314,7 +2313,7 @@
   }
  },
  "prose_only_patients": {
-  "count": 94,
+  "count": 93,
   "patients": [
    {
     "patient": "hero",
@@ -2411,7 +2410,7 @@
    {
     "patient": "p040",
     "facts": [
-     "nf_148 (patient-report; P)"
+     "nf_147 (patient-report; P)"
     ]
    },
    {
@@ -2532,7 +2531,7 @@
     "patient": "p104",
     "facts": [
      "nf_66 (teaching; B)",
-     "nf_337 (patient-report; P)"
+     "nf_336 (patient-report; P)"
     ]
    },
    {
@@ -2821,12 +2820,6 @@
     "patient": "p240",
     "facts": [
      "nf_112 (patient-report; P)"
-    ]
-   },
-   {
-    "patient": "p241",
-    "facts": [
-     "nf_181 (decision; C)"
     ]
    },
    {
@@ -4153,11 +4146,13 @@
    "prose/20261014T010711Z-p009-northgate-a1"
   ],
   "p010/northgate": [
-   "prose/20261014T010717Z-p010-northgate-a1"
+   "prose/20261014T010717Z-p010-northgate-a1",
+   "prose/20261014T151151Z-p010-northgate-a1"
   ],
   "p010/riverside": [
    "prose/20261014T010717Z-p010-riverside-a1",
-   "prose/20261014T010726Z-p010-riverside-a2"
+   "prose/20261014T010726Z-p010-riverside-a2",
+   "prose/20261014T151151Z-p010-riverside-a1"
   ],
   "p011/homelog": [
    "prose/20261014T010720Z-p011-homelog-a1"
@@ -4295,10 +4290,12 @@
    "prose/20261014T010847Z-p040-homelog-a1"
   ],
   "p040/lakeview": [
-   "prose/20261014T010842Z-p040-lakeview-a1"
+   "prose/20261014T010842Z-p040-lakeview-a1",
+   "prose/20261014T151151Z-p040-lakeview-a1"
   ],
   "p040/northgate": [
-   "prose/20261014T010841Z-p040-northgate-a1"
+   "prose/20261014T010841Z-p040-northgate-a1",
+   "prose/20261014T151151Z-p040-northgate-a1"
   ],
   "p042/northgate": [
    "prose/20261014T010851Z-p042-northgate-a1"
@@ -4320,15 +4317,18 @@
   ],
   "p047/homelog": [
    "prose/20261014T005555Z-p047-homelog-a1",
-   "prose/20261014T010903Z-p047-homelog-a1"
+   "prose/20261014T010903Z-p047-homelog-a1",
+   "prose/20261014T152310Z-p047-homelog-a1"
   ],
   "p047/northgate": [
    "prose/20261014T005554Z-p047-northgate-a1",
-   "prose/20261014T010901Z-p047-northgate-a1"
+   "prose/20261014T010901Z-p047-northgate-a1",
+   "prose/20261014T152310Z-p047-northgate-a1"
   ],
   "p047/riverside": [
    "prose/20261014T005554Z-p047-riverside-a1",
-   "prose/20261014T010859Z-p047-riverside-a1"
+   "prose/20261014T010859Z-p047-riverside-a1",
+   "prose/20261014T152310Z-p047-riverside-a1"
   ],
   "p048/northgate": [
    "prose/20261014T010907Z-p048-northgate-a1"
@@ -4400,7 +4400,8 @@
    "prose/20261014T011002Z-p063-northgate-a1"
   ],
   "p064/northgate": [
-   "prose/20261014T011005Z-p064-northgate-a1"
+   "prose/20261014T011005Z-p064-northgate-a1",
+   "prose/20261014T151156Z-p064-northgate-a1"
   ],
   "p064/riverside": [
    "prose/20261014T011005Z-p064-riverside-a1"
@@ -4587,10 +4588,12 @@
    "prose/20261014T011213Z-p104-homelog-a1"
   ],
   "p104/lakeview": [
-   "prose/20261014T011212Z-p104-lakeview-a1"
+   "prose/20261014T011212Z-p104-lakeview-a1",
+   "prose/20261014T151204Z-p104-lakeview-a1"
   ],
   "p104/northgate": [
-   "prose/20261014T011207Z-p104-northgate-a1"
+   "prose/20261014T011207Z-p104-northgate-a1",
+   "prose/20261014T151202Z-p104-northgate-a1"
   ],
   "p105/northgate": [
    "prose/20261014T011214Z-p105-northgate-a1"
@@ -4641,10 +4644,12 @@
    "prose/20261014T011248Z-p115-northgate-a1"
   ],
   "p116/northgate": [
-   "prose/20261014T011252Z-p116-northgate-a1"
+   "prose/20261014T011252Z-p116-northgate-a1",
+   "prose/20261014T152310Z-p116-northgate-a1"
   ],
   "p116/riverside": [
-   "prose/20261014T011252Z-p116-riverside-a1"
+   "prose/20261014T011252Z-p116-riverside-a1",
+   "prose/20261014T152310Z-p116-riverside-a1"
   ],
   "p117/homelog": [
    "prose/20261014T011254Z-p117-homelog-a1"
@@ -4734,7 +4739,8 @@
    "prose/20261014T011359Z-p134-homelog-a1"
   ],
   "p134/northgate": [
-   "prose/20261014T011358Z-p134-northgate-a1"
+   "prose/20261014T011358Z-p134-northgate-a1",
+   "prose/20261014T151206Z-p134-northgate-a1"
   ],
   "p134/riverside": [
    "prose/20261014T011357Z-p134-riverside-a1"
@@ -4846,7 +4852,8 @@
    "prose/20261014T011519Z-p153-northgate-a1"
   ],
   "p154/northgate": [
-   "prose/20261014T011531Z-p154-northgate-a1"
+   "prose/20261014T011531Z-p154-northgate-a1",
+   "prose/20261014T151207Z-p154-northgate-a1"
   ],
   "p154/riverside": [
    "prose/20261014T011522Z-p154-riverside-a1"
@@ -5059,16 +5066,20 @@
    "prose/20261014T011744Z-p201-riverside-a1"
   ],
   "p202/homelog": [
-   "prose/20261014T011756Z-p202-homelog-a1"
+   "prose/20261014T011756Z-p202-homelog-a1",
+   "prose/20261014T151214Z-p202-homelog-a1"
   ],
   "p202/lakeview": [
-   "prose/20261014T011754Z-p202-lakeview-a1"
+   "prose/20261014T011754Z-p202-lakeview-a1",
+   "prose/20261014T151211Z-p202-lakeview-a1"
   ],
   "p202/northgate": [
-   "prose/20261014T011752Z-p202-northgate-a1"
+   "prose/20261014T011752Z-p202-northgate-a1",
+   "prose/20261014T151208Z-p202-northgate-a1"
   ],
   "p202/riverside": [
-   "prose/20261014T011746Z-p202-riverside-a1"
+   "prose/20261014T011746Z-p202-riverside-a1",
+   "prose/20261014T151208Z-p202-riverside-a1"
   ],
   "p203/northgate": [
    "prose/20261014T011757Z-p203-northgate-a1"
@@ -5140,10 +5151,12 @@
    "prose/20261014T011846Z-p218-homelog-a1"
   ],
   "p218/northgate": [
-   "prose/20261014T011846Z-p218-northgate-a1"
+   "prose/20261014T011846Z-p218-northgate-a1",
+   "prose/20261014T151218Z-p218-northgate-a1"
   ],
   "p218/riverside": [
-   "prose/20261014T011843Z-p218-riverside-a1"
+   "prose/20261014T011843Z-p218-riverside-a1",
+   "prose/20261014T151215Z-p218-riverside-a1"
   ],
   "p219/lakeview": [
    "prose/20261014T011856Z-p219-lakeview-a1"
@@ -5241,13 +5254,16 @@
    "prose/20261014T011952Z-p240-northgate-a1"
   ],
   "p241/lakeview": [
-   "prose/20261014T012000Z-p241-lakeview-a1"
+   "prose/20261014T012000Z-p241-lakeview-a1",
+   "prose/20261014T151224Z-p241-lakeview-a1"
   ],
   "p241/northgate": [
-   "prose/20261014T011958Z-p241-northgate-a1"
+   "prose/20261014T011958Z-p241-northgate-a1",
+   "prose/20261014T151222Z-p241-northgate-a1"
   ],
   "p241/riverside": [
-   "prose/20261014T011958Z-p241-riverside-a1"
+   "prose/20261014T011958Z-p241-riverside-a1",
+   "prose/20261014T151219Z-p241-riverside-a1"
   ],
   "p242/northgate": [
    "prose/20261014T012001Z-p242-northgate-a1"
@@ -5334,11 +5350,13 @@
    "prose/20261014T012056Z-p259-northgate-a1"
   ],
   "p260/northgate": [
-   "prose/20261014T012106Z-p260-northgate-a1"
+   "prose/20261014T012106Z-p260-northgate-a1",
+   "prose/20261014T152316Z-p260-northgate-a1"
   ],
   "p260/riverside": [
    "prose/20261014T012100Z-p260-riverside-a1",
-   "prose/20261014T012124Z-p260-riverside-a2"
+   "prose/20261014T012124Z-p260-riverside-a2",
+   "prose/20261014T152310Z-p260-riverside-a1"
   ],
   "p261/northgate": [
    "prose/20261014T012107Z-p261-northgate-a1"
@@ -5509,11 +5527,13 @@
    "prose/20261014T005547Z-s04-homelog-a1"
   ],
   "s04/northgate": [
-   "prose/20261014T005540Z-s04-northgate-a1"
+   "prose/20261014T005540Z-s04-northgate-a1",
+   "prose/20261014T151151Z-s04-northgate-a1"
   ],
   "s04/riverside": [
    "prose/20261014T005535Z-s04-riverside-a1",
-   "prose/20261014T005547Z-s04-riverside-a2"
+   "prose/20261014T005547Z-s04-riverside-a2",
+   "prose/20261014T151151Z-s04-riverside-a1"
   ]
  }
 }

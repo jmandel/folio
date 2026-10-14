@@ -1,0 +1,46 @@
+{
+  "patient": "f140",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2025-05-28",
+      "sources": ["A", "B"],
+      "basis": ["m_88"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979492",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-01-28",
+      "sources": ["A", "B"],
+      "basis": ["m_46"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-01-18",
+      "sources": ["A", "B"],
+      "basis": ["m_5"]
+    }
+  ]
+}

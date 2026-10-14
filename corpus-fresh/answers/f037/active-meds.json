@@ -1,0 +1,59 @@
+{
+  "patient": "f037",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "glipizide",
+      "rxnorm_ingredient": "4821",
+      "product": "glipizide 5 MG Oral Tablet",
+      "rxnorm_product": "310490",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2024-05-20",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin calcium 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2022",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    }
+  ]
+}

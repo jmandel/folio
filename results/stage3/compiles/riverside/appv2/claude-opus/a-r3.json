@@ -1,0 +1,42 @@
+{
+ "source": "riverside",
+ "viewSet": "appv2",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T135847018Z-9l9w",
+   "ok": true,
+   "costUsd": 1.8745556,
+   "durationMs": 413100,
+   "numTurns": 13,
+   "usage": {
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 101065,
+    "cache_read_input_tokens": 595938,
+    "output_tokens": 47338
+   },
+   "evalPath": "results/stage3/evals/20261014T135847018Z-9l9w.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/284, prob 0/79, alle 0/33, labs 0/1817, vita 0/241"
+  }
+ ],
+ "rep": 3,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T135847018Z-9l9w",
+ "note": "Views v2 condition (round 3): this round-2 Opus one-shot run is reused as is (views v2, compiled before round 3 under key hash bb7c7cb090a2d081); not recompiled, to stay within the round-3 budget."
+}

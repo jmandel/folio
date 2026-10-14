@@ -1,0 +1,58 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "condition": "b",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T121641921Z-0q0g",
+   "ok": true,
+   "costUsd": 0.3107218,
+   "durationMs": 67907,
+   "numTurns": 13,
+   "usage": {
+    "input_tokens": 24,
+    "cache_creation_input_tokens": 51117,
+    "cache_read_input_tokens": 404358,
+    "output_tokens": 6577
+   },
+   "feedbackItems": 16,
+   "evalPath": "results/stage3/evals/20261014T121641921Z-0q0g.json",
+   "summary": "tsc=ok det=true errors=0/32 P=99.7% R=99.8% medi:100.0% prob:90.2% alle:100.0% labs:100.0% vita:100.0% 0.160ms/item"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T121750720Z-pn2k",
+   "ok": true,
+   "costUsd": 0.36152239999999997,
+   "durationMs": 108711,
+   "numTurns": 15,
+   "usage": {
+    "input_tokens": 28,
+    "cache_creation_input_tokens": 53766,
+    "cache_read_input_tokens": 525224,
+    "output_tokens": 9388
+   },
+   "feedbackItems": 16,
+   "evalPath": "results/stage3/evals/20261014T121750720Z-pn2k.json",
+   "summary": "tsc=ok det=true errors=0/32 P=99.7% R=99.8% medi:100.0% prob:90.2% alle:100.0% labs:100.0% vita:100.0% 0.163ms/item"
+  }
+ ],
+ "final": "20261014T121750720Z-pn2k",
+ "startedFrom": "20261014T121408782Z-z7dy",
+ "note": "Prose-check discrepancies on dev-split items fed back."
+}

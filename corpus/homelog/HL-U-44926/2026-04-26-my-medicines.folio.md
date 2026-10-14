@@ -23,7 +23,7 @@ My Medicines, saved 26 April 2026.
   "med_1": {
     "type": "my_med",
     "homelog_med_id": "med_1",
-    "name": "Glucophage",
+    "name": "Metformin",
     "picked_from_search": { "rxnorm": "861007", "display": "metformin hydrochloride 500 MG Oral Tablet" },
     "strength_text": "500 mg",
     "how_i_take_it": "morning and supper",
@@ -33,7 +33,7 @@ My Medicines, saved 26 April 2026.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Atorvastatin",
+    "name": "Lipitor",
     "picked_from_search": { "rxnorm": "617311", "display": "atorvastatin 40 MG Oral Tablet" },
     "strength_text": "40 mg",
     "how_i_take_it": "bedtime",
@@ -53,16 +53,6 @@ My Medicines, saved 26 April 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Farxiga",
-    "picked_from_search": { "rxnorm": "1488569", "display": "dapagliflozin 10 MG Oral Tablet" },
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_5": {
-    "type": "my_med",
-    "homelog_med_id": "med_5",
     "name": "Ibuprofen",
     "picked_from_search": { "rxnorm": "310965", "display": "ibuprofen 200 MG Oral Tablet" },
     "strength_text": "200 mg",

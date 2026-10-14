@@ -1,0 +1,1288 @@
+{
+ "runId": "20261014T154116264Z-od40",
+ "source": "northgate",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 178,
+  "items": 8722,
+  "ms": 1047.955926,
+  "msPerItem": 0.12015087434074755,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 5909,
+   "fp": 0,
+   "fn": 0,
+   "rows": 828,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 0.9643251195292387,
+   "recall": 0.9905553456743483,
+   "tp": 2622,
+   "fp": 97,
+   "fn": 25,
+   "rows": 638,
+   "wrongRows": 24,
+   "extraRows": 24
+  },
+  "allergies": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 224,
+   "fp": 0,
+   "fn": 0,
+   "rows": 32,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 57953,
+   "fp": 0,
+   "fn": 0,
+   "rows": 11243,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 9580,
+   "fp": 0,
+   "fn": 0,
+   "rows": 1503,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 0.9643251195292387,
+    "recall": 0.9905553456743483,
+    "tp": 2622,
+    "fp": 97,
+    "fn": 25,
+    "rows": 638,
+    "wrongRows": 24,
+    "extraRows": 24
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.dose": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.frequency": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.patient_reported": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.evidence": {
+   "ok": 828,
+   "total": 828
+  },
+  "medications.status_since": {
+   "ok": 53,
+   "total": 53
+  },
+  "medications.stop_reason": {
+   "ok": 34,
+   "total": 34
+  },
+  "medications.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.status": {
+   "ok": 638,
+   "total": 638
+  },
+  "problems.onset": {
+   "ok": 614,
+   "total": 638
+  },
+  "problems.evidence": {
+   "ok": 637,
+   "total": 638
+  },
+  "problems.sensitivity": {
+   "ok": 26,
+   "total": 26
+  },
+  "problems.ckd_stage": {
+   "ok": 69,
+   "total": 69
+  },
+  "allergies.reaction_type": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.mechanism": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.criticality": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.onset": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.reaction": {
+   "ok": 32,
+   "total": 32
+  },
+  "allergies.evidence": {
+   "ok": 32,
+   "total": 32
+  },
+  "labs.value": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.unit": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.status": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.evidence": {
+   "ok": 11243,
+   "total": 11243
+  },
+  "labs.egfr_equation": {
+   "ok": 1738,
+   "total": 1738
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.pulse_bpm": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.weight_kg": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.evidence": {
+   "ok": 1503,
+   "total": 1503
+  },
+  "vitals.repeat_systolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  },
+  "vitals.repeat_diastolic_mmhg": {
+   "ok": 281,
+   "total": 281
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 0.9971470957434668,
+   "recall": 0.9971470957434668,
+   "tp": 8738,
+   "fp": 25,
+   "fn": 25
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 67550,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 27,
+   "errors": 0,
+   "patients": 26,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 53,
+   "errors": 0,
+   "patients": 45,
+   "patientsWithError": 0
+  },
+  "T16": {
+   "facts": 2785,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T10": {
+   "facts": 252,
+   "errors": 22,
+   "patients": 162,
+   "patientsWithError": 22
+  },
+  "T17": {
+   "facts": 252,
+   "errors": 22,
+   "patients": 162,
+   "patientsWithError": 22
+  },
+  "T5": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T11": {
+   "facts": 2499,
+   "errors": 0,
+   "patients": 91,
+   "patientsWithError": 0
+  },
+  "T12": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 28,
+   "errors": 0,
+   "patients": 26,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 11427,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T9": {
+   "facts": 161,
+   "errors": 0,
+   "patients": 59,
+   "patientsWithError": 0
+  },
+  "T3": {
+   "facts": 81,
+   "errors": 0,
+   "patients": 38,
+   "patientsWithError": 0
+  },
+  "T7": {
+   "facts": 680,
+   "errors": 0,
+   "patients": 142,
+   "patientsWithError": 0
+  },
+  "T4": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 22,
+   "patientsWithError": 0
+  },
+  "T2": {
+   "facts": 18,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "NFM-00731552",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2016",
+      "precision": "year"
+     }
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01D68HQTY01ZVZKYSDQBNFGMZV",
+      "01D68WG2J0CRSGPV9N03G7ZCNJ",
+      "01EWBB0Y60E6Q124PCVD7QTNJ2"
+     ],
+     "actual": [
+      "01KY04E7906KSV6KB84DWQJWPN"
+     ]
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_t2dm"
+   ],
+   "items": [
+    "01D68HQTY01ZVZKYSDQBNFGMZV",
+    "01D68WG2J0CRSGPV9N03G7ZCNJ",
+    "01EWBB0Y60E6Q124PCVD7QTNJ2",
+    "01HA2KHCJ0GB5J6NCP490SYY79",
+    "01HVHBSBJ0N95R0EWKJBJ2J2JK",
+    "01JMAHMK60JF4F65AYBMJ5WKGE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KY04E7906KSV6KB84DWQJWPN",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p017",
+   "local": "NFM-00713158",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2013",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_1"
+   ],
+   "items": [
+    "01GJR63WP05A03KYTMGCY5MQRS",
+    "01J53T9PR0Q06RSE8KKV8KNM4S",
+    "01J5RDFER0FZHKC7K0T8TBX8Q1",
+    "01JBS6ZRW0HS2WZN6H1HS7PNNS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBS6ZRW0HS2WZN6H1HS7PNNS",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p028",
+   "local": "NFM-00735634",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2009",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DK775DJ0NXM4ZXJRSM36KXAJ",
+    "01FH8PDTY0NQ7K4QZYQHVTBZ9X",
+    "01FHX9KJY02H1BWHPS9BDV0WVA",
+    "01FQA4HAT0XG266AJF4JQARBT6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FQA4HAT0XG266AJF4JQARBT6",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p045",
+   "local": "NFM-00601519",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2009",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01EQBEFP80Z5E1KX0ZX65JQM8Q",
+    "01FEC3TZH075ZBB5EJAX5A6QSE",
+    "01FF39DEH0GWWKJ4JFEMSMMK0K",
+    "01FJS7YZ80ZYQ3SJKNNRBTNZ80"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FJS7YZ80ZYQ3SJKNNRBTNZ80",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p093",
+   "local": "NFM-00673395",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2010",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_1"
+   ],
+   "items": [
+    "01DPKG4Y305JN3RHCF1X10Z9XV",
+    "01H0GKF6E08K3KD11Y5CJX1GN1",
+    "01H17S1NE0YZG3692G95QX5J52",
+    "01H70MG3A0X353CVGQQSGS0845"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H70MG3A0X353CVGQQSGS0845",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p095",
+   "local": "NFM-00813593",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2017",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01D8KCDFC0H9R4PF2898GFCKAN",
+    "01K59Z9F30YT4YQPFDWAA0Q1K3",
+    "01K614VY30BF9K0BH7VZPAZMN2",
+    "01K95FSJC0CSN5GFYA7WTNPZ20"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K95FSJC0CSN5GFYA7WTNPZ20",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p104",
+   "local": "NFM-00825789",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2014",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01D48VHNJ0XRQRWXENP6RG6NQA",
+    "01FYS2M0N0MEHHHNGJTJBA7ESC",
+    "01FZB3D1N0H6WVDPGGAMR9MX36",
+    "01G4TJ59C0BMDDR787AT20145P"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G4TJ59C0BMDDR787AT20145P",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p120",
+   "local": "NFM-00883307",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2016",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DMGNH8P0B51S0DPCBEC4TEJW",
+    "01FPG746D0N0F416GGZKBJKJ9Y",
+    "01FQ7CPND0C3DG8PDRQ8D1V2F9",
+    "01FT1QRPM0X9WXWV97N9EQ6P71"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FT1QRPM0X9WXWV97N9EQ6P71",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p135",
+   "local": "NFM-00831906",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2022",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01HAQEV4W0HRY0XGA5CGX2EJBN",
+    "01KESYFKM00BFQ8A6EK9WGF96X",
+    "01KFH422M0D78WYMJH64VWAD33",
+    "01KMDRJF40R6YH5ZPGKG5G6Z7Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KMDRJF40R6YH5ZPGKG5G6Z7Y",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p140",
+   "local": "NFM-00347581",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2018",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01EDF8FED01SB1TH1WZ4KKGJAK",
+    "01KRY1ZDS0GDSMR9X43K4T4Z5P",
+    "01KSG2RES07EX1MNGT85QH52RZ",
+    "01KX8M90E051AG09KD5P1SXGDS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KX8M90E051AG09KD5P1SXGDS",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p141",
+   "local": "NFM-00268144",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2018-03",
+      "precision": "month"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DNFTKCS0PFN2EFE1SBEC0P19",
+    "01FQYQDXV02H98S5BVSZ74QJC9",
+    "01FRBKDGV0HSE4VG5AZ1M7APDF",
+    "01FXQT17Y0BNYF6JEPQZCMDPX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FXQT17Y0BNYF6JEPQZCMDPX0",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p150",
+   "local": "NFM-00072209",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2008",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01E70FSE406Y14Q1VA53M2TRFA",
+    "01F8G6HEB0ZZKBQVMH9KRPRCEH",
+    "01F8ZMXRB03TZBE0XDE55MSZGN",
+    "01FES4P700C79RVBR97700F0BH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FES4P700C79RVBR97700F0BH",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p153",
+   "local": "NFM-00628169",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2008",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_1"
+   ],
+   "items": [
+    "01DYG2TJ8082DBKKG633CB85GC",
+    "01G8BY7A30J38YD8VDR7FPXQGC",
+    "01G8XZ0B30CYTB1Z28QFX131KH",
+    "01GE4XZ2G0BCYS2WQXCN1JFHRZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GE4XZ2G0BCYS2WQXCN1JFHRZ",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p167",
+   "local": "NFM-00957031",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2018-06",
+      "precision": "month"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01ESKN1NW0YS97RY38QAXB65MR",
+    "01FH6DF7X020FKFA4GVV1YARMW",
+    "01FHXK1PX0NYMBD08M8RS5YDV5",
+    "01FNY1FGY0RA6KJCN2B84GBG77"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FNY1FGY0RA6KJCN2B84GBG77",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p184",
+   "local": "NFM-00041491",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2022",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01JF0NGX50T6BN5C8QYPHRXK47",
+    "01K8XP10N0YPXWJK6SD8ZKSPMW",
+    "01K9AJ0KN0ANEGKS5R06EF5BCS",
+    "01KD37HAW07VE7KFN1HV788J2Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KD37HAW07VE7KFN1HV788J2Y",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p195",
+   "local": "NFM-00158160",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2017",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01H39YHA10K8DT15609JD7C7HR",
+    "01KESGF05097B9S339EW6FN9W4",
+    "01KFE3MR50Y2D8T4NNCZDJE47W",
+    "01KKH7ATW025M0BABR96GX24VP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KKH7ATW025M0BABR96GX24VP",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p200",
+   "local": "NFM-00392719",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2011-02-21",
+      "precision": "day"
+     }
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DHKVGC30ZYJK9WE4HFX222NK",
+    "01FC66GQX0ZK3KFXNQJ7EA67P6",
+    "01FCGG3KX0XWFE71XQSB0281R1",
+    "01FFJ9S520Z8N136V6933JT34Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FFJ9S520Z8N136V6933JT34Y",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "NFM-00312161",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2013",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DBDAAC10QR52KBYRV2WNTBCZ",
+    "01HEJTQ9S045ZRZ4TBAM435JJV",
+    "01HETHXES0VDWGDVXY8Y8752Q1",
+    "01HKFMNMP0MGSTTDYTY5TDD7R0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HKFMNMP0MGSTTDYTY5TDD7R0",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p212",
+   "local": "NFM-00351993",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2013",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DM3ENRW0YPEQND641JMZ8HA0",
+    "01JV34TEE01KDTEXH4JDKDSQ91",
+    "01JVQR06E0613HZQQXJ1N32P1W",
+    "01JZ5ZMQ401YEK37463ZTEPDJB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JZ5ZMQ401YEK37463ZTEPDJB",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "NFM-00785765",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2010",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01E1CC8EN0Y6ZX97437A34FF1X",
+    "01KXZX0630E4WKSYR9VX8PYB00",
+    "01KYFBCG30MDF5G55WT26RPAXJ",
+    "01M3HX0GY029FX6J74APJS1V9J"
+   ],
+   "evidence": [
+    {
+     "item_id": "01M3HX0GY029FX6J74APJS1V9J",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p246",
+   "local": "NFM-00464613",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2008-04",
+      "precision": "month"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01EGTM9440VR8CQNS1SVF492S8",
+    "01J2CHN2S0CY2CG6Y8JZ9MVH6R",
+    "01J33Q7HS0FEV4C28V6C98RZ98",
+    "01J8JC7TA0DTGYVXBN61FYKYAA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J8JC7TA0DTGYVXBN61FYKYAA",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p256",
+   "local": "NFM-00201150",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2017",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01DBFVVM405Z72KNRRWK781FV0",
+    "01KBDDRWY0EVC9KRXEFHYE4EVC",
+    "01KBQQBRY0GHSAE22B502G2ZHD",
+    "01KGZ36FY0R75NY4GNQMNNQV1G"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KGZ36FY0R75NY4GNQMNNQV1G",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "NFM-00437946",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2015",
+      "precision": "year"
+     }
+    }
+   ],
+   "traps": [
+    "T10",
+    "T17"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "c_2"
+   ],
+   "items": [
+    "01EJ9AW8W0RHTR4WABN27Q7SR3",
+    "01K5YGR990Z633A6A7DC8FS8Z1",
+    "01K6R8QF90C8KEDWQK8G94E34X",
+    "01KBWZK2J01FPZCRV5GT5DH52B"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KBWZK2J01FPZCRV5GT5DH52B",
+     "entry_id": "dx_2"
+    }
+   ]
+  },
+  {
+   "patient": "p294",
+   "local": "NFM-00826248",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "type 2 diabetes",
+   "matched": true,
+   "duplicated": 1,
+   "wrong": [
+    {
+     "field": "onset",
+     "expected": {
+      "value": "2020-08-06",
+      "precision": "day"
+     }
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_1"
+   ],
+   "items": [
+    "01H52RQ2E0AMQQJ0G4C3RHEPP8",
+    "01JR8QF5F05PBX1KQBS6E7RDE8",
+    "01JRZX1MF0KMQ2T3SMN38R1YWD",
+    "01JYP6YT80THXVCVJHWCCPMF5M"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JYP6YT80THXVCVJHWCCPMF5M",
+     "entry_id": "dx_2"
+    }
+   ]
+  }
+ ]
+}

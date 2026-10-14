@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GX3ZSEQG3EQ9ZSD4DJ3M6ATZ"
+id: "01GX3ZSEQGX905NM0S549CRBVF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00277891"
 effective: "2023-04-03T11:39:00-05:00"
@@ -14,20 +14,20 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">Angioedema of lips and tongue on lisinopril.</ref> Seen in ED.
+<ref id="alg_1">Angioedema of lips and tongue on lisinopril.</ref>
 
 ```json payload
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2664",
+    "allergy_id": "AL-4136",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "allergy",
     "reactions": ["Angioedema"],
     "severity": "high",
     "onset": { "date": "2023-03-24", "precision": "day" },
-    "visit_id": "V-2023-040311"
+    "visit_id": "V-2023-040373"
   }
 }
 ```

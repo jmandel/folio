@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\nimport re\ns=open('transform.ts').read()\na=s.index('// ─── Sensitivity')\nb=s.index('// ─── Dose and frequency')\ns=s[:a]+s"
+  }
+ ],
+ "blocking": 0
+}

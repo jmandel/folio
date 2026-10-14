@@ -1,0 +1,73 @@
+{
+  "patient": "f062",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-09-14",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "levothyroxine",
+      "rxnorm_ingredient": "10582",
+      "product": "levothyroxine sodium 0.075 MG Oral Tablet",
+      "rxnorm_product": "966222",
+      "dose": { "value": 75, "unit": "mcg" },
+      "dose_text": "75 mcg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_11"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-09-14",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_9"]
+    }
+  ]
+}

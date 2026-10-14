@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. No new complaints.
+DM2 f/u. No new complaints.
+
 BP 136/87, pulse 62, wt 215 lb.
 Labs 11/4: eGFR 40, K 4.6, UACR 71 mg/g, A1c 7.9%, LDL 96 mg/dL.
-Metformin dose changed to 500 mg twice daily today (eGFR 43). Referral to nephrology placed.
-RTC 3 mo.
+Metformin dose changed to 500 mg twice daily today (eGFR 43).
+Pt informed. RTC 3 mo.
 
 ```json payload
 {

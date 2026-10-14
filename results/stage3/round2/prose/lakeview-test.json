@@ -1,0 +1,2306 @@
+{
+ "source": "lakeview",
+ "split": "test",
+ "runId": "20261014T135529372Z-v9qo",
+ "costUsd": 0.43535880000000005,
+ "items": [
+  {
+   "patient": "p093",
+   "local": "LV-0009222",
+   "item_id": "01HZG929J0G93PYKRVBF53ZKNS",
+   "file": "2024-06-03-follow-up-visit.folio.md",
+   "as_of": "2024-06-03",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 134,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 134/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 46,
+     "date": "2024-06-03",
+     "ref": null,
+     "quote": "eGFR 46"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2024-06-03",
+     "ref": null,
+     "quote": "K 4.6 today"
+    }
+   ]
+  },
+  {
+   "patient": "p028",
+   "local": "LV-0012432",
+   "item_id": "01FZV1M6D0666PW2RG7NK6SWB3",
+   "file": "2022-04-04-follow-up-visit.folio.md",
+   "as_of": "2022-04-04",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 135,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 135/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 48,
+     "date": "2022-04-04",
+     "ref": null,
+     "quote": "eGFR 48"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.7,
+     "date": "2022-04-04",
+     "ref": null,
+     "quote": "K 4.7 today"
+    }
+   ]
+  },
+  {
+   "patient": "p205",
+   "local": "LV-0093118",
+   "item_id": "01JQWNSFW0MEPJ4XCVVB6TPX0K",
+   "file": "2025-04-02-follow-up-visit.folio.md",
+   "as_of": "2025-04-02",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 129,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 129/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 52,
+     "ref": null,
+     "quote": "eGFR 52"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "ref": null,
+     "quote": "K 4.4"
+    }
+   ]
+  },
+  {
+   "patient": "p247",
+   "local": "LV-0028290",
+   "item_id": "01HXDEM3Y0423MDMQG38Y7G3F5",
+   "file": "2024-05-08-follow-up-visit.folio.md",
+   "as_of": "2024-05-08",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G2",
+     "ref": "dx_ckd",
+     "quote": "CKD G2 A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 122,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 122/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 63,
+     "date": "2024-05-08",
+     "ref": null,
+     "quote": "eGFR 63"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "date": "2024-05-08",
+     "ref": null,
+     "quote": "K 4.4 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 1844,
+     "date": "2024-05-08",
+     "ref": null,
+     "quote": "UACR 1844 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p167",
+   "local": "LV-0040959",
+   "item_id": "01FN51T5J0930Y6C123F6E4WDS",
+   "file": "2021-11-22-new-visit.folio.md",
+   "as_of": "2021-11-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 120,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 120/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 48,
+     "date": "2021-11-22",
+     "ref": null,
+     "quote": "Today eGFR 48"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.8,
+     "date": "2021-11-22",
+     "ref": null,
+     "quote": "K 4.8"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 504,
+     "date": "2021-11-22",
+     "ref": null,
+     "quote": "UACR 504 mg/g"
+    },
+    {
+     "view": "medications",
+     "ingredient": "finerenone",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "rx_finerenone",
+     "quote": "finerenone 10 mg daily"
+    }
+   ]
+  },
+  {
+   "patient": "s01",
+   "local": "LV-0034182",
+   "item_id": "01HMCHXDX09V30N3BF0TW6W6V7",
+   "file": "2024-01-17-follow-up-visit.folio.md",
+   "as_of": "2024-01-17",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G2",
+     "ref": "dx_ckd",
+     "quote": "CKD G2 A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 128,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 128/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 64,
+     "date": "2024-01-17",
+     "ref": null,
+     "quote": "eGFR 64"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2024-01-17",
+     "ref": null,
+     "quote": "K 4.3 today"
+    }
+   ]
+  },
+  {
+   "patient": "p170",
+   "local": "LV-0094718",
+   "item_id": "01KEDNN1T0FRVZSB2NR7060FFH",
+   "file": "2026-01-07-follow-up-visit.folio.md",
+   "as_of": "2026-01-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "essential hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 125,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 125/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 36,
+     "date": "2026-01-07",
+     "ref": null,
+     "quote": "eGFR 36 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.2,
+     "date": "2026-01-07",
+     "ref": null,
+     "quote": "K 5.2"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 853,
+     "date": "2026-01-07",
+     "ref": null,
+     "quote": "UACR 853 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p140",
+   "local": "LV-0082348",
+   "item_id": "01KWHTZVC0R8B3HBQFZYFRPFWS",
+   "file": "2026-07-02-new-visit.folio.md",
+   "as_of": "2026-07-02",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 2018"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2012"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 127,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 127/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 41,
+     "date": "2026-07-02",
+     "ref": null,
+     "quote": "Labs today: eGFR 41"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.7,
+     "date": "2026-07-02",
+     "ref": null,
+     "quote": "K 4.7"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 40,
+     "date": "2026-07-02",
+     "ref": null,
+     "quote": "UACR 40 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p184",
+   "local": "LV-0097263",
+   "item_id": "01KSR0SZA0CBB8JZ3CYB0DTDYC",
+   "file": "2026-05-28-follow-up-visit.folio.md",
+   "as_of": "2026-05-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 122,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 122/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 52,
+     "date": "2026-05-28",
+     "ref": null,
+     "quote": "eGFR 52 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.7,
+     "date": "2026-05-28",
+     "ref": null,
+     "quote": "K 4.7 (today)"
+    }
+   ]
+  },
+  {
+   "patient": "p150",
+   "local": "LV-0004518",
+   "item_id": "01M0E81MY0S6V5J4XHP51WK95B",
+   "file": "2026-08-19-follow-up-visit.folio.md",
+   "as_of": "2026-08-19",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 150,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 150/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 30,
+     "date": "2026-08-19",
+     "ref": null,
+     "quote": "eGFR 30 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.1,
+     "date": "2026-08-19",
+     "ref": null,
+     "quote": "K 5.1"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 35,
+     "date": "2026-08-19",
+     "ref": null,
+     "quote": "UACR 35 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p104",
+   "local": "LV-0072114",
+   "item_id": "01G418ZZE0G3DNJPDR66FNKTP1",
+   "file": "2022-05-26-new-visit.folio.md",
+   "as_of": "2022-05-26",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 2014"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2006"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 138,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 138/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 41,
+     "date": "2022-05-26",
+     "ref": null,
+     "quote": "eGFR 41 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2022-05-26",
+     "ref": null,
+     "quote": "K 4.3"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 222,
+     "date": "2022-05-26",
+     "ref": null,
+     "quote": "UACR 222 mg/g"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "rx_dapagliflozin",
+     "quote": "dapagliflozin 10 mg daily"
+    },
+    {
+     "view": "medications",
+     "ingredient": "finerenone",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "rx_finerenone",
+     "quote": "finerenone 10 mg daily"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "LV-0092558",
+   "item_id": "01JVMYYPV0QVXEF1R9P3WTSC07",
+   "file": "2025-05-19-follow-up-visit.folio.md",
+   "as_of": "2025-05-19",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis",
+     "status": "resolved",
+     "ref": "dx_dka_hx",
+     "quote": "Prior euglycemic DKA"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 138,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 138/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 40,
+     "date": "2025-05-19",
+     "ref": null,
+     "quote": "Today eGFR 40"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.8,
+     "date": "2025-05-19",
+     "ref": null,
+     "quote": "K 4.8"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 12,
+     "date": "2025-05-19",
+     "ref": null,
+     "quote": "UACR 12 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "LV-0067326",
+   "item_id": "01K8V482F0MCYKD2HW4WTZWZJJ",
+   "file": "2025-10-30-follow-up-visit.folio.md",
+   "as_of": "2025-10-30",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 143,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 143/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 38,
+     "date": "2025-10-30",
+     "ref": null,
+     "quote": "eGFR 38 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2025-10-30",
+     "ref": null,
+     "quote": "K 4.5"
+    }
+   ]
+  },
+  {
+   "patient": "p027",
+   "local": "LV-0010248",
+   "item_id": "01HCJT1P10S041KT0EY8H65R8A",
+   "file": "2023-10-12-follow-up-visit.folio.md",
+   "as_of": "2023-10-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "Hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 143,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 143/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 37,
+     "date": "2023-10-12",
+     "ref": null,
+     "quote": "eGFR 37 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2023-10-12",
+     "ref": null,
+     "quote": "K 4.3 today"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "LV-0043207",
+   "item_id": "01KVXQRZ10P8251TBWHE9E87H5",
+   "file": "2026-06-24-follow-up-visit.folio.md",
+   "as_of": "2026-06-24",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 131,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 131/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 53,
+     "date": "2026-06-24",
+     "ref": null,
+     "quote": "eGFR 53"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2026-06-24",
+     "ref": null,
+     "quote": "K 4.5"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 145,
+     "date": "2026-06-24",
+     "ref": null,
+     "quote": "UACR 145 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p045",
+   "local": "LV-0041090",
+   "item_id": "01GAMS4SC0F3BDMBWRBVBCE0FC",
+   "file": "2022-08-16-follow-up-visit.folio.md",
+   "as_of": "2022-08-16",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 2009"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2013"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 137,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 137/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 43,
+     "date": "2022-08-16",
+     "ref": null,
+     "quote": "eGFR 43 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.8,
+     "date": "2022-08-16",
+     "ref": null,
+     "quote": "K 4.8"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 168,
+     "date": "2022-08-16",
+     "ref": null,
+     "quote": "UACR 168 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p258",
+   "local": "LV-0065903",
+   "item_id": "01JZ1VNY701AR132SRTMSV37P2",
+   "file": "2025-06-30-follow-up-visit.folio.md",
+   "as_of": "2025-06-30",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 118,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 118/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 47,
+     "date": "2025-06-30",
+     "ref": null,
+     "quote": "eGFR 47 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.1,
+     "date": "2025-06-30",
+     "ref": null,
+     "quote": "K 4.1 today"
+    }
+   ]
+  },
+  {
+   "patient": "p200",
+   "local": "LV-0046825",
+   "item_id": "01G4K07790W6CC6A5AMKXXJT6Y",
+   "file": "2022-06-02-follow-up-visit.folio.md",
+   "as_of": "2022-06-02",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 118,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 118/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 40,
+     "date": "2022-06-02",
+     "ref": null,
+     "quote": "eGFR 40 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.2,
+     "date": "2022-06-02",
+     "ref": null,
+     "quote": "K 4.2 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 310,
+     "date": "2022-06-02",
+     "ref": null,
+     "quote": "UACR 310 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p142",
+   "local": "LV-0082384",
+   "item_id": "01JC4F4270ABB7B1CZQ75E4505",
+   "file": "2024-11-07-follow-up-visit.folio.md",
+   "as_of": "2024-11-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 144,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 144/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 56,
+     "date": "2024-11-07",
+     "ref": null,
+     "quote": "eGFR 56"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.8,
+     "date": "2024-11-07",
+     "ref": null,
+     "quote": "K 4.8 today"
+    }
+   ]
+  },
+  {
+   "patient": "p141",
+   "local": "LV-0041275",
+   "item_id": "01HCJJQA10Q3CR4KVGB2M59YQF",
+   "file": "2023-10-12-follow-up-visit.folio.md",
+   "as_of": "2023-10-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 136,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 136/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 43,
+     "date": "2023-10-12",
+     "ref": null,
+     "quote": "eGFR 43 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.2,
+     "date": "2023-10-12",
+     "ref": null,
+     "quote": "K 5.2"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 737,
+     "date": "2023-10-12",
+     "ref": null,
+     "quote": "UACR 737 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "LV-0014910",
+   "item_id": "01M35T0QP04JEBT4JDF6J86824",
+   "file": "2026-09-22-new-visit.folio.md",
+   "as_of": "2026-09-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes since 2010"
+    },
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "essential hypertension since 2012"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 126,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 126/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 42,
+     "date": "2026-09-22",
+     "ref": null,
+     "quote": "eGFR 42 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2026-09-22",
+     "ref": null,
+     "quote": "K 4.5"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 33,
+     "date": "2026-09-22",
+     "ref": null,
+     "quote": "UACR 33 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p139",
+   "local": "LV-0095378",
+   "item_id": "01KJ5V1DK0JW4YEHEVKCQHG8RW",
+   "file": "2026-02-23-follow-up-visit.folio.md",
+   "as_of": "2026-02-23",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 138,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 138/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 47,
+     "ref": null,
+     "quote": "eGFR 48 → 47 since October"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 765,
+     "date": "2026-02-23",
+     "ref": null,
+     "quote": "UACR 765 mg/g today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "ref": null,
+     "quote": "K 4.6"
+    }
+   ]
+  },
+  {
+   "patient": "p081",
+   "local": "LV-0039575",
+   "item_id": "01KHCCX5Q0JBHX3AF2H0G3RKTK",
+   "file": "2026-02-13-follow-up-visit.folio.md",
+   "as_of": "2026-02-13",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 121,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 121/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 42,
+     "ref": null,
+     "quote": "eGFR 42"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.8,
+     "ref": null,
+     "quote": "K 4.8"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 180,
+     "date": "2026-02-13",
+     "ref": null,
+     "quote": "UACR 180 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p270",
+   "local": "LV-0054300",
+   "item_id": "01KMS11R10K6XGW6DM9AG7ZDFP",
+   "file": "2026-03-27-follow-up-visit.folio.md",
+   "as_of": "2026-03-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 141,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 141/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 33,
+     "date": "2026-03-27",
+     "ref": null,
+     "quote": "eGFR 33 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2026-03-27",
+     "ref": null,
+     "quote": "K 4.5"
+    }
+   ]
+  },
+  {
+   "patient": "p095",
+   "local": "LV-0052788",
+   "item_id": "01KQDHEWE085T1394Q0KN8411Z",
+   "file": "2026-04-29-follow-up-visit.folio.md",
+   "as_of": "2026-04-29",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 125,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 125/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 47,
+     "date": "2026-04-29",
+     "ref": null,
+     "quote": "eGFR 47 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2026-04-29",
+     "ref": null,
+     "quote": "K 4.6 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 41,
+     "date": "2026-04-29",
+     "ref": null,
+     "quote": "UACR 41 mg/g (today)"
+    }
+   ]
+  },
+  {
+   "patient": "p120",
+   "local": "LV-0060382",
+   "item_id": "01HX0HS21045A44RERB6WBDP4N",
+   "file": "2024-05-03-follow-up-visit.folio.md",
+   "as_of": "2024-05-03",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "Hypertension"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 143,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 143/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 37,
+     "date": "2024-05-03",
+     "ref": null,
+     "quote": "eGFR 37 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2024-05-03",
+     "ref": null,
+     "quote": "K 4.6"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 221,
+     "date": "2024-05-03",
+     "ref": null,
+     "quote": "UACR 221 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p017",
+   "local": "LV-0018011",
+   "item_id": "01K1Y68EG0QM5RV0V1XBEWMJMY",
+   "file": "2025-08-05-follow-up-visit.folio.md",
+   "as_of": "2025-08-05",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes, onset 2013"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 118,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 118/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 43,
+     "ref": null,
+     "quote": "eGFR 43 → stable since March"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "ref": null,
+     "quote": "K 4.3"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 124,
+     "date": "2025-08-05",
+     "ref": null,
+     "quote": "UACR 124 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p144",
+   "local": "LV-0089321",
+   "item_id": "01M1YTV2A0ZDBGQNR379AVJWYF",
+   "file": "2026-09-07-follow-up-visit.folio.md",
+   "as_of": "2026-09-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 120,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 120/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 38,
+     "date": "2026-09-07",
+     "ref": null,
+     "quote": "eGFR 38 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2026-09-07",
+     "ref": null,
+     "quote": "K 4.5"
+    }
+   ]
+  },
+  {
+   "patient": "p246",
+   "local": "LV-0078128",
+   "item_id": "01J7YBRER0VR743AKAPPBFE9P3",
+   "file": "2024-09-16-new-visit.folio.md",
+   "as_of": "2024-09-16",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 4/2008"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2015"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 134,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 134/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 50,
+     "date": "2024-09-16",
+     "ref": null,
+     "quote": "eGFR 50"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2024-09-16",
+     "ref": null,
+     "quote": "K 4.6"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 106,
+     "date": "2024-09-16",
+     "ref": null,
+     "quote": "UACR 106 mg/g today"
+    },
+    {
+     "view": "medications",
+     "ingredient": "finerenone",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "rx_finerenone",
+     "quote": "start finerenone 10 mg daily"
+    }
+   ]
+  },
+  {
+   "patient": "p153",
+   "local": "LV-0005774",
+   "item_id": "01GDGVY8X0GCQHS1QBWNQZAMF3",
+   "file": "2022-09-21-new-visit.folio.md",
+   "as_of": "2022-09-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "Type 2 diabetes since 2008"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 122,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 122/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 45,
+     "date": "2022-09-21",
+     "ref": null,
+     "quote": "eGFR 45 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2022-09-21",
+     "ref": null,
+     "quote": "K 4.3"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 331,
+     "date": "2022-09-21",
+     "ref": null,
+     "quote": "UACR 331 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "LV-0072914",
+   "item_id": "01M2GXWGP8WVGMYR54Z9SVHEJR",
+   "file": "2026-09-14-phone.folio.md",
+   "as_of": "2026-09-14",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "finerenone",
+     "status": "held",
+     "ref": "hold_finerenone",
+     "quote": "Hold finerenone"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.8,
+     "date": "2026-09-14",
+     "ref": null,
+     "quote": "K 5.8 this morning"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.7,
+     "date": "2026-09-14",
+     "ref": null,
+     "quote": "5.7 on same-day repeat"
+    }
+   ]
+  },
+  {
+   "patient": "p219",
+   "local": "LV-0051975",
+   "item_id": "01HDQ393K0N5CC44RSWFWY5Y3F",
+   "file": "2023-10-26-follow-up-visit.folio.md",
+   "as_of": "2023-10-26",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G2",
+     "ref": "dx_ckd",
+     "quote": "CKD G2 A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 142,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 142/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 62,
+     "date": "2023-10-26",
+     "ref": null,
+     "quote": "eGFR 62 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 3.9,
+     "date": "2023-10-26",
+     "ref": null,
+     "quote": "K 3.9 (today)"
+    }
+   ]
+  },
+  {
+   "patient": "p212",
+   "local": "LV-0096272",
+   "item_id": "01KREV4EE0NVJSM9J7EGH6VRMN",
+   "file": "2026-05-12-follow-up-visit.folio.md",
+   "as_of": "2026-05-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 137,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 137/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 36,
+     "date": "2026-05-12",
+     "ref": null,
+     "quote": "eGFR 36 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "date": "2026-05-12",
+     "ref": null,
+     "quote": "K 4.4 (today)"
+    }
+   ]
+  },
+  {
+   "patient": "p135",
+   "local": "LV-0071911",
+   "item_id": "01KXEPRCW0Q2KG04SJ6M9729P9",
+   "file": "2026-07-13-follow-up-visit.folio.md",
+   "as_of": "2026-07-13",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 122,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 122/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 48,
+     "date": "2026-07-13",
+     "ref": null,
+     "quote": "eGFR 48 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.7,
+     "date": "2026-07-13",
+     "ref": null,
+     "quote": "K 4.7"
+    }
+   ]
+  },
+  {
+   "patient": "p293",
+   "local": "LV-0009116",
+   "item_id": "01K323BP603CJVWNA7DTWCZ4FH",
+   "file": "2025-08-19-follow-up-visit.folio.md",
+   "as_of": "2025-08-19",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 131,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 131/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 50,
+     "date": "2025-08-19",
+     "ref": null,
+     "quote": "eGFR 50"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "date": "2025-08-19",
+     "ref": null,
+     "quote": "K 4.4"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 603,
+     "date": "2025-08-19",
+     "ref": null,
+     "quote": "UACR 603 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p276",
+   "local": "LV-0041841",
+   "item_id": "01KDP07CB0JNXHD9HXPJWYCWA2",
+   "file": "2025-12-29-follow-up-visit.folio.md",
+   "as_of": "2025-12-29",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "dx_ckd",
+     "quote": "CKD G3a A3"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 130,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 130/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 48,
+     "date": "2025-12-29",
+     "ref": null,
+     "quote": "eGFR 48 (today)"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2025-12-29",
+     "ref": null,
+     "quote": "K 4.6 (today)"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "LV-0043283",
+   "item_id": "01J5Y3C0J03Q3KT4EFVR724H46",
+   "file": "2024-08-22-follow-up-visit.folio.md",
+   "as_of": "2024-08-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G2",
+     "ref": "dx_ckd",
+     "quote": "CKD G2 A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "diabetic"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertensive"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 135,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 135/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 61,
+     "date": "2024-08-22",
+     "ref": null,
+     "quote": "eGFR 61"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2024-08-22",
+     "ref": null,
+     "quote": "K 4.3 today"
+    }
+   ]
+  },
+  {
+   "patient": "p256",
+   "local": "LV-0022263",
+   "item_id": "01KG0KEZK09E02DAYZ7M797GY3",
+   "file": "2026-01-27-new-visit.folio.md",
+   "as_of": "2026-01-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A2"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 2017"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2014"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 126,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 126/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 42,
+     "date": "2026-01-27",
+     "ref": null,
+     "quote": "eGFR 42 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2026-01-27",
+     "ref": null,
+     "quote": "K 4.6"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 267,
+     "date": "2026-01-27",
+     "ref": null,
+     "quote": "UACR 267 mg/g"
+    },
+    {
+     "view": "medications",
+     "ingredient": "finerenone",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "rx_finerenone",
+     "quote": "start finerenone 10 mg daily"
+    }
+   ]
+  },
+  {
+   "patient": "p294",
+   "local": "LV-0078978",
+   "item_id": "01K73A7BR0BZHC8BNQF1ZVSXCE",
+   "file": "2025-10-08-follow-up-visit.folio.md",
+   "as_of": "2025-10-08",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 126,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 126/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 44,
+     "date": "2025-10-08",
+     "ref": null,
+     "quote": "eGFR 44 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.6,
+     "date": "2025-10-08",
+     "ref": null,
+     "quote": "K 4.6"
+    }
+   ]
+  },
+  {
+   "patient": "p195",
+   "local": "LV-0018104",
+   "item_id": "01KJTTR5M0A2ZXD46XK9EZF47E",
+   "file": "2026-03-03-new-visit.folio.md",
+   "as_of": "2026-03-03",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "dx_ckd",
+     "quote": "CKD G3b A1"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "dx_dm",
+     "quote": "type 2 diabetes since 2017"
+    },
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "dx_htn",
+     "quote": "hypertension since 2019"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 128,
+     "diastolic_mmhg": 80,
+     "ref": "bp_sys",
+     "quote": "BP 128/80"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 44,
+     "date": "2026-03-03",
+     "ref": null,
+     "quote": "Labs today: eGFR 44"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "date": "2026-03-03",
+     "ref": null,
+     "quote": "K 4.4"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 25,
+     "date": "2026-03-03",
+     "ref": null,
+     "quote": "UACR 25 mg/g"
+    }
+   ]
+  }
+ ]
+}

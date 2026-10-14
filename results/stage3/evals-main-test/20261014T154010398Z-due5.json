@@ -1,0 +1,421 @@
+{
+ "runId": "20261014T154010398Z-due5",
+ "source": "homelog",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 60,
+  "items": 4315,
+  "ms": 74.26756499999995,
+  "msPerItem": 0.017211486674391645,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9969072164948454,
+   "recall": 0.9969072164948454,
+   "tp": 1934,
+   "fp": 6,
+   "fn": 6,
+   "rows": 279,
+   "wrongRows": 6,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 30489,
+   "fp": 0,
+   "fn": 0,
+   "rows": 7506,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.9969072164948454,
+    "recall": 0.9969072164948454,
+    "tp": 1934,
+    "fp": 6,
+    "fn": 6,
+    "rows": 279,
+    "wrongRows": 6,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 269,
+   "total": 269
+  },
+  "medications.status": {
+   "ok": 273,
+   "total": 279
+  },
+  "medications.dose": {
+   "ok": 268,
+   "total": 268
+  },
+  "medications.patient_reported": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.otc": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.evidence": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.status_since": {
+   "ok": 8,
+   "total": 8
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.pulse_bpm": {
+   "ok": 3979,
+   "total": 3979
+  },
+  "vitals.evidence": {
+   "ok": 7506,
+   "total": 7506
+  },
+  "vitals.glucose_mg_dl": {
+   "ok": 3514,
+   "total": 3514
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.999814906219151,
+   "recall": 0.999814906219151,
+   "tp": 32410,
+   "fp": 6,
+   "fn": 6
+  },
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 13,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 1,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T13": {
+   "facts": 15,
+   "errors": 0,
+   "patients": 14,
+   "patientsWithError": 0
+  },
+  "T6": {
+   "facts": 875,
+   "errors": 0,
+   "patients": 17,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 51,
+   "errors": 0,
+   "patients": 9,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 6,
+   "errors": 6,
+   "patients": 6,
+   "patientsWithError": 6
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "p103",
+   "local": "HL-U-74137",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_3"
+   ],
+   "items": [
+    "01HVVWSS406QPJ6T30HHBY604C"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HVVWSS406QPJ6T30HHBY604C",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p139",
+   "local": "HL-U-27803",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "finerenone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_180"
+   ],
+   "items": [
+    "01KVP09G5RCC6G2AX0ZH51Y92V"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KVP09G5RCC6G2AX0ZH51Y92V",
+     "entry_id": "med_8"
+    }
+   ]
+  },
+  {
+   "patient": "p182",
+   "local": "HL-U-24695",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_4"
+   ],
+   "items": [
+    "01KFP6ZTF0ZH26JAHDZAMNW882"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KFP6ZTF0ZH26JAHDZAMNW882",
+     "entry_id": "med_1"
+    }
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "HL-U-24456",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "spironolactone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01KPE3AXXRBMFSHBHJ413MYSCH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KPE3AXXRBMFSHBHJ413MYSCH",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p246",
+   "local": "HL-U-90257",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "finerenone",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_103"
+   ],
+   "items": [
+    "01KME7C1DG612FV68345FQGNVE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KME7C1DG612FV68345FQGNVE",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p251",
+   "local": "HL-U-18779",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "held",
+     "actual": "active"
+    }
+   ],
+   "traps": [
+    "T1"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_5"
+   ],
+   "items": [
+    "01K5Q1YSY060VGMXGEA2D80W8N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K5Q1YSY060VGMXGEA2D80W8N",
+     "entry_id": "med_1"
+    }
+   ]
+  }
+ ]
+}

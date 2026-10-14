@@ -15,10 +15,12 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 New pt, establishing care. Records from prior office requested.
+
 BP 121/66, pulse 65, wt 217 lb.
-History reviewed with pt and problem list built from it.
-Questions answered. Pt agreeable to plan.
-RTC to be scheduled for annual exam.
+
+Hx reviewed with pt and problem list entered from what pt reports. Feels well today, no new complaints.
+
+Discussed diet and activity. RTC 1 yr for annual exam, sooner prn.
 
 ```json payload
 {

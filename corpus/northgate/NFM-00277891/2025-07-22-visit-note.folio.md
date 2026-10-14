@@ -14,12 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. BP 147/88, pulse 77, wt 160 lb.
+Annual exam. Feels well, no new complaints.
 
-Labs today: eGFR 67, K 4.2, LDL 116 mg/dL.
+BP 154/92, pulse 77, wt 160 lb.
+eGFR 67, K 4.2, LDL 116 mg/dL today.
 
-BP still above goal. Amlodipine: started 5 mg daily today (BP above goal).
-RTC 3 mo for BP check.
+BP above goal, chlorthalidone started 12.5 mg daily today.
+
+RTC for BP check and labs.
 
 ```json payload
 {

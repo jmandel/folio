@@ -1,0 +1,38 @@
+{
+ "source": "riverside",
+ "viewSet": "uscore",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "e295b9fc544f55d069f9f39ad83dedcba1da21bf4ebb2e306b1525ea2f1ef120",
+ "samples": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T121950885Z-8hz4",
+   "ok": true,
+   "costUsd": 1.6332035999999999,
+   "durationMs": 339524,
+   "numTurns": 17,
+   "usage": {
+    "input_tokens": 30,
+    "cache_creation_input_tokens": 87607,
+    "cache_read_input_tokens": 942638,
+    "output_tokens": 37185
+   },
+   "evalPath": "results/stage3/evals/20261014T121950885Z-8hz4.json",
+   "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:n/a alle:n/a labs:100.0% vita:n/a 0.173ms/item"
+  }
+ ],
+ "final": "20261014T121950885Z-8hz4"
+}

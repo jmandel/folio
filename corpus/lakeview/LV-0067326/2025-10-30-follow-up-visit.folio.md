@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K8V482F0MCYKD2HW4WTZWZJJ"
+id: "01K8V482F06PAQGW9Z7YYBV7DM"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0067326"
 effective: "2025-10-30T09:00:00-05:00"
@@ -14,19 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">type 2 diabetes</ref>, <ref id="dx_htn">hypertension</ref>.
 
-eGFR 38 today, K 4.5. Gradual decline continues, 39 → 38 since June.
+<ref id="bp_sys">BP 136/80, HR 64, weight 95.7 kg.</ref> No complaints today.
 
-<ref id="bp_sys">BP 143/80, HR 64, weight 95.7 kg.</ref> Feels well, no edema.
+eGFR 38 and K 4.8 today.
 
-Labs again in 4 months. Return then.
+Repeat labs before the next visit. Return in 6 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2025-10-30T09:00:00-05:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +35,7 @@ Labs again in 4 months. Return then.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +43,7 @@ Labs again in 4 months. Return then.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ Labs again in 4 months. Return then.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,16 +59,16 @@ Labs again in 4 months. Return then.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "VITAL_CODE": "BPS",
-    "VALUE_NUM": 143,
+    "VALUE_NUM": 136,
     "UNIT_CODE": "mmHg",
     "READING_NO": 1,
     "TAKEN_AT": "2025-10-30T09:04:00-05:00"
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +77,7 @@ Labs again in 4 months. Return then.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 64,
     "UNIT_CODE": "/min",
@@ -86,7 +86,7 @@ Labs again in 4 months. Return then.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113955",
+    "VISIT_ID": "NV-112442",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 95.7,
     "UNIT_CODE": "kg",

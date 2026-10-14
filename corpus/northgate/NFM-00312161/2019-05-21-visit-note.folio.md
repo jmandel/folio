@@ -14,10 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. History reviewed with pt, entered on problem list.
+New pt, establishing care. Hx of HTN, DM2, hyperlipidemia, obesity and knee OA per pt.
+
 BP 129/82, pulse 81, wt 212 lb.
-Labs 5/18: eGFR 51, K 4.5, UACR 49 mg/g, A1c 7.9%, LDL 76 mg/dL.
-Will repeat labs and recheck kidney numbers at next visit.
+Labs from 5/18: eGFR 51, K 4.5, UACR 49 mg/g, A1c 7.9%, LDL 76 mg/dL.
+
+Problem list entered. Will recheck labs and see how things go.
 RTC 3 mo.
 
 ```json payload

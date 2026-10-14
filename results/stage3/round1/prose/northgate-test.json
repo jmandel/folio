@@ -1,0 +1,754 @@
+{
+ "source": "northgate",
+ "split": "test",
+ "runId": "20261014T115850690Z-2mij",
+ "costUsd": 0.1897303,
+ "items": [
+  {
+   "patient": "p148",
+   "local": "NFM-00899321",
+   "item_id": "01DKA4Q6B0SKKN4K9GHTY88MZ5",
+   "file": "2019-08-27-problem-2-add.folio.md",
+   "as_of": "2019-08-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Obesity",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Obesity, onset 9/2014."
+    }
+   ]
+  },
+  {
+   "patient": "p248",
+   "local": "NFM-00115077",
+   "item_id": "01JMJMN7GG6WDKF5NX2Y8XKJNF",
+   "file": "2025-02-20-med-amlodipine-start.folio.md",
+   "as_of": "2025-02-20",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "amlodipine",
+     "status": "active",
+     "dose": {
+      "value": 5,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Amlodipine 5 mg daily started today."
+    }
+   ]
+  },
+  {
+   "patient": "p153",
+   "local": "NFM-00628169",
+   "item_id": "01DYG27PQGF8SGFQD5TW2KPHWM",
+   "file": "2020-01-13-med-dapagliflozin-start.folio.md",
+   "as_of": "2020-01-13",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 8.8,
+     "date": "2020-01-13",
+     "ref": "med_1",
+     "quote": "A1c 8.8"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Start dapagliflozin 10 mg daily."
+    }
+   ]
+  },
+  {
+   "patient": "p027",
+   "local": "NFM-00800453",
+   "item_id": "01DZMACWK098KKJHWGF17EZX2W",
+   "file": "2020-01-27-problem-1-add.folio.md",
+   "as_of": "2020-01-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "HTN since 2018 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p179",
+   "local": "NFM-00176879",
+   "item_id": "01JVSGQP4GFBYNTB15KZ7C8J90",
+   "file": "2025-05-21-med-losartan-start.folio.md",
+   "as_of": "2025-05-21",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "dose": {
+      "value": 50,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Losartan 50 mg daily started today for ACE inhibitor cough."
+    }
+   ]
+  },
+  {
+   "patient": "p291",
+   "local": "NFM-00953498",
+   "item_id": "01G54J2BA0RVPTFG60G9C0CRYY",
+   "file": "2022-06-09-problem-2-add.folio.md",
+   "as_of": "2022-06-09",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 DM",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 DM, onset 2017, per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p077",
+   "local": "NFM-00563111",
+   "item_id": "01EK3AV8DGNJKJH0ZJSGJT0SZC",
+   "file": "2020-09-25-med-chlorthalidone-start.folio.md",
+   "as_of": "2020-09-25",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "active",
+     "dose": {
+      "value": 12.5,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Chlorthalidone started, 12.5 mg daily."
+    }
+   ]
+  },
+  {
+   "patient": "p270",
+   "local": "NFM-00472987",
+   "item_id": "01GASCRX80F2XMXXTGAWVP308X",
+   "file": "2022-08-18-problem-4-add.folio.md",
+   "as_of": "2022-08-18",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Major depressive disorder, recurrent, mild",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Major depressive disorder, recurrent, mild, onset 2019 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p224",
+   "local": "NFM-00212854",
+   "item_id": "01JDMEMZ2G2EKG76TWRQX18JPQ",
+   "file": "2024-11-26-allergy-dapagliflozin.folio.md",
+   "as_of": "2024-11-26",
+   "facts": [
+    {
+     "view": "allergies",
+     "substance": "dapagliflozin",
+     "type": "adverse_reaction",
+     "ref": "alg_1",
+     "quote": "Dapagliflozin, euglycemic DKA."
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "NFM-00192202",
+   "item_id": "01DSG4EQA0404YXR7FFBCPY5WE",
+   "file": "2019-11-12-problem-1-add.folio.md",
+   "as_of": "2019-11-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential hypertension, onset 3/2014 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p043",
+   "local": "NFM-00994489",
+   "item_id": "01F4SB2AFG6HPE04Q7XPW69BPG",
+   "file": "2021-05-03-med-lisinopril-hold.folio.md",
+   "as_of": "2021-05-03",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": "med_1",
+     "quote": "Lisinopril held today, review 5/10."
+    }
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "NFM-00245775",
+   "item_id": "01JAQWEC80PQ3M78SJQGQHB0GA",
+   "file": "2024-10-21-problem-1-add.folio.md",
+   "as_of": "2024-10-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential hypertension, onset 6/2014."
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "NFM-00850967",
+   "item_id": "01FQCRZ1WG61DFXF1XNRWWE2P2",
+   "file": "2021-12-20-med-empagliflozin-start.folio.md",
+   "as_of": "2021-12-20",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 8.3,
+     "date": "2021-12-20",
+     "ref": "med_1",
+     "quote": "A1c 8.3."
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Empagliflozin 10 mg daily started today."
+    }
+   ]
+  },
+  {
+   "patient": "p026",
+   "local": "NFM-00650029",
+   "item_id": "01DTSRHNT03CREY54DRF08SK7J",
+   "file": "2019-11-28-problem-1-add.folio.md",
+   "as_of": "2019-11-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential HTN since 2017 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p136",
+   "local": "NFM-00056738",
+   "item_id": "01JWGVB9CGFJ1C0DW6NM7E6RTT",
+   "file": "2025-05-30-med-losartan-start.folio.md",
+   "as_of": "2025-05-30",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "dose": {
+      "value": 50,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Losartan 50 mg daily started today for albuminuria."
+    }
+   ]
+  },
+  {
+   "patient": "p280",
+   "local": "NFM-00223606",
+   "item_id": "01JCH3G480864ZS1QY1QZ3NCD5",
+   "file": "2024-11-12-problem-1-add.folio.md",
+   "as_of": "2024-11-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential HTN, onset ~1/2011."
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "NFM-00312161",
+   "item_id": "01DBDAAC10M91NB35K92PFPNXQ",
+   "file": "2019-05-21-problem-5-add.folio.md",
+   "as_of": "2019-05-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Primary osteoarthritis of knee",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Primary osteoarthritis of knee, onset 10/2012 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p051",
+   "local": "NFM-00937270",
+   "item_id": "01GHVBPQVGTSCTHK64P1J8C65M",
+   "file": "2022-11-14-med-metformin-change.folio.md",
+   "as_of": "2022-11-14",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 8.1,
+     "date": "2022-11-14",
+     "ref": "med_1",
+     "quote": "A1c 8.1."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Metformin up to 1000 mg BID."
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "NFM-00020297",
+   "item_id": "01D7PXF2W048PC9Z3G065VMXFV",
+   "file": "2019-04-05-problem-1-add.folio.md",
+   "as_of": "2019-04-05",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential hypertension, onset 2014 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p238",
+   "local": "NFM-00297732",
+   "item_id": "01GYAYFXS08TMQDJY9Q10MFJ18",
+   "file": "2023-04-18-problem-1-add.folio.md",
+   "as_of": "2023-04-18",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2019 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p171",
+   "local": "NFM-00395617",
+   "item_id": "01EM47Q700GK9NQR13VKK9WPX4",
+   "file": "2020-10-08-problem-2-add.folio.md",
+   "as_of": "2020-10-08",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 diabetes, onset 12/2013."
+    }
+   ]
+  },
+  {
+   "patient": "p167",
+   "local": "NFM-00957031",
+   "item_id": "01ESKN1NW0YS97RY38QAXB65MR",
+   "file": "2020-12-15-problem-2-add.folio.md",
+   "as_of": "2020-12-15",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes mellitus",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 diabetes mellitus, onset 6/2018 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p274",
+   "local": "NFM-00080015",
+   "item_id": "01EN34FV00E046GFSB67H82RST",
+   "file": "2020-10-20-problem-2-add.folio.md",
+   "as_of": "2020-10-20",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes mellitus",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "DM2 since 2010, per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p205",
+   "local": "NFM-00296957",
+   "item_id": "01DWA6MCXGDA3GYTJBNZNV2G0B",
+   "file": "2019-12-17-med-semaglutide-start.folio.md",
+   "as_of": "2019-12-17",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 8.2,
+     "date": "2019-12-17",
+     "ref": "med_1",
+     "quote": "A1c 8.2."
+    },
+    {
+     "view": "medications",
+     "ingredient": "semaglutide",
+     "status": "active",
+     "dose": {
+      "value": 0.5,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Start semaglutide 0.5 mg weekly."
+    }
+   ]
+  },
+  {
+   "patient": "s01",
+   "local": "NFM-00759365",
+   "item_id": "01DARRVHV0SWM705M5JPZ62DMS",
+   "file": "2019-05-13-problem-3-add.folio.md",
+   "as_of": "2019-05-13",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p189",
+   "local": "NFM-00218652",
+   "item_id": "01HKAV2QB0RJJXQM1N14F1CE47",
+   "file": "2024-01-04-problem-3-add.folio.md",
+   "as_of": "2024-01-04",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2015 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p174",
+   "local": "NFM-00528755",
+   "item_id": "01DY5HSN20K875W0RGK02P96W9",
+   "file": "2020-01-09-problem-3-add.folio.md",
+   "as_of": "2020-01-09",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia since ~2015, per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p186",
+   "local": "NFM-00682106",
+   "item_id": "01E4EXCQ80YF7CBW1CZCWB5253",
+   "file": "2020-03-27-problem-2-add.folio.md",
+   "as_of": "2020-03-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "DM2",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "DM2, onset 2019 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p102",
+   "local": "NFM-00211240",
+   "item_id": "01HJKMWFH0ZC9KXQ5Q8ET2XSB7",
+   "file": "2023-12-26-referral-created.folio.md",
+   "as_of": "2023-12-26",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 38,
+     "ref": "referral",
+     "quote": "eGFR 38"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 59,
+     "ref": "referral",
+     "quote": "UACR 59 mg/g"
+    },
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease",
+     "status": "active",
+     "ref": "referral",
+     "quote": "please evaluate and help manage CKD"
+    },
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": null,
+     "quote": "The patient also has essential hypertension."
+    }
+   ]
+  },
+  {
+   "patient": "p170",
+   "local": "NFM-00359511",
+   "item_id": "01JEP71V3GYVARGF49F7DYMBZQ",
+   "file": "2024-12-09-med-glargine-start.folio.md",
+   "as_of": "2024-12-09",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 7.4,
+     "date": "2024-12-09",
+     "ref": "med_1",
+     "quote": "A1c 7.4."
+    }
+   ]
+  },
+  {
+   "patient": "p130",
+   "local": "NFM-00480577",
+   "item_id": "01GNJ0026G7CKPKTM8JBBYAKB9",
+   "file": "2022-12-30-med-metformin-change.folio.md",
+   "as_of": "2022-12-30",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 44,
+     "date": "2022-12-30",
+     "ref": "med_1",
+     "quote": "eGFR 44."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 500,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Metformin down to 500 mg BID."
+    }
+   ]
+  },
+  {
+   "patient": "p156",
+   "local": "NFM-00567532",
+   "item_id": "01JZ3P4QEGXCK1YRNNBRW027E9",
+   "file": "2025-07-01-med-lisinopril-change.folio.md",
+   "as_of": "2025-07-01",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "active",
+     "dose": {
+      "value": 20,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Lisinopril up to 20 mg daily today."
+    }
+   ]
+  },
+  {
+   "patient": "p020",
+   "local": "NFM-00228032",
+   "item_id": "01FDD53QM0VJBYZ2NDDYMN58AA",
+   "file": "2021-08-18-problem-3-add.folio.md",
+   "as_of": "2021-08-18",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Obesity",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Obesity, since ~2015 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p173",
+   "local": "NFM-00900007",
+   "item_id": "01HMYPRF205XAM3RS0ZW0YJW3H",
+   "file": "2024-01-24-problem-2-add.folio.md",
+   "as_of": "2024-01-24",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 diabetes, onset 6/2022 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p247",
+   "local": "NFM-00341949",
+   "item_id": "01D1V25MF029MZ0EMKWGYFBMT3",
+   "file": "2019-01-22-problem-1-add.folio.md",
+   "as_of": "2019-01-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential HTN, onset 12/2010."
+    }
+   ]
+  },
+  {
+   "patient": "p092",
+   "local": "NFM-00036899",
+   "item_id": "01EX4R7WJ0454D5T7VQZWZNG3X",
+   "file": "2021-01-28-problem-2-add.folio.md",
+   "as_of": "2021-01-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes mellitus",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 diabetes mellitus, onset 2020."
+    }
+   ]
+  },
+  {
+   "patient": "p164",
+   "local": "NFM-00453430",
+   "item_id": "01EHMW90C0KV9T9A4WK08671TG",
+   "file": "2020-09-07-problem-3-add.folio.md",
+   "as_of": "2020-09-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 10/2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p073",
+   "local": "NFM-00531163",
+   "item_id": "01G4Z843W06Q8054BDHB2S8REE",
+   "file": "2022-06-07-problem-2-add.folio.md",
+   "as_of": "2022-06-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Type 2 diabetes, onset 2013."
+    }
+   ]
+  },
+  {
+   "patient": "p119",
+   "local": "NFM-00103176",
+   "item_id": "01K431ZA0G07BC8WY2QCGSCRS2",
+   "file": "2025-09-01-med-losartan-start.folio.md",
+   "as_of": "2025-09-01",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "dose": {
+      "value": 50,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Losartan 50 mg daily started today for ACE inhibitor cough."
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "NFM-00731552",
+   "item_id": "01D68HQTY0EPX4SEN8YGH9KF62",
+   "file": "2019-03-18-problem-hld-add.folio.md",
+   "as_of": "2019-03-18",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2017 per pt."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "runId": "20261014T121558445Z-653d",
+ "source": "northgate",
+ "viewSet": "uscore",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 181,
+  "items": 8470,
+  "ms": 235.87231200000008,
+  "msPerItem": 0.02784797072018891,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 3248,
+   "fp": 0,
+   "fn": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 34130,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 37378,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 3244,
+   "fp": 0,
+   "fn": 0
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 34134,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 1,
+   "errors": 0
+  },
+  "T1": {
+   "facts": 46,
+   "errors": 0
+  },
+  "T16": {
+   "facts": 2659,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 10979,
+   "errors": 0
+  },
+  "T9": {
+   "facts": 159,
+   "errors": 0
+  },
+  "T11": {
+   "facts": 2307,
+   "errors": 0
+  },
+  "T3": {
+   "facts": 69,
+   "errors": 0
+  },
+  "T7": {
+   "facts": 650,
+   "errors": 0
+  },
+  "T4": {
+   "facts": 20,
+   "errors": 0
+  },
+  "T2": {
+   "facts": 16,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": [],
+ "fhir": {
+  "resources": 11625,
+  "conformant": 11625,
+  "problems": {}
+ }
+}

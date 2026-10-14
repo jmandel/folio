@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HYY8JDH03VV2TQ58Z4RFRHC1"
+id: "01HYY8JDH0T5KW2PZFP8TS0GCR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00785765"
 effective: "2024-05-27T14:15:00-05:00"
@@ -14,36 +14,37 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. Doing well, no complaints.
+DM2 f/u. Doing well.
 BP 124/79, pulse 78, wt 221 lb.
 Today: eGFR 61, K 4.5, A1c 7.2%.
+BP at goal. Continue current plan.
 RTC 5 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-052772",
+    "visit_id": "V-2024-052755",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-052772",
+    "visit_id": "V-2024-052755",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-052772",
+    "visit_id": "V-2024-052755",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-052772",
+    "visit_id": "V-2024-052755",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

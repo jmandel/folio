@@ -14,10 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. BP 122/66, pulse 67, wt 196 lb.
-Labs today: eGFR 85, K 4.5, A1c 7.8%.
-A1c slightly up. Reviewed diet with pt, no new complaints.
-RTC 5 mo.
+DM2 f/u. Pt reports no problems since last visit.
+BP 129/71, pulse 67, wt 196 lb.
+A1c 7.8%, eGFR 85, K 4.3 today.
+Reviewed numbers with pt, encouraged diet and activity.
+RTC 3 mo.
 
 ```json payload
 {

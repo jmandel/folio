@@ -1,0 +1,85 @@
+{
+  "patient": "f146",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "dulaglutide",
+      "rxnorm_ingredient": "1551291",
+      "product": "dulaglutide 1.5 MG/0.5 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2020-01-14",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_34"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2024-03-28",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2019-03-01",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_19"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2024-03-28",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 100 MG Oral Tablet",
+      "rxnorm_product": "312938",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    }
+  ]
+}

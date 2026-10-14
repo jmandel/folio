@@ -1,0 +1,35 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "c",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "",
+   "ok": true,
+   "durationMs": 0,
+   "feedbackItems": 0,
+   "summary": "no findings; stopped"
+  }
+ ],
+ "rep": 1,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T135846919Z-s27j",
+ "startedFrom": "20261014T135846919Z-s27j",
+ "note": "CALIBRATION ONLY: key-based counterexamples from the dev split were fed back (cheating-for-calibration upper bound)."
+}

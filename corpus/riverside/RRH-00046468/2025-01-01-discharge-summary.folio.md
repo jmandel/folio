@@ -17,21 +17,21 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnoses.** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated, resolved</ref>. <ref id="dx_pancreatitis">Acute pancreatitis was ruled out</ref> with a normal lipase of 35.
+**Diagnoses.** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated, resolved</ref>. <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref>. Type 2 diabetes and hypertension.
 
-**Hospital course.** The patient was admitted with ketoacidosis and a glucose of 210. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> The patient was treated with an insulin infusion and fluids, and the anion gap closed. On the final panel sodium was 136, potassium 4.2, chloride 104, bicarbonate 23, anion gap 9, urea nitrogen 25, creatinine 1.09 (eGFR 56) and glucose 129. At the last check, BP 135/81, HR 80, RR 16, T 98.6 F, SpO2 94%. The patient is eating and feels well.
+**Hospital course.** The patient is a man with type 2 diabetes and hypertension who was admitted with nausea, fatigue and rapid breathing and found to be in ketoacidosis with a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He was treated with an insulin infusion and IV fluids, and the acidosis cleared. Pancreatitis was considered because of the nausea and was excluded. He was transitioned to subcutaneous insulin and has been eating and feeling well.
 
-**Allergies:** no known drug allergies.
+**Condition at discharge.** Vitals at 12:30: BP 135/81, HR 80, RR 16, T 98.6 F, SpO2 94%. The final panel at 06:19 showed sodium 136, potassium 4.2, chloride 104, bicarbonate 23, anion gap 9, urea nitrogen 25, creatinine 1.09 (eGFR 56) and glucose 129. Allergies: none known.
 
 **Discharge medications**
 
-- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the PCP</ref>
+- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not resume until reviewed by his primary care physician</ref>
 - <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
 - <ref id="med_lisinopril">Lisinopril 40 mg daily: continue</ref>
 - <ref id="med_chlorthalidone">Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: continue</ref>
 - Amlodipine 5 mg daily: continue
 
-**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel. The patient was counseled to return for vomiting, abdominal pain, fast breathing or inability to eat or drink.
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart dapagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {
@@ -132,10 +132,10 @@ schema:
     "sig": "1 tab PO BID with meals",
     "status": "continue"
   },
-  "med_empagliflozin": {
+  "med_dapagliflozin": {
     "type": "home_med",
-    "drug_name": "empagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1545653",
+    "drug_name": "dapagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1488564",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",
@@ -170,7 +170,7 @@ schema:
     "type": "follow_up",
     "with": "Primary care (Northgate Family Medicine)",
     "when_text": "within 1 week",
-    "purpose": "Decide whether to restart empagliflozin; recheck basic metabolic panel"
+    "purpose": "Decide whether to restart dapagliflozin; recheck basic metabolic panel"
   }
 }
 ```

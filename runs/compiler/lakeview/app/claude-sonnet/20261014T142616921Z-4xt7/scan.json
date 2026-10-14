@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../out; cat > ../out/transform.ts <<'EOF'\nimport type { FolioItem, ViewRows, MedicationRow, ProblemRow, AllergyIntoleranceRow, LabResultRow"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; pwd; ls; ls in/out 2>/dev/null; mkdir -p out; mv in/out/transform.ts out/ && rmdir in/out; sh in/harness/check.sh 2024-01-01 2>&1 | head -170"
+  }
+ ],
+ "blocking": 0
+}

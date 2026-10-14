@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'));print(len(d),[ (i['id'],i['recorded'],list(i['payload'].keys())[:3]) for "
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2>&1 | head -300\"}"
+  }
+ ],
+ "blocking": 0
+}

@@ -18,8 +18,9 @@ BP f/u. BP 154/94, repeat 147/93, pulse 66, wt 159 lb.
 
 eGFR 70, K 4.4 today.
 
-BP above goal, so lisinopril dose changed to 20 mg daily today.
-Recheck BP at next visit. RTC 3 mo.
+BP above goal, lisinopril changed to 20 mg daily today.
+
+RTC 3 mo.
 
 ```json payload
 {

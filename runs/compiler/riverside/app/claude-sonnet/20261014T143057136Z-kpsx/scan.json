@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sed -n 641,840p in/feedback.md | cut -c1-400 | grep -v '^\\\\s*$' | head -150\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && cp in/previous/transform.ts out/transform.ts && rm -f out/t.ts out/t2.ts && sh in/harness/check.sh 2>&1 | tail -5\"}"
+  }
+ ],
+ "blocking": 0
+}

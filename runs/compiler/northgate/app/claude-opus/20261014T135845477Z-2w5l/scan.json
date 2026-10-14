@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace(r'''re: /\\\\bace[- ]?inhibitor|\\\\bacei\\\\b/i''', r'''re: /\\\\bace[- ]?inhibi"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\nold='''        mechanism: cls.mechanism,\n        criticality: \\\"unknown\\\",'''\nassert "
+  }
+ ],
+ "blocking": 0
+}

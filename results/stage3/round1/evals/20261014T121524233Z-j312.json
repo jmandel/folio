@@ -1,0 +1,291 @@
+{
+ "runId": "20261014T121524233Z-j312",
+ "source": "homelog",
+ "viewSet": "app",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 59,
+  "items": 4268,
+  "ms": 74.78888999999992,
+  "msPerItem": 0.017523170103092765,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 0.9920844327176781,
+   "recall": 0.9920844327176781,
+   "tp": 752,
+   "fp": 6,
+   "fn": 6
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 21386,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 0.9997290462427746,
+   "recall": 0.9997290462427746,
+   "tp": 22138,
+   "fp": 6,
+   "fn": 6
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.9997741338031351,
+   "recall": 0.9997741338031351,
+   "tp": 22132,
+   "fp": 5,
+   "fn": 5
+  },
+  "narrated": {
+   "precision": 0.8571428571428571,
+   "recall": 0.8571428571428571,
+   "tp": 6,
+   "fp": 1,
+   "fn": 1
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 1,
+   "errors": 0
+  },
+  "T13": {
+   "facts": 17,
+   "errors": 1
+  },
+  "T6": {
+   "facts": 748,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 45,
+   "errors": 0
+  },
+  "T1": {
+   "facts": 3,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "HL-U-58213",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_glargine"
+   ],
+   "items": [
+    "01K2ZKN130SFNNKC5BHBQ4487X",
+    "01KMTFFYM012DNBYBDSS7S2EVN",
+    "01KQN2FD70GFSXF3DM02V7HGMX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KQN2FD70GFSXF3DM02V7HGMX",
+     "entry_id": "med_6"
+    }
+   ]
+  },
+  {
+   "patient": "p032",
+   "local": "HL-U-62713",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_39"
+   ],
+   "items": [
+    "01K7ZBV9RGVEZKJTWDGCMZEB3B",
+    "01KY02X30G1E29YKCVNEDT0DVJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KY02X30G1E29YKCVNEDT0DVJ",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p139",
+   "local": "HL-U-27803",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_53"
+   ],
+   "items": [
+    "01KVP09G5RCC6G2AX0ZH51Y92V"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KVP09G5RCC6G2AX0ZH51Y92V",
+     "entry_id": "med_6"
+    }
+   ]
+  },
+  {
+   "patient": "p168",
+   "local": "HL-U-33478",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_76"
+   ],
+   "items": [
+    "01K9CZEGM0E8PQA33D677XKWPX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K9CZEGM0E8PQA33D677XKWPX",
+     "entry_id": "med_4"
+    }
+   ]
+  },
+  {
+   "patient": "p175",
+   "local": "HL-U-16388",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_96"
+   ],
+   "items": [
+    "01J6QJP97GW1ZRCJ6JPXFB2BTJ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J6QJP97GW1ZRCJ6JPXFB2BTJ",
+     "entry_id": "med_7"
+    }
+   ]
+  },
+  {
+   "patient": "p251",
+   "local": "HL-U-18779",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "ingredient",
+     "expected": "insulin glargine",
+     "actual": "ml pen injector"
+    }
+   ],
+   "traps": [],
+   "modality": "structured",
+   "basis": [
+    "m_86"
+   ],
+   "items": [
+    "01K5Q1YSY060VGMXGEA2D80W8N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K5Q1YSY060VGMXGEA2D80W8N",
+     "entry_id": "med_4"
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G4K1MQARGQ57KWRV3034142X"
+id: "01G4K1MQAR9BVC81011D3YG69X"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00825789"
 effective: "2022-06-02T15:25:00-05:00"
@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">Finerenone 10 mg daily added from Lakeview record.</ref> Confirmed by phone.
+<ref id="med_1">Finerenone 10 mg daily added from Lakeview record.</ref> Confirmed with pt by phone.
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-33292",
+    "med_id": "ML-31802",
     "action": "start",
     "origin": "outside",
     "drug": { "name": "finerenone 10 mg tablet", "outside_code": { "system": "lakeview-drug", "code": "LVD-04471" } },

@@ -16,17 +16,16 @@ schema:
 ---
 ## Progress note
 
-**Interval events.** The patient slept reasonably and reports feeling much better, with less nausea and easier breathing. <ref id="sc_glargine">Insulin glargine 17 units daily was given at 07:00.</ref> The <ref id="iv_insulin">insulin infusion per DKA protocol</ref> is planned to stop at 09:00 after that overlap.
+**Subjective.** Feels much better this morning, breathing comfortably, no abdominal pain. Vitals at 07:16: BP 112/67, HR 78, RR 22, T 98.1 F, SpO2 98%.
 
-**Exam.** At 07:16: BP 112/67, HR 78, RR 22, T 98.1 F, SpO2 98%. Comfortable, mucous membranes moist, abdomen soft and nontender.
-
-**Results.** <ref id="bmp">On the 06:21 panel sodium 132, potassium 4.0, chloride 101, bicarbonate 22, anion gap 9, urea nitrogen 25, creatinine 1.10, eGFR 56, glucose 183.</ref>
+**Results.** On the 06:21 panel <ref id="bmp">sodium 132, potassium 4.0, chloride 101, bicarbonate 22, anion gap 9, urea nitrogen 25, creatinine 1.10, eGFR 56, glucose 183</ref>. The anion gap has closed and bicarbonate has recovered from 14 yesterday.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>: the anion gap has closed and bicarbonate is normal. Continue to advance diet as tolerated and follow glucose.
-2. Home medications: empagliflozin, metformin, lisinopril and chlorthalidone remain held. Amlodipine continues.
-3. No known drug allergies.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving, with the gap closed. <ref id="sc_glargine">Insulin glargine 17 units daily</ref> was given at 07:00. The <ref id="iv_insulin">insulin infusion per DKA protocol</ref> will stop at 09:00 once the basal insulin has had time to act. Dapagliflozin remains held.
+2. Volume depletion: creatinine is down to 1.10 with fluids. Metformin, lisinopril and chlorthalidone remain held.
+3. Hypertension: continue amlodipine.
+4. No known drug allergies.
 
 ```json payload
 {
@@ -141,10 +140,10 @@ schema:
     "sig": "1 tab PO BID with meals",
     "status": "held"
   },
-  "med_empagliflozin": {
+  "med_dapagliflozin": {
     "type": "home_med",
-    "drug_name": "empagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1545653",
+    "drug_name": "dapagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1488564",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"

@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls -R in out; wc -l in/schema/* in/views/* in/previous/*\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cp in/previous/transform.ts out/transform.ts; cat > out/fb.ts <<'EOF'\nimport { transform } from \\\"./transform.ts\\\";\nconst md = await Bun.file"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh > /tmp/o.txt && echo OK; grep -c analyte /tmp/o.txt; cp in/previous/edge.ts in/previous/show.ts out/ 2>/dev/null; bun "
+  }
+ ],
+ "blocking": 0
+}

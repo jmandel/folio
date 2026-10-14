@@ -1,0 +1,650 @@
+{
+ "runId": "20261014T160723195Z-jdnf",
+ "source": "homelog",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 60,
+  "items": 4315,
+  "ms": 204.14307199999996,
+  "msPerItem": 0.04731009779837774,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9943298969072165,
+   "recall": 0.9943298969072165,
+   "tp": 1929,
+   "fp": 11,
+   "fn": 11,
+   "rows": 279,
+   "wrongRows": 11,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 30489,
+   "fp": 0,
+   "fn": 0,
+   "rows": 7506,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.9943298969072165,
+    "recall": 0.9943298969072165,
+    "tp": 1929,
+    "fp": 11,
+    "fn": 11,
+    "rows": 279,
+    "wrongRows": 11,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 269,
+   "total": 269
+  },
+  "medications.status": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.dose": {
+   "ok": 257,
+   "total": 268
+  },
+  "medications.patient_reported": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.otc": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.evidence": {
+   "ok": 279,
+   "total": 279
+  },
+  "medications.status_since": {
+   "ok": 8,
+   "total": 8
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 3992,
+   "total": 3992
+  },
+  "vitals.pulse_bpm": {
+   "ok": 3979,
+   "total": 3979
+  },
+  "vitals.evidence": {
+   "ok": 7506,
+   "total": 7506
+  },
+  "vitals.glucose_mg_dl": {
+   "ok": 3514,
+   "total": 3514
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.9996606614017769,
+   "recall": 0.9996606614017769,
+   "tp": 32405,
+   "fp": 11,
+   "fn": 11
+  },
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 13,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 1,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T13": {
+   "facts": 15,
+   "errors": 11,
+   "patients": 14,
+   "patientsWithError": 11
+  },
+  "T6": {
+   "facts": 875,
+   "errors": 0,
+   "patients": 17,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 51,
+   "errors": 0,
+   "patients": 9,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 6,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "HL-U-58213",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_ibuprofen"
+   ],
+   "items": [
+    "01KMTFFYM012DNBYBDSS7S2EVN",
+    "01KQN2FD70GFSXF3DM02V7HGMX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KQN2FD70GFSXF3DM02V7HGMX",
+     "entry_id": "med_7"
+    }
+   ]
+  },
+  {
+   "patient": "s04",
+   "local": "HL-U-51279",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_36"
+   ],
+   "items": [
+    "01KX4DSKEGZX98EBSRKCZ51BZB",
+    "01M3T09638QQGZW2DNWE7XFKHE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01M3T09638QQGZW2DNWE7XFKHE",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p011",
+   "local": "HL-U-56098",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_89"
+   ],
+   "items": [
+    "01HDC1VFCGDEPJVYY7EB4PVNVZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HDC1VFCGDEPJVYY7EB4PVNVZ",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p026",
+   "local": "HL-U-20255",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_25"
+   ],
+   "items": [
+    "01KXC2D8SRJVW4MQZWZ1QY99F1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KXC2D8SRJVW4MQZWZ1QY99F1",
+     "entry_id": "med_3"
+    }
+   ]
+  },
+  {
+   "patient": "p051",
+   "local": "HL-U-85784",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_89"
+   ],
+   "items": [
+    "01KXKNRF7GXSBFK25F1KKPC4K0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KXKNRF7GXSBFK25F1KKPC4K0",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p096",
+   "local": "HL-U-15994",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_68"
+   ],
+   "items": [
+    "01KN5PPPN01K67BWZY5JCVEC33"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KN5PPPN01K67BWZY5JCVEC33",
+     "entry_id": "med_4"
+    }
+   ]
+  },
+  {
+   "patient": "p179",
+   "local": "HL-U-68021",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_52"
+   ],
+   "items": [
+    "01K3VHQ5G8MZHACWAJAXM2872T",
+    "01KHS8PPC8N92JC3R8NKMAEGED"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KHS8PPC8N92JC3R8NKMAEGED",
+     "entry_id": "med_5"
+    }
+   ]
+  },
+  {
+   "patient": "p207",
+   "local": "HL-U-42392",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_44"
+   ],
+   "items": [
+    "01KWFBSES8WMPZATNV7BGY43H6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KWFBSES8WMPZATNV7BGY43H6",
+     "entry_id": "med_4"
+    }
+   ]
+  },
+  {
+   "patient": "p235",
+   "local": "HL-U-43902",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_19"
+   ],
+   "items": [
+    "01K63WYEF8EK1MJ4XAT2T33WX2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K63WYEF8EK1MJ4XAT2T33WX2",
+     "entry_id": "med_4"
+    }
+   ]
+  },
+  {
+   "patient": "p240",
+   "local": "HL-U-24269",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_81"
+   ],
+   "items": [
+    "01KCS99978WDW5VKWKXWK321C0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KCS99978WDW5VKWKXWK321C0",
+     "entry_id": "med_6"
+    }
+   ]
+  },
+  {
+   "patient": "p248",
+   "local": "HL-U-88494",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "ibuprofen",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 400,
+      "unit": "mg"
+     },
+     "actual": {
+      "value": 200,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T13"
+   ],
+   "modality": "structured",
+   "basis": [
+    "m_76"
+   ],
+   "items": [
+    "01KWYWGGCGRFDPCYFEQRF25RF8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KWYWGGCGRFDPCYFEQRF25RF8",
+     "entry_id": "med_8"
+    }
+   ]
+  }
+ ]
+}

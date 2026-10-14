@@ -1,0 +1,122 @@
+---
+folio: "0.1"
+id: "01FYA4W5Q0R7Y36CB7W8GMKPHF"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00076765"
+effective: "2022-03-16T07:29:00-05:00"
+recorded: "2022-03-16T14:57:00-05:00"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+supersedes:
+  - "01FY9H9YN0S9PW2FVGHDB0VVK7"
+---
+
+```json payload
+{
+  "creat": {
+    "type": "imported_result",
+    "test": { "nfm_code": "CREAT", "name": "Creatinine, serum", "loinc": "2160-0" },
+    "value": "1.20",
+    "unit": "mg/dL",
+    "reference_range": "0.57-1.00",
+    "flag": "H",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-CREAT" },
+    "order_id": "NO-2022-83182"
+  },
+  "egfr": {
+    "type": "imported_result",
+    "test": { "nfm_code": "EGFR", "name": "eGFR (CKD-EPI 2021)" },
+    "value": "48",
+    "unit": "mL/min/1.73m2",
+    "reference_range": ">59",
+    "flag": "L",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "comment": "Calculated by CKD-EPI 2021 (race-free) equation.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-EGFR21" },
+    "order_id": "NO-2022-83182"
+  },
+  "na": {
+    "type": "imported_result",
+    "test": { "nfm_code": "NA", "name": "Sodium, serum", "loinc": "2951-2" },
+    "value": "136",
+    "unit": "mmol/L",
+    "reference_range": "134-144",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-NA" },
+    "order_id": "NO-2022-53243"
+  },
+  "k": {
+    "type": "imported_result",
+    "test": { "nfm_code": "K", "name": "Potassium, serum" },
+    "value": "Result invalidated",
+    "unit": "mmol/L",
+    "reference_range": "3.5-5.1",
+    "result_status": "C",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T14:53:00-05:00",
+    "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 09:10. CORRECTED 03/16/22 14:53: result invalidated, see recollected specimen LV22-075-28989.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-K" },
+    "order_id": "NO-2022-79122"
+  },
+  "chol": {
+    "type": "imported_result",
+    "test": { "nfm_code": "CHOL", "name": "Cholesterol, total", "loinc": "2093-3" },
+    "value": "268",
+    "unit": "mg/dL",
+    "reference_range": "100-199",
+    "flag": "H",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-CHOL" },
+    "order_id": "NO-2022-61941"
+  },
+  "trig": {
+    "type": "imported_result",
+    "test": { "nfm_code": "TRIG", "name": "Triglycerides", "loinc": "2571-8" },
+    "value": "128",
+    "unit": "mg/dL",
+    "reference_range": "0-149",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-TRIG" },
+    "order_id": "NO-2022-61941"
+  },
+  "hdl": {
+    "type": "imported_result",
+    "test": { "nfm_code": "HDL", "name": "HDL cholesterol", "loinc": "2085-9" },
+    "value": "71",
+    "unit": "mg/dL",
+    "reference_range": ">39",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-HDL" },
+    "order_id": "NO-2022-61941"
+  },
+  "ldl": {
+    "type": "imported_result",
+    "test": { "nfm_code": "LDL-CALC", "name": "LDL cholesterol, calculated", "loinc": "13457-7" },
+    "value": "171",
+    "unit": "mg/dL",
+    "reference_range": "0-99",
+    "flag": "H",
+    "result_status": "F",
+    "collected": "2022-03-16T07:29:00-05:00",
+    "resulted": "2022-03-16T09:04:00-05:00",
+    "comment": "Calculated (Friedewald).",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV22-075-26280", "result_code": "LK-LDLC" },
+    "order_id": "NO-2022-61941"
+  }
+}
+```

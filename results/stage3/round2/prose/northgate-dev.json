@@ -1,0 +1,664 @@
+{
+ "source": "northgate",
+ "split": "dev",
+ "runId": "20261014T135527800Z-314b",
+ "costUsd": 0.19911979999999999,
+ "items": [
+  {
+   "patient": "p033",
+   "local": "NFM-00963410",
+   "item_id": "01DTSSP9P00XCGS17ECYVP92MW",
+   "file": "2019-11-28-problem-3-add.folio.md",
+   "as_of": "2019-11-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Primary osteoarthritis of knee",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Primary osteoarthritis of knee, onset 2018."
+    }
+   ]
+  },
+  {
+   "patient": "p053",
+   "local": "NFM-00939231",
+   "item_id": "01HKQDWSRG0WT2SRQGR0E770M9",
+   "file": "2024-01-09-med-losartan-change.folio.md",
+   "as_of": "2024-01-09",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "dose": {
+      "value": 100,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Losartan increased to 100 mg daily."
+    }
+   ]
+  },
+  {
+   "patient": "p280",
+   "local": "NFM-00223606",
+   "item_id": "01JCH3G480864ZS1QY1QZ3NCD5",
+   "file": "2024-11-12-problem-1-add.folio.md",
+   "as_of": "2024-11-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential HTN, onset ~1/2011."
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "NFM-00891028",
+   "item_id": "01DZ4ZQK60Z7BFNSKV4J79RXBN",
+   "file": "2020-01-21-problem-1-add.folio.md",
+   "as_of": "2020-01-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential HTN, onset 2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p100",
+   "local": "NFM-00146853",
+   "item_id": "01GRYMEB20GMX1ENPCF73ASGX4",
+   "file": "2023-02-10-problem-1-add.folio.md",
+   "as_of": "2023-02-10",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "HTN since 2010 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p154",
+   "local": "NFM-00143452",
+   "item_id": "01HFWG0B10C62T0PQVTWF0X1KY",
+   "file": "2023-11-22-problem-1-add.folio.md",
+   "as_of": "2023-11-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential hypertension, onset 2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p257",
+   "local": "NFM-00493958",
+   "item_id": "01FW45HVA08BR1VK5YKQ76R903",
+   "file": "2022-02-17-problem-3-add.folio.md",
+   "as_of": "2022-02-17",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2015 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "NFM-00342977",
+   "item_id": "01HWV89FB0D13YS7WMT56C113S",
+   "file": "2024-05-01-visit-note.folio.md",
+   "as_of": "2024-05-01",
+   "facts": [
+    {
+     "view": "vitals",
+     "systolic_mmhg": 142,
+     "diastolic_mmhg": 84,
+     "ref": null,
+     "quote": "BP 142/84, repeat 140/84"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 74,
+     "date": "2024-05-01",
+     "ref": null,
+     "quote": "Today eGFR 74"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 9,
+     "date": "2024-05-01",
+     "ref": null,
+     "quote": "UACR 9 mg/g"
+    },
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 7.2,
+     "date": "2024-05-01",
+     "ref": null,
+     "quote": "A1c 7.2%"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.5,
+     "date": "2024-05-01",
+     "ref": null,
+     "quote": "repeat K 4.5"
+    }
+   ]
+  },
+  {
+   "patient": "p072",
+   "local": "NFM-00805315",
+   "item_id": "01JJQG9EBGY3EG66ZWXS32XTCF",
+   "file": "2025-01-28-problem-24-add.folio.md",
+   "as_of": "2025-01-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease stage 3b",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "prob_1",
+     "quote": "CKD 3b"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 44,
+     "date": "2024-10-29",
+     "ref": "prob_1",
+     "quote": "eGFR 44 on 10/29/24"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 40,
+     "date": "2025-01-28",
+     "ref": "prob_1",
+     "quote": "40 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 329,
+     "date": "2024-07-08",
+     "ref": "prob_1",
+     "quote": "UACR 329 mg/g on 7/8/24"
+    }
+   ]
+  },
+  {
+   "patient": "p121",
+   "local": "NFM-00467668",
+   "item_id": "01GXNRQ2T01BZQ1PBZW8RVM6M7",
+   "file": "2023-04-10-problem-26-add.folio.md",
+   "as_of": "2023-04-10",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease stage 3b",
+     "status": "active",
+     "ckd_stage": "G3b",
+     "ref": "prob_1",
+     "quote": "CKD 3b."
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 41,
+     "date": "2022-12-06",
+     "ref": "prob_1",
+     "quote": "eGFR 41 on 12/6/22"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 45,
+     "date": "2023-04-10",
+     "ref": "prob_1",
+     "quote": "45 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 49,
+     "date": "2023-04-10",
+     "ref": "prob_1",
+     "quote": "UACR 49 mg/g today"
+    }
+   ]
+  },
+  {
+   "patient": "p005",
+   "local": "NFM-00896798",
+   "item_id": "01HWDVPW503EA7WRV9VZRPEM6K",
+   "file": "2024-04-26-problem-2-add.folio.md",
+   "as_of": "2024-04-26",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2021."
+    }
+   ]
+  },
+  {
+   "patient": "p022",
+   "local": "NFM-00691499",
+   "item_id": "01FX0ZYEJ0016GY0AT3KFC99JN",
+   "file": "2022-02-28-problem-2-add.folio.md",
+   "as_of": "2022-02-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2017 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "NFM-00212600",
+   "item_id": "01JXZMJNEGH7TPXBKJTFBY5B4Z",
+   "file": "2025-06-17-med-empagliflozin-start.folio.md",
+   "as_of": "2025-06-17",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "active",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Empagliflozin 10 mg daily started today."
+    },
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 8.4,
+     "ref": "med_1",
+     "quote": "A1c 8.4"
+    }
+   ]
+  },
+  {
+   "patient": "p189",
+   "local": "NFM-00218652",
+   "item_id": "01KMGG7TKGAGQJ89JQ6PK729DS",
+   "file": "2026-03-24-allergy-lisinopril.folio.md",
+   "as_of": "2026-03-24",
+   "facts": [
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "reaction_type": "side_effect",
+     "ref": "alg_1",
+     "quote": "Dry cough on lisinopril."
+    }
+   ]
+  },
+  {
+   "patient": "p151",
+   "local": "NFM-00371731",
+   "item_id": "01HX7K36MGXD8XZY226TMJQ577",
+   "file": "2024-05-06-med-chlorthalidone-start.folio.md",
+   "as_of": "2024-05-06",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "active",
+     "dose": {
+      "value": 12.5,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Chlorthalidone 12.5 mg daily started today."
+    }
+   ]
+  },
+  {
+   "patient": "p177",
+   "local": "NFM-00172148",
+   "item_id": "01FJJ9D2VGDY2CWYVKNMXZ2QQM",
+   "file": "2021-10-21-med-lisinopril-change.folio.md",
+   "as_of": "2021-10-21",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "active",
+     "dose": {
+      "value": 40,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Lisinopril increased to 40 mg daily."
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "NFM-00655539",
+   "item_id": "01DE5B96B0P9VAQN2GGGN6AVNR",
+   "file": "2019-06-24-problem-1-add.folio.md",
+   "as_of": "2019-06-24",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Essential hypertension",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Essential hypertension, onset 2008."
+    }
+   ]
+  },
+  {
+   "patient": "p069",
+   "local": "NFM-00531772",
+   "item_id": "01JE6PNEAG3FQA994HMVMCMZAG",
+   "file": "2024-12-03-med-metformin-hold.folio.md",
+   "as_of": "2024-12-03",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": "med_1",
+     "quote": "Metformin held today for vomiting and poor oral intake."
+    }
+   ]
+  },
+  {
+   "patient": "p085",
+   "local": "NFM-00586229",
+   "item_id": "01GK034T80YQN8SCZYVNJ88H2V",
+   "file": "2022-11-28-visit-note.folio.md",
+   "as_of": "2022-11-28",
+   "facts": [
+    {
+     "view": "vitals",
+     "systolic_mmhg": 128,
+     "diastolic_mmhg": 75,
+     "ref": null,
+     "quote": "BP 128/75"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 58,
+     "date": "2022-11-28",
+     "ref": null,
+     "quote": "eGFR 58"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.1,
+     "date": "2022-11-28",
+     "ref": null,
+     "quote": "K 4.1"
+    },
+    {
+     "view": "labs",
+     "analyte": "a1c",
+     "value": 7.4,
+     "date": "2022-11-28",
+     "ref": null,
+     "quote": "A1c 7.4% today"
+    }
+   ]
+  },
+  {
+   "patient": "p156",
+   "local": "NFM-00567532",
+   "item_id": "01JCH3S970M7TQH4STD6T53A7Z",
+   "file": "2024-11-12-problem-2-add.folio.md",
+   "as_of": "2024-11-12",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 5/2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p013",
+   "local": "NFM-00978964",
+   "item_id": "01JBYEP7E0R3SKEPCCPG5A15AJ",
+   "file": "2024-11-05-problem-2-add.folio.md",
+   "as_of": "2024-11-05",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes mellitus",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "DM2 since 4/2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "NFM-00677364",
+   "item_id": "01FMX033A0EA15JPK2343K8J2H",
+   "file": "2021-11-19-problem-3-add.folio.md",
+   "as_of": "2021-11-19",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2017."
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "NFM-00845659",
+   "item_id": "01HQXTKDK0KNCKSK729J9MXR74",
+   "file": "2024-03-01-problem-3-add.folio.md",
+   "as_of": "2024-03-01",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Primary osteoarthritis of knee",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Primary osteoarthritis of knee, onset 2021 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p094",
+   "local": "NFM-00924672",
+   "item_id": "01JM019N40ZSTWJBEWHE2EJWFV",
+   "file": "2025-02-13-problem-76-add.folio.md",
+   "as_of": "2025-02-13",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease stage 3a",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "prob_1",
+     "quote": "Added CKD 3a."
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 60,
+     "date": "2024-06-27",
+     "ref": "prob_1",
+     "quote": "eGFR 60 on 6/27/24"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 58,
+     "date": "2025-02-13",
+     "ref": "prob_1",
+     "quote": "58 today"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 13,
+     "date": "2023-11-20",
+     "ref": "prob_1",
+     "quote": "UACR 13 on 11/20/23"
+    }
+   ]
+  },
+  {
+   "patient": "p079",
+   "local": "NFM-00591128",
+   "item_id": "01JBA2YGM09F8DSSSYR966F7Z3",
+   "file": "2024-10-28-problem-2-add.folio.md",
+   "as_of": "2024-10-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperlipidemia",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Hyperlipidemia, onset 2016 per pt."
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "NFM-00236387",
+   "item_id": "01F251F2QGP2HSH0AABRJVEE4X",
+   "file": "2021-03-31-med-lisinopril-change.folio.md",
+   "as_of": "2021-03-31",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "active",
+     "dose": {
+      "value": 40,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Lisinopril increased to 40 mg daily."
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "NFM-00033047",
+   "item_id": "01HSVCCXVGV8YW3VMG8NK83182",
+   "file": "2024-03-25-med-chlorthalidone-start.folio.md",
+   "as_of": "2024-03-25",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "active",
+     "dose": {
+      "value": 12.5,
+      "unit": "mg"
+     },
+     "ref": "med_1",
+     "quote": "Chlorthalidone 12.5 mg daily started today."
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "NFM-00165697",
+   "item_id": "01H8CS8V00DQK8X0ZHMWT4969B",
+   "file": "2023-08-21-referral-created.folio.md",
+   "as_of": "2023-08-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Chronic kidney disease stage 3a",
+     "status": "active",
+     "ckd_stage": "G3a",
+     "ref": "referral",
+     "quote": "chronic kidney disease stage 3a"
+    },
+    {
+     "view": "problems",
+     "condition": "Type 2 diabetes mellitus",
+     "status": "active",
+     "ref": "referral",
+     "quote": "type 2 diabetes mellitus"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 59,
+     "ref": "referral",
+     "quote": "Most recent eGFR is 59"
+    },
+    {
+     "view": "labs",
+     "analyte": "uacr",
+     "value": 311,
+     "ref": "referral",
+     "quote": "UACR 311 mg/g"
+    }
+   ]
+  },
+  {
+   "patient": "p032",
+   "local": "NFM-00283863",
+   "item_id": "01J5BM3QB05N7PJ7EYR9NBY5F2",
+   "file": "2024-08-15-problem-4-add.folio.md",
+   "as_of": "2024-08-15",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Major depressive disorder, recurrent, mild",
+     "status": "active",
+     "ref": "prob_1",
+     "quote": "Major depressive disorder, recurrent, mild."
+    }
+   ]
+  },
+  {
+   "patient": "p128",
+   "local": "NFM-00851400",
+   "item_id": "01HVVGAHQGY2J2PTPZFBBFRB6H",
+   "file": "2024-04-19-med-empagliflozin-start.folio.md",
+   "as_of": "2024-04-19",
+   "facts": []
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd samples; python3 -c \\\"\nimport json;d=json.load(open('samples.json'))\nfor g in d:\n  print(g['patient'])\n  for i in g['items']: print(' ',i['id'],i"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd .. && sh in/harness/check.sh >/dev/null && echo OK && bun out/scratch/t.ts | grep -A12 '\\\"allergies\\\": \\\\[' | tail "
+  }
+ ],
+ "blocking": 0
+}

@@ -1,0 +1,135 @@
+{
+  "patient": "NFM-00342977",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [
+      {
+        "drug_name": "dapagliflozin 10 MG Oral Tablet",
+        "status": "stopped",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01JZ3FATSGS6QSK1VEP6EE85ZZ",
+            "entry_id": "med_1"
+          }
+        ],
+        "status_since": "2025-07-01",
+        "dose": {
+          "value": 10,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "stop_reason": "adverse_reaction",
+        "status_reason_text": "euglycemic DKA",
+        "ingredient": "dapagliflozin"
+      }
+    ],
+    "problems": [
+      {
+        "condition": "Essential hypertension",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01DECP5NP0BJYEDWE3VT8TP1TE",
+            "entry_id": "prob_1"
+          }
+        ],
+        "icd10cm": "I10",
+        "onset": {
+          "value": "2007",
+          "precision": "year"
+        }
+      }
+    ],
+    "allergies": [
+      {
+        "substance": "dapagliflozin",
+        "type": "adverse_reaction",
+        "criticality": "high",
+        "evidence": [
+          {
+            "item_id": "01JZ3FFK4G35044WYMCAHDS4CB",
+            "entry_id": "alg_1"
+          }
+        ],
+        "rxnorm_ingredient": "1488564",
+        "reaction": "Diabetic ketoacidosis",
+        "onset": {
+          "value": "2025-06-24",
+          "precision": "day"
+        }
+      }
+    ],
+    "labs": [
+      {
+        "analyte": "creatinine",
+        "value": 1.15,
+        "unit": "mg/dL",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTX0D0QCFYT00JVYHKCT94",
+            "entry_id": "creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 74,
+        "unit": "mL/min/1.73m2",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTX0D0QCFYT00JVYHKCT94",
+            "entry_id": "egfr"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2021"
+      },
+      {
+        "analyte": "sodium",
+        "value": 136,
+        "unit": "mmol/L",
+        "collected": "2024-05-01T07:17:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01HWTTX0D0QCFYT00JVYHKCT94",
+            "entry_id": "na"
+          }
+        ],
+        "loinc": "2951-2"
+      }
+    ],
+    "vitals": [
+      {
+        "setting": "clinic",
+        "local_time": "2019-06-27T08:58",
+        "evidence": [
+          {
+            "item_id": "01DECKQVEG4B92S8ZK7G2GF669",
+            "entry_id": "vitals"
+          }
+        ],
+        "systolic_mmhg": 131,
+        "diastolic_mmhg": 77,
+        "pulse_bpm": 62,
+        "weight_kg": 79.1
+      }
+    ]
+  }
+}
+{
+  "patient": "NFM-00813593",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [],
+    "problems": [],
+    "allergies": [],
+    "labs": [],
+    "vitals": []
+  }
+}

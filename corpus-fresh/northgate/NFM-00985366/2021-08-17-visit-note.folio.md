@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01FDB47AA0ET4A48R1J7ZNXH4V"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00985366"
+effective: "2021-08-17T14:10:00-05:00"
+recorded: "2021-08-17T17:38:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establish care.
+BP 133/81, pulse 83, wt 202 lb.
+Labs today: eGFR 42, K 4.6, UACR 131 mg/g, A1c 6.5%, LDL 57 mg/dL.
+Metformin dose changed to 500 mg twice daily today given eGFR 42.
+Pt agrees with plan. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-081717",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081717",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081717",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

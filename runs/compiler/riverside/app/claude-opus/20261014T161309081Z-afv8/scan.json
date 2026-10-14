@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/harness/tsconfig.json in/harness/typecheck.ts; ls; ls out 2>/dev/null; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples."
+  }
+ ],
+ "blocking": 0
+}

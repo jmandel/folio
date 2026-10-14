@@ -1,0 +1,42 @@
+{
+ "source": "lakeview",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "9e167ef97aac85d2c4bf130d0c8b581ad410992fae282dec954c742674ed5a70",
+ "viewSetHash": "d3f0920ebb40e2f60db193bd7e8b7bdffbb80be5d248114b816cf98859892f0b",
+ "samples": [
+  "p038/2021-09-07-new-visit.folio.md",
+  "p038/2021-07-11-lab-rq-2107118918.folio.md",
+  "p038/2021-07-11-lab-rq-2107118918-corrected.folio.md",
+  "p038/2021-10-08-phone.folio.md",
+  "p038/2022-01-11-follow-up-visit.folio.md",
+  "p038/2022-06-24-follow-up-visit.folio.md",
+  "p038/2022-10-26-follow-up-visit.folio.md",
+  "p038/2023-03-06-follow-up-visit.folio.md",
+  "p038/2023-06-20-follow-up-visit.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T160914718Z-y985",
+   "ok": true,
+   "costUsd": 1.0487202,
+   "durationMs": 233033,
+   "numTurns": 9,
+   "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 56652,
+    "cache_read_input_tokens": 282901,
+    "output_tokens": 26943
+   },
+   "evalPath": "results/stage3/evals-main-dev/20261014T160914718Z-y985.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/9, prob 0/53, alle –, labs 228/6638, vita 0/104"
+  }
+ ],
+ "rep": 2,
+ "variant": "types-only",
+ "keysSha256": "26ee28163e5c6e69",
+ "final": "20261014T160914718Z-y985"
+}

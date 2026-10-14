@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'\ns=open(p).read()\ns=s.replace('\\\"11558-4\\\": \\\"ph\\\", \\\"2744-1\\\": \\\"ph\\\", \\\"2019-8\\\": \\\"pco2\\\",','\\\"11558-"
+  }
+ ],
+ "blocking": 0
+}

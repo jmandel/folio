@@ -15,9 +15,9 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Chronic care visit. Feels well.
-BP 135/78, pulse 64, wt 219 lb.
+BP 142/83, repeat 137/83, pulse 64, wt 219 lb.
 Labs 9/21: eGFR 62, K 4.4, A1c 7%, LDL 73 mg/dL.
-BP better than last visit.
+BP above goal, losartan dose changed to 100 mg daily today.
 RTC 4 mo.
 
 ```json payload

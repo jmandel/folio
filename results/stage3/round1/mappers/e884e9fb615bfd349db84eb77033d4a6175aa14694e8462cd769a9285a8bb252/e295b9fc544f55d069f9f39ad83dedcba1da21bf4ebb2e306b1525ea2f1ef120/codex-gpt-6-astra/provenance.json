@@ -1,0 +1,47 @@
+{
+ "source": "lakeview",
+ "schema_sha256": "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252",
+ "view_set": "uscore",
+ "view_set_hash": "e295b9fc544f55d069f9f39ad83dedcba1da21bf4ebb2e306b1525ea2f1ef120",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "chosen": {
+  "condition": "a",
+  "runId": "20261014T122531333Z-z31u",
+  "eval": "results/stage3/evals/20261014T122531333Z-z31u.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 161,
+  "precision": 1,
+  "recall": 1,
+  "ms_per_item": 0.07732760047058822
+ },
+ "samples_from_training_patients": [
+  "p256/2026-01-27-new-visit.folio.md",
+  "p047/2024-05-01-lab-rq-2405012170.folio.md",
+  "p047/2024-05-01-lab-rq-2405012170-corrected.folio.md",
+  "p256/2026-03-03-phone.folio.md",
+  "p256/2026-07-13-follow-up-visit.folio.md",
+  "p047/2019-06-22-lab-rq-1906220560.folio.md",
+  "p047/2020-02-13-lab-rq-2002131454.folio.md",
+  "p047/2020-12-23-lab-rq-2012238638.folio.md",
+  "p047/2021-10-19-lab-rq-2110196198.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T122531333Z-z31u",
+   "rounds": [
+    {
+     "runId": "20261014T122531333Z-z31u",
+     "summary": "tsc=ok det=true errors=0/161 P=100.0% R=100.0% medi:100.0% prob:n/a alle:n/a labs:100.0% vita:n/a 0.072ms/item"
+    }
+   ]
+  }
+ }
+}

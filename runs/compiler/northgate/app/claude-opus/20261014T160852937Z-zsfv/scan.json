@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh 2>&1 | head -200; sh in/harness/check.sh 2021-07-11 | grep -A3 '\\\"analyte\\\"' | head -40\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd .. && bun out/scratch/t.ts | grep -B2 -A3 '\\\"dose\\\"' | grep -E 'value|unit'; sh in/harness/check.sh >/dev/null && e"
+  }
+ ],
+ "blocking": 0
+}

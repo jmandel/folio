@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01JJNA0DKGVSMWGD0WCA6FB396"
+issuer: "did:web:homelog.example"
+patient: "HL-U-67645"
+effective: "2025-01-26"
+recorded: "2025-01-28T01:56:54Z"
+author:
+  id: "urn:homelog:user:HL-U-67645"
+  name: "Janet Sanchez"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01JJK6BV08NMYAG5A4X2BY9WSP"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2025-01-26T06:39",
+    "value": 156,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2025-01-26T06:49",
+    "systolic_mmhg": 140,
+    "diastolic_mmhg": 85,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2025-01-26T21:51",
+    "homelog_med_id": "med_4",
+    "med_name": "Lantus",
+    "status": "taken",
+    "amount": 10,
+    "amount_unit": "units"
+  }
+}
+```

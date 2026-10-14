@@ -1,0 +1,500 @@
+{
+ "runId": "20261014T121750720Z-pn2k",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 32,
+  "items": 141,
+  "ms": 22.459744000000004,
+  "msPerItem": 0.15928896453900712,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 720,
+   "fp": 0,
+   "fn": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 0.9024390243902439,
+   "tp": 74,
+   "fp": 0,
+   "fn": 8
+  },
+  "allergies": {
+   "precision": 0.7894736842105263,
+   "recall": 0.42857142857142855,
+   "tp": 15,
+   "fp": 4,
+   "fn": 20
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 3190,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 669,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 0.9991438356164384,
+   "recall": 0.9940374787052811,
+   "tp": 4668,
+   "fp": 4,
+   "fn": 28
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 0.9900249376558603,
+   "tp": 794,
+   "fp": 0,
+   "fn": 8
+  },
+  "structured": {
+   "precision": 0.998968540484786,
+   "recall": 0.9948638931689779,
+   "tp": 3874,
+   "fp": 4,
+   "fn": 20
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 144,
+   "errors": 0
+  },
+  "T19": {
+   "facts": 2,
+   "errors": 0
+  },
+  "T1": {
+   "facts": 17,
+   "errors": 0
+  },
+  "T18": {
+   "facts": 34,
+   "errors": 12
+  },
+  "T10": {
+   "facts": 1164,
+   "errors": 0
+  },
+  "T12": {
+   "facts": 13,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 1028,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": [
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_161"
+   ],
+   "items": []
+  },
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_31"
+   ],
+   "items": [
+    "01H24A8XZ0F0J4QQBRXSBKP21Z"
+   ]
+  },
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "allergy",
+     "actual": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_33"
+   ],
+   "items": [],
+   "evidence": [
+    {
+     "item_id": "01H24A8XZ0F0J4QQBRXSBKP21Z",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_139"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p010",
+   "local": "RRH-00901190",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_61"
+   ],
+   "items": [
+    "01GWBBQM10BXC77NG1AY2J26FC"
+   ]
+  },
+  {
+   "patient": "p010",
+   "local": "RRH-00901190",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "allergy",
+     "actual": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_63"
+   ],
+   "items": [],
+   "evidence": [
+    {
+     "item_id": "01GWBBQM10BXC77NG1AY2J26FC",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  },
+  {
+   "patient": "p016",
+   "local": "RRH-00827796",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_179"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p114",
+   "local": "RRH-00450813",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_98"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p128",
+   "local": "RRH-00941538",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_102"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p169",
+   "local": "RRH-00149489",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_65"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p202",
+   "local": "RRH-00513200",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_109"
+   ],
+   "items": [
+    "01HGSCVNT0R25PW219ACT7KZH7"
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "RRH-00513200",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "allergy",
+     "actual": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_111"
+   ],
+   "items": [],
+   "evidence": [
+    {
+     "item_id": "01HGSCVNT0R25PW219ACT7KZH7",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  },
+  {
+   "patient": "p224",
+   "local": "RRH-00455285",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_162"
+   ],
+   "items": []
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_168"
+   ],
+   "items": [
+    "01GMF9ZZM0R9YCV8011W2NBNX0"
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "allergy",
+     "actual": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_170"
+   ],
+   "items": [],
+   "evidence": [
+    {
+     "item_id": "01GMF9ZZM0R9YCV8011W2NBNX0",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  },
+  {
+   "patient": "p260",
+   "local": "RRH-00046468",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "type",
+     "expected": "adverse_reaction"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_150"
+   ],
+   "items": []
+  }
+ ]
+}

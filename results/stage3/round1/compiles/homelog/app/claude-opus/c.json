@@ -1,0 +1,32 @@
+{
+ "source": "homelog",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "c",
+ "schemaSha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p207/2026-07-15-day.folio.md",
+  "p071/2024-09-06-my-medicines.folio.md",
+  "p143/2026-04-15-day.folio.md",
+  "p071/2023-11-24-my-medicines.folio.md",
+  "p071/2024-11-21-day.folio.md",
+  "p143/2026-04-08-my-medicines.folio.md",
+  "p207/2026-07-01-my-medicines.folio.md",
+  "p071/2023-11-24-day.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "",
+   "ok": true,
+   "durationMs": 0,
+   "feedbackItems": 0,
+   "summary": "no findings; stopped"
+  }
+ ],
+ "final": "20261014T120430526Z-evni",
+ "startedFrom": "20261014T120430526Z-evni",
+ "note": "CALIBRATION ONLY: key-based counterexamples from the dev split were fed back (cheating-for-calibration upper bound)."
+}

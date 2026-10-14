@@ -1,0 +1,45 @@
+{
+  "patient": "f005",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2012-12", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Primary osteoarthritis of knee",
+        "icd10": "M17.9",
+        "snomed": "239873007",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2023-07-13", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2023-07-13",
+        "sources": ["B", "C"],
+        "basis": ["c_64"]
+      }
+    ],
+    "resolved": []
+  }
+}
