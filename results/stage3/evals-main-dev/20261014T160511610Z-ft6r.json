@@ -1,0 +1,667 @@
+{
+ "runId": "20261014T160511610Z-ft6r",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "dev",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 6,
+  "items": 72,
+  "ms": 12.780120999999998,
+  "msPerItem": 0.1775016805555555,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 350,
+   "fp": 0,
+   "fn": 0,
+   "rows": 50,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 0.7142857142857143,
+   "tp": 15,
+   "fp": 0,
+   "fn": 6,
+   "rows": 7,
+   "wrongRows": 2,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 0.875,
+   "recall": 0.875,
+   "tp": 14,
+   "fp": 2,
+   "fn": 2,
+   "rows": 4,
+   "wrongRows": 2,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 0.9845081332300543,
+   "tp": 1271,
+   "fp": 0,
+   "fn": 20,
+   "rows": 253,
+   "wrongRows": 4,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 198,
+   "fp": 0,
+   "fn": 0,
+   "rows": 33,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 119,
+    "fp": 0,
+    "fn": 0,
+    "rows": 17,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 0.5,
+    "tp": 3,
+    "fp": 0,
+    "fn": 3,
+    "rows": 2,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.75,
+    "recall": 0.75,
+    "tp": 3,
+    "fp": 1,
+    "fn": 1,
+    "rows": 1,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 347,
+    "fp": 0,
+    "fn": 0,
+    "rows": 68,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 54,
+    "fp": 0,
+    "fn": 0,
+    "rows": 9,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 231,
+    "fp": 0,
+    "fn": 0,
+    "rows": 33,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 0.8,
+    "tp": 12,
+    "fp": 0,
+    "fn": 3,
+    "rows": 5,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9166666666666666,
+    "recall": 0.9166666666666666,
+    "tp": 11,
+    "fp": 1,
+    "fn": 1,
+    "rows": 3,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 0.9788135593220338,
+    "tp": 924,
+    "fp": 0,
+    "fn": 20,
+    "rows": 185,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 144,
+    "fp": 0,
+    "fn": 0,
+    "rows": 24,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 50,
+   "total": 50
+  },
+  "medications.status": {
+   "ok": 50,
+   "total": 50
+  },
+  "medications.dose": {
+   "ok": 50,
+   "total": 50
+  },
+  "medications.frequency": {
+   "ok": 50,
+   "total": 50
+  },
+  "medications.patient_reported": {
+   "ok": 50,
+   "total": 50
+  },
+  "medications.evidence": {
+   "ok": 50,
+   "total": 50
+  },
+  "problems.status": {
+   "ok": 5,
+   "total": 7
+  },
+  "problems.evidence": {
+   "ok": 5,
+   "total": 7
+  },
+  "labs.value": {
+   "ok": 249,
+   "total": 253
+  },
+  "labs.unit": {
+   "ok": 249,
+   "total": 253
+  },
+  "labs.status": {
+   "ok": 249,
+   "total": 253
+  },
+  "labs.evidence": {
+   "ok": 249,
+   "total": 253
+  },
+  "labs.egfr_equation": {
+   "ok": 26,
+   "total": 26
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 33,
+   "total": 33
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 33,
+   "total": 33
+  },
+  "vitals.pulse_bpm": {
+   "ok": 33,
+   "total": 33
+  },
+  "vitals.weight_kg": {
+   "ok": 33,
+   "total": 33
+  },
+  "vitals.evidence": {
+   "ok": 33,
+   "total": 33
+  },
+  "allergies.reaction_type": {
+   "ok": 2,
+   "total": 4
+  },
+  "allergies.mechanism": {
+   "ok": 4,
+   "total": 4
+  },
+  "allergies.evidence": {
+   "ok": 4,
+   "total": 4
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 0.9838274932614556,
+   "tp": 365,
+   "fp": 0,
+   "fn": 6
+  },
+  "structured": {
+   "precision": 0.9986531986531987,
+   "recall": 0.9853820598006644,
+   "tp": 1483,
+   "fp": 2,
+   "fn": 22
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 50,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  },
+  "T10": {
+   "facts": 286,
+   "errors": 4,
+   "patients": 6,
+   "patientsWithError": 2
+  },
+  "T14": {
+   "facts": 253,
+   "errors": 4,
+   "patients": 5,
+   "patientsWithError": 2
+  },
+  "T18": {
+   "facts": 8,
+   "errors": 2,
+   "patients": 3,
+   "patientsWithError": 1
+  },
+  "T12": {
+   "facts": 2,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 2,
+   "errors": 0,
+   "patients": 2,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "p154",
+   "local": "RRH-00042445",
+   "asOf": "2025-03-31",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01J9FHFYN022XMP813A6DRS7EK"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_56"
+   ],
+   "items": [
+    "01J9FHFYN022XMP813A6DRS7EK"
+   ]
+  },
+  {
+   "patient": "p154",
+   "local": "RRH-00042445",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "hypersensitivity",
+     "actual": "serious_adverse_event"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_58",
+    "c_56"
+   ],
+   "items": [
+    "01J9FHFYN022XMP813A6DRS7EK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J9FHFYN022XMP813A6DRS7EK",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "RRH-00388366",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "ph@2025-06-24T16:17:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "7.08"
+    },
+    {
+     "field": "unit",
+     "expected": "[pH]"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JYJ5CY90HWSVZC5HYP60F3RB"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_119"
+   ],
+   "items": [
+    "01JYJ5CY90HWSVZC5HYP60F3RB"
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "RRH-00388366",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2025-06-24T16:17:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "27"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JYJ5CY90HWSVZC5HYP60F3RB"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_120"
+   ],
+   "items": [
+    "01JYJ5CY90HWSVZC5HYP60F3RB"
+   ]
+  },
+  {
+   "patient": "p128",
+   "local": "RRH-00941538",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "ph@2025-09-23T00:03:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "7.19"
+    },
+    {
+     "field": "unit",
+     "expected": "[pH]"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01K5TRMH905J6T79GAWK9J6PJ0"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_73"
+   ],
+   "items": [
+    "01K5TRMH905J6T79GAWK9J6PJ0"
+   ]
+  },
+  {
+   "patient": "p128",
+   "local": "RRH-00941538",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2025-09-23T00:03:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "24"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01K5TRMH905J6T79GAWK9J6PJ0"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_74"
+   ],
+   "items": [
+    "01K5TRMH905J6T79GAWK9J6PJ0"
+   ]
+  },
+  {
+   "patient": "p154",
+   "local": "RRH-00042445",
+   "asOf": "2026-10-13",
+   "view": "problems",
+   "key": "angioedema",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "status",
+     "expected": "active"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01J9FHFYN022XMP813A6DRS7EK"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [],
+   "modality": "narrated",
+   "basis": [
+    "c_56"
+   ],
+   "items": [
+    "01J9FHFYN022XMP813A6DRS7EK"
+   ]
+  },
+  {
+   "patient": "p154",
+   "local": "RRH-00042445",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "lisinopril",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "hypersensitivity",
+     "actual": "serious_adverse_event"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_58",
+    "c_56"
+   ],
+   "items": [
+    "01J9FHFYN022XMP813A6DRS7EK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J9FHFYN022XMP813A6DRS7EK",
+     "entry_id": "dx_angioedema"
+    }
+   ]
+  }
+ ]
+}

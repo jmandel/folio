@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls; ls out node_modules 2>&1 | head; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print([ (g['patient'],[i['id'] fo"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && sed -i '/^export type { Evidence };$/d; s/, vitamin_d: \\\"cholecalciferol\\\",/,/' transform.ts && cd .. && sh in/harness/check.sh 2>&1 | pyt"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"python3 - <<HEREDOC\nbun scratch.ts | grep -A3 '\\\"dose\\\"' | head -30; cd .. && sh in/harness/check.sh >/dev/null && echo OK\"}"
+  }
+ ],
+ "blocking": 0
+}

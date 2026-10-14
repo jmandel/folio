@@ -1,165 +1,108 @@
-# Stage 3 receipt (round 2)
+# Stage 3 receipt (round 3)
 
-Branch `stage3`. This round reworks Stage 3 after the audit in [`stage3-audit.md`](stage3-audit.md). The claim under
-test: given a source's `.d.ts` and about eight sample items, a CLI agent writes a deterministic mapper into
-consumer-defined views that is correct on held-out patients, and passing mappers are cached by schema hash.
+Branch `stage3`. Round 3 answers the audit that blocked round 2 (the auditor's report is summarized in the
+coordinator's brief; the round-2 audit is [`stage3-audit.md`](stage3-audit.md)). All numbers are in
+[`results/stage3/SCORECARD.md`](../results/stage3/SCORECARD.md) and `scorecard.json`; every number there names run ids
+or files. Round 1 and round 2 results are kept in `results/stage3/round1/` and `round2/` and are not used.
 
-The full numbers are in [`results/stage3/SCORECARD.md`](../results/stage3/SCORECARD.md) and `scorecard.json`;
-every number there names its run ids. Round-1 results (views v1, keys changed after triage on the test split)
-are kept in `results/stage3/round1/` and are not used.
+## What changed
 
-## What changed since round 1
+1. **Truth and keys** (`work/decisions.md`, "Stage 3 round 3"; commit `ffef1875`, then `068503e5`). Each change was checked against the regenerated raw items.
+   - **HomeLog levothyroxine.** The strength text now uses the product's unit ("75 mcg").
+   - **Restarts after a reaction.** No patient is restarted on a drug, or a drug of the same class, after an adverse reaction. This was p218's empagliflozin after DKA; ACE inhibitors are now stopped from a planned angioedema.
+   - **Duplicate lines.** The duplicate medication lines behind the duplicate active-meds answers are gone (s04 amlodipine, p104 dapagliflozin).
+   - **Plausibility check.** `buildTruth` checks these rules on every build. Implausible population patients are regenerated from a derived seed.
+   - **Prose-only status.** In the merged key, a status that no structured record carries is reported as prose-only, not as a wrong row.
+   - **Underdetermined cases** are now written into views v3 and the scorer:
+     - "nightly" is accepted as QHS or QD;
+     - no dose is expected without directions;
+     - a patient list that names one drug twice with different statuses is not scored.
+   - **Notes.** 165 + 3 changed notes were regenerated with the Stage 1 note pipeline.
+2. **Views v3, written blind** (`work/views-v3/`, run `20261014T151559955Z-roja`).
+   - **Inputs.** A fresh sandboxed Opus agent got only a brief of output semantics in generic words, and the v2 types with all comments removed. It never saw sources, corpus, truth or the generator. The types came out byte-identical.
+   - **Example revision.** A second blind run (`20261014T151839328Z-up74`) replaced two examples that named drugs coinciding with corpus cases: ibuprofen 200 mg × 2, and sertraline. It was told only those two names.
+   - **Leak check.** `cli/leakcheck.ts` ran `rg -F` for every quoted string and number-with-unit against sources/, the generator, the renderers and the corpus. The only matches are the skeleton's own field values and analyte names, generic terms, and arithmetic examples.
+   - **v2 is kept** as the "views with source hints" condition (`packages/views/v2/`).
+3. **Fresh held-out cohort.**
+   - **Freeze.** Key and scorer code were frozen at hash `26ee28163e5c6e69` before the cohort was generated.
+   - **Cohort.** `corpus-fresh/`: 180 patients, seed `folio-stage3-fresh-final`, ids f001…, with trap-targeted quotas (`packages/truth/src/cohort.ts`). Notes come from the same pipeline (about $32).
+   - **Not looked at.** I looked only at aggregate trap counts, to size the cohort; I didn't triage on it. An earlier seed was used to debug generator plausibility and is not used.
+   - **Secondary table.** The old test split is reported only as a secondary table.
+4. **Runs.**
+   - **Compiles.** All compile on the main corpus (training samples, dev-split evaluation for the cache gate). Then each mapper is scored once on the fresh cohort at three as-of dates, with 2026-10-13 primary.
+   - **Views v3, condition a:** 3 runs each for Opus, codex and Sonnet, all four sources.
+   - **Docs ablation:** full schema vs types-only, Opus, 3 runs each, all four sources.
+   - **Views v2:** Opus, 3 runs per source. These reuse the three round-2 Opus one-shot runs (views v2, compiled before round 3) to stay within budget; they are not new compiles.
+   - **Outcome:** all 60 mappers type-check, run without exceptions on every fresh patient and date, and are deterministic.
+5. **Other fixes.**
+   - **Validator.** It now stores every issue (no cap), checks terminology against tx.fhir.org (`-txCache` in `build/`), and reports terminology errors apart from structural ones.
+   - **Cache gate.** A cached mapper must also have (wrong + extra) / rows < 1% in every view on the main dev split. This was set and recorded before any held-out run; 9 mappers pass.
+   - **Prose check.** The prose cross-check is dropped from the scorecard.
+   - **Codex probe.** A codex probe with codex's own command sandbox off inside bwrap (`runs/compiler/isolation-probe-v2/codex-nosandbox/`) shows github.com refused at the proxy (403, logged DENY) and chatgpt.com tunneled through it (ALLOW).
+   - **Footnotes.** The stratification and trap footnotes are now computed from the data.
 
-### Isolation
+## Headline: views v3, one-shot, fresh cohort, 2026-10-13
 
-- **No network except the model APIs.** Agents now run under bubblewrap with `--unshare-net`. The only way out is a per-run CONNECT proxy, running in a separate process, which allows only the model API hosts and logs every connection (`packages/compiler/src/egress.ts`, `sandbox.ts`).
-- **Nothing else reachable.** `$HOME`, `/tmp` and `/run/user` are empty mounts. The environment is cleared. IPC, PID and UTS namespaces are private. Claude's web tools are disallowed.
-- **Probe runs** are kept in `runs/compiler/isolation-probe-v2/{claude,codex}/`. They show:
-  - github.com is refused (403 at the proxy; no DNS directly)
-  - the model API answers only through the proxy
-  - the repo, `~/.claude/projects` and the D-Bus session can't be reached
-- **Transcript scan.** `packages/compiler/src/scan.ts` checks every tool call for paths outside the run dir and for network, IPC or web tools. It covered all 136 recorded runs, rounds 1 and 2:
-  - **Agent calls:** 0 network-tool, IPC or web-tool calls.
-  - **Denied connections:** 397, all from the codex CLI itself (ab.chatgpt.com and an image CDN).
-  - **Out-of-run paths:** 392 path mentions. I checked them by hand. They are codex looking for `AGENTS.md` up the directory tree, `cd ..` inside the run dir, and globs over the empty parent mount.
-- **Gate.** The compile loop applies the same scan as a gate. It rejected one round-2 run (`20261014T142410689Z-3cbh`) because a heredoc body matched a tool name. I fixed the scanner, and `cli/regate.ts` reinstated that run; its record says so.
+Wrong-row rate in percent: mean (min–max) over 3 runs; `+n` is extra rows in the worst run.
 
-### Keys
-
-- **Judge.** A separate Opus agent judged the three round-1 key changes (`results/stage3/key-judge.md`, run `20261014T135017132Z-r02v`). It saw only the source docs, the truth model, generator excerpts and the key code, with no mapper output and no scores. Its verdicts:
-  - **One row per ingredient:** before not justified, after justified.
-  - **HomeLog "taking" + "stop for now" → held:** before ambiguous, after justified.
-  - **Riverside drug-caused diagnosis → allergy row:** after not justified by v1, because the substance and the existence of the row depended on another source's record.
-- **v2 rules.** The Riverside rule now follows views v2 explicitly. The diagnosis label decides; the substance is the one drug of that class on the same document's list, otherwise the class as written.
-- **Defects the judge found, all fixed:**
-  - The one-per-ingredient collapse ran before publication scoping.
-  - A drug-diagnosis row could duplicate an allergy-list row.
-  - HomeLog recency used list position.
-- **HomeLog at earlier dates.** Keys are now scoped by when each item was published. This fixes the HomeLog day-page bug at earlier as-of dates.
-- **Freeze.** Keys and scorer were frozen at commit `a3df06b3`, hash `bb7c7cb090a2d081` (recorded in every compile record), before any round-2 compile.
-- **Triage on train and dev only.** The hand-written reference mappers have 0 wrong and 0 extra rows on train and dev at all three dates. The test split is scored once per run.
-
-### Views v2
-
-Changes in `packages/views/views.d.ts`:
-
-- **Sensitive entries** are reported and tagged with `sensitivity: Sensitivity[]`, never dropped. The categories are mental-health, substance-use, sexual-reproductive-health, hiv-sti and genetic.
-- **Zone-less times** are read as America/Chicago local time.
-- **Drug-caused diagnoses** yield both a problem row and an avoid-row, with the substance rule above.
-- **On a patient's list, "taking" with a "stop for now" note is `held`.**
-- **Tablet doses** are converted to mg when the strength is known; a range gives no dose.
-- **The allergy view** is now a list of substances to avoid. It has `reaction_type` (hypersensitivity / side_effect / serious_adverse_event) and `mechanism` (immune / non_immune / unknown). ACE-inhibitor angioedema is hypersensitivity, non-immune.
-- **US Core fixes.** In `uscore.d.ts`, `statusReason` is a single CodeableConcept, as FHIR R4 has it. `requester` is now included, which us-core-21 requires. The HL7 validator found both.
-
-### Scoring
-
-- **Per view, not pooled.** Each view is reported separately, with wrong-row rates next to precision and recall.
-- **More fields scored:**
-  - evidence citations
-  - allergy onset, reaction, reaction type and mechanism
-  - lab status
-  - `otc`, `patient_reported` and `sensitivity`
-- **Three as-of dates:** 2023-06-30, 2025-03-31 and 2026-10-13.
-- **Traps:** reported per trap, with the number of distinct held-out patients, and with volume traps listed separately.
-- **Stratified split.** The split is stratified by (source, trap). Every trap reaches 10 or more held-out patients except where the corpus has too few:
-  - Lakeview T1: 13 patients in all
-  - Lakeview T13: 2
-  - Lakeview T19: 1
-  - Riverside T19: 1
-  - HomeLog T14: 18
-  - HomeLog T19: 1
-- **Training samples.** For each trap, the scorecard says whether the training samples show it.
-
-### Other changes
-
-- **Repeats.** There are three independent one-shot runs per cell for Opus, codex and Sonnet; conditions b and c run once each.
-- **Ablation.** Opus, condition a, ran three times each on Northgate and Riverside with every schema comment removed.
-- **FHIR validation.** I ran the official HL7 validator (US Core 8.0.1, terminology offline) over the hero plus 25 held-out patients per source.
-
-## Headline: one-shot mappers by view
-
-Wrong-row rate in percent: mean (min–max) over three runs, pooled over three dates. Held-out test split.
-
-| Source | View | rows/run | Opus | codex | Sonnet |
+| Source | View | rows | Opus | codex | Sonnet |
 |---|---|---|---|---|---|
-| Northgate | meds / problems / allergies / labs / vitals | 2165 / 1753 / 66 / 23884 / 3228 | 0 in all views and runs | 0 | 0 |
-| Lakeview | meds / problems / labs / vitals | 43 / 245 / 24045 / 617 | 0 | 0 | 0 |
-| Riverside | medications | 284 | 0.0 | 0.0 | 12.4 (0.0–18.7) |
-| Riverside | allergies | 33 | 0.0 | 0.0 | 17.2 (0.0–51.5) |
-| Riverside | labs | 1817 | 0.0 | 0.0 | 0.9 (0.0–1.9) |
-| Riverside | problems / vitals | 79 / 241 | 0 | 0 | 0 |
-| HomeLog | medications | 371 | 0.7 (0.5–0.8) | 2.5 (0.3–3.8) | 1.6 (0.5–3.8) |
-| HomeLog | vitals | 10462 | 0.0 | 0.0 | 0.0 |
+| Northgate | medications / labs / vitals | 1015 / 13126 / 1664 | 0 | 0 | 0 |
+| Northgate | problems | 724 | 0.0 | 3.0 (0.0–4.6), +33 | 0.0 |
+| Northgate | allergies | 87 | 13.0 (0.0–19.5) | 19.5 | 19.5 |
+| Lakeview | all four views | 31 / 181 / 13411 / 500 | 0 | 0 (+1 extra problem) | 0 |
+| Riverside | medications / vitals | 549 / 487 | 0 | 0 | 0 |
+| Riverside | problems | 119 | 0.0 | 0.0 | 4.8 (0.0–14.3) |
+| Riverside | allergies | 77 | 0.0 | 0.0, +15 | 4.8 (0.0–14.3) |
+| Riverside | labs | 3736 | 0.0 | 0.0 | 0.9 (0.0–2.6) |
+| HomeLog | medications | 463 | 1.2 (0.0–3.0) | 8.1 (6.0–9.1) | 3.9 (2.8–6.0) |
+| HomeLog | vitals | 10663 | 0 | 0 | 0 |
 
-All 36 one-shot runs type-check, run without exceptions on every patient and date, are deterministic, and have no
-contract issues. US Core: every run has 0 wrong medication or lab rows, except HomeLog medications at 0.5%. The
-HL7 validator reports 0 errors in 7 of 8 runs. The eighth, Riverside Opus, has 1 error: a duplicate resource id. Most
-warnings are offline terminology and best-practice rules.
+## What the errors are (from the Fields and Traps tables, not from triage on the fresh cohort)
 
-## What the remaining errors are
+- **Northgate allergies: a conflict between the frozen key and the source's own documentation.** Every backend reports `mechanism: "immune"` for entries Northgate types `allergy`. Northgate's schema defines that type as immune-mediated, and views v3 say "immune when the source says so". The frozen key accepts only `non_immune`/`unknown`, because the truth knows no immune-mediated reaction. I found the cause on the main dev split (same pattern, 2/10 rows); I did not change the frozen key. The scorecard says so, and the Fields table shows `allergies.mechanism` 890/972 (Opus) and 849/972 (codex, Sonnet).
+- **Northgate problems, codex:** year-only onsets read wrongly (`problems.onset` 5890/6012; T17 102/2295), plus extra rows.
+- **HomeLog medications:**
+  - paused-by-note entries not read as held (T1: Opus 19/51, codex 34/51 facts)
+  - OTC medicines (T13: codex and Sonnet 42/84)
+  - a few ingredient and dose misses
+- **Riverside, Sonnet only:**
+  - one run's problems and allergies (T18 28/915)
+  - lab rows in another run
 
-- **Riverside, Sonnet:**
-  - "1 tab PO nightly" read as frequency `other` instead of QHS (53 rows per run in two runs).
-  - Venous blood-gas pH and pCO2 left out (one or two runs).
-  - SGLT2i-associated DKA typed `side_effect` instead of `serious_adverse_event` (one run, 16 rows).
-- **HomeLog, all backends:**
-  - "2 when my back hurts" (200 mg tablets) not converted to 400 mg, which is the v2 tablet rule.
-  - A list naming Jardiance twice, one entry `taking` with no dates and one `stopped` 2024-09. The key prefers the current entry; the view does not settle this, and the judge flagged the same point.
-  - One corpus quirk: the generator writes levothyroxine strength as "75 mg". Sonnet "corrected" it to mcg.
-- **Volume traps.** No backend made a single error on T7, T9, T11 or T16 in any run.
-- **Judgment traps.** T1, T3, T4, T5, T12, T17, T18 and T19 also had 0 errors, except Sonnet on Riverside T18 (17/198) and T15 (106/852).
+## Views v2 vs v3, and the documentation ablation (Opus)
 
-## Documentation ablation (Opus, three runs)
+- **v2 vs v3.** With v2 (source hints) every view is at 0 wrong rows. With v3, Northgate allergies are at 13.0% (the mechanism conflict above) and HomeLog medications at 1.2%. Everything else is the same.
+- **Ablation, types-only schema vs full schema (views v3):**
+  - Lakeview labs: 1.9% in all three runs (full: 0)
+  - Riverside allergies: 7.4% (0–22.1); medications 0.7%
+  - Northgate allergies: 18.4% (0–55.2) vs 13.0%; vitals 0.1%
+  - HomeLog: no difference
 
-| Source | full docs | types only |
-|---|---|---|
-| Northgate | 0 wrong rows in every view | 0 wrong rows in every view |
-| Riverside | 0 | meds 12.8% (1.1–18.7), allergies 4.0% (0.0–6.1); other views 0 |
+  That is the extent of what this shows the docs carry, with these views and samples.
 
-- **Northgate:** without docstrings, its field names, action codes and units are self-explanatory enough. The views v2 text and samples carry the rest.
-- **Riverside:** without the docstrings, the "nightly" frequency, a levothyroxine dose unit and the DKA reaction type go wrong.
-- **Caveat:** the views themselves are written with knowledge of each source's quirks (audit §5). This ablation removes the source docs only, so it understates how much documentation carries.
+## Merged chart (fresh cohort)
 
-## Feedback and prose checking
+The hand-written reference mappers give 1.2% wrong medication rows with 12 extra rows; these are record limits. The one prose-only medication row is not counted as wrong. The three backends give 1.4–7.6% medication rows wrong, and 12.6% allergy rows wrong in most runs. The allergy errors are the Northgate mechanism conflict carried through the merge.
 
-- **Condition b.** Prose feedback changed nothing measurable. Sonnet Riverside medications stayed at 18.7%; labs went from 1.9 to 0.
-- **Condition c.** Key counterexamples (calibration only) fixed Sonnet Riverside and most HomeLog dose cases.
-- **Prose check on test items.** Every discrepancy it raised was a false alarm (9 Northgate, 14 Lakeview, 7 Riverside, 2 HomeLog), and it flagged none of the 33 Sonnet Riverside errors in its scope. With the round-2 views, the prose check added nothing.
+## US Core
 
-## End to end
+The round-2 US Core mappers were validated with the HL7 validator on fresh patients, with terminology checked against tx.fhir.org. The results are in the scorecard's US Core section and in `results/stage3/fhir/fresh-<runId>.json`, which keeps every issue. The bundles are 5 patients per source, because tx.fhir.org validation takes several minutes per bundle. These mappers were not recompiled after the round-2 fixes to `uscore.d.ts`.
 
-The generic merge was tuned in round 1 and is frozen now. Scored against the merged truth key restricted to what the records carry:
+## Cost
 
-- The hand-written references reach 0.9% wrong medication rows plus 9 extra rows. These are record limits, e.g. "water pill" can't be linked to chlorthalidone. All other views are at 0.
-- Opus matches the references in all three runs.
-- Codex reaches 0.9–2.2% medication rows; Sonnet 0.9–2.8%.
+| Item | Cost |
+|---|---|
+| Opus compiles (24 new) | $36.35 |
+| Sonnet compiles (12) | $4.49 |
+| Codex compiles (12) | not reported |
+| Notes | about $32 |
+| Views writer | $0.89 |
+| **Total** | **about $74** |
 
-## Spend and time
+## What I could not do
 
-| | Cost | Runs or time |
-|---|---|---|
-| Opus | $33.93 | 27 runs, 126 agent-minutes |
-| Sonnet | $5.52 | 18 runs |
-| Codex | not reported | 21 runs, 261 agent-minutes |
-| Prose extraction, key judge and probes | about $5 | |
-| **Round 2 total** | **about $45** | budget $120 |
-
-Wall time for the matrix was about 1.3 h.
-
-## How to run
-
-```
-bun packages/compiler/src/cli/probe.ts claude|codex      # isolation probe
-bun packages/compiler/src/cli/scan.ts                    # transcript scan
-bun packages/compiler/src/cli/refcheck.ts dev            # reference mappers vs keys (train/dev only)
-bun packages/compiler/src/cli/matrix.ts                  # round-2 matrix
-bun run score [--reeval]                                 # SCORECARD.md, prose check, HL7 validation, cache
-bun test packages/compiler/test
-```
-
-## Limits
-
-- **The views know the sources.** The views were written by the corpus author, with knowledge of each source's traps. The keys are truth plus renderer knowledge from the same author. The reference-mapper check shows only that the keys and the author's reading agree.
-- **Held-out is not unseen.** Held-out patients come from the same generator as the training patients. The samples show most traps: Northgate's samples show 11 of its 15 traps, including a pack-prefixed glargine line this round.
-- **Small trap counts.** Some trap counts are small (see the split notes above). The one-shot cells where everything is 0 say only that no error occurred in 3 runs × the listed rows.
-- **The merge was tuned on test.** The end-to-end merge rules were tuned in round 1 while looking at test-split results.
+- **The Northgate mechanism conflict stays in the headline.** It is a frozen-key problem. Fixing it after seeing fresh-cohort numbers would be triage on the held-out set, so it is reported, not corrected.
+- **The v2 condition reuses round-2 runs.** They are not new compiles, to stay within budget.
+- **Some traps don't reach 10 fresh patients, or any.** Lakeview T13 (8; a prose-only fact no view row carries) and T19 in Riverside, Lakeview and HomeLog (0): the generator places those cases only on the hero.
+- **HL7 validation covers 5 fresh patients per source**, not 25, because of tx.fhir.org latency.

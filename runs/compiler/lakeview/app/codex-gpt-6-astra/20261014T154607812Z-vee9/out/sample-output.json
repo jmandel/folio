@@ -1,0 +1,338 @@
+{
+  "patient": "LV-0038372",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [
+      {
+        "drug_name": "finerenone 10 mg tablet",
+        "status": "held",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "rx_finerenone"
+          },
+          {
+            "item_id": "01FHGSVF90T6FY14BZAE7SP5TX",
+            "entry_id": "hold_finerenone"
+          }
+        ],
+        "ingredient": "finerenone",
+        "status_since": "2021-10-08",
+        "dose": {
+          "value": 10,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "status_reason_text": "K 5.6 / 5.5 confirmed"
+      }
+    ],
+    "problems": [
+      {
+        "condition": "Chronic kidney disease, stage 3a",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "dx_ckd"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "visit"
+          }
+        ],
+        "icd10cm": "N18.31",
+        "ckd_stage": "G3a",
+        "albuminuria": "A3"
+      },
+      {
+        "condition": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "dx_dm"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "dx_dm"
+          }
+        ],
+        "icd10cm": "E11.22",
+        "onset": {
+          "value": "2015",
+          "precision": "year"
+        }
+      },
+      {
+        "condition": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "dx_htn"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "dx_htn"
+          }
+        ],
+        "icd10cm": "I12.9",
+        "onset": {
+          "value": "2010-11",
+          "precision": "month"
+        }
+      }
+    ],
+    "allergies": [],
+    "labs": [
+      {
+        "analyte": "a1c",
+        "value": 8.1,
+        "unit": "%",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "ord_a1c"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "res_a1c"
+          }
+        ],
+        "loinc": "4548-4"
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.13,
+        "unit": "mg/dL",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "res_creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 61,
+        "unit": "mL/min/1.73m2",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "ord_creat"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "res_egfr_n"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "sodium",
+        "value": 137,
+        "unit": "mmol/L",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "ord_na"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "req"
+          },
+          {
+            "item_id": "01FABHX3J0XX0A6XERR81ZHGZ9",
+            "entry_id": "res_na"
+          }
+        ],
+        "loinc": "2951-2"
+      }
+    ],
+    "vitals": [
+      {
+        "setting": "clinic",
+        "local_time": "2021-09-07T09:34",
+        "evidence": [
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01FF0W3AN0NMN065AW7E16SWPH",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 144,
+        "pulse_bpm": 71,
+        "weight_kg": 85.1
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2022-01-11T14:24",
+        "evidence": [
+          {
+            "item_id": "01FS61R990B462FCP2W0XRR749",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01FS61R990B462FCP2W0XRR749",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01FS61R990B462FCP2W0XRR749",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01FS61R990B462FCP2W0XRR749",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 138,
+        "pulse_bpm": 82,
+        "weight_kg": 86.9
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2022-06-24T14:04",
+        "evidence": [
+          {
+            "item_id": "01G6C4RD50MQ4J4QBYG3B6AS2X",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01G6C4RD50MQ4J4QBYG3B6AS2X",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01G6C4RD50MQ4J4QBYG3B6AS2X",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01G6C4RD50MQ4J4QBYG3B6AS2X",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 143,
+        "pulse_bpm": 63,
+        "weight_kg": 86
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2022-10-26T13:24",
+        "evidence": [
+          {
+            "item_id": "01GGB53WH0RX7NHWXDBZ8M0Y8J",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01GGB53WH0RX7NHWXDBZ8M0Y8J",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01GGB53WH0RX7NHWXDBZ8M0Y8J",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01GGB53WH0RX7NHWXDBZ8M0Y8J",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 136,
+        "pulse_bpm": 71,
+        "weight_kg": 84.5
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2023-03-06T14:04",
+        "evidence": [
+          {
+            "item_id": "01GTWX6N00P6ARK38706K2WNMH",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01GTWX6N00P6ARK38706K2WNMH",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01GTWX6N00P6ARK38706K2WNMH",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01GTWX6N00P6ARK38706K2WNMH",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 145,
+        "pulse_bpm": 63,
+        "weight_kg": 86
+      },
+      {
+        "setting": "clinic",
+        "local_time": "2023-06-20T13:44",
+        "evidence": [
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "bp_dia"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "bp_sys"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "hr"
+          },
+          {
+            "item_id": "01H3DDTPW0F5FFNSJBP1FYJ4NF",
+            "entry_id": "wt"
+          }
+        ],
+        "diastolic_mmhg": 80,
+        "systolic_mmhg": 137,
+        "pulse_bpm": 73,
+        "weight_kg": 87.5
+      }
+    ]
+  }
+}

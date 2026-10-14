@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/in"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat samples/06*  samples/02* | grep -v '^  \\\\(url\\\\|sha\\\\)'\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../out; cat > ../out/transform.ts <<HEREDOC\ncd ..; sh in/harness/check.sh 2>&1 | head -150\"}"
+  }
+ ],
+ "blocking": 0
+}

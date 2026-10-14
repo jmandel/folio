@@ -1,0 +1,41 @@
+{
+ "source": "riverside",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "d3f0920ebb40e2f60db193bd7e8b7bdffbb80be5d248114b816cf98859892f0b",
+ "samples": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T153539627Z-7ft6",
+   "ok": true,
+   "costUsd": 2.2498252,
+   "durationMs": 495066,
+   "numTurns": 17,
+   "usage": {
+    "input_tokens": 30,
+    "cache_creation_input_tokens": 115036,
+    "cache_read_input_tokens": 1117586,
+    "output_tokens": 55295
+   },
+   "evalPath": "results/stage3/evals-main-dev/20261014T153539627Z-7ft6.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/50, prob 0/7, alle 0/4, labs 0/253, vita 0/33"
+  }
+ ],
+ "rep": 2,
+ "variant": "full",
+ "keysSha256": "26ee28163e5c6e69",
+ "final": "20261014T153539627Z-7ft6"
+}

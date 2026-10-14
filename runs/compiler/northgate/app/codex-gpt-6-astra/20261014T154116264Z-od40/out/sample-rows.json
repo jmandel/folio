@@ -1,0 +1,171 @@
+{
+  "patient": "NFM-00873737",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [
+      {
+        "drug_name": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+        "status": "active",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01FANWQQ1G45S836T6M3PC8HCZ",
+            "entry_id": "med_1"
+          }
+        ],
+        "ingredient": "insulin glargine",
+        "status_since": "2021-07-15",
+        "dose": {
+          "value": 10,
+          "unit": "units"
+        },
+        "frequency": "QHS",
+        "status_reason_text": "A1c 8.1"
+      }
+    ],
+    "problems": [
+      {
+        "condition": "Chronic kidney disease",
+        "status": "active",
+        "ckd_stage": "G3a",
+        "evidence": [
+          {
+            "item_id": "01FANY4JK0CJ6GGDGGE97RZ0TM",
+            "entry_id": "dx_1"
+          }
+        ],
+        "icd10cm": "N18.31"
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01FANY4JK0CJ6GGDGGE97RZ0TM",
+            "entry_id": "dx_2"
+          }
+        ],
+        "icd10cm": "E11.9"
+      },
+      {
+        "condition": "Essential hypertension",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01EGGVVJ80VFHKPZVY6KZ1AKV7",
+            "entry_id": "prob_1"
+          }
+        ],
+        "icd10cm": "I10",
+        "snomed": "59621000",
+        "onset": {
+          "value": "2010-11",
+          "precision": "month"
+        }
+      }
+    ],
+    "allergies": [],
+    "labs": [
+      {
+        "analyte": "creatinine",
+        "value": 1.13,
+        "unit": "mg/dL",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHYY50S8SSQ3KTZPWWF5VS",
+            "entry_id": "creat"
+          }
+        ],
+        "loinc": "2160-0"
+      },
+      {
+        "analyte": "egfr",
+        "value": 61,
+        "unit": "mL/min/1.73m2",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHYY50S8SSQ3KTZPWWF5VS",
+            "entry_id": "egfr_naa"
+          }
+        ],
+        "egfr_equation": "ckd-epi-2009",
+        "loinc": "48642-3"
+      },
+      {
+        "analyte": "sodium",
+        "value": 137,
+        "unit": "mmol/L",
+        "collected": "2021-07-11T07:59:00-05:00",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01FABHYY50S8SSQ3KTZPWWF5VS",
+            "entry_id": "na"
+          }
+        ],
+        "loinc": "2951-2"
+      }
+    ],
+    "vitals": [
+      {
+        "setting": "clinic",
+        "local_time": "2020-08-24T12:52",
+        "evidence": [
+          {
+            "item_id": "01EGGSN2CGWPEAXA4VZGVTZQSH",
+            "entry_id": "vitals"
+          }
+        ],
+        "systolic_mmhg": 139,
+        "diastolic_mmhg": 85,
+        "pulse_bpm": 66,
+        "weight_kg": 86.5
+      }
+    ]
+  }
+}
+{
+  "patient": "NFM-00784235",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [],
+    "problems": [],
+    "allergies": [],
+    "labs": [],
+    "vitals": []
+  }
+}
+{
+  "patient": "NFM-00484559",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [],
+    "problems": [],
+    "allergies": [
+      {
+        "substance": "lisinopril",
+        "reaction_type": "side_effect",
+        "mechanism": "non_immune",
+        "criticality": "low",
+        "evidence": [
+          {
+            "item_id": "01FF0VDX3GHD98DY819R54DSCZ",
+            "entry_id": "alg_1"
+          }
+        ],
+        "rxnorm_ingredient": "29046",
+        "reaction": "Cough",
+        "onset": {
+          "value": "2021-07",
+          "precision": "month"
+        }
+      }
+    ],
+    "labs": [],
+    "vitals": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; wc -l in/schema/*; grep -c '\\\\*' in/schema/lakeview-v1.d.ts; cat in/INSTRUCTIONS.md | head -5; cat in/harness/run.ts; ls out 2>&1\"}"
+  }
+ ],
+ "blocking": 0
+}

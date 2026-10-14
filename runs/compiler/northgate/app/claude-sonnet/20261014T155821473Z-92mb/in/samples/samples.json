@@ -1,0 +1,548 @@
+[
+  {
+    "patient": "NFM-00873737",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01FANY4JK0CJ6GGDGGE97RZ0TM",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2021-07-15T15:35:00-05:00",
+        "recorded": "2021-07-15T15:36:12-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "Dear Colleague,\n\nThank you for seeing this pt with type 2 diabetes and essential hypertension. <ref id=\"referral\">eGFR is 62 with UACR 456 mg/g; I would appreciate your help with CKD evaluation and management.</ref>\n\nBP has been running above goal and we are adjusting treatment here. Recent labs are available in the chart and I am glad to send anything further.\n\nThank you for your help.\n\nTeresa Reyes, MD\nNorthgate Family Medicine",
+        "payload": {
+          "referral": {
+            "type": "referral_event",
+            "referral_id": "RF-2021-0575",
+            "action": "created",
+            "to": {
+              "org": "Lakeview Kidney Care",
+              "specialty": "Nephrology"
+            },
+            "question": "eGFR 62, UACR 456 mg/g: CKD evaluation and management",
+            "urgency": "routine"
+          },
+          "dx_1": {
+            "type": "referral_dx",
+            "referral_id": "RF-2021-0575",
+            "icd10cm": "N18.31",
+            "display": "Chronic kidney disease"
+          },
+          "dx_2": {
+            "type": "referral_dx",
+            "referral_id": "RF-2021-0575",
+            "icd10cm": "E11.9",
+            "display": "Type 2 diabetes mellitus"
+          },
+          "dx_3": {
+            "type": "referral_dx",
+            "referral_id": "RF-2021-0575",
+            "icd10cm": "I10",
+            "display": "Essential hypertension"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01EGHCAX80R1XYERG5BQ52F5EC",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2020-08-24T13:00:00-05:00",
+        "recorded": "2020-08-24T18:20:00-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "New pt, establishing care. Hx reviewed with pt, records to follow.\nBP 139/85, pulse 66, wt 191 lb.\nLabs 8/18: eGFR 64, K 4.3, UACR 571 mg/g, A1c 7.5%, LDL 138 mg/dL.\nReviewed results with pt. Problem list built from pt history.\nRTC 3 mo.",
+        "payload": {
+          "visit": {
+            "type": "visit",
+            "visit_id": "V-2020-082472",
+            "visit_type": "office",
+            "reason": "New patient, establish care"
+          },
+          "dx_1": {
+            "type": "billing_dx",
+            "visit_id": "V-2020-082472",
+            "rank": 1,
+            "icd10cm": "I10",
+            "display": "Essential (primary) hypertension"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01FAB4Z9C0RXM79Y7NXCF55MQX",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2021-07-11T07:59:00-05:00",
+        "recorded": "2021-07-11T11:04:00-05:00",
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "creat": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "CREAT",
+              "name": "Creatinine, serum",
+              "loinc": "2160-0"
+            },
+            "value": "1.13",
+            "unit": "mg/dL",
+            "reference_range": "0.57-1.00",
+            "flag": "H",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-CREAT"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "egfr_naa": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR-NAA",
+              "name": "eGFR (non-African American)",
+              "loinc": "48642-3"
+            },
+            "value": "61",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-EGFR09N"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "egfr_aa": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR-AA",
+              "name": "eGFR (African American)",
+              "loinc": "48643-1"
+            },
+            "value": "70",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-EGFR09A"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "na": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "NA",
+              "name": "Sodium, serum",
+              "loinc": "2951-2"
+            },
+            "value": "137",
+            "unit": "mmol/L",
+            "reference_range": "134-144",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-NA"
+            },
+            "order_id": "NO-2021-57045"
+          },
+          "k": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "K",
+              "name": "Potassium, serum"
+            },
+            "value": "6.5",
+            "unit": "mmol/L",
+            "reference_range": "3.5-5.1",
+            "flag": "HH",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 10:59.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-K"
+            },
+            "order_id": "NO-2021-55966"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01FABHYY50S8SSQ3KTZPWWF5VS",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2021-07-11T07:59:00-05:00",
+        "recorded": "2021-07-11T14:51:00-05:00",
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "supersedes": [
+          "01FAB4Z9C0RXM79Y7NXCF55MQX"
+        ],
+        "narrative": "",
+        "payload": {
+          "creat": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "CREAT",
+              "name": "Creatinine, serum",
+              "loinc": "2160-0"
+            },
+            "value": "1.13",
+            "unit": "mg/dL",
+            "reference_range": "0.57-1.00",
+            "flag": "H",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-CREAT"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "egfr_naa": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR-NAA",
+              "name": "eGFR (non-African American)",
+              "loinc": "48642-3"
+            },
+            "value": "61",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-EGFR09N"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "egfr_aa": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR-AA",
+              "name": "eGFR (African American)",
+              "loinc": "48643-1"
+            },
+            "value": "70",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-EGFR09A"
+            },
+            "order_id": "NO-2021-64805"
+          },
+          "na": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "NA",
+              "name": "Sodium, serum",
+              "loinc": "2951-2"
+            },
+            "value": "137",
+            "unit": "mmol/L",
+            "reference_range": "134-144",
+            "result_status": "F",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T10:53:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-NA"
+            },
+            "order_id": "NO-2021-57045"
+          },
+          "k": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "K",
+              "name": "Potassium, serum"
+            },
+            "value": "Result invalidated",
+            "unit": "mmol/L",
+            "reference_range": "3.5-5.1",
+            "result_status": "C",
+            "collected": "2021-07-11T07:59:00-05:00",
+            "resulted": "2021-07-11T14:47:00-05:00",
+            "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 10:59. CORRECTED 07/11/21 14:47: result invalidated, see recollected specimen LV21-192-43157.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV21-192-42597",
+              "result_code": "LK-K"
+            },
+            "order_id": "NO-2021-55966"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01EGGVVJ80VFHKPZVY6KZ1AKV7",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2020-08-24",
+        "recorded": "2020-08-24T13:32:00-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"prob_1\">Essential hypertension, onset 11/2010.</ref> Added at first visit here; hx per pt.",
+        "payload": {
+          "prob_1": {
+            "type": "problem_event",
+            "problem_id": "PL-9881",
+            "action": "add",
+            "description": "Essential hypertension",
+            "icd10cm": "I10",
+            "snomed": "59621000",
+            "onset": {
+              "date": "2010-11-01",
+              "precision": "month"
+            },
+            "visit_id": "V-2020-082472"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01FANWQQ1G45S836T6M3PC8HCZ",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2021-07-15T15:11:00-05:00",
+        "recorded": "2021-07-15T15:11:42-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"med_1\">A1c 8.1. Start insulin glargine 10 units QHS.</ref> Pt taught pen use.",
+        "payload": {
+          "med_1": {
+            "type": "med_event",
+            "med_id": "ML-45965",
+            "action": "start",
+            "origin": "northgate",
+            "drug": {
+              "name": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+              "rxnorm": "847230"
+            },
+            "dose": {
+              "value": 10,
+              "unit": "units"
+            },
+            "frequency": "QHS",
+            "sig": "Inject 10 units under the skin at bedtime",
+            "reason_text": "A1c 8.1",
+            "visit_id": "V-2021-071557"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01EGGSN2CGWPEAXA4VZGVTZQSH",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2020-08-24T12:52:00-05:00",
+        "recorded": "2020-08-24T12:53:30-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "vitals": {
+            "type": "vital_set",
+            "visit_id": "V-2020-082472",
+            "bp": "139/85",
+            "pulse_bpm": 66,
+            "weight_lb": 190.7
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01FANXSK10A9GR3VA1RVC8Q94B",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00873737",
+        "effective": "2021-07-15T15:30:00-05:00",
+        "recorded": "2021-07-15T15:30:12-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "review": {
+            "type": "list_reviewed",
+            "list": "medications",
+            "lines_on_list": [
+              "ML-28284",
+              "ML-39730",
+              "ML-49477",
+              "ML-23624",
+              "ML-45965"
+            ],
+            "visit_id": "V-2021-071557"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "NFM-00784235",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01K8X6TXZ0ZGBX0ZBJRZ33W3V3",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00784235",
+        "effective": "2025-10-31T08:20:44-05:00",
+        "recorded": "2025-10-31T08:20:44-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:dkhan",
+          "name": "Daniel Khan, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "retracts": [
+          "01K8V5HMHGC8FE1G5B6Z08QH3F"
+        ],
+        "narrative": "The furosemide 40 mg start entered 10/30 was wrong patient. Entered in error, removed from this chart.",
+        "payload": {
+          "void_1": {
+            "type": "chart_correction",
+            "voided_items": [
+              "01K8V5HMHGC8FE1G5B6Z08QH3F"
+            ],
+            "reason": "wrong_patient"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "NFM-00484559",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01FF0VDX3GHD98DY819R54DSCZ",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00484559",
+        "effective": "2021-09-07T14:23:00-05:00",
+        "recorded": "2021-09-07T14:23:18-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:dkhan",
+          "name": "Daniel Khan, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"alg_1\">Lisinopril: dry cough.</ref> Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).",
+        "payload": {
+          "alg_1": {
+            "type": "allergy_event",
+            "allergy_id": "AL-2066",
+            "action": "add",
+            "substance": {
+              "name": "lisinopril",
+              "rxnorm": "29046"
+            },
+            "reaction_type": "intolerance",
+            "reactions": [
+              "Cough"
+            ],
+            "severity": "low",
+            "onset": {
+              "date": "2021-07-01",
+              "precision": "month"
+            },
+            "visit_id": "V-2021-090736"
+          }
+        }
+      }
+    ]
+  }
+]

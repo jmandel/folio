@@ -104,7 +104,7 @@ for (const x of trapRows) L.push(`| ${x.source} | ${x.trap} ${TRAP_NAMES[x.trap]
 const few = trapRows.filter((x) => !x.volume && x.patients < 10);
 L.push("", few.length ? `Judgment traps with fewer than 10 fresh patients in a source: ${few.map((x) => `${x.source} ${x.trap} (${x.patients})`).join(", ")}. The generator places these cases on too few patients (Lakeview T13 needs a DKA history plus nephrology care; the hero-only cases are not generated for population patients).` : "Every judgment trap has at least 10 fresh patients in each source where it occurs.");
 const absent = ["A:T19", "C:T19", "C:T13", "P:T19"].filter((k) => !trapRows.some((x) => `${({ riverside: "A", northgate: "B", lakeview: "C", homelog: "P" } as any)[x.source]}:${x.trap}` === k));
-if (absent.length) L.push("", `Not present in the fresh cohort at all: ${absent.join(", ")} (source:trap). In the main corpus these occur only on the hero.`);
+if (absent.length) L.push("", `No view row in the fresh cohort carries ${absent.join(", ")} (source:trap). Riverside, Lakeview and HomeLog T19 (a behavioral-health fact in that source) do not occur in the fresh cohort: the generator places them only on the hero. Lakeview T13 occurs (8 fresh patients) but is a prose-only fact (a decision written only in a note), which no view row represents.`);
 
 // v2 vs v3.
 const v2s = SOURCES.filter((s) => find(s, "appv2", "claude-opus").length);
@@ -140,6 +140,7 @@ if (secondary.length) {
 
 // US Core (round-2 mappers, validated on the fresh cohort).
 const fhir: any[] = [];
+const FHIR_N = Number(process.env.FHIR_SAMPLE ?? 25);
 if (!values["no-fhir"] || readdirSync(join(RESULTS, "fhir")).some((f) => f.startsWith("fresh-"))) {
   const r2 = (() => { const out: any[] = []; const root = join(RESULTS, "round2/compiles"); for (const s of SOURCES) for (const b of ["claude-opus", "codex-gpt-6-astra"]) { const p = join(root, s, "uscore", b, "a.json"); if (existsSync(p)) out.push(JSON.parse(readFileSync(p, "utf8"))); } return out; })();
   for (const r of r2) {
@@ -149,7 +150,7 @@ if (!values["no-fhir"] || readdirSync(join(RESULTS, "fhir")).some((f) => f.start
     if (!v && !values["no-fhir"]) v = validateUsCore(readTransformOf(r.source, "uscore", backendOf(r.backend), r.final), r.source, r.final, "fresh");
     if (v) fhir.push({ source: r.source, backend: r.backend, run: r.final, resources: v.resources, errors: v.errors, structuralErrors: v.structuralErrors, terminologyErrors: v.terminologyErrors, warnings: v.warnings, terminologyWarnings: v.terminologyWarnings, topErrors: v.topErrors, topTerminology: v.topTerminology });
   }
-  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 plus `uscore.d.ts`, before its round-2 fixes for `statusReason` and `requester`; not recompiled in round 3), run on 25 fresh patients per source at 2026-10-13 and checked with the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) with terminology checked against tx.fhir.org. Every issue is stored in `results/stage3/fhir/fresh-<runId>.json`.", "",
+  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 plus `uscore.d.ts`, before its round-2 fixes for `statusReason` and `requester`; not recompiled in round 3), run on " + FHIR_N + " fresh patients per source at 2026-10-13 and checked with the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) with terminology checked against tx.fhir.org. Every issue is stored in `results/stage3/fhir/fresh-<runId>.json`.", "",
     "| Source | Backend | Run | Resources | Errors: structural | Errors: terminology | Warnings (of which terminology) | Most common error |", "|---|---|---|---|---|---|---|---|");
   for (const f of fhir) L.push(`| ${f.source} | ${short(f.backend)} | \`${f.run}\` | ${f.resources} | ${f.structuralErrors} | ${f.terminologyErrors} | ${f.warnings} (${f.terminologyWarnings}) | ${f.topErrors?.[0] ? `${String(f.topErrors[0][0]).slice(0, 100)} (${f.topErrors[0][1]})` : "–"} |`);
 }
@@ -180,8 +181,8 @@ for (const f of Object.keys(fieldAgg).sort()) if (BACKS.some((b) => fieldAgg[f][
 L.push("", `All scored fields: ${Object.keys(fieldAgg).sort().join(", ")}.`);
 
 // Cost.
-L.push("", "## Cost and time (round-3 compiles)", "", "| Backend | Runs | Cost (USD, as the CLI reports it) | Agent minutes |", "|---|---|---|---|");
-for (const b of BACKS) { const rounds = recs.filter((r) => r.backend === b).flatMap((r) => r.rounds).filter((x) => x.runId); L.push(`| ${short(b)} | ${rounds.length} | ${b.startsWith("codex") ? "not reported" : rounds.reduce((a, x) => a + (x.costUsd ?? 0), 0).toFixed(2)} | ${(rounds.reduce((a, x) => a + x.durationMs, 0) / 60000).toFixed(0)} |`); }
+L.push("", "## Cost and time (round-3 compiles)", "", "New round-3 compile runs only (the reused round-2 v2 runs are not counted). Notes for the fresh cohort and the regenerated main-corpus notes cost about $32 (sonnet, \`runs/prose/\`); the blind views writer about $0.9.", "", "| Backend | Runs | Cost (USD, as the CLI reports it) | Agent minutes |", "|---|---|---|---|");
+for (const b of BACKS) { const rounds = recs.filter((r) => r.backend === b && !(r as any).note?.includes("reused")).flatMap((r) => r.rounds).filter((x) => x.runId); L.push(`| ${short(b)} | ${rounds.length} | ${b.startsWith("codex") ? "not reported" : rounds.reduce((a, x) => a + (x.costUsd ?? 0), 0).toFixed(2)} | ${(rounds.reduce((a, x) => a + x.durationMs, 0) / 60000).toFixed(0)} |`); }
 
 // Isolation.
 const scan = existsSync(join(RESULTS, "isolation/transcript-scan.json")) ? JSON.parse(readFileSync(join(RESULTS, "isolation/transcript-scan.json"), "utf8")) : undefined;

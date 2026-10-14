@@ -1,0 +1,4112 @@
+[
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T153957266Z-w38r",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 2,
+  "final": "20261014T161226997Z-8b6y",
+  "views": {
+   "medications": {
+    "precision": 0.9990900818926297,
+    "recall": 0.9990900818926297,
+    "tp": 1098,
+    "fp": 1,
+    "fn": 1,
+    "rows": 157,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9857142857142858,
+    "recall": 0.9857142857142858,
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "rows": 16,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T153539589Z-ml0t",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 3,
+  "final": "20261014T161309081Z-afv8",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T153539627Z-7ft6",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 1,
+  "final": "20261014T161203476Z-1nhm",
+  "views": {
+   "medications": {
+    "precision": 0.9990900818926297,
+    "recall": 0.9990900818926297,
+    "tp": 1098,
+    "fp": 1,
+    "fn": 1,
+    "rows": 157,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9285714285714286,
+    "recall": 0.9285714285714286,
+    "tp": 65,
+    "fp": 5,
+    "fn": 5,
+    "rows": 16,
+    "wrongRows": 5,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T160613430Z-hx2n",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 0.984375,
+    "recall": 1,
+    "tp": 126,
+    "fp": 2,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 1
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T160429071Z-lyhz",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 0.984375,
+    "recall": 1,
+    "tp": 126,
+    "fp": 2,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 1
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T160511610Z-ft6r",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 0.9047619047619048,
+    "tp": 114,
+    "fp": 0,
+    "fn": 12,
+    "rows": 42,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9428571428571428,
+    "recall": 0.9428571428571428,
+    "tp": 66,
+    "fp": 4,
+    "fn": 4,
+    "rows": 16,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 0.9831052542659233,
+    "tp": 5819,
+    "fp": 0,
+    "fn": 100,
+    "rows": 1160,
+    "wrongRows": 20,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T155403852Z-gi6n",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9210526315789473,
+    "recall": 1,
+    "tp": 70,
+    "fp": 6,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 2
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T154731596Z-b6sz",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.7954545454545454,
+    "recall": 1,
+    "tp": 70,
+    "fp": 18,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 6
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T154745387Z-rrw1",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T135847018Z-9l9w",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T135846919Z-s27j",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "riverside",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T135846981Z-3dxu",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1099,
+    "fp": 0,
+    "fn": 0,
+    "rows": 157,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T12",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T153539049Z-zvsb",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 2,
+  "final": "20261014T160838304Z-n2xt",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9553571428571429,
+    "recall": 0.9553571428571429,
+    "tp": 214,
+    "fp": 10,
+    "fn": 10,
+    "rows": 32,
+    "wrongRows": 10,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T153538312Z-nujp",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 3,
+  "final": "20261014T160852937Z-zsfv",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T153538677Z-z4fp",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 1,
+  "final": "20261014T160826208Z-8m4f",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T160132343Z-cv4r",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T155821473Z-92mb",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T160020324Z-gnw6",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T154342973Z-q65f",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T154116264Z-od40",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 0.9643251195292387,
+    "recall": 0.9905553456743483,
+    "tp": 2622,
+    "fp": 97,
+    "fn": 25,
+    "rows": 638,
+    "wrongRows": 24,
+    "extraRows": 24
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T154154989Z-3fxa",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 0.9643251195292387,
+    "recall": 0.9905553456743483,
+    "tp": 2622,
+    "fp": 97,
+    "fn": 25,
+    "rows": 638,
+    "wrongRows": 24,
+    "extraRows": 24
+   },
+   "allergies": {
+    "precision": 0.9821428571428571,
+    "recall": 0.9821428571428571,
+    "tp": 220,
+    "fp": 4,
+    "fn": 4,
+    "rows": 32,
+    "wrongRows": 4,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T135846342Z-l939",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T135845477Z-2w5l",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "northgate",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T135845899Z-rczc",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5909,
+    "fp": 0,
+    "fn": 0,
+    "rows": 828,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2647,
+    "fp": 0,
+    "fn": 0,
+    "rows": 638,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
+    "rows": 32,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 57953,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9580,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1503,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T14",
+   "T16",
+   "T17",
+   "T18"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T153539543Z-cshd",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 2,
+  "final": "20261014T160914718Z-y985",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.995249406175772,
+    "recall": 0.995249406175772,
+    "tp": 58241,
+    "fp": 278,
+    "fn": 278,
+    "rows": 11353,
+    "wrongRows": 278,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T153539262Z-il83",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 3,
+  "final": "20261014T160959227Z-04ob",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.995249406175772,
+    "recall": 0.995249406175772,
+    "tp": 58241,
+    "fp": 278,
+    "fn": 278,
+    "rows": 11353,
+    "wrongRows": 278,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T153539401Z-l8h6",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 1,
+  "final": "20261014T160901436Z-lyhs",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.995249406175772,
+    "recall": 0.995249406175772,
+    "tp": 58241,
+    "fp": 278,
+    "fn": 278,
+    "rows": 11353,
+    "wrongRows": 278,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T160421055Z-xfjj",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T160244423Z-7hq5",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T160307288Z-bgo0",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T154607812Z-vee9",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T154355543Z-9scr",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T154533938Z-me8g",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T135846855Z-h6aj",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T135846512Z-t45v",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "lakeview",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T135846686Z-moot",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 135,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 379,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 58519,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11353,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2058,
+    "fp": 0,
+    "fn": 0,
+    "rows": 343,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T1",
+   "T2",
+   "T3",
+   "T5",
+   "T11",
+   "T14",
+   "T16"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T154034951Z-vrxs",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 2,
+  "final": "20261014T161541498Z-sppj",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T154010398Z-due5",
+  "views": {
+   "medications": {
+    "precision": 0.9969072164948454,
+    "recall": 0.9969072164948454,
+    "tp": 1934,
+    "fp": 6,
+    "fn": 6,
+    "rows": 279,
+    "wrongRows": 6,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 3,
+  "final": "20261014T161558496Z-ljwb",
+  "views": {
+   "medications": {
+    "precision": 0.9969072164948454,
+    "recall": 0.9969072164948454,
+    "tp": 1934,
+    "fp": 6,
+    "fn": 6,
+    "rows": 279,
+    "wrongRows": 6,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T154025060Z-lt22",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 0.9994845360824742,
+    "tp": 1939,
+    "fp": 0,
+    "fn": 1,
+    "rows": 279,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "types-only",
+  "rep": 1,
+  "final": "20261014T161510726Z-2j37",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T160738707Z-dujv",
+  "views": {
+   "medications": {
+    "precision": 0.9943298969072165,
+    "recall": 0.9943298969072165,
+    "tp": 1929,
+    "fp": 11,
+    "fn": 11,
+    "rows": 279,
+    "wrongRows": 11,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T160723195Z-jdnf",
+  "views": {
+   "medications": {
+    "precision": 0.9943298969072165,
+    "recall": 0.9943298969072165,
+    "tp": 1929,
+    "fp": 11,
+    "fn": 11,
+    "rows": 279,
+    "wrongRows": 11,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "claude-sonnet",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T160729761Z-8upl",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 0.9917525773195877,
+    "tp": 1924,
+    "fp": 0,
+    "fn": 16,
+    "rows": 279,
+    "wrongRows": 16,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T155801994Z-cbqt",
+  "views": {
+   "medications": {
+    "precision": 0.9912144702842377,
+    "recall": 0.988659793814433,
+    "tp": 1918,
+    "fp": 17,
+    "fn": 22,
+    "rows": 279,
+    "wrongRows": 22,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T155645977Z-tsqc",
+  "views": {
+   "medications": {
+    "precision": 0.9943152454780362,
+    "recall": 0.9917525773195877,
+    "tp": 1924,
+    "fp": 11,
+    "fn": 16,
+    "rows": 279,
+    "wrongRows": 16,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "app",
+  "backend": "codex-gpt-6-astra",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T155711358Z-zdkg",
+  "views": {
+   "medications": {
+    "precision": 0.9942975635044065,
+    "recall": 0.988659793814433,
+    "tp": 1918,
+    "fp": 11,
+    "fn": 22,
+    "rows": 279,
+    "wrongRows": 22,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 3,
+  "final": "20261014T140344791Z-mykn",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 1,
+  "final": "20261014T140224958Z-eu4v",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ },
+ {
+  "source": "homelog",
+  "viewSet": "appv2",
+  "backend": "claude-opus",
+  "condition": "a",
+  "variant": "full",
+  "rep": 2,
+  "final": "20261014T140306045Z-1sjr",
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1940,
+    "fp": 0,
+    "fn": 0,
+    "rows": 279,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 30489,
+    "fp": 0,
+    "fn": 0,
+    "rows": 7506,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "trapsInSamples": [
+   "T13"
+  ]
+ }
+]

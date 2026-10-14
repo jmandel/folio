@@ -1,0 +1,1033 @@
+{
+  "patient": "RRH-00827796",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medications": [
+      {
+        "drug_name": "empagliflozin 10 mg tablet",
+        "ingredient": "empagliflozin",
+        "rxnorm_ingredient": "1545653",
+        "status": "held",
+        "dose": {
+          "value": 10,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "patient_reported": false,
+        "status_reason_text": "Recommend against restarting at discharge",
+        "evidence": [
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "med_empagliflozin"
+          },
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "med_empagliflozin"
+          }
+        ],
+        "status_since": "2025-04-28"
+      },
+      {
+        "drug_name": "hydrochlorothiazide 25 mg tablet",
+        "ingredient": "hydrochlorothiazide",
+        "rxnorm_ingredient": "5487",
+        "status": "held",
+        "dose": {
+          "value": 25,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "med_hydrochlorothiazide"
+          },
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "med_hydrochlorothiazide"
+          }
+        ],
+        "status_since": "2025-04-28"
+      },
+      {
+        "drug_name": "losartan 50 mg tablet",
+        "ingredient": "losartan",
+        "rxnorm_ingredient": "52175",
+        "status": "active",
+        "dose": {
+          "value": 50,
+          "unit": "mg"
+        },
+        "frequency": "QD",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "med_losartan"
+          }
+        ]
+      },
+      {
+        "drug_name": "metformin 1000 mg tablet",
+        "ingredient": "metformin",
+        "rxnorm_ingredient": "6809",
+        "status": "held",
+        "dose": {
+          "value": 1000,
+          "unit": "mg"
+        },
+        "frequency": "BID",
+        "patient_reported": false,
+        "evidence": [
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "med_metformin"
+          },
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "med_metformin"
+          }
+        ],
+        "status_since": "2025-04-28"
+      }
+    ],
+    "problems": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10cm": "N17.9",
+        "status": "resolved",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "dx_aki"
+          }
+        ]
+      },
+      {
+        "condition": "Euglycemic DKA, SGLT2 inhibitor-associated",
+        "icd10cm": "E11.10",
+        "status": "active",
+        "evidence": [
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "dx_dka"
+          }
+        ]
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10cm": "E87.5",
+        "status": "resolved",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "dx_hyperk"
+          }
+        ]
+      }
+    ],
+    "allergies": [
+      {
+        "substance": "empagliflozin",
+        "rxnorm_ingredient": "1545653",
+        "reaction_type": "serious_adverse_event",
+        "mechanism": "non_immune",
+        "criticality": "high",
+        "reaction": "Euglycemic DKA, SGLT2 inhibitor-associated",
+        "evidence": [
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "dx_dka"
+          },
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "med_empagliflozin"
+          }
+        ]
+      },
+      {
+        "substance": "lisinopril",
+        "rxnorm_ingredient": "29046",
+        "reaction_type": "side_effect",
+        "mechanism": "non_immune",
+        "criticality": "low",
+        "reaction": "cough",
+        "evidence": [
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "alg_lisinopril"
+          }
+        ]
+      }
+    ],
+    "labs": [
+      {
+        "analyte": "anion_gap",
+        "value": 8,
+        "unit": "mmol/L",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "33037-3",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bicarbonate",
+        "value": 22,
+        "unit": "mmol/L",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2028-9",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bun",
+        "value": 52,
+        "unit": "mg/dL",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "3094-0",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "chloride",
+        "value": 101,
+        "unit": "mmol/L",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2075-0",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 2.89,
+        "unit": "mg/dL",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2160-0",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "egfr",
+        "value": 24,
+        "unit": "mL/min/1.73m2",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "egfr_equation": "ckd-epi-2021",
+        "loinc": "98979-8",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "glucose",
+        "value": 112,
+        "unit": "mg/dL",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2345-7",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "potassium",
+        "value": 6.8,
+        "unit": "mmol/L",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2823-3",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 131,
+        "unit": "mmol/L",
+        "collected": "2023-04-09T04:17:00Z",
+        "status": "final",
+        "loinc": "2951-2",
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "anion_gap",
+        "value": 11,
+        "unit": "mmol/L",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "33037-3",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bicarbonate",
+        "value": 25,
+        "unit": "mmol/L",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2028-9",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bun",
+        "value": 23,
+        "unit": "mg/dL",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "3094-0",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "chloride",
+        "value": 99,
+        "unit": "mmol/L",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2075-0",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 2.47,
+        "unit": "mg/dL",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2160-0",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "egfr",
+        "value": 29,
+        "unit": "mL/min/1.73m2",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "egfr_equation": "ckd-epi-2021",
+        "loinc": "98979-8",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "glucose",
+        "value": 140,
+        "unit": "mg/dL",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2345-7",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "potassium",
+        "value": 6.1,
+        "unit": "mmol/L",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2823-3",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 135,
+        "unit": "mmol/L",
+        "collected": "2023-04-10T11:11:00Z",
+        "status": "final",
+        "loinc": "2951-2",
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "anion_gap",
+        "value": 8,
+        "unit": "mmol/L",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "33037-3",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bicarbonate",
+        "value": 23,
+        "unit": "mmol/L",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2028-9",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bun",
+        "value": 22,
+        "unit": "mg/dL",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "3094-0",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "chloride",
+        "value": 103,
+        "unit": "mmol/L",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2075-0",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 2.05,
+        "unit": "mg/dL",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2160-0",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "egfr",
+        "value": 36,
+        "unit": "mL/min/1.73m2",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "egfr_equation": "ckd-epi-2021",
+        "loinc": "98979-8",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "glucose",
+        "value": 129,
+        "unit": "mg/dL",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2345-7",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "potassium",
+        "value": 6,
+        "unit": "mmol/L",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2823-3",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 134,
+        "unit": "mmol/L",
+        "collected": "2023-04-11T11:16:00Z",
+        "status": "final",
+        "loinc": "2951-2",
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "anion_gap",
+        "value": 11,
+        "unit": "mmol/L",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "33037-3",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "bicarbonate",
+        "value": 22,
+        "unit": "mmol/L",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2028-9",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "bun",
+        "value": 29,
+        "unit": "mg/dL",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "3094-0",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "chloride",
+        "value": 100,
+        "unit": "mmol/L",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2075-0",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.63,
+        "unit": "mg/dL",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2160-0",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "egfr",
+        "value": 47,
+        "unit": "mL/min/1.73m2",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "egfr_equation": "ckd-epi-2021",
+        "loinc": "98979-8",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "glucose",
+        "value": 107,
+        "unit": "mg/dL",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2345-7",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "potassium",
+        "value": 5.6,
+        "unit": "mmol/L",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2823-3",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 133,
+        "unit": "mmol/L",
+        "collected": "2023-04-12T11:21:00Z",
+        "status": "final",
+        "loinc": "2951-2",
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "bmp_dc"
+          }
+        ]
+      },
+      {
+        "analyte": "anion_gap",
+        "value": 27,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "33037-3",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bhb",
+        "value": 4.2,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bhb"
+          },
+          {
+            "item_id": "01JT1NRCX0R76WG8R1DPZ2JFFW",
+            "entry_id": "bhb_1"
+          }
+        ]
+      },
+      {
+        "analyte": "bicarbonate",
+        "value": 11,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2028-9",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "bun",
+        "value": 26,
+        "unit": "mg/dL",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "3094-0",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "chloride",
+        "value": 94,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2075-0",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.85,
+        "unit": "mg/dL",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2160-0",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "egfr",
+        "value": 40,
+        "unit": "mL/min/1.73m2",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "egfr_equation": "ckd-epi-2021",
+        "loinc": "98979-8",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "glucose",
+        "value": 192,
+        "unit": "mg/dL",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2345-7",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "lipase",
+        "value": 41,
+        "unit": "U/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "3040-3",
+        "evidence": [
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "lipase"
+          }
+        ]
+      },
+      {
+        "analyte": "pco2",
+        "value": 21,
+        "unit": "mmHg",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2021-4",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "vbg"
+          }
+        ]
+      },
+      {
+        "analyte": "ph",
+        "value": 7.17,
+        "unit": "[pH]",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2746-6",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "vbg"
+          }
+        ]
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.8,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2823-3",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      },
+      {
+        "analyte": "sodium",
+        "value": 132,
+        "unit": "mmol/L",
+        "collected": "2025-04-28T19:28:00Z",
+        "status": "final",
+        "loinc": "2951-2",
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "bmp"
+          },
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "bmp"
+          }
+        ]
+      }
+    ],
+    "vitals": [
+      {
+        "setting": "hospital",
+        "local_time": "2023-04-08T23:01",
+        "systolic_mmhg": 123,
+        "diastolic_mmhg": 74,
+        "pulse_bpm": 90,
+        "evidence": [
+          {
+            "item_id": "01GXJHC6G0YFE75TQ1YYC8PRDG",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2023-04-09T04:25",
+        "systolic_mmhg": 108,
+        "diastolic_mmhg": 65,
+        "pulse_bpm": 85,
+        "evidence": [
+          {
+            "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2023-04-10T07:15",
+        "systolic_mmhg": 124,
+        "diastolic_mmhg": 74,
+        "pulse_bpm": 107,
+        "evidence": [
+          {
+            "item_id": "01GXNQB4J00AS3HK39H2TT55XQ",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2023-04-11T07:15",
+        "systolic_mmhg": 116,
+        "diastolic_mmhg": 70,
+        "pulse_bpm": 110,
+        "evidence": [
+          {
+            "item_id": "01GXR88840TT2JH2DAVBWQ5ERD",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2023-04-12T12:45",
+        "systolic_mmhg": 123,
+        "diastolic_mmhg": 74,
+        "pulse_bpm": 103,
+        "evidence": [
+          {
+            "item_id": "01GXW37630HYEJYZ8WXWG05528",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2025-04-28T14:18",
+        "systolic_mmhg": 110,
+        "diastolic_mmhg": 66,
+        "pulse_bpm": 89,
+        "evidence": [
+          {
+            "item_id": "01JSZB11F0TPT7DTJ69B3HCPFT",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      },
+      {
+        "setting": "hospital",
+        "local_time": "2025-04-28T18:52",
+        "systolic_mmhg": 114,
+        "diastolic_mmhg": 68,
+        "pulse_bpm": 94,
+        "evidence": [
+          {
+            "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+            "entry_id": "vs_1"
+          }
+        ],
+        "weight_kg": 82.4
+      }
+    ]
+  }
+}

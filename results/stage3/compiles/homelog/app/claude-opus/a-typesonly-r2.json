@@ -1,0 +1,41 @@
+{
+ "source": "homelog",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "6506cf8be20cd31384dda52b73288d17ae75ba2061a3b343e70d4dd6d4cdff3c",
+ "viewSetHash": "d3f0920ebb40e2f60db193bd7e8b7bdffbb80be5d248114b816cf98859892f0b",
+ "samples": [
+  "p225/2025-01-18-day.folio.md",
+  "p225/2024-10-20-my-medicines.folio.md",
+  "p065/2026-05-10-day.folio.md",
+  "p065/2026-02-11-my-medicines.folio.md",
+  "p065/2026-03-15-day.folio.md",
+  "p225/2024-04-28-my-medicines.folio.md",
+  "p065/2026-02-19-day.folio.md",
+  "p065/2026-02-20-day.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T161541498Z-sppj",
+   "ok": true,
+   "costUsd": 1.2102922,
+   "durationMs": 310548,
+   "numTurns": 9,
+   "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 59401,
+    "cache_read_input_tokens": 213741,
+    "output_tokens": 34614
+   },
+   "evalPath": "results/stage3/evals-main-dev/20261014T161541498Z-sppj.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/157, prob –, alle –, labs –, vita 0/4153"
+  }
+ ],
+ "rep": 2,
+ "variant": "types-only",
+ "keysSha256": "26ee28163e5c6e69",
+ "final": "20261014T161541498Z-sppj"
+}

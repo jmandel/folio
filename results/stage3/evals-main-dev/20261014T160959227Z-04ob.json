@@ -1,0 +1,8251 @@
+{
+ "runId": "20261014T160959227Z-04ob",
+ "source": "lakeview",
+ "viewSet": "app",
+ "split": "dev",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 53,
+  "items": 1749,
+  "ms": 540.1034749999999,
+  "msPerItem": 0.3088070182961692,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 68,
+   "fp": 0,
+   "fn": 0,
+   "rows": 9,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 181,
+   "fp": 0,
+   "fn": 0,
+   "rows": 53,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 0.9933302129651299,
+   "recall": 0.9933302129651299,
+   "tp": 33956,
+   "fp": 228,
+   "fn": 228,
+   "rows": 6638,
+   "wrongRows": 228,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 624,
+   "fp": 0,
+   "fn": 0,
+   "rows": 104,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "rows": 2,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.988974823103505,
+    "recall": 0.988974823103505,
+    "tp": 6010,
+    "fp": 67,
+    "fn": 67,
+    "rows": 1181,
+    "wrongRows": 67,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "rows": 2,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 22,
+    "fp": 0,
+    "fn": 0,
+    "rows": 3,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 72,
+    "fp": 0,
+    "fn": 0,
+    "rows": 21,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.9933551950293407,
+    "recall": 0.9933551950293407,
+    "tp": 11511,
+    "fp": 77,
+    "fn": 77,
+    "rows": 2251,
+    "wrongRows": 77,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 180,
+    "fp": 0,
+    "fn": 0,
+    "rows": 30,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 46,
+    "fp": 0,
+    "fn": 0,
+    "rows": 6,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 102,
+    "fp": 0,
+    "fn": 0,
+    "rows": 30,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 0.9949149464253284,
+    "recall": 0.9949149464253284,
+    "tp": 16435,
+    "fp": 84,
+    "fn": 84,
+    "rows": 3206,
+    "wrongRows": 84,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 432,
+    "fp": 0,
+    "fn": 0,
+    "rows": 72,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "labs.value": {
+   "ok": 6410,
+   "total": 6638
+  },
+  "labs.unit": {
+   "ok": 6638,
+   "total": 6638
+  },
+  "labs.status": {
+   "ok": 6638,
+   "total": 6638
+  },
+  "labs.evidence": {
+   "ok": 6638,
+   "total": 6638
+  },
+  "labs.egfr_equation": {
+   "ok": 994,
+   "total": 994
+  },
+  "problems.status": {
+   "ok": 53,
+   "total": 53
+  },
+  "problems.ckd_stage": {
+   "ok": 22,
+   "total": 22
+  },
+  "problems.evidence": {
+   "ok": 53,
+   "total": 53
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 104,
+   "total": 104
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 104,
+   "total": 104
+  },
+  "vitals.pulse_bpm": {
+   "ok": 104,
+   "total": 104
+  },
+  "vitals.weight_kg": {
+   "ok": 104,
+   "total": 104
+  },
+  "vitals.evidence": {
+   "ok": 104,
+   "total": 104
+  },
+  "medications.ingredient": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.status": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.dose": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.frequency": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.patient_reported": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.evidence": {
+   "ok": 9,
+   "total": 9
+  },
+  "medications.status_since": {
+   "ok": 5,
+   "total": 5
+  }
+ },
+ "byModality": {
+  "structured": {
+   "precision": 0.9934524151398542,
+   "recall": 0.9934524151398542,
+   "tp": 34594,
+   "fp": 228,
+   "fn": 228
+  },
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 235,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T14": {
+   "facts": 6451,
+   "errors": 228,
+   "patients": 51,
+   "patientsWithError": 24
+  },
+  "T16": {
+   "facts": 1708,
+   "errors": 228,
+   "patients": 53,
+   "patientsWithError": 24
+  },
+  "T7": {
+   "facts": 440,
+   "errors": 0,
+   "patients": 43,
+   "patientsWithError": 0
+  },
+  "T11": {
+   "facts": 1848,
+   "errors": 168,
+   "patients": 26,
+   "patientsWithError": 23
+  },
+  "T9": {
+   "facts": 159,
+   "errors": 159,
+   "patients": 22,
+   "patientsWithError": 22
+  },
+  "T3": {
+   "facts": 44,
+   "errors": 0,
+   "patients": 12,
+   "patientsWithError": 0
+  },
+  "T2": {
+   "facts": 12,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  },
+  "T5": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 12,
+   "patientsWithError": 0
+  },
+  "T4": {
+   "facts": 10,
+   "errors": 0,
+   "patients": 6,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 6,
+   "errors": 0,
+   "patients": 3,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-01-18T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DYWRMD40T1XW2PDJD5EHSTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DYWRMD40T1XW2PDJD5EHSTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-10-08T07:17:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01EM48ZG20TC5AP83ECAK0CHBH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EM48ZG20TC5AP83ECAK0CHBH",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-06-19T07:38:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01F8JE3QD0RTBG86R7669QTFYV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F8JE3QD0RTBG86R7669QTFYV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p033",
+   "local": "LV-0081833",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-03-09T07:20:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F0BS7DV08WS3QNPT2E64EP23"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F0BS7DV08WS3QNPT2E64EP23",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-06-20T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01DDTXVMJ0XXWJ5D677P1JSNCZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DDTXVMJ0XXWJ5D677P1JSNCZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-03-25T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01E4980920XFDB8RJKY6Z7QJ40"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E4980920XFDB8RJKY6Z7QJ40",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-12-08T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01ES1Z0WG0ENTDDNFVK17J2CWQ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES1Z0WG0ENTDDNFVK17J2CWQ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-08-12T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_47_egfr"
+   ],
+   "items": [
+    "01FCXVFCX04AQ3SWMKH7TH31CD"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FCXVFCX04AQ3SWMKH7TH31CD",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-04-21T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_54_egfr"
+   ],
+   "items": [
+    "01G16X2FA09WTJE66X3FK6B1HC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G16X2FA09WTJE66X3FK6B1HC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2023-02-06T07:58:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_68_egfr"
+   ],
+   "items": [
+    "01GRKXR53000KJH46VYYWEEJX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GRKXR53000KJH46VYYWEEJX0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-06-22T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DE0BF200YZR8HPM91RTDT1C2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DE0BF200YZR8HPM91RTDT1C2",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-02-13T07:36:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01E0ZSHFV095D3KQVF9FQYHG7M"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E0ZSHFV095D3KQVF9FQYHG7M",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-12-23T07:19:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01ET8GZJQ0KFDRVDWV8Z8CTSWE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET8GZJQ0KFDRVDWV8Z8CTSWE",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-12-10T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ES76X6J0RSQ6CADN1EX4AJ3Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES76X6J0RSQ6CADN1EX4AJ3Y",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01G7SY9C90TQ8PCZSDSH1T3WTW",
+    "01G7SXKD50ZX1X6D4VZE6FTS9T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7SY9C90TQ8PCZSDSH1T3WTW",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-11-01T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DRKXR0A0FHCPSD9F4T28XC1P"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DRKXR0A0FHCPSD9F4T28XC1P",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-06-17T07:54:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EB1WQ6M09KSRHKAQY08X3BV8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EB1WQ6M09KSRHKAQY08X3BV8",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-04-11T07:44:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F30XAEG08MWPJDV5F95EBASM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F30XAEG08MWPJDV5F95EBASM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-07-06T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECJ82JT09KVVM6Q9Z5X2TGP4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECJ82JT09KVVM6Q9Z5X2TGP4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-03-30T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01F21QM5W0KY63JTYAEH61Y6BT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F21QM5W0KY63JTYAEH61Y6BT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p109",
+   "local": "LV-0051177",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-09-04T07:56:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EHCYYXV0BG5WA065T26GNFWS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EHCYYXV0BG5WA065T26GNFWS",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-01-03T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DXPECX205338TRQQBCGPP8Q3"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DXPECX205338TRQQBCGPP8Q3",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-05-22T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01E8YTCB20A4Z81NM3W3JA99A9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E8YTCB20A4Z81NM3W3JA99A9",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-10-13T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_28_egfr"
+   ],
+   "items": [
+    "01EMHB4V602A70ES1YQT2R7BZZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EMHB4V602A70ES1YQT2R7BZZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-04-05T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01F2HN2210AN1QX3SNHSVCKS52"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F2HN2210AN1QX3SNHSVCKS52",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-10-02T07:29:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01EKMZETH0DDPWB79TN07K8XT0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKMZETH0DDPWB79TN07K8XT0",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-03-29T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_17_egfr"
+   ],
+   "items": [
+    "01F1ZBVVR08Z2BAT6MV6YJ92WB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F1ZBVVR08Z2BAT6MV6YJ92WB",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-11-19T07:16:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01FMWXVP50600B5293W42EYGBR"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FMWXVP50600B5293W42EYGBR",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01G7T09F2028RZHKMFG6AAT3Z2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7T09F2028RZHKMFG6AAT3Z2",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2023-04-21T07:51:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01GYJDCJP0TDEK5N8WDDTMRFBP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GYJDCJP0TDEK5N8WDDTMRFBP",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p146",
+   "local": "LV-0076216",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-11-18T07:25:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EQEGSEA0JJSV7B0G0YCWC3F4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EQEGSEA0JJSV7B0G0YCWC3F4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p177",
+   "local": "LV-0097634",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-12-21T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01ET34XKA05NDZPWGHSNZ3RAEM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET34XKA05NDZPWGHSNZ3RAEM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-08-09T07:40:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DHVEMGY02YBN7BEECZPT7APV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DHVEMGY02YBN7BEECZPT7APV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-06-28T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01EBXPS8D086NWJ9B7ARWEGA21"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EBXPS8D086NWJ9B7ARWEGA21",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-02-26T07:42:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_27_egfr"
+   ],
+   "items": [
+    "01EZFFN550P21T058XY4XZKMXG"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZFFN550P21T058XY4XZKMXG",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-01-05T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_40_egfr"
+   ],
+   "items": [
+    "01FRNFAD70HT0XA76059VFVTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FRNFAD70HT0XA76059VFVTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-08-29T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01GBN1D0M09E4Q1J33J371WHC0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GBN1D0M09E4Q1J33J371WHC0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2023-06-22T07:20:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_51_egfr"
+   ],
+   "items": [
+    "01H3HSX4C0378RE3XM174CQNQY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3HSX4C0378RE3XM174CQNQY",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-11-10T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DSB2ZFR0RD1EP7GNM0QH2H6Q"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DSB2ZFR0RD1EP7GNM0QH2H6Q",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-09-22T07:58:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EJVK3B20ZSZPPZ4WJANWDY0A"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJVK3B20ZSZPPZ4WJANWDY0A",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-04-19T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_30_egfr"
+   ],
+   "items": [
+    "01F3NE6YR0E1Q3S59DJ4SQ3D7C"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F3NE6YR0E1Q3S59DJ4SQ3D7C",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-09-30T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_8_egfr"
+   ],
+   "items": [
+    "01EKFQ5PA0BRCC1ESG8P1DK1NX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKFQ5PA0BRCC1ESG8P1DK1NX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-05-04T07:25:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01G27TQGM0SKDBS9B789MC8FSC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G27TQGM0SKDBS9B789MC8FSC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-12-23T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_36_egfr"
+   ],
+   "items": [
+    "01GMZXB560F5TH8RR97RFTJBT1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMZXB560F5TH8RR97RFTJBT1",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-07-06T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_16_egfr"
+   ],
+   "items": [
+    "01DF3ZVZE0WKPDP1T3WKY0XW5N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DF3ZVZE0WKPDP1T3WKY0XW5N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-11-25T07:39:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01DTJ363T0GNDTYV5EY06KZ33N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DTJ363T0GNDTYV5EY06KZ33N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-05-13T07:21:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01E87KWJJ0ZQP7XJWQ4M6AHD0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E87KWJJ0ZQP7XJWQ4M6AHD0T",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-11-09T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01EPQ1Q0R0MY5FGKW235BN4N5V"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPQ1Q0R0MY5FGKW235BN4N5V",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-03-31T07:23:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_55_egfr"
+   ],
+   "items": [
+    "01F24JQ7409G72G4FVFGP322HX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F24JQ7409G72G4FVFGP322HX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-07-02T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01EC81VQV0VHZXFAPSE1V141WT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EC81VQV0VHZXFAPSE1V141WT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-02-13T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_18_egfr"
+   ],
+   "items": [
+    "01EYE19EF0C3XWH1ATD0956X56"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYE19EF0C3XWH1ATD0956X56",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-05-24T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DBNJX5H0XZ0YH8SHFS50QCJW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DBNJX5H0XZ0YH8SHFS50QCJW",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-03-21T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_23_egfr"
+   ],
+   "items": [
+    "01E3Z9XED03VSRFD8DB6HX4HE6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E3Z9XED03VSRFD8DB6HX4HE6",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-02-22T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01EZ5KQX2006GY2T85TY9SB1SK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZ5KQX2006GY2T85TY9SB1SK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-12-26T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_5_egfr"
+   ],
+   "items": [
+    "01DX1F8EZ0MM393WTR7NKQ2MN1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DX1F8EZ0MM393WTR7NKQ2MN1",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-10-26T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01ENJR88T055543NE8HKY69AR5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ENJR88T055543NE8HKY69AR5",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-03-28T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D72E40N0J2ZR3TCCV22P4HXK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D72E40N0J2ZR3TCCV22P4HXK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-12-22T07:55:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DWQ8JZ800PDT9MPPEK5K8JNA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DWQ8JZ800PDT9MPPEK5K8JNA",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-09-17T07:19:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EJE9S3Q08Z6330ZN7DWFT6F7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJE9S3Q08Z6330ZN7DWFT6F7",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-02-09T07:43:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D39G6450T5D1HHXR81A84433"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D39G6450T5D1HHXR81A84433",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2019-10-09T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DPRDM0308ZPWZPM8CDDVMRGZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DPRDM0308ZPWZPM8CDDVMRGZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-06-13T07:37:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EAQ4K7T0MPE834WQ3EJA870W"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EAQ4K7T0MPE834WQ3EJA870W",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2021-02-17T07:38:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01EYRCDRG0DM0PPCCSMPTQHWPZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYRCDRG0DM0PPCCSMPTQHWPZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2022-08-08T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_53_egfr"
+   ],
+   "items": [
+    "01G9Z04PX0CZS3JJ5NBY8C57Q7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9Z04PX0CZS3JJ5NBY8C57Q7",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2023-05-10T07:50:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_58_egfr"
+   ],
+   "items": [
+    "01H033G6G0D9HS1D1H9M6NBA93"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H033G6G0D9HS1D1H9M6NBA93",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-07-03T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECARQ9505F3YFH3N90E1BD71"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECARQ9505F3YFH3N90E1BD71",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "egfr@2020-11-11T07:17:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EPWE7MX0NTFEV3X9318J3VRY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPWE7MX0NTFEV3X9318J3VRY",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-01-18T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DYWRMD40T1XW2PDJD5EHSTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DYWRMD40T1XW2PDJD5EHSTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-10-08T07:17:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01EM48ZG20TC5AP83ECAK0CHBH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EM48ZG20TC5AP83ECAK0CHBH",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-06-19T07:38:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01F8JE3QD0RTBG86R7669QTFYV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F8JE3QD0RTBG86R7669QTFYV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p033",
+   "local": "LV-0081833",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-03-09T07:20:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F0BS7DV08WS3QNPT2E64EP23"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F0BS7DV08WS3QNPT2E64EP23",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-06-20T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01DDTXVMJ0XXWJ5D677P1JSNCZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DDTXVMJ0XXWJ5D677P1JSNCZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-03-25T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01E4980920XFDB8RJKY6Z7QJ40"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E4980920XFDB8RJKY6Z7QJ40",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-12-08T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01ES1Z0WG0ENTDDNFVK17J2CWQ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES1Z0WG0ENTDDNFVK17J2CWQ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-08-12T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_47_egfr"
+   ],
+   "items": [
+    "01FCXVFCX04AQ3SWMKH7TH31CD"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FCXVFCX04AQ3SWMKH7TH31CD",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-04-21T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_54_egfr"
+   ],
+   "items": [
+    "01G16X2FA09WTJE66X3FK6B1HC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G16X2FA09WTJE66X3FK6B1HC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-02-06T07:58:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_68_egfr"
+   ],
+   "items": [
+    "01GRKXR53000KJH46VYYWEEJX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GRKXR53000KJH46VYYWEEJX0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-11-24T07:50:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_74_egfr"
+   ],
+   "items": [
+    "01HG175ZQ066THSN53PSKT6SF4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HG175ZQ066THSN53PSKT6SF4",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-08-24T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_88_egfr"
+   ],
+   "items": [
+    "01J62MK7G0C0MJS3RQZJE73Y4Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J62MK7G0C0MJS3RQZJE73Y4Z",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-06-22T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DE0BF200YZR8HPM91RTDT1C2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DE0BF200YZR8HPM91RTDT1C2",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-02-13T07:36:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01E0ZSHFV095D3KQVF9FQYHG7M"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E0ZSHFV095D3KQVF9FQYHG7M",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-12-23T07:19:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01ET8GZJQ0KFDRVDWV8Z8CTSWE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET8GZJQ0KFDRVDWV8Z8CTSWE",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-12-10T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ES76X6J0RSQ6CADN1EX4AJ3Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES76X6J0RSQ6CADN1EX4AJ3Y",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01G7SY9C90TQ8PCZSDSH1T3WTW",
+    "01G7SXKD50ZX1X6D4VZE6FTS9T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7SY9C90TQ8PCZSDSH1T3WTW",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-03-01T07:42:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_14_egfr"
+   ],
+   "items": [
+    "01HQXHQKJ0QWCE44WB2ZWMGDEV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HQXHQKJ0QWCE44WB2ZWMGDEV",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-11-22T07:19:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_28_egfr"
+   ],
+   "items": [
+    "01JDAKJMA0PBZM67S27D0AW523"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDAKJMA0PBZM67S27D0AW523",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-11-01T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DRKXR0A0FHCPSD9F4T28XC1P"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DRKXR0A0FHCPSD9F4T28XC1P",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-06-17T07:54:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EB1WQ6M09KSRHKAQY08X3BV8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EB1WQ6M09KSRHKAQY08X3BV8",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-04-11T07:44:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F30XAEG08MWPJDV5F95EBASM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F30XAEG08MWPJDV5F95EBASM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-07-06T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECJ82JT09KVVM6Q9Z5X2TGP4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECJ82JT09KVVM6Q9Z5X2TGP4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-03-30T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01F21QM5W0KY63JTYAEH61Y6BT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F21QM5W0KY63JTYAEH61Y6BT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p109",
+   "local": "LV-0051177",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-09-04T07:56:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EHCYYXV0BG5WA065T26GNFWS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EHCYYXV0BG5WA065T26GNFWS",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-01-03T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DXPECX205338TRQQBCGPP8Q3"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DXPECX205338TRQQBCGPP8Q3",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-05-22T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01E8YTCB20A4Z81NM3W3JA99A9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E8YTCB20A4Z81NM3W3JA99A9",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-10-13T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_28_egfr"
+   ],
+   "items": [
+    "01EMHB4V602A70ES1YQT2R7BZZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EMHB4V602A70ES1YQT2R7BZZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-04-05T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01F2HN2210AN1QX3SNHSVCKS52"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F2HN2210AN1QX3SNHSVCKS52",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-10-02T07:29:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01EKMZETH0DDPWB79TN07K8XT0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKMZETH0DDPWB79TN07K8XT0",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-03-29T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_17_egfr"
+   ],
+   "items": [
+    "01F1ZBVVR08Z2BAT6MV6YJ92WB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F1ZBVVR08Z2BAT6MV6YJ92WB",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-11-19T07:16:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01FMWXVP50600B5293W42EYGBR"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FMWXVP50600B5293W42EYGBR",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01G7T09F2028RZHKMFG6AAT3Z2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7T09F2028RZHKMFG6AAT3Z2",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-04-21T07:51:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01GYJDCJP0TDEK5N8WDDTMRFBP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GYJDCJP0TDEK5N8WDDTMRFBP",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-01-10T07:31:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_41_egfr"
+   ],
+   "items": [
+    "01HKTF0MY0WQTWGSQ2H0PYQA1Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HKTF0MY0WQTWGSQ2H0PYQA1Z",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-09-16T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_56_egfr"
+   ],
+   "items": [
+    "01J7Y8NJP0R5R2AQB1QQABDQTM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J7Y8NJP0R5R2AQB1QQABDQTM",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p146",
+   "local": "LV-0076216",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-11-18T07:25:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EQEGSEA0JJSV7B0G0YCWC3F4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EQEGSEA0JJSV7B0G0YCWC3F4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p177",
+   "local": "LV-0097634",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-12-21T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01ET34XKA05NDZPWGHSNZ3RAEM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET34XKA05NDZPWGHSNZ3RAEM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-08-09T07:40:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DHVEMGY02YBN7BEECZPT7APV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DHVEMGY02YBN7BEECZPT7APV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-06-28T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01EBXPS8D086NWJ9B7ARWEGA21"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EBXPS8D086NWJ9B7ARWEGA21",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-02-26T07:42:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_27_egfr"
+   ],
+   "items": [
+    "01EZFFN550P21T058XY4XZKMXG"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZFFN550P21T058XY4XZKMXG",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-01-05T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_40_egfr"
+   ],
+   "items": [
+    "01FRNFAD70HT0XA76059VFVTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FRNFAD70HT0XA76059VFVTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-08-29T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01GBN1D0M09E4Q1J33J371WHC0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GBN1D0M09E4Q1J33J371WHC0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-06-22T07:20:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_51_egfr"
+   ],
+   "items": [
+    "01H3HSX4C0378RE3XM174CQNQY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3HSX4C0378RE3XM174CQNQY",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-04-01T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_58_egfr"
+   ],
+   "items": [
+    "01HTD3XW806FN6QVP2RWW3AQG0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HTD3XW806FN6QVP2RWW3AQG0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-10-26T07:52:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_68_egfr"
+   ],
+   "items": [
+    "01JB4R153006SP27Q8HWBKC98J"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JB4R153006SP27Q8HWBKC98J",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-11-10T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DSB2ZFR0RD1EP7GNM0QH2H6Q"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DSB2ZFR0RD1EP7GNM0QH2H6Q",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-09-22T07:58:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EJVK3B20ZSZPPZ4WJANWDY0A"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJVK3B20ZSZPPZ4WJANWDY0A",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-04-19T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_30_egfr"
+   ],
+   "items": [
+    "01F3NE6YR0E1Q3S59DJ4SQ3D7C"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F3NE6YR0E1Q3S59DJ4SQ3D7C",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-09-30T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_8_egfr"
+   ],
+   "items": [
+    "01EKFQ5PA0BRCC1ESG8P1DK1NX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKFQ5PA0BRCC1ESG8P1DK1NX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-05-04T07:25:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01G27TQGM0SKDBS9B789MC8FSC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G27TQGM0SKDBS9B789MC8FSC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-12-23T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_36_egfr"
+   ],
+   "items": [
+    "01GMZXB560F5TH8RR97RFTJBT1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMZXB560F5TH8RR97RFTJBT1",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-10-30T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_42_egfr"
+   ],
+   "items": [
+    "01HE0FMA601427QJK12SC4QA84"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HE0FMA601427QJK12SC4QA84",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2024-07-18T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_51_egfr"
+   ],
+   "items": [
+    "01J334SJW00G0W8DY97DEK0K3T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J334SJW00G0W8DY97DEK0K3T",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-07-06T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_16_egfr"
+   ],
+   "items": [
+    "01DF3ZVZE0WKPDP1T3WKY0XW5N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DF3ZVZE0WKPDP1T3WKY0XW5N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-11-25T07:39:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01DTJ363T0GNDTYV5EY06KZ33N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DTJ363T0GNDTYV5EY06KZ33N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-05-13T07:21:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01E87KWJJ0ZQP7XJWQ4M6AHD0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E87KWJJ0ZQP7XJWQ4M6AHD0T",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-11-09T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01EPQ1Q0R0MY5FGKW235BN4N5V"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPQ1Q0R0MY5FGKW235BN4N5V",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-03-31T07:23:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_55_egfr"
+   ],
+   "items": [
+    "01F24JQ7409G72G4FVFGP322HX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F24JQ7409G72G4FVFGP322HX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-07-02T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01EC81VQV0VHZXFAPSE1V141WT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EC81VQV0VHZXFAPSE1V141WT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-02-13T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_18_egfr"
+   ],
+   "items": [
+    "01EYE19EF0C3XWH1ATD0956X56"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYE19EF0C3XWH1ATD0956X56",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-05-24T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DBNJX5H0XZ0YH8SHFS50QCJW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DBNJX5H0XZ0YH8SHFS50QCJW",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-03-21T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_23_egfr"
+   ],
+   "items": [
+    "01E3Z9XED03VSRFD8DB6HX4HE6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E3Z9XED03VSRFD8DB6HX4HE6",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-02-22T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01EZ5KQX2006GY2T85TY9SB1SK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZ5KQX2006GY2T85TY9SB1SK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-12-26T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_5_egfr"
+   ],
+   "items": [
+    "01DX1F8EZ0MM393WTR7NKQ2MN1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DX1F8EZ0MM393WTR7NKQ2MN1",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-10-26T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01ENJR88T055543NE8HKY69AR5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ENJR88T055543NE8HKY69AR5",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-03-28T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D72E40N0J2ZR3TCCV22P4HXK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D72E40N0J2ZR3TCCV22P4HXK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-12-22T07:55:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DWQ8JZ800PDT9MPPEK5K8JNA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DWQ8JZ800PDT9MPPEK5K8JNA",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-09-17T07:19:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EJE9S3Q08Z6330ZN7DWFT6F7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJE9S3Q08Z6330ZN7DWFT6F7",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-02-09T07:43:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D39G6450T5D1HHXR81A84433"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D39G6450T5D1HHXR81A84433",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2019-10-09T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DPRDM0308ZPWZPM8CDDVMRGZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DPRDM0308ZPWZPM8CDDVMRGZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-06-13T07:37:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EAQ4K7T0MPE834WQ3EJA870W"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EAQ4K7T0MPE834WQ3EJA870W",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2021-02-17T07:38:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01EYRCDRG0DM0PPCCSMPTQHWPZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYRCDRG0DM0PPCCSMPTQHWPZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2022-08-08T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_53_egfr"
+   ],
+   "items": [
+    "01G9Z04PX0CZS3JJ5NBY8C57Q7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9Z04PX0CZS3JJ5NBY8C57Q7",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2023-05-10T07:50:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_58_egfr"
+   ],
+   "items": [
+    "01H033G6G0D9HS1D1H9M6NBA93"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H033G6G0D9HS1D1H9M6NBA93",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-07-03T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECARQ9505F3YFH3N90E1BD71"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECARQ9505F3YFH3N90E1BD71",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "egfr@2020-11-11T07:17:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EPWE7MX0NTFEV3X9318J3VRY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPWE7MX0NTFEV3X9318J3VRY",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-01-18T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DYWRMD40T1XW2PDJD5EHSTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DYWRMD40T1XW2PDJD5EHSTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-10-08T07:17:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01EM48ZG20TC5AP83ECAK0CHBH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EM48ZG20TC5AP83ECAK0CHBH",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p024",
+   "local": "LV-0033499",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-06-19T07:38:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01F8JE3QD0RTBG86R7669QTFYV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F8JE3QD0RTBG86R7669QTFYV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p033",
+   "local": "LV-0081833",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-03-09T07:20:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F0BS7DV08WS3QNPT2E64EP23"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F0BS7DV08WS3QNPT2E64EP23",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-06-20T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01DDTXVMJ0XXWJ5D677P1JSNCZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DDTXVMJ0XXWJ5D677P1JSNCZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-03-25T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01E4980920XFDB8RJKY6Z7QJ40"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E4980920XFDB8RJKY6Z7QJ40",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-12-08T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01ES1Z0WG0ENTDDNFVK17J2CWQ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES1Z0WG0ENTDDNFVK17J2CWQ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-08-12T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_47_egfr"
+   ],
+   "items": [
+    "01FCXVFCX04AQ3SWMKH7TH31CD"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FCXVFCX04AQ3SWMKH7TH31CD",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-04-21T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_54_egfr"
+   ],
+   "items": [
+    "01G16X2FA09WTJE66X3FK6B1HC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G16X2FA09WTJE66X3FK6B1HC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-02-06T07:58:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_68_egfr"
+   ],
+   "items": [
+    "01GRKXR53000KJH46VYYWEEJX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GRKXR53000KJH46VYYWEEJX0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-11-24T07:50:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_74_egfr"
+   ],
+   "items": [
+    "01HG175ZQ066THSN53PSKT6SF4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HG175ZQ066THSN53PSKT6SF4",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-08-24T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_88_egfr"
+   ],
+   "items": [
+    "01J62MK7G0C0MJS3RQZJE73Y4Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J62MK7G0C0MJS3RQZJE73Y4Z",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2025-06-24T07:21:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_94_egfr"
+   ],
+   "items": [
+    "01JYHNC81030ANVYQGBVKJKKM4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JYHNC81030ANVYQGBVKJKKM4",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p039",
+   "local": "LV-0010969",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2026-01-16T07:51:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_105_egfr"
+   ],
+   "items": [
+    "01KF416CN0A675PN57NAFA9VAF"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KF416CN0A675PN57NAFA9VAF",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-06-22T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DE0BF200YZR8HPM91RTDT1C2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DE0BF200YZR8HPM91RTDT1C2",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-02-13T07:36:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01E0ZSHFV095D3KQVF9FQYHG7M"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E0ZSHFV095D3KQVF9FQYHG7M",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p047",
+   "local": "LV-0005043",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-12-23T07:19:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01ET8GZJQ0KFDRVDWV8Z8CTSWE"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET8GZJQ0KFDRVDWV8Z8CTSWE",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-12-10T07:54:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ES76X6J0RSQ6CADN1EX4AJ3Y"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ES76X6J0RSQ6CADN1EX4AJ3Y",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p050",
+   "local": "LV-0033942",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01G7SY9C90TQ8PCZSDSH1T3WTW",
+    "01G7SXKD50ZX1X6D4VZE6FTS9T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7SY9C90TQ8PCZSDSH1T3WTW",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-03-01T07:42:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_14_egfr"
+   ],
+   "items": [
+    "01HQXHQKJ0QWCE44WB2ZWMGDEV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HQXHQKJ0QWCE44WB2ZWMGDEV",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-11-22T07:19:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_28_egfr"
+   ],
+   "items": [
+    "01JDAKJMA0PBZM67S27D0AW523"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDAKJMA0PBZM67S27D0AW523",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2025-10-14T07:40:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_35_egfr"
+   ],
+   "items": [
+    "01K7HR94908GA123G2H6271N1B"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K7HR94908GA123G2H6271N1B",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p071",
+   "local": "LV-0096509",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2026-06-08T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_41_egfr"
+   ],
+   "items": [
+    "01KTKZCP00ZCVCNF9HRBQBWJEF"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KTKZCP00ZCVCNF9HRBQBWJEF",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-11-01T07:28:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DRKXR0A0FHCPSD9F4T28XC1P"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DRKXR0A0FHCPSD9F4T28XC1P",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-06-17T07:54:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EB1WQ6M09KSRHKAQY08X3BV8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EB1WQ6M09KSRHKAQY08X3BV8",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p080",
+   "local": "LV-0054720",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-04-11T07:44:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_32_egfr"
+   ],
+   "items": [
+    "01F30XAEG08MWPJDV5F95EBASM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F30XAEG08MWPJDV5F95EBASM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-07-06T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECJ82JT09KVVM6Q9Z5X2TGP4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECJ82JT09KVVM6Q9Z5X2TGP4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p106",
+   "local": "LV-0072943",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-03-30T07:18:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01F21QM5W0KY63JTYAEH61Y6BT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F21QM5W0KY63JTYAEH61Y6BT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p109",
+   "local": "LV-0051177",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-09-04T07:56:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EHCYYXV0BG5WA065T26GNFWS"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EHCYYXV0BG5WA065T26GNFWS",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-01-03T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01DXPECX205338TRQQBCGPP8Q3"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DXPECX205338TRQQBCGPP8Q3",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-05-22T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_21_egfr"
+   ],
+   "items": [
+    "01E8YTCB20A4Z81NM3W3JA99A9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E8YTCB20A4Z81NM3W3JA99A9",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-10-13T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_28_egfr"
+   ],
+   "items": [
+    "01EMHB4V602A70ES1YQT2R7BZZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EMHB4V602A70ES1YQT2R7BZZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p110",
+   "local": "LV-0070807",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-04-05T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01F2HN2210AN1QX3SNHSVCKS52"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F2HN2210AN1QX3SNHSVCKS52",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-10-02T07:29:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01EKMZETH0DDPWB79TN07K8XT0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKMZETH0DDPWB79TN07K8XT0",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p124",
+   "local": "LV-0043917",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-03-29T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_17_egfr"
+   ],
+   "items": [
+    "01F1ZBVVR08Z2BAT6MV6YJ92WB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F1ZBVVR08Z2BAT6MV6YJ92WB",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-11-19T07:16:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01FMWXVP50600B5293W42EYGBR"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FMWXVP50600B5293W42EYGBR",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-07-12T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_26_egfr"
+   ],
+   "items": [
+    "01G7T09F2028RZHKMFG6AAT3Z2"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G7T09F2028RZHKMFG6AAT3Z2",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-04-21T07:51:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_34_egfr"
+   ],
+   "items": [
+    "01GYJDCJP0TDEK5N8WDDTMRFBP"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GYJDCJP0TDEK5N8WDDTMRFBP",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-01-10T07:31:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_41_egfr"
+   ],
+   "items": [
+    "01HKTF0MY0WQTWGSQ2H0PYQA1Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HKTF0MY0WQTWGSQ2H0PYQA1Z",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-09-16T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_56_egfr"
+   ],
+   "items": [
+    "01J7Y8NJP0R5R2AQB1QQABDQTM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J7Y8NJP0R5R2AQB1QQABDQTM",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2025-08-12T07:20:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_63_egfr"
+   ],
+   "items": [
+    "01K2FF5XX0KHCV9RRQ1H3VME1M"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K2FF5XX0KHCV9RRQ1H3VME1M",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "LV-0048214",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2026-03-05T07:36:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_70_egfr"
+   ],
+   "items": [
+    "01KJZT7AD00Y46E7WMPQB0VAGX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KJZT7AD00Y46E7WMPQB0VAGX",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p146",
+   "local": "LV-0076216",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-11-18T07:25:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01EQEGSEA0JJSV7B0G0YCWC3F4"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EQEGSEA0JJSV7B0G0YCWC3F4",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p177",
+   "local": "LV-0097634",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-12-21T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_11_egfr"
+   ],
+   "items": [
+    "01ET34XKA05NDZPWGHSNZ3RAEM"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ET34XKA05NDZPWGHSNZ3RAEM",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-08-09T07:40:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01DHVEMGY02YBN7BEECZPT7APV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DHVEMGY02YBN7BEECZPT7APV",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-06-28T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_20_egfr"
+   ],
+   "items": [
+    "01EBXPS8D086NWJ9B7ARWEGA21"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EBXPS8D086NWJ9B7ARWEGA21",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-02-26T07:42:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_27_egfr"
+   ],
+   "items": [
+    "01EZFFN550P21T058XY4XZKMXG"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZFFN550P21T058XY4XZKMXG",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-01-05T07:15:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_40_egfr"
+   ],
+   "items": [
+    "01FRNFAD70HT0XA76059VFVTFZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01FRNFAD70HT0XA76059VFVTFZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-08-29T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01GBN1D0M09E4Q1J33J371WHC0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GBN1D0M09E4Q1J33J371WHC0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-06-22T07:20:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_51_egfr"
+   ],
+   "items": [
+    "01H3HSX4C0378RE3XM174CQNQY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3HSX4C0378RE3XM174CQNQY",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-04-01T07:33:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_58_egfr"
+   ],
+   "items": [
+    "01HTD3XW806FN6QVP2RWW3AQG0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HTD3XW806FN6QVP2RWW3AQG0",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-10-26T07:52:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_68_egfr"
+   ],
+   "items": [
+    "01JB4R153006SP27Q8HWBKC98J"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JB4R153006SP27Q8HWBKC98J",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p196",
+   "local": "LV-0057074",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2025-05-20T07:43:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_75_egfr"
+   ],
+   "items": [
+    "01JVQ38ZS071Y283NA405VXWBB"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JVQ38ZS071Y283NA405VXWBB",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-11-10T07:22:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DSB2ZFR0RD1EP7GNM0QH2H6Q"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DSB2ZFR0RD1EP7GNM0QH2H6Q",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-09-22T07:58:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EJVK3B20ZSZPPZ4WJANWDY0A"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJVK3B20ZSZPPZ4WJANWDY0A",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p210",
+   "local": "LV-0017262",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-04-19T07:41:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_30_egfr"
+   ],
+   "items": [
+    "01F3NE6YR0E1Q3S59DJ4SQ3D7C"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F3NE6YR0E1Q3S59DJ4SQ3D7C",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-09-30T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_8_egfr"
+   ],
+   "items": [
+    "01EKFQ5PA0BRCC1ESG8P1DK1NX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EKFQ5PA0BRCC1ESG8P1DK1NX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-05-04T07:25:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_25_egfr"
+   ],
+   "items": [
+    "01G27TQGM0SKDBS9B789MC8FSC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G27TQGM0SKDBS9B789MC8FSC",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-12-23T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_36_egfr"
+   ],
+   "items": [
+    "01GMZXB560F5TH8RR97RFTJBT1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMZXB560F5TH8RR97RFTJBT1",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-10-30T07:31:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_42_egfr"
+   ],
+   "items": [
+    "01HE0FMA601427QJK12SC4QA84"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HE0FMA601427QJK12SC4QA84",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p211",
+   "local": "LV-0079130",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2024-07-18T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_51_egfr"
+   ],
+   "items": [
+    "01J334SJW00G0W8DY97DEK0K3T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J334SJW00G0W8DY97DEK0K3T",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-07-06T07:22:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_16_egfr"
+   ],
+   "items": [
+    "01DF3ZVZE0WKPDP1T3WKY0XW5N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DF3ZVZE0WKPDP1T3WKY0XW5N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-11-25T07:39:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_29_egfr"
+   ],
+   "items": [
+    "01DTJ363T0GNDTYV5EY06KZ33N"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DTJ363T0GNDTYV5EY06KZ33N",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-05-13T07:21:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01E87KWJJ0ZQP7XJWQ4M6AHD0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E87KWJJ0ZQP7XJWQ4M6AHD0T",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-11-09T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_45_egfr"
+   ],
+   "items": [
+    "01EPQ1Q0R0MY5FGKW235BN4N5V"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPQ1Q0R0MY5FGKW235BN4N5V",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p215",
+   "local": "LV-0092998",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-03-31T07:23:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_55_egfr"
+   ],
+   "items": [
+    "01F24JQ7409G72G4FVFGP322HX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01F24JQ7409G72G4FVFGP322HX",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-07-02T07:42:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01EC81VQV0VHZXFAPSE1V141WT"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EC81VQV0VHZXFAPSE1V141WT",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p242",
+   "local": "LV-0093942",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-02-13T07:33:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_18_egfr"
+   ],
+   "items": [
+    "01EYE19EF0C3XWH1ATD0956X56"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYE19EF0C3XWH1ATD0956X56",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-05-24T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01DBNJX5H0XZ0YH8SHFS50QCJW"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DBNJX5H0XZ0YH8SHFS50QCJW",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-03-21T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_23_egfr"
+   ],
+   "items": [
+    "01E3Z9XED03VSRFD8DB6HX4HE6"
+   ],
+   "evidence": [
+    {
+     "item_id": "01E3Z9XED03VSRFD8DB6HX4HE6",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p254",
+   "local": "LV-0037611",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-02-22T07:57:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_31_egfr"
+   ],
+   "items": [
+    "01EZ5KQX2006GY2T85TY9SB1SK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EZ5KQX2006GY2T85TY9SB1SK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-12-26T07:30:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_5_egfr"
+   ],
+   "items": [
+    "01DX1F8EZ0MM393WTR7NKQ2MN1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DX1F8EZ0MM393WTR7NKQ2MN1",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p259",
+   "local": "LV-0068560",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-10-26T07:47:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_10_egfr"
+   ],
+   "items": [
+    "01ENJR88T055543NE8HKY69AR5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ENJR88T055543NE8HKY69AR5",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-03-28T07:57:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D72E40N0J2ZR3TCCV22P4HXK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D72E40N0J2ZR3TCCV22P4HXK",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-12-22T07:55:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DWQ8JZ800PDT9MPPEK5K8JNA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DWQ8JZ800PDT9MPPEK5K8JNA",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p265",
+   "local": "LV-0053612",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-09-17T07:19:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EJE9S3Q08Z6330ZN7DWFT6F7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EJE9S3Q08Z6330ZN7DWFT6F7",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-02-09T07:43:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_9_egfr"
+   ],
+   "items": [
+    "01D39G6450T5D1HHXR81A84433"
+   ],
+   "evidence": [
+    {
+     "item_id": "01D39G6450T5D1HHXR81A84433",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2019-10-09T07:26:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_19_egfr"
+   ],
+   "items": [
+    "01DPRDM0308ZPWZPM8CDDVMRGZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01DPRDM0308ZPWZPM8CDDVMRGZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-06-13T07:37:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_24_egfr"
+   ],
+   "items": [
+    "01EAQ4K7T0MPE834WQ3EJA870W"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EAQ4K7T0MPE834WQ3EJA870W",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2021-02-17T07:38:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_37_egfr"
+   ],
+   "items": [
+    "01EYRCDRG0DM0PPCCSMPTQHWPZ"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EYRCDRG0DM0PPCCSMPTQHWPZ",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2022-08-08T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_53_egfr"
+   ],
+   "items": [
+    "01G9Z04PX0CZS3JJ5NBY8C57Q7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9Z04PX0CZS3JJ5NBY8C57Q7",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p266",
+   "local": "LV-0038057",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2023-05-10T07:50:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">90",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_58_egfr"
+   ],
+   "items": [
+    "01H033G6G0D9HS1D1H9M6NBA93"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H033G6G0D9HS1D1H9M6NBA93",
+     "entry_id": "res_egfr"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-07-03T07:27:00-05:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_12_egfr"
+   ],
+   "items": [
+    "01ECARQ9505F3YFH3N90E1BD71"
+   ],
+   "evidence": [
+    {
+     "item_id": "01ECARQ9505F3YFH3N90E1BD71",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  },
+  {
+   "patient": "p279",
+   "local": "LV-0009187",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "egfr@2020-11-11T07:17:00-06:00",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": ">60",
+     "actual": ">9999999"
+    }
+   ],
+   "traps": [
+    "T9",
+    "T11",
+    "T14",
+    "T16"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_22_egfr"
+   ],
+   "items": [
+    "01EPWE7MX0NTFEV3X9318J3VRY"
+   ],
+   "evidence": [
+    {
+     "item_id": "01EPWE7MX0NTFEV3X9318J3VRY",
+     "entry_id": "res_egfr_n"
+    }
+   ]
+  }
+ ]
+}

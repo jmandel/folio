@@ -5,7 +5,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { BACKENDS, type CompileRecord, evalPath, readTransformOf, RESULTS } from "./compile.ts";
-import { CORPUS, EVAL_AS_OF, itemsForPatient, patientById, patients, REPO, SOURCES, type Source, sourceKey, splitOf, trapIndex, truth } from "./data.ts";
+import { COHORT, CORPUS, EVAL_AS_OF, itemsForPatient, patientById, patients, REPO, SOURCES, type Source, sourceKey, splitOf, trapIndex, truth } from "./data.ts";
 import { type Eval, expectedWithItems, rowsFor } from "./evaluate.ts";
 import { execute, stage } from "./exec.ts";
 import { family, mergedExpected, trapsFor } from "./keys.ts";
@@ -33,7 +33,7 @@ export function loadEvalAt(runId: string, where: string): (Eval & { runId: strin
 }
 
 export function loadEval(runId: string): (Eval & { runId: string }) | undefined {
-  const p = evalPath(runId);
+  const p = evalPath(runId, COHORT === "fresh" ? "fresh" : "main-test");
   return existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : undefined;
 }
 

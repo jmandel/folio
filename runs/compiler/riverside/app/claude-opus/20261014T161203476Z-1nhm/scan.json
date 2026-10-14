@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -I -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print(type(d),len(d));print([ (i['id'],i.get('supersedes'),i.get('r"
+  }
+ ],
+ "blocking": 0
+}

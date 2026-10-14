@@ -13,7 +13,7 @@ import { EVAL_AS_OF, itemsForPatient, patientsIn, REPO, shuffled, type Source } 
 import { execute, stage } from "./exec.ts";
 
 export const VALIDATOR_JAR = join(homedir(), "hobby/ehi-to-fhir/tools/validator_cli.jar");
-export const SAMPLE_PATIENTS = 25;
+export const SAMPLE_PATIENTS = Number(process.env.FHIR_SAMPLE ?? 25);
 
 export interface Validation {
   patients: string[]; resources: number; errors: number; warnings: number; info: number;
@@ -37,7 +37,7 @@ export function validateUsCore(transformTs: string, source: Source, runId: strin
   const bundle = { resourceType: "Bundle", type: "collection", entry: resources.map((r: any) => ({ fullUrl: `https://folio.example/fhir/${r.resourceType}/${r.id}`, resource: r })) };
   writeFileSync(join(dir, "bundle.json"), JSON.stringify(bundle));
   const out = join(dir, "report.json");
-  spawnSync("java", ["-Xmx6g", "-jar", VALIDATOR_JAR, join(dir, "bundle.json"), "-version", "4.0.1", "-ig", "hl7.fhir.us.core.r4#8.0.1", "-tx", TX, "-output", out], { encoding: "utf8", timeout: 30 * 60_000, maxBuffer: 1 << 28 });
+  spawnSync("java", ["-Xmx6g", "-jar", VALIDATOR_JAR, join(dir, "bundle.json"), "-version", "4.0.1", "-ig", "hl7.fhir.us.core.r4#8.0.1", "-tx", TX, "-txCache", join(REPO, "build/stage3/fhir/txcache"), "-output", out], { encoding: "utf8", timeout: 30 * 60_000, maxBuffer: 1 << 28 });
   if (!existsSync(out)) throw new Error(`validator produced no report for ${runId}`);
   const issues = (JSON.parse(readFileSync(out, "utf8")).issue ?? []) as any[];
   const count = (sev: string[]) => issues.filter((i) => sev.includes(i.severity));
