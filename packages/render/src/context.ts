@@ -172,3 +172,22 @@ const ICD10_DISPLAY: Record<string, string> = {
 export function icdDisplay(code: string): string {
   return ICD10_DISPLAY[code] ?? code;
 }
+
+const ICD_SLUG: [RegExp, string][] = [
+  [/^E11\.10/, "dka"], [/^K85/, "pancreatitis"], [/^E87\.1/, "na"], [/^E87\.5/, "hyperk"], [/^N17/, "aki"], [/^J18/, "pneumonia"],
+  [/^I24/, "acs"], [/^T78\.3/, "angioedema"], [/^I50/, "hf"], [/^I1[02]/, "htn"], [/^E11/, "dm"], [/^E78/, "lipid"], [/^F3[23]/, "mdd"],
+  [/^N18/, "ckd"], [/^E66/, "obesity"], [/^M17/, "oa"], [/^E03/, "thyroid"], [/^F41/, "anxiety"], [/^M10/, "gout"],
+];
+
+/** Readable slug for entry keys: hand-made ids keep their name (c_dka -> dka); generated ids use the condition or drug. */
+export function factSlug(p: Patient, id: string): string {
+  if (!/^[a-z]+_\d+$/.test(id)) return id.replace(/^[a-z]+_/, "");
+  const c = p.conditions.find((x) => x.id === id);
+  if (c) {
+    const icd = c.coding.find((x) => x.system === "icd10")!.code;
+    return ICD_SLUG.find(([re]) => re.test(icd))?.[1] ?? id.replace(/^[a-z]+_/, "");
+  }
+  const m = p.meds.find((x) => x.id === id);
+  if (m) return m.product.replace(/^fluid-/, "").replace(/-[\d.]+$/, "").replace(/^regular-insulin$/, "insulin").replace(/-iv$/, "").replace(/-/g, "_");
+  return id.replace(/^[a-z]+_/, "");
+}

@@ -302,14 +302,26 @@ export function precisionOf(w: When): "year" | "month" | "day" | "instant" {
 }
 
 /** Offset in minutes of `tz` at UTC time `ms`. */
+const DTF = new Map<string, Intl.DateTimeFormat>();
+const OFFSETS = new Map<string, number>();
 export function tzOffsetMinutes(ms: number, tz: string): number {
-  const dtf = new Intl.DateTimeFormat("en-US", {
-    timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit",
-    hour: "2-digit", minute: "2-digit", second: "2-digit",
-  });
+  if (tz === "UTC") return 0;
+  const hourKey = `${tz}/${Math.floor(ms / 3600000)}`;
+  const hit = OFFSETS.get(hourKey);
+  if (hit !== undefined) return hit;
+  let dtf = DTF.get(tz);
+  if (!dtf) {
+    dtf = new Intl.DateTimeFormat("en-US", {
+      timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+    });
+    DTF.set(tz, dtf);
+  }
   const p = Object.fromEntries(dtf.formatToParts(new Date(ms)).map((x) => [x.type, x.value]));
   const asUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute, +p.second);
-  return Math.round((asUtc - ms) / 60000);
+  const off = Math.round((asUtc - ms) / 60000);
+  OFFSETS.set(hourKey, off);
+  return off;
 }
 
 function fmtOffset(min: number): string {

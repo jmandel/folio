@@ -9,7 +9,7 @@ import {
   localDate, ms, type Patient,
 } from "../../truth/src/model.ts";
 import { nameParts, staff } from "../../truth/src/staff.ts";
-import { Ctx, icdDisplay, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
+import { Ctx, factSlug, icdDisplay, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
 import { describe, evidenceFor } from "./describe.ts";
 import { guards } from "./guards.ts";
 import { type Item, schemaRef, ulid } from "./item.ts";
@@ -266,7 +266,7 @@ function renderContact(ctx: Ctx, e: Encounter, seenBefore: boolean): RenderedIte
   (e.addressed ?? []).forEach((a, i) => {
     const c = p.conditions.find((x) => x.id === a.conditionId)!;
     const hist = a.status === "history";
-    const k = ctx.key("C", c.id, `dx_${c.id.replace(/^c_/, "")}`) + (hist ? "_hx" : "");
+    const k = ctx.key("C", c.id, `dx_${factSlug(p, c.id)}`) + (hist ? "_hx" : "");
     factKey.set(c.id, k);
     const icd = a.icd10 ?? [...c.history].reverse().find((h) => h.icd10 && h.at <= e.start)?.icd10 ?? c.coding.find((x) => x.system === "icd10")!.code;
     payload[k] = {

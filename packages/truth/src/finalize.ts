@@ -4,7 +4,7 @@
 
 import { ANALYTES } from "./catalog.ts";
 import {
-  ageOn, ckdEpi2009, ckdEpi2021, EGFR_2021_FROM, EGFR_NUMERIC_FROM, localDate,
+  ageOn, ckdEpi2009, ckdEpi2021, EGFR_2021_FROM, EGFR_NUMERIC_FROM, localDate, sortKey,
   type LabResult, type Patient,
 } from "./model.ts";
 
@@ -80,8 +80,20 @@ export function finalize(input: PatientIn): Patient {
       l.visibility = { [l.performedBy]: "structured" };
       for (const c of l.copies ?? []) l.visibility[c] = "structured";
     }
-    if (l.copies?.length) l.traps = [...new Set([...(l.traps ?? []), "T14" as const])];
+    const t = new Set(l.traps ?? []);
+    if (l.copies?.length) t.add("T14");
+    if (l.copies?.includes("B") && (l.analyte === "platelets" || l.analyte === "wbc")) t.add("T7");
+    if (l.performedBy === "A" && l.analyte === "platelets") t.add("T7");
+    if (l.performedBy === "C" && (l.analyte === "egfr" || ((l.analyte === "potassium" || l.analyte === "uacr") && localDate(l.collectedAt) < "2023-05-01"))) t.add("T16");
+    if (t.size) l.traps = [...t];
   }
+
+  // Histories in time order (stable for ties and partial dates).
+  const byTime = <T extends { at: string }>(xs: T[]) => xs.map((x, i) => [x, i] as const).sort((a, b) => sortKey(a[0].at) - sortKey(b[0].at) || a[1] - b[1]).map(([x]) => x);
+  for (const m of p.meds) m.history = byTime(m.history);
+  for (const c of p.conditions) c.history = byTime(c.history);
+  p.labs.sort((a, b) => Date.parse(a.collectedAt) - Date.parse(b.collectedAt));
+  p.draws.sort((a, b) => Date.parse(a.collectedAt) - Date.parse(b.collectedAt));
 
   for (const e of p.encounters) e.documents ??= [];
   p.home ??= undefined;

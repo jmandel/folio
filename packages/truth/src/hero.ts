@@ -654,8 +654,7 @@ export function deriveTraps(p: Patient): Patient["traps"] {
   if (p.vitals.some((v) => v.renderedUnit === "mmol/L")) add("T6", p.vitals.filter((v) => v.renderedUnit === "mmol/L").map((v) => v.id)[0]);
   if (p.vitals.some((v) => v.source === "P")) add("T10", "homelog-wall-clock");
   if (p.vitals.some((v) => v.typo || v.duplicateOf)) add("T14", p.vitals.find((v) => v.typo || v.duplicateOf)!.id);
-  const aDocs = p.encounters.filter((e) => e.source === "A").flatMap((e) => e.documents.map((d) => `${e.id}/${d.key}`));
-  if (aDocs.length > 1) for (const d of aDocs) add("T15", d);
+  for (const e of p.encounters.filter((x) => x.source === "A" && x.documents.length > 1)) for (const d of e.documents) add("T15", `${e.id}/${d.key}`);
   if (p.encounters.some((e) => e.source === "A" && localDateDiffers(e.start))) add("T10", p.encounters.find((e) => e.source === "A")!.id);
   return [...by.entries()].sort(([a], [b]) => Number(a.slice(1)) - Number(b.slice(1)))
     .map(([trap, factIds]) => ({ trap: trap as `T${number}`, factIds: [...new Set(factIds)], note: TRAP_NOTES[trap] ?? "" }));

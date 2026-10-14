@@ -222,7 +222,8 @@ export function renderNorthgate(ctx: Ctx, lakeview: RenderedItem[]): RenderedIte
     }
   }
 
-  // Visits: note + billing dx, vital sets, list reviews.
+  // Visits: note + billing dx, vital sets, list reviews. A vital set belongs to the nearest visit that day.
+  const vitalEnc = (v: (typeof p.vitals)[number]) => encs.filter((e) => localDate(e.start) === localDate(v.at)).sort((a, b) => Math.abs(ms(a.start) - ms(v.at)) - Math.abs(ms(b.start) - ms(v.at)))[0];
   for (const e of encs) {
     const vid = visitId(e);
     const doc = e.documents[0];
@@ -245,7 +246,7 @@ export function renderNorthgate(ctx: Ctx, lakeview: RenderedItem[]): RenderedIte
         template: [`${e.reason}.`, ...note.spans.map((s) => `<ref id="${s.id}">${s.statement}</ref>`), ...note.mustInclude.map((m) => m.statement)].join("\n\n"),
         facts: doc.factIds, traps: doc.factIds.some((id) => p.sensitivity.some((s) => s.factIds.includes(id))) ? ["T19"] : [], fixture: ex?.file });
     }
-    for (const v of p.vitals.filter((x) => x.source === "B" && localDate(x.at) === localDate(e.start))) {
+    for (const v of p.vitals.filter((x) => x.source === "B" && vitalEnc(x) === e)) {
       const itemKey = `B/vitals/${v.id}`;
       const payload = {
         vitals: {

@@ -2,9 +2,15 @@
   "name": "folio",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "check:examples": "bun work/check-examples.ts",
-    "check:hashes": "bun work/schema-hashes.ts --check"
+    "check:hashes": "bun work/schema-hashes.ts --check",
+    "gen": "bun packages/render/src/cli/gen.ts",
+    "prose": "bun packages/render/src/cli/prose.ts",
+    "check:corpus": "bun packages/render/src/cli/check.ts",
+    "test": "bun test packages"
   }
 }

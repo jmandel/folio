@@ -7,7 +7,7 @@ import {
   type Analyte, type Encounter, type EncounterDocument, type LabResult, localDate, ms, type Patient, utcZ, wall,
 } from "../../truth/src/model.ts";
 import { staff } from "../../truth/src/staff.ts";
-import { Ctx, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
+import { Ctx, factSlug, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
 import { describe, medDoseAt } from "./describe.ts";
 import { guards } from "./guards.ts";
 import { type Item, schemaRef, ulid } from "./item.ts";
@@ -258,7 +258,7 @@ function renderDoc(ctx: Ctx, enc: Encounter, doc: EncounterDocument, encId: stri
       }
       case "dx": {
         const { c, status, label, subtype } = condStatus(it.conditionId);
-        const k = key(c.id, `dx_${c.id.replace(/^c_/, "")}`);
+        const k = key(c.id, `dx_${factSlug(p, c.id)}`);
         factKey.set(c.id, k);
         const icd = c.coding.find((x) => x.system === "icd10")!.code;
         payload[k] = {
@@ -284,7 +284,7 @@ function renderDoc(ctx: Ctx, enc: Encounter, doc: EncounterDocument, encId: stri
       }
       case "history": {
         const c = p.conditions.find((x) => x.id === it.conditionId)!;
-        const k = key(c.id, `hx_${c.id.replace(/^c_/, "")}`);
+        const k = key(c.id, `hx_${factSlug(p, c.id)}`);
         factKey.set(`hx:${c.id}`, k);
         if (!factKey.has(c.id)) factKey.set(c.id, k);
         const bHist = [...c.history].reverse().find((h) => h.recordedBy !== "A" && h.icd10 && ms(h.at.includes("T") ? h.at : h.at + "T12:00:00Z") < ms(enc.start));
@@ -298,7 +298,7 @@ function renderDoc(ctx: Ctx, enc: Encounter, doc: EncounterDocument, encId: stri
       case "inpatient-med": {
         const m = p.meds.find((x) => x.id === it.medId)!;
         const route = m.route ?? "IV";
-        const k = key(m.id, `${route === "IV" ? "iv" : route === "SubQ" ? "sc" : "po"}_${m.id.replace(/^i_/, "")}`);
+        const k = key(m.id, `${route === "IV" ? "iv" : route === "SubQ" ? "sc" : "po"}_${factSlug(p, m.id)}`);
         factKey.set(m.id, k);
         const started = m.history.find((h) => h.status === "active")!.at;
         const stopped = m.history.find((h) => h.status === "stopped" && ms(h.at) <= ms(signed))?.at;
