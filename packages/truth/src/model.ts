@@ -186,7 +186,8 @@ export interface LabDraw {
   collectedAt: string;
   receivedAt?: string;
   fasting?: "Y" | "N" | "U";
-  orderedBy: SourceKey;
+  /** Who ordered it; "outside" is another practice that sends work to Lakeview. */
+  orderedBy: SourceKey | "outside";
   orderingClinician?: string;                  // Staff id
   performedBy: SourceKey;
   setting: "outpatient" | "ed" | "inpatient";
@@ -206,7 +207,7 @@ export interface LabResult {
   duplicateOf?: string;                        // T4 entered-in-error duplicate order
   derivedFrom?: string[];                      // eGFR <- creatinine (T11)
   reported?: { equation: "ckd-epi-2009-nonaa" | "ckd-epi-2009-aa" | "ckd-epi-2021"; value: number; comparator?: ">"; loinc?: string }[];
-  orderedBy: SourceKey; performedBy: SourceKey; copies?: SourceKey[];   // T14
+  orderedBy: SourceKey | "outside"; performedBy: SourceKey; copies?: SourceKey[];   // T14
   annotations?: string[];                      // "hemolyzed"
   resultedAt?: string;                         // released by the lab
   finalAt?: string;                            // when a preliminary result became final (absent: final at resultedAt)

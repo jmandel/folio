@@ -1,0 +1,73 @@
+{
+  "patient": "p160",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-09-29",
+      "sources": ["B"],
+      "basis": ["m_32"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sources": ["B"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979485",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sources": ["B"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2021",
+      "sources": ["B"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021",
+      "sensitive": "behavioral-health",
+      "sources": ["B"],
+      "basis": ["m_8"]
+    }
+  ]
+}

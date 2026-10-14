@@ -1,0 +1,45 @@
+{
+  "patient": "p250",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2023-05-27", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_82"],
+        "resolved_on": "2023-06-01"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2023-05-27", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_83"],
+        "resolved_on": "2023-06-01"
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+ "id": "4-uncontrolled-diabetes-insulin-ckd",
+ "title": "Uncontrolled diabetes on basal insulin with eGFR < 45",
+ "traps": [
+  "T4",
+  "T9",
+  "T11",
+  "T14"
+ ],
+ "definition": "Most recent A1c within 12 months of the evaluation date is >= 8.0%; basal insulin active at the evaluation date; most recent eGFR (any setting) < 45.",
+ "members": [
+  {
+   "patient": "hero",
+   "basis": [
+    "l_2026_02_09_a1c",
+    "m_glargine",
+    "l_2026_09_14_cr_egfr"
+   ]
+  },
+  {
+   "patient": "p017",
+   "basis": [
+    "l_76",
+    "m_36",
+    "l_114_egfr"
+   ]
+  },
+  {
+   "patient": "p032",
+   "basis": [
+    "l_53",
+    "m_37",
+    "l_87_egfr"
+   ]
+  },
+  {
+   "patient": "p053",
+   "basis": [
+    "l_69",
+    "m_48",
+    "l_128_egfr"
+   ]
+  },
+  {
+   "patient": "p069",
+   "basis": [
+    "l_48",
+    "m_10",
+    "l_45_egfr"
+   ]
+  },
+  {
+   "patient": "p095",
+   "basis": [
+    "l_147",
+    "m_148",
+    "l_191_egfr"
+   ]
+  },
+  {
+   "patient": "p150",
+   "basis": [
+    "l_129",
+    "m_16",
+    "l_225_egfr"
+   ]
+  },
+  {
+   "patient": "p153",
+   "basis": [
+    "l_130",
+    "m_65",
+    "l_207_egfr"
+   ]
+  },
+  {
+   "patient": "p167",
+   "basis": [
+    "l_117",
+    "m_88",
+    "l_114_egfr"
+   ]
+  },
+  {
+   "patient": "p170",
+   "basis": [
+    "l_67",
+    "m_41",
+    "l_128_egfr"
+   ]
+  },
+  {
+   "patient": "p195",
+   "basis": [
+    "l_74",
+    "m_44",
+    "l_86_egfr"
+   ]
+  },
+  {
+   "patient": "p200",
+   "basis": [
+    "l_150",
+    "m_64",
+    "l_245_egfr"
+   ]
+  },
+  {
+   "patient": "p233",
+   "basis": [
+    "l_163",
+    "m_132",
+    "l_161_egfr"
+   ]
+  },
+  {
+   "patient": "p237",
+   "basis": [
+    "l_108",
+    "m_85",
+    "l_130_egfr"
+   ]
+  },
+  {
+   "patient": "p257",
+   "basis": [
+    "l_98",
+    "m_85",
+    "l_131_egfr"
+   ]
+  },
+  {
+   "patient": "p270",
+   "basis": [
+    "l_83",
+    "m_70",
+    "l_164_egfr"
+   ]
+  }
+ ],
+ "as_of": "2026-10-13"
+}

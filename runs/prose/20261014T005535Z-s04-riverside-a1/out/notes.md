@@ -1,0 +1,15 @@
+=== note: A/e_28/ed ===
+## Emergency department provider note
+
+**Reason for visit:** facial and lip swelling.
+
+**History.** The patient is an adult who came to the ED today, June 4, with swelling of the lips and lower face that has come on over the past several hours. There was no rash and no itching, and no new foods, insect stings or other new exposures that they could identify. They describe a thick, full feeling in the mouth but have been able to swallow their saliva and speak in full sentences. They have taken <ref id="med_lisinopril">lisinopril 10 mg by mouth daily</ref> at home for blood pressure. Allergy list: NKDA.
+
+**Exam.** Seen and examined at 14:34. Vitals at 14:40: BP 129/77, HR 87, RR 19, T 98.3 F, SpO2 98%. Comfortable, speaking clearly, with no stridor and no drooling. The lips and lower face are visibly swollen without hives. Lungs are clear with unlabored breathing. The airway was watched closely throughout the visit.
+
+**Assessment and plan**
+
+1. <ref id="dx_angioedema">Angioedema, ACE inhibitor-associated</ref>. The swelling is asymmetric to the lips and face, without hives or itching, in a patient on an ACE inhibitor, which fits a bradykinin-mediated process rather than an allergic reaction. Methylprednisolone 125 mg IV was given once at 14:59. Vital signs and oxygen saturation are stable, and the airway is currently protected. Plan to keep the patient under observation with repeated airway checks and to reassess the extent of swelling over the coming hours.
+2. <ref id="med_lisinopril">Lisinopril is stopped. The patient is instructed: do not take lisinopril or any ACE inhibitor again.</ref> I explained that this reaction can recur with any drug in this class, even after years of uneventful use, and that it should be recorded as a drug reaction in their chart. They understood and agreed.
+
+The patient was told to alert staff right away if swelling spreads to the tongue or throat, or if breathing or swallowing becomes difficult.

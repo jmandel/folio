@@ -1,0 +1,1754 @@
+{
+ "version": 1,
+ "batches": {
+  "hero/homelog": {
+   "patient": "hero",
+   "source": "P",
+   "items": {
+    "P/day/2024-10-29/0": {
+     "run": "prose/20261014T005518Z-hero-homelog-a2",
+     "hash": "c2fcd4d30e461345"
+    },
+    "P/day/2024-10-30/0": {
+     "run": "prose/20261014T005518Z-hero-homelog-a2",
+     "hash": "3c9f1e8a5309519a"
+    },
+    "P/day/2024-11-07/0": {
+     "run": "prose/20261014T005511Z-hero-homelog-a1",
+     "hash": "e42aefae97f0387c"
+    },
+    "P/day/2025-10-14/0": {
+     "run": "prose/20261014T005511Z-hero-homelog-a1",
+     "hash": "f8ff09c32e4df0fd"
+    },
+    "P/day/2026-03-28/0": {
+     "run": "prose/20261014T005511Z-hero-homelog-a1",
+     "hash": "5e912c4c7ebfb746"
+    },
+    "P/day/2026-09-15/0": {
+     "run": "prose/20261014T005511Z-hero-homelog-a1",
+     "hash": "aa2ac4768089854e"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-hero-homelog-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 6,
+     "accepted": 4,
+     "costUsd": 0.035983799999999996,
+     "durationMs": 6936,
+     "ok": true
+    },
+    {
+     "run": "prose/20261014T005518Z-hero-homelog-a2",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 2,
+     "requested": 2,
+     "accepted": 2,
+     "costUsd": 0.0251077,
+     "durationMs": 5715,
+     "ok": true
+    }
+   ]
+  },
+  "hero/lakeview": {
+   "patient": "hero",
+   "source": "C",
+   "items": {
+    "C/contact/e_lv_2026_08_10": {
+     "run": "prose/20261014T005511Z-hero-lakeview-a1",
+     "hash": "0e0696e5eaef9442"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-hero-lakeview-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.0166344,
+     "durationMs": 3930,
+     "ok": true
+    }
+   ]
+  },
+  "hero/northgate": {
+   "patient": "hero",
+   "source": "B",
+   "items": {
+    "B/problem/c_hld/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "48aefad55fd9f071"
+    },
+    "B/problem/c_t2dm/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "b1c91bc9f88b585a"
+    },
+    "B/visit/e_ng_2019_03_18": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "5e22959b395e1df5"
+    },
+    "B/med/m_sertraline/0": {
+     "run": "prose/20261014T005548Z-hero-northgate-a2",
+     "hash": "59677c0291b22ba5"
+    },
+    "B/problem/c_mdd/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "8290ce8909a779fa"
+    },
+    "B/visit/e_ng_2019_09_16": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "086c31f92d70a53e"
+    },
+    "B/visit/e_ng_2021_01_18": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "3d99ea71d39a87ae"
+    },
+    "B/med/m_lisinopril/1": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "a50bcf207ed160cf"
+    },
+    "B/med/m_losartan/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "f0c5cad6976f3fca"
+    },
+    "B/visit/e_ng_2021_06_03": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "ae242d4b7702a2ed"
+    },
+    "B/visit/e_ng_2021_09_27": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "98b7dec1eb5e4b6a"
+    },
+    "B/med/m_chlorthalidone/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "c066257c9b126af1"
+    },
+    "B/visit/e_ng_2022_05_16": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "fd0e31b97a3e4278"
+    },
+    "B/med/m_empagliflozin/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "4883e2ef80bd8e3a"
+    },
+    "B/visit/e_ng_2023_03_06": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "61025076b7dbd995"
+    },
+    "B/visit/e_ng_2023_09_11": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "e0a15307767f350e"
+    },
+    "B/visit/e_ng_2024_04_15": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "606aaed181f2244f"
+    },
+    "B/visit/e_ng_2025_02_17": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "1138f00ace379d3c"
+    },
+    "B/med/m_glargine/0": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "5eafc1b970a189ac"
+    },
+    "B/med/m_losartan/1": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "3e47381da86d904d"
+    },
+    "B/visit/e_ng_2025_08_18": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "a038b803d532dc74"
+    },
+    "B/referral/hero/created": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "ed73978aa43a9809"
+    },
+    "B/visit/e_ng_2026_05_04": {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "hash": "5730907927b1b8ee"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-hero-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 23,
+     "accepted": 22,
+     "costUsd": 0.1621833,
+     "durationMs": 37074,
+     "ok": true
+    },
+    {
+     "run": "prose/20261014T005548Z-hero-northgate-a2",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 2,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.016975300000000002,
+     "durationMs": 3789,
+     "ok": true
+    }
+   ]
+  },
+  "hero/riverside": {
+   "patient": "hero",
+   "source": "A",
+   "items": {
+    "A/e_rrh_2024/pn1": {
+     "run": "prose/20261014T005511Z-hero-riverside-a1",
+     "hash": "71e4ce3822f9cf07"
+    },
+    "A/e_rrh_2024/pn2": {
+     "run": "prose/20261014T005511Z-hero-riverside-a1",
+     "hash": "cd981ed122664ad4"
+    },
+    "A/e_rrh_2024/pn3": {
+     "run": "prose/20261014T005511Z-hero-riverside-a1",
+     "hash": "6ac55554289f6617"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-hero-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 3,
+     "accepted": 3,
+     "costUsd": 0.0635935,
+     "durationMs": 17301,
+     "ok": true
+    }
+   ]
+  },
+  "p013/homelog": {
+   "patient": "p013",
+   "source": "P",
+   "items": {
+    "P/day/2024-06-27/0": {
+     "run": "prose/20261014T005654Z-p013-homelog-a1",
+     "hash": "15b87eaf9d79c97e"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005654Z-p013-homelog-a1",
+     "backend": "codex",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "durationMs": 19548,
+     "ok": true
+    }
+   ]
+  },
+  "p013/northgate": {
+   "patient": "p013",
+   "source": "B",
+   "items": {
+    "B/med/m_15/0": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "7bb0484456eeb0da"
+    },
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "2aa713de1366c071"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "f43b6a878a3c6cec"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "743ae398df0e516e"
+    },
+    "B/visit/e_7": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "3c564ce6aef153dd"
+    },
+    "B/med/m_4/1": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "f4884b989c12d054"
+    },
+    "B/problem/c_22/0": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "0b24bb7965a4093f"
+    },
+    "B/visit/e_16": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "fbb1f6bc1f03d89b"
+    },
+    "B/med/m_4/2": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "7aae85b60cad0e68"
+    },
+    "B/visit/e_23": {
+     "run": "prose/20261014T005850Z-p013-northgate-a1",
+     "hash": "143b67d2b6689b6b"
+    },
+    "B/void/m_31": {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "hash": "9b89041ccf5b7d46"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005654Z-p013-northgate-a1",
+     "backend": "codex",
+     "attempt": 1,
+     "requested": 11,
+     "accepted": 11,
+     "durationMs": 65271,
+     "ok": true
+    },
+    {
+     "run": "prose/20261014T005850Z-p013-northgate-a1",
+     "backend": "codex",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "durationMs": 26939,
+     "ok": true
+    }
+   ]
+  },
+  "p016/homelog": {
+   "patient": "p016",
+   "source": "P",
+   "items": {
+    "P/day/2025-04-27/0": {
+     "run": "prose/20261014T005552Z-p016-homelog-a1",
+     "hash": "9cfc3327d0c55761"
+    },
+    "P/day/2025-05-07/0": {
+     "run": "prose/20261014T005552Z-p016-homelog-a1",
+     "hash": "43b85f89715e4407"
+    },
+    "P/day/2025-12-30/0": {
+     "run": "prose/20261014T005552Z-p016-homelog-a1",
+     "hash": "8edc0889190f20cc"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005552Z-p016-homelog-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 3,
+     "accepted": 3,
+     "costUsd": 0.0213026,
+     "durationMs": 4958,
+     "ok": true
+    }
+   ]
+  },
+  "p016/northgate": {
+   "patient": "p016",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "47d86b9b5351b7e3"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "5e94e488bb06bb43"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "f7a4046860a2ee6b"
+    },
+    "B/visit/e_7": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "3c809baee0dcedfc"
+    },
+    "B/med/m_21/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "8966eed6510b8ed5"
+    },
+    "B/visit/e_14": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "03e3fbb3183ee13a"
+    },
+    "B/visit/e_22": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "8dca55bed7a4fbfc"
+    },
+    "B/problem/c_37/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "25d81a04bf84c8a6"
+    },
+    "B/allergy/a_39/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "fa03abede08075c3"
+    },
+    "B/med/m_4/1": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "7f94ca2d6272ab25"
+    },
+    "B/med/m_38/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "fc690c8b22d3b668"
+    },
+    "B/visit/e_28": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "658dc827d43c5843"
+    },
+    "B/visit/e_41": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "d883e536ad681cf7"
+    },
+    "B/visit/e_52": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "e5f933f6e9bfb954"
+    },
+    "B/visit/e_213": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "385bf707ca29f30a"
+    },
+    "B/visit/e_61": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "64106bdf3df611e1"
+    },
+    "B/visit/e_68": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "7683de99df9851de"
+    },
+    "B/med/m_87/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "fa476c95e9a97c15"
+    },
+    "B/visit/e_77": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "97b2c61bbfe59cac"
+    },
+    "B/allergy/a_164/0": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "9deae98343cd09fa"
+    },
+    "B/med/m_87/1": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "fbb3cba579f2b4b8"
+    },
+    "B/visit/e_163": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "6a39a270b92ed35d"
+    },
+    "B/med/m_6/1": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "57979f60cd5c729a"
+    },
+    "B/visit/e_215": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "9d11e03c95e529b2"
+    },
+    "B/med/m_6/2": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "d28148f471f422e8"
+    },
+    "B/visit/e_216": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "10d802217d46bce5"
+    },
+    "B/visit/e_88": {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "hash": "8a06cfc037f49574"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005551Z-p016-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 27,
+     "accepted": 27,
+     "costUsd": 0.09650009999999999,
+     "durationMs": 18141,
+     "ok": true
+    }
+   ]
+  },
+  "p016/riverside": {
+   "patient": "p016",
+   "source": "A",
+   "items": {
+    "A/e_166/ed": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "591fb3f3c25e9633"
+    },
+    "A/e_166/hp": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "e80eb532742581ac"
+    },
+    "A/e_166/pn1": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "83beb69ba36e3f0e"
+    },
+    "A/e_166/pn2": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "663ccfcc9d3a7a76"
+    },
+    "A/e_166/dc": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "f69eeeb6fd252891"
+    },
+    "A/e_98/hp": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "5180c090f5c89759"
+    },
+    "A/e_98/ed": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "6dd58b4fdca8ed21"
+    },
+    "A/e_98/consult": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "ed26b044b32ee312"
+    },
+    "A/e_98/pn1": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "2dca3e7f186c89a9"
+    },
+    "A/e_98/pn2": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "9dfa8bddd7de3b0d"
+    },
+    "A/e_98/pn3": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "01f0bf0691e8f2dd"
+    },
+    "A/e_98/dc": {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "hash": "78c5b0af531f2341"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005551Z-p016-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 12,
+     "accepted": 12,
+     "costUsd": 0.1715603,
+     "durationMs": 47381,
+     "ok": true
+    }
+   ]
+  },
+  "p026/homelog": {
+   "patient": "p026",
+   "source": "P",
+   "items": {
+    "P/day/2026-09-05/0": {
+     "run": "prose/20261014T005654Z-p026-homelog-a1",
+     "hash": "a578cb079816fdfc"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005654Z-p026-homelog-a1",
+     "backend": "codex",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "durationMs": 25030,
+     "ok": true
+    }
+   ]
+  },
+  "p026/northgate": {
+   "patient": "p026",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "69307f25af794193"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "507abedc8f2bca97"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "423e23729517b495"
+    },
+    "B/problem/c_4/0": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "a75487cddfcf6215"
+    },
+    "B/visit/e_7": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "a4347729d8b88daf"
+    },
+    "B/visit/e_9": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "91bd3f58036b8512"
+    },
+    "B/med/m_5/1": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "c8cc181b259fe10c"
+    },
+    "B/visit/e_11": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "8e3a3fd709196bfa"
+    },
+    "B/visit/e_13": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "c2c7493c1bf8d1da"
+    },
+    "B/visit/e_15": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "e191c3ff7f3e65a2"
+    },
+    "B/visit/e_17": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "f2e91bb70a10a73c"
+    },
+    "B/med/m_5/2": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "d95991f671ea3b6d"
+    },
+    "B/visit/e_19": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "053fa9c4479c6251"
+    },
+    "B/visit/e_21": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "5519337132732204"
+    },
+    "B/visit/e_23": {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "hash": "503e5081f85370cc"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005654Z-p026-northgate-a1",
+     "backend": "codex",
+     "attempt": 1,
+     "requested": 15,
+     "accepted": 15,
+     "durationMs": 54917,
+     "ok": true
+    }
+   ]
+  },
+  "p047/homelog": {
+   "patient": "p047",
+   "source": "P",
+   "items": {
+    "P/day/2024-09-02/0": {
+     "run": "prose/20261014T005555Z-p047-homelog-a1",
+     "hash": "27bb963ad58fac1e"
+    },
+    "P/day/2025-07-03/0": {
+     "run": "prose/20261014T005555Z-p047-homelog-a1",
+     "hash": "f87d559908db9259"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005555Z-p047-homelog-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 2,
+     "accepted": 2,
+     "costUsd": 0.018034500000000002,
+     "durationMs": 4282,
+     "ok": true
+    }
+   ]
+  },
+  "p047/northgate": {
+   "patient": "p047",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "3f7e04f419279ec9"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "b92b7b39a7bdbfaf"
+    },
+    "B/visit/e_7": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "76a8c985b6dd5308"
+    },
+    "B/visit/e_17": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "f482f22684d76a19"
+    },
+    "B/visit/e_23": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "c2e7b0c2e9a844c1"
+    },
+    "B/med/m_42/0": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "8334f4fef4cf489b"
+    },
+    "B/visit/e_33": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "df7cd00d803f5d2b"
+    },
+    "B/visit/e_43": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "81f8ce2f05383b05"
+    },
+    "B/visit/e_50": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "9b1d7e9d45423dba"
+    },
+    "B/visit/e_60": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "981340546ae4e6f9"
+    },
+    "B/med/m_74/0": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "7044a8c0998ee84a"
+    },
+    "B/visit/e_66": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "057f1b395172a7bf"
+    },
+    "B/void/m_140": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "2be04ce2e51006c7"
+    },
+    "B/visit/e_78": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "62bc0612dc71997c"
+    },
+    "B/allergy/a_137/0": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "357575147ca8b517"
+    },
+    "B/med/m_6/1": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "5cfc65ed99c0b24b"
+    },
+    "B/visit/e_136": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "058ec9df373afb31"
+    },
+    "B/visit/e_89": {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "hash": "9ffee4a5e06c7c70"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005554Z-p047-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 18,
+     "accepted": 18,
+     "costUsd": 0.0709377,
+     "durationMs": 15936,
+     "ok": true
+    }
+   ]
+  },
+  "p047/riverside": {
+   "patient": "p047",
+   "source": "A",
+   "items": {
+    "A/e_95/hp": {
+     "run": "prose/20261014T005554Z-p047-riverside-a1",
+     "hash": "a9e2c6621cb70e80"
+    },
+    "A/e_95/ed": {
+     "run": "prose/20261014T005554Z-p047-riverside-a1",
+     "hash": "47b851868cf556dc"
+    },
+    "A/e_95/pn1": {
+     "run": "prose/20261014T005554Z-p047-riverside-a1",
+     "hash": "b8e65e147ce94404"
+    },
+    "A/e_95/dc": {
+     "run": "prose/20261014T005554Z-p047-riverside-a1",
+     "hash": "8ed589eac3063663"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005554Z-p047-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 4,
+     "accepted": 4,
+     "costUsd": 0.0797502,
+     "durationMs": 21702,
+     "ok": true
+    }
+   ]
+  },
+  "p076/northgate": {
+   "patient": "p076",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "8534b5fab2a840e0"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "d6091e23e9b72a54"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "e4d4a300c1a905c8"
+    },
+    "B/problem/c_4/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "e8b125e9056e095b"
+    },
+    "B/visit/e_8": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "ca68eb3489a38a33"
+    },
+    "B/visit/e_15": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "2662815f5b1e3191"
+    },
+    "B/visit/e_26": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "a5ca1994511d6f0a"
+    },
+    "B/allergy/a_42/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "f471e58eb8c567c5"
+    },
+    "B/med/m_40/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "b906bcee0c46b089"
+    },
+    "B/med/m_5/1": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "dc3b37985996cbc5"
+    },
+    "B/med/m_41/0": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "6d60f15a4b8b8d0e"
+    },
+    "B/med/m_6/1": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "8d80572d4c433547"
+    },
+    "B/visit/e_34": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "d1ed0c7441dc39bd"
+    },
+    "B/visit/e_45": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "30e1a30ee056aad8"
+    },
+    "B/med/m_41/1": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "033c82da32f375ac"
+    },
+    "B/visit/e_53": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "61a97e2f62bbba60"
+    },
+    "B/visit/e_59": {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "hash": "e27cc65236d39105"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005557Z-p076-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 17,
+     "accepted": 17,
+     "costUsd": 0.0698156,
+     "durationMs": 14090,
+     "ok": true
+    }
+   ]
+  },
+  "p155/riverside": {
+   "patient": "p155",
+   "source": "A",
+   "items": {
+    "A/e_5/ed": {
+     "run": "prose/20261014T005559Z-p155-riverside-a1",
+     "hash": "0dd78a1ab7cf2e93"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005559Z-p155-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.0373492,
+     "durationMs": 10911,
+     "ok": true
+    }
+   ]
+  },
+  "p217/lakeview": {
+   "patient": "p217",
+   "source": "C",
+   "items": {
+    "C/contact/e_135": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "43620e3ed5c2be91"
+    },
+    "C/contact/e_143": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "da592f4b77209370"
+    },
+    "C/contact/e_149": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "62a0434bf19f3fbf"
+    },
+    "C/contact/e_156": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "dbdc93ac26540968"
+    },
+    "C/contact/e_162": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "984b432d83d4ecca"
+    },
+    "C/contact/e_169": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "92ff0ca5910364d3"
+    },
+    "C/contact/e_175": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "0a7324fcc95e43cd"
+    },
+    "C/contact/e_182": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "491e6b19eefd7f31"
+    },
+    "C/contact/e_188": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "d1f5e659c5b93e82"
+    },
+    "C/contact/e_195": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "d2dce75f98d871e3"
+    },
+    "C/contact/e_201": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "80117e0a5787384e"
+    },
+    "C/contact/e_208": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "166930b81048e78f"
+    },
+    "C/contact/e_214": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "50e929c14064b337"
+    },
+    "C/contact/e_221": {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "hash": "94bd24016595c76a"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005610Z-p217-lakeview-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 14,
+     "accepted": 14,
+     "costUsd": 0.0839202,
+     "durationMs": 17440,
+     "ok": true
+    }
+   ]
+  },
+  "p217/northgate": {
+   "patient": "p217",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "a44a159205e36170"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "b69e5ea49cbf6057"
+    },
+    "B/visit/e_6": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "b96ea7c36b5e0dd5"
+    },
+    "B/visit/e_12": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "f3ba35e8357fe824"
+    },
+    "B/visit/e_19": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "806253c37882d9c9"
+    },
+    "B/med/m_38/0": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "96f4502b812f23dd"
+    },
+    "B/visit/e_28": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "4242c226468bbf2c"
+    },
+    "B/visit/e_39": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "c565a9d5522ea59f"
+    },
+    "B/referral/rf_134/created": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "56a041f917a5a5ae"
+    },
+    "B/visit/e_45": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "c30ff0063d1b01b2"
+    },
+    "B/visit/e_52": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "719c3518529316f9"
+    },
+    "B/visit/e_58": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "39fc2c1645f11899"
+    },
+    "B/visit/e_65": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "f5da96bee4ff0b23"
+    },
+    "B/visit/e_74": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "c03a96a8e55ac11e"
+    },
+    "B/visit/e_81": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "b8b3272aadf7e8c1"
+    },
+    "B/visit/e_87": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "b1883e0c5d547d8d"
+    },
+    "B/visit/e_96": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "1d02fdfcdc5eb149"
+    },
+    "B/visit/e_106": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "da2998d2058e5055"
+    },
+    "B/problem/c_119/0": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "8e7e68a9449191cb"
+    },
+    "B/visit/e_113": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "c4650d4d4fda813f"
+    },
+    "B/visit/e_120": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "ab069d4f84be8cf6"
+    },
+    "B/visit/e_127": {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "hash": "83a845d0093485ff"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005610Z-p217-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 22,
+     "accepted": 22,
+     "costUsd": 0.0764968,
+     "durationMs": 18783,
+     "ok": true
+    }
+   ]
+  },
+  "s01/lakeview": {
+   "patient": "s01",
+   "source": "C",
+   "items": {
+    "C/contact/e_165": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "f8c3944276504493"
+    },
+    "C/contact/e_174": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "2819de4243670753"
+    },
+    "C/contact/e_180": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "bdce897dad701295"
+    },
+    "C/contact/e_187": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "36352875858eb9bf"
+    },
+    "C/contact/e_193": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "17d041ce41210810"
+    },
+    "C/contact/e_200": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "affc148ad78b8417"
+    },
+    "C/contact/e_206": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "5fadea5e0b699ba9"
+    },
+    "C/contact/e_213": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "4d8eab884316ce00"
+    },
+    "C/contact/e_219": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "1cff26adb9bacb70"
+    },
+    "C/contact/e_226": {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "hash": "c7521cf5522116fb"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-s01-lakeview-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 10,
+     "accepted": 10,
+     "costUsd": 0.0779257,
+     "durationMs": 15269,
+     "ok": true
+    }
+   ]
+  },
+  "s01/northgate": {
+   "patient": "s01",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5d0ecf215e4bf390"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5dc10abb189b292a"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "6d24aafb1a82efb3"
+    },
+    "B/visit/e_8": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5cc88b57ad0b159a"
+    },
+    "B/med/m_4/1": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "92d1a15a3cd4c844"
+    },
+    "B/visit/e_17": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "aa1f6212c33b5e06"
+    },
+    "B/med/m_36/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "42f2a44af5b1cd78"
+    },
+    "B/visit/e_26": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "32de79082fbf3589"
+    },
+    "B/visit/e_37": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5c8a19792223ef1a"
+    },
+    "B/visit/e_46": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "9669c39efaeba65b"
+    },
+    "B/med/m_58/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "06bcece8f836fcf0"
+    },
+    "B/visit/e_52": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "6b31792b2df87670"
+    },
+    "B/visit/e_59": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "cac5a26247031084"
+    },
+    "B/visit/e_70": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "e8762aa4d7a1a899"
+    },
+    "B/visit/e_77": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "6ff126c440c2566d"
+    },
+    "B/referral/rf_164/created": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "0a6cd2e9ef2bc0aa"
+    },
+    "B/visit/e_86": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "8d951f4daf4de7e4"
+    },
+    "B/outside/m_172": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "e431dc1f304fbcdb"
+    },
+    "B/visit/e_94": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "8d75fa4057aa5f67"
+    },
+    "B/visit/e_101": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "72e361c4d6bd5b82"
+    },
+    "B/visit/e_110": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "789ab3988032a243"
+    },
+    "B/visit/e_117": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "9af91312dd8dfce5"
+    },
+    "B/visit/e_124": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5ba58823c3eab6d2"
+    },
+    "B/problem/c_138/0": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "5e3fe60da4be244c"
+    },
+    "B/visit/e_132": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "2894976b43955177"
+    },
+    "B/visit/e_139": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "f767060e8c66986f"
+    },
+    "B/visit/e_147": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "9cdabf71b5ca4779"
+    },
+    "B/med/m_5/1": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "8802e525bb55b9f0"
+    },
+    "B/visit/e_157": {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "hash": "c3b667b0fd3340cc"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005511Z-s01-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 29,
+     "accepted": 29,
+     "costUsd": 0.0987878,
+     "durationMs": 23060,
+     "ok": true
+    }
+   ]
+  },
+  "s02/homelog": {
+   "patient": "s02",
+   "source": "P",
+   "items": {
+    "P/day/2023-02-20/0": {
+     "run": "prose/20261014T005531Z-s02-homelog-a2",
+     "hash": "8c65b0cc56aea8da"
+    },
+    "P/day/2023-03-02/0": {
+     "run": "prose/20261014T005526Z-s02-homelog-a1",
+     "hash": "5a83a6a150dea63f"
+    },
+    "P/day/2024-09-13/0": {
+     "run": "prose/20261014T005526Z-s02-homelog-a1",
+     "hash": "040b24e7d75a722e"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005526Z-s02-homelog-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 3,
+     "accepted": 2,
+     "costUsd": 0.0198868,
+     "durationMs": 4566,
+     "ok": true
+    },
+    {
+     "run": "prose/20261014T005531Z-s02-homelog-a2",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 2,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.015824,
+     "durationMs": 4342,
+     "ok": true
+    }
+   ]
+  },
+  "s02/northgate": {
+   "patient": "s02",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "4eb283c61017165f"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "78a4221c4af0e685"
+    },
+    "B/visit/e_6": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "9e016d113d15a855"
+    },
+    "B/problem/c_22/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "69da624b9ee64715"
+    },
+    "B/visit/e_13": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "ecd6a6e86f01935e"
+    },
+    "B/med/m_32/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "472e93193b5ef22c"
+    },
+    "B/visit/e_23": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "14bd13f4ce896b5e"
+    },
+    "B/allergy/a_42/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "afcc3355474e62cc"
+    },
+    "B/med/m_3/1": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "7a162dc69100a281"
+    },
+    "B/med/m_41/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "fb758a8f1915a27f"
+    },
+    "B/visit/e_33": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "f12a09ab69718d7b"
+    },
+    "B/visit/e_44": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "4da51d184d6d9e30"
+    },
+    "B/allergy/a_140/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "6a157543e69fe76e"
+    },
+    "B/med/m_32/1": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "8798ac1a813d2ed3"
+    },
+    "B/visit/e_139": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "8ca9479883a20dcb"
+    },
+    "B/med/m_57/0": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "82bc2d45232d6bdd"
+    },
+    "B/visit/e_50": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "2232157979afbc0a"
+    },
+    "B/visit/e_58": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "4a3f94f8c9d3ba76"
+    },
+    "B/visit/e_64": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "19d7895fca515d5e"
+    },
+    "B/visit/e_74": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "cdbe172071507a11"
+    },
+    "B/visit/e_81": {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "hash": "f1aa2a6f903cd208"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005524Z-s02-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 21,
+     "accepted": 21,
+     "costUsd": 0.0767254,
+     "durationMs": 16282,
+     "ok": true
+    }
+   ]
+  },
+  "s02/riverside": {
+   "patient": "s02",
+   "source": "A",
+   "items": {
+    "A/e_87/hp": {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "hash": "cf63e9492532b04e"
+    },
+    "A/e_87/ed": {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "hash": "91e143f432cfce8b"
+    },
+    "A/e_87/pn1": {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "hash": "52a6bfa10c682f4e"
+    },
+    "A/e_87/pn2": {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "hash": "c545bb8a20085ec5"
+    },
+    "A/e_87/dc": {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "hash": "f73c439eab255a9d"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005515Z-s02-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 5,
+     "accepted": 5,
+     "costUsd": 0.10723730000000001,
+     "durationMs": 32224,
+     "ok": true
+    }
+   ]
+  },
+  "s03/northgate": {
+   "patient": "s03",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "d60a77e5ba1279f3"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "5380840bc277a7a3"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "fd290a73e535059e"
+    },
+    "B/problem/c_4/0": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "1407651b83bc115e"
+    },
+    "B/problem/c_5/0": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "8d95a2a36b50a072"
+    },
+    "B/visit/e_13": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "7653f96ba7c36cfd"
+    },
+    "B/visit/e_23": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "6a57383bacb3eb90"
+    },
+    "B/visit/e_34": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "a52cc84449ed0c3b"
+    },
+    "B/visit/e_43": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "11994809fcb76025"
+    },
+    "B/visit/e_51": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "44c074daf839d1a2"
+    },
+    "B/med/m_12/1": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "fd21484cf0fa4041"
+    },
+    "B/visit/e_59": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "a4c9e8038defa11f"
+    },
+    "B/visit/e_144": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "1a4237d355e2eff3"
+    },
+    "B/visit/e_66": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "16cde10c570f5a16"
+    },
+    "B/med/m_7/1": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "68b05ef9237f09a5"
+    },
+    "B/visit/e_136": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "e874c654a0f43903"
+    },
+    "B/visit/e_74": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "e84b4057cd1c3d04"
+    },
+    "B/void/m_138": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "2d7d5193bcb9dacf"
+    },
+    "B/visit/e_82": {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "hash": "d3b3d857e5f6de4f"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005534Z-s03-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 19,
+     "accepted": 19,
+     "costUsd": 0.0717115,
+     "durationMs": 17107,
+     "ok": true
+    }
+   ]
+  },
+  "s03/riverside": {
+   "patient": "s03",
+   "source": "A",
+   "items": {
+    "A/e_89/hp": {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "hash": "cf896b84d2b61402"
+    },
+    "A/e_89/ed": {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "hash": "2e6a42e1f0525d26"
+    },
+    "A/e_89/pn1": {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "hash": "f58f469ccd83b3a1"
+    },
+    "A/e_89/pn2": {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "hash": "57562c6756936ba2"
+    },
+    "A/e_89/dc": {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "hash": "29613fe21399114f"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005528Z-s03-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 5,
+     "accepted": 5,
+     "costUsd": 0.08845199999999999,
+     "durationMs": 25086,
+     "ok": true
+    }
+   ]
+  },
+  "s04/homelog": {
+   "patient": "s04",
+   "source": "P",
+   "items": {
+    "P/day/2026-08-14/0": {
+     "run": "prose/20261014T005547Z-s04-homelog-a1",
+     "hash": "a78fba46a27276ab"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005547Z-s04-homelog-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.0149963,
+     "durationMs": 3410,
+     "ok": true
+    }
+   ]
+  },
+  "s04/northgate": {
+   "patient": "s04",
+   "source": "B",
+   "items": {
+    "B/problem/c_1/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "d781dc6959a7debd"
+    },
+    "B/problem/c_2/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "963cf88a1611ac4d"
+    },
+    "B/problem/c_3/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "fa1c5973d3eae65b"
+    },
+    "B/problem/c_4/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "e8d1757ef3185a01"
+    },
+    "B/problem/c_5/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "e7425dd521c6e207"
+    },
+    "B/visit/e_10": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "fd0dbc868c0facb6"
+    },
+    "B/visit/e_12": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "ea436b5693b2848d"
+    },
+    "B/visit/e_14": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "cf298f8bce38e18c"
+    },
+    "B/visit/e_16": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "26edd4b9e0a62eae"
+    },
+    "B/visit/e_18": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "6cfaf353afa13ba9"
+    },
+    "B/allergy/a_33/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "23e6b03fb30bd0ac"
+    },
+    "B/med/m_35/0": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "299e656c0e8dc564"
+    },
+    "B/med/m_6/1": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "e2d20e746ea7a754"
+    },
+    "B/visit/e_34": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "66ba9b3db0017a98"
+    },
+    "B/visit/e_20": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "270328ab7e0d9473"
+    },
+    "B/visit/e_22": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "d8e8a731d9725439"
+    },
+    "B/visit/e_24": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "76e18140155eeb64"
+    },
+    "B/visit/e_26": {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "hash": "44146b2fb1600c9d"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005540Z-s04-northgate-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 18,
+     "accepted": 18,
+     "costUsd": 0.0645354,
+     "durationMs": 13722,
+     "ok": true
+    }
+   ]
+  },
+  "s04/riverside": {
+   "patient": "s04",
+   "source": "A",
+   "items": {
+    "A/e_28/ed": {
+     "run": "prose/20261014T005547Z-s04-riverside-a2",
+     "hash": "f222dc75d1ffe5e6"
+    }
+   },
+   "runs": [
+    {
+     "run": "prose/20261014T005535Z-s04-riverside-a1",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 1,
+     "requested": 1,
+     "accepted": 0,
+     "costUsd": 0.033890500000000004,
+     "durationMs": 11406,
+     "ok": true
+    },
+    {
+     "run": "prose/20261014T005547Z-s04-riverside-a2",
+     "backend": "claude",
+     "model": "sonnet",
+     "attempt": 2,
+     "requested": 1,
+     "accepted": 1,
+     "costUsd": 0.0362625,
+     "durationMs": 8298,
+     "ok": true
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,153 @@
+{
+  "patient": "p075",
+  "view": "latest-labs",
+  "as_of": "2026-10-13",
+  "key": {
+    "creatinine": {
+      "analyte": "creatinine",
+      "value": 1.09,
+      "unit": "mg/dL",
+      "loinc": "2160-0",
+      "collected": "2026-04-14T07:41:00-05:00",
+      "collected_local_date": "2026-04-14",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_53"]
+    },
+    "egfr": {
+      "analyte": "egfr",
+      "value": 73,
+      "unit": "mL/min/1.73m2",
+      "loinc": "98979-8",
+      "collected": "2026-04-14T07:41:00-05:00",
+      "collected_local_date": "2026-04-14",
+      "setting": "outpatient",
+      "equation": "ckd-epi-2021",
+      "reported": [{ "equation": "ckd-epi-2021", "value": 73 }],
+      "sources": ["B", "C"],
+      "basis": ["l_53_egfr"]
+    },
+    "potassium": {
+      "analyte": "potassium",
+      "value": 4.6,
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_59"]
+    },
+    "glucose": {
+      "analyte": "glucose",
+      "value": 141,
+      "unit": "mg/dL",
+      "loinc": "2345-7",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_65"]
+    },
+    "wbc": {
+      "analyte": "wbc",
+      "value": 7.3,
+      "unit": "10*3/uL",
+      "loinc": "6690-2",
+      "collected": "2021-11-07T07:30:00-06:00",
+      "collected_local_date": "2021-11-07",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_19"]
+    },
+    "hemoglobin": {
+      "analyte": "hemoglobin",
+      "value": 15.3,
+      "unit": "g/dL",
+      "loinc": "718-7",
+      "collected": "2021-11-07T07:30:00-06:00",
+      "collected_local_date": "2021-11-07",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_20"]
+    },
+    "platelets": {
+      "analyte": "platelets",
+      "value": 197,
+      "unit": "10*3/uL",
+      "loinc": "777-3",
+      "collected": "2021-11-07T07:30:00-06:00",
+      "collected_local_date": "2021-11-07",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_21"]
+    },
+    "sodium": {
+      "analyte": "sodium",
+      "value": 134,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
+      "collected": "2026-04-14T07:41:00-05:00",
+      "collected_local_date": "2026-04-14",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_54"]
+    },
+    "chloride": {
+      "analyte": "chloride",
+      "value": 100,
+      "unit": "mmol/L",
+      "loinc": "2075-0",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_60"]
+    },
+    "bicarbonate": {
+      "analyte": "bicarbonate",
+      "value": 26,
+      "unit": "mmol/L",
+      "loinc": "2028-9",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_61"]
+    },
+    "anion-gap": {
+      "analyte": "anion-gap",
+      "value": 12,
+      "unit": "mmol/L",
+      "loinc": "33037-3",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_62"]
+    },
+    "bun": {
+      "analyte": "bun",
+      "value": 21,
+      "unit": "mg/dL",
+      "loinc": "3094-0",
+      "collected": "2025-11-23T19:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_63"]
+    },
+    "troponin": {
+      "analyte": "troponin",
+      "value": 0.01,
+      "comparator": "<",
+      "unit": "ng/mL",
+      "loinc": "10839-9",
+      "collected": "2025-11-23T22:10:00-06:00",
+      "collected_local_date": "2025-11-23",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_68"]
+    }
+  }
+}

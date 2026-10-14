@@ -1,0 +1,152 @@
+{
+  "patient": "p155",
+  "view": "lab-series",
+  "as_of": "2026-10-13",
+  "key": {
+    "sodium": [
+      {
+        "analyte": "sodium",
+        "value": 140,
+        "unit": "mmol/L",
+        "loinc": "2951-2",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_8"]
+      }
+    ],
+    "potassium": [
+      {
+        "analyte": "potassium",
+        "value": 4.5,
+        "unit": "mmol/L",
+        "loinc": "2823-3",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_9"]
+      }
+    ],
+    "chloride": [
+      {
+        "analyte": "chloride",
+        "value": 102,
+        "unit": "mmol/L",
+        "loinc": "2075-0",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_10"]
+      }
+    ],
+    "bicarbonate": [
+      {
+        "analyte": "bicarbonate",
+        "value": 23,
+        "unit": "mmol/L",
+        "loinc": "2028-9",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_11"]
+      }
+    ],
+    "anion-gap": [
+      {
+        "analyte": "anion-gap",
+        "value": 15,
+        "unit": "mmol/L",
+        "loinc": "33037-3",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_12"]
+      }
+    ],
+    "bun": [
+      {
+        "analyte": "bun",
+        "value": 18,
+        "unit": "mg/dL",
+        "loinc": "3094-0",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_13"]
+      }
+    ],
+    "creatinine": [
+      {
+        "analyte": "creatinine",
+        "value": 1.06,
+        "unit": "mg/dL",
+        "loinc": "2160-0",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_14"]
+      }
+    ],
+    "egfr": [
+      {
+        "analyte": "egfr",
+        "value": 84,
+        "unit": "mL/min/1.73m2",
+        "loinc": "98979-8",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "equation": "ckd-epi-2021",
+        "reported": [{ "equation": "ckd-epi-2021", "value": 84 }],
+        "sources": ["A"],
+        "basis": ["l_14_egfr"]
+      }
+    ],
+    "glucose": [
+      {
+        "analyte": "glucose",
+        "value": 122,
+        "unit": "mg/dL",
+        "loinc": "2345-7",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_15"]
+      }
+    ],
+    "troponin": [
+      {
+        "analyte": "troponin",
+        "value": 0.01,
+        "comparator": "<",
+        "unit": "ng/mL",
+        "loinc": "10839-9",
+        "collected": "2026-01-07T19:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_16"]
+      },
+      {
+        "analyte": "troponin",
+        "value": 0.01,
+        "comparator": "<",
+        "unit": "ng/mL",
+        "loinc": "10839-9",
+        "collected": "2026-01-07T22:05:00-06:00",
+        "collected_local_date": "2026-01-07",
+        "setting": "ed",
+        "sources": ["A"],
+        "basis": ["l_18"]
+      }
+    ]
+  }
+}

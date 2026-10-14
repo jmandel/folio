@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01KVPEWHFR817ZHC2ADJGAJSNT"
+issuer: "did:web:homelog.example"
+patient: "HL-U-28006"
+effective: "2026-06-20"
+recorded: "2026-06-22T01:24:59Z"
+author:
+  id: "urn:homelog:user:HL-U-28006"
+  name: "Dale Khan"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01KVM99DX8XAMP443MK2Z8TDBN"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2026-06-20T07:11",
+    "value": 118,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2026-06-20T07:21",
+    "systolic_mmhg": 129,
+    "diastolic_mmhg": 76,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2026-06-20T21:38",
+    "homelog_med_id": "med_8",
+    "med_name": "Insulin glargine",
+    "status": "taken",
+    "amount": 10,
+    "amount_unit": "units"
+  }
+}
+```

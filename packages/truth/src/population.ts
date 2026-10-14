@@ -169,7 +169,7 @@ class Gen {
   condByKey(key: string) { return this.conditions.find((c) => c.coding.some((x) => x.code === CONDITIONS[key].icd10) && !c.history.some((h) => h.status === "ruled-out")); }
 
   // ─── labs ──────────────────────────────────────────────────────────────────────────────────
-  drawC(at0: string, orderedBy: SourceKey, clinician: string | undefined, values: Partial<Record<LabIn["analyte"], number>>, opts: { fasting?: "Y" | "N" | "U" } = {}): Draw {
+  drawC(at0: string, orderedBy: SourceKey | "outside", clinician: string | undefined, values: Partial<Record<LabIn["analyte"], number>>, opts: { fasting?: "Y" | "N" | "U" } = {}): Draw {
     const id = this.uid("d");
     const r = this.rng.fork(`draw/${id}`);
     const draw: LabDraw = { id, collectedAt: at0, receivedAt: addMinutes(at0, 30 + r.int(0, 70)), fasting: opts.fasting ?? r.pick(["Y", "N", "U"]), orderedBy, orderingClinician: clinician, performedBy: "C", setting: "outpatient" };
@@ -449,7 +449,8 @@ export function generatePatient(spec: PatientSpec): Patient {
       const m = g.startMed("glargine-100", tick(), "B", { reason: `A1c ${g.a1c}`, vis: homeVis, dose: 10 });
       doc.factIds.push(m.id);
     }
-    if (g.htn && sbp >= 140 && prevSbp >= 140 && !(g.maskedFrom && date >= g.maskedFrom)) {
+    // Not when the patient has run out of a blood-pressure medicine: restarting it comes first.
+    if (g.htn && sbp >= 140 && prevSbp >= 140 && !(g.maskedFrom && date >= g.maskedFrom) && plan.nonadh !== date) {
       const raas = g.activeClass(date, ["acei", "arb"])[0];
       const prod = raas ? g.currentProduct(raas, start) : undefined;
       let m: Medication | undefined;
@@ -521,6 +522,13 @@ export function generatePatient(spec: PatientSpec): Patient {
   };
 
   visits.forEach((d, i) => doVisit(d, i));
+
+  // Lakeview patients with no Northgate chart: labs ordered by another practice.
+  if (inC && !inB) {
+    for (let d = weekday(addDays(g.bStart, r.int(0, 60)), r); d < addDays(T, -10); d = weekday(addDays(d, r.int(120, 240)), r)) {
+      g.drawC(at(`${d}T${hhmm(7, r.int(10, 55))}`), "outside", undefined, g.routineValues(d, { a1c: g.dm, uacr: (g.dm || g.ckd) && r.chance(0.5), na: r.chance(0.3), glu: !g.dm, cbc: r.chance(0.2) }));
+    }
+  }
 
   // ─── Hospital admissions (Riverside) ─────────────────────────────────────────────────────────
   const admit = (kind: "dka" | "aki" | "pna" | "cp" | "angio", date: string) => admission(g, kind, date, { c, inB, inP, homeVis });

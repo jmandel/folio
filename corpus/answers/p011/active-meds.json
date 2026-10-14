@@ -1,0 +1,88 @@
+{
+  "patient": "p011",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sensitive": "behavioral-health",
+      "sources": ["B", "P"],
+      "basis": ["m_11"]
+    },
+    {
+      "medication": "hydrochlorothiazide",
+      "rxnorm_ingredient": "5487",
+      "product": "hydrochlorothiazide 25 MG Oral Tablet",
+      "rxnorm_product": "310798",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "ibuprofen",
+      "rxnorm_ingredient": "5640",
+      "product": "ibuprofen 200 MG Oral Tablet",
+      "rxnorm_product": "310965",
+      "dose": { "value": 400, "unit": "mg" },
+      "dose_text": "400 mg (2 × 200 mg)",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2022",
+      "otc": true,
+      "taken_as": "2 when my back hurts, a few times a week",
+      "sources": ["P"],
+      "basis": ["m_76"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 1000 MG Oral Tablet",
+      "rxnorm_product": "861004",
+      "dose": { "value": 1000, "unit": "mg" },
+      "dose_text": "1000 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_10"]
+    }
+  ]
+}

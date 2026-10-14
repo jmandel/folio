@@ -1,0 +1,26 @@
+{
+  "patient": "p097",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2019", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2019", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

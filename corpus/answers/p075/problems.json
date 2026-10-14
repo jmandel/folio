@@ -1,0 +1,26 @@
+{
+  "patient": "p075",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2012-01", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

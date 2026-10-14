@@ -1,0 +1,37 @@
+---
+folio: "0.1"
+id: "01H2736CN0FS6X56B4T79H9HTM"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00493958"
+effective: "2023-06-05T15:00:00-05:00"
+recorded: "2023-06-05T19:55:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Diabetes follow-up.
+
+chlorthalidone: started 12.5 mg daily today (BP above goal)
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-060542",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-060542",
+    "rank": 1,
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
+  }
+}
+```

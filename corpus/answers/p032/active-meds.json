@@ -1,0 +1,73 @@
+{
+  "patient": "p032",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-02-11",
+      "sources": ["B", "P"],
+      "basis": ["m_27"]
+    },
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023",
+      "sensitive": "behavioral-health",
+      "sources": ["B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2025-07-18",
+      "sources": ["B", "P"],
+      "basis": ["m_37"]
+    },
+    {
+      "medication": "levothyroxine",
+      "rxnorm_ingredient": "10582",
+      "product": "levothyroxine sodium 0.075 MG Oral Tablet",
+      "rxnorm_product": "966222",
+      "dose": { "value": 75, "unit": "mcg" },
+      "dose_text": "75 mcg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023",
+      "sources": ["B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2023",
+      "sources": ["B", "P"],
+      "basis": ["m_6"]
+    }
+  ]
+}

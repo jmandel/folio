@@ -1,0 +1,26 @@
+{
+  "patient": "p002",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2008", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2020", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

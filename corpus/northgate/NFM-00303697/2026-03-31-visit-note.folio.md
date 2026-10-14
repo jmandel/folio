@@ -1,0 +1,35 @@
+---
+folio: "0.1"
+id: "01KN38GW20GJZNJH5GC0WK2A0A"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00303697"
+effective: "2026-03-31T13:30:00-05:00"
+recorded: "2026-03-31T19:54:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+BP follow-up.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2026-033189",
+    "visit_type": "office",
+    "reason": "BP follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-033189",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

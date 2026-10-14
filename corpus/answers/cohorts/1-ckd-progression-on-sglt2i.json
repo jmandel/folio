@@ -1,0 +1,277 @@
+{
+ "id": "1-ckd-progression-on-sglt2i",
+ "title": "CKD progression on an SGLT2 inhibitor, no DKA history",
+ "traps": [
+  "T1",
+  "T9",
+  "T11",
+  "T12",
+  "T16"
+ ],
+ "definition": "Two outpatient eGFRs 30-59 at least 90 days apart; least-squares slope of outpatient eGFR (CKD-EPI 2021, recomputed from creatinine) over the last two years below -5 mL/min/1.73m2 per year, from at least 3 values spanning at least a year; an SGLT2 inhibitor active (not held, not stopped) at the evaluation date; no DKA ever. Inpatient and ED eGFRs are excluded from both the staging and the slope: they reflect acute illness.",
+ "members": [
+  {
+   "patient": "p012",
+   "basis": [
+    "l_94_egfr",
+    "l_102_egfr",
+    "l_94_egfr",
+    "l_102_egfr",
+    "l_109_egfr",
+    "l_117_egfr",
+    "l_124_egfr",
+    "m_9"
+   ],
+   "note": "outpatient eGFR slope -8.3 /yr over 5 values"
+  },
+  {
+   "patient": "p095",
+   "basis": [
+    "l_113_egfr",
+    "l_121_egfr",
+    "l_113_egfr",
+    "l_121_egfr",
+    "l_130_egfr",
+    "l_170_egfr",
+    "l_178_egfr",
+    "l_138_egfr",
+    "l_184_egfr",
+    "l_144_egfr",
+    "l_191_egfr",
+    "m_7"
+   ],
+   "note": "outpatient eGFR slope -7.6 /yr over 9 values"
+  },
+  {
+   "patient": "p113",
+   "basis": [
+    "l_102_egfr",
+    "l_110_egfr",
+    "l_102_egfr",
+    "l_110_egfr",
+    "l_116_egfr",
+    "l_122_egfr",
+    "l_128_egfr",
+    "m_8"
+   ],
+   "note": "outpatient eGFR slope -9.4 /yr over 5 values"
+  },
+  {
+   "patient": "p140",
+   "basis": [
+    "l_86_egfr",
+    "l_93_egfr",
+    "l_93_egfr",
+    "l_101_egfr",
+    "l_109_egfr",
+    "l_115_egfr",
+    "l_122_egfr",
+    "m_6"
+   ],
+   "note": "outpatient eGFR slope -9.9 /yr over 5 values"
+  },
+  {
+   "patient": "p168",
+   "basis": [
+    "l_120_egfr",
+    "l_128_egfr",
+    "l_128_egfr",
+    "l_135_egfr",
+    "l_142_egfr",
+    "l_149_egfr",
+    "l_164_egfr",
+    "l_157_egfr",
+    "l_171_egfr",
+    "m_6"
+   ],
+   "note": "outpatient eGFR slope -7.2 /yr over 7 values"
+  },
+  {
+   "patient": "p175",
+   "basis": [
+    "l_104_egfr",
+    "l_112_egfr",
+    "l_97_egfr",
+    "l_104_egfr",
+    "l_112_egfr",
+    "l_119_egfr",
+    "l_135_egfr",
+    "l_127_egfr",
+    "l_143_egfr",
+    "m_8"
+   ],
+   "note": "outpatient eGFR slope -9.5 /yr over 7 values"
+  },
+  {
+   "patient": "p185",
+   "basis": [
+    "l_9_egfr",
+    "l_13_egfr",
+    "l_58_egfr",
+    "l_62_egfr",
+    "l_67_egfr",
+    "l_73_egfr",
+    "m_7"
+   ],
+   "note": "outpatient eGFR slope -5.9 /yr over 4 values"
+  },
+  {
+   "patient": "p192",
+   "basis": [
+    "l_85_egfr",
+    "l_98_egfr",
+    "l_105_egfr",
+    "l_112_egfr",
+    "l_118_egfr",
+    "l_126_egfr",
+    "l_144_egfr",
+    "l_134_egfr",
+    "m_6"
+   ],
+   "note": "outpatient eGFR slope -7.6 /yr over 6 values"
+  },
+  {
+   "patient": "p205",
+   "basis": [
+    "l_98_egfr",
+    "l_185_egfr",
+    "l_105_egfr",
+    "l_191_egfr",
+    "l_113_egfr",
+    "l_198_egfr",
+    "l_204_egfr",
+    "l_120_egfr",
+    "l_211_egfr",
+    "l_126_egfr",
+    "l_217_egfr",
+    "l_132_egfr",
+    "l_224_egfr",
+    "m_6"
+   ],
+   "note": "outpatient eGFR slope -8.5 /yr over 11 values"
+  },
+  {
+   "patient": "p215",
+   "basis": [
+    "l_124_egfr",
+    "l_133_egfr",
+    "l_124_egfr",
+    "l_133_egfr",
+    "l_141_egfr",
+    "l_159_egfr",
+    "l_149_egfr",
+    "l_166_egfr",
+    "m_12"
+   ],
+   "note": "outpatient eGFR slope -6.3 /yr over 6 values"
+  },
+  {
+   "patient": "p247",
+   "basis": [
+    "l_122_egfr",
+    "l_216_egfr",
+    "l_129_egfr",
+    "l_222_egfr",
+    "l_137_egfr",
+    "l_229_egfr",
+    "l_235_egfr",
+    "l_143_egfr",
+    "l_149_egfr",
+    "l_242_egfr",
+    "m_13"
+   ],
+   "note": "outpatient eGFR slope -9.1 /yr over 8 values"
+  },
+  {
+   "patient": "p256",
+   "basis": [
+    "l_93_egfr",
+    "l_101_egfr",
+    "l_123_egfr",
+    "l_129_egfr",
+    "l_135_egfr",
+    "l_154_egfr",
+    "l_166_egfr",
+    "l_142_egfr",
+    "l_162_egfr",
+    "m_5"
+   ],
+   "note": "outpatient eGFR slope -8.6 /yr over 7 values"
+  },
+  {
+   "patient": "p258",
+   "basis": [
+    "l_62_egfr",
+    "l_171_egfr",
+    "l_197_egfr",
+    "l_203_egfr",
+    "l_107_egfr",
+    "l_210_egfr",
+    "l_114_egfr",
+    "l_216_egfr",
+    "l_122_egfr",
+    "l_223_egfr",
+    "l_130_egfr",
+    "l_229_egfr",
+    "m_6"
+   ],
+   "note": "outpatient eGFR slope -8.4 /yr over 10 values"
+  },
+  {
+   "patient": "p276",
+   "basis": [
+    "l_89_egfr",
+    "l_146_egfr",
+    "l_89_egfr",
+    "l_146_egfr",
+    "l_95_egfr",
+    "l_152_egfr",
+    "l_102_egfr",
+    "l_159_egfr",
+    "l_111_egfr",
+    "l_165_egfr",
+    "l_117_egfr",
+    "m_7"
+   ],
+   "note": "outpatient eGFR slope -9.6 /yr over 9 values"
+  },
+  {
+   "patient": "p279",
+   "basis": [
+    "l_97_egfr",
+    "l_156_egfr",
+    "l_104_egfr",
+    "l_162_egfr",
+    "l_114_egfr",
+    "l_169_egfr",
+    "l_121_egfr",
+    "l_175_egfr",
+    "l_182_egfr",
+    "l_127_egfr",
+    "l_188_egfr",
+    "m_8"
+   ],
+   "note": "outpatient eGFR slope -9.2 /yr over 9 values"
+  },
+  {
+   "patient": "s01",
+   "basis": [
+    "l_203_egfr",
+    "l_127_egfr",
+    "l_203_egfr",
+    "l_127_egfr",
+    "l_209_egfr",
+    "l_135_egfr",
+    "l_216_egfr",
+    "l_142_egfr",
+    "l_150_egfr",
+    "l_222_egfr",
+    "l_160_egfr",
+    "l_229_egfr",
+    "m_7"
+   ],
+   "note": "outpatient eGFR slope -8.1 /yr over 10 values"
+  }
+ ],
+ "as_of": "2026-10-13"
+}

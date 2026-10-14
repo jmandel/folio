@@ -1,0 +1,40 @@
+{
+  "patient": "p083",
+  "view": "vitals",
+  "as_of": "2026-10-13",
+  "key": {
+    "clinic": [
+      {
+        "local_time": "2024-09-18T08:40",
+        "sources": ["B"],
+        "basis": ["v_8"],
+        "systolic": 127,
+        "diastolic": 72,
+        "pulse": 79,
+        "weight_kg": 102.9
+      },
+      {
+        "local_time": "2025-07-10T14:07",
+        "sources": ["B"],
+        "basis": ["v_16"],
+        "systolic": 122,
+        "diastolic": 76,
+        "pulse": 75,
+        "weight_kg": 104.4
+      },
+      {
+        "local_time": "2026-06-05T11:58",
+        "sources": ["B"],
+        "basis": ["v_22"],
+        "systolic": 140,
+        "diastolic": 83,
+        "repeat": { "systolic": 133, "diastolic": 80 },
+        "pulse": 64,
+        "weight_kg": 103.6
+      }
+    ],
+    "hospital": [],
+    "home_bp": [],
+    "home_glucose": []
+  }
+}

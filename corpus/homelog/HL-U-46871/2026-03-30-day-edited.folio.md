@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01KN39MEQGS7YS16PH3AZ19PEA"
+issuer: "did:web:homelog.example"
+patient: "HL-U-46871"
+effective: "2026-03-30"
+recorded: "2026-04-01T01:13:26Z"
+author:
+  id: "urn:homelog:user:HL-U-46871"
+  name: "Samuel Sanchez"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01KN14A2EG16KRDYB0DWNWTR6R"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2026-03-30T07:41",
+    "value": 173,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2026-03-30T07:51",
+    "systolic_mmhg": 137,
+    "diastolic_mmhg": 84,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2026-03-30T21:51",
+    "homelog_med_id": "med_6",
+    "med_name": "Insulin glargine",
+    "status": "taken",
+    "amount": 10,
+    "amount_unit": "units"
+  }
+}
+```

@@ -1,0 +1,82 @@
+---
+folio: "0.1"
+id: "01E5B2ANV0FZM83DM3XD2X53Q3"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00562483"
+effective: "2020-04-07T07:50:00-05:00"
+recorded: "2020-04-07T14:37:00-05:00"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+supersedes:
+  - "01E5AKVDM0HCT2G320ZY5YRX6T"
+---
+
+```json payload
+{
+  "creat": {
+    "type": "imported_result",
+    "test": { "nfm_code": "CREAT", "name": "Creatinine, serum", "loinc": "2160-0" },
+    "value": "0.91",
+    "unit": "mg/dL",
+    "reference_range": "0.57-1.00",
+    "result_status": "F",
+    "collected": "2020-04-07T07:50:00-05:00",
+    "resulted": "2020-04-07T10:13:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV20-098-66101", "result_code": "LK-CREAT" },
+    "order_id": "NO-2020-53122"
+  },
+  "egfr_naa": {
+    "type": "imported_result",
+    "test": { "nfm_code": "EGFR-NAA", "name": "eGFR (non-African American)", "loinc": "48642-3" },
+    "value": ">60",
+    "unit": "mL/min/1.73m2",
+    "reference_range": ">59",
+    "result_status": "F",
+    "collected": "2020-04-07T07:50:00-05:00",
+    "resulted": "2020-04-07T10:13:00-05:00",
+    "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV20-098-66101", "result_code": "LK-EGFR09N" },
+    "order_id": "NO-2020-53122"
+  },
+  "egfr_aa": {
+    "type": "imported_result",
+    "test": { "nfm_code": "EGFR-AA", "name": "eGFR (African American)", "loinc": "48643-1" },
+    "value": ">60",
+    "unit": "mL/min/1.73m2",
+    "reference_range": ">59",
+    "result_status": "F",
+    "collected": "2020-04-07T07:50:00-05:00",
+    "resulted": "2020-04-07T10:13:00-05:00",
+    "comment": "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV20-098-66101", "result_code": "LK-EGFR09A" },
+    "order_id": "NO-2020-53122"
+  },
+  "k": {
+    "type": "imported_result",
+    "test": { "nfm_code": "K", "name": "Potassium, serum" },
+    "value": "Result invalidated",
+    "unit": "mmol/L",
+    "reference_range": "3.5-5.1",
+    "result_status": "C",
+    "collected": "2020-04-07T07:50:00-05:00",
+    "resulted": "2020-04-07T14:33:00-05:00",
+    "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 10:19. CORRECTED 04/07/20 14:33: result invalidated, see recollected specimen LV20-098-78180.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV20-098-66101", "result_code": "LK-K" },
+    "order_id": "NO-2020-80202"
+  },
+  "glu": {
+    "type": "imported_result",
+    "test": { "nfm_code": "GLU", "name": "Glucose, serum", "loinc": "2345-7" },
+    "value": "87",
+    "unit": "mg/dL",
+    "reference_range": "70-99",
+    "result_status": "F",
+    "collected": "2020-04-07T07:50:00-05:00",
+    "resulted": "2020-04-07T10:13:00-05:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV20-098-66101", "result_code": "LK-GLU" },
+    "order_id": "NO-2020-74033"
+  }
+}
+```

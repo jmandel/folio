@@ -1,0 +1,37 @@
+{
+  "patient": "p178",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2021", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2024-06-07", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_38"],
+        "resolved_on": "2024-06-10"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2024-06-07", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_39"],
+        "resolved_on": "2024-06-10"
+      }
+    ]
+  }
+}

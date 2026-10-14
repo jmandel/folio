@@ -1,0 +1,30 @@
+---
+folio: "0.1"
+id: "01KGNNQSK8YPJ3JVTHYSBAV4KT"
+issuer: "did:web:homelog.example"
+patient: "HL-U-69153"
+effective: "2026-02-03"
+recorded: "2026-02-05T01:12:49Z"
+author:
+  id: "urn:homelog:user:HL-U-69153"
+  name: "Eugene Nguyen"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01KGKS6Q8RNPNRDFRPSMPX13RG"
+---
+
+```json payload
+{
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2026-02-03T07:05",
+    "systolic_mmhg": 121,
+    "diastolic_mmhg": 74,
+    "entry_method": "typed"
+  }
+}
+```

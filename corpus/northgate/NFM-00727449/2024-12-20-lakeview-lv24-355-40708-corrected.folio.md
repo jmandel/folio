@@ -1,0 +1,57 @@
+---
+folio: "0.1"
+id: "01JFJXSSY00S3PFQ0N7CCDQ77H"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00727449"
+effective: "2024-12-20T07:43:00-06:00"
+recorded: "2024-12-20T14:58:00-06:00"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+supersedes:
+  - "01JFJDYKF086AM777D2DAZ169G"
+---
+
+```json payload
+{
+  "creat": {
+    "type": "imported_result",
+    "test": { "nfm_code": "CREAT", "name": "Creatinine, serum", "loinc": "2160-0" },
+    "value": "0.75",
+    "unit": "mg/dL",
+    "reference_range": "0.57-1.00",
+    "result_status": "F",
+    "collected": "2024-12-20T07:43:00-06:00",
+    "resulted": "2024-12-20T10:10:00-06:00",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV24-355-40708", "result_code": "LK-CREAT" },
+    "order_id": "NO-2024-73859"
+  },
+  "egfr": {
+    "type": "imported_result",
+    "test": { "nfm_code": "EGFR", "name": "eGFR (CKD-EPI 2021)" },
+    "value": "82",
+    "unit": "mL/min/1.73m2",
+    "reference_range": ">59",
+    "result_status": "F",
+    "collected": "2024-12-20T07:43:00-06:00",
+    "resulted": "2024-12-20T10:10:00-06:00",
+    "comment": "Calculated by CKD-EPI 2021 (race-free) equation.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV24-355-40708", "result_code": "LK-EGFR21" },
+    "order_id": "NO-2024-73859"
+  },
+  "k": {
+    "type": "imported_result",
+    "test": { "nfm_code": "K", "name": "Potassium, serum", "loinc": "2823-3" },
+    "value": "Result invalidated",
+    "unit": "mmol/L",
+    "reference_range": "3.5-5.1",
+    "result_status": "C",
+    "collected": "2024-12-20T07:43:00-06:00",
+    "resulted": "2024-12-20T14:54:00-06:00",
+    "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 10:16. CORRECTED 12/20/24 14:54: result invalidated, see recollected specimen LV24-355-49079.",
+    "external_ref": { "lab": "Lakeview Labs", "accession": "LV24-355-40708", "result_code": "LK-K" },
+    "order_id": "NO-2024-53342"
+  }
+}
+```

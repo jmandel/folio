@@ -1,0 +1,50 @@
+{
+  "patient": "p134",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2014-01", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2013", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Primary osteoarthritis of knee",
+        "icd10": "M17.9",
+        "snomed": "239873007",
+        "onset": { "value": "2021-05", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Angioedema",
+        "icd10": "T78.3XXA",
+        "snomed": "41291007",
+        "onset": { "value": "2025-01-17", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_101"]
+      }
+    ],
+    "resolved": []
+  }
+}

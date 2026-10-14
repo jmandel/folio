@@ -1,0 +1,144 @@
+{
+  "patient": "p280",
+  "view": "lab-series",
+  "as_of": "2026-10-13",
+  "key": {
+    "creatinine": [
+      {
+        "analyte": "creatinine",
+        "value": 1.29,
+        "unit": "mg/dL",
+        "loinc": "2160-0",
+        "collected": "2024-11-10T07:41:00-06:00",
+        "collected_local_date": "2024-11-10",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_8"]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.31,
+        "unit": "mg/dL",
+        "loinc": "2160-0",
+        "collected": "2025-06-30T07:45:00-05:00",
+        "collected_local_date": "2025-06-30",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_14"]
+      },
+      {
+        "analyte": "creatinine",
+        "value": 1.3,
+        "unit": "mg/dL",
+        "loinc": "2160-0",
+        "collected": "2026-04-18T07:30:00-05:00",
+        "collected_local_date": "2026-04-18",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_20"]
+      }
+    ],
+    "egfr": [
+      {
+        "analyte": "egfr",
+        "value": 65,
+        "unit": "mL/min/1.73m2",
+        "loinc": "98979-8",
+        "collected": "2024-11-10T07:41:00-06:00",
+        "collected_local_date": "2024-11-10",
+        "setting": "outpatient",
+        "equation": "ckd-epi-2021",
+        "reported": [{ "equation": "ckd-epi-2021", "value": 65 }],
+        "sources": ["B", "C"],
+        "basis": ["l_8_egfr"]
+      },
+      {
+        "analyte": "egfr",
+        "value": 64,
+        "unit": "mL/min/1.73m2",
+        "loinc": "98979-8",
+        "collected": "2025-06-30T07:45:00-05:00",
+        "collected_local_date": "2025-06-30",
+        "setting": "outpatient",
+        "equation": "ckd-epi-2021",
+        "reported": [{ "equation": "ckd-epi-2021", "value": 64 }],
+        "sources": ["B", "C"],
+        "basis": ["l_14_egfr"]
+      },
+      {
+        "analyte": "egfr",
+        "value": 64,
+        "unit": "mL/min/1.73m2",
+        "loinc": "98979-8",
+        "collected": "2026-04-18T07:30:00-05:00",
+        "collected_local_date": "2026-04-18",
+        "setting": "outpatient",
+        "equation": "ckd-epi-2021",
+        "reported": [{ "equation": "ckd-epi-2021", "value": 64 }],
+        "sources": ["B", "C"],
+        "basis": ["l_20_egfr"]
+      }
+    ],
+    "potassium": [
+      {
+        "analyte": "potassium",
+        "value": 4.2,
+        "unit": "mmol/L",
+        "loinc": "2823-3",
+        "collected": "2024-11-10T07:41:00-06:00",
+        "collected_local_date": "2024-11-10",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_9"]
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.3,
+        "unit": "mmol/L",
+        "loinc": "2823-3",
+        "collected": "2025-06-30T07:45:00-05:00",
+        "collected_local_date": "2025-06-30",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_16"]
+      },
+      {
+        "analyte": "potassium",
+        "value": 4.7,
+        "unit": "mmol/L",
+        "loinc": "2823-3",
+        "collected": "2026-04-18T07:30:00-05:00",
+        "collected_local_date": "2026-04-18",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_21"]
+      }
+    ],
+    "glucose": [
+      {
+        "analyte": "glucose",
+        "value": 99,
+        "unit": "mg/dL",
+        "loinc": "2345-7",
+        "collected": "2024-11-10T07:41:00-06:00",
+        "collected_local_date": "2024-11-10",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_10"]
+      }
+    ],
+    "sodium": [
+      {
+        "analyte": "sodium",
+        "value": 137,
+        "unit": "mmol/L",
+        "loinc": "2951-2",
+        "collected": "2025-06-30T07:45:00-05:00",
+        "collected_local_date": "2025-06-30",
+        "setting": "outpatient",
+        "sources": ["B", "C"],
+        "basis": ["l_15"]
+      }
+    ]
+  }
+}

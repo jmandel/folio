@@ -1,0 +1,54 @@
+{
+  "patient": "p032",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2018", "precision": "year" },
+        "sources": ["B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2021", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hypothyroidism",
+        "icd10": "E03.9",
+        "snomed": "40930008",
+        "onset": { "value": "2018-03", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2021", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.4",
+        "snomed": "700379002",
+        "onset": { "value": "2025-02-11", "precision": "day" },
+        "stage": "4 A1",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-05-11",
+        "sources": ["B", "C"],
+        "basis": ["c_26"]
+      }
+    ],
+    "resolved": []
+  }
+}

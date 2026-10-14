@@ -1,0 +1,42 @@
+{
+  "patient": "p180",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2012-01", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Hypothyroidism",
+        "icd10": "E03.9",
+        "snomed": "40930008",
+        "onset": { "value": "2011-02-10", "precision": "day" },
+        "sources": ["B"],
+        "basis": ["c_4"]
+      }
+    ],
+    "resolved": []
+  }
+}

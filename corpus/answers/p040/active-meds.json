@@ -1,0 +1,74 @@
+{
+  "patient": "p040",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2023",
+      "sources": ["B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488574",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-08-06",
+      "sources": ["B", "P"],
+      "basis": ["m_34"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488574",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2024-09-23",
+      "sources": ["B", "C", "P"],
+      "basis": ["m_43"]
+    },
+    {
+      "medication": "ibuprofen",
+      "rxnorm_ingredient": "5640",
+      "product": "ibuprofen 200 MG Oral Tablet",
+      "rxnorm_product": "310965",
+      "dose": { "value": 400, "unit": "mg" },
+      "dose_text": "400 mg (2 × 200 mg)",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2024",
+      "otc": true,
+      "taken_as": "2 when my back hurts, a few times a week",
+      "sources": ["P"],
+      "basis": ["m_83"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2023",
+      "sources": ["B", "P"],
+      "basis": ["m_4"]
+    }
+  ]
+}

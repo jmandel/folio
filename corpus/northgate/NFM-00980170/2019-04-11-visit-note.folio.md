@@ -1,0 +1,35 @@
+---
+folio: "0.1"
+id: "01D87F5570NBV6J8E7EFE363C1"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00980170"
+effective: "2019-04-11T15:45:00-05:00"
+recorded: "2019-04-11T19:29:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New patient, establish care.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2019-041118",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-041118",
+    "rank": 1,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

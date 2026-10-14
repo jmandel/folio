@@ -1,0 +1,37 @@
+---
+folio: "0.1"
+id: "01EWBTPMW09KWA5Z0A2FQAX1SY"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00226578"
+effective: "2021-01-18T10:30:00-06:00"
+recorded: "2021-01-18T16:44:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Diabetes follow-up.
+
+lisinopril: dose changed to 20 mg daily today (BP above goal)
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-011826",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-011826",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

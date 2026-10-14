@@ -1,0 +1,75 @@
+{
+  "patient": "p277",
+  "view": "latest-labs",
+  "as_of": "2026-10-13",
+  "key": {
+    "creatinine": {
+      "analyte": "creatinine",
+      "value": 1.07,
+      "unit": "mg/dL",
+      "loinc": "2160-0",
+      "collected": "2026-07-20T07:53:00-05:00",
+      "collected_local_date": "2026-07-20",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_66"]
+    },
+    "egfr": {
+      "analyte": "egfr",
+      "value": 58,
+      "unit": "mL/min/1.73m2",
+      "loinc": "98979-8",
+      "collected": "2026-07-20T07:53:00-05:00",
+      "collected_local_date": "2026-07-20",
+      "setting": "outpatient",
+      "equation": "ckd-epi-2021",
+      "reported": [{ "equation": "ckd-epi-2021", "value": 58 }],
+      "sources": ["B", "C"],
+      "basis": ["l_66_egfr"]
+    },
+    "sodium": {
+      "analyte": "sodium",
+      "value": 136,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
+      "collected": "2025-01-08T07:25:00-06:00",
+      "collected_local_date": "2025-01-08",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_53"]
+    },
+    "potassium": {
+      "analyte": "potassium",
+      "value": 3.9,
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2026-07-20T07:53:00-05:00",
+      "collected_local_date": "2026-07-20",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_67"]
+    },
+    "a1c": {
+      "analyte": "a1c",
+      "value": 6.6,
+      "unit": "%",
+      "loinc": "4548-4",
+      "collected": "2026-07-20T07:53:00-05:00",
+      "collected_local_date": "2026-07-20",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_69"]
+    },
+    "uacr": {
+      "analyte": "uacr",
+      "value": 21,
+      "unit": "mg/g",
+      "loinc": "9318-7",
+      "collected": "2026-07-20T07:53:00-05:00",
+      "collected_local_date": "2026-07-20",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_68"]
+    }
+  }
+}

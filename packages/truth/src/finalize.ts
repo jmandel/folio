@@ -73,7 +73,7 @@ export function finalize(input: PatientIn): Patient {
 
   // Copies: Lakeview results go to Northgate over the interface, except entered-in-error orders (T4).
   for (const l of p.labs) {
-    if (l.performedBy === "C" && p.sources.B && l.status !== "entered-in-error") {
+    if (l.performedBy === "C" && p.sources.B && l.orderedBy !== "outside" && l.status !== "entered-in-error") {
       l.copies ??= ["B"];
     }
     if (!l.visibility || Object.keys(l.visibility).length === 0) {
