@@ -1,0 +1,366 @@
+{
+ "runId": "20261014T161226997Z-8b6y",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 35,
+  "items": 155,
+  "ms": 56.71824700000003,
+  "msPerItem": 0.36592417419354856,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9990900818926297,
+   "recall": 0.9990900818926297,
+   "tp": 1098,
+   "fp": 1,
+   "fn": 1,
+   "rows": 157,
+   "wrongRows": 1,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 126,
+   "fp": 0,
+   "fn": 0,
+   "rows": 42,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 0.9857142857142858,
+   "recall": 0.9857142857142858,
+   "tp": 69,
+   "fp": 1,
+   "fn": 1,
+   "rows": 16,
+   "wrongRows": 1,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 5919,
+   "fp": 0,
+   "fn": 0,
+   "rows": 1160,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 893,
+   "fp": 0,
+   "fn": 0,
+   "rows": 149,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.9990900818926297,
+    "recall": 0.9990900818926297,
+    "tp": 1098,
+    "fp": 1,
+    "fn": 1,
+    "rows": 157,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9857142857142858,
+    "recall": 0.9857142857142858,
+    "tp": 69,
+    "fp": 1,
+    "fn": 1,
+    "rows": 16,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.status": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.dose": {
+   "ok": 156,
+   "total": 157
+  },
+  "medications.frequency": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.patient_reported": {
+   "ok": 157,
+   "total": 157
+  },
+  "medications.evidence": {
+   "ok": 157,
+   "total": 157
+  },
+  "problems.status": {
+   "ok": 42,
+   "total": 42
+  },
+  "problems.evidence": {
+   "ok": 42,
+   "total": 42
+  },
+  "allergies.reaction_type": {
+   "ok": 15,
+   "total": 16
+  },
+  "allergies.mechanism": {
+   "ok": 16,
+   "total": 16
+  },
+  "allergies.criticality": {
+   "ok": 3,
+   "total": 3
+  },
+  "allergies.reaction": {
+   "ok": 3,
+   "total": 3
+  },
+  "allergies.evidence": {
+   "ok": 16,
+   "total": 16
+  },
+  "labs.value": {
+   "ok": 1160,
+   "total": 1160
+  },
+  "labs.unit": {
+   "ok": 1160,
+   "total": 1160
+  },
+  "labs.status": {
+   "ok": 1160,
+   "total": 1160
+  },
+  "labs.evidence": {
+   "ok": 1160,
+   "total": 1160
+  },
+  "labs.egfr_equation": {
+   "ok": 119,
+   "total": 119
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 149,
+   "total": 149
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 149,
+   "total": 149
+  },
+  "vitals.pulse_bpm": {
+   "ok": 149,
+   "total": 149
+  },
+  "vitals.weight_kg": {
+   "ok": 148,
+   "total": 148
+  },
+  "vitals.evidence": {
+   "ok": 149,
+   "total": 149
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 0.9991836734693877,
+   "recall": 0.9991836734693877,
+   "tp": 1224,
+   "fp": 1,
+   "fn": 1
+  },
+  "structured": {
+   "precision": 0.9998546934030805,
+   "recall": 0.9998546934030805,
+   "tp": 6881,
+   "fp": 1,
+   "fn": 1
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 157,
+   "errors": 1,
+   "patients": 35,
+   "patientsWithError": 1
+  },
+  "T19": {
+   "facts": 2,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 15,
+   "errors": 0,
+   "patients": 13,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 35,
+   "errors": 1,
+   "patients": 14,
+   "patientsWithError": 1
+  },
+  "T10": {
+   "facts": 1311,
+   "errors": 0,
+   "patients": 35,
+   "patientsWithError": 0
+  },
+  "T12": {
+   "facts": 15,
+   "errors": 0,
+   "patients": 13,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 1160,
+   "errors": 0,
+   "patients": 31,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_empagliflozin",
+    "c_dka"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5",
+    "01JBP1SKS0V37E3S3E28JT97KB",
+    "01JBSJ3HMG6CQ643DZVMXXQKFB",
+    "01JBS6NAWG438V4FFMFA897Y1T",
+    "01JBVVKP68RYMF7CEE9JBNZXD6",
+    "01JBZ2V178F5KZNWJ47TAN9ZT2",
+    "01JBYAAES035K0A0QM0RXD72CX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "dx_adverse"
+    },
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "med_empa"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "RRH-00180333",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "levothyroxine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "dose",
+     "expected": {
+      "value": 75,
+      "unit": "mcg"
+     },
+     "actual": {
+      "value": 75,
+      "unit": "mg"
+     }
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01G9BR3JK0PCKDWB92M2ZMMWXC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9BR3JK0PCKDWB92M2ZMMWXC",
+     "entry_id": "med_levothyroxine"
+    }
+   ]
+  }
+ ]
+}

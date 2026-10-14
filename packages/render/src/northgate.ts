@@ -346,7 +346,9 @@ export function renderNorthgate(ctx: Ctx, lakeview: RenderedItem[]): RenderedIte
       const dxs: Item["payload"] = {};
       rf.dx.forEach((cid, i) => {
         const c = p.conditions.find((x) => x.id === cid)!;
-        const icd = billingIcd(p, c, rf.created);
+        // The schema says referral diagnoses are chosen from the problem list: use the problem line's code at the time
+        // (round-3 fix; was the billing code, e.g. E11.22 against a problem line E11.9). Committed corpora were not regenerated.
+        const icd = problemIcd(c, rf.created);
         dxs[`dx_${i + 1}`] = { type: "referral_dx", referral_id: rid, icd10cm: icd, display: problemDisplay(c, rf.created), ...(c.sensitive ? { restricted: "BH" } : {}) };
       });
       const itemKey = `B/referral/${rf.id}/${action}`;
@@ -371,6 +373,11 @@ function lakeviewDrugId(ctx: Ctx, key: string): string {
 function problemDisplay(c: Condition, at: string): string {
   const stage = [...c.history].reverse().find((h) => h.recordedBy === "B" && h.stage && sortKey(h.at) <= sortKey(at))?.stage;
   return stage ? `Chronic kidney disease stage ${stage}` : c.name;
+}
+
+/** The ICD-10 code on Northgate's problem line for a condition at a time (as its problem_event entries carry it). */
+function problemIcd(c: Condition, at: string): string {
+  return [...c.history].reverse().find((h) => h.recordedBy === "B" && h.icd10 && sortKey(h.at) <= sortKey(at))?.icd10 ?? c.coding.find((x) => x.system === "icd10")!.code;
 }
 
 /** The ICD-10 code Northgate bills for a condition at a time. */

@@ -15,8 +15,8 @@
  "runtime": {
   "patients": 178,
   "items": 8722,
-  "ms": 210.11901100000006,
-  "msPerItem": 0.02409069146984637,
+  "ms": 208.07148900000007,
+  "msPerItem": 0.023855937743636788,
   "patientErrors": []
  },
  "views": {
@@ -41,13 +41,13 @@
    "extraRows": 0
   },
   "allergies": {
-   "precision": 0.9821428571428571,
-   "recall": 0.9821428571428571,
-   "tp": 220,
-   "fp": 4,
-   "fn": 4,
+   "precision": 1,
+   "recall": 1,
+   "tp": 224,
+   "fp": 0,
+   "fn": 0,
    "rows": 32,
-   "wrongRows": 4,
+   "wrongRows": 0,
    "extraRows": 0
   },
   "labs": {
@@ -94,13 +94,13 @@
     "extraRows": 0
    },
    "allergies": {
-    "precision": 0.9821428571428571,
-    "recall": 0.9821428571428571,
-    "tp": 220,
-    "fp": 4,
-    "fn": 4,
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
     "rows": 32,
-    "wrongRows": 4,
+    "wrongRows": 0,
     "extraRows": 0
    },
    "labs": {
@@ -187,7 +187,7 @@
    "total": 32
   },
   "allergies.mechanism": {
-   "ok": 28,
+   "ok": 32,
    "total": 32
   },
   "allergies.criticality": {
@@ -257,11 +257,11 @@
  },
  "byModality": {
   "narrated": {
-   "precision": 0.9995435353189547,
-   "recall": 0.9995435353189547,
-   "tp": 8759,
-   "fp": 4,
-   "fn": 4
+   "precision": 1,
+   "recall": 1,
+   "tp": 8763,
+   "fp": 0,
+   "fn": 0
   },
   "structured": {
    "precision": 1,
@@ -364,130 +364,5 @@
   }
  },
  "anti": [],
- "wrongRows": [
-  {
-   "patient": "s04",
-   "local": "NFM-00438305",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_34"
-   ],
-   "items": [
-    "01H2TYPMDG2EWZ2F5SCE091BMA",
-    "01H2VDJ5709FNTR3HR9KZ77878"
-   ],
-   "evidence": [
-    {
-     "item_id": "01H2TYPMDG2EWZ2F5SCE091BMA",
-     "entry_id": "alg_1"
-    }
-   ]
-  },
-  {
-   "patient": "p010",
-   "local": "NFM-00277891",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_64"
-   ],
-   "items": [
-    "01GX3ZSEQGX905NM0S549CRBVF",
-    "01GX4BX310C75FG2VZ3NGXV1EX"
-   ],
-   "evidence": [
-    {
-     "item_id": "01GX3ZSEQGX905NM0S549CRBVF",
-     "entry_id": "alg_1"
-    }
-   ]
-  },
-  {
-   "patient": "p202",
-   "local": "NFM-00312161",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_111"
-   ],
-   "items": [
-    "01HH53S9MG4HWDG1MKPNGVHV7J",
-    "01HH5JDG20WFXEB3Y7J4KEXB8X"
-   ],
-   "evidence": [
-    {
-     "item_id": "01HH53S9MG4HWDG1MKPNGVHV7J",
-     "entry_id": "alg_1"
-    }
-   ]
-  },
-  {
-   "patient": "p241",
-   "local": "NFM-00785765",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_171"
-   ],
-   "items": [
-    "01GMXTF6NGF3GDYSMNFW74WH13",
-    "01GMYBAT800398MDNMVJB25QC9"
-   ],
-   "evidence": [
-    {
-     "item_id": "01GMXTF6NGF3GDYSMNFW74WH13",
-     "entry_id": "alg_1"
-    }
-   ]
-  }
- ]
+ "wrongRows": []
 }

@@ -152,7 +152,7 @@ export function cacheMappers(recs: CompileRecord[]): { path: string; runId: stri
       const ev = loadEval(r.final);
       if (!ev || !ev.tsc.ok || ev.runtime.patientErrors.length || !ev.deterministic || ev.contract.length || ev.execError) continue;
       // Dev-split gate (set before any round-3 held-out run): wrong-row rate below DEV_GATE in every view at the latest date.
-      const dev = loadEvalAt(r.final, "main-dev");
+      const dev = loadEvalAt(r.final, "main-dev-frozen-26ee28163e5c6e69"); // the gate as applied, with the frozen key
       const last = dev?.byDate?.[dev.asOfDates[dev.asOfDates.length - 1]];
       if (!dev || !last || Object.values(last).some((v: any) => v.rows && (v.wrongRows + v.extraRows) / v.rows >= DEV_GATE)) continue;
       const dir = join(REPO, "mappers", r.schemaSha256, r.viewSetHash, r.backend);

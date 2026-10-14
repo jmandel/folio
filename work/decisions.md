@@ -125,3 +125,28 @@ Each change was checked against the regenerated raw items (corpus/), not only th
   main cohort's dev split at the latest as-of date (report.ts DEV_GATE), besides type-checking, running without
   errors, determinism and a clean isolation scan.
 - **Compile loop**: scores each new mapper on the main dev split only; held-out scoring is a separate step (`bun run score`).
+
+## Stage 3 round 3: fixes after the round-3 audit (post-hoc; no new mappers run)
+
+- **Northgate allergy mechanism (post-hoc key fix, made after the fresh scoring).** Northgate's schema defines
+  `reaction_type: 'allergy'` as immune-mediated, and views v3 say to report `immune` when the source says so; the
+  frozen key (26ee28163e5c6e69) accepted only `non_immune`/`unknown` for those rows, so mappers that followed the
+  documentation were scored wrong on every Northgate lisinopril (ACE-inhibitor angioedema) row. The per-source key and
+  the matching merged-key rows (allergy rows of type 'allergy' that Northgate records) now accept `immune` too. The
+  conflict was visible on the main dev split (2/10 rows, every backend) before the fresh scoring and was not fixed then.
+  New key/scorer hash `6a1a96c2620f6108` (the hash also covers a scorer synonym "mm[Hg]" = "mmHg" for the projected US Core units).
+  All runs were rescored; frozen-key results are kept in results/stage3/evals-fresh-frozen-26ee28163e5c6e69/,
+  evals-main-*-frozen-26ee28163e5c6e69/, scorecard-frozen-key.json and secondary-main-frozen-key.json, and SCORECARD.md
+  shows both where they differ. The dev cache gate had been applied with the frozen key and selected against these
+  mappers; the cache was not rebuilt.
+- **Northgate referral diagnoses (renderer, for future cohorts).** `referral_dx` used the billing code (E11.22 for type 2
+  diabetes with CKD) while the problem line kept E11.9 (e.g. fresh patient f007), although the schema says referral
+  diagnoses are chosen from the problem list. The renderer now uses the problem line's code. The committed corpora
+  (corpus/, corpus-fresh/) were not regenerated, so they still show the inconsistency.
+- **Note quality.** Some LLM-written notes call lisinopril an "ARB" (fresh patients f030, f102). Not fixed; recorded
+  for the note pipeline's checks.
+- **US Core view.** `uscore.d.ts` prescribed LOINC 53060-9 for beta-hydroxybutyrate (not a LOINC code; now 6873-4,
+  "Beta hydroxybutyrate [Moles/volume] in Serum or Plasma", checked with tx.fhir.org) and used the analyte unit "mmHg"
+  as the UCUM code (now `mm[Hg]`). The US Core mappers were not recompiled.
+- **Disclosure.** The fresh cohort's quotas were changed once after the freeze, after looking at aggregate trap counts
+  only (dka_prec 26→36, dka_noprec 10→12).

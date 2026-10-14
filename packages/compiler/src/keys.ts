@@ -245,7 +245,11 @@ function northgate(p: Patient, t: number, e: Expected, ix: TrapIndex) {
 
   // Allergies.
   for (const a of p.allergies.filter((x) => x.recordedBy === "B" && sortKey(x.recordedAt) <= t)) {
-    e.allergies.push(row("allergies", { substance: a.substance.display, reaction_type: RT[a.type], criticality: a.criticality, onset: onsetOf(a.onset), reaction: words(a.reactions), mechanism: ["non_immune", "unknown"] } as AllergyKey, [a.id], "B", ix, modality(a, "B")));
+    e.allergies.push(row("allergies", { substance: a.substance.display, reaction_type: RT[a.type], criticality: a.criticality, onset: onsetOf(a.onset), reaction: words(a.reactions),
+      // Post-hoc fix (round 3, after the fresh scoring; work/decisions.md): Northgate's schema defines reaction_type 'allergy'
+      // as immune-mediated, and the views say to report 'immune' when the source says so. The frozen key accepted only
+      // non_immune/unknown for these rows.
+      mechanism: a.type === "allergy" ? ["immune", "non_immune", "unknown"] : ["non_immune", "unknown"] } as AllergyKey, [a.id], "B", ix, modality(a, "B")));
   }
 
   // Imported results (copies of Lakeview results with copies including B).
@@ -577,7 +581,9 @@ export function mergedExpected(p: Patient, keys: Record<string, any>, ix: TrapIn
   for (const [list, status] of [["active", "active"], ["resolved", "resolved"]] as const) for (const c of keys.problems[list]) e.problems.push(mk("problems", {
     family: family(c.icd10, c.condition), condition: c.condition, icd10: c.icd10, status, ...(/^N18/.test(c.icd10) ? { ckd_stage: stageOf(c.stage).ckd_stage } : {}), onset: c.onset,
   } as ProblemKey, c.basis));
-  for (const a of keys.allergies) e.allergies.push(mk("allergies", { substance: a.substance, reaction_type: RT[a.type], criticality: a.criticality, mechanism: ["non_immune", "unknown"] } as AllergyKey, a.basis));
+  // Post-hoc fix (as for the Northgate per-source key): an allergy Northgate records as type 'allergy' may be reported 'immune'.
+  for (const a of keys.allergies) e.allergies.push(mk("allergies", { substance: a.substance, reaction_type: RT[a.type], criticality: a.criticality,
+    mechanism: a.type === "allergy" && (a.sources ?? []).includes("B") ? ["immune", "non_immune", "unknown"] : ["non_immune", "unknown"] } as AllergyKey, a.basis));
   for (const [analyte, series] of Object.entries(keys["lab-series"]) as [string, any[]][]) for (const l of series) {
     const a = analyteName(analyte);
     let value = l.value, comparator = l.comparator, eq: string | undefined;

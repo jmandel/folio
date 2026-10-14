@@ -41,7 +41,7 @@ export interface Quantity {
   unit: string;
   /** Always "http://unitsofmeasure.org". */
   system: 'http://unitsofmeasure.org';
-  /** UCUM code. For lab values: the unit from the `Analyte` table in views.d.ts (it is UCUM, except write "mL/min/{1.73_m2}" for eGFR and "mg/g" for UACR). */
+  /** UCUM code. For lab values: the unit from the `Analyte` table in views.d.ts (it is UCUM, except write "mL/min/{1.73_m2}" for eGFR, "mg/g" for UACR and "mm[Hg]" for pCO2). */
   code: string;
 }
 
@@ -124,7 +124,7 @@ export interface Observation {
    * code when it gives one; when it gives none, the LOINC code for the analyte from this table
    * (2160-0 creatinine, 98979-8 eGFR CKD-EPI 2021, 2823-3 potassium, 2951-2 sodium, 2075-0 chloride,
    * 2028-9 bicarbonate, 33037-3 anion gap, 3094-0 BUN, 2345-7 glucose, 4548-4 A1c, 9318-7 UACR,
-   * 777-3 platelets, 6690-2 WBC, 718-7 hemoglobin, 53060-9 beta-hydroxybutyrate, 2746-6 venous pH,
+   * 777-3 platelets, 6690-2 WBC, 718-7 hemoglobin, 6873-4 beta-hydroxybutyrate, 2746-6 venous pH,
    * 2021-4 venous pCO2, 3040-3 lipase, 10839-9 troponin I, 2093-3 cholesterol, 2571-8 triglycerides,
    * 2085-9 HDL, 13457-7 LDL calculated). For an eGFR the source says was calculated with CKD-EPI 2009
    * but codes with an MDRD LOINC, keep the source's code. Also add the source's local code as a second

@@ -34,6 +34,11 @@ for (const r of recs) {
   evals.set(r.final, ev);
   console.log(`scored ${r.source}/${r.viewSet}/${r.backend}/${r.variant}/r${r.rep}`);
 }
+// Frozen-key evaluations of the same runs (key hash 26ee28163e5c6e69), kept from the first fresh scoring.
+const FROZEN_DIR = join(RESULTS, "evals-fresh-frozen-26ee28163e5c6e69");
+const frozenEvals = new Map<string, Eval>();
+if (existsSync(FROZEN_DIR)) for (const f of readdirSync(FROZEN_DIR)) frozenEvals.set(f.replace(/\.json$/, ""), JSON.parse(readFileSync(join(FROZEN_DIR, f), "utf8")));
+const frozenSc: any = existsSync(join(RESULTS, "scorecard-frozen-key.json")) ? JSON.parse(readFileSync(join(RESULTS, "scorecard-frozen-key.json"), "utf8")) : {};
 const find = (s: Source, vs: string, b: string, variant = "full") => recs.filter((r) => r.source === s && r.viewSet === vs && r.backend === b && r.condition === "a" && (r.variant ?? "full") === variant).sort((a, b2) => a.rep - b2.rep);
 type Agg = { mean: number; min: number; max: number; n: number; rows: number; extra: number; failed: number };
 function agg(rs: CompileRecord[], view: string, date = LATEST, from: (r: CompileRecord) => Record<string, ViewScore> | undefined = (r) => (r.final ? evals.get(r.final)?.byDate[date] : undefined)): Agg | undefined {
@@ -42,15 +47,19 @@ function agg(rs: CompileRecord[], view: string, date = LATEST, from: (r: Compile
   const rates = xs.map((v) => v.wrongRows / v.rows);
   return { mean: rates.reduce((a, b) => a + b, 0) / rates.length, min: Math.min(...rates), max: Math.max(...rates), n: rates.length, rows: xs[0].rows, extra: Math.max(...xs.map((v) => v.extraRows)), failed: rs.filter((r) => !r.final).length };
 }
+const fromFrozen = (date = LATEST) => (r: CompileRecord) => (r.final ? frozenEvals.get(r.final)?.byDate[date] : undefined);
+const same = (a?: Agg, b?: Agg) => (!a && !b) || (!!a && !!b && a.mean === b.mean && a.min === b.min && a.max === b.max && a.extra === b.extra);
+/** Corrected-key cell, with the frozen-key value in brackets where it differs. */
+const pair = (rs: CompileRecord[], view: string) => { const c = agg(rs, view), f = agg(rs, view, LATEST, fromFrozen()); return same(c, f) ? fmt(c) : `${fmt(c)} [frozen key: ${fmt(f)}]`; };
 const fmt = (a?: Agg) => (!a ? "–" : `${pct(a.mean)}${a.n > 1 ? ` (${pct(a.min)}–${pct(a.max)})` : ""}${a.extra ? `, +${a.extra}` : ""}${a.failed ? `, ${a.failed} failed` : ""}`);
 const runList = (rs: CompileRecord[]) => rs.map((r) => (r.final ? `\`${r.final}\`` : "failed")).join(", ");
 
 const L: string[] = [];
 L.push("# Stage 3 scorecard (round 3)", "",
   "## How these numbers were made", "",
-  "- **History.** Round 1 scored mappers against keys that were changed while looking at test-split errors. Round 2 froze the keys first, but its views (v2) had been revised after round-1 test errors, using strings from the corpus generator, and were scored on test patients that mostly overlapped round 1. Round 3 replaces both: views v3 were written blind (a fresh sandboxed agent given only output semantics; `work/views-v3/README.md`), and all headline numbers come from a fresh held-out cohort generated after the key and scorer code were frozen. Round 1 and 2 results are kept in `results/stage3/round1/` and `round2/` and are not used here.",
-  `- **Key and scorer code** frozen at hash \`${KEYS}\` (work/decisions.md, round 3); every round-3 compile record carries the hash it was compiled under.`,
-  `- **Fresh cohort.** ${truth().patients.length} patients (seed \`folio-stage3-fresh-final\`, trap-targeted quotas in packages/truth/src/cohort.ts), corpus-fresh/, notes from the Stage 1 note pipeline. No record, key row or mapper output from it was looked at before scoring.`,
+  "- **History.** Round 1 scored mappers against keys that were changed while looking at test-split errors. Round 2 froze the keys first, but its views (v2) had been revised after round-1 test errors, using strings from the corpus generator, and were scored on test patients that mostly overlapped round 1. Round 3 replaces both. Views v3 were worded by an agent that saw no source, data or generator, working from a brief by the corpus author that restates each source's quirks in general terms (for example: a patient-list entry \"paused or stopped for the time being\" is held; a once-daily \"nightly\" direction may be QHS or QD; a count of 350 000 cells/uL is 350; report the eGFR variant without a race coefficient; a hand-entered reading that duplicates a device reading is reported once; a time with no zone is local time); see `work/views-v3/README.md`. So v3 does not measure reading a source schema without help: the brief carries the same source knowledge as v2, in general wording and without the corpus's strings. All headline numbers come from a fresh held-out cohort generated after the key and scorer code were frozen. Round 1 and 2 results are kept in `results/stage3/round1/` and `round2/` and are not used here.",
+  `- **Key and scorer code** were frozen at hash \`26ee28163e5c6e69\` before the fresh cohort was generated. After the fresh scoring, one labeled post-hoc key fix was made (work/decisions.md, "Northgate allergy mechanism"): Northgate's schema defines its \`allergy\` type as immune-mediated and the views say to report \`immune\` when the source says so, but the frozen key accepted only \`non_immune\`/\`unknown\` for those rows. The conflict was already visible on the main corpus's dev split (2 of 10 Northgate allergy rows, every backend) before the fresh scoring, and was not fixed then. Current key hash \`${KEYS}\`. Every table below uses the corrected key and shows the frozen-key value in brackets wherever it differs; the frozen-key evaluations are kept in \`results/stage3/evals-fresh-frozen-26ee28163e5c6e69/\` and \`scorecard-frozen-key.json\`.`,
+  `- **Fresh cohort.** ${truth().patients.length} patients (seed \`folio-stage3-fresh-final\`, trap-targeted quotas in packages/truth/src/cohort.ts), corpus-fresh/, notes from the Stage 1 note pipeline. After the freeze, the quotas were changed once after looking at aggregate trap counts only (dka_prec 26→36, dka_noprec 10→12). No record, key row or mapper output from it was looked at before scoring.`,
   "- **Mappers.** Compiled from the main corpus: the source schema, the views and about eight items from training patients. They were scored in the compile loop on the main corpus's dev split only (the cache gate).",
   `- **Scoring.** Each mapper runs on every fresh patient at three as-of dates. Each fact is counted once per date: the tables use ${LATEST} (end of the corpus) unless they say otherwise. A row is wrong if it is missing, duplicated, or any scored field is wrong ([Fields](#fields) lists them); extra rows are mapper rows with no expected counterpart. Equivalents the views accept (a \"nightly\" once-daily direction as QHS or QD) are accepted; rows the views leave open (a patient list naming one drug twice with different statuses) are not scored.`,
   "");
@@ -61,12 +70,13 @@ L.push("## One-shot mappers with views v3", "", `Condition a: schema, views v3, 
 const headline: any[] = [];
 for (const s of SOURCES) for (const v of VIEWS) {
   const cells = BACKS.map((b) => agg(find(s, "app", b), v));
+  const frozen = BACKS.map((b) => agg(find(s, "app", b), v, LATEST, fromFrozen()));
   const rows = cells.find(Boolean)?.rows;
   if (!rows) continue;
-  headline.push({ source: s, view: v, rows, cells: Object.fromEntries(BACKS.map((b, i) => [b, cells[i]])) });
-  L.push(`| ${s} | ${v} | ${rows} | ${cells.map(fmt).join(" | ")} |`);
+  headline.push({ source: s, view: v, rows, cells: Object.fromEntries(BACKS.map((b, i) => [b, cells[i]])), frozenKey: Object.fromEntries(BACKS.map((b, i) => [b, frozen[i]])) });
+  L.push(`| ${s} | ${v} | ${rows} | ${BACKS.map((b) => pair(find(s, "app", b), v)).join(" | ")} |`);
 }
-L.push("", "Northgate allergies: the wrong rows are the `mechanism` field (see [Fields](#fields)). Every backend reports `immune` for entries Northgate types `allergy`; Northgate's schema defines that type as immune-mediated and views v3 say to report `immune` when the source says so, while the frozen key accepts only `non_immune` or `unknown` (the truth has no immune-mediated reaction). This is a conflict between the key and the source's documentation, found on the main corpus's dev split; the key was not changed after the fresh cohort was scored.");
+L.push("", "Northgate allergies: with the frozen key every wrong row was the `mechanism` field on lisinopril rows Northgate types `allergy` (ACE-inhibitor angioedema), where mappers answered `immune` as Northgate's schema documents it. With the corrected key those rows are right.");
 L.push("", "Runs:", "");
 for (const s of SOURCES) for (const b of BACKS) L.push(`- ${s}, ${short(b)}: ${runList(find(s, "app", b))}`);
 
@@ -103,16 +113,16 @@ L.push("", "## Traps", "", "Fresh cohort, all three as-of dates. Per backend: er
   `| Source | Trap | Patients | In samples | ${BACKS.map(short).join(" | ")} |`, `|---|---|---|---|${BACKS.map(() => "---").join("|")}|`);
 for (const x of trapRows) L.push(`| ${x.source} | ${x.trap} ${TRAP_NAMES[x.trap]?.name ?? ""}${x.volume ? " (volume)" : ""} | ${x.patients} | ${x.inSamples ? "yes" : "no"} | ${BACKS.map((b) => { const c = x.per[b]; return c ? `${c.e}/${c.f}${c.e ? ` (${c.pe})` : ""}` : "–"; }).join(" | ")} |`);
 const few = trapRows.filter((x) => !x.volume && x.patients < 10);
-L.push("", few.length ? `Judgment traps with fewer than 10 fresh patients in a source: ${few.map((x) => `${x.source} ${x.trap} (${x.patients})`).join(", ")}. The generator places these cases on too few patients (Lakeview T13 needs a DKA history plus nephrology care; the hero-only cases are not generated for population patients).` : "Every judgment trap has at least 10 fresh patients in each source where it occurs.");
+L.push("", few.length ? `Judgment traps in this table with fewer than 10 fresh patients in a source: ${few.map((x) => `${x.source} ${x.trap} (${x.patients})`).join(", ")}.` : "Every judgment trap in this table has at least 10 fresh patients in its source. Lakeview T13 has 8 fresh patients but is carried by no view row, so it is not in the table (next paragraph).");
 const absent = ["A:T19", "C:T19", "C:T13", "P:T19"].filter((k) => !trapRows.some((x) => `${({ riverside: "A", northgate: "B", lakeview: "C", homelog: "P" } as any)[x.source]}:${x.trap}` === k));
 if (absent.length) L.push("", `No view row in the fresh cohort carries ${absent.join(", ")} (source:trap). Riverside, Lakeview and HomeLog T19 (a behavioral-health fact in that source) do not occur in the fresh cohort: the generator places them only on the hero. Lakeview T13 occurs (8 fresh patients) but is a prose-only fact (a decision written only in a note), which no view row represents.`);
 
 // v2 vs v3.
 const v2s = SOURCES.filter((s) => find(s, "appv2", "claude-opus").length);
 if (v2s.length) {
-  L.push("", "## Views v2 (source hints) and v3 (blind)", "", "Opus, condition a, three runs each, fresh cohort, wrong-row rate at the latest date. v2 was written by the corpus author with knowledge of each source's quirks; v3 was written blind. Same types, schemas and samples.", "",
+  L.push("", "## Views v2 and v3", "", "Opus, condition a, three runs each, fresh cohort, wrong-row rate at the latest date. v2 was written by the corpus author, with source strings and examples; v3 was worded by an agent that saw no source, from the author's brief (see above). Same types and schemas. The training samples are the same except HomeLog's: the v2 runs (compiled in round 2) saw a levothyroxine strength written \"75 mg\", the v3 runs the corrected \"75 mcg\". v2 also carries round-1 tuning.", "",
     "| Source | View | rows | v3 | v2 |", "|---|---|---|---|---|");
-  for (const s of v2s) for (const v of VIEWS) { const a3 = agg(find(s, "app", "claude-opus"), v), a2 = agg(find(s, "appv2", "claude-opus"), v); if (a3 || a2) L.push(`| ${s} | ${v} | ${(a3 ?? a2)!.rows} | ${fmt(a3)} | ${fmt(a2)} |`); }
+  for (const s of v2s) for (const v of VIEWS) { const a3 = agg(find(s, "app", "claude-opus"), v), a2 = agg(find(s, "appv2", "claude-opus"), v); if (a3 || a2) L.push(`| ${s} | ${v} | ${(a3 ?? a2)!.rows} | ${pair(find(s, "app", "claude-opus"), v)} | ${pair(find(s, "appv2", "claude-opus"), v)} |`); }
   L.push("");
   for (const s of v2s) L.push(`- ${s} v2 runs: ${runList(find(s, "appv2", "claude-opus"))}`);
 }
@@ -122,7 +132,7 @@ const abl = SOURCES.filter((s) => find(s, "app", "claude-opus", "types-only").le
 if (abl.length) {
   L.push("", "## Documentation ablation (views v3)", "", "Opus, condition a, three runs each, fresh cohort: the full source schema versus the same schema with every comment removed (types, field names and enum values only). Views v3 and samples unchanged. Wrong-row rate at the latest date.", "",
     "| Source | View | rows | full schema | types only |", "|---|---|---|---|---|");
-  for (const s of abl) for (const v of VIEWS) { const f = agg(find(s, "app", "claude-opus"), v), t = agg(find(s, "app", "claude-opus", "types-only"), v); if (f || t) L.push(`| ${s} | ${v} | ${(f ?? t)!.rows} | ${fmt(f)} | ${fmt(t)} |`); }
+  for (const s of abl) for (const v of VIEWS) { const f = agg(find(s, "app", "claude-opus"), v), t = agg(find(s, "app", "claude-opus", "types-only"), v); if (f || t) L.push(`| ${s} | ${v} | ${(f ?? t)!.rows} | ${pair(find(s, "app", "claude-opus"), v)} | ${pair(find(s, "app", "claude-opus", "types-only"), v)} |`); }
   L.push("");
   for (const s of abl) L.push(`- ${s} types-only runs: ${runList(find(s, "app", "claude-opus", "types-only"))}`);
 }
@@ -151,9 +161,9 @@ if (!values["no-fhir"] || readdirSync(join(RESULTS, "fhir")).some((f) => f.start
     if (!v && !values["no-fhir"]) v = await validateUsCore(readTransformOf(r.source, "uscore", backendOf(r.backend), r.final), r.source, r.final, "fresh");
     if (v) fhir.push({ source: r.source, backend: r.backend, run: r.final, resources: v.resources, errors: v.errors, structuralErrors: v.structuralErrors, terminologyErrors: v.terminologyErrors, warnings: v.warnings, terminologyWarnings: v.terminologyWarnings, codes: v.codes, validatorTerminologyErrors: v.validatorTerminologyErrors, engineExceptions: v.engineExceptions, topErrors: v.topErrors, topTerminology: v.topTerminology });
   }
-  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 and the round-2 `uscore.d.ts`, which already had the `statusReason` and `requester` fixes; not recompiled in round 3), run on " + FHIR_N + " fresh patients per source at 2026-10-13. Structure and US Core profile conformance: the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) over every resource, terminology offline. Terminology: every distinct coding and UCUM unit checked with tx.fhir.org `CodeSystem/$validate-code` (code exists; display matches). Value-set binding checks against tx.fhir.org were not completed: run through the validator they took over 15 minutes per 40 resources. Validator engine exceptions (its own calls to tx.fhir.org timing out or failing, although run with offline terminology) are counted apart; they are not findings about the resources. Both invalid codes in the Riverside output come from `uscore.d.ts` itself, which tells the mapper to use LOINC 53060-9 for beta-hydroxybutyrate (tx.fhir.org: unknown code) and the analyte unit \"mmHg\" as the UCUM code (UCUM is `mm[Hg]`); the display mismatches are short display names where LOINC and RxNorm expect their own. Every issue is in `results/stage3/fhir/fresh-<runId>.json`.", "",
-    "| Source | Backend | Run | Resources | Structural errors | Validator terminology errors | Distinct codes | Invalid codes (tx.fhir.org) | Display mismatches | Validator engine exceptions | Most common error |", "|---|---|---|---|---|---|---|---|---|---|---|");
-  for (const f of fhir) L.push(`| ${f.source} | ${short(f.backend)} | \`${f.run}\` | ${f.resources} | ${f.structuralErrors} | ${f.validatorTerminologyErrors} | ${f.codes} | ${f.terminologyErrors} | ${f.terminologyWarnings} | ${f.engineExceptions} | ${f.topErrors?.[0] ? `${String(f.topErrors[0][0]).slice(0, 100)} (${f.topErrors[0][1]})` : "–"} |`);
+  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 and the round-2 `uscore.d.ts`, which already had the `statusReason` and `requester` fixes; not recompiled in round 3), run on " + FHIR_N + " fresh patients per source at 2026-10-13. Structure and US Core profile conformance: the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) over every resource, terminology offline. Terminology: every distinct coding and UCUM unit checked with tx.fhir.org `CodeSystem/$validate-code` (code exists; display matches). Value-set binding checks against tx.fhir.org were not completed: run through the validator they took over 15 minutes per 40 resources. Validator engine exceptions (its own calls to tx.fhir.org timing out or failing, although run with offline terminology) are counted apart; they are not findings about the resources. Both invalid codes in the Riverside output come from `uscore.d.ts` itself, which tells the mapper to use LOINC 53060-9 for beta-hydroxybutyrate (tx.fhir.org: unknown code) and the analyte unit \"mmHg\" as the UCUM code (UCUM is `mm[Hg]`). \`uscore.d.ts\` is now fixed (LOINC 6873-4, \`mm[Hg]\`); the US Core mappers were not recompiled, so the table shows the output written against the unfixed file. The display mismatches are short display names where LOINC and RxNorm expect their own. Every issue is in `results/stage3/fhir/fresh-<runId>.json`.", "",
+    "| Source | Backend | Run | Resources | Structural errors | Distinct codes | Invalid codes (tx.fhir.org) | Display mismatches | Validator engine exceptions | Most common error |", "|---|---|---|---|---|---|---|---|---|---|");
+  for (const f of fhir) L.push(`| ${f.source} | ${short(f.backend)} | \`${f.run}\` | ${f.resources} | ${f.structuralErrors} | ${f.codes} | ${f.terminologyErrors} | ${f.terminologyWarnings} | ${f.engineExceptions} | ${f.topErrors?.[0] ? `${String(f.topErrors[0][0]).slice(0, 100)} (${f.topErrors[0][1]})` : "–"} |`);
 }
 
 // End to end.
@@ -167,9 +177,10 @@ const e2e: any[] = [];
     e2e.push(endToEnd(Object.fromEntries(SOURCES.map((s, i) => [s, { runId: rs[i]!.final!, transform: readTransformOf(s, "app", backendOf(b), rs[i]!.final!) }])) as any, `${short(b)} run ${rep}`));
   }
 }
-L.push("", "## Merged chart (end to end)", "", "Each source's v3 one-shot mapper runs on its own items for every fresh patient; the generic merge (`packages/compiler/src/merge.ts`, tuned in round 1, unchanged since) combines them; the result is scored at 2026-10-13 against the merged truth key, restricted to facts and fields some source records. A medication whose current status no structured record carries (it is only in a note) is counted under prose-only, not as a wrong row. Wrong-row rate per view, `+n` extra rows; prose-only rows: wrong/total.", "",
+L.push("", "## Merged chart (end to end)", "", "Each source's v3 one-shot mapper runs on its own items for every fresh patient; the generic merge (`packages/compiler/src/merge.ts`, tuned in round 1, unchanged since) combines them; the result is scored at 2026-10-13 against the merged truth key, restricted to facts and fields some source records. A medication whose current status no structured record carries (it is only in a note) is counted under prose-only, not as a wrong row; that carve-out catches 1 row in this cohort. The reference mappers' remaining wrong medication rows are a real floor: by the round-3 audit's breakdown, 11 are Riverside discharge holds that outlive a stale Northgate \"active\" line (the merge takes the most recently dated clinician row). Wrong-row rate per view, \`+n\` extra rows, frozen-key value in brackets where it differs; prose-only rows: wrong/total.", "",
   `| Mappers | ${VIEWS.join(" | ")} | prose-only medication rows |`, `|---|${VIEWS.map(() => "---").join("|")}|---|`);
-for (const e of e2e) L.push(`| ${e.label} | ${VIEWS.map((v) => { const x = e.views[v]; return x ? `${pct(x.wrongRows / x.rows)}${x.extraRows ? ` +${x.extraRows}` : ""}` : "–"; }).join(" | ")} | ${e.proseOnly?.medications ? `${e.proseOnly.medications.wrongRows}/${e.proseOnly.medications.rows}` : "0/0"} |`);
+const cellE = (x: any) => (x ? `${pct(x.wrongRows / x.rows)}${x.extraRows ? ` +${x.extraRows}` : ""}` : "–");
+for (const e of e2e) L.push(`| ${e.label} | ${VIEWS.map((v) => { const c = cellE(e.views[v]); const fz = (frozenSc.end_to_end ?? []).find((y: any) => y.label === e.label)?.views?.[v]; const f = fz ? cellE(fz) : c; return f === c ? c : `${c} [frozen key: ${f}]`; }).join(" | ")} | ${e.proseOnly?.medications ? `${e.proseOnly.medications.wrongRows}/${e.proseOnly.medications.rows}` : "0/0"} |`);
 
 // Fields.
 const fieldAgg: Record<string, Record<string, { ok: number; total: number }>> = {};
@@ -182,7 +193,7 @@ for (const f of Object.keys(fieldAgg).sort()) if (BACKS.some((b) => fieldAgg[f][
 L.push("", `All scored fields: ${Object.keys(fieldAgg).sort().join(", ")}.`);
 
 // Cost.
-L.push("", "## Cost and time (round-3 compiles)", "", "New round-3 compile runs only (the reused round-2 v2 runs are not counted). Notes for the fresh cohort and the regenerated main-corpus notes cost about $32 (sonnet, \`runs/prose/\`); the blind views writer about $0.9.", "", "| Backend | Runs | Cost (USD, as the CLI reports it) | Agent minutes |", "|---|---|---|---|");
+L.push("", "## Cost and time (round-3 compiles)", "", "New round-3 compile runs only (the reused round-2 v2 runs are not counted). Notes for the fresh cohort and the regenerated main-corpus notes cost about $32 (sonnet, \`runs/prose/\`); the views writer (no access to sources) about $0.9.", "", "| Backend | Runs | Cost (USD, as the CLI reports it) | Agent minutes |", "|---|---|---|---|");
 for (const b of BACKS) { const rounds = recs.filter((r) => r.backend === b && !(r as any).note?.includes("reused")).flatMap((r) => r.rounds).filter((x) => x.runId); L.push(`| ${short(b)} | ${rounds.length} | ${b.startsWith("codex") ? "not reported" : rounds.reduce((a, x) => a + (x.costUsd ?? 0), 0).toFixed(2)} | ${(rounds.reduce((a, x) => a + x.durationMs, 0) / 60000).toFixed(0)} |`); }
 
 // Isolation.
@@ -191,7 +202,7 @@ const agentRuns = (scan?.report ?? []).filter((r: any) => !r.run.includes("isola
 const kinds = (k: string) => agentRuns.reduce((a: number, r: any) => a + r.findings.filter((f: any) => f.kind === k).length, 0);
 L.push("", "## Isolation", "",
   "Agents run under bubblewrap with no network of their own (`--unshare-net`); the only route out is a per-run CONNECT proxy that allows the model API hosts and logs every connection to `<run>/network.log`. $HOME, /tmp and /run/user are empty mounts; the environment is cleared; IPC, PID and UTS namespaces are private; claude's web tools are disallowed. Probe runs in `runs/compiler/isolation-probe-v2/`: claude, and codex with its own command sandbox turned off inside bwrap (`codex-nosandbox/`), each get 403 from the proxy for github.com and raw.githubusercontent.com, cannot resolve any host directly, reach the model API host only through the proxy, and see no repo files, agent histories or D-Bus session.",
-  `The transcript scan (\`bun packages/compiler/src/cli/scan.ts\`) over ${scan?.runs ?? "?"} recorded runs found ${kinds("network")} agent tool calls using network tools, ${kinds("ipc")} using IPC and ${kinds("web-tool")} web-tool calls outside the probes; ${kinds("denied-connection")} connections were denied. ${(() => {
+  `The transcript scan (\`bun packages/compiler/src/cli/scan.ts\`) over ${scan?.runs ?? "?"} recorded runs found these agent tool calls outside the probes: network tools ${kinds("network")}, IPC ${kinds("ipc")}, web tools ${kinds("web-tool")}; ${kinds("denied-connection")} connections were denied. ${(() => {
     const other = agentRuns.flatMap((r: any) => r.findings.filter((f: any) => f.kind === "denied-connection" && !/ab\.chatgpt\.com|oaiusercontent\.com/.test(f.detail)).map((f: any) => `${f.detail.replace(/.*DENY /, "")} (${r.run.split("/").slice(-2).join("/")})`));
     return `All but ${other.length} were the codex CLI's own connections (ab.chatgpt.com, oaiusercontent.com image hosts).${other.length ? ` The others: ${[...new Set(other)].join(", ")}: the blind views writer ran \`npx -y tsc\` to type-check its file, and the proxy refused the package download.` : ""}`;
   })()}`);
@@ -200,6 +211,8 @@ L.push("", "## Isolation", "",
 const cached = cacheMappers(recs);
 L.push("", "## Cached mappers", "", `A mapper is cached when it type-checks, runs without errors, is deterministic, has no contract issues, passed the isolation scan, and had (wrong + extra rows) / rows below ${DEV_GATE * 100}% in every view on the main corpus's dev split (set before any held-out run). Condition c and the ablation are never cached; round 3 has only condition a.`, "");
 for (const c of cached) L.push(`- \`${c.path}\` (run \`${c.runId}\`)`);
+L.push("", "The dev gate was applied with the frozen key, so it selected against mappers that followed Northgate's documentation: every Northgate v3 mapper that answered `immune` for Northgate `allergy` rows failed it, and only one (Opus, which answered `unknown`) passed. With the corrected key, the Northgate v3 mappers below the gate on the dev split are: " +
+  (secondary.filter((x) => x.source === "northgate" && x.viewSet === "app" && x.variant === "full" && x.devLatest && Object.values(x.devLatest).every((v: any) => !v.rows || (v.wrongRows + v.extraRows) / v.rows < DEV_GATE)).map((x) => `${short(x.backend)} run ${x.rep}`).join(", ") || "none") + ". The cache above was built with the frozen-key gate and is not changed.");
 if (!cached.length) L.push("- none");
 
 writeFileSync(join(RESULTS, "scorecard.json"), JSON.stringify({ keys_sha256: KEYS, cohort: "fresh", as_of: AS_OF_DATES, headline, traps: trapRows, fhir, end_to_end: e2e, fields: fieldAgg, cached, secondary,

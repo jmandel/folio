@@ -15,8 +15,8 @@
  "runtime": {
   "patients": 178,
   "items": 8722,
-  "ms": 1041.0957269999997,
-  "msPerItem": 0.119364334670947,
+  "ms": 1047.955926,
+  "msPerItem": 0.12015087434074755,
   "patientErrors": []
  },
  "views": {
@@ -41,13 +41,13 @@
    "extraRows": 24
   },
   "allergies": {
-   "precision": 0.9821428571428571,
-   "recall": 0.9821428571428571,
-   "tp": 220,
-   "fp": 4,
-   "fn": 4,
+   "precision": 1,
+   "recall": 1,
+   "tp": 224,
+   "fp": 0,
+   "fn": 0,
    "rows": 32,
-   "wrongRows": 4,
+   "wrongRows": 0,
    "extraRows": 0
   },
   "labs": {
@@ -94,13 +94,13 @@
     "extraRows": 24
    },
    "allergies": {
-    "precision": 0.9821428571428571,
-    "recall": 0.9821428571428571,
-    "tp": 220,
-    "fp": 4,
-    "fn": 4,
+    "precision": 1,
+    "recall": 1,
+    "tp": 224,
+    "fp": 0,
+    "fn": 0,
     "rows": 32,
-    "wrongRows": 4,
+    "wrongRows": 0,
     "extraRows": 0
    },
    "labs": {
@@ -187,7 +187,7 @@
    "total": 32
   },
   "allergies.mechanism": {
-   "ok": 28,
+   "ok": 32,
    "total": 32
   },
   "allergies.criticality": {
@@ -257,11 +257,11 @@
  },
  "byModality": {
   "narrated": {
-   "precision": 0.9966906310624215,
-   "recall": 0.9966906310624215,
-   "tp": 8734,
-   "fp": 29,
-   "fn": 29
+   "precision": 0.9971470957434668,
+   "recall": 0.9971470957434668,
+   "tp": 8738,
+   "fp": 25,
+   "fn": 25
   },
   "structured": {
    "precision": 1,
@@ -413,68 +413,6 @@
     {
      "item_id": "01KY04E7906KSV6KB84DWQJWPN",
      "entry_id": "dx_2"
-    }
-   ]
-  },
-  {
-   "patient": "s04",
-   "local": "NFM-00438305",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_34"
-   ],
-   "items": [
-    "01H2TYPMDG2EWZ2F5SCE091BMA",
-    "01H2VDJ5709FNTR3HR9KZ77878"
-   ],
-   "evidence": [
-    {
-     "item_id": "01H2TYPMDG2EWZ2F5SCE091BMA",
-     "entry_id": "alg_1"
-    }
-   ]
-  },
-  {
-   "patient": "p010",
-   "local": "NFM-00277891",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_64"
-   ],
-   "items": [
-    "01GX3ZSEQGX905NM0S549CRBVF",
-    "01GX4BX310C75FG2VZ3NGXV1EX"
-   ],
-   "evidence": [
-    {
-     "item_id": "01GX3ZSEQGX905NM0S549CRBVF",
-     "entry_id": "alg_1"
     }
    ]
   },
@@ -1122,37 +1060,6 @@
    ]
   },
   {
-   "patient": "p202",
-   "local": "NFM-00312161",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_111"
-   ],
-   "items": [
-    "01HH53S9MG4HWDG1MKPNGVHV7J",
-    "01HH5JDG20WFXEB3Y7J4KEXB8X"
-   ],
-   "evidence": [
-    {
-     "item_id": "01HH53S9MG4HWDG1MKPNGVHV7J",
-     "entry_id": "alg_1"
-    }
-   ]
-  },
-  {
    "patient": "p212",
    "local": "NFM-00351993",
    "asOf": "2026-10-13",
@@ -1225,37 +1132,6 @@
     {
      "item_id": "01M3HX0GY029FX6J74APJS1V9J",
      "entry_id": "dx_2"
-    }
-   ]
-  },
-  {
-   "patient": "p241",
-   "local": "NFM-00785765",
-   "asOf": "2026-10-13",
-   "view": "allergies",
-   "key": "lisinopril",
-   "matched": true,
-   "duplicated": 0,
-   "wrong": [
-    {
-     "field": "mechanism",
-     "expected": "non_immune|unknown",
-     "actual": "immune"
-    }
-   ],
-   "traps": [],
-   "modality": "narrated",
-   "basis": [
-    "a_171"
-   ],
-   "items": [
-    "01GMXTF6NGF3GDYSMNFW74WH13",
-    "01GMYBAT800398MDNMVJB25QC9"
-   ],
-   "evidence": [
-    {
-     "item_id": "01GMXTF6NGF3GDYSMNFW74WH13",
-     "entry_id": "alg_1"
     }
    ]
   },

@@ -5,7 +5,7 @@ const LOINC_ANALYTE: Record<string, string> = {
   "2160-0": "creatinine", "38483-4": "creatinine", "98979-8": "egfr", "62238-1": "egfr", "48642-3": "egfr", "48643-1": "egfr", "33914-3": "egfr", "88293-6": "egfr", "88294-4": "egfr", "50044-7": "egfr", "69405-9": "egfr",
   "2823-3": "potassium", "6298-4": "potassium", "2951-2": "sodium", "2947-0": "sodium", "2075-0": "chloride", "2028-9": "bicarbonate", "1963-8": "bicarbonate",
   "33037-3": "anion_gap", "3094-0": "bun", "2345-7": "glucose", "2339-0": "glucose", "4548-4": "a1c", "9318-7": "uacr", "14959-1": "uacr",
-  "777-3": "platelets", "26515-7": "platelets", "6690-2": "wbc", "26464-8": "wbc", "718-7": "hemoglobin", "53060-9": "bhb", "2746-6": "ph", "2744-1": "ph",
+  "777-3": "platelets", "26515-7": "platelets", "6690-2": "wbc", "26464-8": "wbc", "718-7": "hemoglobin", "53060-9": "bhb", "6873-4": "bhb", "2746-6": "ph", "2744-1": "ph",
   "2021-4": "pco2", "3040-3": "lipase", "10839-9": "troponin", "2093-3": "cholesterol", "2571-8": "triglycerides", "2085-9": "hdl", "13457-7": "ldl", "2089-1": "ldl", "18262-6": "ldl",
 };
 

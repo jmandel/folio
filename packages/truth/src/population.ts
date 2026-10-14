@@ -11,6 +11,7 @@ import {
   type HomeLogPlan, type LabDraw, localDate, type MedHistoryEntry, type Medication, ms, type MyMedPlan, type NarrativeFact,
   type Patient, type SourceKey, type Vital,
 } from "./model.ts";
+import type { TrapId } from "./model.ts";
 import { FAMILY, GIVEN_F, GIVEN_M } from "./names.ts";
 import { Rng } from "./rng.ts";
 import { plausibility } from "./plausibility.ts";
@@ -498,7 +499,7 @@ export function generatePatient(spec: PatientSpec): Patient {
         const onsetMonth = addDays(date, -vr.int(35, 90)).slice(0, 7);
         const a = { id: g.uid("a"), substance: ingredientCoding("lisinopril-10")!, type: "intolerance" as const, reaction: "dry cough", reactions: ["Cough"], criticality: "low" as const,
           onset: onsetMonth, recordedAt: tick(), recordedBy: "B" as SourceKey, negatedFindings: ["angioedema", "lip, tongue or throat swelling"],
-          visibility: { B: "both" as const, ...(inA ? { A: "structured" as const } : {}), ...(inP ? { P: "prose" as const } : {}) }, traps: ["T12", "T18"] };
+          visibility: { B: "both" as const, ...(inA ? { A: "structured" as const } : {}), ...(inP ? { P: "prose" as const } : {}) }, traps: ["T12", "T18"] as TrapId[] };
         g.allergies.push(a);
         const nf: NarrativeFact = { id: g.uid("nf"), at: a.recordedAt, kind: "negation", polarity: "negated", about: [a.id], statement: "Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).",
           evidence: [["no (lip|tongue|throat|facial|mouth)|no angioedema|without (angioedema|swelling)|denies (any )?(lip|tongue|throat|facial)? ?swelling"]], visibility: { B: "prose" }, traps: ["T12"] };
@@ -907,7 +908,7 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
       if (ax.c.dm) e.addressed = [{ conditionId: ax.c.dm.id }];
       g.set(sg, addMinutes(fu, 22), "B", "stopped", { stopReason: "adverse_reaction", reason: "euglycemic DKA" });
       const a = { id: g.uid("a"), substance: sg.rxnorm!, type: "adverse-reaction" as const, reaction: "euglycemic diabetic ketoacidosis", reactions: ["Diabetic ketoacidosis"], criticality: "high" as const,
-        onset: date, recordedAt: addMinutes(fu, 25), recordedBy: "B" as SourceKey, manifestation: dka.id, visibility: { B: "both" as const, A: "structured" as const }, traps: ["T18"] };
+        onset: date, recordedAt: addMinutes(fu, 25), recordedBy: "B" as SourceKey, manifestation: dka.id, visibility: { B: "both" as const, A: "structured" as const }, traps: ["T18"] as TrapId[] };
       g.allergies.push(a);
       e.documents[0].factIds.push(dka.id, sg.id, a.id);
       const sv = g.vitalSet(addMinutes(fu, -10), "B", g.clinicSbp(localDate(fu)), 78);

@@ -44,7 +44,7 @@ function drugMatches(keyIng: string, text: string): boolean {
 const UNIT_SYN: Record<string, string> = {
   "k/ul": "10*3/uL", "10^3/ul": "10*3/uL", "10*3/ul": "10*3/uL", "x10e3/ul": "10*3/uL", "10e3/ul": "10*3/uL", "thousand/ul": "10*3/uL", "x10^3/ul": "10*3/uL",
   "ml/min/1.73m2": "mL/min/1.73m2", "ml/min/{1.73_m2}": "mL/min/1.73m2", "ml/min/1.73 m2": "mL/min/1.73m2", "ml/min/1.73m^2": "mL/min/1.73m2",
-  "mg/g{creat}": "mg/g", "mg/g": "mg/g", "mg/dl": "mg/dL", "mmol/l": "mmol/L", "g/dl": "g/dL", "u/l": "U/L", "ng/ml": "ng/mL", "%": "%", "mmhg": "mmHg", "[ph]": "[pH]", "": "",
+  "mg/g{creat}": "mg/g", "mg/g": "mg/g", "mg/dl": "mg/dL", "mmol/l": "mmol/L", "g/dl": "g/dL", "u/l": "U/L", "ng/ml": "ng/mL", "%": "%", "mmhg": "mmHg", "mm[hg]": "mmHg", "[ph]": "[pH]", "": "",
 };
 export const normUnit = (u: unknown) => (typeof u === "string" ? UNIT_SYN[u.toLowerCase().trim()] ?? u.trim() : String(u ?? ""));
 const normDoseUnit = (u: unknown) => {

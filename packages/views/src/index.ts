@@ -21,7 +21,7 @@ export interface ViewSet {
 }
 
 export const VIEW_SETS: Record<ViewSet["name"], ViewSet> = {
-  /** Views v3: written blind by a fresh agent from output semantics only (work/views-v3/). */
+  /** Views v3: worded by an agent that saw no source, data or generator, from a brief by the corpus author that restates each source's quirks in general terms (work/views-v3/). */
   app: { name: "app", files: ["views.d.ts"], transformType: "Transform", transformFile: "views.d.ts" },
   /** Views v2: written by the corpus author with knowledge of the sources ("views with source hints"). */
   appv2: { name: "appv2", files: ["v2/views.d.ts"], as: { "v2/views.d.ts": "views.d.ts" }, transformType: "Transform", transformFile: "views.d.ts" },
