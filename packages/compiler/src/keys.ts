@@ -25,6 +25,8 @@ export interface KeyRow<F> {
   basis: string[];
   traps: string[];
   modality: Modality;
+  /** Not scored: recency used to keep one row per ingredient (the view's rule) when a source has several. */
+  order?: number;
 }
 
 export interface MedKey {
@@ -125,6 +127,14 @@ export function expectedFor(p: Patient, source: string, asOf: string, ix: TrapIn
   if (s === "C") lakeview(p, t, e, ix);
   if (s === "A") riverside(p, t, e, ix);
   if (s === "P") homelog(p, t, e, ix);
+  // The view keeps one row per ingredient: the most recent line/order/entry.
+  const best = new Map<string, KeyRow<MedKey>>();
+  for (const r of e.medications) {
+    const k = r.fields.ingredientDerivable ? r.fields.ingredient : `name:${r.fields.names[0]}`;
+    const prev = best.get(k);
+    if (!prev || (r.order ?? 0) > (prev.order ?? 0)) best.set(k, r);
+  }
+  e.medications = [...best.values()];
   return e;
 }
 
@@ -186,6 +196,7 @@ function northgate(p: Patient, t: number, e: Expected, ix: TrapIndex) {
       status_since: cur.status === "active" ? undefined : ld(ev[sinceIdx].at),
       dose: doseOf(d.dose), frequency: FREQ_OK[d.frequency], stop_reason: cur.status === "stopped" ? h?.stopReason ?? "other" : undefined,
     }, [l.med.id], "B", ix, modality(l.med, "B"), l.outside ? ["T1"] : []));
+    e.medications[e.medications.length - 1].order = ms(cur.at);
   }
 
   // Problems.
@@ -270,6 +281,7 @@ function lakeview(p: Patient, t: number, e: Expected, ix: TrapIndex) {
       ingredient: d.ingredient, names: [`${d.ingredient} ${d.strength} mg ${d.form}`], ingredientDerivable: true, status,
       status_since: status === "active" ? undefined : ld(ce[i].at), dose: doseOf(ce[0].dose ?? m.dose), frequency: FREQ_OK[m.frequency],
     }, [m.id], "C", ix, modality(m, "C"), ce.some((h) => h.status === "held") ? ["T1"] : []));
+    e.medications[e.medications.length - 1].order = sortKey(last.at);
   }
 
   // Problems: latest VISIT_DX per condition; 'R' and 'P' are not problems.
@@ -405,14 +417,17 @@ function homelog(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   if (!plan) return;
   const saves = plan.listSaves.filter((s) => ms(localAt(`${s.at}T00:00`)) <= t);
   const save = saves[saves.length - 1];
-  if (save) for (const en of save.entries) {
+  if (save) save.entries.forEach((en, i) => {
     const m = p.meds.find((x) => x.id === en.medId)!;
     const d = drug(m.product);
+    // HomeLog has no paused status: a paused drug left as 'taking' with a note saying so is held by the patient's account.
+    const paused = en.status === "taking" && /stop for now|on hold|paused/i.test(en.note ?? "");
     e.medications.push(row("medications", {
       ingredient: d.ingredient, names: [en.name], ingredientDerivable: !!en.picked || BRAND_OK(en.name, d.ingredient, d.brand),
-      status: en.status === "taking" ? "active" : "stopped", status_since: en.status === "stopped" ? en.stopped : undefined,
-    }, [m.id], "P", ix, modality(m, "P"), m.otc ? ["T13"] : []));
-  }
+      status: en.status === "stopped" ? "stopped" : paused ? "held" : "active", status_since: en.status === "stopped" ? en.stopped : undefined,
+    }, [m.id], "P", ix, modality(m, "P"), [...(m.otc ? ["T13"] : []), ...(paused ? ["T1"] : [])]));
+    e.medications[e.medications.length - 1].order = (en.status === "stopped" ? 0 : 1000) + i;
+  });
   for (const v of p.vitals.filter((x) => x.source === "P" && ms(x.at) <= t)) {
     const typoLive = v.typo && ms(localAt(`${v.typo.fixedAt.slice(0, 10)}T00:00`)) > t;
     if (v.duplicateOf) {

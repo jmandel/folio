@@ -33,13 +33,18 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
   const list = lists[lists.length - 1];
   const medications: MedicationRow[] = list ? Object.entries(list.payload).filter(([, e]: any) => e.type === "my_med").map(([k, e]: any) => {
     const ing = ingredientOf(e.name, e.picked_from_search?.display);
+    const paused = e.status === "taking" && /stop for now|on hold|paus/i.test(e.note ?? "");
     return {
-      ...(ing ? { ingredient: ing } : {}), drug_name: e.name, status: e.status === "taking" ? "active" : "stopped",
+      ...(ing ? { ingredient: ing } : {}), drug_name: e.name, status: e.status === "stopped" ? "stopped" : paused ? "held" : "active",
       ...(e.status === "stopped" && e.stopped ? { status_since: e.stopped } : e.status === "taking" && e.started ? { status_since: e.started } : {}),
       ...(e.picked_from_search?.rxnorm && !ing ? {} : {}), patient_reported: true, ...(e.kind === "over_the_counter" ? { otc: true } : {}),
       ...(e.note ? { status_reason_text: e.note } : {}), evidence: [{ item_id: list.id, entry_id: k }],
     } as MedicationRow;
   }) : [];
+  // One row per ingredient: prefer a current entry over a stopped one.
+  const seen = new Map<string, MedicationRow>();
+  for (const m of medications) { const k = m.ingredient ?? `name:${m.drug_name}`; const prev = seen.get(k); if (!prev || (prev.status === "stopped" && m.status !== "stopped") || (prev.status !== "stopped" && m.status !== "stopped")) seen.set(k, m); }
+  medications.splice(0, medications.length, ...seen.values());
 
   const vitals: VitalRow[] = [];
   for (const it of cur) for (const [k, e] of Object.entries(it.payload ?? {}) as [string, any][]) {

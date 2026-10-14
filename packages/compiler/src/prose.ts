@@ -74,16 +74,22 @@ Only facts the narrative itself asserts about this patient now; not plans for th
 patients, not your own clinical inference. When unsure, leave it out.
 `;
 
-export async function proseSample(source: Source, split: Split, n: number): Promise<ProseSample> {
-  mkdirSync(PROSE_DIR, { recursive: true });
-  const path = join(PROSE_DIR, `${source}-${split}.json`);
-  if (existsSync(path)) return JSON.parse(readFileSync(path, "utf8"));
+/** The prose reader's inputs: the views file and one note per sampled item (narrative only). Deterministic. */
+export function proseInputs(source: Source, split: Split, n: number) {
   const items = narrated(source, split, n);
   const org: Record<Source, string> = { northgate: "Northgate Family Medicine (primary care)", lakeview: "Lakeview Labs & Kidney Care (nephrology)", riverside: "Riverside Regional Hospital", homelog: "HomeLog (the patient's own diary app)" };
   const inputs: Record<string, string> = { "views/views.d.ts": viewSetFiles(VIEW_SETS.app)["views.d.ts"] };
   items.forEach((x, i) => {
     inputs[`notes/${String(i + 1).padStart(3, "0")}.md`] = `item_id: ${x.item.id}\norganization: ${org[source]}\ndate: ${asOfFor(x.item)}\n\n---\n\n${x.item.narrative}\n`;
   });
+  return { items, inputs };
+}
+
+export async function proseSample(source: Source, split: Split, n: number): Promise<ProseSample> {
+  mkdirSync(PROSE_DIR, { recursive: true });
+  const path = join(PROSE_DIR, `${source}-${split}.json`);
+  if (existsSync(path)) return JSON.parse(readFileSync(path, "utf8"));
+  const { items, inputs } = proseInputs(source, split, n);
   const r = await runAgent({
     family: `compiler/prose/${source}-${split}`, backend: PROSE_MODEL.backend, model: PROSE_MODEL.model, prompt: PROMPT, inputs,
     expectFiles: ["facts.json"], wrapCommand: sandboxWrap, timeoutMs: 30 * 60_000,

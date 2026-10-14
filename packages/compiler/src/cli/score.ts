@@ -2,14 +2,29 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { BACKENDS, type CompileRecord, readTransformOf, RESULTS } from "../compile.ts";
+import { BACKENDS, type CompileRecord, evalPath, readTransformOf, RESULTS } from "../compile.ts";
+import { evaluateTransform } from "../evaluate.ts";
 import { REPO, SOURCES, type Source } from "../data.ts";
 import { cacheMappers, endToEnd, loadEval, loadRecords, proseContribution } from "../report.ts";
 import { VIEWS } from "../score.ts";
 
-const { values } = parseArgs({ options: { "no-prose": { type: "boolean" } } });
+const { values } = parseArgs({ options: { "no-prose": { type: "boolean" }, "no-reeval": { type: "boolean" } } });
 const recs = loadRecords().sort((a, b) => `${a.source}${a.viewSet}${a.backend}${a.condition}`.localeCompare(`${b.source}${b.viewSet}${b.backend}${b.condition}`));
 const backendOf = (label: string) => Object.values(BACKENDS).find((b) => b.label === label)!;
+
+// Re-evaluate every round's mapper with the current keys and scorer, so all numbers are on one footing.
+if (!values["no-reeval"]) {
+  const done = new Set<string>();
+  for (const r of recs) for (const round of r.rounds) {
+    if (!round.runId || done.has(round.runId)) continue;
+    done.add(round.runId);
+    let t: string;
+    try { t = readTransformOf(r.source, r.viewSet, backendOf(r.backend), round.runId); } catch { continue; }
+    const ev = evaluateTransform(t, r.source, r.viewSet, "test");
+    writeFileSync(evalPath(round.runId), JSON.stringify({ runId: round.runId, ...ev }, null, 1) + "\n");
+  }
+  console.log(`re-evaluated ${done.size} mapper runs`);
+}
 const pct = (x: number | null | undefined) => (x === null || x === undefined ? "–" : `${(100 * x).toFixed(1)}`);
 const TRAP_NAMES: Record<string, { name: string }> = JSON.parse(readFileSync(join(REPO, "corpus/MANIFEST.json"), "utf8")).traps;
 
