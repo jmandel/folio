@@ -1,0 +1,43 @@
+{
+  "runId": "claude-haiku",
+  "family": "smoke",
+  "backend": "claude",
+  "model": "haiku",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Read,Write,Edit,Glob,Grep",
+    "--allowedTools=Read,Write,Edit,Glob,Grep",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "haiku"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage1/runs/smoke/claude-haiku",
+  "startedAt": "2026-10-14T00:04:59.993Z",
+  "endedAt": "2026-10-14T00:05:05.428Z",
+  "durationMs": 5435,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.0007838000000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 3108,
+    "cache_read_input_tokens": 10280,
+    "output_tokens": 118
+  },
+  "numTurns": 2,
+  "sessionId": "78d70726-f078-4d23-9142-9a99207e367c",
+  "producedFiles": [
+    "hello.txt"
+  ]
+}
