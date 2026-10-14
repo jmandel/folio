@@ -500,7 +500,7 @@ function MapperRunViewer({ runId, index }: { runId: string; index: Index }) {
         <ul className="checks">
           <li>Type-checks under the harness's strict settings: {run.gates.tsc ? "yes" : "no"}</li>
           <li>Same output when run twice: {run.gates.deterministic ? "yes" : "no"}</li>
-          <li>Errors thrown on held-out patients: {run.gates.runtime_errors}</li>
+          <li>Errors thrown when run on the test patients: {run.gates.runtime_errors}</li>
           <li>Imports, clock reads, randomness or I/O: {run.gates.contract_issues === 0 ? "none" : run.gates.contract_issues}</li>
           <li>Transcript scan: {run.gates.isolation_scan}</li>
         </ul>
