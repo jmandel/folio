@@ -1,0 +1,44 @@
+# Builds the workbench (site/) and deploys it to GitHub Pages on every push to main.
+# Pages must be enabled for the repository with "GitHub Actions" as the source.
+name: Deploy site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      # Signs the corpus (deterministic dev keys and salts), prepares site data, builds site/dist.
+      - run: bun run site:build
+      - uses: actions/configure-pages@v5
+      # v3 keeps dotfiles, which the site needs: hosts/<issuer>/.well-known/did.json and .nojekyll.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
