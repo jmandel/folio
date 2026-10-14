@@ -1,0 +1,63 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "folio",
+      "devDependencies": {
+        "bun-types": "1.3.14",
+        "typescript": "5.6.3",
+      },
+    },
+    "packages/core": {
+      "name": "@folio/core",
+      "version": "0.1.0",
+      "dependencies": {
+        "@sd-jwt/core": "0.22.0",
+        "yaml": "2.9.1",
+      },
+    },
+    "packages/personal-agent": {
+      "name": "@folio/personal-agent",
+      "version": "0.1.0",
+      "bin": {
+        "folio-agent": "./src/cli.ts",
+      },
+      "dependencies": {
+        "@folio/core": "workspace:*",
+        "@folio/sync": "workspace:*",
+      },
+    },
+    "packages/sync": {
+      "name": "@folio/sync",
+      "version": "0.1.0",
+      "bin": {
+        "folio-sync": "./src/cli.ts",
+      },
+      "dependencies": {
+        "@folio/core": "workspace:*",
+      },
+    },
+  },
+  "packages": {
+    "@folio/core": ["@folio/core@workspace:packages/core"],
+
+    "@folio/personal-agent": ["@folio/personal-agent@workspace:packages/personal-agent"],
+
+    "@folio/sync": ["@folio/sync@workspace:packages/sync"],
+
+    "@owf/identity-common": ["@owf/identity-common@0.4.2", "", {}, "sha512-z+iFDpBYo2Z2uVnE5UytKlAHPaKHReijHaVXl45Yb9LbeR12hGg5CdfzfY0Tfm5m/Dr8iClfAiFizA9JYuUJ0Q=="],
+
+    "@sd-jwt/core": ["@sd-jwt/core@0.22.0", "", { "dependencies": { "@owf/identity-common": "^0.4.2" } }, "sha512-N6fcXbkkvGZKWnUqESWMVNDXv8VjdhSYudjP+Jq+Tm0yqzumJ27JSxL0aCr25AwFgFy7kRkDctOvgB9biiYWqg=="],
+
+    "@types/node": ["@types/node@26.6.5", "", { "dependencies": { "undici-types": "~8.9.0" } }, "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg=="],
+
+    "bun-types": ["bun-types@1.3.14", "", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
+
+    "typescript": ["typescript@5.6.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw=="],
+
+    "undici-types": ["undici-types@8.9.0", "", {}, "sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg=="],
+
+    "yaml": ["yaml@2.9.1", "", { "bin": { "yaml": "bin.mjs" } }, "sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw=="],
+  }
+}
