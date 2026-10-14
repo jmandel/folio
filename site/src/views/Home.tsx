@@ -68,33 +68,31 @@ export function HomeView({ index }: { index: Index; route: Route }) {
       <header className="home-head">
         <h1>FOLIO</h1>
         <p className="home-lede">
-          Health systems publish their records in their own shape, signed. A reader has an AI agent write the code that maps each shape into the views it
-          needs, once, and runs that code for every read after.
+          Each health system publishes signed records in its own data model. A reader uses an AI agent to write code that maps that model into the
+          views the reader needs. The agent runs once per schema version; later reads run the saved code.
         </p>
       </header>
 
       <section className="home-sec" aria-labelledby="h-problem">
-        <h2 id="h-problem">The problem</h2>
+        <h2 id="h-problem">How records move between systems today</h2>
         <p className="home-text">
-          Today, records move between systems in one of two ways. Everyone agrees on one schema in advance, which is slow, drops local detail, and
-          separates notes from the data they describe. Or a system exports everything it holds, as in a Cures Act EHI export, which is complete but hard to
-          use.
+          Either the systems agree on a schema in advance, or one system exports everything it holds. An agreed schema drops local detail that does not
+          fit it, and usually carries notes separately from the coded data they describe. A full export, such as a Cures Act EHI export, is complete, but
+          it comes in the vendor's own layout and each reader has to work that out.
         </p>
       </section>
       </div>
 
       <section className="home-sec" aria-labelledby="h-idea">
-        <h2 id="h-idea">The idea</h2>
-        <p className="home-text">Let each system publish what it already has, and move the mapping to the reader.</p>
+        <h2 id="h-idea">How FOLIO works</h2>
         <Flow />
       </section>
 
       <section className="home-sec" aria-labelledby="h-trace">
-        <h2 id="h-trace">One fact in four records</h2>
+        <h2 id="h-trace">Empagliflozin reaction in each source</h2>
         <p className="home-text">
           In November 2024 {hero?.name ?? "Linda Okafor"}, a synthetic patient, was admitted with euglycemic diabetic ketoacidosis (DKA) caused by
-          empagliflozin, a diabetes drug. Here is how each system recorded it. Every excerpt is quoted from a signed item, and the signatures are checked in
-          your browser.
+          empagliflozin, a diabetes drug. The excerpts below are quoted from signed items, and your browser checks each signature.
         </p>
         <div className="trace">
           {DKA_COLUMNS.map((col) => {
@@ -118,42 +116,42 @@ export function HomeView({ index }: { index: Index; route: Route }) {
       </section>
 
       <section className="home-sec" aria-labelledby="h-tour">
-        <h2 id="h-tour">A short tour of the workbench</h2>
-                <ol className="tour">
-          <TourStep n={1} title="A note and its data are one record" links={[["Show me", itemLink("riverside", "01JBZ2V178F5KZNWJ47TAN9ZT2", "med_empa")]]}>
-            In the hospital's discharge summary, the sentence about empagliflozin is tied to a structured entry. They are signed together, so either can be
-            cited.
+        <h2 id="h-tour">Tour of the workbench</h2>
+        <ol className="tour">
+          <TourStep n={1} title="Note text linked to structured entries" links={[["Open the discharge summary", itemLink("riverside", "01JBZ2V178F5KZNWJ47TAN9ZT2", "med_empa")]]}>
+            In the hospital discharge summary, the sentence about empagliflozin is marked as a reference to the <code>med_empa</code> entry. One signature
+            covers both, and a citation can point at either.
           </TourStep>
           <TourStep
             n={2}
-            title="Four systems, four shapes"
+            title="Source schemas and planted traps"
             links={[
-              ["Show me", href(["sources", "northgate"], { tab: "schema" })],
-              ["See a planted trap", itemLink("northgate", "01JCGH7E98RHEM3E2MSH4DMDZS", "med_1", { traps: "1", trap: "T1" })],
+              ["Northgate's schema", href(["sources", "northgate"], { tab: "schema" })],
+              ["Trap T1 in Northgate's record", itemLink("northgate", "01JCGH7E98RHEM3E2MSH4DMDZS", "med_1", { traps: "1", trap: "T1" })],
             ]}
           >
-            Each source documents its own model in a TypeScript schema. The test data has planted traps, such as a drug that one system calls held and
-            another calls stopped.
+            Each source documents its own model in a TypeScript schema. The test data contains planted traps. In trap T1, the hospital marks empagliflozin
+            held and the family doctor marks it stopped.
           </TourStep>
-          <TourStep n={3} title="A mapper, written once and checked" links={[["Show me", href(["compiler"])]]} note="Mapper results are coming">
-            An agent reads a schema and writes the mapping code, which is checked against an answer key. Today this view replays the agent runs that wrote
-            the test notes.
+          <TourStep n={3} title="Recorded agent runs" links={[["Open the Compiler view", href(["compiler"])]]} note="Mapper runs not recorded yet">
+            The Compiler view will replay runs in which an agent reads a schema, writes a mapper, and has it scored against answer keys. For now it replays
+            the runs that wrote the notes in the test data.
           </TourStep>
-          <TourStep n={4} title="Sharing part of a record" links={[["Show me", href(["sharing"], { s: "context-loss" })]]}>
-            Linda shares items with her kidney clinic but withholds her depression treatment. The signatures still verify, but one sentence about her low
-            sodium now reads differently.
+          <TourStep n={4} title="Sharing part of a record" links={[["Open the sharing example", href(["sharing"], { s: "context-loss" })]]}>
+            Linda shares items with her kidney clinic and withholds her depression treatment, sertraline. Every shared item still verifies. Without the sertraline, the
+            nephrology note suggests chlorthalidone is the only suspected cause of her low sodium.
           </TourStep>
-          <TourStep n={5} title="Searching a population" links={[]} note="Coming">
+          <TourStep n={5} title="Searching a population" links={[]} note="Not built yet">
             The same mappers will run over 300 synthetic patients to find people who match a clinical question.
           </TourStep>
         </ol>
       </section>
 
       <footer className="home-foot" aria-labelledby="h-isnt">
-        <h2 id="h-isnt">What this is and isn't</h2>
+        <h2 id="h-isnt">About this site</h2>
         <ul>
           <li>Every patient and record here is synthetic. No real health data is used.</li>
-          <li>It is a reference stack, small enough to read: a draft format, four example sources, and the tools around them. It is not a product.</li>
+          <li>This is a reference implementation of a draft format, with four synthetic sources and the code that signs, verifies and shares their records.</li>
           <li>
             Read the <a href={href(["about", "record-item"])}>specification</a>, or the code on <a href={REPO}>GitHub (jmandel/folio)</a>.
           </li>
@@ -177,7 +175,7 @@ function Arrow() {
 
 function Flow() {
   return (
-    <figure className="flow" aria-label="How FOLIO works, in three stages">
+    <figure className="flow" aria-label="How FOLIO works">
       <div className="flow-stage">
         <h3>Each system publishes its own records</h3>
         <div className="mini" data-src="northgate">
@@ -202,14 +200,14 @@ function Flow() {
             <Seal state="ok" label="Signed by the issuer" />
           </div>
         </div>
-        <p className="flow-cap">Narrative bound to structured data, a documented TypeScript schema, and a signature.</p>
+        <p className="flow-cap">A note and its structured data, signed by the issuer. A TypeScript schema documents the data.</p>
       </div>
       <Arrow />
       <div className="flow-stage once">
         <h3>Once per schema version</h3>
         <ol className="flow-steps">
           <li>An AI agent reads the schema and writes a mapper.</li>
-          <li>The mapper is checked against independent evidence.</li>
+          <li>The mapper is tested against answer keys the agent did not see.</li>
           <li>
             It is cached under the schema's hash, <code className="hash">6acf8173…</code>
           </li>
@@ -218,14 +216,13 @@ function Flow() {
       <Arrow />
       <div className="flow-stage every">
         <h3>Every read after that</h3>
-        <p className="flow-cap">Plain code runs the cached mapper. No AI is involved.</p>
+        <p className="flow-cap">The cached mapper runs as ordinary code, with no model call.</p>
         <ul className="flow-views">
           <li>Medications</li>
           <li>Allergies</li>
           <li>Labs and vitals</li>
           <li className="fhir">FHIR, as one more view</li>
         </ul>
-        <p className="flow-cap">The reader picks its views: its own small ones, or FHIR.</p>
       </div>
     </figure>
   );
@@ -289,12 +286,12 @@ function Merged({ items, index }: { items: Map<string, Loaded> | null; index: In
   return (
     <div className="merged" data-testid="merged" data-kind={m.kind}>
       <div className="merged-head">
-        <h3>The same facts in a reader's views</h3>
-        <span className={`merged-kind${answerKey ? " key" : ""}`}>{answerKey ? "Expected result (answer key)" : "Compiled mapper output"}</span>
+        <h3>Merged into a reader's views</h3>
+        <span className={`merged-kind${answerKey ? " key" : ""}`}>{answerKey ? "Answer key" : "Compiled mapper output"}</span>
       </div>
       <p className="merged-note">
         {answerKey
-          ? "Compiled mappers are not built yet, so this is what they should produce, written by hand from the synthetic truth. Each part cites the source, item and ref it rests on."
+          ? "Mappers are not built yet. These rows were written by hand from the synthetic patient's underlying data, as the expected mapper output. Each part cites the source, item and ref it comes from."
           : m.basis}
       </p>
       <div className="m-rows">

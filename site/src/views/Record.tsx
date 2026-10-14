@@ -275,8 +275,8 @@ function TrapPanel({ ids, index, open }: { ids: string[]; index: Index; open?: s
     <div className="traps">
       <h3>Planted traps in this item</h3>
       <p className="small" style={{ margin: "0 0 6px" }}>
-        These are deliberate. Each is something a mapper that only type-checks could get wrong. From{" "}
-        <a href={href(["about", "traps"])}>the trap list</a>.
+        Each trap is a case a mapper could get wrong even when it type-checks. See the{" "}
+        <a href={href(["about", "traps"])}>full trap list</a>.
       </p>
       {ids.map((id) => {
         const t = index.traps.find((x) => x.id === id);
@@ -302,8 +302,8 @@ function Overview({ index, rec, pid, trapMode }: { index: Index; rec: PatientRec
         <h1 style={{ font: "600 1.75rem/1.2 var(--serif)", color: "var(--ink)", marginBottom: 10 }}>{p.name}</h1>
         <p>
           {pid === "hero"
-            ? "Linda's record as four systems published it: a hospital, her primary care practice, a lab and kidney clinic, and her own app. Each system keeps its own data model. Items are merged here only by date."
-            : "A synthetic patient from the same four sources. Items are merged here only by date."}{" "}
+            ? "Linda's record from a hospital, her primary care practice, a lab and kidney clinic, and her own app, each in its own data model. This view merges them by date only."
+            : "A synthetic patient with records from the same sources. This view merges them by date only."}{" "}
           Every item is signed by the system that issued it, and the signatures are checked in your browser.
         </p>
         <p>
@@ -329,7 +329,7 @@ function Overview({ index, rec, pid, trapMode }: { index: Index; rec: PatientRec
       </div>
       {pid === "hero" && rec && (
         <div className="placeholder-doc" style={{ borderStyle: "solid", background: "var(--sheet)" }}>
-          <h2>Places to start</h2>
+          <h2>Example items</h2>
           <ul style={{ margin: 0, paddingLeft: "1.2em", lineHeight: 1.8 }}>
             {[
               ["riverside", "2024-11-02-admission-hp.folio.md", "The hospital admission for euglycemic DKA"],
