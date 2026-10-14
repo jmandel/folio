@@ -1,0 +1,44 @@
+{
+  "patient": "f127",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2013-04", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Pneumonia",
+        "icd10": "J18.9",
+        "snomed": "233604007",
+        "onset": { "value": "2025-12-29", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_103"],
+        "resolved_on": "2026-01-02"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "patient": "f134",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-12-26",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-01-06",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-12-26",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    }
+  ]
+}

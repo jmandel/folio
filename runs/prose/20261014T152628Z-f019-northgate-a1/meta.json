@@ -1,0 +1,43 @@
+{
+  "runId": "20261014T152628Z-f019-northgate-a1",
+  "family": "prose",
+  "backend": "claude",
+  "model": "sonnet",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Write,Read",
+    "--allowedTools=Write,Read",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "sonnet"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage3/runs/prose/20261014T152628Z-f019-northgate-a1",
+  "startedAt": "2026-10-14T15:26:28.881Z",
+  "endedAt": "2026-10-14T15:26:44.262Z",
+  "durationMs": 15381,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.0773007,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12944,
+    "cache_read_input_tokens": 15867,
+    "output_tokens": 2393
+  },
+  "numTurns": 2,
+  "sessionId": "ba2311a6-9992-47ec-b793-d1186ad68c83",
+  "producedFiles": [
+    "notes.md"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "runId": "20261014T152837Z-f044-homelog-a2",
+  "family": "prose",
+  "backend": "claude",
+  "model": "sonnet",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Write,Read",
+    "--allowedTools=Write,Read",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "sonnet"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage3/runs/prose/20261014T152837Z-f044-homelog-a2",
+  "startedAt": "2026-10-14T15:28:37.320Z",
+  "endedAt": "2026-10-14T15:28:41.843Z",
+  "durationMs": 4523,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.0214389,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 4571,
+    "cache_read_input_tokens": 9669,
+    "output_tokens": 218
+  },
+  "numTurns": 2,
+  "sessionId": "9e4962fb-45e8-4268-befe-ebf200cb15ea",
+  "producedFiles": [
+    "notes.md"
+  ]
+}

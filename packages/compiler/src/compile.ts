@@ -249,5 +249,10 @@ export async function compileWithFeedback(source: Source, vs: ViewSet["name"], b
 }
 
 export function readTransformOf(source: Source, vs: string, b: Backend, runId: string): string {
-  return readFileSync(join(REPO, "runs", family(source, vs as ViewSet["name"], b), runId, "out/transform.ts"), "utf8");
+  // Reused runs (the v2 condition reuses round-2 runs recorded under app/) are found under any view directory.
+  for (const v of [vs, "app", "appv2", "uscore"]) {
+    const p = join(REPO, "runs", family(source, v as ViewSet["name"], b), runId, "out/transform.ts");
+    if (existsSync(p)) return readFileSync(p, "utf8");
+  }
+  throw new Error(`no transform.ts for run ${runId}`);
 }

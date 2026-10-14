@@ -1,0 +1,35 @@
+{
+  "patient": "f157",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "ibuprofen",
+      "rxnorm_ingredient": "5640",
+      "product": "ibuprofen 200 MG Oral Tablet",
+      "rxnorm_product": "310965",
+      "dose": { "value": 400, "unit": "mg" },
+      "dose_text": "400 mg (2 × 200 mg)",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2024",
+      "otc": true,
+      "taken_as": "2 when my back hurts, a few times a week",
+      "sources": ["P"],
+      "basis": ["m_140"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin calcium 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_4"]
+    }
+  ]
+}

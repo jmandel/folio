@@ -12,7 +12,7 @@ export const FRESH = {
   size: 180,
   idPrefix: "f",
   quotas: {
-    ckd_prog_sglt2: 10, ckd_prog_sglt2_held: 14, ckd_inpatient_dip: 10, dka_prec: 26, dka_noprec: 10, hyperk_conf: 26, hyperk_hem: 24,
+    ckd_prog_sglt2: 10, ckd_prog_sglt2_held: 14, ckd_inpatient_dip: 10, dka_prec: 36, dka_noprec: 12, hyperk_conf: 26, hyperk_hem: 24,
     insulin_ckd: 10, masked_htn: 10, acei_angio: 18, acei_cough: 22, med_error: 22, dup_lab: 22, meter_mmol: 24, mdd: 60, hf: 24,
     b_hold: 26, sick_day: 14, nonadherence: 10, otc_nsaid: 24, chest_pain: 24, pneumonia: 12, aki_hyperk: 16, early_labs: 40, typed_dup: 30,
   } as Record<Archetype, number>,

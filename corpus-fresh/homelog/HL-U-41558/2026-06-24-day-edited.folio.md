@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01KW0T9270SX99HA660H7QJ3MA"
+issuer: "did:web:homelog.example"
+patient: "HL-U-41558"
+effective: "2026-06-24"
+recorded: "2026-06-26T01:56:28Z"
+author:
+  id: "urn:homelog:user:HL-U-41558"
+  name: "Raymond Brown"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01KVYKSS8RC4JZ8APGXF9SANXX"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2026-06-24T07:00",
+    "value": 140,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2026-06-24T07:07",
+    "systolic_mmhg": 149,
+    "diastolic_mmhg": 88,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2026-06-24T21:43",
+    "homelog_med_id": "med_0",
+    "med_name": "m_118",
+    "status": "taken",
+    "amount": 10,
+    "amount_unit": "units"
+  }
+}
+```

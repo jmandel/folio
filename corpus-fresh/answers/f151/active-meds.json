@@ -1,0 +1,60 @@
+{
+  "patient": "f151",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "levothyroxine",
+      "rxnorm_ingredient": "10582",
+      "product": "levothyroxine sodium 0.075 MG Oral Tablet",
+      "rxnorm_product": "966222",
+      "dose": { "value": 75, "unit": "mcg" },
+      "dose_text": "75 mcg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sources": ["B"],
+      "basis": ["m_4"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022",
+      "sensitive": "behavioral-health",
+      "sources": ["B"],
+      "basis": ["m_6"]
+    }
+  ]
+}

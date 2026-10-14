@@ -1,0 +1,89 @@
+{
+  "patient": "f016",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "chlorthalidone",
+      "rxnorm_ingredient": "2409",
+      "product": "chlorthalidone 25 MG Oral Tablet",
+      "rxnorm_product": "197499",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-03-27",
+      "sources": ["B", "P"],
+      "basis": ["m_76"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2026-07-27",
+      "intend_resume": true,
+      "sources": ["B", "C", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "glipizide",
+      "rxnorm_ingredient": "4821",
+      "product": "glipizide 5 MG Oral Tablet",
+      "rxnorm_product": "310490",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 40 MG Oral Tablet",
+      "rxnorm_product": "197884",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "held",
+      "since": "2026-03-02",
+      "intend_resume": true,
+      "sources": ["B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "naproxen",
+      "rxnorm_ingredient": "7258",
+      "product": "naproxen sodium 220 MG Oral Tablet",
+      "rxnorm_product": "849574",
+      "dose": { "value": 220, "unit": "mg" },
+      "dose_text": "220-440 mg",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2024",
+      "otc": true,
+      "taken_as": "1 or 2 for my knee, most days",
+      "sources": ["P"],
+      "basis": ["m_213"]
+    }
+  ]
+}

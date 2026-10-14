@@ -1,0 +1,29 @@
+{
+  "patient": "f047",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.32",
+        "snomed": "700378005",
+        "onset": { "value": "2020-12-02", "precision": "day" },
+        "stage": "3b A3",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-06-12",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_20"]
+      }
+    ],
+    "resolved": []
+  }
+}

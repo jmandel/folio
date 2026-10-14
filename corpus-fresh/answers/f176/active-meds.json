@@ -1,0 +1,98 @@
+{
+  "patient": "f176",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "carvedilol",
+      "rxnorm_ingredient": "20352",
+      "product": "carvedilol 12.5 MG Oral Tablet",
+      "rxnorm_product": "200032",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2026-08-12",
+      "intend_resume": true,
+      "sources": ["A", "B", "C"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "furosemide",
+      "rxnorm_ingredient": "4603",
+      "product": "furosemide 40 MG Oral Tablet",
+      "rxnorm_product": "313988",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-07-14",
+      "sources": ["A", "B"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 14, "unit": "units" },
+      "dose_text": "14 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2024-03-18",
+      "sources": ["A", "B"],
+      "basis": ["m_113"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979492",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-07-14",
+      "sources": ["A", "B"],
+      "basis": ["m_35"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-11-26",
+      "sources": ["A", "B"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "semaglutide",
+      "rxnorm_ingredient": "1991302",
+      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2022-08-08",
+      "sources": ["A", "B"],
+      "basis": ["m_71"]
+    }
+  ]
+}

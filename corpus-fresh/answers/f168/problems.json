@@ -1,0 +1,54 @@
+{
+  "patient": "f168",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2022", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2015", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+        "icd10": "E11.10",
+        "snomed": "420422005",
+        "onset": { "value": "2023-10-11", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_63"],
+        "resolved_on": "2023-10-14"
+      },
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2024-01-20", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_106"],
+        "resolved_on": "2024-01-23"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2024-01-20", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_107"],
+        "resolved_on": "2024-01-23"
+      }
+    ]
+  }
+}

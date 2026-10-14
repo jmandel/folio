@@ -1,0 +1,33 @@
+{
+  "patient": "f003",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["B"],
+      "basis": ["m_4"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["B"],
+      "basis": ["m_3"]
+    }
+  ]
+}

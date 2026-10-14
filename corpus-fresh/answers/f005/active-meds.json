@@ -1,0 +1,74 @@
+{
+  "patient": "f005",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-07-17",
+      "sources": ["B", "P"],
+      "basis": ["m_65"]
+    },
+    {
+      "medication": "glipizide",
+      "rxnorm_ingredient": "4821",
+      "product": "glipizide 5 MG Oral Tablet",
+      "rxnorm_product": "310490",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "ibuprofen",
+      "rxnorm_ingredient": "5640",
+      "product": "ibuprofen 200 MG Oral Tablet",
+      "rxnorm_product": "310965",
+      "dose": { "value": 400, "unit": "mg" },
+      "dose_text": "400 mg (2 × 200 mg)",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2025",
+      "otc": true,
+      "taken_as": "2 when my back hurts, a few times a week",
+      "sources": ["P"],
+      "basis": ["m_102"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2018",
+      "sources": ["B", "P"],
+      "basis": ["m_4"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin calcium 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2018",
+      "sources": ["B", "P"],
+      "basis": ["m_6"]
+    }
+  ]
+}

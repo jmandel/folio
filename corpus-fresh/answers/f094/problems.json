@@ -1,0 +1,26 @@
+{
+  "patient": "f094",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2013", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Heart failure with reduced ejection fraction",
+        "icd10": "I50.22",
+        "snomed": "703272007",
+        "onset": { "value": "2022", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "patient": "f121",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2021", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2021", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Heart failure with reduced ejection fraction",
+        "icd10": "I50.22",
+        "snomed": "703272007",
+        "onset": { "value": "2020", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      }
+    ],
+    "resolved": []
+  }
+}

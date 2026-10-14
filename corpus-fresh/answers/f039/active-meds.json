@@ -1,0 +1,33 @@
+{
+  "patient": "f039",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 40 MG Oral Tablet",
+      "rxnorm_product": "197884",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-04-06",
+      "sources": ["B"],
+      "basis": ["m_4"]
+    },
+    {
+      "medication": "rosuvastatin",
+      "rxnorm_ingredient": "301542",
+      "product": "rosuvastatin calcium 20 MG Oral Tablet",
+      "rxnorm_product": "859751",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2021",
+      "sources": ["B"],
+      "basis": ["m_5"]
+    }
+  ]
+}

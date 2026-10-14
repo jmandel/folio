@@ -1,0 +1,61 @@
+{
+  "patient": "f004",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 20 MG Oral Tablet",
+      "rxnorm_product": "617310",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2021",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 20 MG Oral Tablet",
+      "rxnorm_product": "314077",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2026-01-07",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-12-25",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "naproxen",
+      "rxnorm_ingredient": "7258",
+      "product": "naproxen sodium 220 MG Oral Tablet",
+      "rxnorm_product": "849574",
+      "dose": { "value": 220, "unit": "mg" },
+      "dose_text": "220-440 mg",
+      "frequency": "PRN",
+      "status": "active",
+      "since": "2022",
+      "otc": true,
+      "taken_as": "1 or 2 for my knee, most days",
+      "sources": ["P"],
+      "basis": ["m_82"]
+    }
+  ]
+}

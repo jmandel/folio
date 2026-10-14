@@ -1,0 +1,53 @@
+{
+  "patient": "f147",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2010", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2011", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hypothyroidism",
+        "icd10": "E03.9",
+        "snomed": "40930008",
+        "onset": { "value": "2018", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2023-08-23", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2023-08-23",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_24"]
+      },
+      {
+        "condition": "Angioedema",
+        "icd10": "T78.3XXA",
+        "snomed": "41291007",
+        "onset": { "value": "2024-06-07", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_60"]
+      }
+    ],
+    "resolved": []
+  }
+}

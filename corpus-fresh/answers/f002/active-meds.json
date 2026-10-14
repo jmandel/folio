@@ -1,0 +1,33 @@
+{
+  "patient": "f002",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2021-05-27",
+      "sources": ["B"],
+      "basis": ["m_12"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B"],
+      "basis": ["m_3"]
+    }
+  ]
+}

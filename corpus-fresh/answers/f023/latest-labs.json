@@ -1,0 +1,152 @@
+{
+  "patient": "f023",
+  "view": "latest-labs",
+  "as_of": "2026-10-13",
+  "key": {
+    "sodium": {
+      "analyte": "sodium",
+      "value": 137,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_75"]
+    },
+    "potassium": {
+      "analyte": "potassium",
+      "value": 4.5,
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_76"]
+    },
+    "chloride": {
+      "analyte": "chloride",
+      "value": 102,
+      "unit": "mmol/L",
+      "loinc": "2075-0",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_77"]
+    },
+    "bicarbonate": {
+      "analyte": "bicarbonate",
+      "value": 20,
+      "unit": "mmol/L",
+      "loinc": "2028-9",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_78"]
+    },
+    "anion-gap": {
+      "analyte": "anion-gap",
+      "value": 15,
+      "unit": "mmol/L",
+      "loinc": "33037-3",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_79"]
+    },
+    "bun": {
+      "analyte": "bun",
+      "value": 22,
+      "unit": "mg/dL",
+      "loinc": "3094-0",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_80"]
+    },
+    "creatinine": {
+      "analyte": "creatinine",
+      "value": 1.01,
+      "unit": "mg/dL",
+      "loinc": "2160-0",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_81"]
+    },
+    "egfr": {
+      "analyte": "egfr",
+      "value": 67,
+      "unit": "mL/min/1.73m2",
+      "loinc": "98979-8",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "equation": "ckd-epi-2021",
+      "reported": [{ "equation": "ckd-epi-2021", "value": 67 }],
+      "sources": ["A"],
+      "basis": ["l_81_egfr"]
+    },
+    "glucose": {
+      "analyte": "glucose",
+      "value": 163,
+      "unit": "mg/dL",
+      "loinc": "2345-7",
+      "collected": "2026-03-14T06:28:00-05:00",
+      "collected_local_date": "2026-03-14",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_82"]
+    },
+    "ph": {
+      "analyte": "ph",
+      "value": 7.16,
+      "unit": "[pH]",
+      "loinc": "2746-6",
+      "collected": "2026-03-10T20:55:00-05:00",
+      "collected_local_date": "2026-03-10",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_45"]
+    },
+    "pco2": {
+      "analyte": "pco2",
+      "value": 23,
+      "unit": "mmHg",
+      "loinc": "2021-4",
+      "collected": "2026-03-10T20:55:00-05:00",
+      "collected_local_date": "2026-03-10",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_46"]
+    },
+    "bhb": {
+      "analyte": "bhb",
+      "value": 0.5,
+      "unit": "mmol/L",
+      "loinc": null,
+      "collected": "2026-03-12T06:03:00-05:00",
+      "collected_local_date": "2026-03-12",
+      "setting": "inpatient",
+      "sources": ["A"],
+      "basis": ["l_64"]
+    },
+    "lipase": {
+      "analyte": "lipase",
+      "value": 53,
+      "unit": "U/L",
+      "loinc": "3040-3",
+      "collected": "2026-03-10T20:55:00-05:00",
+      "collected_local_date": "2026-03-10",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_48"]
+    }
+  }
+}

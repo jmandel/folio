@@ -3,6 +3,8 @@
 import { runAgent } from "../../../agent-runner/src/index.ts";
 import { sandboxWrap } from "../sandbox.ts";
 const backend = (process.argv[2] ?? "claude") as "claude" | "codex";
+// "--codex-nosandbox": run codex with its own command sandbox off (inside bwrap), so its shell can reach the proxy.
+const nosb = process.argv.includes("--codex-nosandbox");
 const api = backend === "claude" ? "https://api.anthropic.com/v1/messages" : "https://chatgpt.com/";
 const script = [
   `echo '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\n' https://github.com/jmandel/folio 2>&1`,
@@ -17,9 +19,9 @@ const script = [
   `echo '== env'; env | sort`,
 ].join("; ");
 const r = await runAgent({
-  family: `compiler/isolation-probe-v2/${backend}`, backend, model: backend === "claude" ? "sonnet" : undefined,
+  family: `compiler/isolation-probe-v2/${backend}${nosb ? "-nosandbox" : ""}`, backend, model: backend === "claude" ? "sonnet" : undefined,
   prompt: `Run exactly this shell command once and save its full output, unmodified, to out/probe.txt:\n\n\`\`\`sh\n${script}\n\`\`\`\n\nThen stop.`,
-  allowedTools: ["Read", "Write", "Bash"], extraArgs: backend === "claude" ? ["--disallowedTools=WebFetch,WebSearch"] : [],
+  allowedTools: ["Read", "Write", "Bash"], extraArgs: backend === "claude" ? ["--disallowedTools=WebFetch,WebSearch"] : nosb ? ["--dangerously-bypass-approvals-and-sandbox"] : [],
   expectFiles: ["probe.txt"], wrapCommand: sandboxWrap, timeoutMs: 10 * 60_000,
 }, { retries: 0 });
 console.log(r.meta.runId, r.meta.ok, r.meta.error ?? "");

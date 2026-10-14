@@ -1,0 +1,62 @@
+{
+  "patient": "f082",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2007", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2012", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2012-10", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2017-01", "precision": "month" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2025-08-31", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_107"],
+        "resolved_on": "2025-09-04"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2025-08-31", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_108"],
+        "resolved_on": "2025-09-04"
+      }
+    ]
+  }
+}

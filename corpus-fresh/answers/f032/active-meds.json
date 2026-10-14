@@ -1,0 +1,73 @@
+{
+  "patient": "f032",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "carvedilol",
+      "rxnorm_ingredient": "20352",
+      "product": "carvedilol 12.5 MG Oral Tablet",
+      "rxnorm_product": "200032",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "product": "empagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1545658",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-04-12",
+      "sources": ["A", "B"],
+      "basis": ["m_69"]
+    },
+    {
+      "medication": "escitalopram",
+      "rxnorm_ingredient": "321988",
+      "product": "escitalopram 10 MG Oral Tablet",
+      "rxnorm_product": "349332",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "levothyroxine",
+      "rxnorm_ingredient": "10582",
+      "product": "levothyroxine sodium 0.075 MG Oral Tablet",
+      "rxnorm_product": "966222",
+      "dose": { "value": 75, "unit": "mcg" },
+      "dose_text": "75 mcg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2018",
+      "sources": ["A", "B"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979492",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-04-18",
+      "sources": ["A", "B"],
+      "basis": ["m_5"]
+    }
+  ]
+}

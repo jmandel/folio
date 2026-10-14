@@ -1,0 +1,47 @@
+---
+folio: "0.1"
+id: "01JEFD3BGGMEBAEHE34Y99R43C"
+issuer: "did:web:homelog.example"
+patient: "HL-U-67645"
+effective: "2024-12-05"
+recorded: "2024-12-07T01:52:42Z"
+author:
+  id: "urn:homelog:user:HL-U-67645"
+  name: "Janet Sanchez"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01JEDAE8Q8KP181ATS3CSY2B1E"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2024-12-05T08:27",
+    "value": 179,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2024-12-05T08:37",
+    "systolic_mmhg": 137,
+    "diastolic_mmhg": 84,
+    "entry_method": "typed"
+  },
+  "dose_1": {
+    "type": "dose_log",
+    "at": "2024-12-05T21:23",
+    "homelog_med_id": "med_4",
+    "med_name": "Lantus",
+    "status": "taken",
+    "amount": 10,
+    "amount_unit": "units"
+  }
+}
+```

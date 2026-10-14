@@ -1,0 +1,219 @@
+{
+  "patient": "f058",
+  "view": "latest-labs",
+  "as_of": "2026-10-13",
+  "key": {
+    "sodium": {
+      "analyte": "sodium",
+      "value": 136,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_70"]
+    },
+    "potassium": {
+      "analyte": "potassium",
+      "value": 4.1,
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_71"]
+    },
+    "chloride": {
+      "analyte": "chloride",
+      "value": 105,
+      "unit": "mmol/L",
+      "loinc": "2075-0",
+      "collected": "2021-06-18T16:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_79"]
+    },
+    "bicarbonate": {
+      "analyte": "bicarbonate",
+      "value": 23,
+      "unit": "mmol/L",
+      "loinc": "2028-9",
+      "collected": "2021-06-18T16:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_80"]
+    },
+    "anion-gap": {
+      "analyte": "anion-gap",
+      "value": 11,
+      "unit": "mmol/L",
+      "loinc": "33037-3",
+      "collected": "2021-06-18T16:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_81"]
+    },
+    "bun": {
+      "analyte": "bun",
+      "value": 20,
+      "unit": "mg/dL",
+      "loinc": "3094-0",
+      "collected": "2021-06-18T16:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_82"]
+    },
+    "creatinine": {
+      "analyte": "creatinine",
+      "value": 1.52,
+      "unit": "mg/dL",
+      "loinc": "2160-0",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_69"]
+    },
+    "egfr": {
+      "analyte": "egfr",
+      "value": 53,
+      "unit": "mL/min/1.73m2",
+      "loinc": "98979-8",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "equation": "ckd-epi-2021",
+      "reported": [{ "equation": "ckd-epi-2021", "value": 53 }],
+      "sources": ["B", "C"],
+      "basis": ["l_69_egfr"]
+    },
+    "glucose": {
+      "analyte": "glucose",
+      "value": 132,
+      "unit": "mg/dL",
+      "loinc": "2345-7",
+      "collected": "2021-06-18T16:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_84"]
+    },
+    "troponin": {
+      "analyte": "troponin",
+      "value": 0.01,
+      "comparator": "<",
+      "unit": "ng/mL",
+      "loinc": "10839-9",
+      "collected": "2021-06-18T19:20:00-05:00",
+      "collected_local_date": "2021-06-18",
+      "setting": "ed",
+      "sources": ["A"],
+      "basis": ["l_87"]
+    },
+    "uacr": {
+      "analyte": "uacr",
+      "value": 102,
+      "unit": "mg/g",
+      "loinc": "9318-7",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_72"]
+    },
+    "a1c": {
+      "analyte": "a1c",
+      "value": 6.9,
+      "unit": "%",
+      "loinc": "4548-4",
+      "collected": "2026-01-28T07:40:00-06:00",
+      "collected_local_date": "2026-01-28",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_73"]
+    },
+    "wbc": {
+      "analyte": "wbc",
+      "value": 6,
+      "unit": "10*3/uL",
+      "loinc": "6690-2",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_58"]
+    },
+    "hemoglobin": {
+      "analyte": "hemoglobin",
+      "value": 15.2,
+      "unit": "g/dL",
+      "loinc": "718-7",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_59"]
+    },
+    "platelets": {
+      "analyte": "platelets",
+      "value": 249,
+      "unit": "10*3/uL",
+      "loinc": "777-3",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_60"]
+    },
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 199,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_61"]
+    },
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 208,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_62"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 42,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_63"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 115,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-04-29T07:50:00-05:00",
+      "collected_local_date": "2025-04-29",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_64"]
+    }
+  }
+}

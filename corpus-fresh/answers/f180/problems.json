@@ -1,0 +1,42 @@
+{
+  "patient": "f180",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2012", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2013-02-03", "precision": "day" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Heart failure with reduced ejection fraction",
+        "icd10": "I50.22",
+        "snomed": "703272007",
+        "onset": { "value": "2021", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_4"]
+      }
+    ],
+    "resolved": []
+  }
+}

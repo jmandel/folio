@@ -1,0 +1,87 @@
+{
+  "patient": "f099",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 20 MG Oral Tablet",
+      "rxnorm_product": "617310",
+      "dose": { "value": 20, "unit": "mg" },
+      "dose_text": "20 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B"],
+      "basis": ["m_8"]
+    },
+    {
+      "medication": "carvedilol",
+      "rxnorm_ingredient": "20352",
+      "product": "carvedilol 12.5 MG Oral Tablet",
+      "rxnorm_product": "200032",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "furosemide",
+      "rxnorm_ingredient": "4603",
+      "product": "furosemide 40 MG Oral Tablet",
+      "rxnorm_product": "313988",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B"],
+      "basis": ["m_10"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 50 MG Oral Tablet",
+      "rxnorm_product": "979492",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["B"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 100 MG Oral Tablet",
+      "rxnorm_product": "312938",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sensitive": "behavioral-health",
+      "sources": ["B"],
+      "basis": ["m_12"]
+    },
+    {
+      "medication": "spironolactone",
+      "rxnorm_ingredient": "9997",
+      "product": "spironolactone 25 MG Oral Tablet",
+      "rxnorm_product": "313096",
+      "dose": { "value": 25, "unit": "mg" },
+      "dose_text": "25 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2024-08-12",
+      "intend_resume": true,
+      "sources": ["B"],
+      "basis": ["m_11"]
+    }
+  ]
+}

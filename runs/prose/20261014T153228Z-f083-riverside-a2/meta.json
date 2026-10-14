@@ -1,0 +1,43 @@
+{
+  "runId": "20261014T153228Z-f083-riverside-a2",
+  "family": "prose",
+  "backend": "claude",
+  "model": "sonnet",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Write,Read",
+    "--allowedTools=Write,Read",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "sonnet"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage3/runs/prose/20261014T153228Z-f083-riverside-a2",
+  "startedAt": "2026-10-14T15:32:28.883Z",
+  "endedAt": "2026-10-14T15:32:37.420Z",
+  "durationMs": 8537,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.0429078,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 7709,
+    "cache_read_input_tokens": 11938,
+    "output_tokens": 1087
+  },
+  "numTurns": 2,
+  "sessionId": "396953d1-81e1-48a1-acc2-71238f7316a9",
+  "producedFiles": [
+    "notes.md"
+  ]
+}

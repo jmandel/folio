@@ -1,0 +1,61 @@
+---
+folio: "0.1"
+id: "01D3SK9930FJJRGP3KC5QT800J"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00083633"
+effective: "2019-02-15T10:50:00-06:00"
+recorded: "2019-02-15T16:09:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. Hx HTN, DM2 and hyperlipidemia per pt.
+BP 144/88, repeat 141/87, pulse 62, wt 146 lb.
+Labs today: eGFR 63, K 4.4, A1c 7.2%, LDL 84 mg/dL.
+Reviewed results with pt. Will recheck BP at next visit.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2019-021581",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-021581",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-021581",
+    "rank": 2,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-021581",
+    "rank": 3,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-021581",
+    "rank": 4,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
+  }
+}
+```

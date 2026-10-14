@@ -1,0 +1,26 @@
+{
+  "patient": "f008",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2019", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2011", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

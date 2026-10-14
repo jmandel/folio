@@ -1,0 +1,62 @@
+{
+  "patient": "f032",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2017-10", "precision": "month" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Heart failure with reduced ejection fraction",
+        "icd10": "I50.22",
+        "snomed": "703272007",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hypothyroidism",
+        "icd10": "E03.9",
+        "snomed": "40930008",
+        "onset": { "value": "2010", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2016-10", "precision": "month" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2025-04-09", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_105"],
+        "resolved_on": "2025-04-12"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2025-04-09", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_106"],
+        "resolved_on": "2025-04-12"
+      }
+    ]
+  }
+}

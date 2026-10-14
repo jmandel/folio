@@ -1,0 +1,26 @@
+{
+  "patient": "f002",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2014-04", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2008", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      }
+    ],
+    "resolved": []
+  }
+}

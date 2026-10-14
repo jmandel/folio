@@ -1,0 +1,61 @@
+{
+  "patient": "f166",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2017", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_5"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+        "icd10": "E11.10",
+        "snomed": "420422005",
+        "onset": { "value": "2025-05-19", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_47"],
+        "resolved_on": "2025-05-23"
+      }
+    ]
+  }
+}

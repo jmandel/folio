@@ -1,0 +1,38 @@
+---
+folio: "0.1"
+id: "01JP8HZQV0F9GY04T7JB2C98B5"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00257732"
+effective: "2025-03-13T09:20:00-05:00"
+recorded: "2025-03-13T15:09:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM2 f/u. No new complaints.
+BP 132/81, pulse 81, wt 170 lb.
+A1c 8.2. Metformin changed to 1000 mg twice daily today.
+RTC 3-4 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-031379",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-031379",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

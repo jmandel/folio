@@ -1,0 +1,69 @@
+{
+  "patient": "f116",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2018", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2015", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2020", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Heart failure with reduced ejection fraction",
+        "icd10": "I50.22",
+        "snomed": "703272007",
+        "onset": { "value": "2023-06-12", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2020-08", "precision": "month" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_5"]
+      },
+      {
+        "condition": "Angioedema",
+        "icd10": "T78.3XXA",
+        "snomed": "41291007",
+        "onset": { "value": "2024-12-14", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_110"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+        "icd10": "E11.10",
+        "snomed": "420422005",
+        "onset": { "value": "2024-11-14", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_69"],
+        "resolved_on": "2024-11-18"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "patient": "f079",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2018-10", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2022", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2024-11-28", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2024-11-28",
+        "sources": ["B", "C"],
+        "basis": ["c_27"]
+      }
+    ],
+    "resolved": []
+  }
+}

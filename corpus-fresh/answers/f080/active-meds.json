@@ -1,0 +1,100 @@
+{
+  "patient": "f080",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "amlodipine",
+      "rxnorm_ingredient": "17767",
+      "product": "amlodipine 5 MG Oral Tablet",
+      "rxnorm_product": "197361",
+      "dose": { "value": 5, "unit": "mg" },
+      "dose_text": "5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022-08-24",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_55"]
+    },
+    {
+      "medication": "atorvastatin",
+      "rxnorm_ingredient": "83367",
+      "product": "atorvastatin 40 MG Oral Tablet",
+      "rxnorm_product": "617311",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_7"]
+    },
+    {
+      "medication": "chlorthalidone",
+      "rxnorm_ingredient": "2409",
+      "product": "chlorthalidone 25 MG Oral Tablet",
+      "rxnorm_product": "197499",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2022-02-28",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_47"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488569",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2026-08-11",
+      "intend_resume": true,
+      "sources": ["A", "B", "C", "P"],
+      "basis": ["m_9"]
+    },
+    {
+      "medication": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "product": "lisinopril 40 MG Oral Tablet",
+      "rxnorm_product": "197884",
+      "dose": { "value": 40, "unit": "mg" },
+      "dose_text": "40 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_5"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2019",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_6"]
+    },
+    {
+      "medication": "sertraline",
+      "rxnorm_ingredient": "36437",
+      "product": "sertraline 50 MG Oral Tablet",
+      "rxnorm_product": "312941",
+      "dose": { "value": 50, "unit": "mg" },
+      "dose_text": "50 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2019",
+      "sensitive": "behavioral-health",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_8"]
+    }
+  ]
+}

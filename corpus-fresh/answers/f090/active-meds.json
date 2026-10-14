@@ -1,0 +1,72 @@
+{
+  "patient": "f090",
+  "view": "active-meds",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "medication": "chlorthalidone",
+      "rxnorm_ingredient": "2409",
+      "product": "chlorthalidone 25 MG Oral Tablet",
+      "rxnorm_product": "197499",
+      "dose": { "value": 12.5, "unit": "mg" },
+      "dose_text": "12.5 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2025-10-13",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_103"]
+    },
+    {
+      "medication": "dulaglutide",
+      "rxnorm_ingredient": "1551291",
+      "product": "dulaglutide 1.5 MG/0.5 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2022-05-18",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_19"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "3 ML insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 14, "unit": "units" },
+      "dose_text": "14 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2023-04-04",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_42"]
+    },
+    {
+      "medication": "losartan",
+      "rxnorm_ingredient": "52175",
+      "product": "losartan potassium 100 MG Oral Tablet",
+      "rxnorm_product": "979480",
+      "dose": { "value": 100, "unit": "mg" },
+      "dose_text": "100 mg",
+      "frequency": "QD",
+      "status": "held",
+      "since": "2026-04-08",
+      "intend_resume": true,
+      "sources": ["A", "B", "P"],
+      "basis": ["m_3"]
+    },
+    {
+      "medication": "metformin",
+      "rxnorm_ingredient": "6809",
+      "product": "metformin hydrochloride 500 MG Oral Tablet",
+      "rxnorm_product": "861007",
+      "dose": { "value": 500, "unit": "mg" },
+      "dose_text": "500 mg",
+      "frequency": "BID",
+      "status": "active",
+      "since": "2025-06-12",
+      "sources": ["A", "B", "P"],
+      "basis": ["m_4"]
+    }
+  ]
+}
