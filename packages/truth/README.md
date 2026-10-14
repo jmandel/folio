@@ -65,8 +65,9 @@ extra inpatient panels (11-02 17:05Z and 11-04 12:00Z); a Lakeview phone contact
 twice-weekly home readings 2023-04 to 2026-10 and nightly insulin logs; medicine-list saves on
 2023-04-11, 2025-08-18, 2026-03-28 and 2026-05-02 (Jardiance and lisinopril are added as history
 only in 2026-03, which is why they are `med_8`/`med_9` in the example); diary notes around the DKA,
-the self-adjusted glargine, the knee and the finerenone hold. The problem-list key includes
-hyponatremia (active: Riverside 2024, Lakeview 2026-07-13), which HERO.md's "Current truth" omits.
+the self-adjusted glargine, the knee and the finerenone hold; a lipid panel on 2025-02-17. HERO.md
+lists the problem-list additions (hyponatremia), the lipid panel, the referral steps and the 2026-08-10
+phone contact.
 
 ## Answer keys
 
