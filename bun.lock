@@ -13,6 +13,9 @@
       "name": "@folio/agent-runner",
       "version": "0.0.0",
     },
+    "packages/compiler": {
+      "name": "@folio/compiler",
+    },
     "packages/core": {
       "name": "@folio/core",
       "version": "0.1.0",
@@ -54,6 +57,9 @@
     },
     "packages/truth": {
       "name": "@folio/truth",
+    },
+    "packages/views": {
+      "name": "@folio/views",
     },
     "site": {
       "name": "@folio/site",
@@ -168,6 +174,8 @@
 
     "@folio/agent-runner": ["@folio/agent-runner@workspace:packages/agent-runner"],
 
+    "@folio/compiler": ["@folio/compiler@workspace:packages/compiler"],
+
     "@folio/core": ["@folio/core@workspace:packages/core"],
 
     "@folio/personal-agent": ["@folio/personal-agent@workspace:packages/personal-agent"],
@@ -181,6 +189,8 @@
     "@folio/sync": ["@folio/sync@workspace:packages/sync"],
 
     "@folio/truth": ["@folio/truth@workspace:packages/truth"],
+
+    "@folio/views": ["@folio/views@workspace:packages/views"],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 
