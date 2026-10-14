@@ -21,7 +21,15 @@ export interface Ledger { version: 1; batches: Record<string, LedgerBatch> }
 export function loadLedger(): Ledger {
   return existsSync(LEDGER_PATH) ? JSON.parse(readFileSync(LEDGER_PATH, "utf8")) : { version: 1, batches: {} };
 }
+/** Write the ledger, merging with whatever another process wrote meanwhile (items and runs are unions). */
 export function saveLedger(l: Ledger) {
+  const disk = loadLedger();
+  for (const [k, b] of Object.entries(disk.batches)) {
+    const mine = (l.batches[k] ??= { ...b, items: {}, runs: [] });
+    mine.items = { ...b.items, ...mine.items };
+    const seen = new Set(mine.runs.map((r) => r.run));
+    mine.runs = [...b.runs.filter((r) => !seen.has(r.run)), ...mine.runs];
+  }
   const sorted = Object.fromEntries(Object.entries(l.batches).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(LEDGER_PATH, JSON.stringify({ version: 1, batches: sorted }, null, 1) + "\n");
 }
@@ -136,6 +144,9 @@ export function buildPrompt(source: SourceKey, reqs: NoteRequest[], feedback?: M
     `7. If a \`skeleton\` is given, reproduce it exactly and replace each [words] with the text.`,
     `8. Use only the facts given (refs, spans, mustInclude, context, gist). You may add ordinary narrative texture (symptoms described in words, exam findings, reassurance, follow-up timing) but no new diagnoses, medications, doses, or lab values.`,
     `9. Keep to each request's \`length\`.`,
+    `10. No signature lines, no "signed at" times, no ISO timestamps (2024-11-02T07:15); write dates and times the way this source does.`,
+    `11. Don't state decisions about medications or problems beyond what the request gives; mention other listed medications only as they are listed.`,
+    `12. Patients (HomeLog) write what they knew at the time, in plain words: no diagnosis they had not been given yet, no generic names in parentheses after a brand.`,
     ``,
     `## Output`,
     ``,

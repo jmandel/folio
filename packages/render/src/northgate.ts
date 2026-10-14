@@ -9,7 +9,7 @@ import {
 } from "../../truth/src/model.ts";
 import { nameParts, STAFF, staff } from "../../truth/src/staff.ts";
 import { Ctx, icdDisplay, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
-import { describe, evidenceFor, medDoseAt } from "./describe.ts";
+import { describe, evidenceFor, human, medDoseAt } from "./describe.ts";
 import { guards } from "./guards.ts";
 import { type Item, schemaRef, ulid } from "./item.ts";
 
@@ -94,7 +94,15 @@ export function renderNorthgate(ctx: Ctx, lakeview: RenderedItem[]): RenderedIte
       };
       const it = mk(itemKey, day, recorded, payload, {}, enc?.clinician ?? pcp);
       const ex = finish(it, itemKey).ex;
-      const note = eventNote(ctx, itemKey, "Problem list comment", h.at.includes("T") ? h.at : recorded, [{ id: "prob_1", about: `${action} problem "${desc}" (${icd}), onset ${c.onset}` }], [c.id], enc?.clinician ?? pcp);
+      const firstVisit = enc && enc === encs[0];
+      const support: string[] = [];
+      if (/kidney/i.test(desc)) {
+        const eg = p.labs.filter((l) => l.analyte === "egfr" && l.status === "final" && l.visibility.B && sortKey(l.collectedAt) <= sortKey(recorded)).slice(-2);
+        const ua = p.labs.filter((l) => l.analyte === "uacr" && l.status === "final" && l.visibility.B && sortKey(l.collectedAt) <= sortKey(recorded)).slice(-1);
+        support.push(...[...eg, ...ua].map((l) => `supporting result: ${human(p, l.id, recorded, "B")}`));
+      }
+      if (firstVisit && sortKey(c.onset) < sortKey(day)) support.push("added at the first visit to this practice; the history is per the patient");
+      const note = eventNote(ctx, itemKey, "Problem list comment", h.at.includes("T") ? h.at : recorded, [{ id: "prob_1", about: `${action} problem "${desc}"` }], [c.id], enc?.clinician ?? pcp, [`onset ${c.onset}`, ...support]);
       push({
         key: itemKey, file: `${day}-problem-${c.id.replace(/^c_/, "")}-${action}.folio.md`, item: it, narrativeKind: ex ? "fixture" : "prose", note: ex ? undefined : note,
         template: `<ref id="prob_1">${desc}.</ref>`, facts: [c.id], traps: problemTraps(c, i), fixture: ex?.file,
@@ -389,7 +397,7 @@ function medTraps(m: Medication, action: string): RenderedItem["traps"] {
   return [...t] as RenderedItem["traps"];
 }
 
-function eventNote(ctx: Ctx, key: string, docKind: string, at: string, refs: NoteRequest["refs"], factIds: string[], who: string): NoteRequest {
+function eventNote(ctx: Ctx, key: string, docKind: string, at: string, refs: NoteRequest["refs"], factIds: string[], who: string, extraContext: string[] = []): NoteRequest {
   const p = ctx.p;
   const spanOf: Record<string, string> = {};
   if (refs[0]) for (const id of factIds) if (p.meds.some((m) => m.id === id) || p.conditions.some((c) => c.id === id)) spanOf[id] = refs[0].id;
@@ -400,9 +408,18 @@ function eventNote(ctx: Ctx, key: string, docKind: string, at: string, refs: Not
   });
   return {
     key, source: "B", docKind, when: inZone(at).slice(0, 16).replace("T", " "), author: `${staff(who).name} (${staff(who).role})`, mode: "markdown",
-    refs, spans: [], mustInclude, context: factIds.filter((id) => !p.narrativeFacts.some((f) => f.id === id)).map((id) => describe(p, id, at)),
+    refs, spans: [], mustInclude, context: [...factIds.filter((id) => !p.narrativeFacts.some((f) => f.id === id)).map((id) => p.meds.some((m) => m.id === id) ? describe(p, id, at) : human(p, id, at, "B")), ...extraContext],
     forbidden: g.forbidden, sensitive: g.sensitive, length: "1-2 short lines", style: "northgate:event",
   };
+}
+
+/** A med changed, or an allergy recorded, by Northgate on the visit's day. */
+function changedToday(p: Patient, id: string, start: string): boolean {
+  const day = localDate(start);
+  const m = p.meds.find((x) => x.id === id);
+  if (m) return m.history.some((h) => h.by === "B" && h.at.includes("T") && localDate(h.at) === day);
+  const a = p.allergies.find((x) => x.id === id);
+  return !!a && a.recordedBy === "B" && localDate(a.recordedAt) === day;
 }
 
 function visitNote(ctx: Ctx, key: string, e: Encounter, factIds: string[], dxKeyOf: Record<string, string>): NoteRequest {
@@ -423,9 +440,11 @@ function visitNote(ctx: Ctx, key: string, e: Encounter, factIds: string[], dxKey
     else if (f) mustInclude.push({ statement: f.statement, evidence: f.evidence });
     else if (isSensitive(id) && bhDx) {
       spanOf[id] = dxKeyOf[bhDx];
-      if (id === bhDx) refs.push({ id: dxKeyOf[bhDx], about: `${describe(p, id, e.start)} (restricted behavioral-health entry: keep every mention of it, and of its medication, inside this one span)` });
-      else context.push(`${describe(p, id, e.start)} (mention only inside the ${dxKeyOf[bhDx]} span)`);
-    } else if (!isSensitive(id)) mustInclude.push({ statement: describe(p, id, e.start), evidence: evidenceFor(p, id) });
+      if (id === bhDx) refs.push({ id: dxKeyOf[bhDx], about: `${human(p, id, doc.signedAt, "B")} (restricted behavioral-health entry: keep every mention of it, and of its medication, inside this one span)` });
+      else context.push(`${describe(p, id, doc.signedAt)} (mention only inside the ${dxKeyOf[bhDx]} span)`);
+    } else if (isSensitive(id)) continue;
+    else if (changedToday(p, id, e.start)) mustInclude.push({ statement: p.meds.some((m) => m.id === id) ? describe(p, id, doc.signedAt) : human(p, id, doc.signedAt, "B"), evidence: evidenceFor(p, id) });
+    else context.push(human(p, id, doc.signedAt, "B"));
   }
   const g = guards(p, "B", doc.signedAt, factIds, spanOf);
   return {

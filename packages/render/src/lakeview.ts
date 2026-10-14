@@ -10,7 +10,7 @@ import {
 } from "../../truth/src/model.ts";
 import { nameParts, staff } from "../../truth/src/staff.ts";
 import { Ctx, factSlug, icdDisplay, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
-import { describe, evidenceFor } from "./describe.ts";
+import { describe, evidenceFor, human } from "./describe.ts";
 import { guards } from "./guards.ts";
 import { type Item, schemaRef, ulid } from "./item.ts";
 import { labFlag, templateNarrative } from "./riverside.ts";
@@ -331,18 +331,21 @@ function renderContact(ctx: Ctx, e: Encounter, seenBefore: boolean): RenderedIte
   const spans: NoteRequest["spans"] = [];
   const mustInclude: NoteRequest["mustInclude"] = [];
   const spanOf: Record<string, string> = {};
+  const context: string[] = [];
   for (const id of doc.factIds) {
     const f = p.narrativeFacts.find((x) => x.id === id);
+    if (f && !f.span?.C) { mustInclude.push({ statement: f.statement, evidence: f.evidence }); continue; }
     if (f?.span?.C) { spans.push({ id: f.span.C, statement: f.statement, evidence: f.evidence }); spanOf[id] = f.span.C; continue; }
     const k = factKey.get(id);
     if (k && !refs.some((r) => r.id === k)) { refs.push({ id: k, about: describe(p, id, doc.signedAt) }); spanOf[id] = k; continue; }
-    mustInclude.push({ statement: describe(p, id, doc.signedAt), evidence: evidenceFor(p, id) });
+    if (p.labs.some((l) => l.id === id) || changedOn(p, id, e.start)) mustInclude.push({ statement: p.meds.some((m) => m.id === id) ? describe(p, id, doc.signedAt) : human(p, id, doc.signedAt, "C"), evidence: evidenceFor(p, id) });
+    else context.push(p.meds.some((m) => m.id === id) ? describe(p, id, doc.signedAt) : human(p, id, doc.signedAt, "C"));
   }
   const g = guards(p, "C", doc.signedAt, doc.factIds, spanOf);
   const note: NoteRequest = {
     key: itemKey, source: "C", docKind: e.kind === "phone" ? "Nephrology telephone contact note" : seenBefore ? "Nephrology follow-up note" : "Nephrology new-patient note",
     when: inZone(e.start).slice(0, 16).replace("T", " "), author: `${prov.name} (${prov.role})`, mode: "markdown", refs, spans, mustInclude,
-    context: [...(e.addressed ?? []).map((a) => `visit diagnosis: ${a.label ?? icdDisplay(a.icd10 ?? "")} (${a.status ?? "active"})`),
+    context: [...context, ...(e.addressed ?? []).map((a) => `visit diagnosis: ${a.label ?? icdDisplay(a.icd10 ?? "")} (${a.status ?? "active"})`),
       ...(e.ckdCategory ? [`CKD category ${e.ckdCategory.g}${e.ckdCategory.a ?? ""}`] : [])],
     forbidden: g.forbidden, sensitive: g.sensitive, length: e.kind === "phone" ? "1-3 short lines" : "60-140 words in 3-5 short paragraphs",
     style: e.kind === "phone" ? "lakeview:phone" : "lakeview:visit",
@@ -357,6 +360,11 @@ function renderContact(ctx: Ctx, e: Encounter, seenBefore: boolean): RenderedIte
     item, narrativeKind: ex ? "fixture" : "prose", note: ex ? undefined : note, template: templateNarrative("", refs, spans, mustInclude).replace(/^## \n\n/, ""),
     facts: [...factKey.keys(), ...doc.factIds], traps: [...traps] as RenderedItem["traps"], fixture: ex?.file,
   };
+}
+
+function changedOn(p: Patient, id: string, start: string): boolean {
+  const m = p.meds.find((x) => x.id === id);
+  return !!m && m.history.some((h) => h.at.includes("T") && localDate(h.at) === localDate(start));
 }
 
 function nextDay(d: string): string {

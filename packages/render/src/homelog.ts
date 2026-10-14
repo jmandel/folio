@@ -102,7 +102,10 @@ export function renderHomeLog(ctx: Ctx): RenderedItem[] {
           key: itemKey, source: "P", docKind: "Diary notes typed by the patient into her phone app", when: date, author: `${personName(p)} (the patient)`,
           mode: "markdown", refs: sortedNotes.map((x, i) => ({ id: `note_${i + 1}`, about: `note written ${timeLabel(wall(x.at, tz))}; tags: ${x.tags.join(", ") || "none"}` })),
           spans: [],
-          mustInclude: factIds.map((id) => p.narrativeFacts.find((f) => f.id === id)).filter((f) => f && f.visibility.P).map((f) => ({ statement: f!.statement, evidence: f!.evidence })),
+          // In her own words: the gist of the note that carries each fact, not the clinical statement.
+          mustInclude: sortedNotes.flatMap((x, i) => x.factIds.map((id) => p.narrativeFacts.find((f) => f.id === id)).filter((f) => f && f.visibility.P)
+            .map((f) => ({ statement: `note_${i + 1} must convey, in her words: ${x.gist}`, evidence: f!.evidence })))
+            .filter((m, j, all) => all.findIndex((y) => y.statement === m.statement && JSON.stringify(y.evidence) === JSON.stringify(m.evidence)) === j),
           context: [...factIds.filter((id) => !p.narrativeFacts.some((f) => f.id === id)).map((id) => describe(p, id, sortedNotes[0].at)),
             ...vitals.map((v) => `reading that day: ${describe(p, v.id)}`)],
           forbidden: g.forbidden, sensitive: g.sensitive, length: "1-3 sentences per note, in her own voice", style: "homelog:diary",

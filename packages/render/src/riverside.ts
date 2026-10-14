@@ -4,11 +4,11 @@
 
 import { drug } from "../../truth/src/catalog.ts";
 import {
-  type Analyte, type Encounter, type EncounterDocument, type LabResult, localDate, ms, type Patient, utcZ, wall,
+  type Analyte, type Encounter, type EncounterDocument, inZone, type LabResult, localDate, ms, type Patient, utcZ, wall,
 } from "../../truth/src/model.ts";
 import { staff } from "../../truth/src/staff.ts";
 import { Ctx, factSlug, ISSUER, type NoteRequest, type RenderedItem } from "./context.ts";
-import { describe, medDoseAt } from "./describe.ts";
+import { describe, evidenceFor, human, medDoseAt } from "./describe.ts";
 import { guards } from "./guards.ts";
 import { type Item, schemaRef, ulid } from "./item.ts";
 
@@ -348,7 +348,7 @@ function renderDoc(ctx: Ctx, enc: Encounter, doc: EncounterDocument, encId: stri
       refs.push({ id: k, about: describeEntry(payload[k], () => describe(p, id, signed)) });
       spanOf[id] = k;
     } else if (k) spanOf[id] = k;
-    else mustInclude.push({ statement: describe(p, id, signed), evidence: [] });
+    else mustInclude.push({ statement: human(p, id, signed, "A"), evidence: evidenceFor(p, id) });
   }
   // Sensitive history lines and home meds in this document need their own spans if the note mentions them.
   const g = guards(p, "A", signed, [...doc.factIds, ...[...factKey.keys()].filter((id) => p.sensitivity.some((s) => s.factIds.includes(id)) && doc.factIds.includes(id))], spanOf);
@@ -378,18 +378,24 @@ const DOC_TITLE: Record<string, string> = {
 
 export function describeEntry(e: Record<string, any> | undefined, fallback?: () => string): string {
   if (!e) return fallback?.() ?? "";
+  const t = (z: string) => inZone(z).slice(11, 16);
   switch (e.type) {
-    case "panel": return `${e.panel.name}: ${e.components.map((c: any) => `${c.test.name} ${c.value}${c.unit ? " " + c.unit : ""}${c.flag ? ` (${c.flag})` : ""}`).join(", ")}`;
-    case "result": return `${e.test.name} ${e.value}${e.unit ? " " + e.unit : ""} (${e.status})`;
+    case "panel": return `${e.panel.name} drawn ${localDateOf(e.collected)} ${t(e.collected)} (local time)${e.status === "preliminary" ? ", preliminary" : ""}: ${e.components.map((c: any) => `${c.test.name} ${c.value}${c.unit ? " " + c.unit : ""}${c.flag ? ` (${c.flag})` : ""}`).join(", ")}`;
+    case "result": return `${e.test.name} ${e.value}${e.unit ? " " + e.unit : ""}, drawn ${localDateOf(e.collected)} ${t(e.collected)} (local time)${e.status === "preliminary" ? ", preliminary" : ""}`;
     case "diagnosis": return `diagnosis "${e.label}", status ${e.status}`;
     case "history": return `past history: ${e.condition}`;
     case "home_med": return `home med ${e.drug_name}, ${e.dose_text} ${e.sig}: ${e.status}${e.restart_advice ? ` (${e.restart_advice})` : ""}${e.instructions ? ` "${e.instructions}"` : ""}`;
-    case "inpatient_med": return `inpatient order ${e.drug_name} ${e.dose_text}${e.stopped ? " (stopped)" : ""}`;
-    case "vitals": return `vitals BP ${e.bp?.systolic_mmhg}/${e.bp?.diastolic_mmhg}, HR ${e.heart_rate_bpm}`;
+    case "inpatient_med": return `inpatient order ${e.drug_name} ${e.route} ${e.dose_text}, started ${localDateOf(e.started)} ${t(e.started)}${e.stopped ? `, stopped ${localDateOf(e.stopped)} ${t(e.stopped)}` : ", still running"} (local times)`;
+    case "vitals": return `vitals at ${t(e.taken)}: BP ${e.bp?.systolic_mmhg}/${e.bp?.diastolic_mmhg}, HR ${e.heart_rate_bpm}${e.resp_rate_per_min ? `, RR ${e.resp_rate_per_min}` : ""}${e.temp_f ? `, T ${e.temp_f} F` : ""}${e.spo2_pct ? `, SpO2 ${e.spo2_pct}%` : ""}`;
     case "allergy": return `allergy list: ${e.substance}${e.reaction ? ` (${e.reaction})` : ""}`;
     case "follow_up": return `follow-up with ${e.with} ${e.when_text}: ${e.purpose}`;
     default: return fallback?.() ?? JSON.stringify(e);
   }
+}
+
+function localDateOf(z: string): string {
+  const d = localDate(z);
+  return `${+d.slice(5, 7)}/${+d.slice(8, 10)}`;
 }
 
 export function templateNarrative(title: string, refs: NoteRequest["refs"], spans: NoteRequest["spans"], must: NoteRequest["mustInclude"]): string {

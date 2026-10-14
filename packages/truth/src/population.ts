@@ -610,6 +610,14 @@ export function generatePatient(spec: PatientSpec): Patient {
   // ─── HomeLog ─────────────────────────────────────────────────────────────────────────────────
   if (inP) homeLog(g, { masked: has("masked_htn"), mmol: has("meter_mmol"), nsaid: has("otc_nsaid"), typedDup: has("typed_dup"), plan });
 
+  // A source with nothing to say about the patient does not know them.
+  const hasData: Record<SourceKey, boolean> = {
+    A: g.encounters.some((e) => e.source === "A"),
+    B: g.encounters.some((e) => e.source === "B") || g.meds.some((m) => m.history.some((h) => h.by === "B")),
+    C: g.draws.some((d) => d.performedBy === "C") || g.encounters.some((e) => e.source === "C"),
+    P: g.vitals.some((v) => v.source === "P") || g.home.notes.length > 0 || g.home.listSaves.length > 0,
+  };
+  for (const s of [...g.sources]) if (!hasData[s]) g.sources.delete(s);
   const p = finalize({
     id: g.id, role: spec.role,
     demographics: { given: g.given, family: g.family, birthDate: g.birth, sex: g.sex, race: g.race, tz: TZ },
@@ -754,6 +762,7 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
   const pnDocs: EncounterDocument[] = [];
   let consult: EncounterDocument | undefined;
 
+  const inStay = (h: MedHistoryEntry) => h.by === "A" && ms(h.at) >= ms(arrive) && ms(h.at) <= ms(discharged) + 86400000;
   const holdAt = (m: Medication, doc: string, t: string, extra: Partial<MedHistoryEntry>) => m.history.push({ at: t, status: "held", by: "A", doc, ...extra });
   const resumeAt = (m: Medication, doc: string, t: string) => m.history.push({ at: t, status: "active", by: "A", doc });
 
@@ -761,6 +770,16 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
   hpPlan.push({ kind: "vitals", vitalId: hpV.id });
   const dcV = vit(addMinutes(discharged, -180), r.int(118, 138));
 
+  // Diuretics are held for volume depletion; every other home medication is continued by the admitting team.
+  if (kind === "dka" || kind === "aki") {
+    for (const m of home(["thiazide", "loop"])) {
+      if (m.history.some(inStay)) continue;
+      holdAt(m, "hp", hpAt, { restartAdvice: kind === "dka" ? "resume_when_able" : "prescriber_decides", instructions: "Hold for volume depletion", intendResume: true });
+      if (kind === "dka") resumeAt(m, "dc", addMinutes(discharged, 30));
+      else holdAt(m, "dc", addMinutes(discharged, 30), { restartAdvice: "prescriber_decides", instructions: "PCP to decide after a repeat BMP", intendResume: true });
+      hpFacts.push(m.id); dcFacts.push(m.id);
+    }
+  }
   if (kind === "dka") {
     const prec = g.has.has("dka_prec");
     const sg = home(["sglt2i"])[0]!;
@@ -911,7 +930,7 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
     });
     // Discharge: ARB/MRA stay held for the PCP to decide (AKI) or resume (pneumonia).
     for (const m of [...raas, ...mra]) {
-      if (!m.history.some((h) => h.by === "A" && h.status === "held")) continue;
+      if (!m.history.some((h) => inStay(h) && h.status === "held")) continue;
       if (aki && drug(m.product).klass !== "acei" && drug(m.product).klass !== "arb") m.history.push({ at: addMinutes(discharged, 30), status: "stopped", by: "A", doc: "dc", reason: "hyperkalemia" });
       else if (aki) holdAt(m, "dc", addMinutes(discharged, 30), { restartAdvice: "prescriber_decides", instructions: "PCP to decide on restarting after a repeat BMP", intendResume: true });
       else resumeAt(m, "dc", addMinutes(discharged, 30));
@@ -924,6 +943,24 @@ function admission(g: Gen, kind: "dka" | "aki" | "pna" | "cp" | "angio", date: s
       { kind: "lab", panel: "BMP", key: "bmp_dc", labIds: pnLabs[pnLabs.length - 1] }, { kind: "allergies" }, { kind: "home-meds" },
       { kind: "follow-up", key: "fu_pcp", with: "Primary care (Northgate Family Medicine)", when: "within 1 week", purpose: aki ? "Repeat BMP; decide on restarting held blood pressure medicines" : "Recheck symptoms and chest exam" });
     dcFacts.push(main.id, ...(precFact ? [precFact.id] : []), ...(met ? [met.id] : []));
+    // Primary care decides on the held medicines a week or two later.
+    const stillHeld = g.meds.filter((m) => m.history.some((h) => inStay(h) && h.doc === "dc" && h.status === "held"));
+    if (ax.inB && stillHeld.length) {
+      const fu = at(`${weekday(addDays(dcDate, r.int(6, 14)), r)}T${hhmm(r.int(8, 15), r.pick([0, 15, 30, 45]))}`);
+      const e = g.bEncounter(fu, "Hosp f/u");
+      e.billingExtra = [{ icd10: "Z09", display: "Follow-up exam after completed treatment" }];
+      const sv = g.vitalSet(addMinutes(fu, -10), "B", g.clinicSbp(localDate(fu)), 78);
+      e.documents[0].factIds.push(main.id, sv.id);
+      stillHeld.forEach((m, i) => {
+        if (r.chance(0.7)) g.change(m, addMinutes(fu, 20 + i), "B", { reason: "creatinine back to baseline" });
+        else g.set(m, addMinutes(fu, 20 + i), "B", "stopped", { stopReason: "adverse_reaction", reason: aki ? "AKI with hyperkalemia" : "hospitalization" });
+        e.documents[0].factIds.push(m.id);
+      });
+    }
+  }
+  for (const m of g.meds) {
+    if (m.setting === "inpatient" || m.otc || g.status(m, arrive) !== "active") continue;
+    if (!m.history.some((h) => inStay(h) && h.doc === "hp")) m.history.push({ at: hpAt, status: "active", by: "A", doc: "hp" });
   }
   docs.push({ key: "ed", kind: "ed-note", at: edAt, signedAt: edSigned, author: edDoc, factIds: [...new Set(edFacts)], plan });
   docs.push({ key: "hp", kind: "h&p", at: hpAt, signedAt: hpSigned, author: hosp, factIds: [...new Set(hpFacts)], plan: hpPlan });
