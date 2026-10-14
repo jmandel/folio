@@ -1,4 +1,4 @@
-// bun site/scripts/screens.ts [--no-screens] [--out work/stage4-screens]
+// bun site/scripts/screens.ts [--no-screens] [--out work/stage4-screens] [--only home,record] [--full]
 //
 // Serves site/dist under /folio/ (as GitHub Pages will), then drives headless Chromium:
 //   1. smoke test: every shown patient's items verify in the browser (0 failures), a one-character
@@ -14,7 +14,7 @@ import { chromium, type Page } from "playwright-core";
 
 const ROOT = resolve(import.meta.dir, "../..");
 const DIST = join(ROOT, "site/dist");
-const { values } = parseArgs({ options: { "no-screens": { type: "boolean" }, out: { type: "string", default: "work/stage4-screens" } } });
+const { values } = parseArgs({ options: { "no-screens": { type: "boolean" }, full: { type: "boolean" }, only: { type: "string" }, out: { type: "string", default: "work/stage4-screens" } } });
 if (!existsSync(join(DIST, "index.html"))) throw new Error("site/dist is missing: run `bun run site:build` first");
 
 const server = Bun.serve({
@@ -91,6 +91,43 @@ const fail = (m: string) => {
   const sText = await s.innerText();
   if (sOk !== sTotal || !/appear nowhere/.test(sText)) fail(`sharing: ${sText}`);
   else console.log(`sharing: ${sText.replace(/\s+/g, " ")}`);
+  // Front page: every quoted item verifies, every citation resolves, and every link into the workbench lands.
+  await page.goto(`${BASE}#/`);
+  await page.waitForFunction(() => document.querySelectorAll('[data-testid="excerpt"]').length > 0 && !document.querySelector('[data-testid="cite"][data-state="wait"]'), null, { timeout: 30_000 });
+  const excerpts = await page.getByTestId("excerpt").count();
+  const cites = await page.locator('[data-testid="cite"]').evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.state));
+  if (excerpts !== 6 || cites.some((c) => c !== "ok")) fail(`front page: ${excerpts} excerpts, citations ${cites.join(",")}`);
+  else console.log(`front page: ${excerpts} excerpts verified, ${cites.length} citations verified`);
+  const links = [...new Set(await page.locator('.home a[href^="#/"]').evaluateAll((els) => els.map((e) => e.getAttribute("href")!)))];
+  for (const h of links) {
+    await page.goto("about:blank");
+    await page.goto(BASE + h);
+    const q = new URLSearchParams(h.split("?")[1] ?? "");
+    const path = h.replace(/^#\//, "").split("?")[0].split("/");
+    try {
+      if (path[0] === "record" && q.get("ref")) {
+        const r = q.get("ref")!;
+        await page.waitForSelector(`mark.ref.active[data-ref="${r}"], .entry.active[data-entry="${r}"]`, { timeout: 15_000 });
+        if (q.get("trap")) await page.waitForSelector(`.traps details[data-trap="${q.get("trap")}"][open]`, { timeout: 5_000 });
+      } else if (path[0] === "sharing" && q.get("s") === "context-loss") {
+        await page.waitForSelector("#context-loss", { timeout: 30_000 });
+        await page.waitForTimeout(300);
+        const top = await page.locator("#context-loss").evaluate((e) => e.getBoundingClientRect().top);
+        if (top < 0 || top > 300) throw new Error(`context-loss note is at y=${Math.round(top)}`);
+      } else if (path[0] === "sources") {
+        await page.waitForSelector(`.src-tabs a[aria-current="page"][data-src="${path[1]}"]`, { timeout: 10_000 });
+      } else if (path[0] === "compiler") {
+        await page.waitForSelector(".run-row", { timeout: 10_000 });
+      } else if (path[0] === "about") {
+        await page.waitForSelector(".prose h1, .prose h2", { timeout: 10_000 });
+      } else {
+        await page.waitForSelector(".main > *:not(.loading)", { timeout: 10_000 });
+      }
+      console.log(`deep link ok: ${h}`);
+    } catch (e) {
+      fail(`deep link ${h}: ${(e as Error).message.split("\n")[0]}`);
+    }
+  }
   console.log(`smoke: ${verified} items verified, ${failures} failure(s)`);
   await ctx.close();
 }
@@ -120,6 +157,16 @@ if (!values["no-screens"]) {
         await p.evaluate(() => window.scrollTo(0, 0));
       },
     },
+    {
+      name: "home",
+      hash: "#/",
+      prep: async (p) => void (await p.waitForFunction(() => !document.querySelector('[data-testid="cite"][data-state="wait"]'))),
+    },
+    {
+      name: "deeplink",
+      hash: "#/record/hero/northgate/01JCGH7E98RHEM3E2MSH4DMDZS?ref=med_1&traps=1&trap=T1",
+      prep: async (p) => void (await p.waitForSelector('[data-testid="ref-pop"]')),
+    },
     { name: "sharing", hash: "#/sharing", prep: async (p) => void (await p.waitForSelector(".caveat")) },
     { name: "sources", hash: "#/sources/lakeview?tab=schema" },
     { name: "compiler", hash: "#/compiler/20261014T005518Z-hero-homelog-a2" },
@@ -129,7 +176,7 @@ if (!values["no-screens"]) {
     for (const scheme of ["light", "dark"] as const) {
       const ctx = await browser.newContext({ viewport: { width: w, height: h }, colorScheme: scheme, deviceScaleFactor: w < 500 ? 2 : 1 });
       const page = await ctx.newPage();
-      for (const v of views) {
+      for (const v of views.filter((x) => !values.only || values.only.split(",").includes(x.name))) {
         await page.goto("about:blank");
         await page.goto(BASE + v.hash);
         await page.waitForLoadState("networkidle");
@@ -138,6 +185,7 @@ if (!values["no-screens"]) {
         await page.waitForTimeout(500);
         const file = join(OUT, `${v.name}-${w}x${h}-${scheme}.png`);
         await page.screenshot({ path: file });
+        if (v.name === "home" && values.full) await page.screenshot({ path: file.replace(".png", "-full.png"), fullPage: true });
         console.log(`screenshot ${file.replace(ROOT + "/", "")}`);
       }
       await ctx.close();

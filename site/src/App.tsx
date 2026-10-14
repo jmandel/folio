@@ -6,6 +6,7 @@ import { SharingView } from "./views/Sharing.tsx";
 import { SourcesView } from "./views/Sources.tsx";
 import { CompilerView } from "./views/Compiler.tsx";
 import { AboutView } from "./views/About.tsx";
+import { HomeView } from "./views/Home.tsx";
 
 const TABS = [
   { id: "record", label: "Record" },
@@ -39,29 +40,38 @@ export function App() {
   useEffect(() => {
     loadIndex().then(setIndex, (e) => setErr(String(e.message ?? e)));
   }, []);
-  const tab = TABS.some((t) => t.id === route.path[0]) ? route.path[0] : "record";
+  // The front page is "#/" (or no hash). Unknown paths fall back to it.
+  const tab = TABS.some((t) => t.id === route.path[0]) ? route.path[0] : "home";
   const pathKey = route.path.join("/");
   useEffect(() => {
     if (!route.query.get("s")) window.scrollTo({ top: 0 });
   }, [pathKey]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
-    const label = TABS.find((t) => t.id === tab)!.label;
-    document.title = `${label}: FOLIO workbench`;
+    const label = TABS.find((t) => t.id === tab)?.label;
+    document.title = label ? `${label}: FOLIO workbench` : "FOLIO: native clinical records, compiled mappers";
   }, [tab]);
 
   return (
     <div className="shell">
       <header className="topbar">
-        <a className="wordmark" href="#/record">
+        <a className="wordmark" href="#/">
           <b>FOLIO</b>
           <span>workbench</span>
         </a>
-        <nav className="tabs" aria-label="Views">
-          {TABS.map((t) => (
-            <a key={t.id} href={`#/${t.id}`} aria-current={t.id === tab ? "page" : undefined}>
-              {t.label}
-            </a>
-          ))}
+        <nav className="tabs" aria-label="Pages">
+          <a href="#/" aria-current={tab === "home" ? "page" : undefined}>
+            Overview
+          </a>
+          <span className="tab-group" role="group" aria-labelledby="nav-explore">
+            <span className="tab-group-label" id="nav-explore">
+              Explore the data
+            </span>
+            {TABS.map((t) => (
+              <a key={t.id} href={`#/${t.id}`} aria-current={t.id === tab ? "page" : undefined}>
+                {t.label}
+              </a>
+            ))}
+          </span>
         </nav>
         <button className="theme-btn" onClick={cycleTheme} title="Colour theme: follows the system, light, or dark">
           {theme === "auto" ? "Theme: system" : theme === "light" ? "Theme: light" : "Theme: dark"}
@@ -70,6 +80,7 @@ export function App() {
       <main className="main">
         {err && <div className="error-box">The site data did not load: {err}</div>}
         {!index && !err && <div className="loading">Loading…</div>}
+        {index && tab === "home" && <HomeView index={index} route={route} />}
         {index && tab === "record" && <RecordView index={index} route={route} />}
         {index && tab === "sharing" && <SharingView index={index} route={route} />}
         {index && tab === "sources" && <SourcesView index={index} route={route} />}
