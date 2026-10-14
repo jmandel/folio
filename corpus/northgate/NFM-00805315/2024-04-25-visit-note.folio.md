@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx HTN and hyperlipidemia per pt.
+BP 159/103, repeat 157/101, pulse 69, wt 159 lb.
+Labs 4/23: eGFR 43, K 4.8, LDL 115 mg/dL.
+Reviewed results with pt. Referring to nephrology for the low eGFR.
+RTC for BP recheck.
 
 ```json payload
 {

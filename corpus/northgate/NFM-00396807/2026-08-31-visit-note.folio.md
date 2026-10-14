@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints.
+BP 131/77, pulse 86, wt 223 lb.
+Labs today: eGFR 40, K 5, UACR 456 mg/g, A1c 7.6%.
+Kidney function and urine albumin worse than before, went over with pt. Will repeat labs at next visit.
 
 ```json payload
 {

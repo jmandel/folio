@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. Labs drawn 3/23.
+
+BP 141/83, repeat 139/81, pulse 78, wt 194 lb.
+
+3/23: eGFR 48, K 4.6, UACR 56 mg/g, A1c 6.4%, LDL 135 mg/dL.
+
+RTC 4 mo.
 
 ```json payload
 {

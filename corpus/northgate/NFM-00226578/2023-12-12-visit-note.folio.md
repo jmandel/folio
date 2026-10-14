@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-dapagliflozin: started 10 mg daily today (A1c 8.1)
+Chronic care visit. BP 130/85, pulse 76, wt 252 lb.
+Today: eGFR 57, K 4.3, A1c 8.1%, LDL 62 mg/dL.
+A1c up. Dapagliflozin started 10 mg daily today (A1c 8.1).
+CKD stage 3a on problem list.
+RTC 3 mo.
 
 ```json payload
 {

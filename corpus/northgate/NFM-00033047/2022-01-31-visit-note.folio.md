@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM2 f/u. No new complaints.
+BP 138/84, pulse 80, wt 200 lb.
+Today: eGFR 66, K 4.7, UACR 97 mg/g, A1c 7.6%.
+Reviewed results, diet discussed.
+RTC 5 mo.
 
 ```json payload
 {

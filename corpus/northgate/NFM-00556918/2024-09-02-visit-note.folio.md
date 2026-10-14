@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-dapagliflozin: started 10 mg daily today (A1c 8.6, CKD)
+DM f/u. No new complaints.
+BP 131/72, pulse 81, wt 225 lb.
+Labs today: eGFR 47, K 4.5, A1c 8.6%, LDL 77 mg/dL.
+A1c 8.6 with CKD, dapagliflozin started 10 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 45)
+Chronic care f/u.
+BP 144/87, repeat 139/87, pulse 64, wt 160 lb.
+Labs 12/18: eGFR 46, K 4.4, UACR 620 mg/g, A1c 8%.
+Metformin dose changed to 500 mg twice daily today (eGFR 45).
+RTC 3 mo.
 
 ```json payload
 {

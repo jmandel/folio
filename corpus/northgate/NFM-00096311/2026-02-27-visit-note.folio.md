@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 136/83, pulse 65, wt 175 lb.
 
-metformin: dose changed to 500 mg twice daily today (eGFR 44)
+Labs today: eGFR 44, K 4.8, UACR 257 mg/g, A1c 7.5%.
+
+CKD stage 3b. Metformin dose changed to 500 mg twice daily today for eGFR 44. Referring to nephrology.
+
+RTC 3 mo.
 
 ```json payload
 {

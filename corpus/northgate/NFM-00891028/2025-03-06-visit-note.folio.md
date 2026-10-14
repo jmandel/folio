@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Pt feels well.
+BP 128/82, pulse 84, wt 250 lb.
+eGFR 80, K 4.3 today.
+No changes today. RTC 6 mo.
 
 ```json payload
 {

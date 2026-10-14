@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 145/91, repeat 141/88, pulse 81, wt 242 lb.
+Labs 4/17: eGFR 102, K 4.4, LDL 80 mg/dL.
+Pt feels well, no headache or chest pain.
+Home BP log encouraged. RTC 3 mo.
 
 ```json payload
 {

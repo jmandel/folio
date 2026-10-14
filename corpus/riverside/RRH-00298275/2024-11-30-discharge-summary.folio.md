@@ -17,8 +17,26 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Reason for admission:** pneumonia.
+
+**Hospital course.** The patient was admitted from the ED after several days of cough, fever and shortness of breath. Her <ref id="dx_pneumonia">community-acquired pneumonia has resolved</ref> with treatment. Her admission chemistry showed a low bicarbonate, raised anion gap and elevated creatinine of 2.11, and these improved with intravenous fluids and as she began eating again. Metformin and empagliflozin were held during the acute illness and are now being restarted. Allergies: NKDA.
+
+**Condition at discharge.** Vitals at 11:15: BP 136/82, HR 104, RR 22, T 98.9 F, SpO2 98%. She is breathing comfortably, eating, and walking without difficulty. Her heart rate and breathing rate were mildly fast at that reading and should be rechecked at follow-up.
+
+**Discharge labs.** Basic metabolic panel drawn 11/30 at 06:20: sodium 138, potassium 3.9, chloride 101, bicarbonate 21 (low), anion gap 16, urea nitrogen 22, creatinine 1.67 (high), eGFR 51 (low) and glucose 114 (high). Creatinine is down from 2.11 on admission but remains above normal.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 1000 mg by mouth twice daily with meals: continue</ref>
+- Empagliflozin 10 mg by mouth daily: continue
+- Dulaglutide 0.5 mg subcutaneously weekly: continue
+- Insulin glargine 14 units subcutaneously nightly: continue
+- Lisinopril 20 mg by mouth daily: continue
+- Amlodipine 5 mg by mouth daily: continue
+- Atorvastatin 20 mg by mouth nightly: continue
+- Her other daily home medication: continue
+
+**Follow-up.** See primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. She should return sooner for worsening cough, fever, shortness of breath or poor oral intake.
 
 ```json payload
 {

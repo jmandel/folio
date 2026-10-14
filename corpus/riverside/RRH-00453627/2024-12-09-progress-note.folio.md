@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 12/9 06:13 (local time): Sodium 136 mmol/L, Potassium 5.8 mmol/L (H), Chloride 103 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 8 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 1.44 mg/dL (H), eGFR (CKD-EPI 2021) 52 mL/min/1.73m2 (L), Glucose 168 mg/dL (H)</ref>
+**Interval history.** The patient slept reasonably and reports less lightheadedness. Normal saline continues at 125 mL/h. No new complaints.
+
+**Exam.** At 07:12: BP 115/69, HR 112, RR 22, T 98.6 F, SpO2 96%. Mucous membranes are still somewhat dry. Lungs clear, abdomen soft.
+
+**Results.** On the 06:13 panel: sodium 136, potassium 5.8, chloride 103, bicarbonate 25, anion gap 8, urea nitrogen 23, creatinine 1.44, eGFR 52, glucose 168.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref> is improving. <ref id="bmp">Creatinine is down to 1.44 from 1.67 and urea nitrogen to 23 from 48, with potassium 5.8, still high but better than 6.4.</ref> Continue saline and repeat the BMP tomorrow morning.
+2. Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held.
+3. Continue carvedilol and atorvastatin. Heart rate remains fast this morning and we will keep watching it as the volume is repleted.
 
 ```json payload
 {

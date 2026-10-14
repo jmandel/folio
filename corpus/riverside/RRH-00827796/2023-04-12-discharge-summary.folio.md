@@ -17,11 +17,19 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Hospital course.** The patient was admitted with hyperkalemia and acute kidney injury. Potassium was 6.8 and creatinine 2.89 on arrival. <ref id="precipitant">Acute kidney injury attributed to several days of over-the-counter naproxen for back pain on top of an ARB and diuretic, with poor fluid intake</ref>. Treatment was IV saline, and the home blood pressure and diabetes medicines were held. Kidney function improved steadily, and the hyperkalemia resolved.
+
+**Condition at discharge.** Vitals at 12:45: BP 123/74, HR 103, RR 16, temperature 99.1 F, SpO2 95%. The patient is eating and drinking. On the 4/12 06:21 panel sodium was 133 (L), potassium 5.6 (H), chloride 100, bicarbonate 22, anion gap 11, urea nitrogen 29 (H), creatinine 1.63 (H), eGFR 47 and glucose 107 (H). The <ref id="dx_aki">acute kidney injury is resolved</ref>, with creatinine down from 2.89 to 1.63.
+
+**Allergies:** lisinopril (cough).
+
+**Medications at discharge**
+
+- Metformin 1000 mg tablet, 1 tablet by mouth twice daily with meals: <ref id="med_metformin">continue</ref>.
+- Losartan 50 mg tablet, 1 tablet by mouth daily: <ref id="med_losartan">held; PCP to decide on restarting after a repeat BMP</ref>.
+- Hydrochlorothiazide 25 mg tablet, 1 tablet by mouth daily: <ref id="med_hydrochlorothiazide">held; PCP to decide after a repeat BMP</ref>.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision on restarting the held blood pressure medicines.
 
 ```json payload
 {

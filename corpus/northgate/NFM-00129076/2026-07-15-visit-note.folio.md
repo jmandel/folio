@@ -15,6 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam.
+BP 153/94, repeat 148/93, pulse 83, wt 191 lb.
+eGFR 66 today, K 4.3.
+BP elevated again today, reviewed with pt.
+RTC for BP recheck.
 
 ```json payload
 {

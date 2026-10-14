@@ -14,9 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History reviewed with pt.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.4)
+BP 133/80, pulse 72, wt 214 lb.
+Labs today: eGFR 67, K 4.7, A1c 8.4%, LDL 70.
+
+A1c above goal, metformin dose changed to 1000 mg twice daily today (A1c 8.4).
+
+RTC 3 mo.
 
 ```json payload
 {

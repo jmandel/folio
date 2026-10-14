@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 141/80, HR 79, weight 60.6 kg at 2026-06-16 10:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2023-02-07</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2010</ref>
-- eGFR 39 (today)
-- K 4.8 (today)
-- UACR 2197 mg/g (today)
+<ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>. Some ankle puffiness by evening, otherwise well.
+
+<ref id="bp_sys">BP 141/80, HR 79, weight 60.6 kg.</ref> BP and weight both up from March.
+
+eGFR 39 today, K 4.8 today, UACR 2197 mg/g today. Albuminuria higher again.
+
+Repeat K and creatinine soon. Return in 3 months.
 
 ```json payload
 {

@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No complaints, exam unremarkable.
+BP 128/78, pulse 76, wt 222 lb.
+Labs 9/11: eGFR 51, K 4.6, A1c 7.1%, LDL 138 mg/dL.
+eGFR continues to drift down, referring to nephrology. Pt agrees.
+RTC 4 mo.
 
 ```json payload
 {

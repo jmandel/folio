@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx of HTN, DM2 and hyperlipidemia reviewed with pt.
+BP 113/73, pulse 82, wt 167 lb.
+Labs from 1/18: eGFR 72, K 4.2, A1c 6.8%, LDL 75.
+Records requested from prior office.
+RTC 3 mo.
 
 ```json payload
 {

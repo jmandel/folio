@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 135/79, pulse 87, wt 210 lb.
+
+eGFR 45, K 4.8, UACR 229 mg/g, A1c 8.3%, LDL 151 mg/dL today.
+
+CKD stage 3b added to problem list. Discussed diet and activity with pt.
+
+RTC 3 mo.
 
 ```json payload
 {

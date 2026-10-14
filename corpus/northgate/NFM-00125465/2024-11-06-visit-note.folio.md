@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. Feels well, no new symptoms.
 
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+BP 151/87, repeat 147/83. Pulse 81, wt 249 lb.
+
+eGFR 80, K 3.9, LDL 76 mg/dL today.
+
+Lisinopril changed to 40 mg daily today, BP above goal. RTC 3 mo.
 
 ```json payload
 {

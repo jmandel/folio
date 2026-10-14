@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Feels well, no new complaints.
 
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP 148/81, pulse 75, wt 134 lb.
+
+BP above goal again. Chlorthalidone started 12.5 mg daily today.
+
+RTC 3 mo.
 
 ```json payload
 {

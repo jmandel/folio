@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: stopped today (eGFR 29)
-
-insulin glargine: started 10 units at bedtime today (A1c 8.8)
+Annual exam. No new complaints.
+BP 122/72, pulse 62, wt 200 lb.
+Labs today: eGFR 29, K 4.6, UACR 12 mg/g.
+Metformin: stopped today (eGFR 29). Insulin glargine: started 10 units at bedtime today (A1c 8.8).
+RTC 3 mo.
 
 ```json payload
 {

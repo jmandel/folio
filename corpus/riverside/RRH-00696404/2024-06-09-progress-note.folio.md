@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 6/9 06:10 (local time): Sodium 137 mmol/L, Potassium 5.2 mmol/L (H), Chloride 104 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 9 mmol/L, Urea nitrogen 26 mg/dL (H), Creatinine 1.39 mg/dL (H), eGFR (CKD-EPI 2021) 49 mL/min/1.73m2 (L), Glucose 118 mg/dL (H)</ref>
+**Interval history.** The patient feels well, is eating and drinking, and has no further diarrhea to report. Normal saline was stopped yesterday at 18:28. No known drug allergies.
+
+**Exam.** Vitals at 07:14: BP 111/67, HR 107, RR 19, T 98.7 F, SpO2 99%. Heart rate is still somewhat fast, though the patient is comfortable and not short of breath. Lungs clear.
+
+**Results.** <ref id="bmp">The 06:10 panel showed sodium 137, potassium 5.2 (H), chloride 104, bicarbonate 24, anion gap 9, urea nitrogen 26 (H), creatinine 1.39 (H), eGFR 49 (L) and glucose 118 (H).</ref> Creatinine has come down again from 1.73 yesterday.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, continuing to recover off IV fluids. Encourage oral intake and repeat the BMP in the morning.
+2. Hyperkalemia, nearly resolved: potassium 5.2, down from 5.9 yesterday. Recheck with the morning labs.
+3. Hyperlipidemia: continue atorvastatin 40 mg nightly.
 
 ```json payload
 {

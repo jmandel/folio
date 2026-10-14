@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. A1c up, pt feels well otherwise.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
+BP 138/81, pulse 83, wt 188 lb. Labs today: eGFR 50, K 4.3, A1c 8.1%.
+
+Insulin glargine: started 10 units at bedtime today (A1c 8.1). Pen use and low sugar symptoms reviewed.
+
+RTC 3 mo, bring glucose log.
 
 ```json payload
 {

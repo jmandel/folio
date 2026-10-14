@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM2 f/u. BP 143/93, repeat 135/89, pulse 74, wt 204 lb.
 
-amlodipine: started 5 mg daily today (BP above goal)
+Labs today: eGFR 50, K 4.3, UACR 199 mg/g, A1c 7.8%.
+
+BP still above goal, amlodipine started 5 mg daily today. Referral to nephrology for CKD with albuminuria.
+
+RTC 3 mo.
 
 ```json payload
 {

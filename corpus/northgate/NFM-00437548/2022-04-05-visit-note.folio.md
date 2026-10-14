@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. Labs 4/3: A1c 8.3%, eGFR 84, K 3.8, UACR 63 mg/g, LDL 81 mg/dL.
 
-empagliflozin: started 10 mg daily today (A1c 8.3)
+BP 129/81, pulse 71, wt 253 lb.
+
+Empagliflozin started 10 mg daily today (A1c 8.3). Reviewed what to expect and when to call.
+
+RTC 3 mo.
 
 ```json payload
 {

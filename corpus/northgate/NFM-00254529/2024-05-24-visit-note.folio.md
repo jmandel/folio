@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
 
-amlodipine: started 5 mg daily today (BP above goal)
+BP 140/85, repeat 138/85, pulse 82, wt 174 lb.
+
+Labs today: eGFR 52, K 4.7, UACR 74 mg/g, A1c 7.3%.
+
+Amlodipine started 5 mg daily today (BP above goal). RTC 3 mo.
 
 ```json payload
 {

@@ -17,10 +17,21 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Diagnoses at discharge:** acute kidney injury, resolved; hyperkalemia, resolved.
+
+**Hospital course.** The patient was admitted with a creatinine of 1.89 and a potassium of 6.3 after four days of diarrhea and poor intake. Potassium was treated in the ED with IV calcium, and saline was given as a bolus and then as a continuous infusion. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> The diarrhea settled, the patient resumed eating and drinking, and kidney function recovered steadily. The hyperkalemia resolved as the kidney injury improved.
+
+**Condition at discharge.** Vitals at 07:45: BP 121/73, HR 87, RR 17, T 99.2 F, SpO2 98%. The patient feels well, is eating normally and is walking without light-headedness. No known drug allergies (NKDA).
+
+**Discharge labs.** On the 06:17 panel on 6/20, sodium 137, potassium 4.8, chloride 102, bicarbonate 26, anion gap 9, urea nitrogen 21, creatinine 0.89 with eGFR 79, and glucose 152. The <ref id="dx_aki">acute kidney injury has resolved</ref>, with creatinine back to normal from a peak of 1.89.
+
+**Discharge medications**
+
+- Losartan 50 mg daily: <ref id="med_losartan">remains held; the PCP will decide on restarting after a repeat BMP.</ref>
+- <ref id="med_metformin">Continue metformin 1000 mg twice daily with meals.</ref>
+- Continue atorvastatin 40 mg nightly.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision on restarting the held blood pressure medicines. The patient should drink fluids freely and return sooner for recurrent diarrhea, vomiting, or markedly reduced urine output.
 
 ```json payload
 {

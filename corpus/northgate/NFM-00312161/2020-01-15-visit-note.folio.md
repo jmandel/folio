@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints.
+BP 135/78, pulse 76, wt 215 lb.
+Labs 1/9: eGFR 51, K 4.1, A1c 7.9%.
+CKD stage 3a reviewed with pt. Will keep following kidney function.
+RTC 3 mo.
 
 ```json payload
 {

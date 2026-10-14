@@ -14,12 +14,20 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consultation
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 15 units daily, started 11/19 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consultation:** euglycemic ketoacidosis in a patient with type 2 diabetes on an SGLT2 inhibitor.
+
+**History.** I was asked to see this man on hospital day 2. He presented yesterday with nausea, fatigue and fast breathing and was found to have <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, with beta-hydroxybutyrate 5.1 on the 16:24 sample. An insulin infusion per DKA protocol was started at 17:05 and stopped at 09:00 today. He has no known drug allergies. Home medications are dapagliflozin, metformin, losartan, hydrochlorothiazide and atorvastatin.
+
+**Exam.** He is comfortable and breathing normally at rest. Mucous membranes are moist. Abdomen is soft and non-tender. He is alert and gives a clear account.
+
+**Assessment and plan**
+
+1. The ketoacidosis has resolved on treatment. <ref id="sc_glargine">Insulin glargine 15 units subcutaneously daily</ref> was started at 07:00 and overlapped the infusion; continue it for now.
+2. <ref id="med_dapagliflozin">Dapagliflozin: recommend against restarting at discharge.</ref> Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. Metformin and hydrochlorothiazide remain held per the primary team. Losartan and atorvastatin continue.
+4. We will follow along and help with the outpatient diabetes regimen before discharge.
 
 ```json payload
 {

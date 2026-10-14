@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: dose changed to 14 units at bedtime today (A1c 8.3)
+DM f/u. No hypoglycemia reported.
+BP 149/85, repeat 141/84. Pulse 73, wt 199 lb.
+Today: eGFR 52, K 4.6, A1c 8.3%.
+A1c above goal. Insulin glargine dose changed to 14 units at bedtime today.
+RTC 3 mo.
 
 ```json payload
 {

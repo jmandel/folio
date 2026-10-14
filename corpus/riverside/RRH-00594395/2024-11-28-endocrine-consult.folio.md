@@ -14,12 +14,19 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consult
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 11/28 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consult:** euglycemic diabetic ketoacidosis in a patient on an SGLT2 inhibitor.
+
+**History.** The patient is a man with type 2 diabetes who presented on 11/27 with a ketoacidosis and a glucose of only 183. He takes dapagliflozin 10 mg daily at home, along with metformin, losartan and atorvastatin. He has no known drug allergies. The initial beta-hydroxybutyrate was 6.5 mmol/L at 16:04. The IV insulin infusion per DKA protocol ran from 16:51 on 11/27 until 09:00 today.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, now treated with the infusion completed. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily, started 07:00 on 11/28,</ref> continues.
+2. SGLT2 inhibitor: <ref id="med_dapagliflozin">dapagliflozin is held, and we recommend against restarting it at discharge.</ref> Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. Metformin and losartan remain held by the primary team; atorvastatin continues.
+
+Thank you for involving us. We will follow along.
 
 ```json payload
 {

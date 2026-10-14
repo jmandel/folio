@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 147/88, repeat 145/88, pulse 75, wt 170 lb.
+
+Labs today: eGFR 68, K 4.5, UACR 60 mg/g, A1c 7.6%.
+
+BP above goal on both readings, will recheck at next visit. Diet and exercise reviewed.
+
+RTC 5 mo.
 
 ```json payload
 {

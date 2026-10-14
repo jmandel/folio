@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 139/85, pulse 88, wt 196 lb.
+Labs 11/18: eGFR 89, K 4.2, LDL 125 mg/dL.
+BP slightly above goal, LDL up from prior. Discussed diet and exercise.
+RTC 3 mo.
 
 ```json payload
 {

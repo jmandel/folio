@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Feels well.
+BP 121/76, pulse 74, wt 223 lb.
+Labs today: eGFR 33, K 4.5, UACR 334 mg/g, A1c 8%.
+UACR down from April but eGFR still drifting down. Will keep following.
+RTC 3 mo.
 
 ```json payload
 {

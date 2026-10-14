@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.3)
+Annual exam. Pt feels well.
+BP 123/73, pulse 76, wt 144 lb.
+eGFR 74, A1c 8.3% today.
+A1c up, so metformin now 1000 mg BID as of today.
+RTC 3 mo.
 
 ```json payload
 {

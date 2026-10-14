@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 134/70, pulse 68, wt 171 lb.
 
 Patient ran out of losartan about 3 weeks ago and has not been taking it.
+
+Labs today: eGFR 76, K 4.8, UACR 159 mg/g, A1c 6.8%.
+
+Discussed results with pt.
 
 ```json payload
 {

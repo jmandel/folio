@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-amlodipine: started 5 mg daily today (BP above goal)
+BP f/u. BP 142/85, repeat 135/81, pulse 66, wt 246 lb.
+eGFR 76 today, K 4.4, LDL 105 mg/dL.
+BP above goal, amlodipine started 5 mg daily today.
+Pt agrees. Recheck BP in a few weeks.
 
 ```json payload
 {

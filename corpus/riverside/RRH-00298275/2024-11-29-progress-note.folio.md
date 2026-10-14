@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 11/29 06:05 (local time): Sodium 138 mmol/L, Potassium 4.0 mmol/L, Chloride 103 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 12 mmol/L, Urea nitrogen 17 mg/dL, Creatinine 1.82 mg/dL (H), eGFR (CKD-EPI 2021) 46 mL/min/1.73m2 (L), Glucose 108 mg/dL (H)</ref>
+**Interval events.** She had a quiet night. Cough is less frequent and she is eating more of her meals. Allergies: NKDA. Saline was stopped on 11/28 at 01:16 and has not been restarted.
+
+**Exam.** Vitals at 07:15: BP 130/78, HR 87, RR 20, T 98.2 F, SpO2 96%. She looks comfortable. Heart rate has settled from yesterday. Breath sounds are clearer, with a few crackles remaining at the right base.
+
+**Results.** The <ref id="bmp">basic metabolic panel at 06:05 on 11/29 shows sodium 138, potassium 4.0, chloride 103, bicarbonate 23, anion gap 12, urea nitrogen 17, creatinine 1.82 (high), eGFR 46 and glucose 108 (high)</ref>. Bicarbonate is now normal and creatinine continues to come down off the 2.11 of admission.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, active and improving clinically.
+2. Creatinine is still above normal but trending down; repeat the panel in the morning.
+3. Metformin and empagliflozin remain held. Dulaglutide, insulin glargine, lisinopril, amlodipine, atorvastatin and her other daily home medication continue.
 
 ```json payload
 {

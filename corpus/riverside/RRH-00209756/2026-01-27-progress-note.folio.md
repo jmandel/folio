@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 1/27 06:22 (local time): Sodium 137 mmol/L, Potassium 3.9 mmol/L, Chloride 105 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 8 mmol/L, Urea nitrogen 29 mg/dL (H), Creatinine 1.82 mg/dL (H), eGFR (CKD-EPI 2021) 33 mL/min/1.73m2 (L), Glucose 135 mg/dL (H)</ref>
+**Interval.** Feels stronger, cough is improving. Vitals at 07:31: BP 135/81, HR 103, RR 23, T 98.8 F, SpO2 98%. Heart rate and respiratory rate are a bit higher this morning after walking in the hallway. No known drug allergies.
+
+**Exam.** Comfortable at rest, lungs clearer, heart regular, abdomen soft.
+
+**Results.** <ref id="bmp">BMP at 06:22: sodium 137, potassium 3.9, chloride 105, bicarbonate 24, anion gap 8, urea nitrogen 29, creatinine 1.82, eGFR 33, glucose 135</ref>.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref> continues to improve. Continue the current antibiotic and plan toward discharge as the clinical picture allows.
+2. Creatinine is 1.82, down from 1.97 yesterday, and sodium has normalized at 137. Recheck in the morning.
+3. Metformin remains held. Continue glipizide, losartan and atorvastatin.
 
 ```json payload
 {

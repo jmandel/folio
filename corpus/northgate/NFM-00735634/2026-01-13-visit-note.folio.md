@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. BP 142/83, repeat 135/83, pulse 65, wt 206 lb.
+
+Labs today: eGFR 36, K 4.9, UACR 275 mg/g, A1c 7.7%.
+
+Feels well, no new complaints. Continue current plan. RTC 3 mo.
 
 ```json payload
 {

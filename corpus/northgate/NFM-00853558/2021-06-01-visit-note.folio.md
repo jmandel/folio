@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints, exam unremarkable.
+BP 126/76, pulse 82, wt 166 lb.
+Labs today: eGFR 97, K 4.5, UACR 269 mg/g, A1c 7.4%.
+Discussed urine albumin result, will keep following. RTC 6 mo.
 
 ```json payload
 {

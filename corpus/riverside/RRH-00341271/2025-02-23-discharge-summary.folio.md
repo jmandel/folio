@@ -17,12 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref>
+**Diagnoses.** <ref id="dx_dka">Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved.</ref> <ref id="dx_pancreatitis">Acute pancreatitis was ruled out.</ref>
+
+**Hospital course.** The patient was admitted with ketoacidosis, a low sodium, and a glucose that was only modestly elevated. <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref> They were treated with an insulin infusion and fluids, the anion gap closed, and they were transitioned to subcutaneous insulin and began eating. Pancreatitis was considered because of nausea and was excluded.
+
+**Condition at discharge.** Vitals: BP 123/74, HR 93, RR 23, T 98.4 F, SpO2 95%. Basic metabolic panel on 2/23 at 06:03: sodium 135, potassium 4.2, chloride 99, bicarbonate 21, anion gap 15, urea nitrogen 16, creatinine 0.86, eGFR 70, glucose 180. Allergies: NKDA.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- <ref id="med_chlorthalidone">Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: continue.</ref>
+- Glipizide 5 mg daily: continue.
+- Losartan 100 mg daily: continue.
+- Atorvastatin 20 mg nightly: continue.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel. The patient should return for vomiting, abdominal pain, fast breathing or inability to keep fluids down.
 
 ```json payload
 {

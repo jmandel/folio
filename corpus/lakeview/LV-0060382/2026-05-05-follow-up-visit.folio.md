@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 139/80, HR 77, weight 54.3 kg at 2026-05-05 12:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 4 A2), onset 2020-08-04</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2016</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2015</ref>
-- eGFR 30 (today)
-- K 4.4 (today)
+<ref id="dx_ckd">CKD G4 A2</ref>, now stage 4. Feels well, no nausea or itching.
+
+eGFR 30 today, K 4.4. Down from G3b range.
+
+<ref id="bp_sys">BP 139/80, HR 77, weight 54.3 kg.</ref> <ref id="dx_htn">Hypertension</ref> and <ref id="dx_dm">type 2 diabetes</ref> contribute. Discussed what the stage change means.
+
+Return in 3 months with labs.
 
 ```json payload
 {

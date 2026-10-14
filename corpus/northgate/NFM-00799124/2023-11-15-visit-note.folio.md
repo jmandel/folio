@@ -14,13 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+Annual exam. BP 128/86, pulse 68, wt 197 lb.
+Dry cough on lisinopril, no swelling. Lisinopril stopped today (dry cough), listed as intolerance: dry cough.
+Losartan started 50 mg daily today for the ACE inhibitor cough.
+Labs today: eGFR 50, K 4.8, UACR 43 mg/g, LDL 130 mg/dL. CKD stage 3a on problem list.
+Recheck BMP in a few weeks. RTC 3 mo.
 
 ```json payload
 {

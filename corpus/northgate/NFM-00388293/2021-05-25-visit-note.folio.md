@@ -14,15 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-dapagliflozin: started 10 mg daily today (A1c 8.1)
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+DM2 f/u. BP 130/78, pulse 68, wt 164 lb.
+5/21 labs: eGFR 69, K 4, UACR 200 mg/g, A1c 8.1%, LDL 92.
+Dapagliflozin started 10 mg daily today (A1c 8.1).
+Lisinopril stopped today (dry cough); lisinopril intolerance: dry cough. Losartan started 50 mg daily today (ACE inhibitor cough).
+RTC 3 mo.
 
 ```json payload
 {

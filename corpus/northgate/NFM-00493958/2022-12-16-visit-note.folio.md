@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-dulaglutide: started 0.5 mg weekly today (A1c 9)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+DM follow-up. BP 140/84, pulse 77, wt 182 lb.
+Labs today: eGFR 51, K 4.7, A1c 9%.
+A1c 9, so dulaglutide started 0.5 mg weekly today. Injection technique reviewed.
+BP above goal, lisinopril changed to 40 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

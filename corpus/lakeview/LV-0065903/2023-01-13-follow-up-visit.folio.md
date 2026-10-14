@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 131/80, HR 78, weight 59.6 kg at 2023-01-13 12:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2023-02-07</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2010</ref>
-- eGFR 60 (today)
-- K 3.7 (today)
-- UACR 1089 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3a A3</ref> with <ref id="dx_dm">type 2 diabetes</ref>. No swelling, no change in urine, no new symptoms.
+
+<ref id="bp_sys">BP 131/80, HR 78, weight 59.6 kg.</ref>
+
+eGFR 60 today, K 3.7 today, UACR 1089 mg/g today. Albuminuria has risen again.
+
+Return in 3 months.
 
 ```json payload
 {

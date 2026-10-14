@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Doing well, no new concerns.
+BP 133/64, pulse 63, wt 176 lb.
+eGFR 42, K 4.4, UACR 69 mg/g today.
+Results discussed with pt. RTC 6 mo.
 
 ```json payload
 {

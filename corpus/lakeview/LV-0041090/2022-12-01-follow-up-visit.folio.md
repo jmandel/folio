@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 137/80, HR 80, weight 75.2 kg at 2022-12-01 09:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2021-03-31</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2009</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2013-06-15</ref>
-- eGFR 43 (today)
-- K 5.2 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, stable. <ref id="dx_dm">Diabetes</ref> and <ref id="dx_htn">hypertension</ref> both long-standing.
+
+eGFR 43 today, same as August. K 5.2, a little higher. Reviewed potassium-rich foods with her. No weakness or palpitations.
+
+<ref id="bp_sys">BP 137/80, HR 80, weight 75.2 kg</ref>.
+
+Repeat K at the next visit. Return in about 5 months.
 
 ```json payload
 {

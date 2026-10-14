@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 48, UACR 106 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pleasant patient with CKD stage 3a, type 2 diabetes and essential hypertension. <ref id="referral">Referral for CKD evaluation and management: eGFR 48, UACR 106 mg/g.</ref>
+
+Kidney function has been slowly declining and albuminuria is now above prior levels. BP has been above goal and we started chlorthalidone 12.5 mg daily today.
+
+Please advise on further workup and management. Recent labs are in the chart.
+
+Thank you,
+Daniel Khan, MD
 
 ```json payload
 {

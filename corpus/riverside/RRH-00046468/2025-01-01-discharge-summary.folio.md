@@ -17,13 +17,21 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref>
+**Diagnoses.** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated, resolved</ref>. <ref id="dx_pancreatitis">Acute pancreatitis was ruled out</ref> with a normal lipase of 35.
+
+**Hospital course.** The patient was admitted with ketoacidosis and a glucose of 210. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> The patient was treated with an insulin infusion and fluids, and the anion gap closed. On the final panel sodium was 136, potassium 4.2, chloride 104, bicarbonate 23, anion gap 9, urea nitrogen 25, creatinine 1.09 (eGFR 56) and glucose 129. At the last check, BP 135/81, HR 80, RR 16, T 98.6 F, SpO2 94%. The patient is eating and feels well.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the PCP</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
+- <ref id="med_lisinopril">Lisinopril 40 mg daily: continue</ref>
+- <ref id="med_chlorthalidone">Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: continue</ref>
+- Amlodipine 5 mg daily: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel. The patient was counseled to return for vomiting, abdominal pain, fast breathing or inability to eat or drink.
 
 ```json payload
 {

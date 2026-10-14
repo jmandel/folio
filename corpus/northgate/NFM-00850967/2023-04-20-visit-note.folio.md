@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.3)
+Annual exam. No new complaints.
+BP 136/81, pulse 84, wt 219 lb.
+Labs today: eGFR 66, K 4.5, A1c 8.3%, LDL 73 mg/dL.
+A1c above goal. Dulaglutide started today, 0.5 mg weekly. Injection technique shown to pt.
+RTC 3 mo.
 
 ```json payload
 {

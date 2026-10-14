@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 135/80, HR 64, weight 98 kg at 2024-08-22 12:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 2 A2), onset 2026-01-09</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2007</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2009</ref>
-- eGFR 61 (today)
-- K 4.3 (today)
+Follow-up. <ref id="dx_ckd">CKD G2 A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+eGFR 61, K 4.3 today. Stable since May. Albuminuria has come down a category.
+
+<ref id="bp_sys">BP 135/80, HR 64, weight 98 kg.</ref> Feels well, no new complaints.
+
+Return 3 months with repeat labs.
 
 ```json payload
 {

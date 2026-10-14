@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/29 06:05 (local time): Sodium 137 mmol/L, Potassium 6.2 mmol/L (HH), Chloride 99 mmol/L, Bicarbonate (total CO2) 22 mmol/L, Anion gap 16 mmol/L, Urea nitrogen 28 mg/dL (H), Creatinine 1.63 mg/dL (H), eGFR (CKD-EPI 2021) 33 mL/min/1.73m2 (L), Glucose 122 mg/dL (H)</ref>
+**Interval.** Saline was stopped at 04:47 this morning after about two days of infusion. The patient feels better, with less diarrhea and improved energy. No known drug allergies. Lisinopril and chlorthalidone remain held.
+
+**Exam.** Vitals at 07:39: BP 132/79, HR 98, RR 20, T 98.1 F, SpO2 94%. Comfortable, mucous membranes moist, lungs clear.
+
+**Results.** The <ref id="bmp">06:05 panel shows sodium 137, potassium 6.2 (critical), chloride 99, bicarbonate 22, anion gap 16, urea nitrogen 28, creatinine 1.63, eGFR 33 and glucose 122</ref>. Sodium has corrected, and urea nitrogen and creatinine are improving.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, improving with volume repletion; creatinine down from 1.89 on admission to 1.63. Continue to hold the home lisinopril and chlorthalidone. Repeat BMP tomorrow morning.
+2. Potassium remains high at 6.2 despite the improvement in kidney function; this will be rechecked on the next panel.
+3. Hyponatremia has resolved, sodium 137.
 
 ```json payload
 {

@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 3/19 06:16 (local time): Sodium 139 mmol/L, Potassium 3.9 mmol/L, Chloride 100 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 16 mmol/L, Urea nitrogen 19 mg/dL, Creatinine 0.83 mg/dL, eGFR (CKD-EPI 2021) 80 mL/min/1.73m2, Glucose 140 mg/dL (H)</ref>
+**Interval.** She feels better today, with only a mild cough. She slept well and is eating full meals.
+
+**Exam.** Vitals at 07:15: BP 119/71, HR 108, RR 16, T 99.2 F, SpO2 98%. The heart rate reads high on this check although she is comfortable and breathing easily; we will repeat it after she has been resting. Lungs have only faint crackles at the base.
+
+**Results.** <ref id="bmp">The 06:16 panel shows sodium 139, potassium 3.9, chloride 100, bicarbonate 23, anion gap 16, urea nitrogen 19, creatinine 0.83, eGFR 80 and glucose 140 (H).</ref>
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, active but clearly improving. Oxygen saturation is 98%.
+2. Electrolytes and kidney function are normal today; urea nitrogen has come down to 19.
+3. Metformin remains held. Continue losartan, hydrochlorothiazide and atorvastatin.
 
 ```json payload
 {

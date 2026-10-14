@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 122/80, HR 78, weight 73.2 kg at 2026-05-28 10:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A1), onset 2025-06-02</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2022</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2016</ref>
-- eGFR 52 (today)
-- K 4.7 (today)
+Follow-up for <ref id="dx_ckd">CKD G3a A1</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+<ref id="bp_sys">BP 122/80, HR 78, weight 73.2 kg.</ref> No new symptoms, no swelling.
+
+eGFR 52 (today), unchanged from December. K 4.7 (today), upper normal.
+
+Continue current plan. Repeat labs and return in 4 months.
 
 ```json payload
 {

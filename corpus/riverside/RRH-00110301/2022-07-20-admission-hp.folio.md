@@ -16,7 +16,22 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
+**Reason for admission:** <ref id="dx_pneumonia">community-acquired pneumonia</ref>.
+
+**History of present illness.** The patient was seen in the emergency department this afternoon with several days of cough and feeling unwell, and was found to have pneumonia on evaluation. They were breathing comfortably at rest but were a little short of breath with exertion. Intravenous fluids were started in the ED at 14:55 and are still running at 75 mL/h. I am admitting them to the hospital medicine service for treatment and monitoring.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** Vitals at 18:11: BP 124/74, HR 96, RR 18, temperature 98.3 F, SpO2 94%. The patient is alert, conversant and in no distress. Breath sounds are diminished with crackles at the base on the affected side. Heart rhythm is regular. Abdomen is soft and nontender. No leg swelling.
+
+**Results.** Basic metabolic panel drawn at 14:29: sodium 135 (low), potassium 4.8, chloride 105, bicarbonate 19 (low), anion gap 11, urea nitrogen 49 (high), creatinine 1.42 (high), eGFR 44 (low), glucose 202 (high).
+
+**Assessment and plan**
+
+1. Community-acquired pneumonia: the patient is stable on current oxygen saturation of 94%. Continue treatment as started in the ED, monitor respiratory rate and saturation through the night, and encourage fluids and coughing.
+2. Elevated urea nitrogen and creatinine with a low bicarbonate: probably volume depletion in the setting of acute illness. Continue the saline infusion at 75 mL/h and repeat the basic metabolic panel in the morning.
+3. Glucose 202 on the afternoon panel: recheck with the morning labs.
+4. Medication reconciliation of the home medication list is pending and will be completed tomorrow.
 
 ```json payload
 {

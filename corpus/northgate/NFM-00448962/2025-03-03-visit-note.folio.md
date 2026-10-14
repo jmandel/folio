@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
+DM f/u. No new complaints.
+BP 131/75, pulse 69, wt 262 lb.
+Labs 2/28: eGFR 56, K 4.5, UACR 196 mg/g, A1c 6.7%.
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
+RTC 4 mo.
 
 ```json payload
 {

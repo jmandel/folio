@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 130/79, pulse 83, wt 192 lb.
+Labs 4/26: eGFR 49, K 5, LDL 59 mg/dL.
+Pt feels fine, no dizziness or swelling. Labs reviewed with pt.
+RTC 3 mo.
 
 ```json payload
 {

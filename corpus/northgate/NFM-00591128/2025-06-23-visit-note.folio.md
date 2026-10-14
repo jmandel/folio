@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Pt doing well, no new complaints.
+
+BP 117/65, pulse 64, wt 188 lb.
+
+Exam unremarkable. Routine health maintenance discussed.
+
+RTC 1 yr, sooner if concerns.
 
 ```json payload
 {

@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (A1c 8.4)
+DM f/u. A1c 8.4, above goal.
+Empagliflozin: started 10 mg daily today (A1c 8.4).
+BP 128/76, pulse 67, wt 249 lb.
+Reviewed hydration and genital hygiene. RTC 3 mo.
 
 ```json payload
 {

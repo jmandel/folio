@@ -1,6 +1,6 @@
-# Stage 1 receipt (pilot)
+# Stage 1 receipt
 
-Branch `stage1`. The full prose run for all 300 patients has not been done yet; it waits for a go-ahead.
+Branch `stage1`. The full run is done (see [Full run](#full-run)); the pilot section below is kept as it was.
 
 ## What exists
 
@@ -53,3 +53,31 @@ A first calibration pilot showed notes echoing machine wording. I fixed the requ
 6. The RxNorm SCD codes for population drugs, and some LOINC/SNOMED codes, have not been checked against the terminology files.
 7. codex reports no cost and reads `~/.codex/config.toml` (model, reasoning effort). claude runs with `--safe-mode --setting-sources=`, so user settings and CLAUDE.md are not loaded.
 8. 5,022 items still carry template placeholder text until the full prose run.
+
+## Full run
+
+The pilot was approved, and the coordinator asked for these changes first:
+
+1. **Lipids.** Lakeview's code table now has `LK-LIPID` with total cholesterol, TG, HDL and a calculated (Friedewald) LDL. Each code has a docstring, and the calculated LDL points at its source row through `DERIVED_FROM_RESULT_ID`. I recomputed the example hashes and the 31 examples still reproduce. LDL appears in the latest-labs key for 267 of 300 patients, and Northgate imports the lipid rows. The hero has one panel, on 2025-02-17.
+2. **HERO.md.** Now lists hyponatremia, the lipid panel, the referral steps and the 2026-08-10 phone contact. The hero's keys now match HERO.md.
+3. **Codes.** `work/verify-codes.ts` checks every distinct code against NLM (RxNav; Clinical Tables for LOINC and ICD-10-CM) and writes `work/code-verification.json`. It covers 73 RxNorm, 26 LOINC and 26 ICD-10-CM codes; all now pass.
+   - Fixed seven wrong RxNorm SCD codes: losartan 50, dapagliflozin 10, empagliflozin 25, valsartan 160, atorvastatin 80, insulin lispro and insulin detemir pens.
+   - Fixed five names to the official RxNorm form.
+   - Five codes are accepted with a reason. Two are the deliberate MDRD LOINCs (T11). Three are synonyms or local labels.
+   - SNOMED codes are not checked.
+4. **Prose.** Run with claude (sonnet) at concurrency 6, resumable; results in the table below.
+5. **Merge.** `main` (Stage 2) is merged; both sets of `package.json` scripts and dependencies are kept. `bun test` passes 239 tests, 3 skipped. `check:corpus` finds 0 problems: 25,372 items, tsc 0 errors, all 5,283 notes re-validated, 0 templates left.
+6. **Signing.** `bun run sign` signs `corpus/` into the git-ignored `build/signed/` with seeded salts in about 10 s. Two runs give byte-identical output. Sync nodes now serve pre-signed `.folio.sd-jwt` files without re-signing, and the node CLI defaults to `build/signed` when it exists. The personal agent synced the hero from the four local nodes: 466 items, 0 rejected.
+
+| | Prose run |
+|---|---|
+| Calls | 449 |
+| Notes | 5,197 |
+| Accepted first pass | 99.8% |
+| Retry calls | 8 |
+| Accepted in total | 100% |
+| Cost | $27.55 |
+| Agent time | 1.64 h |
+| Wall time | 16.8 min |
+
+The corpus now has 25,372 items, all with final narrative (no template placeholders). It is 52 MB; `runs/` is 17 MB.

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+BP f/u. Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+BP 133/79, pulse 83, wt 255 lb.
+8/8 labs: eGFR 72, K 4.1.
+Reviewed importance of refills and keeping appts.
+RTC 3 mo.
 
 ```json payload
 {

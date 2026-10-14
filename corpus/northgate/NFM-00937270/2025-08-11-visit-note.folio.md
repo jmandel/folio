@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-empagliflozin: started 10 mg daily today (A1c 8.5)
+Chronic care visit. No new complaints.
+BP 144/84, repeat 136/84, pulse 78, wt 195 lb.
+Labs today: eGFR 86, K 4.5, UACR 68 mg/g, A1c 8.5%.
+Empagliflozin started 10 mg daily today for A1c 8.5.
+RTC 4 mo.
 
 ```json payload
 {

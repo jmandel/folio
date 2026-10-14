@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 128/79, pulse 86, wt 201 lb.
+Labs 1/10: eGFR 46, K 4.5, A1c 9.3%.
+A1c up again; reviewed with pt.
+Referral to nephrology placed today for CKD.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
+Annual exam. BP 145/90, pulse 85, wt 177 lb.
 Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+Labs 5/30: eGFR 42, K 4.3, A1c 6.8%, LDL 85 mg/dL.
+Reviewed results with pt. RTC 3 mo.
 
 ```json payload
 {

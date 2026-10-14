@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 7/21 06:08 (local time): Sodium 137 mmol/L, Potassium 4.3 mmol/L, Chloride 102 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 12 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 1.28 mg/dL (H), eGFR (CKD-EPI 2021) 50 mL/min/1.73m2 (L), Glucose 115 mg/dL (H)</ref>
+**Interval.** The patient had a fairly comfortable night. Cough continues, with some shortness of breath on moving about. Saline continues at 75 mL/h.
+
+**Exam.** Vitals at 07:35: BP 112/67, HR 112, RR 22, temperature 98.3 F, SpO2 98%. The patient appears tired but is not in distress. Crackles persist at the base. Heart rate is fast but regular.
+
+**Results.** <ref id="bmp">Basic metabolic panel at 06:08: sodium 137, potassium 4.3, chloride 102, bicarbonate 23, anion gap 12, urea nitrogen 23, creatinine 1.28 (high), eGFR 50 (low), glucose 115 (high)</ref>. Compared with yesterday afternoon, the low sodium and low bicarbonate have corrected, and urea nitrogen and creatinine have come down.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>: oxygen saturation is good at 98%, but the heart rate of 112 and respiratory rate of 22 are higher than I would like. Continue current treatment and keep watching vital signs closely today.
+2. Kidney function is improving with fluids. Continue the saline for now and recheck the panel tomorrow morning.
+3. Allergies: no known drug allergies. Home medication reconciliation remains open.
 
 ```json payload
 {

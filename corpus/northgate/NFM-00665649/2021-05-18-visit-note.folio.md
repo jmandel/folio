@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
+Annual exam. No new complaints.
+BP 128/86, pulse 80, wt 197 lb.
+Today: eGFR 68, K 4.3, A1c 8.1%.
+A1c up. Insulin glargine started, 10 units at bedtime today. Reviewed pen technique and low sugar signs.
+RTC 3 mo.
 
 ```json payload
 {

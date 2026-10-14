@@ -14,7 +14,18 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 33, UACR 9 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+Thank you for seeing this patient, who has type 2 diabetes and chronic kidney disease. I met them for the first time today to establish care.
+
+<ref id="referral">I am referring for CKD evaluation and management: eGFR 33, UACR 9 mg/g.</ref>
+
+Metformin was reduced to 500 mg BID today because of the eGFR. BP today was 128/72. Potassium on 8/13 was 4.4.
+
+Please send your recommendations to our office. I am happy to answer any questions.
+
+Teresa Reyes, MD
+Northgate Family Medicine
 
 ```json payload
 {

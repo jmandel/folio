@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Feels well, no new concerns.
+BP 112/67, pulse 82, wt 206 lb.
+6/6 labs: eGFR 66, K 4.8, A1c 7.8%, LDL 88 mg/dL.
+Reviewed results with pt.
+RTC 4 mo.
 
 ```json payload
 {

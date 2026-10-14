@@ -14,13 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 138/80, HR 67, weight 74.4 kg at 2024-11-25 11:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2021-03-31</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2009</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2013-06-15</ref>
-- eGFR 38 (today)
-- K 4.8 (today)
-- UACR 225 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+eGFR 38 today, K 4.8. UACR 225 mg/g, up from 186 in April. Albuminuria creeping up while eGFR is slowly falling.
+
+<ref id="bp_sys">BP 138/80, HR 67, weight 74.4 kg</ref>. No swelling.
+
+Discussed trend with patient. Continue current plan, repeat UACR at next visit in 5 months.
 
 ```json payload
 {

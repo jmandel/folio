@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-Patient ran out of losartan about 3 weeks ago and has not been taking it.
+BP f/u. Patient ran out of losartan about 3 weeks ago and has not been taking it.
+BP 136/84, pulse 88, wt 213 lb.
+eGFR 77, K 4.1 today.
+Discussed importance of not running out. Will recheck BP at next visit.
+RTC 3 mo.
 
 ```json payload
 {

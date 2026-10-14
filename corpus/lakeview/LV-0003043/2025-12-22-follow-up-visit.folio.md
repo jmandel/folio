@@ -14,11 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 127/80, HR 86, weight 90.9 kg at 2025-12-22 11:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 4 A1), onset 2025-02-11</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2018</ref>
-- eGFR 30 (today)
-- K 4.2 (today)
+Follow-up. Doing well, no new symptoms.
+
+eGFR 30 today, K 4.2. Now <ref id="dx_ckd">CKD G4 A1</ref> by eGFR, with <ref id="dx_dm">type 2 diabetes</ref>.
+
+<ref id="bp_sys">BP 127/80, HR 86, weight 90.9 kg.</ref>
+
+Slow decline, no urgent concerns. Reviewed what G4 means and what to watch for. Return in 4-5 months with labs.
 
 ```json payload
 {

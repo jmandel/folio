@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. Doing about the same, no new complaints.
+
+BP 126/74, pulse 75, wt 216 lb.
+
+Wt stable. Reviewed problem list, no changes today.
+
+RTC 6 mo.
 
 ```json payload
 {

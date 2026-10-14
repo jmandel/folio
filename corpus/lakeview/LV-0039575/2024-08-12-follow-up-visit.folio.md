@@ -14,12 +14,11 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 117/80, HR 82, weight 69.4 kg at 2024-08-12 13:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2022-12-06</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2019</ref>
-- eGFR 44 (today)
-- K 4.4 (today)
-- UACR 152 mg/g (today)
+<ref id="dx_ckd">CKD G3b A2</ref> with <ref id="dx_htn">hypertension</ref>. eGFR 44, K 4.4, UACR 152 mg/g today.
+
+<ref id="bp_sys">BP 117/80, HR 82, weight 69.4 kg</ref>. Feels well, no new symptoms.
+
+Kidney function stable. Albuminuria unchanged in range. Return in 4 months with labs.
 
 ```json payload
 {

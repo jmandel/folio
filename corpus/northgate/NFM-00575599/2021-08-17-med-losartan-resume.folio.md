@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">resume losartan: eating and drinking normally.</ref>
+<ref id="med_1">Losartan resumed today, eating and drinking normally.</ref>
 
 ```json payload
 {

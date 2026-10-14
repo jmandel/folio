@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Chronic care visit. No complaints.
+BP 141/84, pulse 72, wt 184 lb.
+eGFR 80 today. K 6.3 on first draw, hemolyzed; repeat K 4.8.
+BP above goal, so lisinopril dose changed to 40 mg daily today.
+RTC 3 mo, BP recheck.
 
 ```json payload
 {

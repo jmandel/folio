@@ -14,17 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. A1c 7.3% on 2/8, above goal: empagliflozin started 10 mg daily today.
+Dry cough on lisinopril, so lisinopril stopped today (lisinopril intolerance: dry cough). Losartan started 50 mg daily today (ACE inhibitor cough).
+BP 137/86, pulse 85, wt 186 lb. eGFR 83, K 4.5 on 2/8.
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
 
-empagliflozin: started 10 mg daily today (A1c above goal)
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+RTC 3 mo.
 
 ```json payload
 {

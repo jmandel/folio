@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+Diabetes f/u. No new complaints.
 
-amlodipine: started 5 mg daily today (BP above goal)
+BP 143/86, repeat 138/84. Pulse 81, wt 200 lb.
+
+Labs today: eGFR 50, K 4.5, A1c 7.7%.
+
+BP still above goal: amlodipine started 5 mg daily today.
 
 ```json payload
 {

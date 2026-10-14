@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+Annual exam. BP 155/97, pulse 79, wt 210 lb.
+eGFR 81, K 4.6 today.
+BP above goal. Chlorthalidone started 12.5 mg daily today.
+Reviewed with pt, no questions.
+RTC 3 mo for BP and labs.
 
 ```json payload
 {

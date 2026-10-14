@@ -17,8 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Diagnosis:** <ref id="dx_pneumonia">Community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted with community-acquired pneumonia and acute changes in kidney function after several days of poor intake. She was treated in the hospital and received IV fluids, and her breathing, vital signs and laboratory values improved over the stay. Metformin and dapagliflozin were held during the acute illness. She has no known drug allergies.
+
+**Condition at discharge.** On the morning of 10/8 she felt well and was comfortable. Vitals at 08:45: BP 120/72, HR 98, RR 20, T 98.7 F, SpO2 97%.
+
+**Discharge labs.** The basic metabolic panel drawn 10/8 at 06:11 showed sodium 135, potassium 3.9, chloride 99, bicarbonate 26, anion gap 10, urea nitrogen 33, creatinine 1.34 (eGFR 63) and glucose 155. Creatinine has improved from 1.63 on arrival.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 1000 mg tablet, 1 tablet by mouth twice daily with meals: continue</ref>
+- Dapagliflozin 10 mg tablet, 1 tablet by mouth daily: continue
+- Lisinopril 20 mg tablet, 1 tablet by mouth daily: continue
+- Rosuvastatin 20 mg tablet, 1 tablet by mouth nightly: continue
+
+**Follow-up.** She will see her primary care clinic, Northgate Family Medicine, within 1 week to recheck her symptoms and chest exam. She should return sooner for worsening cough, shortness of breath or fever.
 
 ```json payload
 {

@@ -14,13 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 44)
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.4)
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+New pt, establishing care. BP 130/76, pulse 63, wt 141 lb.
+Metformin dose changed to 500 mg twice daily today (eGFR 44).
+Dulaglutide started 0.5 mg weekly today (A1c 8.4).
+Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+Pt agrees with plan. RTC 3 mo.
 
 ```json payload
 {

@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints.
+BP 121/74, pulse 86, wt 200 lb.
+Today: eGFR 61, K 4.3, A1c 6.9%, LDL 71, UACR 706 mg/g.
+UACR higher than before, reviewed with pt. RTC 3 mo.
 
 ```json payload
 {

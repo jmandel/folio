@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. Pt reports no new problems.
+
+BP 121/72, pulse 71, wt 207 lb.
+
+eGFR 60 today. Reviewed with pt.
+
+RTC 6 mo.
 
 ```json payload
 {

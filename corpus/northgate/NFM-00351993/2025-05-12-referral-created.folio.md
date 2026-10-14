@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 44, UACR 31 mg/g: CKD evaluation and management</ref>
+Dear Dr. Lakeview Kidney Care colleagues,
+
+Thank you for seeing this pt with <ref id="referral">eGFR 44 and UACR 31 mg/g, for CKD evaluation and management.</ref>
+
+Pt has CKD stage 3a, type 2 diabetes and essential hypertension. Kidney function has drifted down over the past year. Metformin was reduced today for the eGFR. Recent labs are in the chart. Please send your recommendations after the visit.
+
+Thank you,
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

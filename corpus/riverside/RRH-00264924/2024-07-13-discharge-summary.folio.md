@@ -17,9 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_lisinopril">home med lisinopril 10 mg tablet, 10 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Hospital course.** The patient was admitted with acute kidney injury and hyperkalemia. <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref> Potassium was 6.7 on arrival and was treated with IV calcium and saline. With continued saline, potassium fell and kidney function recovered. The hyperkalemia has resolved.
+
+**Condition at discharge.** <ref id="dx_aki">Acute kidney injury has resolved</ref>. Vitals at 07:15: BP 119/71, HR 104, RR 23, temperature 99 F, SpO2 94%. The patient is eating and drinking and feels well.
+
+**Discharge labs.** BMP at 06:21: sodium 133, potassium 5.3, chloride 104, bicarbonate 21, anion gap 8, urea nitrogen 30, creatinine 1.05, eGFR 85, glucose 132.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- Amlodipine 5 mg by mouth daily, continue
+- Atorvastatin 40 mg by mouth nightly, continue
+- Levothyroxine 75 mcg by mouth daily, continue
+- Lisinopril 10 mg daily: <ref id="med_lisinopril">held; the primary care physician will decide on restarting after a repeat BMP</ref>
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision about restarting the held blood pressure medicine.
 
 ```json payload
 {

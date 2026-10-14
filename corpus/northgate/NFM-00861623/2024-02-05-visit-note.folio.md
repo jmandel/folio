@@ -14,9 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. No new complaints.
 
-dapagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+BP 140/83, repeat 132/81, pulse 84, wt 178 lb.
+
+Today: eGFR 64, K 4.6, UACR 9 mg/g, A1c 7.2%, LDL 48.
+
+Dapagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit). Counseled on hydration.
+
+RTC 3 mo.
 
 ```json payload
 {

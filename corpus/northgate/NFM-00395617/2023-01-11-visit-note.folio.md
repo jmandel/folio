@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Feels well.
+BP 120/72, pulse 74, wt 214 lb.
+Labs 1/6: eGFR 72, K 4.6, A1c 7.7%.
+A1c drifting up slowly, reviewed with pt. Diet and activity encouraged.
+RTC 6 mo.
 
 ```json payload
 {

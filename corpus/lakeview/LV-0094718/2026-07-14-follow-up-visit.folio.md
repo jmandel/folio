@@ -14,13 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 126/80, HR 84, weight 86.9 kg at 2026-07-14 09:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2024-02-23</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2019</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2016</ref>
-- eGFR 34 (today)
-- K 4.7 (today)
-- UACR 785 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>.
+
+<ref id="bp_sys">BP 126/80, HR 84, weight 86.9 kg</ref>. Weight down from spring. Feels well.
+
+eGFR 34 today, K 4.7, UACR 785 mg/g. Slow decline continues.
+
+Labs and return in 3 months.
 
 ```json payload
 {

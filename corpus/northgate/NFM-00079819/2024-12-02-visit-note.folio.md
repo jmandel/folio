@@ -14,15 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-lisinopril: stopped today (dry cough)
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+DM2 f/u. Doing OK, but has had a dry cough on the lisinopril.
+BP 141/88, repeat 136/85, pulse 83, wt 165 lb.
+Labs 11/29: eGFR 93, K 4.6, A1c 6.3%.
+Lisinopril stopped today (dry cough). Lisinopril intolerance: dry cough, added to allergy list.
+Losartan started 50 mg daily today (ACE inhibitor cough).
+RTC 3 mo.
 
 ```json payload
 {

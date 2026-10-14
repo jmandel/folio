@@ -14,12 +14,14 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 133/80, HR 86, weight 80 kg at 2025-07-03 08:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2024-11-26</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 51 (today)
-- K 4.7 (today)
-- UACR 1177 mg/g (today)
+<ref id="dx_ckd">CKD G3a A3</ref>, diabetic. Feels well. No leg swelling, no foamy urine complaints.
+
+<ref id="bp_sys">BP 133/80, HR 86, weight 80 kg</ref>.
+
+eGFR 51, K 4.7, UACR 1177 mg/g. Albuminuria up from 828 in December. K at the upper end of normal; watch.
+<ref id="dx_dm">Type 2 diabetes since 2012</ref>.
+
+Repeat K and creatinine at the next visit. Return in 4 months.
 
 ```json payload
 {

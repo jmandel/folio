@@ -14,7 +14,17 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 61, UACR 518 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt, who established care with me today. <ref id="referral">eGFR 61 and UACR 518 mg/g today; referring for CKD evaluation and management.</ref>
+
+Pt has chronic kidney disease along with type 2 diabetes and essential hypertension, both long-standing by history. Kidney function is mildly reduced, but the degree of albuminuria is what concerns me. I would appreciate your help with workup and with a plan for protecting kidney function going forward.
+
+Pt is aware of the referral and agrees. Please send your recommendations to our office and call with any questions.
+
+Thank you,
+Teresa Reyes, MD
+Northgate Family Medicine
 
 ```json payload
 {

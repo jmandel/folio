@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: started 10 units at bedtime today (A1c 8)
+DM f/u. No new complaints.
+BP 132/75, pulse 79, wt 227 lb.
+9/19 labs: eGFR 43, K 4.6, UACR 764 mg/g, A1c 8.1%, LDL 87 mg/dL.
+Insulin glargine started 10 units at bedtime today (A1c 8).
+Pt to call with questions. RTC 3 mo.
 
 ```json payload
 {

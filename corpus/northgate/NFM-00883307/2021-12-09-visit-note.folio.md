@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new concerns.
+BP 141/86, pulse 67, wt 122 lb.
+Labs today: eGFR 41, K 4.4, UACR 207 mg/g, A1c 6.3%.
+CKD now stage 3b. Reviewed with pt.
+RTC 3 mo.
 
 ```json payload
 {

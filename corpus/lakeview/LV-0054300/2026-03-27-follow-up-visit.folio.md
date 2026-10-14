@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 141/80, HR 83, weight 82.8 kg at 2026-03-27 14:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A1), onset 2023-02-07</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2016-06-25</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2009</ref>
-- eGFR 33 (today)
-- K 4.5 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A1</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+eGFR 33 today, K 4.5. Continued slow decline, 36 → 33 since November.
+
+<ref id="bp_sys">BP 141/80, HR 83, weight 82.8 kg.</ref> Mild ankle puffiness at the end of the day, otherwise well.
+
+Return in 5 months with labs.
 
 ```json payload
 {

@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u, acute kidney injury. Feels better, eating and drinking normally.
 
-losartan: resumed today (creatinine back to baseline)
+BP 135/78, pulse 82, wt 206 lb.
 
-hydrochlorothiazide: stopped today (AKI with hyperkalemia)
+Creatinine back to baseline. Losartan resumed today. Furosemide resumed today. Hydrochlorothiazide stopped today (AKI with hyperkalemia).
 
-furosemide: resumed today (creatinine back to baseline)
+RTC 2 wk.
 
 ```json payload
 {

@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u. Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated. Feels back to baseline, eating and drinking normally.
+BP 122/78, pulse 62, wt 183 lb.
+Dapagliflozin: stopped today (euglycemic DKA). Dapagliflozin adverse reaction: euglycemic diabetic ketoacidosis, entered on allergy list.
 
 <ref id="sick_day">Sick-day rules reviewed.</ref>
 
-dapagliflozin: stopped today (euglycemic DKA)
-
-dapagliflozin adverse reaction: euglycemic diabetic ketoacidosis
+RTC 3 mo.
 
 ```json payload
 {

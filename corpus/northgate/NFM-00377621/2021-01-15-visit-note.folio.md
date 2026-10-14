@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM2 f/u. Doing OK, no hypoglycemia symptoms.
+BP 128/76, pulse 75, wt 132 lb.
+Labs 1/9: A1c 7.3%, eGFR 62, K 4.1, UACR 761 mg/g, LDL 71 mg/dL.
+Diet counseling again.
+RTC 6 mo.
 
 ```json payload
 {

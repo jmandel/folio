@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 43, UACR 111 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with chronic kidney disease stage 3b and essential hypertension. <ref id="referral">eGFR 43 and UACR 111 mg/g today; referring for CKD evaluation and management.</ref>
+
+BP was 131/77 at today's visit. We changed the antihypertensive today because of an ACE inhibitor cough. Please advise on further workup and management of the kidney disease.
+
+Thank you,
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

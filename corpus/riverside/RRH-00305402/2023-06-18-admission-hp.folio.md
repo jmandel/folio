@@ -16,11 +16,21 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient was sent up from the ED after labs this evening showed a high potassium and a creatinine well above normal. They had four days of watery diarrhea with poor intake and a sense of light-headedness on standing. There has been no chest pain, no fever and no urinary complaints. They have no known drug allergies (NKDA).
+
+**Exam.** Vitals at 23:42: BP 107/64, HR 84, RR 21, T 98.8 F, SpO2 98%. Comfortable and conversant. Mucous membranes slightly dry. Heart regular, lungs clear, abdomen soft and non-tender.
+
+**Results.** On the 17:58 panel sodium was 129, potassium 6.3, bicarbonate 22, urea nitrogen 34, creatinine 1.89 with eGFR 32, and glucose 209. Saline began at 18:24 and is still running.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> Continue the saline at 125 mL/h after the bolus, strict intake and output, and repeat BMP in the morning. <ref id="med_losartan">Hold losartan until creatinine is back to baseline.</ref>
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.3 on arrival, treated in the ED with calcium. Recheck potassium with the morning labs and keep on telemetry overnight.
+3. Hyponatremia, sodium 129, most likely from volume loss. Expect it to improve with fluids; follow on the repeat panel.
+4. Type 2 diabetes: glucose 209. <ref id="med_metformin">Hold metformin during the acute illness.</ref>
+5. Continue atorvastatin 40 mg nightly.
 
 ```json payload
 {

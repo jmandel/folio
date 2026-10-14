@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+DM f/u. A1c 8.1.
+BP 142/85, repeat 137/83. Pulse 75, wt 187 lb.
+Metformin dose changed to 1000 mg twice daily today (A1c 8.1).
+BP above goal, chlorthalidone started 12.5 mg daily today.
+Pt agrees with plan. RTC 3 mo.
 
 ```json payload
 {

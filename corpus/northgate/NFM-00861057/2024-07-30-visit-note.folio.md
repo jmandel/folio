@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No headache or chest pain.
+BP 144/93, pulse 72, wt 164 lb.
+eGFR 71, K 4.5 today.
+BP still above goal. Reviewed home readings, salt and activity.
+RTC 3 mo.
 
 ```json payload
 {

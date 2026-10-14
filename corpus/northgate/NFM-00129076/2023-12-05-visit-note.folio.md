@@ -15,6 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam.
+BP 138/84, pulse 82, wt 192 lb.
+eGFR 70 and K 4.5 on 12/1 labs, reviewed with pt.
+Feels well, no new complaints.
+RTC for BP check.
 
 ```json payload
 {

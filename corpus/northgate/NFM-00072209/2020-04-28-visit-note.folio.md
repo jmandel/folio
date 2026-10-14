@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 40)
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.4)
+New pt, establishing care. BP 146/86, repeat 142/84, pulse 63, wt 175 lb.
+Labs 4/23: eGFR 43, K 4.5, A1c 8.4%.
+Metformin dose changed to 500 mg twice daily today (eGFR 40).
+Dulaglutide started 0.5 mg weekly today (A1c 8.4).
+Records reviewed with pt. RTC for BP and labs.
 
 ```json payload
 {

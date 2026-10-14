@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 130/80, HR 87, weight 104 kg at 2023-11-21 11:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2025-02-12</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2017</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2010-12</ref>
-- eGFR 63 (today)
-- K 4.5 (today)
+Follow-up. Well, no swelling or fatigue reported.
+
+<ref id="dx_ckd">CKD G2 A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>, <ref id="dx_htn">hypertension</ref>. eGFR 63 today, K 4.5. eGFR 69 → 63 since late 2021, slow decline.
+
+<ref id="bp_sys">BP 130/80, HR 87, weight 104 kg</ref>.
+
+Return in 6 months with labs and urine albumin.
 
 ```json payload
 {

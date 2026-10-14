@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
+BP 136/86, pulse 71, wt 193 lb.
+11/9 labs: eGFR 65, A1c 7.1%. K came back 5.9 but sample was hemolyzed; repeat K 4.2.
+Nephrology referral placed today.
+RTC 3 mo.
 
 ```json payload
 {

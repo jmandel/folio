@@ -17,11 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref>
+**Diagnosis:** <ref id="dx_dka">euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** The patient has type 2 diabetes and hypertension and was admitted with ketoacidosis despite a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref> They were treated with an insulin infusion per DKA protocol and fluids, then transitioned to subcutaneous insulin glargine. The acidosis and anion gap resolved, and kidney function returned to near baseline.
+
+**Condition at discharge.** Feeling well and eating. Vitals on the day of review: BP 129/77, HR 101, RR 23, T 99.2 F, SpO2 94%. Discharge labs: sodium 137, potassium 4.3, chloride 102, bicarbonate 23, anion gap 12, urea nitrogen 18, creatinine 1.08, eGFR 78, glucose 159.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: HOLD. Do not resume until reviewed by the primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- Glipizide 5 mg daily: continue.
+- Lisinopril 40 mg daily: continue.
+- <ref id="med_chlorthalidone">Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: continue.</ref>
+- Amlodipine 5 mg daily: continue.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {

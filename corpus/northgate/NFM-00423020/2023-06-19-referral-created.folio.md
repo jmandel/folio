@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 45, UACR 86 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this patient, who has stage 3a CKD along with type 2 diabetes and essential hypertension. <ref id="referral">eGFR 45, UACR 86 mg/g: CKD evaluation and management.</ref>
+
+Kidney function and albuminuria have drifted the wrong way over the last couple of years despite reasonable BP and glucose control. We would appreciate your assessment and recommendations for ongoing management. Recent labs and visit notes are available in the chart.
+
+Please send your findings back to us and let us know if you want any further testing before the visit. We will continue to follow BP and diabetes here.
+
+Thank you for your help.
 
 ```json payload
 {

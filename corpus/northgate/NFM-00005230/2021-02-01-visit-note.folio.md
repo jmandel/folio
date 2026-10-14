@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. BP 146/89, repeat 144/86. Pulse 78, wt 184 lb.
+Labs 1/28: eGFR 70, K 4.2, A1c 6.8%.
+BP above goal, lisinopril dose changed to 40 mg daily today.
+Pt voiced understanding.
+RTC to recheck BP.
 
 ```json payload
 {

@@ -16,10 +16,15 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 10/26 06:09 (local time): Sodium 132 mmol/L (L), Potassium 3.9 mmol/L, Chloride 104 mmol/L, Bicarbonate (total CO2) 19 mmol/L (L), Anion gap 9 mmol/L, Urea nitrogen 22 mg/dL, Creatinine 0.83 mg/dL, eGFR (CKD-EPI 2021) 72 mL/min/1.73m2, Glucose 164 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 10/26 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 10/25 21:15, still running (local times)</ref>
+**Interval.** He slept some overnight and feels better this morning, with less nausea and easier breathing. Vitals at 07:16: BP 126/76, HR 105, RR 20, T 98.8 F, SpO2 95%.
+
+**Results.** On the <ref id="bmp">06:09 panel sodium is 132, potassium 3.9, chloride 104, bicarbonate 19, anion gap 9, urea nitrogen 22, creatinine 0.83, eGFR 72 and glucose 164</ref>. The anion gap has closed from 27 at presentation.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving, with the gap now closed. The <ref id="iv_insulin">insulin infusion per DKA protocol at 0.1 units/kg/h</ref> is still running. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily was started at 07:00</ref> to overlap with the infusion. Continue to watch the chemistries.
+2. Metformin, dapagliflozin and lisinopril remain held. Glipizide and amlodipine continue as listed.
+3. No known drug allergies.
 
 ```json payload
 {

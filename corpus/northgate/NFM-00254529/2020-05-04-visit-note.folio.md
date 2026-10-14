@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx reviewed with pt.
+
+BP 137/87, pulse 73, wt 172 lb.
+
+Labs 4/29: eGFR 56, K 4.3, UACR 49 mg/g, A1c 8%, LDL 96.
+
+Problem list built from pt's history. Will review labs further at next visit.
 
 ```json payload
 {

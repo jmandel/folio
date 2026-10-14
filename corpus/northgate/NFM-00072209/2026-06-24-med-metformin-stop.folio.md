@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">stop metformin: eGFR 29.</ref>
+<ref id="med_1">eGFR 29. Metformin stopped.</ref> Pt informed.
 
 ```json payload
 {

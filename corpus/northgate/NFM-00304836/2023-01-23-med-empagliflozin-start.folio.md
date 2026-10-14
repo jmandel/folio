@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start empagliflozin: A1c 9.4.</ref>
+<ref id="med_1">A1c 9.4. Start empagliflozin 10 mg daily.</ref>
 
 ```json payload
 {

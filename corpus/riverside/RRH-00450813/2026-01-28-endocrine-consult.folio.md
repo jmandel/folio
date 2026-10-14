@@ -14,12 +14,20 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consultation
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 1/28 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consultation:** euglycemic diabetic ketoacidosis in a patient on an SGLT2 inhibitor, requested by the hospitalist service.
+
+**History.** The patient came in on 1/26 with a wide anion gap acidosis and a beta-hydroxybutyrate of 5.5 mmol/L, with glucose only modestly raised. The home regimen included dapagliflozin 10 mg daily and metformin 1000 mg twice daily, along with lisinopril 40 mg, amlodipine 5 mg and atorvastatin 40 mg. No known drug allergies. The insulin infusion ran from 00:51 on 1/27 until 09:00 today, 1/28.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, responding to treatment. The mechanism is well recognized: the drug promotes ketone production while keeping glucose deceptively low.
+2. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily, started at 07:00 today</ref>, covers the transition off the infusion. Glucose will be followed closely on this regimen.
+3. <ref id="med_dapagliflozin">Dapagliflozin is held, and I recommend against restarting it at discharge.</ref> Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+4. Metformin and lisinopril remain held for now. Amlodipine and atorvastatin continue.
+
+I discussed the reasoning with the primary team and am happy to see the patient again if questions arise before discharge.
 
 ```json payload
 {

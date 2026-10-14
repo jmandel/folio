@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 135/80, pulse 85, wt 202 lb.
+Labs today: eGFR 44, K 5.1, UACR 485 mg/g.
+CKD stage 3b added to problem list.
+Discussed results with pt. Will recheck labs at next visit.
 
 ```json payload
 {

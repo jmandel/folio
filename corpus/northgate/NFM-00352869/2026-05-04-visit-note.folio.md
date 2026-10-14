@@ -14,15 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.6)
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+DM2 f/u. Pt reports dry cough on lisinopril.
+BP 129/80, pulse 73, wt 228 lb.
+Labs today: A1c 8.6%, eGFR 45, K 4.7, LDL 83.
+Started insulin glargine 10 units at bedtime today (A1c 8.6). Lisinopril stopped today for dry cough, listed as intolerance. Losartan 50 mg daily started today for the ACE inhibitor cough.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,13 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+BP f/u. BP 139/86, pulse 87, wt 151 lb.
+Labs 7/12: eGFR 74, K 4.3.
+Pt reports dry cough. Lisinopril stopped today (dry cough), logged as lisinopril intolerance: dry cough.
+Losartan started 50 mg daily today (ACE inhibitor cough).
+RTC 3 mo for BP.
 
 ```json payload
 {

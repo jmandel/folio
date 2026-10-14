@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start amlodipine: replacing lisinopril (angioedema).</ref>
+<ref id="med_1">Started 5 mg daily, replacing lisinopril after angioedema.</ref>
 
 ```json payload
 {

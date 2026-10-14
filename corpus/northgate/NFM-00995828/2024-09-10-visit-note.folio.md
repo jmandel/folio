@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Phone: sick, vomiting.
-
-lisinopril: held today (vomiting, poor oral intake); review 2024-09-17
+Phone call, pt sick with vomiting. Poor oral intake, trouble keeping fluids down.
+Advised small sips and rest.
+Lisinopril: held today (vomiting, poor oral intake); review 9/17.
+Call back or seek care if worse or unable to keep fluids down.
 
 ```json payload
 {

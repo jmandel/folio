@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 138/80, pulse 82, wt 227 lb.
+Labs 6/17: eGFR 68, K 4.7, UACR 679 mg/g, A1c 7.5%, LDL 94.
+UACR is high. Discussed with pt, will refer to nephrology.
+RTC 5 mo.
 
 ```json payload
 {

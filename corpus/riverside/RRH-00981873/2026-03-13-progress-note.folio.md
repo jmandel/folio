@@ -16,8 +16,20 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 3/13 06:29 (local time): Sodium 138 mmol/L, Potassium 3.9 mmol/L, Chloride 103 mmol/L, Bicarbonate (total CO2) 22 mmol/L, Anion gap 13 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 2.08 mg/dL (H), eGFR (CKD-EPI 2021) 41 mL/min/1.73m2 (L), Glucose 124 mg/dL (H)</ref>
+**Interval.** The patient feels better, with less cough and a good appetite.
+
+**Exam.** Vitals at 07:38: BP 138/83, HR 99, RR 21, T 98.1 F, SpO2 96%. Comfortable, lungs with fewer crackles than before.
+
+**Results.** The <ref id="bmp">06:29 panel showed sodium 138, potassium 3.9, chloride 103, bicarbonate 22, anion gap 13, urea nitrogen 23, creatinine 2.08 (H) with eGFR 41 (L), and glucose 124 (H)</ref>. Creatinine continues to come down from 2.28 yesterday.
+
+**Allergies:** NKDA.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, still active but improving clinically. Continue current treatment.
+2. Metformin and dapagliflozin remain held.
+3. Glipizide, semaglutide, insulin glargine, lisinopril, chlorthalidone, amlodipine, and atorvastatin continue.
+4. Repeat basic metabolic panel in the morning.
 
 ```json payload
 {

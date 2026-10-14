@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History per pt.
+BP 141/85, repeat 139/82. Pulse 79, wt 228 lb.
+Labs today: eGFR 41, K 4.6, UACR 11 mg/g, LDL 105 mg/dL.
+Referred to nephrology for the eGFR.
+RTC for BP f/u.
 
 ```json payload
 {

@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 3/28 06:00 (local time): Sodium 134 mmol/L (L), Potassium 3.9 mmol/L, Chloride 105 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 4 mmol/L (L), Urea nitrogen 23 mg/dL, Creatinine 1.53 mg/dL (H), eGFR (CKD-EPI 2021) 37 mL/min/1.73m2 (L), Glucose 162 mg/dL (H)</ref>
+**Interval.** Cough is less frequent and he is eating more. The IV saline was stopped last night at 23:36. Allergies: NKDA.
+
+**Exam.** Vitals at 07:12: BP 140/84, HR 92, RR 18, T 98.3 F, SpO2 95%. Comfortable, speaking easily. Breath sounds are clearer, with fewer crackles at the base.
+
+**Results.** <ref id="bmp">The 06:00 panel showed sodium 134 (L), potassium 3.9, chloride 105, bicarbonate 25, anion gap 4 (L), urea nitrogen 23, creatinine 1.53 (H), eGFR 37 (L) and glucose 162 (H)</ref>. Creatinine continues to come down. Sodium is slightly low after the saline was stopped and will be watched. The low anion gap is noted and will be followed on the next panel.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>: continuing to improve, with a normal temperature and good saturation on the morning check.
+2. Kidney function: improving off IV fluids as oral intake increases. Repeat panel tomorrow.
+3. Metformin and empagliflozin remain held for now.
 
 ```json payload
 {

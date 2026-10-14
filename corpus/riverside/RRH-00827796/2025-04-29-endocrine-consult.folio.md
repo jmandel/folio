@@ -14,12 +14,17 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consult note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 4/29 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consult:** euglycemic DKA on an SGLT2 inhibitor.
+
+**Summary.** The patient was admitted 4/28 with <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>. Beta-hydroxybutyrate on arrival was 4.2. The insulin infusion ran from 15:22 on 4/28 until 09:00 today. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily was started at 07:00 today</ref> to overlap with the infusion. Metformin and hydrochlorothiazide are held; losartan continues. Allergy: lisinopril (cough).
+
+**Assessment and plan**
+
+1. Euglycemic DKA is resolving. Continue glargine and monitor glucose.
+2. <ref id="med_empagliflozin">Empagliflozin is held, and I recommend against restarting it at discharge.</ref> Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. We will follow along with the primary team.
 
 ```json payload
 {

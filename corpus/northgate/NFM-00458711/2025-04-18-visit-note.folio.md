@@ -14,9 +14,9 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Phone: feeling better.
-
-metformin: resumed today (eating and drinking normally)
+Phone f/u. Pt feeling better, vomiting resolved.
+Eating and drinking normally, so metformin resumed today.
+Call if symptoms return.
 
 ```json payload
 {

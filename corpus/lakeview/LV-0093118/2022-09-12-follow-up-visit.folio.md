@@ -14,12 +14,14 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 131/80, HR 72, weight 77.9 kg at 2022-09-12 15:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2024-11-26</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 65 (today)
-- K 3.8 (today)
-- UACR 787 mg/g (today)
+<ref id="dx_ckd">CKD G2 A3</ref>, diabetic. Feels well. No foamy-urine worry, no edema.
+
+<ref id="bp_sys">BP 131/80, HR 72, weight 77.9 kg</ref>. Weight down 2.3 kg since May.
+
+eGFR 65, K 3.8, UACR 787 mg/g. Filtration flat, albuminuria higher than before.
+Ongoing <ref id="dx_dm">type 2 diabetes (2012)</ref> is the cause.
+
+Return in 5 months with repeat labs.
 
 ```json payload
 {

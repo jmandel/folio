@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-semaglutide: started 0.5 mg weekly today (A1c 8.1)
+Chronic care visit. Feels well.
+BP 134/79, pulse 85, wt 188 lb.
+Labs 9/7: eGFR 46, K 4.7, UACR 1106 mg/g, A1c 8.1%.
+A1c 8.1%, so semaglutide started 0.5 mg weekly today.
+RTC 3 mo.
 
 ```json payload
 {

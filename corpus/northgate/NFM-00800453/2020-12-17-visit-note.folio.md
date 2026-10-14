@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. Feels well, no new complaints.
+
+BP 136/80, pulse 84, wt 185 lb.
+
+Labs 12/12: eGFR 42, K 4.7, UACR 269 mg/g. CKD stage 3b reviewed with pt.
+
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. No new complaints.
+BP 139/84, pulse 83, wt 223 lb.
+Labs 12/31/24: eGFR 56, K 4.6, UACR 193 mg/g, A1c 7.4%.
+Chronic kidney disease stage 3a on problem list, discussed with pt. RTC 4 mo.
 
 ```json payload
 {

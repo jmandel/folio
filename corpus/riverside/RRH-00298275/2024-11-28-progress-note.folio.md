@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 11/28 06:06 (local time): Sodium 137 mmol/L, Potassium 4.4 mmol/L, Chloride 105 mmol/L, Bicarbonate (total CO2) 21 mmol/L (L), Anion gap 11 mmol/L, Urea nitrogen 16 mg/dL, Creatinine 1.96 mg/dL (H), eGFR (CKD-EPI 2021) 42 mL/min/1.73m2 (L), Glucose 152 mg/dL (H)</ref>
+**Interval events.** Normal saline at 75 mL/h, running since 11/26, was stopped at 01:16 today. She slept reasonably and reports her cough is a little looser. Allergies: NKDA.
+
+**Exam.** Vitals at 07:24: BP 138/83, HR 108, RR 19, T 98.4 F, SpO2 96%. She is sitting up in a chair. Breath sounds remain coarse at the right base. The heart rate is faster than yesterday and will be rechecked.
+
+**Results.** The <ref id="bmp">basic metabolic panel at 06:06 on 11/28 shows sodium 137, potassium 4.4, chloride 105, bicarbonate 21 (low), anion gap 11, urea nitrogen 16, creatinine 1.96 (high), eGFR 42 and glucose 152 (high)</ref>. The anion gap has closed and the urea nitrogen has normalized since admission, while creatinine is improving but still above normal.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, still active. Oxygen saturation is 96%.
+2. Kidney function and acid-base picture improving after fluids; repeat the panel in the morning.
+3. Metformin and empagliflozin remain held. Dulaglutide, insulin glargine, lisinopril, amlodipine, atorvastatin and her other daily home medication continue.
 
 ```json payload
 {

@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 50, UACR 462 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with type 2 diabetes and essential hypertension. <ref id="referral">I am referring for CKD evaluation and management: eGFR 50, UACR 462 mg/g.</ref> Problem list carries chronic kidney disease stage 3a.
+
+Albuminuria has persisted despite ongoing care here, and I would appreciate your input on further workup and management of his kidney disease. Please send recommendations to our office and we will continue to follow BP and diabetes in primary care.
+
+Thank you,
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

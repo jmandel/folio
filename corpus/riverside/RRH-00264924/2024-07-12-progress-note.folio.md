@@ -16,8 +16,19 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 7/12 06:26 (local time): Sodium 135 mmol/L (L), Potassium 5.8 mmol/L (H), Chloride 99 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 11 mmol/L, Urea nitrogen 33 mg/dL (H), Creatinine 1.53 mg/dL (H), eGFR (CKD-EPI 2021) 54 mL/min/1.73m2 (L), Glucose 101 mg/dL (H)</ref>
+**Interval events.** No overnight events. The patient feels better, with less thirst and no new complaints. Normal saline continues at 125 mL/h.
+
+**Exam.** At 07:17: BP 119/71, HR 105, RR 19, temperature 98.3 F, SpO2 99%. Alert and comfortable. Mucous membranes moist. Lungs clear, abdomen soft.
+
+**Results.** <ref id="bmp">BMP at 06:26: sodium 135, potassium 5.8, chloride 99, bicarbonate 25, anion gap 11, urea nitrogen 33, creatinine 1.53, eGFR 54, glucose 101.</ref> Compared with yesterday's creatinine of 2.02, kidney function is improving. Bicarbonate has normalized, and potassium has come down from 6.7 but is still high.
+
+**Medications.** Lisinopril remains held. Amlodipine, atorvastatin and levothyroxine continue.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, improving on IV fluids. Continue normal saline and repeat the BMP tomorrow morning.
+2. Potassium 5.8, still elevated but better. Recheck with the next panel.
+3. Heart rate is on the fast side at 105 despite fluids; we will keep watching it as volume is restored.
 
 ```json payload
 {

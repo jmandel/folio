@@ -14,7 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 46, UACR 22 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with <ref id="referral">eGFR 46 and UACR 22 mg/g, for CKD evaluation and management</ref>. Chronic kidney disease stage 3a is on the problem list, along with type 2 diabetes and essential hypertension.
+
+Pt is stable and BP was 130/78 today. Please advise on further workup and management of the kidney disease. I'm happy to continue the diabetes and BP care here.
+
+Thank you,
+Teresa Reyes, MD
 
 ```json payload
 {

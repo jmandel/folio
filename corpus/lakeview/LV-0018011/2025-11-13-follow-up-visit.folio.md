@@ -14,11 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 119/80, HR 74, weight 90.3 kg at 2025-11-13 09:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2023-05-10</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2013</ref>
-- eGFR 42 (today)
-- K 4.5 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, diabetic. <ref id="dx_dm">Type 2 diabetes, onset 2013.</ref>
+
+eGFR 42, K 4.5 today. Essentially unchanged from August.
+
+<ref id="bp_sys">BP 119/80, HR 74, weight 90.3 kg.</ref> No complaints.
+
+Continue current plan. Return in 3 months.
 
 ```json payload
 {

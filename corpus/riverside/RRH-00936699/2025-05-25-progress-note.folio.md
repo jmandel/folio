@@ -16,9 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/25 06:09 (local time): Sodium 134 mmol/L (L), Potassium 4.4 mmol/L, Chloride 99 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 11 mmol/L, Urea nitrogen 25 mg/dL (H), Creatinine 1.89 mg/dL (H), eGFR (CKD-EPI 2021) 39 mL/min/1.73m2 (L), Glucose 128 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 17 units daily, started 5/23 07:00, still running (local times)</ref>
+**Interval.** She slept well and has a good appetite. No abdominal pain, vomiting or shortness of breath.
+
+**Exam.** At 07:27: BP 130/78, HR 98, RR 24, T 98.6 F, SpO2 94%. Respiratory rate is a little higher this morning, though she is speaking in full sentences and looks comfortable.
+
+**Results.** <ref id="bmp">The 06:09 panel shows sodium 134, potassium 4.4, chloride 99, bicarbonate 24, anion gap 11, urea nitrogen 25, creatinine 1.89 (eGFR 39), glucose 128.</ref>
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>: bicarbonate has normalized at 24 and the anion gap is 11. Continue <ref id="sc_glargine">insulin glargine 17 units daily</ref>, started 5/23.
+2. Sodium 134, mildly low; she is eating and drinking, so we will recheck.
+3. Creatinine 1.89, stable. Empagliflozin and metformin remain held; glipizide, home glargine and atorvastatin are listed as continued.
 
 ```json payload
 {

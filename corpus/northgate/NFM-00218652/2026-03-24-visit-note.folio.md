@@ -14,13 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Dry cough on lisinopril, so lisinopril stopped today (dry cough). Lisinopril intolerance: dry cough, added to allergy list.
 
-lisinopril: stopped today (dry cough)
+Losartan started 50 mg daily today (ACE inhibitor cough).
 
-losartan: started 50 mg daily today (ACE inhibitor cough)
+BP 127/78, pulse 73, wt 207 lb.
 
-lisinopril intolerance: dry cough
+Labs 3/19: A1c 7.7%, eGFR 59, K 4.6, LDL 93 mg/dL.
+
+RTC 3 mo.
 
 ```json payload
 {

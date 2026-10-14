@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
+BP 143/81, pulse 68, wt 219 lb.
+eGFR 55 today. First K came back 6.4 but sample hemolyzed; repeat K 4.6.
+Pt told the high K was a lab artifact.
+RTC 3 mo.
 
 ```json payload
 {

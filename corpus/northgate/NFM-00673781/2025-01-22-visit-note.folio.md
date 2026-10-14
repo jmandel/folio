@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+DM f/u. Feels OK, no new symptoms.
+BP 148/91, repeat 140/88. Pulse 75, wt 212 lb.
+Labs today: eGFR 64, K 4.3, A1c 8.1%, LDL 163 mg/dL.
+A1c 8.1: started insulin glargine 10 units at bedtime today. BP above goal: started chlorthalidone 12.5 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

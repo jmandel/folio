@@ -16,8 +16,18 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 4/1 06:00 (local time): Sodium 135 mmol/L (L), Potassium 3.9 mmol/L, Chloride 100 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 12 mmol/L, Urea nitrogen 22 mg/dL, Creatinine 1.71 mg/dL (H), eGFR (CKD-EPI 2021) 44 mL/min/1.73m2 (L), Glucose 116 mg/dL (H)</ref>
+**Interval.** Hospital day 3. The intravenous saline was stopped yesterday at 17:57. The patient was seen this morning.
+
+**Exam.** Vitals at 07:25: BP 139/83, HR 110, RR 21, temperature 98.8 F, SpO2 97%. The heart rate remains on the fast side, and we will keep watching it. The respiratory rate has come down from yesterday.
+
+**Results.** The <ref id="bmp">basic metabolic panel on the 06:00 draw shows sodium 135 (low), potassium 3.9, chloride 100, bicarbonate 23, anion gap 12, urea nitrogen 22, creatinine 1.71 (high), eGFR 44 (low) and glucose 116 (high)</ref>. Creatinine continues to fall, from 1.92 yesterday, now that the saline is off, and urea nitrogen is back in the normal range.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, active. Continue current treatment and monitor vital signs.
+2. Kidney function continues to improve off intravenous fluids. Repeat the panel in the morning.
+3. Hypertension: BP 139/83. Continue losartan, chlorthalidone and amlodipine at the home doses.
+4. No known drug allergies.
 
 ```json payload
 {

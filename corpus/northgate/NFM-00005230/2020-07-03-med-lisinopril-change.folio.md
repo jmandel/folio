@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">change lisinopril: BP above goal.</ref>
+<ref id="med_1">BP above goal. Lisinopril changed to 20 mg daily.</ref> Pt informed.
 
 ```json payload
 {

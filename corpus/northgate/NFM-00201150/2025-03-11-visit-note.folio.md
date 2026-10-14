@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. No new symptoms.
+BP 131/88, pulse 63, wt 183 lb.
+Labs today: eGFR 50, K 4.2, A1c 7.6%, LDL 166 mg/dL.
+Reviewed results with pt.
+RTC 4 mo.
 
 ```json payload
 {

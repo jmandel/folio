@@ -14,7 +14,8 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start chlorthalidone: BP above goal.</ref>
+<ref id="med_1">BP above goal today. Start chlorthalidone 12.5 mg daily.</ref>
+Pt informed of the plan.
 
 ```json payload
 {

@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 42)
-
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
+DM f/u. BP 130/78, pulse 64, wt 134 lb.
+Labs 8/18: eGFR 40, K 4.5, UACR 756 mg/g, A1c 8.1%.
+Metformin dose changed to 500 mg twice daily today (eGFR 42). Insulin glargine started, 10 units at bedtime.
+Reviewed dosing with pt.
+RTC 3 mo.
 
 ```json payload
 {

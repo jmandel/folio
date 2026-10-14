@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. Doing well, no new symptoms.
+
+BP 117/68, pulse 62, wt 151 lb.
+Labs 11/7: eGFR 76, LDL 130 mg/dL. Went over results with pt.
+Diet and exercise discussed. RTC 6 mo.
 
 ```json payload
 {

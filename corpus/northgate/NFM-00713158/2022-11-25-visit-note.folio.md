@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-insulin glargine: started 10 units at bedtime today (A1c 9.1)
+New pt, establishing care. Hx reviewed with pt.
+BP 128/75, pulse 80, wt 199 lb.
+Labs today: eGFR 51, K 4.3, A1c 9.1%, LDL 126 mg/dL.
+Insulin glargine started, 10 units at bedtime today (A1c 9.1).
+Pt will call with fasting numbers. RTC 3 mo.
 
 ```json payload
 {

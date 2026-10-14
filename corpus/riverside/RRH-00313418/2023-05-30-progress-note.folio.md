@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/30 06:12 (local time): Sodium 136 mmol/L, Potassium 5.6 mmol/L (H), Chloride 103 mmol/L, Bicarbonate (total CO2) 26 mmol/L, Anion gap 7 mmol/L, Urea nitrogen 24 mg/dL (H), Creatinine 1.37 mg/dL (H), eGFR (CKD-EPI 2021) 41 mL/min/1.73m2 (L), Glucose 151 mg/dL (H)</ref>
+**Interval.** No further diarrhea overnight, eating and drinking well. Saline has been off since 5/29 at 04:47. No known drug allergies. Lisinopril and chlorthalidone remain held.
+
+**Exam.** Vitals at 07:13: BP 139/83, HR 82, RR 18, T 98.5 F, SpO2 99%. Comfortable, mucous membranes moist, lungs clear.
+
+**Results.** The <ref id="bmp">06:12 panel shows sodium 136, potassium 5.6, chloride 103, bicarbonate 26, anion gap 7, urea nitrogen 24, creatinine 1.37, eGFR 41 and glucose 151</ref>. Potassium is down from 6.2 yesterday and anion gap has normalized.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref> continues to improve off intravenous fluids: creatinine 1.37, down from 1.63 yesterday. Continue to hold lisinopril and chlorthalidone while the kidneys recover.
+2. Potassium 5.6, still mildly elevated but improving. Repeat BMP tomorrow morning.
+3. Blood pressure is acceptable off both home agents.
 
 ```json payload
 {

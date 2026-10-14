@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-semaglutide: started 0.5 mg weekly today (A1c 8.5)
+Annual exam. Doing OK overall.
+BP 133/82, pulse 64, wt 203 lb.
+Labs 4/13: eGFR 69, K 4.3, UACR 17 mg/g, A1c 8.5%.
+A1c up. Semaglutide started 0.5 mg weekly today (A1c 8.5). Reviewed injection technique.
+RTC 3 mo.
 
 ```json payload
 {

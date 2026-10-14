@@ -17,7 +17,25 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
+**Admission diagnosis:** <ref id="dx_pneumonia">Community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient came to the hospital with pneumonia and an elevated creatinine, and was admitted to the hospitalist service. They improved during the stay, and the pneumonia is considered resolved at discharge. Kidney function improved over the stay, with creatinine on the day of discharge much lower than on arrival.
+
+**Condition at discharge.** Improved. Vitals at 08:00: BP 121/73, HR 108, RR 18, temperature 99 F, SpO2 98%. The patient is breathing comfortably and is ready to go home.
+
+**Results at discharge.** The basic metabolic panel drawn on 4/2 at 06:25 showed sodium 139, potassium 3.9, chloride 101, bicarbonate 22, anion gap 16, urea nitrogen 35 (high), creatinine 1.50 (high), eGFR 52 (low) and glucose 152 (high).
+
+**Allergies:** No known drug allergies.
+
+**Discharge medications**
+
+- Losartan 100 mg tablet, 1 tablet by mouth daily: continue
+- Chlorthalidone 25 mg tablet, 12.5 mg (one half tablet) by mouth daily: continue
+- Amlodipine 5 mg tablet, 1 tablet by mouth daily: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to recheck symptoms and the chest exam.
+
+**Instructions.** The patient should return sooner for worsening cough, shortness of breath or any new concern.
 
 ```json payload
 {

@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP f/u. BP 156/92, repeat 150/90. Pulse 85, wt 199 lb.
+eGFR 65 today, K 4.8. LDL 106 mg/dL.
+Still above goal. Chlorthalidone started 12.5 mg daily today.
+Will recheck labs and BP at next visit.
 
 ```json payload
 {

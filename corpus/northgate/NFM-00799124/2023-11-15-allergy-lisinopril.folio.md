@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">lisinopril: dry cough.</ref> Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).
+<ref id="alg_1">Dry cough on lisinopril. Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).</ref>
 
 ```json payload
 {

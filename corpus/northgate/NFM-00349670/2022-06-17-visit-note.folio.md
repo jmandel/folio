@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx of HTN, DM2, hyperlipidemia and obesity per pt, all added to the problem list.
+BP 125/75, pulse 80, wt 175 lb.
+Labs today: eGFR 55, K 4.5, UACR 380 mg/g, A1c 7.3%, LDL 72 mg/dL.
+Albuminuria with reduced eGFR, referred to nephrology.
+RTC 3 mo.
 
 ```json payload
 {

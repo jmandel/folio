@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+DM f/u. Labs from 3/28 reviewed with pt: A1c 7.2%, eGFR 50, K 4.2, UACR 15 mg/g, LDL 102.
+BP 143/87, pulse 67, wt 155 lb.
+Started empagliflozin 10 mg daily today for CKD + DM, cardiorenal benefit.
+BP above goal, started chlorthalidone 12.5 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

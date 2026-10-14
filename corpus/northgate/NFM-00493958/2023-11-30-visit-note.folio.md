@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.5)
-
-amlodipine: started 5 mg daily today (BP above goal)
+Chronic care visit. BP 141/82, pulse 72, wt 183 lb.
+Labs today: eGFR 49, K 4.8, A1c 8.5%.
+A1c 8.5, so insulin glargine started 10 units at bedtime today. Pt shown pen use and hypoglycemia signs.
+BP above goal, amlodipine started 5 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

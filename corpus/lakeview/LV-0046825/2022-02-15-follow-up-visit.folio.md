@@ -14,12 +14,12 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 141/80, HR 83, weight 95 kg at 2022-02-15 15:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2020-01-22</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2011-02-21</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2011</ref>
-- eGFR 39 (today)
-- K 4.7 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, diabetic and hypertensive.
+
+<ref id="bp_sys">BP 141/80, HR 83, weight 95 kg</ref>. Feels well, no new symptoms.
+eGFR 39 today, K 4.7 today. eGFR 41 → 39 since September.
+
+Long-standing <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref> remain the drivers. Return in 4 months with labs.
 
 ```json payload
 {

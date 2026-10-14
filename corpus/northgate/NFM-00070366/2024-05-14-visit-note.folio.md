@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u. Feeling well, no new complaints.
+BP 124/74, pulse 80, wt 189 lb.
+eGFR 78 on 5/11, stable.
+No changes today.
+RTC 6 mo.
 
 ```json payload
 {

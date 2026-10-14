@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
+BP 119/65, pulse 67, wt 198 lb.
+Today: eGFR 59, K 4.3, A1c 7.5%.
+CKD stage 3a on problem list, discussed with pt.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,7 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. Doing OK, no chest pain or headaches.
+
+BP 132/73, pulse 81, wt 182 lb.
+Labs 12/25: eGFR 64, K 3.9, UACR 10 mg/g, LDL 126 mg/dL.
+
+Discussed diet and exercise over the holidays. RTC 3 mo.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-amlodipine: started 5 mg daily today (BP above goal)
+Annual exam. No new complaints.
+BP 140/89, repeat 138/85, pulse 77, wt 187 lb.
+Labs 3/18: eGFR 81, K 4.6.
+BP above goal, amlodipine started 5 mg daily today.
+Pt to watch for ankle swelling. RTC 3 mo.
 
 ```json payload
 {

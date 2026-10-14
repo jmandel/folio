@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
+BP 148/87, repeat 146/85, pulse 87, wt 201 lb. Labs today: eGFR 63, K 4.7, A1c 8.1%, LDL 89 mg/dL.
 
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+Metformin dose changed to 1000 mg twice daily today (A1c 8.1). Chlorthalidone started 12.5 mg daily today, BP above goal.
+
+RTC 4 mo.
 
 ```json payload
 {

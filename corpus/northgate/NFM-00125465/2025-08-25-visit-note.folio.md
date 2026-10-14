@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Doing OK, no new complaints.
 
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP 142/84, repeat 134/84. Pulse 85, wt 245 lb.
+
+eGFR 76, K 4.2 today.
+
+Chlorthalidone started 12.5 mg daily today, BP above goal. RTC 3 mo.
 
 ```json payload
 {

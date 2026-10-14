@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 146/90, repeat 144/88, pulse 86, wt 212 lb.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.6)
+Labs 11/25: eGFR 42, K 4.8, UACR 240 mg/g, A1c 8.6%.
 
-losartan: dose changed to 100 mg daily today (BP above goal)
+Started insulin glargine 10 units at bedtime today (A1c 8.6). Losartan changed to 100 mg daily, BP above goal. Hypoglycemia precautions reviewed.
+
+RTC 3 mo, BMP then.
 
 ```json payload
 {

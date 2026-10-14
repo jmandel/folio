@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No complaints.
+BP 145/86, repeat 142/85, pulse 76, wt 178 lb.
+Labs today: eGFR 43, K 4.7, A1c 7.8%, LDL 61 mg/dL.
+BP stays above goal on recheck. Will follow at next visit.
+RTC 4 mo.
 
 ```json payload
 {

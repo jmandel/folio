@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 121/69, pulse 77, wt 166 lb.
+Labs 6/9: eGFR 55, K 4.6, UACR 10 mg/g.
+BP at goal. eGFR a bit lower than last check, will repeat at next visit.
+RTC 6 mo.
 
 ```json payload
 {

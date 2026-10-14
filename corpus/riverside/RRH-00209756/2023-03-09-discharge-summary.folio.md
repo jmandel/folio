@@ -17,10 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**Hospital course.** The patient came in with high potassium and abnormal kidney function. <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake</ref>. They were treated with IV fluids and monitored on telemetry. Hyperkalemia resolved. <ref id="dx_aki">Acute kidney injury resolved</ref> to near baseline with fluids and avoiding anti-inflammatory drugs. At the first visit, vitals were BP 128/77, HR 103, RR 24, T 98.7 F, SpO2 94%.
+
+**Results at discharge.** BMP on 3/9 at 06:30: sodium 135, potassium 5.3, chloride 99, bicarbonate 26, anion gap 10, urea nitrogen 27, creatinine 1.54, eGFR 41, glucose 151.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_losartan">Losartan 50 mg daily remains on hold; the primary care physician will decide on restarting after a repeat BMP</ref>.
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>.
+- Glipizide 5 mg daily: continue.
+- Atorvastatin 40 mg nightly: continue.
+
+**Instructions.** Do not take naproxen or similar over-the-counter anti-inflammatory medicines. Drink fluids regularly. Return for weakness, palpitations, very little urine or vomiting that will not stop.
+
+**Follow-up.** Northgate Family Medicine within 1 week for a repeat BMP and a decision on restarting the held blood pressure medicines.
 
 ```json payload
 {

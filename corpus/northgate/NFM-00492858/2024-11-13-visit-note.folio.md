@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-Patient ran out of losartan about 3 weeks ago and has not been taking it.
+DM f/u. Patient ran out of losartan about 3 weeks ago and has not been taking it.
+BP 148/89, repeat 146/89, pulse 78, wt 186 lb.
+Labs 11/9: eGFR 81, K 4.8, A1c 7.2%, LDL 127 mg/dL.
+BP likely up from the missed doses. Pt to refill, will recheck at next visit.
+RTC 3 mo.
 
 ```json payload
 {

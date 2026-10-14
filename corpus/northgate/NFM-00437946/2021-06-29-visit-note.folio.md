@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-semaglutide: started 0.5 mg weekly today (A1c 8.3)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. BP 149/93, pulse 82, wt 230 lb.
+eGFR 60, K 4.4, A1c 8.3% today. CKD stage 3a.
+Semaglutide started 0.5 mg weekly today (A1c 8.3).
+Lisinopril dose changed to 40 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

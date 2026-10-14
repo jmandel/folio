@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">hold lisinopril: K 6.1 confirmed on repeat.</ref>
+<ref id="med_1">K 6.1 confirmed on repeat. Lisinopril held today.</ref> Review 3/24.
 
 ```json payload
 {

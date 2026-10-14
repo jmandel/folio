@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. Feels well.
+
+BP 111/67, pulse 63, wt 153 lb.
+Labs today: eGFR 76, K 4.6, LDL 104 mg/dL. Reviewed with pt.
+Diet and exercise reinforced. RTC 6 mo.
 
 ```json payload
 {

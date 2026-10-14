@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. BP 133/78, pulse 66, wt 209 lb.
 
-metformin: dose changed to 500 mg twice daily today (eGFR 42)
+Labs 8/4: eGFR 44, K 4.7, A1c 9.2%.
 
-dapagliflozin: started 10 mg daily today (A1c 9.2, CKD)
+Metformin changed to 500 mg BID today given eGFR 42. Started dapagliflozin 10 mg daily (A1c 9.2, CKD).
+
+Records requested. RTC 3 mo.
 
 ```json payload
 {

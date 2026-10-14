@@ -15,8 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam.
-
-amlodipine: started 5 mg daily today (BP above goal)
+BP 147/96, pulse 76, wt 202 lb.
+Today: eGFR 89, UACR 115 mg/g, A1c 6.5%, LDL 149 mg/dL. K 5.9 on first draw but hemolyzed; repeat K 4.4.
+Amlodipine started 5 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

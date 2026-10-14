@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints, exam unremarkable.
 
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+BP 143/92, pulse 79, wt 138 lb.
+
+BP above goal, lisinopril changed to 40 mg daily today.
+
+RTC 3 mo for BP check.
 
 ```json payload
 {

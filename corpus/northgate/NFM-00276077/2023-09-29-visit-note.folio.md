@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
+Annual exam. Feels well.
+BP 116/77, pulse 83, wt 189 lb.
+eGFR 57, K 4.6, A1c 6.4% today. CKD 3a on problem list.
+A1c above goal, empagliflozin started 10 mg daily today.
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
-
-empagliflozin: started 10 mg daily today (A1c above goal)
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
+DM f/u. Feels well, no complaints.
+BP 121/73, pulse 83, wt 203 lb. eGFR 70, K 4.2, A1c 8.2% today.
+A1c above goal. Semaglutide started 0.5 mg weekly today (A1c 8.2).
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
-
-semaglutide: started 0.5 mg weekly today (A1c 8.2)
+RTC 3 mo.
 
 ```json payload
 {

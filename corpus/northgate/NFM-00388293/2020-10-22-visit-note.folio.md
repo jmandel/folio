@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
+BP 135/81, pulse 77, wt 164 lb.
+10/20 labs: eGFR 72, K 4.2, A1c 7.5%.
+A1c up a bit from last. Diet and activity discussed.
+RTC 3 mo.
 
 ```json payload
 {

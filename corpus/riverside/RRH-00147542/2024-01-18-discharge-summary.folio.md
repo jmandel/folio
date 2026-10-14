@@ -17,9 +17,30 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_spironolactone">home med spironolactone 25 mg tablet, 25 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Diagnosis.** <ref id="dx_pneumonia">Community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted with cough, breathlessness and an elevated white count, and was treated with intravenous ceftriaxone and normal saline. Admission chemistry showed a low sodium of 131 and creatinine of 1.80. With fluids and treatment the cough eased and the chemistry improved steadily. Metformin, dapagliflozin and spironolactone were held during the acute illness and are now resumed as listed below.
+
+**Condition at discharge.** Improved. Vitals at 09:45: BP 136/82, HR 104, RR 23, T 98.5 F, SpO2 99%. The patient is eating and drinking and is comfortable.
+
+**Discharge labs.** On the 06:12 panel: sodium 137, potassium 3.9, chloride 105, bicarbonate 22, anion gap 10, urea nitrogen 20, creatinine 1.32 (H), eGFR 59 (L), glucose 150 (H). Creatinine is back near baseline.
+
+**Allergies:** NKDA.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
+- Dapagliflozin 10 mg daily: continue
+- Glipizide 5 mg daily: continue
+- Insulin glargine 10 units nightly: continue
+- Losartan 100 mg daily: continue
+- Hydrochlorothiazide 25 mg daily: continue
+- Carvedilol 12.5 mg twice daily: continue
+- <ref id="med_spironolactone">Spironolactone 25 mg daily: continue</ref>
+- Furosemide 40 mg daily: continue
+- Atorvastatin 40 mg nightly: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. The patient was advised to return for worsening breathlessness or fever.
 
 ```json payload
 {

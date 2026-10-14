@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Phone: feeling better.
+Phone call. Pt feeling better, vomiting resolved.
 
-lisinopril: resumed today (eating and drinking normally)
+Lisinopril: resumed today (eating and drinking normally).
+
+Call if symptoms return.
 
 ```json payload
 {

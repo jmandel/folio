@@ -15,8 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Chronic care visit.
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP 141/79, repeat 136/78, pulse 82, wt 214 lb.
+Labs 11/5: eGFR 96, K 4.3, A1c 7.8%.
+BP above goal, chlorthalidone 12.5 mg daily started today.
+RTC 3 mo, BMP then.
 
 ```json payload
 {

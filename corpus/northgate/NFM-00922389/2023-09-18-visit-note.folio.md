@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. Tolerating bedtime insulin, no lows reported.
+
+BP 141/75, pulse 83, wt 189 lb. Labs today: eGFR 52, K 4.9, A1c 7.3%.
+
+K a bit higher than usual, will watch. No changes today.
+
+RTC 3-4 mo.
 
 ```json payload
 {

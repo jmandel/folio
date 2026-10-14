@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No new symptoms.
+BP 150/81, repeat 145/81, pulse 63, wt 187 lb.
+Labs 11/23: eGFR 77, K 4.5.
+BP above goal today. Continue home BP log.
+RTC 3 mo.
 
 ```json payload
 {

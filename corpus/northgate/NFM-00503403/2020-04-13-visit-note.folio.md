@@ -14,15 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-dapagliflozin: started 10 mg daily today (A1c 8.6, CKD)
-
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+Annual exam. Pt reports a dry cough that bothers him at night.
+BP 132/76, pulse 72, wt 148 lb.
+eGFR 43, K 4.5, UACR 559 mg/g, A1c 8.6%, LDL 106 mg/dL today.
+Lisinopril stopped today (dry cough). Lisinopril intolerance: dry cough.
+Losartan started 50 mg daily today (ACE inhibitor cough).
+Dapagliflozin started 10 mg daily today (A1c 8.6, CKD).
+RTC 3 mo.
 
 ```json payload
 {

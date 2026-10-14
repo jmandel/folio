@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-lisinopril: dose changed to 20 mg daily today (BP above goal)
+BP f/u. BP 148/89, repeat 145/88. Pulse 75, wt 209 lb.
+eGFR 81, K 4.7 today.
+BP above goal, so lisinopril changed to 20 mg daily today.
+Pt agrees with plan.
+RTC 3 mo.
 
 ```json payload
 {

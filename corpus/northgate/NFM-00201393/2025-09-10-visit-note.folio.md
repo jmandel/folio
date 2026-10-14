@@ -14,9 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Doing OK, no new concerns.
 
-empagliflozin: started 10 mg daily today (A1c 8.2)
+BP 102/63, pulse 86, wt 186 lb.
+
+Labs today: eGFR 78, K 4, UACR 188 mg/g, A1c 8.2%, LDL 99.
+
+Empagliflozin started 10 mg daily today (A1c 8.2). Reviewed what to watch for with pt.
+
+RTC 3 mo.
 
 ```json payload
 {

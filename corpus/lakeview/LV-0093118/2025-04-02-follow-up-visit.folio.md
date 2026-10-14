@@ -14,11 +14,14 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 129/80, HR 81, weight 79 kg at 2025-04-02 15:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2024-11-26</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 52 (today)
-- K 4.4 (today)
+<ref id="dx_ckd">CKD G3a A3</ref>, diabetic. No new complaints. Lungs clear, no edema.
+
+<ref id="bp_sys">BP 129/80, HR 81, weight 79 kg</ref>.
+
+eGFR 52, K 4.4. Gradual drop, 55 → 52 since December. Potassium comfortable.
+<ref id="dx_dm">Type 2 diabetes</ref> (2012) is the underlying cause.
+
+Return in 3 months with labs.
 
 ```json payload
 {

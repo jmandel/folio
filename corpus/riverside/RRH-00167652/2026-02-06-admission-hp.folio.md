@@ -16,12 +16,20 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient has type 2 diabetes and hypertension and presented to the ED with nausea, fatigue and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref> Glucose in the ED was only 173, with a bicarbonate of 11 and anion gap of 25 on the 21:30 panel (sodium 133, potassium 4.7, creatinine 1.40, urea nitrogen 33).
+
+**Allergies:** no known drug allergies.
+
+**Exam.** At 02:43: BP 104/62, HR 89, RR 20, T 98.8 F, SpO2 97%. Dry mucous membranes, breathing comfortably now. Abdomen soft and nontender.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol (started 22:15) with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Repeat BMP every 4 hours. <ref id="med_empagliflozin">Empagliflozin is held.</ref>
+2. Diabetes: <ref id="med_metformin">hold metformin</ref> while acidotic and NPO. Glipizide 5 mg daily is continued as listed.
+3. Volume depletion: <ref id="med_chlorthalidone">hold chlorthalidone</ref> for volume depletion, to resume when able.
+4. Hypertension: BP is soft-normal. <ref id="med_lisinopril">Lisinopril 40 mg daily continues</ref>, as does amlodipine 5 mg daily. Watch potassium and creatinine.
 
 ```json payload
 {

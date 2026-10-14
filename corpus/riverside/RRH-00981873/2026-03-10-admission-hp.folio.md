@@ -16,9 +16,20 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** community-acquired pneumonia.
+
+**History of present illness.** The patient was seen in the ED last evening with cough and shortness of breath and was found to have pneumonia on imaging. Intake has been poor over the past several days. Ceftriaxone was started in the ED, along with saline at 75 mL/h from 21:24. The ED labs at 20:49 showed sodium 137, potassium 4.5, bicarbonate 18 (L), anion gap 21 (H), urea nitrogen 48 (H), creatinine 2.66 (H), eGFR 31 (L), and glucose 183 (H).
+
+**Allergies:** NKDA.
+
+**Exam.** Vitals at 02:38: BP 110/66, HR 99, RR 17, T 98.8 F, SpO2 95%. Comfortable at rest, speaking in full sentences. Crackles at the base on auscultation, heart regular, abdomen soft.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>. Continue ceftriaxone and the saline infusion at 75 mL/h. Monitor oxygen saturation and repeat the basic metabolic panel in the morning.
+2. <ref id="med_metformin">Hold metformin</ref> during the acute illness, with creatinine 2.66 and an anion gap of 21.
+3. <ref id="med_dapagliflozin">Hold dapagliflozin</ref> while the patient is not eating.
+4. Other home medications continue as listed: glipizide 5 mg daily, semaglutide 0.5 mg weekly, insulin glargine 10 units nightly, lisinopril 40 mg daily, chlorthalidone 12.5 mg daily, amlodipine 5 mg daily, and atorvastatin 40 mg nightly.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.4)
+Chronic care visit. Pt here for routine f/u.
+BP 113/64, pulse 74, wt 155 lb.
+Labs today: eGFR 45, K 4.2, A1c 8.4%.
+Insulin glargine started 10 units at bedtime today (A1c 8.4). Reviewed use with pt.
+RTC 3 mo.
 
 ```json payload
 {

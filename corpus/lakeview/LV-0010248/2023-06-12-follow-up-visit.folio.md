@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 139/80, HR 81, weight 85.6 kg at 2023-06-12 15:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2020-12-12</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2018</ref>
-- eGFR 38 (today)
-- K 5.1 (today)
-- UACR 254 mg/g (today)
+Follow-up. No new symptoms, no swelling.
+
+<ref id="dx_ckd">CKD G3b A2</ref>, albuminuria back in the A2 range. eGFR 38 today, K 5.1 today, UACR 254 mg/g today.
+
+<ref id="bp_sys">BP 139/80, HR 81, weight 85.6 kg</ref>. <ref id="dx_htn">Essential hypertension</ref> near goal.
+
+Potassium slightly high; repeat at next draw. Return in 4 months.
 
 ```json payload
 {

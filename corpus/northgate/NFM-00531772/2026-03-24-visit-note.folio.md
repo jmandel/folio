@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-metformin: stopped today (eGFR 30)
+Diabetes f/u. BP 129/78, pulse 84, wt 219 lb.
+Labs 3/18: eGFR 29, K 4.4, UACR 340 mg/g, A1c 8.2%.
+Metformin stopped today (eGFR 30). Pt understands.
+RTC 3 mo.
 
 ```json payload
 {

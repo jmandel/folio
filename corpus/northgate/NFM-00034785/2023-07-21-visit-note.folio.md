@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 143/90, repeat 141/88. Pulse 64, wt 213 lb.
+eGFR 80, K 4.4 today.
+Kidney function stable. Pt tolerating current regimen.
+Home BP log to be brought to next visit. RTC 3 mo.
 
 ```json payload
 {

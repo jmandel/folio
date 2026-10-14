@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Hypothyroidism.</ref>
+<ref id="prob_1">Hypothyroidism, onset 3/2018 per pt. Added at first visit.</ref>
 
 ```json payload
 {

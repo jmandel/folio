@@ -14,11 +14,14 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 118/80, HR 72, weight 78.4 kg at 2024-09-12 10:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2024-11-26</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 58 (today)
-- K 4.1 (today)
+<ref id="dx_ckd">CKD G3a A3</ref>, diabetic. eGFR now under 60. No new symptoms.
+
+<ref id="bp_sys">BP 118/80, HR 72, weight 78.4 kg</ref>. Good BP today.
+
+eGFR 58, K 4.1. First reading in the G3a range, down from 60 in May.
+<ref id="dx_dm">Type 2 diabetes (2012)</ref> remains the cause.
+
+Repeat labs with urine albumin in 3 months.
 
 ```json payload
 {

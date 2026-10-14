@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 44)
+Annual exam. Feels well.
+BP 126/71, pulse 72, wt 224 lb.
+Labs 12/14: eGFR 42, K 4.8, UACR 23 mg/g, A1c 8.5%.
+eGFR 44, metformin dose changed to 500 mg twice daily today.
+RTC 3 mo.
 
 ```json payload
 {

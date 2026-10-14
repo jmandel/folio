@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 37)
-
-insulin glargine: started 10 units at bedtime today (A1c 8.4)
+New pt, establishing care. BP 118/65, pulse 70, wt 220 lb.
+Labs today: eGFR 37, K 5, UACR 187 mg/g, A1c 8.5%, LDL 185 mg/dL.
+Metformin dose changed to 500 mg twice daily today (eGFR 37).
+Insulin glargine started 10 units at bedtime today (A1c 8.4).
+Reviewed results with pt. RTC 3 mo.
 
 ```json payload
 {

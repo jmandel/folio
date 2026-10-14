@@ -17,11 +17,23 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref>
+**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** She presented with weakness, nausea and shortness of breath and was found to be in ketoacidosis with a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> She was treated with an insulin infusion and dextrose-containing fluids, then moved to subcutaneous basal insulin. <ref id="dx_pancreatitis">Acute pancreatitis was ruled out</ref> with a normal lipase of 26. Her symptoms resolved and she is eating normally.
+
+**Condition at discharge.** On the day of discharge: BP 131/79, HR 99, RR 17, T 98.4 F, SpO2 95%. The 5/26 06:18 panel showed sodium 135, potassium 4.3, chloride 102, bicarbonate 19, anion gap 14, urea nitrogen 18, creatinine 1.94 (eGFR 38), glucose 183. Kidney function remains below normal and should be rechecked.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by her PCP</ref>
+- <ref id="med_metformin">Metformin 500 mg twice daily with meals: continue</ref>
+- Glipizide 5 mg daily: continue
+- Insulin glargine 10 units subcutaneously nightly: continue
+- Atorvastatin 40 mg nightly: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether empagliflozin should be restarted and to recheck a basic metabolic panel. She was told to return for vomiting, inability to eat or drink, abdominal pain or fast breathing.
 
 ```json payload
 {

@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 133/80, HR 86, weight 72.1 kg at 2026-09-29 11:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2025-01-28</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2016</ref>
-- eGFR 32 (today)
-- K 5 (today)
-- UACR 402 mg/g (today)
+Follow-up. Tired at times, otherwise no new symptoms.
+
+<ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_htn">hypertensive</ref>. eGFR 32 today, down from 38 in May. K 5, UACR 402 mg/g.
+
+<ref id="bp_sys">BP 133/80, HR 86, weight 72.1 kg</ref>.
+
+Decline is faster than before. Repeat labs in 4 weeks and return soon after.
 
 ```json payload
 {

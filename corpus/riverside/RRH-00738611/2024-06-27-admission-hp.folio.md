@@ -16,11 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient was seen in the ED on the evening of 6/26 after several days of watery diarrhea, with weakness and poor intake. <ref id="precipitant">The AKI is attributed to volume depletion from four days of diarrhea while the patient kept taking the ARB and diuretic.</ref> No chest pain, palpitations or fainting. Labs in the ED showed sodium 129, potassium 6.8, bicarbonate 18, urea nitrogen 59, creatinine 1.90 and eGFR 28. Calcium gluconate was given, and saline was started at 21:38 as a 1000 mL bolus followed by 125 mL/h; it is still running.
+
+**Medications at home:** metformin 500 mg twice daily with meals, losartan 100 mg daily, amlodipine 5 mg daily, atorvastatin 20 mg nightly.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** At 02:17: BP 125/75, HR 84, RR 24, T 98.2 F, SpO2 96%. Comfortable, alert, mildly dry mucous membranes. Regular rhythm, clear lungs, soft abdomen.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, prerenal in the setting of diarrhea. Continue saline at 125 mL/h and repeat the BMP in the morning. <ref id="med_losartan">Hold losartan until creatinine is back to baseline.</ref>
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.8 on arrival, treated with calcium gluconate in the ED. Repeat potassium with the next panel and keep the patient on monitoring.
+3. Diabetes: <ref id="med_metformin">hold metformin during the acute illness.</ref>
+4. Hypertension: continue amlodipine.
+5. Continue atorvastatin.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-losartan: dose changed to 100 mg daily today (BP above goal)
+Annual exam. Feels well, no new complaints.
+BP 145/89, pulse 63, wt 216 lb.
+Labs 4/18: eGFR 55, K 3.9, LDL 118 mg/dL.
+BP above goal, losartan dose changed to 100 mg daily today.
+RTC 3 mo for BP check.
 
 ```json payload
 {

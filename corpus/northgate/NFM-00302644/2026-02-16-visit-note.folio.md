@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.1)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. No new complaints.
+BP 151/97, repeat 145/96, pulse 80, wt 208 lb.
+eGFR 77, K 5, A1c 8.1%.
+Dulaglutide started 0.5 mg weekly today (A1c 8.1).
+BP above goal: lisinopril dose changed to 40 mg daily today.
+RTC 4 mo.
 
 ```json payload
 {

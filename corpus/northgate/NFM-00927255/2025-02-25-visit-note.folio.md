@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No headaches or dizziness.
+
+BP 121/70, pulse 72, wt 179 lb.
+
+BP at goal today. Continue current plan.
+
+RTC 3 mo.
 
 ```json payload
 {

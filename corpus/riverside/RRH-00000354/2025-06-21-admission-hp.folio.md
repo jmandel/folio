@@ -16,10 +16,19 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** pneumonia with reduced kidney function.
+
+**History of present illness.** The patient was seen in the ED last evening with several days of cough, fever and tiredness, and was started on IV antibiotics and IV saline. Overnight they are comfortable and breathing without distress. No known drug allergies.
+
+**Exam.** Vitals at 02:26: BP 118/71, HR 79, RR 18, T 99.1 F, SpO2 94%. Comfortable at rest. Crackles at the lung base. Heart regular. Abdomen soft.
+
+**Results.** Basic metabolic panel drawn at 20:08: sodium 133 (L), potassium 4.3, chloride 99, bicarbonate 22, anion gap 12, urea nitrogen 30 (H), creatinine 1.89 (H), eGFR 30 (L), glucose 152 (H).
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>. Continue antibiotics and monitor oxygenation.
+2. Creatinine 1.89 with low sodium. Continue normal saline at 75 mL/h, started 20:24. Repeat the metabolic panel in the morning.
+3. Home medications: <ref id="med_losartan">hold losartan 100 mg daily until creatinine is back to baseline</ref>. <ref id="med_metformin">Hold metformin 1000 mg twice daily during the acute illness</ref>. <ref id="med_dapagliflozin">Hold dapagliflozin 10 mg daily while the patient is not eating</ref>. Each will be resumed when able. Continue dulaglutide 0.5 mg weekly, chlorthalidone 12.5 mg daily and atorvastatin 40 mg nightly.
 
 ```json payload
 {

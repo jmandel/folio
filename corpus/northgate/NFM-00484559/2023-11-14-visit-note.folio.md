@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. Feels well.
+
+BP 127/81, pulse 69, wt 183 lb.
+
+Labs today: eGFR 54, K 4.6, UACR 13 mg/g, A1c 7.7%, LDL 129 mg/dL.
+
+Reviewed with pt. RTC 6 mo.
 
 ```json payload
 {

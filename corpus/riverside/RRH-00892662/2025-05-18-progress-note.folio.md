@@ -16,8 +16,18 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/18 06:05 (local time): Sodium 139 mmol/L, Potassium 5.0 mmol/L, Chloride 102 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 13 mmol/L, Urea nitrogen 17 mg/dL, Creatinine 1.23 mg/dL (H), eGFR (CKD-EPI 2021) 50 mL/min/1.73m2 (L), Glucose 140 mg/dL (H)</ref>
+**Interval history.** Feels much better and is eating and drinking. Saline was stopped at 18:10 yesterday. No new complaints overnight.
+
+**Exam.** Vitals at 07:35: BP 119/71, HR 82, RR 23, T 98.9 F, SpO2 95%. Heart rate has settled. Lungs clear, mucous membranes moist.
+
+**Results.** The 06:05 panel showed <ref id="bmp">sodium 139, potassium 5.0, chloride 102, bicarbonate 24, urea nitrogen 17, creatinine 1.23, eGFR 50, glucose 140</ref>.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref> continues to improve off IV fluids: creatinine 1.23, down from 1.55 yesterday. Encourage oral fluids and repeat the BMP in the morning. Lisinopril remains on hold.
+2. Potassium is 5.0, down from 5.5. Recheck with the next panel.
+3. Sodium is normal at 139.
+4. Continue rosuvastatin 20 mg nightly.
 
 ```json payload
 {

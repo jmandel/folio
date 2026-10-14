@@ -14,13 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 135/80, HR 75, weight 89.3 kg at 2023-08-07 12:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A1), onset 2023-12-29</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2015-09</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2013-10</ref>
-- <ref id="dx_dka_hx">Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, onset 2024-11-27</ref>
-- eGFR 42 (today)
-- K 4.6 (today)
+Follow-up for <ref id="dx_ckd">CKD G3b A1</ref>, <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>.
+
+<ref id="bp_sys">BP 135/80, HR 75, weight 89.3 kg.</ref> Feels well.
+
+eGFR 42, K 4.6 today. Kidney function stable.
+
+Remains off SGLT2 inhibitors given the <ref id="dx_dka_hx">earlier euglycemic DKA</ref>. Return in 4 months.
 
 ```json payload
 {

@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Feels well.
+BP 127/88, pulse 86, wt 203 lb.
+Today: eGFR 68, K 4.4, UACR 374 mg/g, A1c 7.7%.
+UACR higher than last check. Discussed results with pt.
+RTC 3 mo.
 
 ```json payload
 {

@@ -16,9 +16,22 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient was sent up from the ED with abnormal labs after several days of loose stools. They have felt weak and thirsty, with little appetite, and have kept up with their usual home medicines throughout. <ref id="precipitant">The AKI is attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> No known drug allergies.
+
+**Home medications.** Atorvastatin 40 mg nightly, to be continued.
+
+**Exam.** Vitals at 19:17: BP 131/79, HR 105, RR 16, T 98.1 F, SpO2 96%. Mildly tachycardic. The patient looks somewhat dry. No respiratory distress.
+
+**Results.** The basic metabolic panel drawn at 15:52 showed sodium 133, potassium 6.3, chloride 100, bicarbonate 16, anion gap 17, urea nitrogen 59, creatinine 2.08 (eGFR 30) and glucose 129. Normal saline was started in the ED at 16:10, a 1000 mL bolus followed by 125 mL/h, and it is still running.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, prerenal from volume loss. Continue normal saline at 125 mL/h, watch urine output, and repeat the BMP in the morning. Avoid nephrotoxins.
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.3 on arrival and treated in the ED. Recheck the potassium with the morning labs and keep the patient on telemetry.
+3. Mild anion gap acidosis with bicarbonate 16, expected to improve with fluids and recovering kidney function.
+4. Hyperlipidemia: continue atorvastatin 40 mg nightly.
 
 ```json payload
 {

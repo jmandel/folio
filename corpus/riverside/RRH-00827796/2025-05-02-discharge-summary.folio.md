@@ -17,12 +17,20 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref>
+**Hospital course.** The patient was admitted with <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, which has resolved. <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor</ref>. Treatment was an insulin infusion with dextrose-containing fluids, then transition to subcutaneous insulin. <ref id="dx_pancreatitis">Acute pancreatitis was ruled out</ref>, with a normal lipase of 41 and resolution of the abdominal discomfort.
+
+**Condition at discharge.** Vitals at 09:45: BP 129/77, HR 81, RR 20, temperature 98.1 F, SpO2 98%. On the 5/2 06:15 panel sodium was 137, potassium 4.0, chloride 103, bicarbonate 22, anion gap 12, urea nitrogen 18, creatinine 1.76 (H), eGFR 43 (L) and glucose 164 (H). The patient is eating and walking comfortably.
+
+**Allergies:** lisinopril (cough).
+
+**Medications at discharge**
+
+- Empagliflozin 10 mg tablet, 1 tablet by mouth daily: <ref id="med_empagliflozin">held; do not resume until reviewed by the PCP</ref>.
+- Metformin 1000 mg tablet, 1 tablet by mouth twice daily with meals: <ref id="med_metformin">continue</ref>.
+- Losartan 50 mg tablet, 1 tablet by mouth daily: continue.
+- Hydrochlorothiazide 25 mg tablet, 1 tablet by mouth daily: <ref id="med_hydrochlorothiazide">continue</ref>.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {

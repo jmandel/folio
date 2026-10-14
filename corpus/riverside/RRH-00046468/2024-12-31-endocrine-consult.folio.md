@@ -14,12 +14,21 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consultation
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 17 units daily, started 12/31 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consultation:** <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, requested by the hospitalist team.
+
+**History.** The patient was admitted yesterday with ketoacidosis and a glucose of only 210. Beta-hydroxybutyrate on arrival was 6.7 (drawn 12/30 at 16:25). The insulin infusion per DKA protocol ran from 17:05 on 12/30 and was stopped at 09:00 today. No known drug allergies.
+
+**Medications.** Metformin, lisinopril and chlorthalidone are held on the primary team's plan, and amlodipine continues. <ref id="med_empagliflozin">Empagliflozin is held, and I recommend against restarting it at discharge.</ref>
+
+**Assessment and plan**
+
+1. Euglycemic DKA associated with the SGLT2 inhibitor. The gap has closed and the patient is transitioning off the infusion. <ref id="sc_glargine">Insulin glargine 17 units subcutaneously daily was started at 07:00 today</ref> and overlapped with the infusion before it was stopped.
+2. Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. The patient should understand why this happened and what symptoms to bring to attention early. I will review this with the patient before discharge and am glad to see the patient in follow-up.
+
+Thank you for involving us in this patient's care.
 
 ```json payload
 {

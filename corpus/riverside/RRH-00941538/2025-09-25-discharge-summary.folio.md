@@ -17,12 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref>
+**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** The patient was admitted with ketoacidosis and a glucose of only 175. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He was treated with an insulin infusion per DKA protocol and fluids until the acidosis cleared, then transitioned to subcutaneous insulin. Over the stay his breathing and appetite returned to normal.
+
+**Results at discharge.** The panel at 06:07 on 9/25 showed sodium 131, potassium 4.0, chloride 100, bicarbonate 19, anion gap 12, urea nitrogen 17, creatinine 1.42, eGFR 50 and glucose 181. Vitals at 08:45: BP 130/78, HR 90, RR 17, T 98.6 F, SpO2 97%.
+
+**Allergies:** NKDA.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by his primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- <ref id="med_lisinopril">Lisinopril 40 mg daily: continue.</ref>
+- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: continue.</ref>
+- Amlodipine 5 mg daily: continue.
+- Atorvastatin 20 mg nightly: continue.
+
+**Follow-up.** He will see his primary care physician at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {

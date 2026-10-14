@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start dulaglutide: A1c 8.7.</ref>
+<ref id="med_1">A1c 8.7. Dulaglutide started at 0.5 mg weekly today.</ref>
 
 ```json payload
 {

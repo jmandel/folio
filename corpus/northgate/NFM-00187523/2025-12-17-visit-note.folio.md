@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM2 f/u. Feels well, no polyuria or excess thirst.
+BP 133/82, pulse 83, wt 185 lb.
+BP a bit higher than last visit, will recheck next time.
+Diet and exercise reviewed.
+RTC 3 mo.
 
 ```json payload
 {

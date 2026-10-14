@@ -15,8 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Chronic care visit.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.2)
+BP 125/76, pulse 71, wt 199 lb.
+Labs 2/23: eGFR 67, K 4.5, A1c 8.2%, LDL 91 mg/dL.
+Insulin glargine started 10 units at bedtime today (A1c 8.2). Hypoglycemia symptoms reviewed.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,7 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 47, UACR 15 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+Thank you for seeing this patient with type 2 diabetes and CKD stage 3a. <ref id="referral">Today eGFR is 47 and UACR 15 mg/g; requesting CKD evaluation and management.</ref> Kidney function has been fairly stable but UACR has crept up since the first check at our practice. Potassium 4.5 today and A1c 6.8%. BP 115/68.
+
+Please send your recommendations to our office. We will continue routine diabetes care here.
+
+Jaya Patel, NP
+Northgate Family Medicine
 
 ```json payload
 {

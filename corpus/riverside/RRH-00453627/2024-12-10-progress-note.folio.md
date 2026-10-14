@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 12/10 06:19 (local time): Sodium 138 mmol/L, Potassium 5.4 mmol/L (H), Chloride 100 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 13 mmol/L, Urea nitrogen 21 mg/dL, Creatinine 1.20 mg/dL, eGFR (CKD-EPI 2021) 65 mL/min/1.73m2, Glucose 149 mg/dL (H)</ref>
+**Interval history.** The patient feels much better, is eating and drinking, and the diarrhea has settled. The saline infusion was stopped last evening at 19:30.
+
+**Exam.** At 07:17: BP 121/73, HR 87, RR 22, T 98.2 F, SpO2 94%. Mucous membranes are moist. Lungs clear, abdomen soft.
+
+**Results.** On the 06:19 panel: sodium 138, potassium 5.4, chloride 100, bicarbonate 25, anion gap 13, urea nitrogen 21, creatinine 1.20, eGFR 65, glucose 149.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref> is nearly resolved. <ref id="bmp">Creatinine has come down to 1.20 and eGFR is 65; potassium is 5.4, still slightly high but lower than yesterday.</ref> Repeat BMP in the morning.
+2. Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held for now.
+3. Continue carvedilol and atorvastatin. Heart rate has improved to 87.
 
 ```json payload
 {

@@ -16,12 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 20 mg tablet, 20 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient was seen in the ED this afternoon with malaise and a sense of being unwell, and was found to be markedly acidotic with a glucose of only 242. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. She takes dapagliflozin 10 mg daily for diabetes.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** Vitals at 20:56: BP 110/66, HR 80, RR 21, T 98.2 F, SpO2 98%. Mildly tachypneic with deep respirations, appears somewhat dry.
+
+**Results.** The basic metabolic panel drawn at 16:17 showed sodium 134, potassium 5.3, chloride 94, bicarbonate 8, anion gap 32, urea nitrogen 35, creatinine 1.57 (eGFR 50) and glucose 242. The insulin infusion at 0.1 units/kg/h and D5 lactated Ringer's at 150 mL/h have both been running since 17:05.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol with D5 lactated Ringer's, since glucose is not high. Repeat BMP every 4 hours until the gap closes. <ref id="med_dapagliflozin">Hold dapagliflozin.</ref>
+2. Metformin: <ref id="med_metformin">hold metformin</ref> while she is acidotic and NPO.
+3. Volume depletion with creatinine 1.57: <ref id="med_hydrochlorothiazide">hold hydrochlorothiazide</ref> until volume is restored.
+4. Hypertension with potassium 5.3: <ref id="med_lisinopril">hold lisinopril</ref> for volume depletion and potassium; resume when she is eating and the potassium and creatinine have settled.
+5. Hyperkalemia is mild and should improve with insulin and fluids; recheck with the next panel.
 
 ```json payload
 {

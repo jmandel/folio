@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. BP 127/76, pulse 78, wt 224 lb.
+BP at goal. No chest pain, SOB or headaches.
+Wt up 1 lb from last year, discussed diet.
+RTC 6 mo.
 
 ```json payload
 {

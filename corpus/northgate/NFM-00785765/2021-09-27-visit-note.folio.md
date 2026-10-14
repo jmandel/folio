@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. No new complaints.
+BP 145/83, repeat 142/82, pulse 74, wt 221 lb.
+Today: eGFR 64, K 4.1, A1c 8.1%.
+Metformin dose changed to 1000 mg twice daily today (A1c 8.1). Lisinopril dose changed to 40 mg daily today (BP above goal).
+RTC 5 mo.
 
 ```json payload
 {

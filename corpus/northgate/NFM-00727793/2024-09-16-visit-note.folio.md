@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u for euglycemic DKA, SGLT2 inhibitor-associated. Feels back to baseline, eating and drinking normally.
 
-empagliflozin: stopped today (euglycemic DKA)
+BP 115/78, pulse 85, wt 171 lb.
 
-empagliflozin adverse reaction: euglycemic diabetic ketoacidosis
+Empagliflozin stopped today (euglycemic DKA). Entered as adverse reaction: euglycemic diabetic ketoacidosis.
+
+Pt understands not to restart it.
 
 ```json payload
 {

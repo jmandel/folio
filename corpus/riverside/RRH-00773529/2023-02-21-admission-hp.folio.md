@@ -16,11 +16,24 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient is seen on the hospitalist service after presentation to the ED this afternoon with nausea, fatigue and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> Labs in the ED showed a marked anion gap acidosis with a glucose of only 207, which is the picture of euglycemic ketoacidosis. An insulin infusion and dextrose-containing fluids were started at 15:51 and are still running.
+
+**Home medications.** Empagliflozin 10 mg daily, metformin 1000 mg twice daily with meals, losartan 50 mg daily, amlodipine 5 mg daily, and semaglutide 0.5 mg subcutaneously weekly.
+
+**Allergies:** lisinopril (cough).
+
+**Exam.** At 18:30: BP 111/67, HR 96, RR 22, T 99.1 F, SpO2 96%. Tired but conversant, breathing deeply and somewhat rapidly. Mucous membranes dry. Abdomen soft.
+
+**Results.** The 14:58 panel: sodium 132, potassium 5.0, chloride 97, bicarbonate 11, anion gap 24, urea nitrogen 26, creatinine 1.29, eGFR 47, glucose 207.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol at 0.1 units/kg/h with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Repeat chemistries through the evening and overnight until the gap closes. <ref id="med_empagliflozin">Hold empagliflozin.</ref>
+2. Diabetes: <ref id="med_metformin">hold metformin</ref> while acidotic and NPO.
+3. Volume depletion with potassium 5.0 and creatinine above what we would hope for: <ref id="med_losartan">hold losartan</ref> and resume when she is eating.
+4. Continue amlodipine and the weekly semaglutide as listed.
 
 ```json payload
 {

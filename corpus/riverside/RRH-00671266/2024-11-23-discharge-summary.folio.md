@@ -17,8 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
+**Reason for hospitalization:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted on 11/20 with a cough and an elevated white blood cell count, and was treated with intravenous ceftriaxone. Intravenous normal saline was given for elevated urea nitrogen and creatinine, and kidney function improved steadily. Symptoms resolved over the stay, and the patient is ready to go home.
+
+**Condition at discharge.** Vitals at 07:15: BP 119/71, HR 85, RR 23, T 99.1 F, SpO2 98%. The patient is comfortable and eating.
+
+**Discharge labs.** On the 11/23 06:27 panel: sodium 135 (low), potassium 3.9, chloride 100, bicarbonate 22, anion gap 13, urea nitrogen 15, creatinine 1.26, eGFR 61, glucose 170 (high). Creatinine is down from 1.64 on admission.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 500 mg by mouth twice daily with meals, continue</ref>
+- Lisinopril 20 mg by mouth daily, continue
+- Amlodipine 5 mg by mouth daily, continue
+- Atorvastatin 40 mg by mouth nightly, continue
+
+**Follow-up.** See primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. Return sooner for worsening cough, fever or shortness of breath.
 
 ```json payload
 {

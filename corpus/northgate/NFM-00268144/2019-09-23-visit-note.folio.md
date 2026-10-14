@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History of HTN, DM2, hyperlipidemia and knee OA reviewed with pt.
+
+BP 157/99, repeat 155/97. Pulse 67, wt 200 lb.
+
+Labs today: eGFR 55, K 4.3, A1c 7.9%, LDL 75 mg/dL.
+
+Problem list entered from pt history. Will recheck BP at next visit.
 
 ```json payload
 {

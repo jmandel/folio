@@ -16,7 +16,13 @@ schema:
 ---
 Chronic care visit.
 
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP 153/90, repeat 151/90, pulse 86, wt 198 lb.
+
+eGFR 48, K 4.4, A1c 7.1% today. CKD stage 3a on problem list.
+
+Chlorthalidone started 12.5 mg daily today (BP above goal).
+
+RTC 3 mo.
 
 ```json payload
 {

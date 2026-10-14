@@ -14,13 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-ED follow-up: angioedema.
-
-lisinopril allergy: angioedema of lips and tongue
-
-lisinopril: stopped today (angioedema)
-
-amlodipine: started 5 mg daily today (replacing lisinopril (angioedema))
+ED f/u for angioedema. Swelling has settled, breathing normal.
+Lisinopril allergy: angioedema of lips and tongue. Added to allergy list.
+Lisinopril stopped today (angioedema).
+Amlodipine started 5 mg daily today, replacing lisinopril (angioedema).
+Pt to avoid ACE inhibitors. Return sooner if any swelling recurs.
 
 ```json payload
 {

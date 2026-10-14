@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Pt feels fine.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.2)
+BP 141/89, repeat 138/85, pulse 66, wt 246 lb.
+
+Labs today: eGFR 45, K 4.2, UACR 572 mg/g, A1c 8.2%.
+
+Insulin glargine started 10 units at bedtime today (A1c 8.2). Reviewed with pt. RTC 3 mo.
 
 ```json payload
 {

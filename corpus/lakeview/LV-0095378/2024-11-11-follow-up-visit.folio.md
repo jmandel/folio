@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 134/80, HR 82, weight 90.3 kg at 2024-11-11 08:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2024-07-02</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2016</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2016-10-26</ref>
-- eGFR 54 (today)
-- K 5.2 (today)
+Follow-up. Feels well. No cramps or weakness.
+
+<ref id="bp_sys">BP 134/80, HR 82, weight 90.3 kg</ref>. Weight up about 2 kg since June.
+
+<ref id="dx_ckd">CKD G3a A3</ref>. eGFR 59 → 54 since June. K 5.2 today, up a little. <ref id="dx_dm">Type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref> as before.
+
+Repeat K and creatinine in 4 weeks. Return in 5 months.
 
 ```json payload
 {

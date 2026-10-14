@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 70, UACR 930 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this patient with type 2 diabetes and essential hypertension. <ref id="referral">eGFR is 70 but UACR is 930 mg/g, referred for CKD evaluation and management.</ref>
+
+Albuminuria has been persistent on repeat testing. BP has run in the high 130s at recent visits. Please advise on work-up and further management of the kidney disease. Recent labs are available in the chart.
+
+Thank you for your help.
+
+Teresa Reyes, MD
+Northgate Family Medicine
 
 ```json payload
 {

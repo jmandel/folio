@@ -14,7 +14,17 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 45, UACR 150 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with chronic kidney disease stage 3a, type 2 diabetes and essential hypertension. <ref id="referral">Most recent eGFR is 45 with UACR 150 mg/g; I would appreciate your evaluation and help managing the CKD.</ref>
+
+Kidney function has been stable but below normal for the past year, with persistent albuminuria despite ongoing diabetes and BP care in our office. We would value your recommendations on workup and on anything further we can do to slow progression.
+
+Please send your notes after the visit. Happy to provide any records you need.
+
+Thank you,
+Moira Brennan, DO
+Northgate Family Medicine
 
 ```json payload
 {

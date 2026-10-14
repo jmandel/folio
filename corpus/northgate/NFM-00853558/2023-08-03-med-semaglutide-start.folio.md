@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start semaglutide: A1c 8.1.</ref>
+<ref id="med_1">Semaglutide 0.5 mg weekly started today, A1c 8.1.</ref>
 
 ```json payload
 {

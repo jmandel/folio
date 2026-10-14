@@ -16,10 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/23 06:27 (local time): Sodium 137 mmol/L, Potassium 4.5 mmol/L, Chloride 102 mmol/L, Bicarbonate (total CO2) 21 mmol/L (L), Anion gap 14 mmol/L, Urea nitrogen 18 mg/dL, Creatinine 1.89 mg/dL (H), eGFR (CKD-EPI 2021) 39 mL/min/1.73m2 (L), Glucose 126 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 17 units daily, started 5/23 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 5/22 18:30, stopped 5/23 09:00 (local times)</ref>
+**Interval.** Overnight on the insulin infusion without events. She feels much better, is less nauseated and is taking sips.
+
+**Exam.** At 07:36: BP 115/69, HR 100, RR 19, T 98.9 F, SpO2 95%. Mucous membranes moist, breathing comfortably.
+
+**Results.** <ref id="bmp">On the 06:27 panel sodium is 137, potassium 4.5, chloride 102, bicarbonate 21, anion gap 14, urea nitrogen 18, creatinine 1.89 (eGFR 39), glucose 126.</ref>
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving; the anion gap has closed to 14. <ref id="sc_glargine">Insulin glargine 17 units daily was started at 07:00</ref> so that basal insulin is on board before the <ref id="iv_insulin">insulin infusion is stopped at 09:00</ref>.
+2. Empagliflozin and metformin remain held. Glipizide, home glargine and atorvastatin are listed as continued.
+3. Creatinine 1.89 is improved from 2.15 on admission; continue to follow.
 
 ```json payload
 {

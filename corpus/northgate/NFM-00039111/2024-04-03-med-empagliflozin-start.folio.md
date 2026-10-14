@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start empagliflozin: CKD + DM, cardiorenal benefit.</ref>
+<ref id="med_1">Empagliflozin 10 mg daily started for CKD + DM, cardiorenal benefit.</ref>
 
 ```json payload
 {

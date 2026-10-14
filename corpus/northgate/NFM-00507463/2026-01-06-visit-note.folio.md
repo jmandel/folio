@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
-
+Annual exam. No new complaints.
+BP 133/87, pulse 84, wt 215 lb.
+Labs 1/3: eGFR 94, K 4.3, A1c 8.1%.
 Patient ran out of losartan about 3 weeks ago and has not been taking it.
+A1c 8.1, metformin dose changed to 1000 mg twice daily today.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+DM f/u. BP 149/85, pulse 67, wt 266 lb.
+Labs 4/16: eGFR 62, K 4, UACR 299 mg/g, A1c 7.2%.
+BP above goal, lisinopril dose changed to 40 mg daily today.
+Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+RTC 3 mo.
 
 ```json payload
 {

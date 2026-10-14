@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No new complaints.
+BP 134/76, pulse 79, wt 151 lb.
+eGFR 43 today, K 4.3. CKD now stage 3b on problem list.
+Discussed with pt.
+RTC 3 mo.
 
 ```json payload
 {

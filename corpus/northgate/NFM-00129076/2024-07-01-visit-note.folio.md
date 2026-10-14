@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 164/101, repeat 159/100, pulse 80, wt 191 lb.
+eGFR 70 today, K 4.
+BP still running high, discussed with pt.
+Home BP log encouraged. Recheck at next visit.
 
 ```json payload
 {

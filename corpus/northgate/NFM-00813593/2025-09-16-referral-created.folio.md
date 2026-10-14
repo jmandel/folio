@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 51, UACR 46 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with chronic kidney disease stage 3a, type 2 diabetes mellitus and essential hypertension. <ref id="referral">eGFR 51 and UACR 46 mg/g; please evaluate and help manage the CKD.</ref>
+
+Kidney function has drifted down gradually over the past year or so. BP and A1c have been fairly steady at recent visits. Pt is aware of the referral and agreeable.
+
+Recent notes and labs are available on request. Please send your recommendations when you have seen the pt.
+
+Thank you,
+Teresa Reyes, MD
 
 ```json payload
 {

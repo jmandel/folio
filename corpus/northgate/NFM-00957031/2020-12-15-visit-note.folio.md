@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-empagliflozin: started 10 mg daily today (A1c 8.6, CKD)
+New pt, establishing care. Hx per pt.
+BP 127/70, pulse 84, wt 228 lb.
+Labs 12/13: eGFR 50, K 4.4, UACR 387 mg/g, A1c 8.6%, LDL 56 mg/dL.
+Empagliflozin started 10 mg daily today (A1c 8.6, CKD).
+RTC 3 mo.
 
 ```json payload
 {

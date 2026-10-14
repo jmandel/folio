@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u for acute kidney injury. Feels better, eating and drinking normally.
 
-losartan: resumed today (creatinine back to baseline)
+BP 158/78, repeat 150/74, pulse 88, wt 200 lb.
+
+Losartan resumed today (creatinine back to baseline). Pt to recheck BP at home.
+
+RTC 3 mo.
 
 ```json payload
 {

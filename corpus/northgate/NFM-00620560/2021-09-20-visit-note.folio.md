@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-losartan: dose changed to 100 mg daily today (BP above goal)
+BP f/u. BP 143/91, pulse 76, wt 164 lb.
+eGFR 69 and K 4.4 on 9/17.
+BP above goal, losartan changed to 100 mg daily today.
+Recheck BP at next visit.
 
 ```json payload
 {

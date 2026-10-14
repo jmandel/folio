@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+DM f/u. Pt doing well.
+BP 107/55, pulse 70, wt 155 lb.
+10/27 labs: eGFR 47, K 4.5, A1c 7.3%, LDL 149 mg/dL.
+Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit). Reviewed what to expect with pt.
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.3)
+Annual exam. No acute concerns.
+BP 135/76, pulse 71, wt 216 lb.
+Labs 1/9: eGFR 57 (CKD stage 3a), K 4.4, A1c 8.3%, LDL 63 mg/dL.
+Metformin dose changed to 1000 mg twice daily today (A1c 8.3).
+Reviewed with pt. RTC 3 mo.
 
 ```json payload
 {

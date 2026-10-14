@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">resume losartan: BP above goal.</ref>
+<ref id="med_1">BP above goal. Losartan resumed at 100 mg daily.</ref>
 
 ```json payload
 {

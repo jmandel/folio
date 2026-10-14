@@ -14,12 +14,19 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Consult note
+## Endocrinology consult
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 12 units daily, started 2/7 07:00, still running (local times)</ref>
-- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+**Reason for consultation:** euglycemic diabetic ketoacidosis in a patient with type 2 diabetes, on an SGLT2 inhibitor.
+
+**History.** I was asked to see the patient by Dr. Whitaker. The patient presented on 2/5 with <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>; beta-hydroxybutyrate was 4.3 mmol/L at 21:30 that night. An insulin infusion per DKA protocol was started at 22:15 on 2/5 and stopped at 09:00 today. No known drug allergies.
+
+**Medications.** Metformin and chlorthalidone are held; glipizide, lisinopril and amlodipine continue. <ref id="med_empagliflozin">Empagliflozin 10 mg daily is held, and I recommend against restarting it at discharge.</ref>
+
+**Assessment and plan**
+
+1. Euglycemic DKA has resolved biochemically and the patient has transitioned off the infusion. <ref id="sc_glargine">Insulin glargine 12 units subcutaneously daily, started at 07:00 today,</ref> continues.
+2. Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. We will review the patient's diabetes regimen with the primary team and are available for further questions.
 
 ```json payload
 {

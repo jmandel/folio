@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-lisinopril: dose changed to 20 mg daily today (BP above goal)
+Annual exam. BP 150/87, pulse 88, wt 173 lb.
+Today: eGFR 38, K 4.3, UACR 11 mg/g, A1c 7.3%, LDL 63 mg/dL.
+Added CKD stage 3b to problem list.
+Lisinopril dose changed to 20 mg daily today (BP above goal).
+Recheck BP and labs at next visit.
 
 ```json payload
 {

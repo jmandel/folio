@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-semaglutide: started 0.5 mg weekly today (A1c 8.1)
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+Annual exam. Doing well.
+BP 116/62, pulse 85, wt 137 lb.
+7/27 labs: eGFR 53, K 4.4, UACR 8 mg/g, A1c 8.1%, LDL 110 mg/dL.
+Semaglutide started 0.5 mg weekly today (A1c 8.1). Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+RTC 3 mo.
 
 ```json payload
 {

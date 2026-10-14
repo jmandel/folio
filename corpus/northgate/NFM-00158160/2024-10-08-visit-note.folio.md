@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: started 10 units at bedtime today (A1c 7.7)
-
-amlodipine: started 5 mg daily today (BP above goal)
+DM f/u. BP 146/87, pulse 85, wt 200 lb.
+eGFR 49, K 4.5, UACR 21 mg/g, A1c 7.7% today.
+Insulin glargine started, 10 units at bedtime today (A1c 7.7).
+BP above goal: amlodipine started 5 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

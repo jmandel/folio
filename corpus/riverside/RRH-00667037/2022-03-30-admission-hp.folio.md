@@ -16,7 +16,24 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
+**Reason for admission:** <ref id="dx_pneumonia">Community-acquired pneumonia</ref>.
+
+**History of present illness.** The patient was seen in the ED this afternoon and is admitted to the hospital service for treatment of pneumonia and for monitoring of kidney function. The ED work-up showed a raised creatinine, and intravenous saline was begun at 14:55 and is still running at 75 mL/h. The patient takes losartan, chlorthalidone and amlodipine at home for blood pressure.
+
+**Allergies:** No known drug allergies.
+
+**Home medications.** Losartan 100 mg daily, chlorthalidone 12.5 mg (one half of a 25 mg tablet) daily, and amlodipine 5 mg daily.
+
+**Exam.** Vitals at 18:35: BP 131/79, HR 86, RR 20, temperature 98 F, SpO2 99%. The patient is comfortable and conversing in full sentences.
+
+**Results.** The basic metabolic panel drawn at 14:31 showed sodium 137, potassium 4.5, chloride 98, bicarbonate 21 (low), anion gap 18 (high), urea nitrogen 46 (high), creatinine 2.14 (high), eGFR 34 (low) and glucose 127 (high).
+
+**Assessment and plan**
+
+1. Pneumonia as above. Continue the current inpatient treatment and monitor vital signs and oxygen saturation.
+2. Elevated creatinine with a raised anion gap and low bicarbonate. Continue the saline at 75 mL/h and repeat the basic metabolic panel in the morning to follow creatinine and bicarbonate.
+3. Hypertension: BP is 131/79 this evening. Continue losartan, chlorthalidone and amlodipine at the home doses.
+4. No known drug allergies.
 
 ```json payload
 {

@@ -16,10 +16,27 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_lisinopril">home med lisinopril 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient was sent up from the ED after labs drawn at 17:00 showed a potassium of 6.7 and a creatinine of 2.02. They have had back pain for several days and have been treating it with over-the-counter naproxen. They have also been drinking very little. In the ED they received IV calcium and a saline bolus, and saline is still running at 125 mL/h.
+
+**Past medical history.** Hypertension, hypothyroidism and hyperlipidemia, managed with the home medications below.
+
+**Home medications.** Lisinopril 10 mg daily, amlodipine 5 mg daily, atorvastatin 40 mg nightly, levothyroxine 75 mcg daily.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** At 23:08: BP 126/76, HR 88, RR 23, temperature 98.8 F, SpO2 94%. Comfortable at rest, mucous membranes slightly dry. Lungs clear, abdomen soft.
+
+**Results.** BMP at 17:00: sodium 136, potassium 6.7, chloride 103, bicarbonate 19, anion gap 14, urea nitrogen 48, creatinine 2.02, eGFR 39, glucose 163.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>. <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref> Continue normal saline at 125 mL/h and recheck a BMP in the morning. Avoid further NSAIDs.
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.7 at presentation, treated with calcium in the ED. Repeat potassium with the morning panel.
+3. Hypertension: <ref id="med_lisinopril">Hold lisinopril until creatinine is back to baseline.</ref> Continue amlodipine.
+4. Hyperlipidemia: continue atorvastatin.
+5. Hypothyroidism: continue levothyroxine.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-losartan: dose changed to 100 mg daily today (BP above goal)
+DM f/u. No complaints.
+BP 141/89, pulse 69, wt 167 lb.
+Labs 2/12: eGFR 47, K 4.5, UACR 160 mg/g, A1c 7.3%, LDL 68 mg/dL.
+BP above goal. Losartan dose changed to 100 mg daily today.
+RTC 3 mo, BP recheck.
 
 ```json payload
 {

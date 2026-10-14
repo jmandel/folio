@@ -16,12 +16,26 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by elective knee replacement surgery with prolonged pre-operative fasting while the SGLT2 inhibitor was continued.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient is a man with type 2 diabetes, hypertension and hyperlipidemia who came to the ED this afternoon feeling nauseated, tired and short of breath after a recent elective knee replacement. He takes <ref id="med_dapagliflozin">dapagliflozin 10 mg daily</ref> at home. <ref id="precipitant">The ketoacidosis was precipitated by elective knee replacement surgery with prolonged pre-operative fasting while the SGLT2 inhibitor was continued.</ref> Glucose on arrival was only 240, which is why this was not recognized sooner as DKA.
+
+**Home medications:** <ref id="med_metformin">metformin 1000 mg twice daily with meals</ref>, <ref id="med_losartan">losartan 50 mg daily</ref>, <ref id="med_hydrochlorothiazide">hydrochlorothiazide 25 mg daily</ref>, atorvastatin 40 mg nightly, and dapagliflozin as above.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** At 21:38: BP 120/72, HR 87, RR 22, T 98.5 F, SpO2 94%. Mildly dry mucous membranes, breathing slightly deep and quick. Abdomen soft and non-tender.
+
+**Results.** The 16:24 panel showed sodium 134, potassium 4.8, chloride 96, bicarbonate 13, anion gap 25, urea nitrogen 30, creatinine 1.30, eGFR 44 and glucose 240.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Insulin infusion per DKA protocol at 0.1 units/kg/h has been running since 17:05, with D5 lactated Ringer's at 150 mL/h because glucose is near normal. Repeat BMP and beta-hydroxybutyrate every 4 hours until the gap closes. Hold dapagliflozin.
+2. Diabetes: hold metformin while acidotic and NPO; resume when able.
+3. Volume depletion: hold hydrochlorothiazide; resume when able.
+4. Hypertension: blood pressure is stable, so continue losartan.
+5. Hyperlipidemia: continue atorvastatin.
+6. Endocrinology to see him in the morning.
 
 ```json payload
 {

@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Feels well, no new complaints.
 
-lisinopril: dose changed to 20 mg daily today (BP above goal)
+BP 149/92, repeat 144/90, pulse 84, wt 237 lb.
+
+Labs today: eGFR 93, K 4.
+
+BP above goal, so lisinopril changed to 20 mg daily today. RTC 3 mo for BP check.
 
 ```json payload
 {

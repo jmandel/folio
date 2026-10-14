@@ -15,8 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam.
-
-lisinopril: dose changed to 20 mg daily today (BP above goal)
+BP 147/90, repeat 142/87. Pulse 62, wt 201 lb.
+Labs 6/27: eGFR 44, K 4.6. CKD stage 3b.
+BP above goal, lisinopril dose changed to 20 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

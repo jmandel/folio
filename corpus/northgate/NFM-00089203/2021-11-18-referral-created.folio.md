@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 65, UACR 669 mg/g: CKD evaluation and management</ref>
+Dear Dr. Lakeview Kidney Care colleague,
+
+Thank you for seeing this patient of mine with chronic kidney disease and essential hypertension. <ref id="referral">Most recent eGFR 65 and UACR 669 mg/g; I would appreciate your CKD evaluation and management.</ref>
+
+BP has been above goal and we are adjusting treatment here. Please let me know if you want any further labs before the visit.
+
+Thank you for your help with their care.
+
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

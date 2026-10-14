@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u for acute kidney injury. Feels back to baseline, eating and drinking normally.
 
-lisinopril: resumed today (creatinine back to baseline)
+BP 157/78, pulse 85, wt 151 lb.
+
+Lisinopril resumed today, creatinine back to baseline.
+
+Recheck BP and labs at next visit.
 
 ```json payload
 {

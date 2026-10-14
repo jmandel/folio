@@ -17,10 +17,20 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Diagnoses.** <ref id="dx_aki">Acute kidney injury, resolved.</ref> Hyperkalemia, resolved. Hyponatremia, resolved.
+
+**Hospital course.** The patient presented with several days of diarrhea and was found to have a potassium of 6.5, sodium 129 and creatinine 1.89. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> Calcium gluconate 1 g IV was given once in the ED, and normal saline was given as a bolus and then 125 mL/h until 5/29 at 04:47. Kidney function and sodium recovered steadily. Lisinopril and chlorthalidone were held throughout the stay. No known drug allergies.
+
+**Condition at discharge.** Vitals at 07:15: BP 129/77, HR 98, RR 17, T 98.8 F, SpO2 99%. The patient is eating well, with normal stools, and is comfortable.
+
+**Results at discharge.** On the 6/1 06:28 panel: sodium 136, potassium 5.2, chloride 103, bicarbonate 25, anion gap 8, urea nitrogen 30, creatinine 0.85, eGFR 72 and glucose 163. Creatinine has returned to normal; potassium is only slightly above the reference range.
+
+**Home medications held at discharge**
+
+- Lisinopril 40 mg daily: <ref id="med_lisinopril">held; PCP to decide on restarting after a repeat BMP</ref>.
+- Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: <ref id="med_chlorthalidone">held; PCP to decide after a repeat BMP</ref>.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision on restarting the held blood pressure medicines. The patient should drink fluids well and return for worsening diarrhea, weakness or reduced urination.
 
 ```json payload
 {

@@ -16,10 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 12/31 06:21 (local time): Sodium 132 mmol/L (L), Potassium 4.0 mmol/L, Chloride 101 mmol/L, Bicarbonate (total CO2) 22 mmol/L, Anion gap 9 mmol/L, Urea nitrogen 25 mg/dL (H), Creatinine 1.10 mg/dL (H), eGFR (CKD-EPI 2021) 56 mL/min/1.73m2 (L), Glucose 183 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 17 units daily, started 12/31 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 12/30 17:05, stopped 12/31 09:00 (local times)</ref>
+**Interval events.** The patient slept reasonably and reports feeling much better, with less nausea and easier breathing. <ref id="sc_glargine">Insulin glargine 17 units daily was given at 07:00.</ref> The <ref id="iv_insulin">insulin infusion per DKA protocol</ref> is planned to stop at 09:00 after that overlap.
+
+**Exam.** At 07:16: BP 112/67, HR 78, RR 22, T 98.1 F, SpO2 98%. Comfortable, mucous membranes moist, abdomen soft and nontender.
+
+**Results.** <ref id="bmp">On the 06:21 panel sodium 132, potassium 4.0, chloride 101, bicarbonate 22, anion gap 9, urea nitrogen 25, creatinine 1.10, eGFR 56, glucose 183.</ref>
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>: the anion gap has closed and bicarbonate is normal. Continue to advance diet as tolerated and follow glucose.
+2. Home medications: empagliflozin, metformin, lisinopril and chlorthalidone remain held. Amlodipine continues.
+3. No known drug allergies.
 
 ```json payload
 {

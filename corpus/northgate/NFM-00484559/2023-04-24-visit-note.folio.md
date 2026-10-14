@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
+Hosp f/u for acute kidney injury. Feels back to baseline.
 
-hydrochlorothiazide: resumed today (creatinine back to baseline)
+Creatinine back to baseline. Losartan resumed today. Hydrochlorothiazide resumed today.
 
-losartan: resumed today (creatinine back to baseline)
+BP 146/78, repeat 144/75, pulse 84, wt 181 lb.
+
+Recheck BP at next visit. RTC 3 mo.
 
 ```json payload
 {

@@ -16,12 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient came to the ED late last night with several days of fever, poor appetite and minimal oral intake, and was found to be markedly acidotic with a glucose of only 183. <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref> They take <ref id="med_empagliflozin">empagliflozin 10 mg daily</ref> at home.
+
+**Allergies:** none known.
+
+**Exam.** Vitals at 05:11: BP 106/64, HR 89, RR 18, temperature 98.1 F, SpO2 96%. Comfortable, mucous membranes slightly dry, breathing unlabored. Abdomen soft.
+
+**Results.** On the 23:54 panel sodium 130, potassium 5.5, chloride 94, bicarbonate 8, anion gap 28, urea nitrogen 24, creatinine 1.91, eGFR 28, glucose 183. Lipase 22.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol (0.1 units/kg/h, started 00:30) with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Hold empagliflozin.
+2. <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref>: lipase 22.
+3. <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
+4. <ref id="med_lisinopril">Hold lisinopril</ref> for volume depletion and potassium of 5.5; resume when eating.
+5. Continue dulaglutide and rosuvastatin.
 
 ```json payload
 {

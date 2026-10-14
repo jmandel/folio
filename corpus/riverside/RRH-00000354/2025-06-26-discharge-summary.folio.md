@@ -17,9 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Reason for admission:** community-acquired pneumonia with reduced kidney function.
+
+**Hospital course.** The patient presented to the ED with several days of cough, fever and tiredness, and was admitted for IV antibiotics and IV saline. Creatinine was 1.89 on arrival and fell steadily over the stay with fluids and with several home medications held. Normal saline was stopped on the morning of 6/22. Cough and breathlessness gradually settled and the patient was eating and walking. The <ref id="dx_pneumonia">pneumonia is resolved</ref>.
+
+**Results on the day of discharge.** Vitals at 07:45: BP 132/79, HR 89, RR 17, T 99.1 F, SpO2 95%. Basic metabolic panel at 06:15 on 6/26: sodium 138, potassium 3.9, chloride 100, bicarbonate 21 (L), anion gap 17 (H), urea nitrogen 22, creatinine 1.33 (H), eGFR 46 (L), glucose 128 (H). Creatinine is much improved from admission. The mildly low bicarbonate and high anion gap were noted and are to be rechecked at follow-up.
+
+**Allergies:** NKDA.
+
+**Discharge medications**
+
+- <ref id="med_losartan">Losartan 100 mg by mouth daily, resume now that creatinine has improved</ref>
+- <ref id="med_metformin">Metformin 1000 mg by mouth twice daily with meals, resume</ref>
+- Dapagliflozin 10 mg by mouth daily, continue
+- Dulaglutide 0.5 mg subcutaneously weekly, continue
+- Chlorthalidone 12.5 mg (half of a 25 mg tablet) by mouth daily, continue
+- Atorvastatin 40 mg by mouth nightly, continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. The patient should return sooner for worsening cough, fever or shortness of breath.
 
 ```json payload
 {

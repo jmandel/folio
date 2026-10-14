@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Pt feels well, no new symptoms.
+BP 133/77, pulse 74, wt 207 lb.
+Diet and activity reviewed.
+RTC 4-6 mo.
 
 ```json payload
 {

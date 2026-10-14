@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. Feels well.
+BP 150/91, repeat 143/90, pulse 73, wt 187 lb.
+Labs 7/11: eGFR 63, A1c 8.1%. K 6.5 was hemolyzed, repeat K 4.8.
+A1c 8.1%, so insulin glargine started 10 units at bedtime today.
+BP above goal, lisinopril dose changed to 40 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

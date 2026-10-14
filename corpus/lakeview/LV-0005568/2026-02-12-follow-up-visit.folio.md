@@ -14,12 +14,11 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 136/80, HR 64, weight 99.1 kg at 2026-02-12 14:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2024-11-03</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 33 (today)
-- K 4.1 (today)
-- UACR 253 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref> with <ref id="dx_dm">type 2 diabetes</ref>.
+
+eGFR 33 today, K 4.1, UACR 253 mg/g, up from 186 in May 2025. <ref id="bp_sys">BP 136/80, HR 64, weight 99.1 kg.</ref>
+
+Albuminuria is rising while eGFR holds. BP a little above goal today; will recheck at next visit. Return 6 months, sooner if symptoms.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.3)
+Annual exam. No new complaints.
+BP 123/81, pulse 73, wt 196 lb.
+Today: eGFR 56, K 4.8, A1c 8.3%.
+A1c up. Dulaglutide started 0.5 mg weekly today. CKD stage 3a added to problem list.
+RTC 3 mo.
 
 ```json payload
 {

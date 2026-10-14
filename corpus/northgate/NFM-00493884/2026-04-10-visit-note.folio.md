@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 150/87, repeat 147/84. Pulse 64, wt 188 lb.
 
-losartan: dose changed to 100 mg daily today (BP above goal)
+Still above goal. Losartan: dose changed to 100 mg daily today (BP above goal).
+
+Pt agrees with plan. RTC for BP recheck.
 
 ```json payload
 {

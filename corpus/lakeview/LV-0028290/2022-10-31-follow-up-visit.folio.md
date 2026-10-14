@@ -14,13 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 137/80, HR 81, weight 104.1 kg at 2022-10-31 11:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2025-02-12</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2017</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2010-12</ref>
-- eGFR 66 (today)
-- K 4.4 (today)
-- UACR 1357 mg/g (today)
+Follow-up. No complaints. Ankles not swollen on exam.
+
+<ref id="dx_ckd">CKD G2 A3</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. eGFR 66, K 4.4, UACR 1357 mg/g today. UACR up from 969 in April; eGFR little changed.
+
+<ref id="bp_sys">BP 137/80, HR 81, weight 104.1 kg</ref>.
+
+Return in 3 months with labs.
 
 ```json payload
 {

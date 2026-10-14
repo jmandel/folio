@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 43, UACR 530 mg/g: CKD evaluation and management</ref>
+Dear Nephrology colleagues,
+
+Thank you for seeing this patient, a new patient to our practice with chronic kidney disease and essential hypertension. <ref id="referral">eGFR 43 and UACR 530 mg/g. Requesting CKD evaluation and management.</ref>
+
+Blood pressure has been above goal at our visit. Please advise on workup and any recommendations for ongoing kidney care. We will continue to manage the hypertension here and can share records as needed.
+
+Thank you for your help.
+
+Moira Brennan, DO
+Northgate Family Medicine
 
 ```json payload
 {

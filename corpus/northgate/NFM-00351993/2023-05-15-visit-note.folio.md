@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-dulaglutide: started 0.5 mg weekly today (A1c 8.5)
+DM f/u. A1c up, discussed options with pt.
+BP 125/74, pulse 79, wt 153 lb.
+Labs today: eGFR 54, K 4.4, UACR 30 mg/g, A1c 8.5%, LDL 142.
+Dulaglutide started 0.5 mg weekly today (A1c 8.5).
+RTC 3 mo.
 
 ```json payload
 {

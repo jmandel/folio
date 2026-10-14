@@ -16,9 +16,22 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** <ref id="dx_pneumonia">community-acquired pneumonia</ref>.
+
+**History of present illness.** The patient was seen in the ED this evening with cough, fever and shortness of breath, and was found to have pneumonia on chest imaging. Appetite has been poor over the last few days. Creatinine in the ED was higher than expected and bicarbonate was low, and intravenous fluids were started.
+
+**Allergies:** NKDA.
+
+**Exam.** Vitals at 01:36: BP 115/69, HR 91, RR 19, T 99.2 F, SpO2 95%. The patient is comfortable at rest. Crackles are present at the lung base, the heart is regular, and the abdomen is soft.
+
+**Results.** Basic metabolic panel drawn 2/1 at 19:03: sodium 135 (L), potassium 4.8, chloride 106, bicarbonate 17 (L), anion gap 12, urea nitrogen 31 (H), creatinine 2.07 (H), eGFR 34 (L), glucose 170 (H).
+
+**Assessment and plan**
+
+1. Community-acquired pneumonia: continue treatment as started in the ED and monitor oxygen saturation and respiratory rate.
+2. Reduced kidney function with low bicarbonate: sodium chloride 0.9% continues at 75 mL/h, started 19:24. Repeat the chemistry panel in the morning.
+3. Diabetes medications: <ref id="med_metformin">hold metformin</ref> during the acute illness, and <ref id="med_empagliflozin">hold empagliflozin</ref> while the patient is not eating. Both can be resumed when able.
+4. Blood pressure: continue losartan and amlodipine at home doses; BP is 115/69.
 
 ```json payload
 {

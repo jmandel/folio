@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Patient ran out of losartan about 3 weeks ago and has not been taking it.
 
-Patient ran out of losartan about 3 weeks ago and has not been taking it.
+BP 133/80, pulse 67, wt 187 lb.
+
+Labs today: eGFR 37, K 5, UACR 313 mg/g, LDL 93 mg/dL.
+
+Discussed importance of staying on meds. Will recheck labs at next visit.
 
 ```json payload
 {

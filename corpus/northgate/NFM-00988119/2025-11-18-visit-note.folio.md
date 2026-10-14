@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (A1c above goal)
+DM f/u.
+BP 122/75, pulse 88, wt 200 lb.
+Labs 11/13: eGFR 88, K 4.4, UACR 139 mg/g, A1c 7.4%, LDL 123 mg/dL.
+Empagliflozin started 10 mg daily today (A1c above goal).
+RTC 3 mo.
 
 ```json payload
 {

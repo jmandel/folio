@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. BP 136/83, pulse 72, wt 184 lb.
+Labs 3/21: eGFR 73, K 4.7, UACR 261 mg/g, A1c 6.5%.
+UACR higher than before, kidney function stable. Discussed with pt.
+RTC 5 mo.
 
 ```json payload
 {

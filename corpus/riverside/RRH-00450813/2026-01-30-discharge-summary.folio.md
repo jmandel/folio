@@ -17,11 +17,23 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: continue</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Diagnosis:** <ref id="dx_dka">euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved</ref>.
+
+**Hospital course.** The patient was admitted from the ED with a profound anion gap acidosis and a glucose of only 219. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. The ketoacidosis was treated with an insulin infusion and dextrose-containing fluids, followed by subcutaneous basal insulin, and the acidosis cleared. Endocrinology saw the patient during the stay.
+
+**Condition at discharge.** Vitals on the morning of discharge at 08:45: BP 134/80, HR 82, RR 21, T 98.6 F, SpO2 97%. The patient is eating, comfortable and breathing easily. On the 06:22 panel on 1/30, sodium was 131, potassium 4.1, chloride 104, bicarbonate 23, anion gap 4, urea nitrogen 25, creatinine 1.26, eGFR 61 and glucose 151.
+
+**Allergies:** none known.
+
+**Discharge medications**
+
+- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not resume until reviewed by the PCP</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
+- <ref id="med_lisinopril">Lisinopril 40 mg daily: continue</ref>
+- Amlodipine 5 mg daily: continue
+- Atorvastatin 40 mg nightly: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether dapagliflozin should be restarted and to recheck a basic metabolic panel. The patient was advised to return for nausea, vomiting, abdominal pain or fast breathing.
 
 ```json payload
 {

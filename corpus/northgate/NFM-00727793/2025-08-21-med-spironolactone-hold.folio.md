@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">hold spironolactone: K 6.2 confirmed on repeat.</ref>
+<ref id="med_1">Spironolactone held today, K 6.2 confirmed on repeat. Review 9/4.</ref>
 
 ```json payload
 {

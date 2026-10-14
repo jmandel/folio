@@ -16,11 +16,22 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 20 mg tablet, 20 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient is seen shortly after arrival from the ED with nausea, fatigue and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> His glucose in the ED was only 165, despite significant acidosis. He takes <ref id="med_dapagliflozin">dapagliflozin 10 mg daily</ref>, which is held on admission.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** Vitals at 00:00: BP 130/78, HR 103, RR 24, T 98.6 F, SpO2 98%. He is tired, with dry mucous membranes and deep, rapid respirations. Lungs are clear and the abdomen is soft.
+
+**Results.** The ED panel from 20:23 showed sodium 132, potassium 5.0, chloride 92, bicarbonate 13, anion gap 27, urea nitrogen 35, creatinine 0.93, eGFR 63 and glucose 165.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol at 0.1 units/kg/h, running since 21:15, together with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Check chemistries regularly until the anion gap closes.
+2. <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
+3. <ref id="med_lisinopril">Hold lisinopril</ref> for volume depletion and potassium; resume when eating.
+4. Continue glipizide 5 mg daily and amlodipine 5 mg daily as listed.
 
 ```json payload
 {

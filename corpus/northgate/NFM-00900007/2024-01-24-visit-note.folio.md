@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History reviewed with pt and problem list built from it.
 
-empagliflozin: started 10 mg daily today (HFrEF)
+BP 122/74, pulse 64, wt 175 lb.
+
+Empagliflozin started 10 mg daily today (HFrEF).
+
+Pt voiced understanding. RTC to be scheduled.
 
 ```json payload
 {

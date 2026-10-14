@@ -14,9 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 143/80, pulse 78, wt 157 lb.
 
-lisinopril: held today (K 5.6 confirmed on repeat); review 2023-11-29
+eGFR 68, K 4.6 today.
+
+Lisinopril: held today (K 5.6 confirmed on repeat); review 11/29.
+Pt aware.
 
 ```json payload
 {

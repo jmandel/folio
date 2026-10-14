@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Pt feels OK, no lows.
 
-insulin glargine: dose changed to 14 units at bedtime today (A1c 8.2)
+BP 139/85, pulse 88, wt 184 lb. Labs 6/13: eGFR 48, K 4.1, A1c 8.2%, LDL 98 mg/dL.
+
+Insulin glargine: dose changed to 14 units at bedtime today (A1c 8.2). Pt to keep checking fasting sugars.
+
+RTC 3 mo.
 
 ```json payload
 {

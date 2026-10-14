@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new symptoms.
+
+BP 150/81, repeat 142/79, pulse 77, wt 232 lb.
+
+Discussed home BP checks and diet. Continue current plan.
+
+RTC 3 mo.
 
 ```json payload
 {

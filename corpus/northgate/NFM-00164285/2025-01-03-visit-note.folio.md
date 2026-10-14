@@ -16,6 +16,12 @@ schema:
 ---
 Chronic care visit.
 
+BP 138/88, pulse 69, wt 194 lb.
+
+eGFR 50, K 4.3, UACR 59 mg/g, A1c 6.9%, LDL 118 mg/dL today.
+
+RTC 5 mo.
+
 ```json payload
 {
   "visit": {

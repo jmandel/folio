@@ -17,11 +17,23 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref>
+**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** She presented to the ED with nausea, fatigue and deep, fast breathing, and was found to have a wide anion gap acidosis with a glucose of only 207. <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> She was treated with an insulin infusion and dextrose-containing fluids, then transitioned to subcutaneous insulin glargine. The anion gap closed and her symptoms resolved. She is eating normally.
+
+**Condition at discharge.** Vitals: BP 123/74, HR 104, RR 17, T 98.2 F, SpO2 94%. Basic metabolic panel on 2/24 at 06:12: sodium 131, potassium 4.4, chloride 102, bicarbonate 22, anion gap 7, urea nitrogen 16, creatinine 1.29, eGFR 47, glucose 158.
+
+**Allergies:** lisinopril (cough).
+
+**Medications at discharge**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by her PCP</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
+- <ref id="med_losartan">Losartan 50 mg daily: continue</ref>
+- Amlodipine 5 mg daily: continue
+- Semaglutide 0.5 mg subcutaneously weekly: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {

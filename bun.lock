@@ -9,6 +9,10 @@
         "typescript": "5.6.3",
       },
     },
+    "packages/agent-runner": {
+      "name": "@folio/agent-runner",
+      "version": "0.0.0",
+    },
     "packages/core": {
       "name": "@folio/core",
       "version": "0.1.0",
@@ -28,6 +32,9 @@
         "@folio/sync": "workspace:*",
       },
     },
+    "packages/render": {
+      "name": "@folio/render",
+    },
     "packages/sync": {
       "name": "@folio/sync",
       "version": "0.1.0",
@@ -38,13 +45,22 @@
         "@folio/core": "workspace:*",
       },
     },
+    "packages/truth": {
+      "name": "@folio/truth",
+    },
   },
   "packages": {
+    "@folio/agent-runner": ["@folio/agent-runner@workspace:packages/agent-runner"],
+
     "@folio/core": ["@folio/core@workspace:packages/core"],
 
     "@folio/personal-agent": ["@folio/personal-agent@workspace:packages/personal-agent"],
 
+    "@folio/render": ["@folio/render@workspace:packages/render"],
+
     "@folio/sync": ["@folio/sync@workspace:packages/sync"],
+
+    "@folio/truth": ["@folio/truth@workspace:packages/truth"],
 
     "@owf/identity-common": ["@owf/identity-common@0.4.2", "", {}, "sha512-z+iFDpBYo2Z2uVnE5UytKlAHPaKHReijHaVXl45Yb9LbeR12hGg5CdfzfY0Tfm5m/Dr8iClfAiFizA9JYuUJ0Q=="],
 

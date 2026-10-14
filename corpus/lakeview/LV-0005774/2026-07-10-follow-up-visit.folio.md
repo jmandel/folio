@@ -14,11 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 132/80, HR 73, weight 88 kg at 2026-07-10 09:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2020-07-06</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2008</ref>
-- eGFR 37 (today)
-- K 4.5 (today)
+Follow-up. Feels well, no new symptoms.
+
+<ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">diabetic</ref>. eGFR 37 today, K 4.5. Slow decline continues.
+
+<ref id="bp_sys">BP 132/80, HR 73, 88 kg.</ref> BP a little higher than usual.
+
+Repeat labs and return in 3 months.
 
 ```json payload
 {

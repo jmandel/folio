@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Pt reports a dry cough that has been bothersome.
 
-lisinopril: stopped today (dry cough)
+BP 130/81, pulse 69, wt 208 lb. Labs today: eGFR 64, K 4.6, A1c 7.8%, LDL 97 mg/dL.
 
-losartan: started 50 mg daily today (ACE inhibitor cough)
+Lisinopril stopped today (dry cough). Losartan started 50 mg daily today (ACE inhibitor cough). Lisinopril intolerance: dry cough.
 
-lisinopril intolerance: dry cough
+RTC 3 mo.
 
 ```json payload
 {

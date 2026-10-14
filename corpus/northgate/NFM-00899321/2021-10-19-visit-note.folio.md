@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new symptoms.
+BP 129/76, pulse 82, wt 217 lb.
+Labs 10/15: eGFR 78, K 4.1, LDL 171 mg/dL.
+Reviewed labs with pt, wt stable.
+RTC 6 mo.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+Chronic care visit. Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+BP 143/83, repeat 139/80, pulse 88, wt 198 lb.
+1/22 labs: eGFR 87, K 4.2, A1c 7.1%.
+Pt understands importance of refills and will call before running out.
+RTC 3 mo.
 
 ```json payload
 {

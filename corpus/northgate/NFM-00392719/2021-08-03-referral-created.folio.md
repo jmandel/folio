@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 43, UACR 248 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pleasant patient with CKD stage 3b, type 2 diabetes and essential hypertension. <ref id="referral">eGFR 43 and UACR 248 mg/g today; requesting CKD evaluation and management.</ref>
+
+BP in clinic was 141/87, repeat 136/86. A1c 7.9%, K 4.5. Kidney function has been stable around this level for some time, with persistent albuminuria.
+
+Please send recommendations to our office. Thank you.
+
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

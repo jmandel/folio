@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 151/97, pulse 67, wt 175 lb.
+Today: eGFR 37, K 4.6, A1c 7.2%, LDL 73 mg/dL.
+BP above goal today. Pt to check BP at home and bring log.
+RTC 3 mo.
 
 ```json payload
 {

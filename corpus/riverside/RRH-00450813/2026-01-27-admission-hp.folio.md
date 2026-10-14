@@ -16,11 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient was seen in the ED overnight with several days of nausea, fatigue and, tonight, shortness of breath with rapid, deep breathing. Evaluation showed a profound anion gap metabolic acidosis with a glucose of only 219. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. The patient takes <ref id="med_dapagliflozin">dapagliflozin 10 mg daily</ref>, which is now held.
+
+**Home medications.** Metformin 1000 mg twice daily with meals, lisinopril 40 mg daily, amlodipine 5 mg daily and atorvastatin 40 mg nightly, in addition to dapagliflozin. **Allergies:** none known.
+
+**Exam.** Vitals at 03:37: BP 114/68, HR 84, RR 23, T 98.2 F, SpO2 95%. Tired but alert, with deep respirations. Mucous membranes slightly dry. Abdomen soft and non-tender. Lungs clear.
+
+**Results.** On the 00:04 panel sodium was 135, potassium 5.1, chloride 97, bicarbonate 8, anion gap 30, urea nitrogen 38, creatinine 1.39, eGFR 54 and glucose 219.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Insulin infusion per DKA protocol at 0.1 units/kg/h has run since 00:51, with D5 lactated Ringer's at 150 mL/h since the same time. Chemistry will be rechecked serially until the gap closes.
+2. <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
+3. <ref id="med_lisinopril">Hold lisinopril</ref> for volume depletion and potassium; resume when eating.
+4. Dapagliflozin remains held.
+5. Hypertension and lipids: amlodipine and atorvastatin continue.
 
 ```json payload
 {

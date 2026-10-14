@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 137/80, HR 86, weight 93.4 kg at 2026-08-25 09:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2025-06-27</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2015</ref>
-- eGFR 41 (today)
-- K 4.7 (today)
-- UACR 566 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_htn">hypertensive</ref>. No new symptoms.
+
+<ref id="bp_sys">BP 137/80, HR 86, weight 93.4 kg</ref>.
+
+eGFR 41 today, K 4.7, UACR 566 mg/g. Stable compared with April (eGFR 42). Albuminuria persists.
+
+Return in 3 months with labs.
 
 ```json payload
 {

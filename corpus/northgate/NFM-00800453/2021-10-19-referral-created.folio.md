@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 40, UACR 284 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+<ref id="referral">I am referring Mr. for evaluation and management of chronic kidney disease. Labs today show eGFR 40 and UACR 284 mg/g.</ref>
+
+The patient has CKD stage 3b and essential hypertension, followed here. Kidney function has been slowly declining, and albuminuria persists. I would appreciate your assessment and recommendations for further management.
+
+Thank you for seeing this patient. Please call with any questions.
+
+Daniel Khan, MD
 
 ```json payload
 {

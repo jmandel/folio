@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">finerenone 10 mg daily added per outside record.</ref>
+<ref id="med_1">Finerenone 10 mg daily added to med list from Lakeview record.</ref> Confirmed with pt by phone.
 
 ```json payload
 {

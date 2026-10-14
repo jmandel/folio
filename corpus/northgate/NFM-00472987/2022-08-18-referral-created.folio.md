@@ -14,7 +14,18 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 45, UACR 12 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+Thank you for seeing this pt, who established care with me today. He has type 2 diabetes and essential hypertension, and has chronic kidney disease on his problem list.
+
+<ref id="referral">Referring for CKD evaluation and management: eGFR 45, UACR 12 mg/g.</ref>
+
+Please advise on workup and on anything we should change in his diabetes or BP regimen given his kidney function. I will continue to follow his diabetes and BP here and will send recent labs on request.
+
+Thank you for your help.
+
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

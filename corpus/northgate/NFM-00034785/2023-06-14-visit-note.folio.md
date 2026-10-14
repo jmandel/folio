@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u.
-
-lisinopril: resumed today (creatinine back to baseline)
-
-chlorthalidone: stopped today (AKI with hyperkalemia)
+Hosp f/u for acute kidney injury. Feels better, eating and drinking normally.
+BP 152/78, repeat 150/78. Pulse 85, wt 212 lb.
+Creatinine back to baseline, so lisinopril resumed today.
+Chlorthalidone stopped today (AKI with hyperkalemia).
+Recheck BP and labs in 1 mo.
 
 ```json payload
 {

@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-dapagliflozin: started 10 mg daily today (A1c 8.1)
-
-lisinopril: dose changed to 20 mg daily today (BP above goal)
+Chronic care visit. No new complaints.
+BP 142/84, pulse 72, wt 167 lb.
+eGFR 80, K 4.3, A1c 8.1% today.
+A1c up: dapagliflozin started 10 mg daily today.
+BP above goal: lisinopril dose changed to 20 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

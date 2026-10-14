@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 6/8 06:05 (local time): Sodium 138 mmol/L, Potassium 5.9 mmol/L (H), Chloride 105 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 10 mmol/L, Urea nitrogen 24 mg/dL (H), Creatinine 1.73 mg/dL (H), eGFR (CKD-EPI 2021) 37 mL/min/1.73m2 (L), Glucose 133 mg/dL (H)</ref>
+**Interval history.** Overnight the patient had no complaints and felt less tired this morning. Normal saline at 125 mL/h continues to run. No known drug allergies.
+
+**Exam.** Vitals at 07:25: BP 128/77, HR 100, RR 20, T 98.6 F, SpO2 95%. Heart rate remains at the upper end. Comfortable, lungs clear.
+
+**Results.** <ref id="bmp">The 06:05 panel showed sodium 138, potassium 5.9 (H), chloride 105, bicarbonate 23, anion gap 10, urea nitrogen 24 (H), creatinine 1.73 (H), eGFR 37 (L) and glucose 133 (H).</ref> The acidosis has cleared and the anion gap is normal. Potassium is better than on admission but still high.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, improving: creatinine 1.73 from 2.08 on admission, with urea nitrogen down from 59 to 24. Continue normal saline at 125 mL/h and repeat the BMP in the morning.
+2. Hyperkalemia, improving but potassium is still 5.9. Recheck with the morning labs.
+3. Hyperlipidemia: continue atorvastatin 40 mg nightly.
 
 ```json payload
 {

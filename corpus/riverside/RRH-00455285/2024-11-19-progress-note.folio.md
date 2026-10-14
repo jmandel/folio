@@ -16,10 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 11/19 06:29 (local time): Sodium 132 mmol/L (L), Potassium 4.2 mmol/L, Chloride 104 mmol/L, Bicarbonate (total CO2) 21 mmol/L (L), Anion gap 7 mmol/L, Urea nitrogen 16 mg/dL, Creatinine 1.06 mg/dL (H), eGFR (CKD-EPI 2021) 56 mL/min/1.73m2 (L), Glucose 173 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 15 units daily, started 11/19 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 11/18 17:05, stopped 11/19 09:00 (local times)</ref>
+**Interval.** He slept well and feels much better this morning. Nausea has resolved and he is no longer short of breath. Vitals at 07:12: BP 133/80, HR 89, RR 17, T 98.2 F, SpO2 99%. Exam is unremarkable; abdomen soft, lungs clear.
+
+**Results.** <ref id="bmp">The 06:29 panel shows sodium 132, potassium 4.2, chloride 104, bicarbonate 21, anion gap 7, urea nitrogen 16, creatinine 1.06, eGFR 56 and glucose 173.</ref> The gap has closed.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. <ref id="sc_glargine">Insulin glargine 15 units subcutaneously daily</ref> was given at 07:00. The <ref id="iv_insulin">insulin infusion per DKA protocol</ref> is overlapping and will be stopped at 09:00. Advance diet as tolerated. Endocrinology will see him today.
+2. Hyponatremia, mild at 132, with volume depletion improving; recheck tomorrow.
+3. Metformin, dapagliflozin and hydrochlorothiazide stay held. Continue losartan and atorvastatin.
+4. No known drug allergies.
 
 ```json payload
 {

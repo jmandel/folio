@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 142/80, HR 76, weight 103.5 kg at 2024-10-25 13:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2024-04-03</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2014-05</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2014</ref>
-- eGFR 59 (today)
-- K 4.9 (today)
+Follow-up for <ref id="dx_ckd">CKD G3a A3</ref> with <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>.
+
+eGFR 59, K 4.9 today. Potassium at the upper end of normal, watching it.
+
+<ref id="bp_sys">BP 142/80, HR 76, weight 103.5 kg</ref>. Well, no swelling.
+
+Repeat K and creatinine in 6 weeks. Return 4 months.
 
 ```json payload
 {

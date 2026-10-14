@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 40, UACR 14 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+Thank you for seeing this pt with chronic kidney disease stage 3b, type 2 diabetes and essential hypertension. <ref id="referral">Most recent eGFR is 40 with UACR 14 mg/g; I would appreciate your evaluation and help managing the CKD.</ref>
+
+Kidney function has been stable but below normal over the past year. Blood pressure has been somewhat above goal despite titration, and diabetes remains under active adjustment. Recent labs are available in the chart. Please send your recommendations and I will continue to see the pt here for routine care.
+
+Thank you for your help.
 
 ```json payload
 {

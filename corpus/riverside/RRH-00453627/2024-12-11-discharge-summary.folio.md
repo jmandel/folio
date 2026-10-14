@@ -17,13 +17,25 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
-- <ref id="med_furosemide">home med furosemide 40 mg tablet, 40 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="med_spironolactone">home med spironolactone 25 mg tablet, 25 mg 1 tab PO daily: stopped</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Hospital course.** The patient was admitted on 12/8 with hyperkalemia and acute kidney injury after four days of diarrhea. They were treated with IV calcium gluconate in the ED and with normal saline, which was stopped on 12/9 at 19:30. Potassium and creatinine improved steadily. <ref id="dx_aki">Acute kidney injury resolved.</ref> <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> The hyperkalemia also resolved.
+
+**Condition at discharge.** Vitals at 11:30: BP 121/73, HR 85, RR 17, T 98.7 F, SpO2 94%. The patient is eating and drinking normally and the diarrhea has stopped.
+
+**Results.** On the 12/11 06:20 panel: sodium 136, potassium 5.0, chloride 99, bicarbonate 25, anion gap 12, urea nitrogen 34, creatinine 0.96, eGFR 85, glucose 144.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- Carvedilol 12.5 mg twice daily: continue.
+- Atorvastatin 40 mg nightly: continue.
+- <ref id="med_metformin">Metformin 500 mg twice daily with meals: continue.</ref>
+- <ref id="med_losartan">Losartan 100 mg daily: held; the PCP will decide on restarting after a repeat BMP.</ref>
+- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: held; PCP to decide after a repeat BMP.</ref>
+- <ref id="med_furosemide">Furosemide 40 mg daily: held; PCP to decide after a repeat BMP.</ref>
+- <ref id="med_spironolactone">Spironolactone 25 mg daily: stopped.</ref>
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision on restarting the held blood pressure medicines.
 
 ```json payload
 {

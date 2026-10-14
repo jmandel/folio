@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-empagliflozin: started 10 mg daily today (A1c 8.2)
+Annual exam. BP 136/79, pulse 77, wt 234 lb.
+Labs 12/6: eGFR 75, K 4, UACR 55 mg/g, A1c 8.2%.
+A1c 8.2: empagliflozin started 10 mg daily today.
+Counseled on hydration and genital hygiene.
+RTC 3 mo.
 
 ```json payload
 {

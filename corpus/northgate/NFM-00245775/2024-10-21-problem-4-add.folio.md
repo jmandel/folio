@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Major depressive disorder, recurrent, mild.</ref>
+<ref id="prob_1">Major depressive disorder, recurrent, mild, onset 2022.</ref> Hx per pt, added at first visit.
 
 ```json payload
 {

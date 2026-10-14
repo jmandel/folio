@@ -16,8 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 1/24 06:16 (local time): Sodium 136 mmol/L, Potassium 3.9 mmol/L, Chloride 105 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 6 mmol/L (L), Urea nitrogen 24 mg/dL (H), Creatinine 1.47 mg/dL (H), eGFR (CKD-EPI 2021) 49 mL/min/1.73m2 (L), Glucose 167 mg/dL (H)</ref>
+**Interval.** The patient had a quiet day. The intravenous saline was stopped at 18:42 yesterday and the patient has been drinking and eating without trouble. Cough continues but is lessening. No known drug allergies.
+
+**Exam.** Vitals at 07:24: BP 123/74, HR 79, RR 19, T 98.9 F, SpO2 95%. The patient is sitting up in bed, talking in full sentences. Breathing is unlabored.
+
+**Results.** <ref id="bmp">The 06:16 basic metabolic panel shows sodium 136, potassium 3.9, chloride 105, bicarbonate 25, anion gap 6 (L), urea nitrogen 24 (H), creatinine 1.47 (H) with an eGFR of 49 (L), and glucose 167 (H)</ref>. Sodium stayed normal after the saline was stopped, and creatinine continues to come down, from 1.58 yesterday.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>: improving, with stable vitals and oxygen saturation of 95%. Continue current treatment and encourage walking and fluids.
+2. Kidney function: creatinine 1.47 and improving off IV fluids. Repeat the basic metabolic panel tomorrow morning.
 
 ```json payload
 {

@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 41, UACR 11 mg/g: CKD evaluation and management</ref>
+Dear Nephrology colleague,
+
+Thank you for seeing this new patient of our practice, who has essential hypertension and chronic kidney disease. <ref id="referral">eGFR 41 and UACR 11 mg/g on labs drawn 7/9. Requesting CKD evaluation and management.</ref>
+
+BP in the office today was 141/85, repeat 139/82. Potassium was 4.6. Records from before this practice are limited and the history is per the patient.
+
+Please send your recommendations to our office. We will continue to follow BP here in the meantime.
+
+Thank you for your help.
 
 ```json payload
 {

@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. Feels well.
+BP 131/86, pulse 67, wt 196 lb.
+9/3 labs: eGFR 65, K 4.2, UACR 311 mg/g, A1c 8%.
+UACR remains high. Referring to nephrology for CKD.
+RTC 3 mo.
 
 ```json payload
 {

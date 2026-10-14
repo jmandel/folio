@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-dapagliflozin: started 10 mg daily today (A1c 8.3)
-
-amlodipine: started 5 mg daily today (BP above goal)
+DM2 f/u. Pt doing OK, no new symptoms.
+BP 140/85, repeat 138/85, pulse 64, wt 184 lb.
+Labs 5/12: eGFR 88, K 4.2, UACR 202 mg/g, A1c 8.3%.
+Dapagliflozin started 10 mg daily today (A1c 8.3). Amlodipine started 5 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

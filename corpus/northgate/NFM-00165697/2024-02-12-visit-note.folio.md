@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.4)
+Chronic care visit. No new symptoms.
+BP 117/76, pulse 73, wt 213 lb.
+Labs 2/6: eGFR 60, K 3.8, A1c 8.4%.
+Metformin dose changed to 1000 mg twice daily today for A1c 8.4.
+RTC 4 mo.
 
 ```json payload
 {

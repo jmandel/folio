@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">hold losartan: vomiting, poor oral intake.</ref>
+<ref id="med_1">Losartan 50 mg QD held today for vomiting and poor oral intake.</ref> Review 1/26.
 
 ```json payload
 {

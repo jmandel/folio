@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.3)
+DM2 f/u. Doing OK, no new complaints.
+BP 130/80, pulse 83, wt 174 lb.
+2/28 labs: eGFR 53, K 4.6, A1c 8.3%, LDL 82 mg/dL.
+A1c 8.3, metformin increased to 1000 mg BID today.
+RTC 3 mo.
 
 ```json payload
 {

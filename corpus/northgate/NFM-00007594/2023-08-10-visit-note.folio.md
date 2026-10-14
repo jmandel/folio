@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u. No new symptoms.
+BP 129/76, pulse 74, wt 208 lb.
+eGFR 74, LDL 137 mg/dL today.
+Discussed results and diet with pt.
+RTC 6 mo.
 
 ```json payload
 {

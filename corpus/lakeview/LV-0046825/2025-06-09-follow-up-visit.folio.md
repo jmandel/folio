@@ -14,13 +14,12 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 132/80, HR 71, weight 94.9 kg at 2025-06-09 10:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2020-01-22</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2011-02-21</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2011</ref>
-- eGFR 33 (today)
-- K 5.2 (today)
-- UACR 508 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, with more albuminuria and lower eGFR.
+
+eGFR 33 today (37 in 12/2024), K 5.2 today, UACR 508 mg/g today.
+<ref id="bp_sys">BP 132/80, HR 71, weight 94.9 kg</ref>.
+
+K is higher than at prior visits. <ref id="dx_dm">Type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref> remain the cause. Repeat K and creatinine soon; return in 4 months.
 
 ```json payload
 {

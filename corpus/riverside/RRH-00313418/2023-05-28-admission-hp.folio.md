@@ -16,11 +16,21 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: held (prescriber_decides) "Hold for volume depletion"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
+**Reason for admission:** hyperkalemia and acute kidney injury.
+
+**History of present illness.** The patient came to the ED last night after several days of watery diarrhea, with poor intake and weakness. In the ED the potassium was 6.5 and creatinine 1.89, with sodium 129 and urea nitrogen 54 on the 23:02 panel. Normal saline was started at 23:31 as a bolus and then 125 mL/h, and it is still running. No known drug allergies.
+
+**Home medications.** Lisinopril 40 mg daily and chlorthalidone 12.5 mg (half of a 25 mg tablet) daily.
+
+**Exam.** Vitals at 05:17: BP 131/79, HR 94, RR 17, T 98.6 F, SpO2 94%. Awake and comfortable, mildly dry mucous membranes, lungs clear, abdomen soft.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>: <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> Continue normal saline at 125 mL/h, strict intake and output, and repeat BMP this morning. Avoid nephrotoxins.
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.5 on arrival. Continue monitoring with repeat potassium on the morning panel.
+3. <ref id="med_lisinopril">Hold lisinopril until creatinine is back to baseline</ref>; it can be resumed when able.
+4. <ref id="med_chlorthalidone">Hold chlorthalidone for volume depletion.</ref>
+5. Hyponatremia, sodium 129, hypovolemic; should improve with saline.
 
 ```json payload
 {

@@ -17,8 +17,20 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
+**Diagnosis:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted from the ED with cough, low-grade fever and breathlessness, and was found to have community-acquired pneumonia with dehydration and reduced kidney function. Creatinine was 1.67 with urea nitrogen 54 on arrival. With IV fluids and treatment of the pneumonia, symptoms improved steadily, oxygen saturation remained good, and oral intake returned to normal. Metformin and empagliflozin were held during the acute illness. Allergies: NKDA.
+
+**Discharge results.** Basic metabolic panel on 3/30 at 06:14: sodium 135 (L), potassium 3.9, chloride 101, bicarbonate 22, anion gap 12, urea nitrogen 21, creatinine 1.39 (H), eGFR 42 (L), glucose 113 (H). Creatinine has improved from 1.67 on admission and is stable for discharge; sodium is only slightly low.
+
+**Condition at discharge.** Vitals at 09:15: BP 133/80, HR 109, RR 22, T 99 F, SpO2 98%. He feels well, is eating and drinking normally, and has only a mild residual cough. Condition is stable.
+
+**Medications at discharge**
+
+- <ref id="med_metformin">Metformin 500 mg by mouth twice daily with meals: continue</ref>
+- Empagliflozin 10 mg by mouth daily: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. He should return sooner for worsening breathlessness, fever, or inability to keep fluids down.
 
 ```json payload
 {

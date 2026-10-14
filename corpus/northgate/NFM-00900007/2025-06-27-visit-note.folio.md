@@ -14,11 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new complaints.
+
+BP 130/77, pulse 69, wt 178 lb.
+
+A1c 8.3. Dulaglutide started 0.5 mg weekly today.
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.3)
+RTC 3 mo.
 
 ```json payload
 {

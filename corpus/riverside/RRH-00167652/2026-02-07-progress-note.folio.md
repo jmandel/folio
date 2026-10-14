@@ -16,10 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 2/7 06:30 (local time): Sodium 136 mmol/L, Potassium 3.9 mmol/L, Chloride 98 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 15 mmol/L, Urea nitrogen 20 mg/dL, Creatinine 1.11 mg/dL, eGFR (CKD-EPI 2021) 76 mL/min/1.73m2, Glucose 171 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 12 units daily, started 2/7 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 2/5 22:15, still running (local times)</ref>
+**Interval.** The patient is improving. At 07:11: BP 123/74, HR 101, RR 23, T 98.9 F, SpO2 95%. No known drug allergies.
+
+**Results.** <ref id="bmp">On the 06:30 panel: sodium 136, potassium 3.9, chloride 98, bicarbonate 23, anion gap 15, urea nitrogen 20, creatinine 1.11, eGFR 76, glucose 171.</ref> The acidosis has cleared and the gap is closing.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving. The <ref id="iv_insulin">insulin infusion per DKA protocol</ref> is still running, and <ref id="sc_glargine">insulin glargine 12 units subcutaneously daily</ref> was started at 07:00 as the first step toward transition.
+2. Empagliflozin and metformin remain held.
+3. Glipizide, lisinopril and amlodipine continue as listed; chlorthalidone remains held.
+4. Renal function has improved, creatinine 1.11.
 
 ```json payload
 {

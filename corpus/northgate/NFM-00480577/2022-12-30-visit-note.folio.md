@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 44)
-
-amlodipine: started 5 mg daily today (BP above goal)
+Annual exam. Feels well.
+BP 141/83, repeat 133/83, pulse 76, wt 237 lb.
+eGFR 44, metformin dose changed to 500 mg twice daily today.
+BP above goal, amlodipine started 5 mg daily today.
+RTC 3 mo to recheck BP.
 
 ```json payload
 {

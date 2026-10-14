@@ -14,11 +14,11 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 122/80, HR 66, weight 89.1 kg at 2024-09-02 13:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2024-08-07</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2017</ref>
-- eGFR 34 (today)
-- K 4.9 (today)
+Follow-up for <ref id="dx_ckd">CKD G3b A2</ref>, hypertensive (<ref id="dx_htn">essential hypertension since 2017</ref>).
+
+eGFR 34 today, K 4.9. <ref id="bp_sys">BP 122/80, HR 66, weight 89.1 kg</ref>. BP at goal. Feels well, no new complaints, no edema on exam.
+
+Potassium is at the upper end, so we will watch it closely. Repeat K and creatinine in 6 weeks. Return 3 months.
 
 ```json payload
 {

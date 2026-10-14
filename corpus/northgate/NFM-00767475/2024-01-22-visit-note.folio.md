@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-empagliflozin: started 10 mg daily today (HFrEF)
+Annual exam. Feels well.
+BP 115/62, pulse 83, wt 192 lb.
+eGFR 60, K 4.5 today. CKD stage 3a.
+Empagliflozin: started 10 mg daily today (HFrEF).
+RTC 3 mo.
 
 ```json payload
 {

@@ -16,13 +16,24 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_chlorthalidone">home med chlorthalidone 25 mg tablet, 12.5 mg 1/2 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient came to the ED with several days of fever, malaise and very little to eat or drink, followed by shortness of breath. <ref id="precipitant">The ketoacidosis was precipitated by influenza with fever and poor oral intake.</ref> They take <ref id="med_empagliflozin">empagliflozin 10 mg daily, which is held</ref>.
+
+**Medications and allergies.** Metformin 1000 mg twice daily with meals, glipizide 5 mg daily, losartan 100 mg daily, chlorthalidone 12.5 mg daily, and atorvastatin 20 mg nightly. Allergies: NKDA.
+
+**Exam.** Vitals at 03:57: BP 109/65, HR 107, RR 16, T 98.3 F, SpO2 96%. Dry mucous membranes, tachycardic, lungs clear. Abdomen soft.
+
+**Results.** Basic metabolic panel from 21:36: sodium 128, potassium 4.7, chloride 92, bicarbonate 12, anion gap 24, urea nitrogen 38, creatinine 0.96, eGFR 61, glucose 217. Lipase 29.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Insulin infusion per DKA protocol (started 22:15) continues with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Empagliflozin is held as above.
+2. <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref>: lipase 29.
+3. Metformin: <ref id="med_metformin">hold while acidotic and NPO</ref>; resume when able.
+4. Volume depletion and hyponatremia: <ref id="med_chlorthalidone">hold chlorthalidone</ref> and resume when able.
+5. Hypertension: <ref id="med_losartan">continue losartan</ref>.
+6. Continue glipizide and atorvastatin.
 
 ```json payload
 {

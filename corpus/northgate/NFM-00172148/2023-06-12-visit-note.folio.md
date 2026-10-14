@@ -14,15 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-lisinopril: stopped today (dry cough)
-
-losartan: held today (K 5.7 confirmed on repeat); review 2023-06-26
-
-lisinopril intolerance: dry cough
-
-Patient ran out of amlodipine about 3 weeks ago and has not been taking it.
+DM2 f/u. Dry cough bothering pt. Lisinopril intolerance: dry cough. Lisinopril stopped today (dry cough).
+Pt ran out of amlodipine about 3 weeks ago and has not been taking it.
+BP 131/83, pulse 80, wt 147 lb.
+Labs 6/10: eGFR 85, K 4.4, UACR 56 mg/g, A1c 7%.
+Losartan held today (K 5.7 confirmed on repeat); review 6/26.
 
 ```json payload
 {

@@ -16,13 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_furosemide">home med furosemide 40 mg tablet, 40 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient was seen in the ED with nausea, fatigue and fast, deep breathing, and was found to be acidotic with a near-normal glucose of 186. They take empagliflozin at home. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. Insulin infusion at 0.1 units/kg/h with D5 lactated Ringer's at 150 mL/h was started at 19:58 and both are running.
+
+**Allergies:** NKDA.
+
+**Exam.** At 00:19: BP 127/76, HR 81, RR 16, T 99 F, SpO2 98%. Looks tired but comfortable, mucous membranes slightly dry, lungs clear, abdomen soft and non-tender.
+
+**Results.** On the 19:11 panel sodium 128, potassium 5.6, chloride 92, bicarbonate 14, anion gap 22, urea nitrogen 39, creatinine 0.85, glucose 186. Lipase 30.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated.</ref> Continue the insulin infusion and D5 lactated Ringer's. <ref id="med_empagliflozin">Hold empagliflozin.</ref> <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
+2. <ref id="dx_pancreatitis">Pancreatitis ruled out</ref>: lipase 30.
+3. Hyponatremia, sodium 128, with volume depletion. <ref id="med_furosemide">Hold furosemide</ref> for volume depletion.
+4. Hyperkalemia, potassium 5.6. <ref id="med_losartan">Hold losartan</ref> for volume depletion and potassium; resume when eating.
+5. Continue carvedilol and spironolactone.
 
 ```json payload
 {

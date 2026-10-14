@@ -14,12 +14,12 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 134/80, HR 78, weight 61 kg at 2025-03-03 13:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2025-05-21</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2017</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2011</ref>
-- eGFR 55 (today)
-- K 4.3 (today)
+<ref id="dx_ckd">CKD G3a A3</ref>, <ref id="dx_dm">type 2 diabetes</ref> and <ref id="dx_htn">hypertension</ref>. eGFR has crossed below 60.
+
+<ref id="bp_sys">BP 134/80, HR 78, weight 61 kg.</ref>
+eGFR 55 (today), K 4.3 (today).
+
+No edema, no new symptoms. Discussed the trend with the patient. Return in 3 months with labs.
 
 ```json payload
 {

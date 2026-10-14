@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-empagliflozin: started 10 mg daily today (A1c 8.3)
+Chronic care visit. Feels well.
+BP 129/77, pulse 64, wt 222 lb.
+Labs 12/17: eGFR 67, K 4.2, UACR 12 mg/g, A1c 8.3%, LDL 55 mg/dL.
+A1c up at 8.3, so empagliflozin started today, 10 mg daily. Pt counseled on what to expect.
+RTC 3 mo.
 
 ```json payload
 {

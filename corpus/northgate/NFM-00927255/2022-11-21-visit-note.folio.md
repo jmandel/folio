@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establish care. Records history reviewed with pt.
+
+BP 118/71, pulse 87, wt 177 lb.
+
+Feels well, no new complaints today.
+
+Problem list built from pt's history.
+
+RTC for chronic care visit.
 
 ```json payload
 {

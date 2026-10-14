@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Feels well, no weakness or palpitations.
+BP 131/77, pulse 73, wt 162 lb.
+12/19 labs: eGFR 72. K 6 but sample hemolyzed; repeat same day K 4.8.
+Repeat K drawn today, will call pt with result.
+RTC 3 mo.
 
 ```json payload
 {

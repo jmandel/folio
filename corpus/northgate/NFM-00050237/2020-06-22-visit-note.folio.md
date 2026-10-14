@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. No new complaints.
+BP 161/93, repeat 154/90. Pulse 83, wt 221 lb.
+eGFR 59, K 4.5 today. CKD stage 3a on problem list.
+BP above goal, lisinopril dose changed to 40 mg daily today.
+RTC 3 mo for BP check.
 
 ```json payload
 {

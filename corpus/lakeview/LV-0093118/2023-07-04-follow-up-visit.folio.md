@@ -14,12 +14,14 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 127/80, HR 81, weight 78.9 kg at 2023-07-04 13:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2024-11-26</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012</ref>
-- eGFR 62 (today)
-- K 4.1 (today)
-- UACR 666 mg/g (today)
+<ref id="dx_ckd">CKD G2 A3</ref>, diabetic. Well today, no swelling or shortness of breath.
+
+<ref id="bp_sys">BP 127/80, HR 81, weight 78.9 kg</ref>.
+
+eGFR 62, K 4.1, UACR 666 mg/g. Slight slide in eGFR, albuminuria still heavy.
+Cause remains <ref id="dx_dm">type 2 diabetes, diagnosed 2012</ref>.
+
+Repeat labs and return in 5 months.
 
 ```json payload
 {

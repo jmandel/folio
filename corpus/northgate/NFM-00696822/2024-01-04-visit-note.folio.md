@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-dapagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+Annual exam. BP 139/84, pulse 64, wt 193 lb.
+Labs 12/29/23: eGFR 41, K 4.6, UACR 13 mg/g, A1c 7.5%. CKD stage 3b on the list.
+Dapagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+RTC 3 mo.
 
 ```json payload
 {

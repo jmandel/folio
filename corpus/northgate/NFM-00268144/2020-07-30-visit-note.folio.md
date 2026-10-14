@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. No new complaints.
 
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+BP 143/87, repeat 140/84. Pulse 65, wt 203 lb.
+
+Labs today: eGFR 50, K 4.6, UACR 507 mg/g, A1c 7.7%. Meets criteria for CKD stage 3a, added to problem list.
+
+BP above goal, so lisinopril dose changed to 40 mg daily today.
 
 ```json payload
 {

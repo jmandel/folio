@@ -16,9 +16,23 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** pneumonia.
+
+**History of present illness.** The patient was seen in the ED on the evening of 11/26 after several days of cough, fever and tiredness with shortness of breath on exertion. She has been eating and drinking poorly over that time. She has no chest pain, no vomiting and no known drug allergies. She is admitted for treatment of <ref id="dx_pneumonia">community-acquired pneumonia</ref>.
+
+**Home medications.** Metformin, empagliflozin, dulaglutide, insulin glargine, lisinopril, amlodipine and atorvastatin, plus one other daily medication that continues unchanged. Reconciliation is below.
+
+**Exam.** Vitals at 02:02: BP 112/67, HR 78, RR 22, T 98.1 F, SpO2 95%. She is comfortable at rest but breathes a little faster than normal. Crackles are heard at the right base. Heart sounds are regular. Abdomen is soft. No leg swelling.
+
+**Results.** The basic metabolic panel from 11/26 20:27 showed sodium 137, potassium 4.8, chloride 101, bicarbonate 18 (low), anion gap 18 (high), urea nitrogen 38 (high), creatinine 2.11 (high), eGFR 38 and glucose 121. Normal saline at 75 mL/h has been running since 21:02.
+
+**Assessment and plan**
+
+1. Community-acquired pneumonia, as above, with monitoring of her breathing and oxygen saturation overnight.
+2. Abnormal chemistry with a low bicarbonate, raised anion gap and elevated creatinine; continue saline at 75 mL/h and repeat the panel with morning labs.
+3. <ref id="med_metformin">Hold metformin during the acute illness</ref>; plan to resume when able.
+4. <ref id="med_empagliflozin">Hold empagliflozin while she is not eating</ref>; plan to resume when able.
+5. Continue dulaglutide, insulin glargine 14 units nightly, lisinopril, amlodipine and atorvastatin, and her other daily home medication, at home doses.
 
 ```json payload
 {

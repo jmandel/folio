@@ -14,15 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Pt reports dry cough on lisinopril.
 
-lisinopril: stopped today (dry cough)
+BP 148/99, repeat 141/97. Pulse 81, wt 185 lb.
 
-lisinopril: stopped today (dry cough)
+Lisinopril stopped today (dry cough). Logged as lisinopril intolerance: dry cough.
 
-losartan: started 50 mg daily today (ACE inhibitor cough)
+Losartan started 50 mg daily today (ACE inhibitor cough).
 
-lisinopril intolerance: dry cough
+RTC to recheck BP.
 
 ```json payload
 {

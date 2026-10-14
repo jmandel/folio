@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 43, UACR 33 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this patient with Chronic kidney disease stage 3a, along with type 2 diabetes mellitus and essential hypertension. <ref id="referral">Today eGFR is 43 and UACR is 33 mg/g; I am asking for CKD evaluation and management.</ref>
+
+Kidney function has declined gradually over the past couple of years. Potassium today is 4.3 and A1c is 7.5%. BP today was 133/81. I have adjusted metformin for the lower eGFR.
+
+Please advise on further work-up and on how best to slow progression. I would be glad to share any records you need. Thank you for your help with this patient.
 
 ```json payload
 {

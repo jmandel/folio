@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No headache or chest pain.
+BP 137/81, pulse 73, wt 214 lb.
+eGFR 65, K 4.5 today.
+Reviewed readings with pt, continue home BP log.
+RTC 3 mo.
 
 ```json payload
 {

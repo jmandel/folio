@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 47, UACR 20 mg/g: CKD evaluation and management</ref>
+Dear Dr. colleague at Lakeview Kidney Care,
+
+Thank you for seeing this pt with stage 3a CKD, type 2 diabetes and essential hypertension. <ref id="referral">Most recent eGFR 47 with UACR 20 mg/g; referred for CKD evaluation and management.</ref>
+
+Kidney function has been stable in the 40s over the past couple of years. BP is currently at goal. Please advise on further workup and any changes you would recommend to the plan. I am happy to continue routine diabetes and BP care here in the meantime.
+
+Thank you for your help.
+
+Teresa Reyes, MD
+Northgate Family Medicine
 
 ```json payload
 {

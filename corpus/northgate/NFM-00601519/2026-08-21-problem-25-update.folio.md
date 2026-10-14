@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Chronic kidney disease stage 3b.</ref>
+<ref id="prob_1">CKD updated to stage 3b. eGFR 33 on 3/30 and 35 today, UACR 234 mg/g today.</ref>
 
 ```json payload
 {

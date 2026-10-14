@@ -14,7 +14,8 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start insulin glargine: A1c 8.6.</ref>
+<ref id="med_1">A1c 8.6. Start insulin glargine pen 10 units at bedtime.</ref>
+Pt informed, pen teaching done.
 
 ```json payload
 {

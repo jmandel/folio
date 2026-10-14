@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No symptoms.
+BP 149/88, repeat 143/88, pulse 66, wt 185 lb.
+eGFR 93, K 4.6 today.
+Still above goal on both readings. Home BP log to be kept.
+RTC 3 mo.
 
 ```json payload
 {

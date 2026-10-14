@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Phone: sick, vomiting.
+Phone call. Pt sick with vomiting, not keeping much down.
 
-metformin: held today (vomiting, poor oral intake); review 2025-07-21
+Metformin held today (vomiting, poor oral intake); review 7/21.
+
+Advised to sip fluids and call back if worse.
 
 ```json payload
 {

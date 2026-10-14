@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+New pt, establishing care.
+BP 151/86, repeat 147/85. Pulse 81, wt 183 lb.
+Empagliflozin started 10 mg daily today for CKD + DM, cardiorenal benefit.
+Reviewed hx with pt. Questions answered.
+RTC to recheck BP and labs.
 
 ```json payload
 {

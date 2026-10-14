@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-empagliflozin: started 10 mg daily today (HFrEF)
+New pt, establishing care. BP 113/74, pulse 63, wt 218 lb.
+Labs 8/6: eGFR 74, K 4.6, UACR 154 mg/g, A1c 6.1%, LDL 126 mg/dL.
+Empagliflozin started 10 mg daily today for HFrEF.
+Records requested from prior office. RTC to review labs and tolerance.
 
 ```json payload
 {

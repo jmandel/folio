@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History of HTN, DM2 and hyperlipidemia per pt.
+BP 147/91, repeat 144/88, pulse 76, wt 189 lb.
+Labs 5/10: eGFR 54, K 4.4, A1c 7.6%, LDL 97 mg/dL.
+Reviewed labs with pt. Referring to nephrology. RTC 3 mo.
 
 ```json payload
 {

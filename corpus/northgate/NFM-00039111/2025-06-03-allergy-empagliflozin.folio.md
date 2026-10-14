@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">empagliflozin: euglycemic diabetic ketoacidosis.</ref>
+<ref id="alg_1">Empagliflozin: euglycemic DKA.</ref> Entered as adverse reaction.
 
 ```json payload
 {

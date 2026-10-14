@@ -16,7 +16,11 @@ schema:
 ---
 Annual exam.
 
-amlodipine: started 5 mg daily today (BP above goal)
+BP 152/91, repeat 145/88, pulse 65, wt 190 lb.
+
+Today eGFR 57, K 4.6, UACR 236 mg/g, A1c 7.5%.
+
+BP still above goal, amlodipine started 5 mg daily today.
 
 ```json payload
 {

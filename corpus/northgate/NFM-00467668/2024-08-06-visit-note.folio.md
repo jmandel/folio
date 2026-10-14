@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Doing OK, no new complaints.
+BP 118/76, pulse 88, wt 224 lb.
+Labs 8/4: eGFR 41, K 4.6, A1c 7.5%.
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
+
+RTC 3 mo.
 
 ```json payload
 {

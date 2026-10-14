@@ -16,10 +16,34 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_spironolactone">home med spironolactone 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** <ref id="dx_pneumonia">community-acquired pneumonia</ref>.
+
+**History of present illness.** The patient came to the ED last night with several days of cough, feeling unwell and breathlessness. They were found to have an elevated white count and abnormal chemistries and were admitted for treatment and monitoring. Intravenous normal saline at 75 mL/h was started at 23:31 and continues.
+
+**Home medications**
+
+- Glipizide 5 mg daily: continue
+- Insulin glargine 10 units nightly: continue
+- Losartan 100 mg daily: continue
+- Hydrochlorothiazide 25 mg daily: continue
+- Carvedilol 12.5 mg twice daily: continue
+- Furosemide 40 mg daily: continue
+- Atorvastatin 40 mg nightly: continue
+- <ref id="med_spironolactone">Spironolactone 25 mg daily: held until creatinine is back to baseline</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily: held during the acute illness</ref>
+- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: held while not eating</ref>
+
+**Allergies:** NKDA.
+
+**Exam.** Vitals at 04:44: BP 123/74, HR 108, RR 16, T 99.2 F, SpO2 97%. Comfortable at rest, speaking in full sentences. Crackles at the lung bases. Regular rhythm, tachycardic. Abdomen soft.
+
+**Results.** Sodium 131, potassium 4.7, bicarbonate 19, anion gap 10, urea nitrogen 35, creatinine 1.80, eGFR 41, glucose 173 on the 23:02 panel.
+
+**Assessment and plan**
+
+1. Community-acquired pneumonia: continue treatment as started in the ED, monitor temperature and oxygen saturation, and recheck chemistry in the morning.
+2. Elevated creatinine with low sodium: continue IV saline and repeat labs. The three held medications above are held for the reasons stated and will be resumed when able.
+3. All other home medications are continued as listed.
 
 ```json payload
 {

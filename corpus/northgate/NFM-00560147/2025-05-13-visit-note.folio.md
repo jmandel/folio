@@ -14,9 +14,9 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Phone: sick, vomiting.
-
-losartan: held today (vomiting, poor oral intake); review 2025-05-20
+Phone call, pt sick with vomiting and poor oral intake.
+Losartan held today (vomiting, poor oral intake); review 5/20.
+Advised small sips of fluids. Call back or come in if worse or unable to keep fluids down.
 
 ```json payload
 {

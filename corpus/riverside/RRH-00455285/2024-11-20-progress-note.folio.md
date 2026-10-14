@@ -16,9 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 11/20 06:09 (local time): Sodium 137 mmol/L, Potassium 4.1 mmol/L, Chloride 104 mmol/L, Bicarbonate (total CO2) 20 mmol/L (L), Anion gap 13 mmol/L, Urea nitrogen 19 mg/dL, Creatinine 1.16 mg/dL (H), eGFR (CKD-EPI 2021) 50 mL/min/1.73m2 (L), Glucose 124 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 15 units daily, started 11/19 07:00, still running (local times)</ref>
+**Interval.** He is eating well and has had no nausea or abdominal pain. He is working with therapy on his knee. Vitals at 07:38: BP 113/68, HR 89, RR 20, T 99 F, SpO2 94%. Lungs are clear and he is comfortable at rest.
+
+**Results.** <ref id="bmp">The 06:09 panel shows sodium 137, potassium 4.1, chloride 104, bicarbonate 20, anion gap 13, urea nitrogen 19, creatinine 1.16, eGFR 50 and glucose 124.</ref> Sodium has normalized and the gap remains closed.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved with no recurrence of ketoacidosis off the infusion. Continue <ref id="sc_glargine">insulin glargine 15 units subcutaneously daily</ref> and monitor glucose before meals.
+2. Creatinine 1.16, close to where it was; continue to encourage oral fluids and recheck tomorrow.
+3. Dapagliflozin, metformin and hydrochlorothiazide remain held. Continue losartan and atorvastatin.
+4. No known drug allergies. Planning discharge in the next day or so if labs hold.
 
 ```json payload
 {

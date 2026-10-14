@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+DM f/u. Feels well.
+BP 146/94, pulse 74, wt 197 lb.
+7/30 labs: eGFR 81, K 4.9, A1c 7.2%, LDL 134 mg/dL.
+Chlorthalidone started 12.5 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-losartan: dose changed to 100 mg daily today (BP above goal)
+Chronic care visit. Feels well.
+BP 150/93, repeat 148/91, pulse 64, wt 183 lb.
+Labs today: eGFR 91, K 4.6, A1c 7.6%, LDL 119 mg/dL.
+BP above goal, losartan dose changed to 100 mg daily today.
+RTC 3 mo, BP recheck.
 
 ```json payload
 {

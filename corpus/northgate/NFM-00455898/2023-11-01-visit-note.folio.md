@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+DM f/u. Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+BP 137/82, pulse 69, wt 231 lb.
+Labs 10/29: eGFR 50, K 4.3, UACR 12 mg/g, A1c 7.8%.
+CKD stage 3a on problem list.
+Will recheck as needed, RTC per plan.
 
 ```json payload
 {

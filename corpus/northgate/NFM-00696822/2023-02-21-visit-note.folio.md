@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx HTN, DM2 and hyperlipidemia per pt.
+BP 146/93, pulse 79, wt 200 lb.
+Labs today: eGFR 44, K 4.7, UACR 7 mg/g, A1c 7.7%, LDL 90.
+Reduced eGFR noted, nephrology referral placed.
+RTC 3 mo.
 
 ```json payload
 {

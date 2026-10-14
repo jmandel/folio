@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 59, UACR 288 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this pt with chronic kidney disease, type 2 diabetes mellitus and essential hypertension. <ref id="referral">Labs today show eGFR 59 and UACR 288 mg/g; I would appreciate your evaluation and management of the CKD.</ref>
+
+Recent notes and results are available in the chart. Please send your recommendations to our office, and we will continue to see the pt for primary care and diabetes follow-up.
+
+Thank you for your help.
+
+Daniel Khan, MD
+Northgate Family Medicine
 
 ```json payload
 {

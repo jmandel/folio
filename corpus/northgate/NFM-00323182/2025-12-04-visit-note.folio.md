@@ -15,8 +15,10 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Chronic care visit.
-
-dapagliflozin: started 10 mg daily today (A1c 8.4)
+BP 142/85, pulse 73, wt 212 lb.
+Labs 12/2: eGFR 97, K 4.3, UACR 75 mg/g, A1c 8.4%.
+A1c above goal, dapagliflozin 10 mg daily started today (A1c 8.4).
+RTC 3 mo.
 
 ```json payload
 {

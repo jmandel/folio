@@ -16,10 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 2/22 06:02 (local time): Sodium 133 mmol/L (L), Potassium 4.4 mmol/L, Chloride 102 mmol/L, Bicarbonate (total CO2) 21 mmol/L (L), Anion gap 10 mmol/L, Urea nitrogen 26 mg/dL (H), Creatinine 1.32 mg/dL (H), eGFR (CKD-EPI 2021) 45 mL/min/1.73m2 (L), Glucose 123 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 2/22 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 2/21 15:51, stopped 2/22 09:00 (local times)</ref>
+**Interval.** Overnight course was uneventful. She feels much better this morning and breathing is comfortable.
+
+**Exam.** At 07:35: BP 131/79, HR 92, RR 17, T 98 F, SpO2 98%. Looks well, mucous membranes moist, abdomen soft.
+
+**Results.** <ref id="bmp">The 06:02 panel: sodium 133, potassium 4.4, chloride 102, bicarbonate 21, anion gap 10, urea nitrogen 26, creatinine 1.32, eGFR 45, glucose 123.</ref> The gap has closed.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving, with the acidosis resolved on this morning's panel. Subcutaneous <ref id="sc_glargine">insulin glargine 18 units daily was started at 07:00</ref>, and the <ref id="iv_insulin">insulin infusion is to stop at 09:00</ref> so the long-acting insulin overlaps.
+2. Empagliflozin, metformin and losartan remain held. Amlodipine and weekly semaglutide continue.
+3. Allergy: lisinopril (cough).
 
 ```json payload
 {

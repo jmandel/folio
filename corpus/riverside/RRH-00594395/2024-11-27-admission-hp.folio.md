@@ -16,11 +16,24 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient is a man with type 2 diabetes, hypertension and chronic kidney disease who came to the ED on 11/27 feeling unwell, with a metabolic acidosis on laboratory testing despite a near-normal glucose. He takes dapagliflozin as part of his diabetes regimen. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+
+**Home medications.** Dapagliflozin 10 mg daily, metformin 500 mg twice daily with meals, losartan 100 mg daily and atorvastatin 20 mg nightly.
+
+**Allergies:** NKDA.
+
+**Exam.** Vitals at 21:03: BP 117/70, HR 83, RR 19, T 98.2 F, SpO2 96%. He is comfortable and in no acute distress on the insulin infusion.
+
+**Results.** On the 16:04 panel: sodium 134, potassium 5.1, chloride 95, bicarbonate 8, anion gap 31, urea nitrogen 33, creatinine 2.83, eGFR 27, glucose 183.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol (0.1 units/kg/h, started 16:51) with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. <ref id="med_dapagliflozin">Hold dapagliflozin.</ref>
+2. Diabetes: <ref id="med_metformin">hold metformin</ref> while acidotic and NPO.
+3. Hypertension and elevated creatinine: <ref id="med_losartan">hold losartan</ref> for volume depletion and potassium; resume when he is eating.
+4. Hyperlipidemia: continue atorvastatin.
 
 ```json payload
 {

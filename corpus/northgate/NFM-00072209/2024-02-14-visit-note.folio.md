@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM f/u. BP 141/85, pulse 83, wt 174 lb.
+Today: eGFR 35, K 4.8, A1c 7.1%, LDL 135 mg/dL.
+LDL higher than last check. Diet and adherence discussed with pt.
+RTC 6 mo.
 
 ```json payload
 {

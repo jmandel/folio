@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u. No new symptoms, tolerating current regimen.
+BP 127/74, pulse 85, wt 196 lb.
+Labs today: eGFR 74, K 4.2, LDL 109 mg/dL.
+Reviewed results with pt.
+RTC 3 mo.
 
 ```json payload
 {

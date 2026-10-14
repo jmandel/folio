@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
+DM2 f/u. No hypoglycemia or new sx.
+BP 121/73, pulse 86, wt 197 lb.
+Labs 2/13: eGFR 48, K 4.5, A1c 8.1%.
+A1c above goal, insulin glargine started 10 units at bedtime today. Teaching done.
+Nephrology referral placed for CKD. RTC 3 mo.
 
 ```json payload
 {

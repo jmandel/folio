@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 44, UACR 51 mg/g: CKD evaluation and management</ref>
+Dear Colleagues,
+
+Thank you for seeing this patient with type 2 diabetes and chronic kidney disease stage 3a. <ref id="referral">eGFR was 44 and UACR 51 mg/g, and I am asking for CKD evaluation and management.</ref>
+
+Renal function has drifted down over the past year or so, with albuminuria rising. Blood pressure has been well controlled and potassium is normal. I would appreciate your recommendations on further workup and on how best to protect kidney function going forward.
+
+Please call with any questions. Thank you for your help.
+
+Moira Brennan, DO
+Northgate Family Medicine
 
 ```json payload
 {

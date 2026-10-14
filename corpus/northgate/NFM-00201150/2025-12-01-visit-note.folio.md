@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-metformin: dose changed to 500 mg twice daily today (eGFR 43)
-
-insulin glargine: started 10 units at bedtime today (A1c 8.5)
+Chronic care visit. No new complaints.
+BP 117/68, pulse 86, wt 177 lb.
+11/25 labs: eGFR 44, K 4.6, UACR 198 mg/g, A1c 8.5%.
+Metformin: dose changed to 500 mg twice daily today (eGFR 43).
+Insulin glargine started 10 units at bedtime today (A1c 8.5). Pt taught pen use.
+RTC 3 mo.
 
 ```json payload
 {

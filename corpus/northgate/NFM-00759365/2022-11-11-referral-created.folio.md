@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 66, UACR 276 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+<ref id="referral">I am referring this patient for CKD evaluation and management. Latest eGFR 66, UACR 276 mg/g.</ref>
+
+The patient has type 2 diabetes and essential hypertension, both followed here. Albuminuria has persisted on repeat testing while eGFR has stayed fairly stable. Recent labs are available in the shared record. Please see the patient and advise on further workup and management.
+
+Thank you for seeing them.
+
+Moira Brennan, DO
+Northgate Family Medicine
 
 ```json payload
 {

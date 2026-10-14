@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. Doing well, no new complaints.
+BP 113/63, pulse 71, wt 187 lb.
+Exam unremarkable.
+Reviewed med list, no changes today.
+RTC 6 mo.
 
 ```json payload
 {

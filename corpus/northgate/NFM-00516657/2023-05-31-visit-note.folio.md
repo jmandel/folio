@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. No new symptoms.
+BP 145/93, pulse 69, wt 187 lb. BP above goal today.
+eGFR 97, K 4.4, LDL 103 mg/dL.
+Will recheck BP at home and bring log to next visit.
+RTC 3 mo.
 
 ```json payload
 {

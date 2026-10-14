@@ -16,10 +16,24 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient is seen on the medical floor after evaluation in the ED this afternoon. They have had back pain for several days and have been taking over-the-counter pain medicine for it, with little to drink. They felt weak and thirsty and came in for evaluation. Labs drawn at 15:22 showed potassium 6.0, creatinine 1.87 and sodium 130. In the ED they received calcium gluconate 1 g IV, and a saline bolus was started at 15:55.
+
+**Medications at home:** lisinopril 40 mg daily and rosuvastatin 20 mg nightly.
+
+**Allergies:** no known drug allergies.
+
+**Exam.** Vitals at 18:58: BP 121/73, HR 111, RR 23, T 98.5 F, SpO2 98%. Tachycardic, mildly dry mucous membranes, lungs clear, abdomen soft. Back is tender over the paraspinal muscles without focal deficit.
+
+**Results.** 15:22 panel: sodium 130, potassium 6.0, bicarbonate 22, urea nitrogen 42, creatinine 1.87, eGFR 30, glucose 186.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>. <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref> Continue normal saline at 125 mL/h after the bolus. Avoid nephrotoxins. Repeat BMP in the morning.
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.0 on arrival and treated with calcium gluconate in the ED. Recheck potassium with the morning labs and keep on telemetry.
+3. Hypertension: BP is acceptable tonight. <ref id="med_lisinopril">Hold lisinopril until creatinine is back to baseline.</ref>
+4. Continue rosuvastatin 20 mg nightly.
 
 ```json payload
 {

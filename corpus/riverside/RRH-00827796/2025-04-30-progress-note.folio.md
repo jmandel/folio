@@ -16,9 +16,15 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 4/30 06:14 (local time): Sodium 132 mmol/L (L), Potassium 4.2 mmol/L, Chloride 103 mmol/L, Bicarbonate (total CO2) 22 mmol/L, Anion gap 7 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 1.64 mg/dL (H), eGFR (CKD-EPI 2021) 46 mL/min/1.73m2 (L), Glucose 187 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 4/29 07:00, still running (local times)</ref>
+**Interval.** Seen this morning. Vitals at 07:28: BP 135/81, HR 110, RR 22, temperature 98.5 F, SpO2 96%. The patient is eating and has no abdominal pain.
+
+**Results.** <ref id="bmp">On the 06:14 panel sodium is 132 (L), potassium 4.2, chloride 103, bicarbonate 22, anion gap 7, urea nitrogen 23, creatinine 1.64 (H), eGFR 46 (L) and glucose 187 (H)</ref>.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, with the anion gap now closed at 7. Continue <ref id="sc_glargine">insulin glargine 18 units daily</ref>.
+2. Empagliflozin, metformin and hydrochlorothiazide remain held. Losartan continues.
+3. Allergy: lisinopril (cough).
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+DM f/u. Doing OK, no complaints.
+BP 157/98, repeat 152/97, pulse 86, wt 230 lb.
+Labs 3/2: eGFR 60, K 4.5, UACR 614 mg/g, A1c 7.2%.
+BP above goal, lisinopril dose changed to 40 mg daily today.
+RTC 3 mo.
 
 ```json payload
 {

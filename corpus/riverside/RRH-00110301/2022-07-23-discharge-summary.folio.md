@@ -17,7 +17,21 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
+**Admission diagnosis:** community-acquired pneumonia.
+
+**Discharge diagnosis:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient presented to the emergency department on 7/20 with several days of cough, fatigue and mild shortness of breath, and was found to have pneumonia. They were admitted to the hospital medicine service, treated with intravenous antibiotics, and given intravenous saline for dehydration, with elevated urea nitrogen and creatinine on arrival. Breathing and energy improved steadily over three days. The saline was stopped on 7/21, and kidney function continued to improve with oral fluids.
+
+**Condition at discharge.** Improved and eating and drinking well. Vitals at 12:30: BP 130/78, HR 107, RR 21, temperature 98.5 F, SpO2 94%. The patient is walking without distress and has a stable cough that continues to improve.
+
+**Discharge labs.** Basic metabolic panel on 7/23 at 06:09: sodium 136, potassium 3.9, chloride 104, bicarbonate 26, anion gap 6 (low), urea nitrogen 32 (high), creatinine 0.99, eGFR 68, glucose 116 (high). Creatinine has returned to the normal range.
+
+**Allergies:** no known drug allergies.
+
+**Medications.** Home medications are continued unchanged, as listed on the reconciled medication list given to the patient.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to recheck symptoms and the chest exam. The patient should return sooner for worsening shortness of breath, fever that returns, or chest pain.
 
 ```json payload
 {

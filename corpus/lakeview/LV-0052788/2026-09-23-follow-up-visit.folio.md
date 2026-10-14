@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 134/80, HR 71, weight 100.6 kg at 2026-09-23 12:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2025-04-01</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2017</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2005</ref>
-- eGFR 44 (today)
-- K 5 (today)
+Follow-up. <ref id="dx_ckd">CKD now G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+<ref id="bp_sys">BP 134/80, HR 71, weight 100.6 kg</ref>. Feels well.
+
+eGFR 44 (today), K 5 (today). eGFR 47 → 44 since 4/2026, crossing into G3b. Potassium at the upper end of normal, so we will watch it.
+
+Repeat K and creatinine in 4 weeks. Return 3 months.
 
 ```json payload
 {

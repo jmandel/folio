@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">stop lisinopril: dry cough.</ref>
+<ref id="med_1">Lisinopril stopped today for dry cough.</ref>
 
 ```json payload
 {

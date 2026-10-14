@@ -14,9 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Feels fine.
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.2)
+BP 132/74, pulse 77, wt 213 lb.
+Labs today: eGFR 64, K 4.2, UACR 20 mg/g, A1c 8.2%, LDL 163.
+
+A1c above goal. Dulaglutide started 0.5 mg weekly today (A1c 8.2). Injection technique shown to pt.
+
+RTC 3 mo.
 
 ```json payload
 {

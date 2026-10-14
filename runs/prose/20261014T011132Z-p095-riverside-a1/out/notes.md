@@ -1,0 +1,17 @@
+=== note: A/e_174/ed ===
+## Emergency department provider note
+
+**Reason for visit:** chest pain.
+
+**History.** The patient presented to the ED this evening with chest pain. The discomfort was not clearly related to exertion, and there was no fainting. Home medications on the list are metformin 1000 mg twice daily with meals, empagliflozin 10 mg daily, lisinopril 40 mg daily, hydrochlorothiazide 25 mg daily and amlodipine 5 mg daily; none of these has been reconciled yet in the ED. No known drug allergies.
+
+**Exam.** Vitals at 19:18: BP 143/86, HR 79, RR 24, temperature 98.6 F, SpO2 95%. The patient was comfortable at rest and spoke in full sentences. Heart rhythm regular, lungs clear, abdomen soft and nontender, no leg swelling.
+
+**Results.** The first <ref id="trop_1">troponin I was <0.01 ng/mL on the 19:43 draw</ref>, and the repeat <ref id="trop_2">troponin I was <0.01 ng/mL on the 22:43 draw</ref>. The ECG showed no ischemic changes. The basic metabolic panel drawn at 19:43 showed sodium 141, potassium 4.4, chloride 105, bicarbonate 25, anion gap 11, urea nitrogen 14, creatinine 1.03 (H), eGFR 55 (L) and glucose 143 (H). The anion gap is normal, and the potassium and bicarbonate are unremarkable.
+
+**Assessment and plan**
+
+1. Chest pain. <ref id="dx_acs">Acute coronary syndrome ruled out</ref>: two troponins <0.01 three hours apart and an ECG without ischemic changes. The pain did not behave like a cardiac event during the ED stay, and the patient was reassured by these results.
+2. Mildly reduced eGFR with creatinine 1.03 on today's panel; this should be rechecked by the primary care physician.
+3. Home medication list was reviewed with the patient but remains unreconciled in the ED; the primary care physician should complete reconciliation at follow-up.
+4. Follow-up with the primary care physician within the next week. The patient was told to return for recurrent or worsening chest pain, shortness of breath, or fainting.

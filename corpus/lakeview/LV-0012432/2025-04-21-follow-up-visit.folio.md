@@ -14,12 +14,11 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 135/80, HR 69, weight 95.3 kg at 2025-04-21 12:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A3), onset 2020-05-18</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2009</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2015</ref>
-- eGFR 38 (today)
-- K 5.1 (today)
+Follow-up. Feels well, no edema. <ref id="bp_sys">BP 135/80, HR 69, weight 95.3 kg</ref>.
+
+<ref id="dx_ckd">CKD G3b A3</ref> now, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. eGFR 38, K 5.1 today.
+
+Discussed the change in albuminuria category with the patient. Labs before next visit. Return 5 months.
 
 ```json payload
 {

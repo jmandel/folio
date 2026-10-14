@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 125/70, pulse 73, wt 194 lb.
+Labs 6/13: eGFR 49, K 5.2, UACR 53 mg/g.
+Doing well, no new symptoms. Reviewed labs with pt, will repeat in a few months.
+RTC 3 mo.
 
 ```json payload
 {

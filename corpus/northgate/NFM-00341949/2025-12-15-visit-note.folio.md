@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-insulin glargine: dose changed to 18 units at bedtime today (A1c 8.1)
+Annual exam. BP 127/78, pulse 88, wt 230 lb.
+Labs 12/13: eGFR 48, K 4.5, A1c 8.1%.
+Insulin glargine dose changed to 18 units at bedtime today (A1c 8.1). eGFR lower than before, will follow.
+RTC 3 mo.
 
 ```json payload
 {

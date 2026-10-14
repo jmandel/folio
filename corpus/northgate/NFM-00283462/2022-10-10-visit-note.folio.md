@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 145/93, pulse 81, wt 197 lb. Above goal.
 
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Lisinopril dose changed to 40 mg daily today.
+
+Labs today: eGFR 55, K 4.6, LDL 97 mg/dL. CKD stage 3a on problem list.
+
+RTC 3 mo for BP recheck.
 
 ```json payload
 {

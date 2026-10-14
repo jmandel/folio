@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">lisinopril: angioedema of lips and tongue.</ref>
+<ref id="alg_1">Angioedema of lips and tongue on lisinopril.</ref> Seen in ED.
 
 ```json payload
 {

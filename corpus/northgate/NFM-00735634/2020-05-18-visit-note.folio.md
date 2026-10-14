@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
+DM2 f/u. BP 154/98, repeat 149/94, pulse 82, wt 208 lb.
 
-losartan: dose changed to 100 mg daily today (BP above goal)
+Labs today: eGFR 50, K 4.9, A1c 7.4%. eGFR 49 and 50 a year apart, CKD stage 3a added to problem list.
+
+BP above goal, losartan dose changed to 100 mg daily today.
+
+RTC 3 mo.
 
 ```json payload
 {

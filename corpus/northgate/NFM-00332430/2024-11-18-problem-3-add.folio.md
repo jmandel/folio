@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Hyperlipidemia.</ref>
+<ref id="prob_1">Hyperlipidemia, onset 5/2017.</ref> Added at first visit here; history per pt.
 
 ```json payload
 {

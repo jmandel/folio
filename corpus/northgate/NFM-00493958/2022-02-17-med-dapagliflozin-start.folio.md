@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start dapagliflozin: A1c 9.5, CKD.</ref>
+<ref id="med_1">A1c 9.5 with CKD. Started dapagliflozin 10 mg daily today.</ref>
 
 ```json payload
 {

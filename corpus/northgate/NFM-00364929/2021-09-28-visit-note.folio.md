@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 160/89, repeat 157/86, pulse 64, wt 248 lb.
+Labs 9/25: eGFR 78, K 4.8.
+BP running high today, will recheck at next visit.
+RTC 3 mo.
 
 ```json payload
 {

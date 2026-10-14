@@ -16,8 +16,18 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 3/7 06:21 (local time): Sodium 136 mmol/L, Potassium 6.1 mmol/L (H), Chloride 100 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 12 mmol/L, Urea nitrogen 25 mg/dL (H), Creatinine 2.22 mg/dL (H), eGFR (CKD-EPI 2021) 26 mL/min/1.73m2 (L), Glucose 131 mg/dL (H)</ref>
+**Interval.** Slept without complaints. Saline continues at 125 mL/h. Vitals at 07:19: BP 128/77, HR 78, RR 22, T 98.9 F, SpO2 98%. No known drug allergies.
+
+**Exam.** Comfortable, mucous membranes moist, lungs clear, no edema.
+
+**Results.** <ref id="bmp">BMP at 06:21: sodium 136, potassium 6.1, chloride 100, bicarbonate 24, anion gap 12, urea nitrogen 25, creatinine 2.22, eGFR 26, glucose 131</ref>.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref> is improving: creatinine has come down from 2.57 to 2.22 and urea nitrogen from 52 to 25 with fluids. Continue saline at 125 mL/h and recheck in the morning.
+2. Hyperkalemia is improving but potassium is still 6.1. Continue telemetry and repeat the potassium with the next draw.
+3. Metformin and losartan remain held. Continue glipizide and atorvastatin.
+4. Bicarbonate has normalized at 24.
 
 ```json payload
 {

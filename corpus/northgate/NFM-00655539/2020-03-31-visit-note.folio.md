@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-empagliflozin: started 10 mg daily today (A1c 8.2)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Annual exam. Feels well, no new complaints.
+BP 146/91, repeat 142/90. Pulse 67, wt 234 lb.
+Labs 3/25: eGFR 101, K 4.3, A1c 8.2%.
+Empagliflozin started 10 mg daily today (A1c 8.2). Lisinopril dose changed to 40 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

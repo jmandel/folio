@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 43, UACR 229 mg/g: CKD evaluation and management</ref>
+Dear Colleague,
+
+Thank you for seeing this patient. <ref id="referral">Referral for CKD evaluation and management: eGFR 43, UACR 229 mg/g.</ref>
+
+Pt has chronic kidney disease stage 3a and essential hypertension. Kidney function has stayed reduced across recent checks, and albuminuria is present. I would appreciate your assessment and recommendations for ongoing management.
+
+Please send your notes to our office. Happy to answer any questions.
+
+Teresa Reyes, MD
+Northgate Family Medicine
 
 ```json payload
 {

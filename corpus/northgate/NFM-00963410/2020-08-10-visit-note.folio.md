@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 135/82, pulse 70, wt 174 lb.
+Labs today: eGFR 63, K 4.8, LDL 71 mg/dL.
+Pt feels well, no new complaints.
+RTC 6 mo.
 
 ```json payload
 {

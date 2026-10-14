@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 45, UACR 332 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+<ref id="referral">I would appreciate your evaluation and management of this patient with chronic kidney disease. Most recent eGFR is 45 with UACR 332 mg/g.</ref>
+
+The patient has stage 3a CKD and type 2 diabetes. Kidney function has been slowly declining and albuminuria has persisted over several visits. Metformin was adjusted today for the eGFR. Recent labs are available in the chart.
+
+Thank you for seeing this patient. Please call with any questions.
 
 ```json payload
 {

@@ -16,8 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 4/11 06:16 (local time): Sodium 134 mmol/L (L), Potassium 6.0 mmol/L (H), Chloride 103 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 8 mmol/L, Urea nitrogen 22 mg/dL, Creatinine 2.05 mg/dL (H), eGFR (CKD-EPI 2021) 36 mL/min/1.73m2 (L), Glucose 129 mg/dL (H)</ref>
+**Interval.** The patient was seen this morning. Vitals at 07:15: BP 116/70, HR 110, RR 17, temperature 98.1 F, SpO2 96%. The saline infusion has been off since 03:49 on 4/10. The patient feels well and has no new complaints.
+
+**Results.** <ref id="bmp">On the 06:16 panel sodium is 134 (L), potassium 6.0 (H), chloride 103, bicarbonate 23, anion gap 8, urea nitrogen 22, creatinine 2.05 (H), eGFR 36 and glucose 129 (H)</ref>. Creatinine continues to fall from 2.47 yesterday. Potassium is 6.0, still elevated.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, improving; creatinine 2.05. Recheck the basic metabolic panel in the morning.
+2. Potassium remains high at 6.0; continue monitoring.
+3. Metformin, losartan and hydrochlorothiazide remain on hold.
+4. Allergy: lisinopril (cough).
 
 ```json payload
 {

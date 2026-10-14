@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-losartan: resumed today (BP above goal)
+Annual exam. No complaints.
+BP 140/84, pulse 88, wt 178 lb.
+3/29 labs: eGFR 35, K 4.6, A1c 8.8%.
+Losartan resumed today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

@@ -17,7 +17,17 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
+**Principal diagnosis:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient presented to the emergency department with cough and malaise and was found to have pneumonia. Admission labs showed a sodium of 130, bicarbonate of 18, urea nitrogen of 50 and creatinine of 1.69. Intravenous saline was given from the day of admission until the evening of 1/23, and these values improved steadily. Cough and breathing gradually improved over the stay, and vitals remained stable.
+
+**Condition at discharge.** The patient is feeling well, eating and drinking normally and walking without difficulty. Vitals at 09:00: BP 130/78, HR 84, RR 23, T 98.7 F, SpO2 97%. Lungs are clear to the extent expected, with unlabored breathing.
+
+**Discharge labs.** Basic metabolic panel drawn 1/26 at 06:07: sodium 133 (L), potassium 3.9, chloride 101, bicarbonate 21 (L), anion gap 11, urea nitrogen 33 (H), creatinine 1.25 with an eGFR of 60, and glucose 102 (H). Creatinine has returned to the normal range. Sodium and bicarbonate remain slightly low and should be rechecked at follow-up.
+
+**Allergies:** no known drug allergies.
+
+**Follow-up.** The patient should see primary care at Northgate Family Medicine within 1 week to recheck symptoms and the chest exam. The patient should return sooner for worsening cough, shortness of breath or fever. The patient understands and agrees with this plan.
 
 ```json payload
 {

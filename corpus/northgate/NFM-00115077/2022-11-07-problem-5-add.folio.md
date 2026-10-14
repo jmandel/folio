@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Primary osteoarthritis of knee.</ref>
+<ref id="prob_1">Primary osteoarthritis of knee, onset 2021.</ref> Hx per pt, added at first visit here.
 
 ```json payload
 {

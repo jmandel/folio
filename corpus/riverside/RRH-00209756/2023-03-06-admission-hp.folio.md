@@ -16,11 +16,22 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Reason for admission:** acute kidney injury with hyperkalemia.
+
+**History of present illness.** The patient is seen in the evening after evaluation in the ED this afternoon. They had been taking an over-the-counter anti-inflammatory for back pain for several days and drinking little. They arrived feeling generally unwell and were found to have abnormal kidney function and a high potassium on the 16:58 panel. They have no known drug allergies. They received calcium gluconate and a saline bolus in the ED, and saline continues at 125 mL/h, started 17:24.
+
+**Home medications.** Losartan 50 mg daily, metformin 1000 mg twice daily with meals, glipizide 5 mg daily, atorvastatin 40 mg nightly.
+
+**Exam.** Vitals at 20:55: BP 106/64, HR 89, RR 17, T 98.2 F, SpO2 96%. Comfortable at rest, no distress. Mucous membranes slightly dry. Lungs clear, heart regular, abdomen soft.
+
+**Results.** BMP at 16:58: sodium 137, potassium 6.7, chloride 106, bicarbonate 17, anion gap 14, urea nitrogen 52, creatinine 2.57, eGFR 22, glucose 125.
+
+**Assessment and plan**
+
+1. <ref id="dx_aki">Acute kidney injury</ref>, <ref id="precipitant">most likely from several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake</ref>. Continue isotonic saline, trend creatinine each morning, avoid nephrotoxins.
+2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.7 on arrival, treated in the ED. Repeat potassium in the morning and keep on telemetry.
+3. Medications: <ref id="med_losartan">hold losartan until creatinine is back to baseline</ref>. <ref id="med_metformin">Hold metformin during the acute illness</ref>, to resume when able. Continue glipizide and atorvastatin.
+4. Back pain: no naproxen or other anti-inflammatory drugs while in hospital.
 
 ```json payload
 {

@@ -17,8 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Hospital course.** The patient was admitted from the emergency department with several days of cough, fever and chest discomfort. She was treated with IV antibiotics and, early on, IV saline for a low sodium and elevated urea nitrogen. Her cough and breathing gradually improved and she was eating and walking without difficulty. The <ref id="dx_pneumonia">community-acquired pneumonia has resolved</ref>.
+
+**Condition at discharge.** Vitals at 09:30: BP 135/81, HR 81, RR 17, T 98.7 F, SpO2 98%. She is comfortable and breathing easily.
+
+**Discharge labs.** On the 06:11 panel on 3/20: sodium 133 (L), potassium 3.9, chloride 104, bicarbonate 23, anion gap 6 (L), urea nitrogen 15, creatinine 0.80, eGFR 84 and glucose 166 (H).
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 1000 mg by mouth twice daily with meals, continue</ref>
+- Losartan 50 mg by mouth daily, continue
+- Hydrochlorothiazide 25 mg by mouth daily, continue
+- Atorvastatin 20 mg by mouth nightly, continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to recheck her symptoms and chest exam. She should return sooner for worsening cough, fever or shortness of breath.
 
 ```json payload
 {

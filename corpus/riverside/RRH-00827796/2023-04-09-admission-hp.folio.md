@@ -16,12 +16,21 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "Hold for volume depletion"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
-- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
-- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Reason for admission:** hyperkalemia and acute kidney injury.
+
+**History of present illness.** The patient came to the ED last night weak and dry after several days of poor fluid intake and back pain. <ref id="precipitant">Acute kidney injury attributed to several days of over-the-counter naproxen for back pain on top of an ARB and diuretic, with poor fluid intake</ref>. Labs in the ED showed potassium 6.8 and creatinine 2.89 (sodium 131, urea nitrogen 52, bicarbonate 22, eGFR 24). Normal saline was started at 23:45 as a 1000 mL bolus and continues at 125 mL/h.
+
+**Allergies:** lisinopril (cough).
+
+**Exam.** At 04:25: BP 108/65, HR 85, RR 21, temperature 98.1 F, SpO2 97%. Mucous membranes are dry. Heart regular, lungs clear, abdomen soft.
+
+**Assessment and plan**
+
+1. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.8 on the 23:17 panel. Repeat the basic metabolic panel in the morning and keep the patient on monitoring.
+2. <ref id="dx_aki">Acute kidney injury</ref>, creatinine 2.89. Continue IV saline at 125 mL/h and recheck creatinine with the morning panel.
+3. Hypertension: <ref id="med_losartan">hold losartan until creatinine is back to baseline</ref>.
+4. Volume depletion: <ref id="med_hydrochlorothiazide">hold hydrochlorothiazide for volume depletion</ref>.
+5. Diabetes: <ref id="med_metformin">hold metformin during the acute illness</ref>, and resume it when able.
 
 ```json payload
 {

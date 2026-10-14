@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx of HTN, DM2 and hyperlipidemia per pt.
+BP 146/94, repeat 138/92. Pulse 75, wt 185 lb.
+Problem list built from pt's history today.
+BP elevated on both readings, will recheck at next visit.
+RTC 3 mo.
 
 ```json payload
 {

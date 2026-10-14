@@ -14,9 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. History reviewed with pt.
 
-metformin: dose changed to 500 mg twice daily today (eGFR 39)
+BP 128/71, pulse 63, wt 169 lb.
+
+Labs 11/27: eGFR 38, K 5.2, A1c 6.6%.
+
+Metformin down to 500 mg BID today (eGFR 39).
+
+Questions answered. RTC 3 mo.
 
 ```json payload
 {

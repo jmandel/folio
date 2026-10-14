@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
-
-Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+Chronic care visit. Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
+BP 148/91, pulse 80, wt 231 lb.
+eGFR 58, K 4, UACR 612 mg/g, A1c 6.9% today.
+CKD stage 3a added to problem list.
+RTC 3 mo.
 
 ```json payload
 {

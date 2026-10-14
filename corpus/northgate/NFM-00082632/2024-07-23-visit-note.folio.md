@@ -14,9 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-semaglutide: started 0.5 mg weekly today (A1c 8.3)
+DM f/u. BP 137/83, pulse 64, wt 195 lb.
+Labs today: eGFR 89, K 4, A1c 8.3%.
+A1c up. Semaglutide started 0.5 mg weekly today (A1c 8.3). Reviewed injection technique with pt.
+RTC 3-4 mo.
 
 ```json payload
 {

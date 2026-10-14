@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. BP 138/83, pulse 74, wt 199 lb.
+Labs today: eGFR 38, UACR 741 mg/g.
+First K came back 6.5 but sample hemolyzed. Repeat K 4.4.
+Pt informed of results. RTC 3 mo.
 
 ```json payload
 {

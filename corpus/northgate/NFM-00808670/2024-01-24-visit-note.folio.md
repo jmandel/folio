@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+BP f/u. BP 146/86, pulse 66, wt 222 lb.
+eGFR 58, K 4.4, UACR 77 mg/g today. CKD stage 3a added to problem list.
+BP still above goal: chlorthalidone started 12.5 mg daily today.
+Pt tolerating visit well, no new complaints.
+RTC 3 mo.
 
 ```json payload
 {

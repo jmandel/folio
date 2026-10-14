@@ -14,15 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Dry cough on the ACE inhibitor, lisinopril intolerance: dry cough.
+
+BP 140/86, pulse 79, wt 232 lb. Labs 8/17: eGFR 78, K 4.2, A1c 8%.
+
+Lisinopril: stopped today (dry cough). Losartan: started 50 mg daily today (ACE inhibitor cough).
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
 
-lisinopril: stopped today (dry cough)
-
-losartan: started 50 mg daily today (ACE inhibitor cough)
-
-lisinopril intolerance: dry cough
+RTC 3 mo.
 
 ```json payload
 {

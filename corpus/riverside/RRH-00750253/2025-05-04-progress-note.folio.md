@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 5/4 06:00 (local time): Sodium 137 mmol/L, Potassium 3.9 mmol/L, Chloride 101 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 12 mmol/L, Urea nitrogen 26 mg/dL (H), Creatinine 1.75 mg/dL (H), eGFR (CKD-EPI 2021) 37 mL/min/1.73m2 (L), Glucose 106 mg/dL (H)</ref>
+**Subjective.** Feeling somewhat better this morning. Cough is less frequent and the patient is eating more. Normal saline was stopped at 02:13.
+
+**Exam.** Vitals at 07:12: BP 132/79, HR 90, RR 19, T 98.8 F, SpO2 94%. Comfortable, speaking in full sentences. Crackles persist at the lung base but are less prominent.
+
+**Results.** The <ref id="bmp">06:00 panel shows sodium 137, potassium 3.9, chloride 101, bicarbonate 24, anion gap 12, urea nitrogen 26 (H), creatinine 1.75 (H), eGFR 37 (L) and glucose 106 (H)</ref>. Sodium and bicarbonate have normalized and creatinine is improving from 1.85 on admission.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>, improving on ceftriaxone. Continue to follow temperature and oxygen saturation.
+2. Kidney function improving after fluids. Metformin, dapagliflozin and losartan remain held. Repeat panel tomorrow.
+3. Continue chlorthalidone, amlodipine and rosuvastatin.
 
 ```json payload
 {

@@ -14,7 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 70, UACR 355 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+Thank you for seeing this patient with chronic kidney disease and type 2 diabetes mellitus. <ref id="referral">Most recent eGFR is 70 with UACR 355 mg/g. I am asking for CKD evaluation and management.</ref>
+
+BP today was 121/73. Potassium 4.2 and A1c 8.2% today. Please send your recommendations and I will continue to follow the pt here for routine diabetes care.
+
+Thank you,
+Jaya Patel, NP
+Northgate Family Medicine
 
 ```json payload
 {

@@ -16,8 +16,17 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 7/22 06:20 (local time): Sodium 136 mmol/L, Potassium 3.9 mmol/L, Chloride 105 mmol/L, Bicarbonate (total CO2) 26 mmol/L, Anion gap 5 mmol/L (L), Urea nitrogen 34 mg/dL (H), Creatinine 1.13 mg/dL (H), eGFR (CKD-EPI 2021) 58 mL/min/1.73m2 (L), Glucose 168 mg/dL (H)</ref>
+**Interval.** The patient feels better today, with less cough and more energy. The saline was stopped yesterday at 17:32, and they are drinking well.
+
+**Exam.** Vitals at 07:14: BP 123/74, HR 86, RR 22, temperature 98.7 F, SpO2 97%. The patient is sitting up, comfortable and talking easily. Crackles at the base are less prominent than before. The heart rate has settled.
+
+**Results.** <ref id="bmp">Basic metabolic panel at 06:20: sodium 136, potassium 3.9, chloride 105, bicarbonate 26, anion gap 5 (low), urea nitrogen 34 (high), creatinine 1.13 (high), eGFR 58 (low), glucose 168 (high)</ref>. Creatinine has continued to improve off IV fluids. Urea nitrogen is up a little from yesterday's 23.
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>: clinically improving, with a lower heart rate and good saturation. Continue treatment, keep the patient walking in the halls, and plan for discharge soon if they continue to improve.
+2. Kidney function: creatinine is trending toward normal. Encourage oral fluids and recheck the panel tomorrow morning.
+3. Allergies: no known drug allergies. Home medication reconciliation will be completed before discharge.
 
 ```json payload
 {

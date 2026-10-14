@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 125/80, HR 67, weight 92.7 kg at 2025-11-11 14:44</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2025-08-03</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012-11</ref>
-- eGFR 51 (today)
-- K 4.7 (today)
-- UACR 573 mg/g (today)
+Follow-up. <ref id="dx_ckd">CKD G3a A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>.
+
+<ref id="bp_sys">BP 125/80, HR 67, weight 92.7 kg.</ref> No new symptoms, no edema.
+
+eGFR 51 today, K 4.7 today, UACR 573 mg/g today. eGFR 57 → 51 since June.
+
+Closer follow-up: return in 4 months with labs.
 
 ```json payload
 {

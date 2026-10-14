@@ -17,9 +17,26 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
+**Diagnosis at discharge:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted through the ED with cough, low-grade fever and poor oral intake, and was found to have pneumonia along with reduced kidney function. Treatment was ceftriaxone 1 g IV every 24 hours and normal saline at 75 mL/h, with the saline stopped on 5/4 at 02:13. Cough, fever and breathing improved steadily over the stay. Creatinine was 1.85 on admission and had improved to 1.38 by the day of discharge.
+
+**Discharge exam.** Vitals at 11:00: BP 119/71, HR 95, RR 19, T 98 F, SpO2 95%. Comfortable, breathing easily, lungs clear of significant crackles.
+
+**Results at discharge.** Basic metabolic panel drawn 5/8 at 06:07: sodium 133 (L), potassium 3.9, chloride 104, bicarbonate 25, anion gap 4 (L), urea nitrogen 31 (H), creatinine 1.38 (H), eGFR 49 (L), glucose 143 (H).
+
+**Allergies:** none known.
+
+**Discharge medications**
+
+- <ref id="med_losartan">Losartan 100 mg by mouth daily, continue</ref>
+- <ref id="med_metformin">Metformin 500 mg by mouth twice daily with meals, continue</ref>
+- Dapagliflozin 10 mg by mouth daily, continue
+- Chlorthalidone 12.5 mg (half of a 25 mg tablet) by mouth daily, continue
+- Amlodipine 5 mg by mouth daily, continue
+- Rosuvastatin 20 mg by mouth nightly, continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to recheck symptoms and chest exam.
 
 ```json payload
 {

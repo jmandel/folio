@@ -17,8 +17,24 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status resolved</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+**Diagnosis:** <ref id="dx_pneumonia">community-acquired pneumonia, resolved</ref>.
+
+**Hospital course.** The patient was admitted with cough, fever and shortness of breath and was found to have pneumonia. Creatinine on arrival was 2.07 with a low bicarbonate, and the patient was given intravenous saline, which was stopped on 2/3. Breathing and appetite improved steadily over the stay, and the patient was comfortable and eating by the day of discharge.
+
+**Condition at discharge.** Vitals on the morning of discharge at 09:30: BP 120/72, HR 95, RR 19, T 98.4 F, SpO2 99%. The pneumonia has resolved clinically.
+
+**Discharge labs.** Basic metabolic panel drawn 2/5 at 06:19: sodium 138, potassium 3.9, chloride 100, bicarbonate 21 (L), anion gap 17 (H), urea nitrogen 15, creatinine 1.62 (H), eGFR 46 (L), glucose 131 (H). Creatinine has improved from 2.07 on admission but is still above normal.
+
+**Allergies:** NKDA.
+
+**Discharge medications**
+
+- <ref id="med_metformin">Metformin 1000 mg by mouth twice daily with meals: continue</ref>
+- Empagliflozin 10 mg by mouth daily: continue
+- Losartan 100 mg by mouth daily: continue
+- Amlodipine 5 mg by mouth daily: continue
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to recheck symptoms and the chest exam.
 
 ```json payload
 {

@@ -14,7 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Follow-up.
+F/u visit. No new concerns today.
+
+BP 121/72, pulse 73, wt 208 lb.
+
+eGFR 62. LDL 119 mg/dL. First K 6.2 but sample hemolyzed, repeat K 4.7 today.
+
+RTC 6 mo.
 
 ```json payload
 {

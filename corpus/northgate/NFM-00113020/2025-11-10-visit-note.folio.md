@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
-
-dapagliflozin: started 10 mg daily today (A1c above goal)
-
-lisinopril: dose changed to 40 mg daily today (BP above goal)
+Diabetes f/u. No new complaints.
+BP 142/79, pulse 64, wt 181 lb.
+Labs 11/4: eGFR 80, K 4.6, UACR 402 mg/g, A1c 8.1%.
+Metformin: dose changed to 1000 mg twice daily today (A1c 8.1).
+Dapagliflozin: started 10 mg daily today (A1c above goal).
+Lisinopril: dose changed to 40 mg daily today (BP above goal).
+RTC 3 mo.
 
 ```json payload
 {

@@ -17,13 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_furosemide">home med furosemide 40 mg tablet, 40 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
-- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
+**Diagnoses.** <ref id="dx_dka">Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved.</ref> <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref> with a normal lipase of 30.
+
+**Hospital course.** The patient came to the ED with nausea, fatigue and deep, fast breathing, and was found to have a severe anion gap acidosis with a glucose of only 186. They take empagliflozin at home. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. They were treated with an insulin infusion and D5 lactated Ringer's, then transitioned to subcutaneous glargine. The anion gap closed by the morning of 9/4. Sodium was 128 on arrival and has stayed mildly low, 131 on the day of discharge.
+
+**Condition at discharge.** Vitals at 11:30: BP 121/73, HR 98, RR 19, T 98.9 F, SpO2 96%. The final panel at 06:02 on 9/7 shows sodium 131, potassium 4.2, chloride 98, bicarbonate 22, anion gap 11, urea nitrogen 18, creatinine 0.80, eGFR 80 and glucose 167. The patient is eating and walking without symptoms. Allergies: NKDA.
+
+**Discharge medications**
+
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- <ref id="med_losartan">Losartan 100 mg daily: continue.</ref>
+- <ref id="med_furosemide">Furosemide 40 mg daily: continue.</ref>
+- Carvedilol 12.5 mg twice daily: continue.
+- Spironolactone 25 mg daily: continue.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {

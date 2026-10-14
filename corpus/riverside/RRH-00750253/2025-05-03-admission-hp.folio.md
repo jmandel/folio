@@ -16,10 +16,25 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="dx_pneumonia">diagnosis "Community-acquired pneumonia", status active</ref>
-- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
-- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
+**Reason for admission:** community-acquired pneumonia with acute kidney injury on chronic kidney disease picture.
+
+**History of present illness.** The patient came to the ED on the evening of 5/2 with cough, low-grade fever and several days of poor appetite and poor oral intake. In the ED, ceftriaxone was started at 21:50 and normal saline at 75 mL/h at 21:10. The patient has been resting comfortably overnight and has had no chest pain.
+
+**Home medications.** Metformin 500 mg twice daily, dapagliflozin 10 mg daily, losartan 100 mg daily, chlorthalidone 12.5 mg daily, amlodipine 5 mg daily and rosuvastatin 20 mg nightly.
+
+**Allergies:** none known.
+
+**Exam.** Vitals at 03:04: BP 126/76, HR 90, RR 19, T 99.2 F, SpO2 94%. Comfortable at rest, no accessory muscle use. Crackles at the lung base. Heart regular. Abdomen soft. Mucous membranes mildly dry.
+
+**Results.** Basic metabolic panel from 5/2 at 20:42: sodium 131 (L), potassium 4.3, chloride 102, bicarbonate 18 (L), anion gap 11, urea nitrogen 51 (H), creatinine 1.85 (H), eGFR 35 (L), glucose 197 (H).
+
+**Assessment and plan**
+
+1. <ref id="dx_pneumonia">Community-acquired pneumonia</ref>. Continue ceftriaxone and monitor temperature and oxygen saturation.
+2. Reduced kidney function with dehydration. Continue normal saline at 75 mL/h and repeat the basic metabolic panel in the morning. <ref id="med_losartan">Hold losartan until creatinine is back to baseline.</ref>
+3. <ref id="med_metformin">Hold metformin during the acute illness.</ref>
+4. <ref id="med_dapagliflozin">Hold dapagliflozin while she is not eating.</ref>
+5. Blood pressure and lipids: continue chlorthalidone, amlodipine and rosuvastatin.
 
 ```json payload
 {

@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes follow-up.
-
-empagliflozin: started 10 mg daily today (A1c 8.2, CKD)
+DM2 f/u. BP 132/81, pulse 64, wt 222 lb.
+Labs 9/17: eGFR 41, K 4.6, A1c 8.2%. CKD stage 3b on problem list.
+Empagliflozin started 10 mg daily today (A1c 8.2, CKD).
+Pt feels well, no new complaints.
+RTC 3 mo.
 
 ```json payload
 {

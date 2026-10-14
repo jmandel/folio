@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
+Annual exam. Doing well, no complaints.
 
-empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+BP 139/84, pulse 67, wt 247 lb.
+
+Labs 3/28: eGFR 49, K 4.2, A1c 7.7%, LDL 106 mg/dL.
+
+Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit). RTC 3 mo.
 
 ```json payload
 {

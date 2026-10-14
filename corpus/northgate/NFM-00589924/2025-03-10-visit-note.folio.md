@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-empagliflozin: started 10 mg daily today (A1c 8.3)
-
-chlorthalidone: started 12.5 mg daily today (BP above goal)
+Annual exam. No new complaints.
+BP 143/86, pulse 66, wt 201 lb.
+Labs 3/4: eGFR 69, K 4.3, A1c 8.3%.
+Empagliflozin started 10 mg daily today (A1c 8.3).
+Chlorthalidone started 12.5 mg daily today (BP above goal).
+RTC to recheck.
 
 ```json payload
 {

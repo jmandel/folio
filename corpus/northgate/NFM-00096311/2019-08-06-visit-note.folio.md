@@ -14,9 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. BP 133/79, pulse 72, wt 174 lb.
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.4)
+Labs today: eGFR 70, K 4.9, UACR 65 mg/g, A1c 8.4%, LDL 164 mg/dL.
+
+A1c 8.4, dulaglutide started 0.5 mg weekly today. Reviewed injection technique with pt.
+
+RTC 3 mo.
 
 ```json payload
 {

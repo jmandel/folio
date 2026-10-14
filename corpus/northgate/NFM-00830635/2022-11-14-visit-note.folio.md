@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. No new symptoms.
+BP 130/84, pulse 74, wt 257 lb.
+11/12 labs: eGFR 71, K 4.3.
+BP improved from prior. Reviewed home readings with pt.
+RTC 3 mo.
 
 ```json payload
 {

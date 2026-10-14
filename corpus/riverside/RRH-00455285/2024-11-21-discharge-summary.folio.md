@@ -17,11 +17,23 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: continue</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by elective knee replacement surgery with prolonged pre-operative fasting while the SGLT2 inhibitor was continued.</ref>
+**Diagnosis:** <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+
+**Hospital course.** The patient came to the ED with nausea, fatigue and fast breathing and was found to have a severe anion gap acidosis with venous pH 7.13, bicarbonate 13, anion gap 25 and beta-hydroxybutyrate 5.1, despite a glucose of only 240. <ref id="precipitant">The ketoacidosis was precipitated by elective knee replacement surgery with prolonged pre-operative fasting while the SGLT2 inhibitor was continued.</ref> He was treated with an insulin infusion per DKA protocol and dextrose-containing fluids, then transitioned to subcutaneous glargine. Endocrinology saw him and advised against restarting the SGLT2 inhibitor. The gap closed by the morning of 11/19 and he went on to eat normally.
+
+**Condition at discharge.** Feeling well. Vitals BP 118/71, HR 83, RR 23, T 98.4 F, SpO2 96%. The final panel on 11/21 at 06:02 showed sodium 136, potassium 4.3, chloride 101, bicarbonate 24, anion gap 11, urea nitrogen 22, creatinine 1.17, eGFR 50 and glucose 168.
+
+**Allergies:** no known drug allergies.
+
+**Discharge medications**
+
+- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not take; do not resume until reviewed by his primary care physician.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: continue.</ref>
+- Losartan 50 mg daily: continue.
+- Atorvastatin 40 mg nightly: continue.
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart dapagliflozin and to recheck a basic metabolic panel. He should return to the ED for vomiting, abdominal pain or fast breathing.
 
 ```json payload
 {

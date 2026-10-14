@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam.
-
-lisinopril: held today (K 6.1 confirmed on repeat); review 2023-02-13
+Annual exam. No complaints.
+BP 158/95, repeat 150/94. Pulse 70, wt 202 lb.
+Labs 1/24: eGFR 95, K 4, A1c 6.2%, LDL 133 mg/dL.
+Lisinopril held today (K 6.1 confirmed on repeat); review 2/13.
+Pt aware.
 
 ```json payload
 {

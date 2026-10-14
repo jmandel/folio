@@ -14,9 +14,15 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit.
+Chronic care visit. Pt feels well, no new complaints.
 
-dapagliflozin: started 10 mg daily today (HFrEF)
+BP 116/73, pulse 83, wt 202 lb.
+
+Labs today: eGFR 97, K 5.1, UACR 223 mg/g, A1c 7.4%.
+
+Dapagliflozin started 10 mg daily today for HFrEF. Results reviewed with pt.
+
+RTC for f/u.
 
 ```json payload
 {

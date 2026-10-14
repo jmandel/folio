@@ -16,10 +16,16 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 1/10 06:17 (local time): Sodium 135 mmol/L (L), Potassium 4.3 mmol/L, Chloride 101 mmol/L, Bicarbonate (total CO2) 23 mmol/L, Anion gap 11 mmol/L, Urea nitrogen 25 mg/dL (H), Creatinine 1.45 mg/dL (H), eGFR (CKD-EPI 2021) 39 mL/min/1.73m2 (L), Glucose 167 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 12 units daily, started 1/10 07:00, still running (local times)</ref>
-- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 1/9 00:30, stopped 1/10 09:00 (local times)</ref>
+**Interval.** The patient feels much better this morning, is hungry and has had no nausea overnight. Vitals at 07:28: BP 116/70, HR 97, RR 18, temperature 98.6 F, SpO2 97%. No known drug allergies.
+
+**Results.** On the 06:17 panel: <ref id="bmp">sodium 135, potassium 4.3, chloride 101, bicarbonate 23, anion gap 11, urea nitrogen 25, creatinine 1.45, eGFR 39, glucose 167</ref>. The gap has closed.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving, with the anion gap closed and bicarbonate normal. Started <ref id="sc_glargine">insulin glargine 12 units subcutaneously daily at 07:00</ref>. The <ref id="iv_insulin">insulin infusion per DKA protocol will be stopped at 09:00</ref>, after the glargine has overlapped. Advance diet.
+2. Empagliflozin and metformin remain held. Lisinopril remains held while kidney function recovers; creatinine is improving from admission.
+3. Continue dulaglutide and rosuvastatin.
+4. Repeat basic metabolic panel tomorrow morning.
 
 ```json payload
 {

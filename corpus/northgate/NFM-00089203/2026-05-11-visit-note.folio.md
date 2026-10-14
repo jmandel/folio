@@ -14,7 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-BP follow-up.
+BP f/u. BP 144/86, repeat 141/83. Pulse 79, wt 199 lb.
+eGFR 53 today, K 4.5. UACR 661 mg/g.
+BP still above goal. Reviewed results with pt.
+RTC 2 mo.
 
 ```json payload
 {

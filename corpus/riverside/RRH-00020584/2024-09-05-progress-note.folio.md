@@ -16,9 +16,18 @@ schema:
 ---
 ## Progress note
 
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="bmp">Basic metabolic panel drawn 9/5 06:25 (local time): Sodium 131 mmol/L (L), Potassium 4.0 mmol/L, Chloride 98 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 9 mmol/L, Urea nitrogen 22 mg/dL, Creatinine 0.79 mg/dL, eGFR (CKD-EPI 2021) 81 mL/min/1.73m2, Glucose 124 mg/dL (H)</ref>
-- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 9/4 07:00, still running (local times)</ref>
+**Interval.** The patient is eating and feels much better, with no nausea or abdominal pain. Allergies: NKDA.
+
+**Exam.** At 07:17: BP 125/75, HR 98, RR 21, T 98.8 F, SpO2 94%. Comfortable at rest, lungs clear, abdomen soft.
+
+**Results.** The 06:25 panel shows sodium 131, potassium 4.0, chloride 98, bicarbonate 24, anion gap 9, urea nitrogen 22, creatinine 0.79, eGFR 81 and glucose 124.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. The <ref id="bmp">06:25 panel</ref> shows a normal anion gap and bicarbonate of 24. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily, started 9/4 at 07:00, continues.</ref>
+2. Sodium remains mildly low at 131; we will keep following it.
+3. Home empagliflozin, metformin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
+4. Continue to monitor oxygen saturation, which is 94% this morning, and respiratory rate.
 
 ```json payload
 {

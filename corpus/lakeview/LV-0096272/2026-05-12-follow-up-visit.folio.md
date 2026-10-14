@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 137/80, HR 70, weight 68.1 kg at 2026-05-12 08:24</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2020-12-11</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2013</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2013-09-09</ref>
-- eGFR 36 (today)
-- K 4.4 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+
+<ref id="bp_sys">BP 137/80, HR 70, weight 68.1 kg.</ref> Weight down about 1.5 kg since February. No swelling, no new complaints.
+
+eGFR 36 (today), K 4.4 (today). eGFR still trending down, 39 → 36.
+
+Return 3 months.
 
 ```json payload
 {

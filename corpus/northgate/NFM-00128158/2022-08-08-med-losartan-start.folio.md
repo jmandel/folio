@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start losartan: ACE inhibitor cough.</ref>
+<ref id="med_1">Start losartan 50 mg daily today for ACE inhibitor cough.</ref>
 
 ```json payload
 {

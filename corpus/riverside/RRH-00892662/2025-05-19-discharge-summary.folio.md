@@ -17,9 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
-- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
-- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
+**Diagnoses:** <ref id="dx_aki">acute kidney injury, resolved</ref>; hyperkalemia, resolved.
+
+**Hospital course.** The patient was admitted with weakness, creatinine 1.87, potassium 6.0 and sodium 130. <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref> The potassium was treated with IV calcium gluconate in the ED, and the patient received normal saline, a bolus followed by a continuous infusion that was stopped on 5/17 at 18:10. Creatinine improved steadily and potassium came down with fluids.
+
+**Condition at discharge.** Vitals at 07:30: BP 138/83, HR 104, RR 18, T 98.5 F, SpO2 99%. The patient is eating and drinking and has no complaints.
+
+**Discharge labs (5/19, 06:20).** Sodium 134, potassium 4.5, chloride 103, bicarbonate 22, anion gap 9, urea nitrogen 23, creatinine 0.91, eGFR 72, glucose 123.
+
+**Allergies:** no known drug allergies.
+
+**Medications at discharge**
+
+- Rosuvastatin 20 mg by mouth nightly: continue.
+- Lisinopril 40 mg daily: <ref id="med_lisinopril">held; the PCP will decide on restarting after a repeat BMP.</ref>
+
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision about restarting the held blood pressure medicine. The patient should return for weakness, very little urine, palpitations or worsening symptoms.
 
 ```json payload
 {

@@ -14,7 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
+New pt, establishing care. Hx of HTN since 2010 per pt.
+BP 136/88, pulse 84, wt 186 lb.
+Labs 8/23: eGFR 82, K 4.4.
+Reviewed history and goals. Home BP log encouraged.
+RTC for chronic care visit.
 
 ```json payload
 {

@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">change metformin: A1c 8.3.</ref>
+<ref id="med_1">A1c 8.3. Metformin up to 1000 mg BID.</ref>
 
 ```json payload
 {

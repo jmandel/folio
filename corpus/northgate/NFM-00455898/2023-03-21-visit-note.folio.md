@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New patient, establish care.
-
-dapagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
+New pt, establishing care. BP 127/78, pulse 74, wt 228 lb.
+Labs 3/18: eGFR 49, K 4.8, A1c 7.7%, LDL 87 mg/dL.
+Dapagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+Reviewed history with pt, no new complaints.
+RTC for recheck of labs.
 
 ```json payload
 {

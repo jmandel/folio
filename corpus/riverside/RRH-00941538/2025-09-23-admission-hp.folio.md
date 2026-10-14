@@ -16,12 +16,21 @@ schema:
 ---
 ## Admission history and physical
 
-- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
-- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
-- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
-- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
-- <ref id="med_lisinopril">home med lisinopril 40 mg tablet, 40 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
-- <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref>
+**Reason for admission:** euglycemic diabetic ketoacidosis.
+
+**History of present illness.** The patient came to the ED overnight with nausea, abdominal discomfort and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He takes empagliflozin, metformin, lisinopril, hydrochlorothiazide, amlodipine and atorvastatin at home. Allergies: NKDA.
+
+**Exam.** Vitals at 05:27: BP 112/67, HR 112, RR 16, T 98.1 F, SpO2 95%. He looks dry, with a fast heart rate. The abdomen is soft.
+
+**Results.** The 00:03 panel showed sodium 134, potassium 5.4, chloride 93, bicarbonate 14, anion gap 27, urea nitrogen 30, creatinine 1.76, eGFR 39 and glucose 175.
+
+**Assessment and plan**
+
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated.</ref> Continue the insulin infusion per DKA protocol (0.1 units/kg/h, started 00:51) together with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. <ref id="med_empagliflozin">Hold empagliflozin.</ref>
+2. Diabetes: <ref id="med_metformin">hold metformin 1000 mg twice daily</ref> while he is acidotic and NPO; resume when able.
+3. Volume depletion with creatinine 1.76 and potassium 5.4: <ref id="med_hydrochlorothiazide">hold hydrochlorothiazide 25 mg</ref> for volume depletion, and <ref id="med_lisinopril">hold lisinopril 40 mg</ref> for volume depletion and potassium; resume when he is eating.
+4. Hypertension: BP is soft-normal. Continue amlodipine 5 mg daily.
+5. Continue atorvastatin 20 mg nightly.
 
 ```json payload
 {

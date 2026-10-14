@@ -14,12 +14,13 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 139/80, HR 85, weight 88.8 kg at 2026-07-30 12:04</ref>
-- <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2021-07-05</ref>
-- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2009</ref>
-- <ref id="dx_htn">Essential hypertension, onset 2010-02-19</ref>
-- eGFR 31 (today)
-- K 5.1 (today)
+Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. Tired at times, no swelling.
+
+<ref id="bp_sys">BP 139/80, HR 85, weight 88.8 kg</ref>.
+
+eGFR 31 today, down from 35 in 2/2026. K 5.1, mildly high.
+
+Repeat K and creatinine in 4 weeks. Return 3 months.
 
 ```json payload
 {

@@ -14,7 +14,16 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="referral">Referral to Lakeview Kidney Care: eGFR 38, UACR 59 mg/g: CKD evaluation and management</ref>
+Dear Lakeview Kidney Care,
+
+I am referring a new patient to my practice for nephrology evaluation. <ref id="referral">eGFR 38 and UACR 59 mg/g: please evaluate and help manage CKD.</ref>
+
+The patient also has essential hypertension. I saw them today to establish care, and I would appreciate your assessment of the cause and stage of the kidney disease and your recommendations for ongoing management. I am happy to continue blood pressure follow-up here and to coordinate with you.
+
+Thank you for seeing them. Please send your notes to our office.
+
+Moira Brennan, DO
+Northgate Family Medicine
 
 ```json payload
 {
