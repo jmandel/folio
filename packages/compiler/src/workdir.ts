@@ -42,7 +42,7 @@ bun in/harness/run.ts "$@"
 
 export function instructions(source: Source, vs: ViewSet, nSamples: number, nPatients: number): string {
   const schemaName = basename(SCHEMA_FILE[source]);
-  const target = vs.name === "app"
+  const target = vs.name !== "uscore"
     ? "the consumer's app views in `in/views/views.d.ts`"
     : "US Core FHIR resources as defined in `in/views/uscore.d.ts` (which builds on the rules in `in/views/views.d.ts`)";
   return `# Write a mapper
@@ -66,7 +66,7 @@ You are writing a deterministic mapper from one source system's FOLIO record ite
 Write \`out/transform.ts\` exporting
 
 \`\`\`ts
-export function transform(items: FolioItem[], asOf: string): ${vs.name === "app" ? "ViewRows" : "UsCoreRows"}
+export function transform(items: FolioItem[], asOf: string): ${vs.name !== "uscore" ? "ViewRows" : "UsCoreRows"}
 \`\`\`
 
 (the type \`${vs.transformType}\` in \`in/views/${vs.transformFile}\`). It receives every item this source
@@ -82,7 +82,7 @@ produces wrong clinical data.
 ## Rules
 
 - \`out/transform.ts\` is self-contained TypeScript. Its only allowed import is
-  \`import type { … } from "../in/views/${vs.name === "app" ? "views" : "uscore"}"\` (and \`"../in/views/views"\`). No other imports.
+  \`import type { … } from "../in/views/${vs.name !== "uscore" ? "views" : "uscore"}"\` (and \`"../in/views/views"\`). No other imports.
 - Deterministic: no clock (\`Date.now()\`, \`new Date()\` without an argument), no randomness, no network, no
   file system, no environment. Parsing dates with \`Date.parse\`/\`new Date(string)\` and \`Intl\` time-zone
   formatting are fine.

@@ -12,7 +12,7 @@ const source = positionals[0] as Source;
 if (!SOURCES.includes(source)) throw new Error(`usage: bun run compile <${SOURCES.join("|")}> [--backend opus|sonnet|codex] [--condition a|b|c] [--views app|uscore]`);
 const b = BACKENDS[values.backend!];
 if (!b) throw new Error(`unknown backend ${values.backend}`);
-const vs = values.views as "app" | "uscore";
+const vs = values.views as "app" | "appv2" | "uscore";
 if (values["workdir-only"]) {
   const wd = buildWorkdir(source, vs);
   for (const [f, t] of Object.entries(wd.inputs)) console.log(`in/${f}  (${t.length} bytes)`);
