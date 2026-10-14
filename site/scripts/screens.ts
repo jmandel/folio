@@ -189,10 +189,13 @@ if (!values["no-smoke"]) {
   // Front page: every quoted item verifies, every citation resolves, and every link into the workbench lands.
   await page.goto(`${BASE}#/`);
   await page.waitForFunction(() => document.querySelectorAll('[data-testid="excerpt"]').length > 0 && !document.querySelector('[data-testid="cite"][data-state="wait"]'), null, { timeout: 30_000 });
+  while (await page.locator("button.cite.more").count()) await page.locator("button.cite.more").first().click();
+  await page.waitForFunction(() => !document.querySelector('[data-testid="cite"][data-state="wait"]'), null, { timeout: 30_000 });
   const excerpts = await page.getByTestId("excerpt").count();
   const cites = await page.locator('[data-testid="cite"]').evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.state));
   if (excerpts !== 6 || cites.some((c) => c !== "ok")) fail(`front page: ${excerpts} excerpts, citations ${cites.join(",")}`);
   else console.log(`front page: ${excerpts} excerpts verified, ${cites.length} citations verified`);
+  if ((await page.getByTestId("merged").getAttribute("data-kind")) !== "compiled-mapper") fail("front page: merged example is not compiled-mapper output");
   const links = [...new Set(await page.locator('.home a[href^="#/"]').evaluateAll((els) => els.map((e) => e.getAttribute("href")!)))];
   for (const h of links) {
     await page.goto("about:blank");
@@ -313,8 +316,37 @@ if (!values["no-screens"]) {
       },
     },
     { name: "sources", hash: "#/sources/lakeview?tab=schema" },
+    {
+      name: "home-merged",
+      hash: "#/",
+      prep: async (p) => {
+        await p.waitForFunction(() => !document.querySelector('[data-testid="cite"][data-state="wait"]'));
+        await p.getByTestId("merged").evaluate((e) => e.scrollIntoView({ block: "start" }));
+      },
+    },
+    {
+      name: "home-tour",
+      hash: "#/",
+      prep: async (p) => void (await p.locator("#h-tour").evaluate((e) => e.scrollIntoView({ block: "start" }))),
+    },
     { name: "compiler", hash: "#/compiler/20261014T005518Z-hero-homelog-a2" },
+    { name: "compiler-results", hash: "#/compiler/results", prep: async (p) => void (await p.waitForSelector('[data-testid="mapper-results"]')) },
+    { name: "compiler-mapper", hash: "#/compiler/20261014T153538312Z-nujp", prep: async (p) => void (await p.waitForSelector('[data-testid="transform"]')) },
+    {
+      name: "compiler-mapper-code",
+      hash: "#/compiler/20261014T153538312Z-nujp",
+      prep: async (p) => {
+        await p.waitForSelector('[data-testid="transform"]');
+        await p.getByTestId("transform").evaluate((e) => e.scrollIntoView({ block: "center" }));
+      },
+    },
+    { name: "record-chart", hash: "#/record/hero?chart=1", prep: async (p) => void (await p.waitForSelector('[data-testid="mapped-chart"]')) },
     { name: "about", hash: "#/about/signing?s=context-loss" },
+    {
+      name: "about-overview",
+      hash: "#/about",
+      prep: async (p) => void (await p.getByRole("heading", { name: "What this site shows" }).evaluate((e) => e.scrollIntoView({ block: "start" }))),
+    },
   ];
   for (const [w, h] of [[1280, 720], [390, 844]] as const)
     for (const scheme of ["light", "dark"] as const) {

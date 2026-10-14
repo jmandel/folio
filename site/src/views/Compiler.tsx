@@ -1,15 +1,20 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { loadRun, type Index, type RunRecord, type RunSummary } from "../lib/data.ts";
+import { loadMapperRun, loadRun, loadViewsText, type Index, type MapperRunRecord, type ResultCell, type RunRecord, type RunSummary } from "../lib/data.ts";
 import { href, type Route } from "../lib/route.ts";
 import { narrativeHtml, partsFromTagged } from "../lib/markdown.ts";
 import { Markdown } from "../components/Markdown.tsx";
 
-const DEFAULT_RUN = "20261014T005511Z-hero-riverside-a1";
+const SCORECARD = "https://github.com/jmandel/folio/blob/main/results/stage3/SCORECARD.md";
+const REPO_BLOB = "https://github.com/jmandel/folio/blob/main/";
+const BACKEND_LABEL: Record<string, string> = { "claude-opus": "Claude Opus", "codex-gpt-6-astra": "Codex", "claude-sonnet": "Claude Sonnet" };
+const SRC_ORDER = ["riverside", "northgate", "lakeview", "homelog"];
 
 export function CompilerView({ index, route }: { index: Index; route: Route }) {
-  const runId = route.path[1] ?? DEFAULT_RUN;
+  const runId = route.path[1] ?? "results";
   const runs = index.runs;
   const summary = runs.find((r) => r.runId === runId);
+  const mapperSummary = index.mapperRuns.find((r) => r.runId === runId);
+  const mapperRuns = [...index.mapperRuns].sort((a, b) => SRC_ORDER.indexOf(a.source) - SRC_ORDER.indexOf(b.source));
   const grouped = useMemo(() => {
     const m = new Map<string, RunSummary[]>();
     const order = index.patients.map((p) => p.patient);
@@ -25,18 +30,34 @@ export function CompilerView({ index, route }: { index: Index; route: Route }) {
         <div className="list-head">
           <h1 style={{ font: "600 var(--step-2)/1.2 var(--serif)" }}>Recorded agent runs</h1>
           <div className="patient-meta">
-            {runs.length} prose runs for the patients shown on this site. Each run is one call to a CLI agent, recorded with its prompt, transcript and
-            output files, and replayed here offline.
+            Each run is one call to a CLI agent, recorded with its prompt, transcript and output files, and replayed here offline.
           </div>
         </div>
         <div className="list-scroll">
-          <div className="year" style={{ position: "static" }}>Mappers</div>
-          <div className="empty small">Mapper runs (schema to view) are not recorded yet.</div>
+          <h2 className="year group">Mappers</h2>
+          <a className="run-row results-row" href={href(["compiler", "results"])} aria-current={runId === "results" ? "true" : undefined}>
+            <div className="l1">
+              <span>Scores on held-out patients</span>
+            </div>
+            <div className="l2">Views v3, three backends, three runs each</div>
+          </a>
+          {mapperRuns.map((r) => (
+            <a key={r.runId} className="run-row" data-src={r.source} href={href(["compiler", r.runId])} aria-current={r.runId === runId ? "true" : undefined}>
+              <div className="l1">
+                <span>{index.sources.find((s) => s.dir === r.source)?.short} mapper</span>
+                <span className="muted">cached</span>
+              </div>
+              <div className="l2">
+                {r.backend} {r.model ?? ""}, {(r.durationMs / 1000).toFixed(0)} s{r.costUsd ? `, $${r.costUsd.toFixed(3)}` : ""}
+              </div>
+            </a>
+          ))}
+          <h2 className="year group">Notes in the test data</h2>
           {grouped.map(([pid, rs]) => (
             <section key={pid}>
-              <h2 className="year">
+              <h3 className="year sub">
                 {name(pid)} <span>{rs.length}</span>
-              </h2>
+              </h3>
               {rs.map((r) => (
                 <a key={r.runId} className="run-row" data-src={r.source} href={href(["compiler", r.runId])} aria-current={r.runId === runId ? "true" : undefined}>
                   <div className="l1">
@@ -60,7 +81,15 @@ export function CompilerView({ index, route }: { index: Index; route: Route }) {
         <a className="back-link" href="#/compiler">
           Back to the run list
         </a>
-        {summary ? <RunViewer key={runId} runId={runId} index={index} /> : <div className="empty">No recorded run named {runId}.</div>}
+        {runId === "results" ? (
+          <MapperResults index={index} />
+        ) : mapperSummary ? (
+          <MapperRunViewer key={runId} runId={runId} index={index} />
+        ) : summary ? (
+          <RunViewer key={runId} runId={runId} index={index} />
+        ) : (
+          <div className="empty">No recorded run named {runId}.</div>
+        )}
       </div>
     </div>
   );
@@ -162,16 +191,6 @@ function RunViewer({ runId, index }: { runId: string; index: Index }) {
         ))}
       </section>
 
-      <section className="stage">
-        <h2>
-          <span className="n">4</span> Mapper code and scores
-        </h2>
-        <div className="placeholder-doc">
-          This run wrote notes for the test data. Mapper runs are not recorded yet. In each, an agent will write a mapper and its tests for one source
-          schema and one target view, and the harness will score the mapper against answer keys built from the synthetic patients' clinical truth.
-          Those runs will be replayed here with their code and scores.
-        </div>
-      </section>
     </div>
   );
 }
@@ -238,9 +257,19 @@ function flatten(events: any[]): { who: string; cls: string; body: React.ReactNo
             cls: "tool",
             body: (
               <>
-                <div className="small">
-                  <code>{String(c.input?.file_path ?? "").replace(/^.*\/runs\/[^/]+\/[^/]+\//, "")}</code>
-                </div>
+                {c.input?.file_path && (
+                  <div className="small">
+                    <code>{String(c.input.file_path).replace(/^.*\/runs\/[^/]+\/[^/]+\//, "")}</code>
+                  </div>
+                )}
+                {typeof c.input?.command === "string" && (
+                  <pre className="raw small-pre">{c.input.command.length > 1200 ? c.input.command.slice(0, 1200) + "\n…" : c.input.command}</pre>
+                )}
+                {typeof c.input?.pattern === "string" && (
+                  <div className="small">
+                    <code>{c.input.pattern}</code>
+                  </div>
+                )}
                 {typeof c.input?.content === "string" && (
                   <details>
                     <summary className="small">File content ({c.input.content.length.toLocaleString()} characters)</summary>
@@ -273,4 +302,274 @@ function flatten(events: any[]): { who: string; cls: string; body: React.ReactNo
       });
   }
   return out;
+}
+
+// ─── mapper compiles ─────────────────────────────────────────────────────────────────────────────
+
+const pct = (x: number) => (x * 100).toFixed(1);
+function cellText(c: ResultCell | undefined) {
+  if (!c) return "–";
+  const range = c.min === c.max ? "" : ` (${pct(c.min)}–${pct(c.max)})`;
+  return `${pct(c.mean)}${range}${c.extra ? `, +${c.extra}` : ""}`;
+}
+
+function MapperResults({ index }: { index: Index }) {
+  const r = index.mapperResults;
+  const short = (dir: string) => index.sources.find((s) => s.dir === dir)?.short ?? dir;
+  return (
+    <div className="results">
+      <header className="run-head">
+        <h1>Mapper scores on held-out patients</h1>
+      </header>
+      <div className="results-grid">
+        <p className="intro">
+          For each source, each backend wrote three mappers, each from the source schema, the views and about eight sample items, with no feedback.
+          Every mapper then ran on the records of 180 synthetic patients generated after the answer keys were frozen. The table gives the percentage of
+          expected rows that were wrong (missing, duplicated or with a wrong field) as of 13 Oct 2026: the mean over the three mappers, the range in
+          brackets, and after <b>+</b> the extra rows in the worst one.
+        </p>
+        <aside className="caveat results-caveats" aria-label="Limits of these numbers">
+          <h3>Limits of this test</h3>
+          <p>
+            The view instructions restate each source's quirks in general terms, for example that a patient-list entry "paused or stopped for the time
+            being" is held. So this measures how well the agents apply rules they were given, not how well they read a schema unaided.
+          </p>
+          <p>
+            Northgate's allergy rows are scored with a key corrected after scoring. Northgate's schema defines its allergy entry type as immune-mediated, and
+            the original key did not accept that answer for those entries. Those cells also show the value under the original, frozen key.
+          </p>
+          <p>All patients and records in this test are synthetic.</p>
+          <p>
+            <a href={SCORECARD} target="_blank" rel="noopener">
+              Full scorecard on GitHub
+            </a>
+            , with per-trap results, a documentation ablation and the merged-chart scores.
+          </p>
+        </aside>
+      </div>
+      <div className="table-wrap">
+        <table className="results-table" data-testid="mapper-results">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>View</th>
+              <th className="num">Rows</th>
+              {r.backends.map((b) => (
+                <th key={b} className="num">
+                  {BACKEND_LABEL[b] ?? b}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {r.rows.map((row, i) => {
+              const first = i === 0 || r.rows[i - 1].source !== row.source;
+              return (
+                <tr key={row.source + row.view} data-src={row.source} className={first && i > 0 ? "first" : undefined}>
+                  <td>
+                    {first && (
+                      <>
+                        <span className="srcdot" /> {short(row.source)}
+                      </>
+                    )}
+                  </td>
+                  <td>{row.view}</td>
+                  <td className="num">{row.rows.toLocaleString()}</td>
+                  {r.backends.map((b) => (
+                    <td key={b} className={row.cells[b]?.mean ? "num warn" : "num"}>
+                      {cellText(row.cells[b])}
+                      {row.frozen[b] && <span className="frozen">frozen key: {cellText(row.frozen[b])}</span>}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function MapperRunViewer({ runId, index }: { runId: string; index: Index }) {
+  const [run, setRun] = useState<MapperRunRecord | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [showPrompt, setShowPrompt] = useState(false);
+  useEffect(() => {
+    loadMapperRun(runId).then(setRun, (e) => setErr(String(e.message)));
+  }, [runId]);
+  if (err) return <div className="error-box">{err}</div>;
+  if (!run) return <div className="loading">Loading run…</div>;
+  const m = run.meta;
+  const src = index.sources.find((s) => s.dir === run.source)!;
+  const lines = run.transform.split("\n").length;
+  const views = ["medications", "problems", "allergies", "labs", "vitals"].filter((v) => run.scores?.[v]?.rows);
+
+  return (
+    <div data-src={run.source} data-testid="mapper-run">
+      <header className="run-head">
+        <div className="doc-src" style={{ marginBottom: 4 }}>
+          <span className="srcdot" />
+          {src.name}
+        </div>
+        <h1>Mapper for {src.short}'s schema</h1>
+        <div className="facts">
+          <span>
+            <b>{m.backend}</b> {m.model}
+          </span>
+          <span>
+            <b>{(m.durationMs / 1000).toFixed(1)} s</b> wall time
+          </span>
+          {m.costUsd !== undefined && (
+            <span>
+              <b>${m.costUsd.toFixed(4)}</b> reported cost
+            </span>
+          )}
+          <span>
+            <b>{m.numTurns ?? "?"}</b> turns
+          </span>
+          <span className="muted">
+            <code>runs/{run.family}/{run.runId}</code>
+          </span>
+        </div>
+      </header>
+
+      <p className="intro">
+        This run asked an agent to write <code>transform(items, asOf)</code>: a function that turns one patient's {src.short} items into rows for the
+        consumer's views (medications, problems, allergies, labs and vitals), each row citing the item and entry it rests on. The agent had the schema,
+        the views, {run.samples.length} sample items and a script that type-checks the mapper and runs it on the samples. It got no feedback from the
+        scorer. Its <code>transform.ts</code> is the cached mapper the front page runs on Linda's items.
+      </p>
+
+      <section className="stage">
+        <h2>
+          <span className="n">1</span> Prompt and inputs
+        </h2>
+        <div className={`prompt-box${showPrompt ? "" : " clip"}`}>
+          <Markdown text={run.prompt} from="runs" />
+        </div>
+        <button className="btn" style={{ marginTop: 8 }} onClick={() => setShowPrompt(!showPrompt)}>
+          {showPrompt ? "Collapse the prompt" : `Show the whole prompt (${run.prompt.length.toLocaleString()} characters)`}
+        </button>
+        <ul className="inputs">
+          <li>
+            <code>in/schema/{src.schemaFile}</code>: the schema as {src.short} publishes it.{" "}
+            <a href={href(["sources", src.dir], { tab: "schema" })}>Open it in Sources</a>
+          </li>
+          <li>
+            <ViewsFile />
+          </li>
+          {run.samples.map((f) => (
+            <li key={f.file}>
+              <FileBlock file={f.file} text={f.text} />
+            </li>
+          ))}
+          {run.harness.map((f) => (
+            <li key={f.file}>
+              <FileBlock file={f.file} text={f.text} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="stage">
+        <h2>
+          <span className="n">2</span> Transcript
+        </h2>
+        <Transcript events={run.transcript} />
+      </section>
+
+      <section className="stage">
+        <h2>
+          <span className="n">3</span> The mapper
+        </h2>
+        <p className="small muted">
+          <code>out/transform.ts</code>, {lines.toLocaleString()} lines, cached as{" "}
+          <a href={REPO_BLOB + run.cachePath} target="_blank" rel="noopener">
+            <code>{run.cachePath.replace(/([0-9a-f]{8})[0-9a-f]{56}/g, "$1…")}</code>
+          </a>
+          . The path holds the schema hash and the views hash.
+        </p>
+        <pre className="raw nowrap code-scroll" data-testid="transform">{run.transform}</pre>
+      </section>
+
+      <section className="stage">
+        <h2>
+          <span className="n">4</span> Checks and scores
+        </h2>
+        <ul className="checks">
+          <li>Type-checks under the harness's strict settings: {run.gates.tsc ? "yes" : "no"}</li>
+          <li>Same output when run twice: {run.gates.deterministic ? "yes" : "no"}</li>
+          <li>Errors thrown on held-out patients: {run.gates.runtime_errors}</li>
+          <li>Imports, clock reads, randomness or I/O: {run.gates.contract_issues === 0 ? "none" : run.gates.contract_issues}</li>
+          <li>Transcript scan: {run.gates.isolation_scan}</li>
+        </ul>
+        {run.scores && (
+          <>
+            <p className="small">This mapper on the held-out cohort as of 13 Oct 2026:</p>
+            <div className="table-wrap">
+              <table className="results-table small-table">
+                <thead>
+                  <tr>
+                    <th>View</th>
+                    <th className="num">Expected rows</th>
+                    <th className="num">Wrong</th>
+                    <th className="num">Extra</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {views.map((v) => {
+                    const s = run.scores![v];
+                    const f = run.frozenScores?.[v];
+                    const differs = f && (f.wrongRows !== s.wrongRows || f.extraRows !== s.extraRows);
+                    return (
+                      <tr key={v}>
+                        <td>{v}</td>
+                        <td className="num">{s.rows.toLocaleString()}</td>
+                        <td className="num">
+                          {s.wrongRows}
+                          {differs && <span className="frozen">frozen key: {f.wrongRows}</span>}
+                        </td>
+                        <td className="num">{s.extraRows}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p className="small">
+              <a href={href(["compiler", "results"])}>All backends and runs</a>
+            </p>
+          </>
+        )}
+      </section>
+    </div>
+  );
+}
+
+function FileBlock({ file, text }: { file: string; text: string }) {
+  return (
+    <details>
+      <summary>
+        <code>{file}</code> <span className="muted small">({text.length.toLocaleString()} characters)</span>
+      </summary>
+      <pre className="raw nowrap code-scroll">{text}</pre>
+    </details>
+  );
+}
+
+function ViewsFile() {
+  const [text, setText] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open && text === null) loadViewsText().then(setText);
+  }, [open, text]);
+  return (
+    <details onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}>
+      <summary>
+        <code>in/views/views.d.ts</code>: the consumer's views
+      </summary>
+      {text === null ? <div className="loading small">Loading…</div> : <pre className="raw nowrap code-scroll">{text}</pre>}
+    </details>
+  );
 }

@@ -6,6 +6,7 @@ import { fmtShortDate, yearOf } from "../lib/describe.ts";
 import { ItemDoc, Seal } from "../components/ItemDoc.tsx";
 import { Provenance } from "../components/Provenance.tsx";
 import { docHtml } from "../lib/markdown.ts";
+import { MappedChart } from "../components/MappedChart.tsx";
 
 const SRC_ORDER = ["riverside", "northgate", "lakeview", "homelog"];
 
@@ -15,6 +16,8 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
   const history = route.query.get("history") === "1";
   const trapMode = route.query.get("traps") === "1";
   const trapFilter = route.query.get("trap") ?? "";
+  // Linda's chart read through the compiled mappers (computed for the main example only).
+  const chartMode = pid === "hero" && route.query.get("chart") === "1";
   // Deep link: #/record/hero/<source>/<item>?ref=<ref id> selects that span or entry.
   const focus = route.query.get("ref") ?? undefined;
   const rec = usePatientRecord(index, pid);
@@ -28,6 +31,7 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
     history: history ? "1" : undefined,
     traps: trapMode ? "1" : undefined,
     trap: trapMode && trapFilter ? trapFilter : undefined,
+    chart: chartMode ? "1" : undefined,
     ...over,
   });
   const itemHref = (it: RecordItem) => href(["record", pid, it.source.dir, it.env.id], qs());
@@ -77,7 +81,7 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
   const hiddenCount = rec?.items.filter((i) => i.hidden).length ?? 0;
 
   return (
-    <div className={`panes${selected ? " has-detail" : ""}`}>
+    <div className={`panes${selected || chartMode ? " has-detail" : ""}`}>
       <aside className="pane-list" aria-label="Timeline">
         <div className="list-head">
           <div className="who">
@@ -151,6 +155,12 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
               />
               Planted traps
             </label>
+            {pid === "hero" && (
+              <label className="switch" title="Show Linda's chart as the cached mappers and the merge produce it">
+                <input type="checkbox" checked={chartMode} onChange={(e) => go(["record", pid], qs({ chart: e.target.checked ? "1" : undefined }), true)} />
+                Chart from the mappers
+              </label>
+            )}
           </div>
           {trapMode && (
             <select
@@ -189,9 +199,16 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
         {selected && rec ? (
           <>
             <a className="back-link" href={href(["record", pid], qs())}>
-              Back to the timeline
+              {chartMode ? "Back to the chart" : "Back to the timeline"}
             </a>
             <ItemDetail it={selected} rec={rec} pid={pid} index={index} trapMode={trapMode} trapFilter={trapFilter} focus={focus} qs={qs} />
+          </>
+        ) : chartMode ? (
+          <>
+            <a className="back-link" href={href(["record", pid], qs({ chart: undefined }))}>
+              Back to the timeline
+            </a>
+            <MappedChart index={index} pid={pid} qs={qs} />
           </>
         ) : (
           <Overview index={index} rec={rec} pid={pid} trapMode={trapMode} />
@@ -302,10 +319,16 @@ function Overview({ index, rec, pid, trapMode }: { index: Index; rec: PatientRec
         <h1 style={{ font: "600 1.75rem/1.2 var(--serif)", color: "var(--ink)", marginBottom: 10 }}>{p.name}</h1>
         <p>
           {pid === "hero"
-            ? "Linda's record from a hospital, her primary care practice, a lab and kidney clinic, and her own app, each in its own data model. This view merges them by date only."
-            : "A synthetic patient with records from the same sources. This view merges them by date only."}{" "}
+            ? "Linda's record from a hospital, her primary care practice, a lab and kidney clinic, and her own app, each in its own data model. This view lists the items by date."
+            : "A synthetic patient with records from the same sources. This view lists the items by date."}{" "}
           Every item is signed by the system that issued it, and the signatures are checked in your browser.
         </p>
+        {pid === "hero" && (
+          <p>
+            <a href={href(["record", pid], { chart: "1" })}>Linda's chart from the compiled mappers</a> shows the same items as medication, problem,
+            allergy, lab and vital rows, merged across sources.
+          </p>
+        )}
         <p>
           Choose an item on the left. In a note, highlighted words are tied to a structured entry: select either one to see the other.
           {trapMode ? " Items carry tags for the traps planted in this synthetic data." : ""}

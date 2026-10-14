@@ -39,6 +39,30 @@ export interface RunSummary {
   costUsd?: number;
   durationMs: number;
 }
+export interface MapperRunSummary {
+  runId: string;
+  family: string;
+  source: string;
+  backend: string;
+  model?: string;
+  durationMs: number;
+  costUsd?: number;
+  numTurns?: number;
+}
+/** Wrong-row rate (0–1) over three runs: mean, min, max; `extra`: extra rows in the worst run. */
+export interface ResultCell {
+  mean: number;
+  min: number;
+  max: number;
+  extra: number;
+  n: number;
+}
+export interface MapperResults {
+  keyHash: string;
+  asOf: string;
+  backends: string[];
+  rows: { source: string; view: string; rows: number; cells: Record<string, ResultCell>; frozen: Record<string, ResultCell> }[];
+}
 export interface Index {
   generated: string;
   patients: PatientInfo[];
@@ -46,6 +70,8 @@ export interface Index {
   traps: Trap[];
   spec: string[];
   runs: RunSummary[];
+  mapperRuns: MapperRunSummary[];
+  mapperResults: MapperResults;
 }
 export interface SignedItemFile {
   source: string;
@@ -78,6 +104,27 @@ export interface RunRecord {
   notes: RunNote[];
 }
 
+export interface ViewScore {
+  rows: number;
+  wrongRows: number;
+  extraRows: number;
+}
+export interface MapperRunRecord {
+  runId: string;
+  family: string;
+  source: string;
+  meta: Record<string, any>;
+  prompt: string;
+  samples: { file: string; text: string }[];
+  harness: { file: string; text: string }[];
+  transcript: any[];
+  transform: string;
+  cachePath: string;
+  gates: { tsc: boolean; deterministic: boolean; runtime_errors: number; contract_issues: number; isolation_scan: string };
+  scores?: Record<string, ViewScore>;
+  frozenScores?: Record<string, ViewScore>;
+}
+
 const cache = new Map<string, Promise<unknown>>();
 export function getJson<T>(path: string): Promise<T> {
   let p = cache.get(path);
@@ -108,4 +155,6 @@ export const loadIndex = () => getJson<Index>("data/index.json");
 export const loadPatient = (pid: string) => getJson<{ patient: string; items: SignedItemFile[] }>(`data/patients/${pid}.json`);
 export const loadSource = (dir: string) => getJson<SourceDoc>(`data/sources/${dir}.json`);
 export const loadRun = (id: string) => getJson<RunRecord>(`data/runs/${id}.json`);
+export const loadMapperRun = (id: string) => getJson<MapperRunRecord>(`data/mapper-runs/${id}.json`);
+export const loadViewsText = () => getText("data/mappers/views.d.ts");
 export const loadSpec = (name: string) => getText(`data/spec/${name}.md`);
