@@ -20,6 +20,11 @@ export interface AgentTask {
   /** claude only. Default ["Read","Write","Edit","Glob","Grep"]. */
   allowedTools?: string[];
   extraArgs?: string[];
+  /**
+   * Wrap the backend command before it runs, e.g. in a filesystem sandbox (bwrap). Receives the
+   * full CLI command and the run dir; returns the command to execute (cwd stays the run dir).
+   */
+  wrapCommand?: (cmd: string[], runDir: string) => string[];
 }
 
 export interface RunMeta {
