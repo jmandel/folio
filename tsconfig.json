@@ -6,7 +6,15 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "types": ["bun-types"],
+    "types": [
+      "bun-types"
+    ],
     "allowImportingTsExtensions": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "site",
+    "build"
+  ]
 }
