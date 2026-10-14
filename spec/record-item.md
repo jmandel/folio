@@ -144,7 +144,8 @@ lines removed. A narrative MUST NOT itself contain a fence with the info string 
 
 For streaming, columnar storage and signing. One JSON object: the envelope fields at top level, plus
 `narrative` (string, the Markdown narrative with ref tags, `""` if none) and `payload` (object, `{}` if
-none). In NDJSON sync streams each line is one item in this form.
+none). Sync feeds carry items signed (see [sync](sync.md) and [signing](signing.md)); verifying a
+signed item with nothing withheld yields this form.
 
 ## Corrections: supersession and retraction
 
@@ -197,7 +198,7 @@ audit and provenance; readers SHOULD let a user reach them from the item that re
 
 ## Signing and disclosure
 
-Specified in `signing.md` (not yet written). Requirements this format must meet:
+Specified in [signing.md](signing.md). The requirements it meets:
 
 - The envelope is always disclosed and always covered by the issuer's signature.
 - Each payload entry together with its ref spans, and each narrative-only span, is independently
@@ -225,8 +226,9 @@ that she takes sertraline (relevant to her low sodium) without also showing her 
 Written as two spans, `<ref id="hx_mdd">Depression is stable.</ref> <ref id="med_sertraline">Continue
 sertraline 100 mg daily.</ref>`, over two top-level entries, either can be disclosed alone.
 
-The intended mechanism is SD-JWT (RFC 9901), with one disclosure per entry or span carrying its exact text
-and JSON, which avoids any canonicalization of the Markdown.
+The mechanism is SD-JWT (RFC 9901), with one disclosure per entry or span carrying its exact text
+and JSON, which avoids any canonicalization of the Markdown. See [signing.md](signing.md), including
+[context loss](signing.md#context-loss) when a span is withheld.
 
 ## Examples
 

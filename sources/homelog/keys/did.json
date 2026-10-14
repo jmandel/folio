@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:homelog.example",
+  "verificationMethod": [
+    {
+      "id": "did:web:homelog.example#folio-demo-1",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:homelog.example",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "ePpL24b-NHdn7-buYZBBoVCc5PIPlJTzR4zcQxrRmdI"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:homelog.example#folio-demo-1"
+  ]
+}

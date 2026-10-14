@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:riverside-regional.example",
+  "verificationMethod": [
+    {
+      "id": "did:web:riverside-regional.example#folio-demo-1",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:riverside-regional.example",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "_uXairAUjpVX59n5FkzULsK5exeXOwhxVfKN8FOEBzQ"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:riverside-regional.example#folio-demo-1"
+  ]
+}

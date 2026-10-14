@@ -1,0 +1,9 @@
+{
+  "name": "@folio/personal-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "bin": { "folio-agent": "./src/cli.ts" },
+  "dependencies": { "@folio/core": "workspace:*", "@folio/sync": "workspace:*" }
+}

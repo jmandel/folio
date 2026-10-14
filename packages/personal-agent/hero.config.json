@@ -1,0 +1,15 @@
+{
+  "label": "Linda Okafor (hero), dev nodes from `bun packages/sync/src/cli.ts`",
+  "sources": [
+    { "name": "riverside", "issuer": "did:web:riverside-regional.example", "patient": "RRH-00731846" },
+    { "name": "northgate", "issuer": "did:web:northgate-fm.example", "patient": "NFM-00731552" },
+    { "name": "lakeview", "issuer": "did:web:lakeview-labs.example", "patient": "LV-0072914" },
+    { "name": "homelog", "issuer": "did:web:homelog.example", "patient": "HL-U-58213" }
+  ],
+  "hostMap": {
+    "riverside-regional.example": "http://127.0.0.1:8101",
+    "northgate-fm.example": "http://127.0.0.1:8102",
+    "lakeview-labs.example": "http://127.0.0.1:8103",
+    "homelog.example": "http://127.0.0.1:8104"
+  }
+}

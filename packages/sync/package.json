@@ -1,0 +1,9 @@
+{
+  "name": "@folio/sync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "bin": { "folio-sync": "./src/cli.ts" },
+  "dependencies": { "@folio/core": "workspace:*" }
+}
