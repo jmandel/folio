@@ -71,3 +71,9 @@ Resolved at Stage 0a → 0b handoff (2026-10-13):
   fails on a stale hash.
 - **NPIs** (1999000017, 1999000042, the spec's 1952384017) fail the NPI Luhn check. Kept: they can
   never collide with real NPIs. A validator that checks NPIs must allowlist them.
+
+## Stage 2 follow-up (orchestrator)
+- **Signing is a build step**: items are signed once (deterministically keyed, salts from a seeded RNG in dev) and the signed corpus is what nodes serve and what the site ships. Nodes do not re-sign on start. To do when Stage 1's corpus merges.
+- **Feed authentication**: out of scope for the demo; spec/sync.md names it as a deployment requirement (OAuth/SMART), nothing more.
+- **Node log persistence across restarts**: not needed; nodes serve a directory.
+- **Key binding for agent exchanges**: decide in Stage 6.
