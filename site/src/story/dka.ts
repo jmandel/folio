@@ -2,8 +2,8 @@
 // recorded it. Every excerpt names a real signed item (source dir + item id) and the ref ids to show;
 // the page loads, verifies and quotes those items, so nothing here is copied text.
 //
-// The merged result lives in dka-merged.json (see work/story-receipt.md for its shape). Today it is
-// the answer key; compiled-mapper output with the same shape can replace it.
+// The merged result lives in dka-merged.json (see work/story-receipt.md for its shape). It is compiled-mapper
+// output: site/scripts/merged-story.ts runs the cached mappers on Linda's items and the generic merge.
 
 import merged from "./dka-merged.json";
 

@@ -1,48 +1,181 @@
 {
-  "kind": "answer-key",
+  "kind": "compiled-mapper",
   "patient": "hero",
-  "basis": "Hand-written from the synthetic truth (packages/truth/src/hero.ts: m_empagliflozin, a_empagliflozin) and corpus/answers/hero/allergies.json. Not produced by a mapper.",
+  "basis": "Produced by site/scripts/merged-story.ts: the cached views-v3 mappers from runs 20261014T153538312Z-nujp (Northgate, schema 6acf8173…), 20261014T153539262Z-il83 (Lakeview, schema e884e9fb…), 20261014T153539589Z-ml0t (Riverside, schema 3c7974c6…), 20261014T154025060Z-lt22 (HomeLog, schema 481bb3d1…) ran on Linda's items as of 2026-10-13, and the generic merge (packages/compiler/src/merge.ts) combined their rows.",
   "rows": [
     {
       "view": "Medications",
-      "title": "Empagliflozin 10 mg, once daily",
+      "title": "Empagliflozin 10 mg, once daily: stopped 12 Nov 2024, adverse reaction",
       "parts": [
         {
-          "label": "Status",
-          "text": "Stopped 12 Nov 2024 for an adverse reaction (euglycemic DKA)",
+          "label": "Northgate",
+          "text": "Stopped 12 Nov 2024, adverse reaction: “euglycemic DKA”",
           "cites": [
-            { "source": "northgate", "item": "01JCGH7E98RHEM3E2MSH4DMDZS", "ref": "med_1" },
-            { "source": "homelog", "item": "01KQN2FD70GFSXF3DM02V7HGMX", "ref": "med_8" }
+            {
+              "source": "northgate",
+              "item": "01GTVVA3XGSRT1VPJ5M8QWE9J0",
+              "ref": "med_1"
+            },
+            {
+              "source": "northgate",
+              "item": "01JCGH7E98RHEM3E2MSH4DMDZS",
+              "ref": "med_1"
+            }
           ]
         },
         {
-          "label": "Before that",
-          "text": "Held in hospital 2 to 5 Nov 2024, with advice not to restart",
-          "cites": [{ "source": "riverside", "item": "01JBZ2V178F5KZNWJ47TAN9ZT2", "ref": "med_empa" }]
+          "label": "Riverside",
+          "text": "Held since 2 Nov 2024: “Do not resume until reviewed by PCP”",
+          "cites": [
+            {
+              "source": "riverside",
+              "item": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+              "ref": "med_empa"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBP1SKS0V37E3S3E28JT97KB",
+              "ref": "med_empa"
+            }
+          ]
         },
         {
-          "label": "Since",
-          "text": "Not re-tried at the kidney clinic, 13 Jul 2026",
-          "cites": [{ "source": "lakeview", "item": "01KXEQKXQGGFWM3XCNV7YSNJGV", "ref": "sglt2_decision" }]
+          "label": "HomeLog",
+          "text": "Patient's own list, stopped Nov 2024: “Hospital stopped it, I got very sick (DKA). My doctor said never take it again.”",
+          "cites": [
+            {
+              "source": "homelog",
+              "item": "01KQN2FD70GFSXF3DM02V7HGMX",
+              "ref": "med_8"
+            }
+          ]
         }
       ]
     },
     {
       "view": "Allergies and intolerances",
-      "title": "Empagliflozin: adverse reaction, high criticality",
+      "title": "Empagliflozin: serious adverse event, high criticality",
       "parts": [
         {
-          "label": "Reaction",
-          "text": "Euglycemic diabetic ketoacidosis, onset 1 Nov 2024",
+          "label": "Northgate",
+          "text": "Diabetic ketoacidosis, onset 1 Nov 2024; serious adverse event, non-immune mechanism; high criticality",
           "cites": [
-            { "source": "northgate", "item": "01JCGHC7KGRYX1DZWYB8RTCAM0", "ref": "alg_1" },
-            { "source": "riverside", "item": "01JBZ2V178F5KZNWJ47TAN9ZT2", "ref": "dx_edka" }
+            {
+              "source": "northgate",
+              "item": "01JCGHC7KGRYX1DZWYB8RTCAM0",
+              "ref": "alg_1"
+            }
           ]
         },
         {
-          "label": "Context",
-          "text": "She kept taking it through three days of vomiting and little food",
-          "cites": [{ "source": "homelog", "item": "01JBK1YV20HTJ26YZXQFQAKCMZ", "ref": "note_1" }]
+          "label": "Riverside",
+          "text": "Euglycemic DKA, onset 1 Nov 2024; serious adverse event, non-immune mechanism; high criticality",
+          "cites": [
+            {
+              "source": "riverside",
+              "item": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+              "ref": "dx_adverse"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBYAAES035K0A0QM0RXD72CX",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBVVKP68RYMF7CEE9JBNZXD6",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBSJ3HMG6CQ643DZVMXXQKFB",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBS6NAWG438V4FFMFA897Y1T",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBP1SKS0V37E3S3E28JT97KB",
+              "ref": "dx_adverse"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBP1SKS0V37E3S3E28JT97KB",
+              "ref": "dx_edka"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "view": "Problems",
+      "title": "Euglycemic DKA, SGLT2 inhibitor-associated (E11.10): resolved",
+      "parts": [
+        {
+          "label": "Riverside",
+          "text": "Resolved, ICD-10-CM E11.10",
+          "cites": [
+            {
+              "source": "riverside",
+              "item": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBYAAES035K0A0QM0RXD72CX",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBVVKP68RYMF7CEE9JBNZXD6",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBSJ3HMG6CQ643DZVMXXQKFB",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBS6NAWG438V4FFMFA897Y1T",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBP1SKS0V37E3S3E28JT97KB",
+              "ref": "dx_edka"
+            },
+            {
+              "source": "riverside",
+              "item": "01JBNQXPD0M9S346Q3D25VT4F5",
+              "ref": "dx_dka"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "view": "Problems",
+      "title": "Personal history of other endocrine, nutritional and metabolic disease (Z86.39): resolved",
+      "parts": [
+        {
+          "label": "Lakeview",
+          "text": "Resolved, ICD-10-CM Z86.39",
+          "cites": [
+            {
+              "source": "lakeview",
+              "item": "01KXEQKXQGGFWM3XCNV7YSNJGV",
+              "ref": "dx_dka_hx"
+            }
+          ]
         }
       ]
     }

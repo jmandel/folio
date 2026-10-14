@@ -140,9 +140,16 @@ export function HomeView({ index }: { index: Index; route: Route }) {
             Each source documents its own model in a TypeScript schema. The test data contains planted traps. In trap T1, the hospital marks empagliflozin
             held and the family doctor marks it stopped.
           </TourStep>
-          <TourStep n={3} title="Recorded agent runs" links={[["Open the Compiler view", href(["compiler"])]]} note="Mapper results under review">
-            Agents have written mappers for all four sources, and every run is recorded. The scores are being audited before they are published here.
-            Until then the Compiler view replays the runs that wrote the notes in the test data.
+          <TourStep
+            n={3}
+            title="Recorded agent runs"
+            links={[
+              ["Open the Compiler view", href(["compiler"])],
+              ["Northgate's mapper run", href(["compiler", "20261014T153538312Z-nujp"])],
+            ]}
+          >
+            An agent wrote a mapper for each source. The Compiler view replays one run per source, with its inputs, transcript and code, and shows how
+            the mappers scored on held-out synthetic patients. It also replays the runs that wrote the notes in the test data.
           </TourStep>
           <TourStep n={4} title="Sharing part of a record" links={[["Open the sharing example", href(["sharing"], { s: "context-loss" })]]}>
             Linda shares items with her kidney clinic and withholds her depression treatment, sertraline. Every shared item still verifies. Without the sertraline, the
@@ -296,26 +303,36 @@ function Merged({ items, index }: { items: Map<string, Loaded> | null; index: In
         <h3>Merged into a reader's views</h3>
         <span className={`merged-kind${answerKey ? " key" : ""}`}>{answerKey ? "Answer key" : "Compiled mapper output"}</span>
       </div>
-      <p className="merged-note">
-        {answerKey
-          ? "These rows were written by hand from the synthetic patient's underlying data, as the result a correct mapper should produce. Compiled mapper output replaces them once the mapper scores are audited. Each part cites the source, item and ref it comes from."
-          : m.basis}
-      </p>
+      {answerKey ? (
+        <p className="merged-note">
+          These rows were written by hand from the synthetic patient's underlying data, as the result a correct mapper should produce. Each part cites the
+          source, item and ref it comes from.
+        </p>
+      ) : (
+        <>
+          <p className="merged-note">
+            Each source's cached mapper turned Linda's items into view rows, and a generic merge combined them. Each heading is a merged row; under it
+            are the source rows it combines and the evidence each mapper cited. No row cites the kidney clinic's decision, which is only in note text,
+            or the diary entry, since no view has a row type for symptoms. The merge leaves Riverside's DKA diagnosis and Lakeview's history code as
+            separate problem rows because their ICD-10 codes fall in different groups.
+          </p>
+          <details className="merged-basis">
+            <summary>Mappers and schema hashes</summary>
+            <p>{m.basis}</p>
+          </details>
+        </>
+      )}
       <div className="m-rows">
       {m.rows.map((row) => (
         <div className="m-row" key={row.view + row.title}>
           <div className="m-view">{row.view}</div>
           <div className="m-body">
             <div className="m-title">{row.title}</div>
-            {row.parts.map((p) => (
-              <div className="m-part" key={p.label}>
+            {row.parts.map((p, i) => (
+              <div className="m-part" key={`${i}-${p.label}`}>
                 <span className="m-label">{p.label}</span>
                 <span className="m-text">{p.text}</span>
-                <span className="m-cites">
-                  {p.cites.map((c) => (
-                    <CiteChip key={c.item + c.ref} c={c} l={items?.get(c.item)} loading={!items} short={index.sources.find((s) => s.dir === c.source)?.short ?? c.source} />
-                  ))}
-                </span>
+                <Cites cites={p.cites} items={items} index={index} />
               </div>
             ))}
           </div>
@@ -323,6 +340,24 @@ function Merged({ items, index }: { items: Map<string, Loaded> | null; index: In
       ))}
       </div>
     </div>
+  );
+}
+
+const CITES_SHOWN = 3;
+function Cites({ cites, items, index }: { cites: Cite[]; items: Map<string, Loaded> | null; index: Index }) {
+  const [all, setAll] = useState(false);
+  const shown = all || cites.length <= CITES_SHOWN ? cites : cites.slice(0, CITES_SHOWN - 1);
+  return (
+    <span className="m-cites">
+      {shown.map((c) => (
+        <CiteChip key={c.item + c.ref} c={c} l={items?.get(c.item)} loading={!items} short={index.sources.find((s) => s.dir === c.source)?.short ?? c.source} />
+      ))}
+      {shown.length < cites.length && (
+        <button className="cite more" onClick={() => setAll(true)}>
+          {cites.length - shown.length} more citations
+        </button>
+      )}
+    </span>
   );
 }
 

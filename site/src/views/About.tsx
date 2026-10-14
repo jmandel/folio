@@ -94,7 +94,8 @@ function Overview({ index }: { index: Index }) {
       <ul>
         <li>
           <a href={href(["record"])}>Record</a>: Linda's items from all four sources by date. Signatures are checked in your browser. Select a highlighted
-          phrase to see its structured entry, or the other way round.
+          phrase to see its structured entry, or the other way round. <a href={href(["record", "hero"], { chart: "1" })}>Chart from the mappers</a> shows
+          her items as medication, problem, allergy, lab and vital rows, produced by the cached mappers and merged across sources.
         </li>
         <li>
           <a href={href(["sharing"])}>Sharing</a>: Linda shares items with the kidney clinic but withholds her depression and sertraline. The clinic can
@@ -104,15 +105,14 @@ function Overview({ index }: { index: Index }) {
           <a href={href(["sources"])}>Sources</a>: each system's README, schema and hand-written examples.
         </li>
         <li>
-          <a href={href(["compiler"])}>Compiler</a>: replays of recorded agent runs. So far these are the runs that wrote the notes in the test data.
-          Mapper runs are recorded and will be added once their scores have been audited.
+          <a href={href(["compiler"])}>Compiler</a>: replays of recorded agent runs. For each source, the run that wrote its cached mapper, with
+          the mapper's code and scores on held-out synthetic patients; also the runs that wrote the notes in the test data.
         </li>
       </ul>
       <h2>Not built yet</h2>
       <p>
-        The record view merges sources by date only. It does not yet read them through the compiled mappers into shared views, and it does not
-        de-duplicate a lab result reported by two sources. The planted traps (switch them on in the record view) are the cases the mappers are scored
-        on. Population search is not built.
+        Only Linda's chart is read through the compiled mappers, and it is computed ahead of time by a script, not in your browser. The other
+        patients' records are listed by date only. Population search is not built.
       </p>
       <h2>Specification</h2>
       <p>

@@ -8,6 +8,8 @@
 //   site/public/data/patients/<pid>.json     the patient's signed items (.folio.sd-jwt text, as served)
 //   site/public/data/sources/<dir>.json      README, schema text, examples
 //   site/public/data/runs/<runId>.json       one recorded prose run (prompt, transcript, outputs)
+//   site/public/data/mapper-runs/<runId>.json one recorded mapper compile (inputs, transcript, transform.ts)
+//   site/public/data/mappers/views.d.ts      the views the mappers compile into
 //   site/public/data/spec/<name>.md          spec pages
 //   site/public/hosts/<host>/.well-known/did.json            did:web documents
 //   site/public/hosts/<host>/folio/schemas/<file>.d.ts        schemas at their published paths
@@ -157,6 +159,113 @@ for (const [batchKey, batch] of Object.entries<any>(ledger.batches)) {
 }
 console.log(`${runs.length} runs`);
 
+// ─── recorded mapper compiles: the cached views-v3 mapper of each source ────────────────────────
+// One run per source: the run whose transform.ts is the cached mapper the front page uses
+// (site/scripts/merged-story.ts). Only what the Compiler view shows is copied: the prompt, the input
+// files except the schema and views (published elsewhere on the site, checked identical here), the
+// transcript with long tool results cut, the transform, the cache gates and this run's held-out scores.
+const MAPPER_RUNS = [
+  { source: "riverside", family: "compiler/riverside/app/claude-opus", runId: "20261014T153539589Z-ml0t" },
+  { source: "northgate", family: "compiler/northgate/app/claude-opus", runId: "20261014T153538312Z-nujp" },
+  { source: "lakeview", family: "compiler/lakeview/app/claude-opus", runId: "20261014T153539262Z-il83" },
+  { source: "homelog", family: "compiler/homelog/app/claude-opus", runId: "20261014T154025060Z-lt22" },
+];
+const VIEWS_FILE = join(ROOT, "packages/views/views.d.ts");
+write("data/mappers/views.d.ts", readFileSync(VIEWS_FILE, "utf8"));
+const RESULT_CAP = 2000;
+const scoresAt = (file: string, date: string) => {
+  if (!existsSync(file)) return undefined;
+  const ev = JSON.parse(readFileSync(file, "utf8"));
+  return Object.fromEntries(Object.entries<any>(ev.byDate?.[date] ?? {}).map(([v, c]) => [v, { rows: c.rows, wrongRows: c.wrongRows, extraRows: c.extraRows }]));
+};
+const mapperRuns: unknown[] = [];
+for (const mr of MAPPER_RUNS) {
+  const rdir = join(ROOT, "runs", mr.family, mr.runId);
+  const meta = JSON.parse(readFileSync(join(rdir, "meta.json"), "utf8"));
+  const src = sourceIndex.find((s) => s.dir === mr.source)!;
+  // The schema and views the agent saw are the files the site already publishes.
+  const same = (a: string, b: string) => readFileSync(a).equals(readFileSync(b));
+  if (!same(join(rdir, "in/schema", src.schemaFile), join(ROOT, "sources", mr.source, "schema", src.schemaFile))) throw new Error(`${mr.runId}: schema differs from sources/`);
+  if (!same(join(rdir, "in/views/views.d.ts"), VIEWS_FILE)) throw new Error(`${mr.runId}: views differ from packages/views`);
+  // The cache entry whose provenance names this run, and its transform must be the run's output.
+  let cache: { path: string; prov: any } | undefined;
+  for (const h of readdirSync(join(ROOT, "mappers")))
+    for (const v of readdirSync(join(ROOT, "mappers", h)))
+      for (const b of readdirSync(join(ROOT, "mappers", h, v))) {
+        const prov = JSON.parse(readFileSync(join(ROOT, "mappers", h, v, b, "provenance.json"), "utf8"));
+        if (prov.chosen?.runId === mr.runId) cache = { path: `mappers/${h}/${v}/${b}/transform.ts`, prov };
+      }
+  if (!cache) throw new Error(`${mr.runId} is not a cached mapper`);
+  const transform = readFileSync(join(rdir, "out/transform.ts"), "utf8");
+  if (transform !== readFileSync(join(ROOT, cache.path), "utf8")) throw new Error(`${mr.runId}: out/transform.ts differs from ${cache.path}`);
+
+  const strip = (t: string) => t.split(meta.cwd + "/").join("").split(meta.cwd).join(".");
+  const cut = (c: any) => {
+    if (typeof c === "string") return c.length > RESULT_CAP ? c.slice(0, RESULT_CAP) + `\n… (${(c.length - RESULT_CAP).toLocaleString()} more characters)` : c;
+    if (Array.isArray(c)) return c.map((x) => (x?.type === "text" ? { ...x, text: cut(x.text) } : x));
+    return c;
+  };
+  const transcript = strip(readFileSync(join(rdir, "transcript.jsonl"), "utf8"))
+    .split("\n")
+    .filter(Boolean)
+    .map((l) => JSON.parse(l))
+    .filter((e) => e.type !== "rate_limit_event" && !(e.type === "system" && e.subtype !== "init"))
+    .map((e) => {
+      if (e.type === "system") return { type: "system", subtype: e.subtype, model: e.model, tools: e.tools };
+      if (e.type === "user")
+        return { type: "user", message: { content: (e.message?.content ?? []).map((c: any) => (c.type === "tool_result" ? { type: "tool_result", content: cut(c.content) } : c)) } };
+      if (e.type === "assistant") return { type: "assistant", message: { content: e.message?.content ?? [] } };
+      return e;
+    });
+  const listFiles = (sub: string, skip: string[] = []) =>
+    readdirSync(join(rdir, "in", sub))
+      .filter((f) => !skip.includes(f))
+      .sort()
+      .map((f) => ({ file: `in/${sub}/${f}`, text: readFileSync(join(rdir, "in", sub, f), "utf8") }));
+  const scores = scoresAt(join(ROOT, "results/stage3/evals-fresh", `${mr.runId}.json`), "2026-10-13");
+  const frozen = scoresAt(join(ROOT, "results/stage3/evals-fresh-frozen-26ee28163e5c6e69", `${mr.runId}.json`), "2026-10-13");
+  const { cmd: _cmd, cwd: _cwd, sessionId: _sid, ...metaShown } = meta;
+  write(`data/mapper-runs/${mr.runId}.json`, {
+    runId: mr.runId,
+    family: mr.family,
+    source: mr.source,
+    meta: metaShown,
+    prompt: readFileSync(join(rdir, "prompt.md"), "utf8"),
+    samples: listFiles("samples", ["samples.json"]),
+    harness: listFiles("harness"),
+    transcript,
+    transform,
+    cachePath: cache.path,
+    gates: cache.prov.gates,
+    scores,
+    frozenScores: frozen,
+  });
+  mapperRuns.push({
+    runId: mr.runId, family: mr.family, source: mr.source, backend: meta.backend, model: meta.model,
+    durationMs: meta.durationMs, costUsd: meta.costUsd, numTurns: meta.numTurns,
+  });
+}
+console.log(`${mapperRuns.length} mapper runs`);
+
+// ─── views-v3 headline from the Stage 3 scorecard (corrected key, frozen-key values beside) ─────
+const card = JSON.parse(readFileSync(join(ROOT, "results/stage3/scorecard.json"), "utf8"));
+const BACKENDS = ["claude-opus", "codex-gpt-6-astra", "claude-sonnet"];
+const cell = (c: any) => c && { mean: c.mean, min: c.min, max: c.max, extra: c.extra, n: c.n };
+const mapperResults = {
+  keyHash: card.keys_sha256,
+  asOf: "2026-10-13",
+  backends: BACKENDS,
+  rows: card.headline.map((h: any) => ({
+    source: h.source,
+    view: h.view,
+    rows: h.rows,
+    cells: Object.fromEntries(BACKENDS.map((b) => [b, cell(h.cells[b])])),
+    frozen: Object.fromEntries(
+      BACKENDS.filter((b) => h.frozenKey?.[b] && (h.frozenKey[b].mean !== h.cells[b].mean || h.frozenKey[b].max !== h.cells[b].max)).map((b) => [b, cell(h.frozenKey[b])]),
+    ),
+  })),
+};
+
 write("data/index.json", {
   generated: new Date().toISOString().slice(0, 10),
   patients,
@@ -164,6 +273,8 @@ write("data/index.json", {
   traps,
   spec: specPages,
   runs,
+  mapperRuns,
+  mapperResults,
 });
 write(".nojekyll", "");
 console.log("site data written to site/public/data and site/public/hosts");
