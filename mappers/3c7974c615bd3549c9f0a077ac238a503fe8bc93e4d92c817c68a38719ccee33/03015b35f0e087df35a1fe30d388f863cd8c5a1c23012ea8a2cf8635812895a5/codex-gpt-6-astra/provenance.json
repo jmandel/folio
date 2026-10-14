@@ -1,0 +1,72 @@
+{
+ "source": "riverside",
+ "schema_sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "view_set": "app",
+ "view_set_hash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "chosen": {
+  "condition": "b",
+  "runId": "20261014T123359975Z-s982",
+  "eval": "results/stage3/evals/20261014T123359975Z-s982.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 32,
+  "precision": 0.9934140641597621,
+  "recall": 0.995741056218058,
+  "ms_per_item": 0.28267791489361704
+ },
+ "samples_from_training_patients": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T121114803Z-akao",
+   "rounds": [
+    {
+     "runId": "20261014T121114803Z-akao",
+     "summary": "tsc=ok det=true errors=0/32 P=99.4% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.276ms/item"
+    }
+   ]
+  },
+  "b": {
+   "final": "20261014T123359975Z-s982",
+   "rounds": [
+    {
+     "runId": "20261014T122804498Z-1h3e",
+     "summary": "tsc=ok det=true errors=0/32 P=99.1% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.279ms/item"
+    },
+    {
+     "runId": "20261014T123359975Z-s982",
+     "summary": "tsc=ok det=true errors=0/32 P=99.1% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.281ms/item"
+    }
+   ]
+  },
+  "c": {
+   "final": "20261014T124510879Z-749g",
+   "rounds": [
+    {
+     "runId": "20261014T124107126Z-c7wz",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=99.8% medi:100.0% prob:100.0% alle:77.1% labs:100.0% vita:100.0% 0.280ms/item"
+    },
+    {
+     "runId": "20261014T124510879Z-749g",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.293ms/item"
+    }
+   ]
+  }
+ }
+}

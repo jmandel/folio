@@ -1,0 +1,60 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "condition": "b",
+ "schemaSha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2024-05-01-visit-note.folio.md",
+  "p047/2024-06-01-void.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283-corrected.folio.md",
+  "p095/2025-09-16-referral-created.folio.md",
+  "p047/2019-06-27-problem-1-add.folio.md",
+  "p047/2025-07-01-allergy-dapagliflozin.folio.md",
+  "p047/2025-07-01-med-dapagliflozin-stop.folio.md",
+  "p047/2019-06-27-vitals.folio.md",
+  "p095/2025-09-16-medications-reviewed.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T122509946Z-6hsu",
+   "ok": true,
+   "durationMs": 240035,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 628795,
+    "cached_input_tokens": 565376,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7336,
+    "reasoning_output_tokens": 3133
+   },
+   "feedbackItems": 8,
+   "evalPath": "results/stage3/evals/20261014T122509946Z-6hsu.json",
+   "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.050ms/item"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T122913611Z-34r2",
+   "ok": true,
+   "durationMs": 267231,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 640033,
+    "cached_input_tokens": 564736,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8080,
+    "reasoning_output_tokens": 3940
+   },
+   "feedbackItems": 8,
+   "evalPath": "results/stage3/evals/20261014T122913611Z-34r2.json",
+   "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.050ms/item"
+  }
+ ],
+ "final": "20261014T122913611Z-34r2",
+ "startedFrom": "20261014T121114687Z-j9h7",
+ "note": "Prose-check discrepancies on dev-split items fed back."
+}

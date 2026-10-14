@@ -38,6 +38,8 @@ export interface MedKey {
   dose?: { value: number; unit: string };
   frequency?: string[];             // acceptable codes
   stop_reason?: string;
+  /** false: do not score `ingredient` (US Core output need not carry it when an RxNorm product code is given). */
+  scoreIngredient?: boolean;
 }
 export interface ProblemKey { family: string; condition: string; icd10?: string; status: "active" | "resolved"; ckd_stage?: string; onset?: { value: string; precision: string } }
 export interface AllergyKey { substance: string; type: "allergy" | "intolerance" | "adverse_reaction"; criticality?: "low" | "high" | "unknown"; onset?: { value: string; precision: string } }
@@ -353,6 +355,15 @@ function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     const sev = a.type === "intolerance" ? "mild" : a.criticality === "high" ? "severe" : "moderate";
     e.allergies.push(row("allergies", { substance: a.substance.display, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type, ...(sev !== "moderate" ? { criticality: a.criticality } : {}) } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
   }
+  // A diagnosis that names a drug-caused condition (SGLT2i-associated DKA, ACE-inhibitor angioedema) is the
+  // view's allergy row too: the truth links the reaction to the condition it caused (`manifestation`).
+  for (const { doc: d } of docs) for (const it of d.plan ?? []) {
+    if (it.kind !== "dx") continue;
+    const a = p.allergies.find((x) => x.manifestation === it.conditionId && x.visibility.A);
+    if (!a || seen.has(a.id)) continue;
+    seen.add(a.id);
+    e.allergies.push(row("allergies", { substance: a.substance.display, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
+  }
   for (const { doc: d } of docs) for (const it of d.plan ?? []) {
     if (it.kind !== "adverse-dx" || seen.has(it.allergyId)) continue;
     seen.add(it.allergyId);
@@ -501,10 +512,32 @@ export function mergedExpected(p: Patient, keys: Record<string, any>, ix: TrapIn
     e.labs.push(mk("labs", { analyte: a, value, ...(comparator ? { comparator } : {}), unit: UNIT[a], collected: l.collected, ...(eq ? { egfr_equation: eq } : {}) } as LabKey, l.basis));
   }
   const v = keys.vitals;
+  const finish = () => restrictToRecords(p, e, ix);
   for (const [list, setting] of [["clinic", "clinic"], ["hospital", "hospital"], ["home_bp", "home"], ["home_glucose", "home"]] as const) for (const x of v[list]) e.vitals.push(mk("vitals", {
     setting, local_time: x.local_time, ...(x.systolic !== undefined ? { systolic_mmhg: x.systolic, diastolic_mmhg: x.diastolic } : {}),
     ...(x.repeat ? { repeat_systolic_mmhg: x.repeat.systolic, repeat_diastolic_mmhg: x.repeat.diastolic } : {}), ...(x.pulse !== undefined ? { pulse_bpm: x.pulse } : {}),
     ...(x.weight_kg !== undefined ? { weight_kg: x.weight_kg } : {}), ...(x.glucose_mg_dl !== undefined ? { glucose_mg_dl: Math.min(600, x.glucose_mg_dl) } : {}),
   } as VitalKey, x.basis));
+  return finish();
+}
+
+/**
+ * The merged key restricted to what the records carry: a fact no source renders is dropped, and a
+ * field (dose, onset, CKD stage, status date, criticality) is scored only if some source's own key
+ * carries it for that fact.
+ */
+function restrictToRecords(p: Patient, e: Expected, ix: TrapIndex): Expected {
+  const per = (Object.keys(SOURCE_KEY) as string[]).filter((s) => p.sources[SOURCE_KEY[s]]).map((s) => expectedFor(p, s, "2026-10-13", ix));
+  const views = ["medications", "problems", "allergies", "labs", "vitals"] as const;
+  for (const view of views) {
+    const src = per.flatMap((x) => x[view] as KeyRow<any>[]);
+    (e as any)[view] = (e[view] as KeyRow<any>[]).flatMap((r) => {
+      const same = src.filter((x) => x.basis.some((b) => r.basis.includes(b)));
+      if (!same.length) return [];
+      const f = { ...r.fields };
+      for (const k of ["dose", "onset", "ckd_stage", "status_since", "criticality", "frequency"]) if (k in f && !same.some((x) => x.fields[k] !== undefined)) delete f[k];
+      return [{ ...r, fields: f }];
+    });
+  }
   return e;
 }

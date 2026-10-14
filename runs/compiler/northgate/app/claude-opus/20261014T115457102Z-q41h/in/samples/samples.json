@@ -1,0 +1,499 @@
+[
+  {
+    "patient": "NFM-00342977",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01HWV89FB0D13YS7WMT56C113S",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2024-05-01T15:50:00-05:00",
+        "recorded": "2024-05-01T18:37:00-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "DM2 f/u. No new complaints.\nBP 142/84, repeat 140/84, pulse 63, wt 173 lb.\nToday eGFR 74, UACR 9 mg/g, A1c 7.2%. First K 6, sample hemolyzed; repeat K 4.5.\n\n<ref id=\"sick_day\">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>\n\nRTC 3 mo.",
+        "payload": {
+          "visit": {
+            "type": "visit",
+            "visit_id": "V-2024-050162",
+            "visit_type": "office",
+            "reason": "Diabetes follow-up"
+          },
+          "dx_1": {
+            "type": "billing_dx",
+            "visit_id": "V-2024-050162",
+            "rank": 1,
+            "icd10cm": "E11.9",
+            "display": "Type 2 diabetes mellitus without complications"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01HZ9ZT6HRDS90JT503YWWSN0S",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2024-06-01T08:28:51-05:00",
+        "recorded": "2024-06-01T08:28:51-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "retracts": [
+          "01HZ7ZHMZG3Q0DMXWAVHEHD43A"
+        ],
+        "narrative": "Carvedilol 12.5 mg start entered 5/31 was an entry error. Entered in error, removed from the chart.",
+        "payload": {
+          "void_1": {
+            "type": "chart_correction",
+            "voided_items": [
+              "01HZ7ZHMZG3Q0DMXWAVHEHD43A"
+            ],
+            "reason": "entry_error"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01HWT8RJ60TK99MGP35CDW2EMT",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2024-05-01T07:17:00-05:00",
+        "recorded": "2024-05-01T09:26:00-05:00",
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "creat": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "CREAT",
+              "name": "Creatinine, serum",
+              "loinc": "2160-0"
+            },
+            "value": "1.15",
+            "unit": "mg/dL",
+            "reference_range": "0.76-1.27",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-CREAT"
+            },
+            "order_id": "NO-2024-55371"
+          },
+          "egfr": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR",
+              "name": "eGFR (CKD-EPI 2021)"
+            },
+            "value": "74",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "comment": "Calculated by CKD-EPI 2021 (race-free) equation.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-EGFR21"
+            },
+            "order_id": "NO-2024-55371"
+          },
+          "na": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "NA",
+              "name": "Sodium, serum",
+              "loinc": "2951-2"
+            },
+            "value": "136",
+            "unit": "mmol/L",
+            "reference_range": "134-144",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-NA"
+            },
+            "order_id": "NO-2024-78563"
+          },
+          "k": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "K",
+              "name": "Potassium, serum",
+              "loinc": "2823-3"
+            },
+            "value": "6.0",
+            "unit": "mmol/L",
+            "reference_range": "3.5-5.1",
+            "flag": "HH",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 09:21.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-K"
+            },
+            "order_id": "NO-2024-83153"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01HWTTX0D0QCFYT00JVYHKCT94",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2024-05-01T07:17:00-05:00",
+        "recorded": "2024-05-01T14:43:00-05:00",
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "supersedes": [
+          "01HWT8RJ60TK99MGP35CDW2EMT"
+        ],
+        "narrative": "",
+        "payload": {
+          "creat": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "CREAT",
+              "name": "Creatinine, serum",
+              "loinc": "2160-0"
+            },
+            "value": "1.15",
+            "unit": "mg/dL",
+            "reference_range": "0.76-1.27",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-CREAT"
+            },
+            "order_id": "NO-2024-55371"
+          },
+          "egfr": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "EGFR",
+              "name": "eGFR (CKD-EPI 2021)"
+            },
+            "value": "74",
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">59",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "comment": "Calculated by CKD-EPI 2021 (race-free) equation.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-EGFR21"
+            },
+            "order_id": "NO-2024-55371"
+          },
+          "na": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "NA",
+              "name": "Sodium, serum",
+              "loinc": "2951-2"
+            },
+            "value": "136",
+            "unit": "mmol/L",
+            "reference_range": "134-144",
+            "result_status": "F",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T09:15:00-05:00",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-NA"
+            },
+            "order_id": "NO-2024-78563"
+          },
+          "k": {
+            "type": "imported_result",
+            "test": {
+              "nfm_code": "K",
+              "name": "Potassium, serum",
+              "loinc": "2823-3"
+            },
+            "value": "Result invalidated",
+            "unit": "mmol/L",
+            "reference_range": "3.5-5.1",
+            "result_status": "C",
+            "collected": "2024-05-01T07:17:00-05:00",
+            "resulted": "2024-05-01T14:39:00-05:00",
+            "comment": "Specimen hemolyzed; potassium may be falsely elevated. Recollection requested. Called to K. Foster RN 09:21. CORRECTED 05/01/24 14:39: result invalidated, see recollected specimen LV24-122-83729.",
+            "external_ref": {
+              "lab": "Lakeview Labs",
+              "accession": "LV24-122-32283",
+              "result_code": "LK-K"
+            },
+            "order_id": "NO-2024-83153"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01DECP5NP0BJYEDWE3VT8TP1TE",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2019-06-27",
+        "recorded": "2019-06-27T09:42:00-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"prob_1\">Essential hypertension, onset 2007.</ref> Added at first visit here, history per pt.",
+        "payload": {
+          "prob_1": {
+            "type": "problem_event",
+            "problem_id": "PL-15913",
+            "action": "add",
+            "description": "Essential hypertension",
+            "icd10cm": "I10",
+            "onset": {
+              "date": "2007-01-01",
+              "precision": "year"
+            },
+            "visit_id": "V-2019-062733"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JZ3FFK4G35044WYMCAHDS4CB",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2025-07-01T12:10:00-05:00",
+        "recorded": "2025-07-01T12:10:18-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"alg_1\">Dapagliflozin: euglycemic diabetic ketoacidosis.</ref> Entered as adverse reaction.",
+        "payload": {
+          "alg_1": {
+            "type": "allergy_event",
+            "allergy_id": "AL-3452",
+            "action": "add",
+            "substance": {
+              "name": "dapagliflozin",
+              "rxnorm": "1488564"
+            },
+            "reaction_type": "adverse_reaction",
+            "reactions": [
+              "Diabetic ketoacidosis"
+            ],
+            "severity": "high",
+            "onset": {
+              "date": "2025-06-24",
+              "precision": "day"
+            },
+            "visit_id": "V-2025-070123"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JZ3FATSGS6QSK1VEP6EE85ZZ",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2025-07-01T12:07:00-05:00",
+        "recorded": "2025-07-01T12:07:42-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "<ref id=\"med_1\">Dapagliflozin stopped today, euglycemic DKA.</ref>",
+        "payload": {
+          "med_1": {
+            "type": "med_event",
+            "med_id": "ML-20879",
+            "action": "stop",
+            "origin": "northgate",
+            "drug": {
+              "name": "dapagliflozin 10 MG Oral Tablet",
+              "rxnorm": "1488569"
+            },
+            "dose": {
+              "value": 10,
+              "unit": "mg"
+            },
+            "frequency": "QD",
+            "sig": "Take 1 tablet by mouth daily",
+            "stop_reason": "adverse_reaction",
+            "reason_text": "euglycemic DKA",
+            "visit_id": "V-2025-070123"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01DECKQVEG4B92S8ZK7G2GF669",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00342977",
+        "effective": "2019-06-27T08:58:00-05:00",
+        "recorded": "2019-06-27T08:59:30-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "vitals": {
+            "type": "vital_set",
+            "visit_id": "V-2019-062733",
+            "bp": "131/77",
+            "pulse_bpm": 62,
+            "weight_lb": 174.4
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "NFM-00813593",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01K59Z9F30YT4YQPFDWAA0Q1K3",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00813593",
+        "effective": "2025-09-16T14:15:00-05:00",
+        "recorded": "2025-09-16T14:16:12-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "Dear Colleague,\n\nThank you for seeing this pt with chronic kidney disease stage 3a, type 2 diabetes mellitus and essential hypertension. <ref id=\"referral\">eGFR 51 and UACR 46 mg/g; please evaluate and help manage the CKD.</ref>\n\nKidney function has drifted down gradually over the past year or so. BP and A1c have been fairly steady at recent visits. Pt is aware of the referral and agreeable.\n\nRecent notes and labs are available on request. Please send your recommendations when you have seen the pt.\n\nThank you,\nTeresa Reyes, MD",
+        "payload": {
+          "referral": {
+            "type": "referral_event",
+            "referral_id": "RF-2025-1554",
+            "action": "created",
+            "to": {
+              "org": "Lakeview Kidney Care",
+              "specialty": "Nephrology"
+            },
+            "question": "eGFR 51, UACR 46 mg/g: CKD evaluation and management",
+            "urgency": "routine"
+          },
+          "dx_1": {
+            "type": "referral_dx",
+            "referral_id": "RF-2025-1554",
+            "icd10cm": "N18.31",
+            "display": "Chronic kidney disease stage 3a"
+          },
+          "dx_2": {
+            "type": "referral_dx",
+            "referral_id": "RF-2025-1554",
+            "icd10cm": "E11.22",
+            "display": "Type 2 diabetes mellitus"
+          },
+          "dx_3": {
+            "type": "referral_dx",
+            "referral_id": "RF-2025-1554",
+            "icd10cm": "I10",
+            "display": "Essential hypertension"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01K59YYFH0PDNQYJA0Y05V6N3M",
+        "issuer": "did:web:northgate-fm.example",
+        "patient": "NFM-00813593",
+        "effective": "2025-09-16T14:10:00-05:00",
+        "recorded": "2025-09-16T14:10:12-05:00",
+        "author": {
+          "id": "urn:northgate-fm.example:staff:treyes",
+          "name": "Teresa Reyes, MD",
+          "role": "Primary care physician"
+        },
+        "schema": {
+          "url": "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts",
+          "type": "ChartEvent",
+          "sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+        },
+        "narrative": "",
+        "payload": {
+          "review": {
+            "type": "list_reviewed",
+            "list": "medications",
+            "lines_on_list": [
+              "ML-39601",
+              "ML-46145",
+              "ML-14267",
+              "ML-48064",
+              "ML-24699"
+            ],
+            "visit_id": "V-2025-091619"
+          }
+        }
+      }
+    ]
+  }
+]

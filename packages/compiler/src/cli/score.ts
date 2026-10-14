@@ -70,6 +70,12 @@ for (const b of [...new Set(recs.map((r) => r.backend))]) for (const c of ["a", 
   console.log(`end-to-end ${b}/${c} done`);
 }
 
+// Ceiling: the hand-written reference mappers (packages/compiler/test/fixtures) through the same merge.
+{
+  const mappers = Object.fromEntries(SOURCES.map((s) => [s, { runId: `fixture:${s}-reference.ts`, transform: readFileSync(join(REPO, "packages/compiler/test/fixtures", `${s}-reference.ts`), "utf8") }])) as Record<Source, { runId: string; transform: string }>;
+  e2e.unshift(endToEnd(mappers, "reference (hand-written)", "–"));
+}
+
 const cached = cacheMappers(recs);
 const prior = existsSync(join(RESULTS, "scorecard.json")) ? JSON.parse(readFileSync(join(RESULTS, "scorecard.json"), "utf8")) : {};
 const scorecard = { generated_from: "results/stage3/compiles/**, results/stage3/evals/<runId>.json", as_of: "2026-10-13", split: "test (held out)", cells, end_to_end: e2e, cached, notes: prior.notes };
@@ -88,15 +94,25 @@ L.push("## Mappers", "", "Field-level precision and recall (presence of each exp
   "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|");
 for (const c of cells) L.push(`| ${c.source} | ${c.viewSet} | ${c.backend} | ${cond(c.condition)} | \`${c.finalRunId ?? "–"}\` | ${c.compiled ? "yes" : "no"} | ${c.runtimeErrors ?? "–"} | ${pct(c.precision)} | ${pct(c.recall)} | ${VIEWS.map((v) => pct(c.views?.[v]?.recall)).join(" | ")} | ${c.msPerItem?.toFixed(3) ?? "–"} | ${c.costUsd ? c.costUsd.toFixed(2) : "n/a"} | ${c.agentMinutes.toFixed(1)} |`);
 L.push("", "Cost is what the claude CLI reports per run; codex reports no cost. Rounds of conditions b and c (test-split recall after each round):", "");
-for (const c of cells.filter((x) => x.condition !== "a")) L.push(`- ${c.source}/${c.viewSet}/${c.backend}/${c.condition}: ` + c.rounds.map((r) => `\`${r.runId}\` (${r.feedbackItems} findings fed back) R=${pct(r.recall)} P=${pct(r.precision)}`).join(" → "));
+for (const c of cells.filter((x) => x.condition !== "a")) L.push(`- ${c.source}/${c.viewSet}/${c.backend}/${c.condition}: ` + (c.rounds.length ? c.rounds.map((r) => `\`${r.runId}\` (${r.feedbackItems} findings fed back) R=${pct(r.recall)} P=${pct(r.precision)}`).join(" → ") : "no findings on the dev split; the one-shot mapper stands"));
 
 const traps = [...new Set(cells.flatMap((c) => Object.keys(c.traps ?? {})))].sort((a, b) => +a.slice(1) - +b.slice(1));
-L.push("", "## Silent-error rate per trap", "", "Share of trap-bearing facts (expected rows, plus facts that must not appear) that a mapper which compiled and ran got wrong. `errors/facts`.", "");
+L.push("", "## Silent-error rate per trap", "", "Share of trap-bearing facts (expected rows, plus facts that must not appear) that a mapper which compiled and ran got wrong,",
+  "summed over the four sources: `errors/facts`. Sources with errors are named. Per-source counts are in scorecard.json (`cells[].traps`).", "");
 for (const vs of ["app", "uscore"]) {
-  const cs = cells.filter((c) => c.viewSet === vs && c.traps);
-  if (!cs.length) continue;
-  L.push(`### ${vs} views`, "", `| Trap | ${cs.map((c) => `${c.source.slice(0, 5)} ${c.backend.replace("claude-", "")} ${c.condition}`).join(" | ")} |`, `|---|${cs.map(() => "---").join("|")}|`);
-  for (const t of traps) L.push(`| ${t} ${TRAP_NAMES[t]?.name ?? ""} | ${cs.map((c) => { const x = c.traps?.[t]; return x ? `${x.errors}/${x.facts}` : ""; }).join(" | ")} |`);
+  const cols = [...new Set(cells.filter((c) => c.viewSet === vs && c.traps).map((c) => `${c.backend}|${c.condition}`))].sort();
+  if (!cols.length) continue;
+  L.push(`### ${vs} views`, "", `| Trap | ${cols.map((c) => c.replace("claude-", "").replace("|", " ")).join(" | ")} |`, `|---|${cols.map(() => "---").join("|")}|`);
+  for (const t of traps) {
+    const row = cols.map((col) => {
+      const cs = cells.filter((c) => c.viewSet === vs && `${c.backend}|${c.condition}` === col && c.traps?.[t]);
+      if (!cs.length) return "";
+      const f = cs.reduce((a, c) => a + c.traps![t].facts, 0), e = cs.reduce((a, c) => a + c.traps![t].errors, 0);
+      const who = cs.filter((c) => c.traps![t].errors).map((c) => c.source).join(", ");
+      return `${e}/${f}${who ? ` (${who})` : ""}`;
+    });
+    if (row.some(Boolean)) L.push(`| ${t} ${TRAP_NAMES[t]?.name ?? ""} | ${row.join(" | ")} |`);
+  }
   L.push("");
 }
 L.push("## Structured-only vs narrated facts", "", "Recall by whether the source narrates the fact (truth visibility for that source). Unmatched mapper output cannot be split this way.", "",
@@ -114,6 +130,10 @@ if (e2e.length) {
     "| Backend | Condition | Mapper runs (northgate, lakeview, riverside, homelog) | Patients | Precision | Recall | Meds R | Problems R | Allergies R | Labs R | Vitals R | Hero P | Hero R |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|");
   for (const e of e2e) L.push(`| ${e.backend} | ${e.condition} | ${SOURCES.map((s) => `\`${e.runIds[s]}\``).join(", ")} | ${e.patients} | ${pct(e.counts.all.precision)} | ${pct(e.counts.all.recall)} | ${VIEWS.map((v) => pct(e.counts[v].recall)).join(" | ")} | ${pct(e.hero.all.precision)} | ${pct(e.hero.all.recall)} |`);
 }
+L.push("", "## US Core resources", "", "Structural check of every emitted resource against the elements `packages/views/uscore.d.ts` requires (profile, status, intent,",
+  "reportedBoolean, medication, subject, LOINC coding, category, effectiveDateTime with offset, UCUM valueQuantity).", "",
+  "| Source | Backend | Final run | Resources | Conformant |", "|---|---|---|---|---|");
+for (const c of cells.filter((x) => x.fhir)) L.push(`| ${c.source} | ${c.backend} | \`${c.finalRunId}\` | ${c.fhir!.resources} | ${c.fhir!.conformant} |`);
 L.push("", "## Cached mappers", "", "Passing (type-checks, no runtime errors on held-out patients, deterministic, no contract issues) deployable mappers (condition b, else a):", "");
 for (const c of cached) L.push(`- \`${c.path}\` (run \`${c.runId}\`, condition ${c.condition})`);
 writeFileSync(join(RESULTS, "SCORECARD.md"), L.join("\n") + "\n");

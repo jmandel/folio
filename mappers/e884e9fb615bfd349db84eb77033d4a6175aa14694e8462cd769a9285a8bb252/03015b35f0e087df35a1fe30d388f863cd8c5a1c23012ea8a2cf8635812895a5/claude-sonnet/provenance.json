@@ -1,0 +1,72 @@
+{
+ "source": "lakeview",
+ "schema_sha256": "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252",
+ "view_set": "app",
+ "view_set_hash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "chosen": {
+  "condition": "b",
+  "runId": "20261014T121332417Z-1h6w",
+  "eval": "results/stage3/evals/20261014T121332417Z-1h6w.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 161,
+  "precision": 1,
+  "recall": 1,
+  "ms_per_item": 0.13608616329411763
+ },
+ "samples_from_training_patients": [
+  "p256/2026-01-27-new-visit.folio.md",
+  "p047/2024-05-01-lab-rq-2405012170.folio.md",
+  "p047/2024-05-01-lab-rq-2405012170-corrected.folio.md",
+  "p256/2026-03-03-phone.folio.md",
+  "p256/2026-07-13-follow-up-visit.folio.md",
+  "p047/2019-06-22-lab-rq-1906220560.folio.md",
+  "p047/2020-02-13-lab-rq-2002131454.folio.md",
+  "p047/2020-12-23-lab-rq-2012238638.folio.md",
+  "p047/2021-10-19-lab-rq-2110196198.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T121120263Z-wok5",
+   "rounds": [
+    {
+     "runId": "20261014T121120263Z-wok5",
+     "summary": "tsc=ok det=true errors=0/161 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:n/a labs:100.0% vita:100.0% 0.125ms/item",
+     "costUsd": 0.32338680000000003
+    }
+   ]
+  },
+  "b": {
+   "final": "20261014T121332417Z-1h6w",
+   "rounds": [
+    {
+     "runId": "20261014T121306250Z-cg4k",
+     "summary": "tsc=ok det=true errors=0/161 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:n/a labs:100.0% vita:100.0% 0.125ms/item",
+     "costUsd": 0.12045519999999998
+    },
+    {
+     "runId": "20261014T121332417Z-1h6w",
+     "summary": "tsc=ok det=true errors=0/161 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:n/a labs:100.0% vita:100.0% 0.126ms/item",
+     "costUsd": 0.1353995
+    }
+   ]
+  },
+  "c": {
+   "final": "20261014T121120263Z-wok5",
+   "rounds": [
+    {
+     "runId": "",
+     "summary": "no findings; stopped"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "source": "riverside",
+ "schema_sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "view_set": "uscore",
+ "view_set_hash": "e295b9fc544f55d069f9f39ad83dedcba1da21bf4ebb2e306b1525ea2f1ef120",
+ "backend": "claude-opus",
+ "model": "opus",
+ "chosen": {
+  "condition": "a",
+  "runId": "20261014T121950885Z-8hz4",
+  "eval": "results/stage3/evals/20261014T121950885Z-8hz4.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 32,
+  "precision": 1,
+  "recall": 1,
+  "ms_per_item": 0.17763292907801412
+ },
+ "samples_from_training_patients": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T121950885Z-8hz4",
+   "rounds": [
+    {
+     "runId": "20261014T121950885Z-8hz4",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:n/a alle:n/a labs:100.0% vita:n/a 0.173ms/item",
+     "costUsd": 1.6332035999999999
+    }
+   ]
+  }
+ }
+}

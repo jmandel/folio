@@ -1,0 +1,119 @@
+{
+ "runId": "20261014T124510879Z-749g",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "test",
+ "asOf": "2026-10-13",
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 32,
+  "items": 141,
+  "ms": 47.73711700000002,
+  "msPerItem": 0.3385611134751774,
+  "patientErrors": []
+ },
+ "counts": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 720,
+   "fp": 0,
+   "fn": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 82,
+   "fp": 0,
+   "fn": 0
+  },
+  "allergies": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 35,
+   "fp": 0,
+   "fn": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 3190,
+   "fp": 0,
+   "fn": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 669,
+   "fp": 0,
+   "fn": 0
+  },
+  "all": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 4696,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 802,
+   "fp": 0,
+   "fn": 0
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 3894,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 144,
+   "errors": 0
+  },
+  "T19": {
+   "facts": 2,
+   "errors": 0
+  },
+  "T1": {
+   "facts": 17,
+   "errors": 0
+  },
+  "T18": {
+   "facts": 34,
+   "errors": 0
+  },
+  "T10": {
+   "facts": 1164,
+   "errors": 0
+  },
+  "T12": {
+   "facts": 13,
+   "errors": 0
+  },
+  "T14": {
+   "facts": 1028,
+   "errors": 0
+  }
+ },
+ "anti": [],
+ "extras": {
+  "medications": 0,
+  "problems": 0,
+  "allergies": 0,
+  "labs": 0,
+  "vitals": 0
+ },
+ "wrongRows": []
+}

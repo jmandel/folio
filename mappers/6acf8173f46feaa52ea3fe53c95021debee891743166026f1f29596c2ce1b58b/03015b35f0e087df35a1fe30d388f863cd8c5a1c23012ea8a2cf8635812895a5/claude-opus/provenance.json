@@ -1,0 +1,73 @@
+{
+ "source": "northgate",
+ "schema_sha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "view_set": "app",
+ "view_set_hash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "backend": "claude-opus",
+ "model": "opus",
+ "chosen": {
+  "condition": "b",
+  "runId": "20261014T120659892Z-edxa",
+  "eval": "results/stage3/evals/20261014T120659892Z-edxa.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 181,
+  "precision": 1,
+  "recall": 0.9993571398946539,
+  "ms_per_item": 0.03387759173553718
+ },
+ "samples_from_training_patients": [
+  "p047/2024-05-01-visit-note.folio.md",
+  "p047/2024-06-01-void.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283-corrected.folio.md",
+  "p095/2025-09-16-referral-created.folio.md",
+  "p047/2019-06-27-problem-1-add.folio.md",
+  "p047/2025-07-01-allergy-dapagliflozin.folio.md",
+  "p047/2025-07-01-med-dapagliflozin-stop.folio.md",
+  "p047/2019-06-27-vitals.folio.md",
+  "p095/2025-09-16-medications-reviewed.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T115457102Z-q41h",
+   "rounds": [
+    {
+     "runId": "20261014T115457102Z-q41h",
+     "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.031ms/item",
+     "costUsd": 1.1254772
+    }
+   ]
+  },
+  "b": {
+   "final": "20261014T120659892Z-edxa",
+   "rounds": [
+    {
+     "runId": "20261014T120431654Z-pfmn",
+     "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.031ms/item",
+     "costUsd": 0.8329596
+    },
+    {
+     "runId": "20261014T120659892Z-edxa",
+     "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.031ms/item",
+     "costUsd": 0.769708
+    }
+   ]
+  },
+  "c": {
+   "final": "20261014T115457102Z-q41h",
+   "rounds": [
+    {
+     "runId": "",
+     "summary": "no findings; stopped"
+    }
+   ]
+  }
+ }
+}

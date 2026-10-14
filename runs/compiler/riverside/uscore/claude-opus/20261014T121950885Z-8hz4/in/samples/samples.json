@@ -1,0 +1,1873 @@
+[
+  {
+    "patient": "RRH-00388366",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01JYJ5CY90HWSVZC5HYP60F3RB",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00388366",
+        "effective": "2025-06-24T20:55:00Z",
+        "recorded": "2025-06-24T23:47:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:40388",
+          "name": "Adaeze Okonjo, MD",
+          "role": "Emergency physician"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## ED provider note\n\n**Chief complaint.** Feeling unwell with fast breathing.\n\n**History.** The patient is a middle-aged adult with type 2 diabetes who came to the ED feeling weak, nauseated and short of breath. Her home medicines include <ref id=\"med_dapagliflozin\">dapagliflozin 10 mg daily</ref>, along with metformin 1000 mg twice daily, lisinopril 20 mg daily and hydrochlorothiazide 25 mg daily; none of these have been reconciled yet. She has no known drug allergies.\n\n**Exam.** Vitals at 16:01: BP 100/60, HR 104, RR 22, T 99.2 F, SpO2 97%. She is tachypneic with deep, regular respirations and appears dry. Abdomen is soft.\n\n**Results.** The <ref id=\"bmp\">basic metabolic panel drawn at 16:17 showed sodium 134 mmol/L (L), potassium 5.3 mmol/L (H), chloride 94 mmol/L (L), bicarbonate 8 mmol/L (LL), anion gap 32 mmol/L (H), urea nitrogen 35 mg/dL (H), creatinine 1.57 mg/dL (H), eGFR 50 mL/min/1.73m2 (L) and glucose 242 mg/dL (H)</ref>. Venous blood gas at 16:17: pH 7.08, pCO2 27 mmHg. Beta-hydroxybutyrate 6.6 mmol/L.\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic diabetic ketoacidosis</ref>: severe acidosis with a wide anion gap and markedly elevated ketones despite a glucose of only 242. The insulin infusion per DKA protocol at 0.1 units/kg/h was started at 17:05 and is running.\n2. Mild hyperkalemia and acute kidney injury are likely from volume depletion; recheck with the next panel.\n3. Admit to the hospitalist service for continued DKA management.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6437094",
+            "document_kind": "ed_note",
+            "class": "emergency",
+            "service": "Emergency Medicine",
+            "arrived": "2025-06-24T20:55:00Z",
+            "disposition": "admitted"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-06-24T21:01:00Z",
+            "bp": {
+              "systolic_mmhg": 100,
+              "diastolic_mmhg": 60
+            },
+            "heart_rate_bpm": 104,
+            "resp_rate_per_min": 22,
+            "temp_f": 99.2,
+            "spo2_pct": 97,
+            "weight_kg": 79.1
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25175-8693",
+            "collected": "2025-06-24T21:17:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "134",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "5.3",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "94",
+                "unit": "mmol/L",
+                "ref_range": "98-107",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "8",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "LL"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "32",
+                "unit": "mmol/L",
+                "ref_range": "7-16",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "35",
+                "unit": "mg/dL",
+                "ref_range": "8-23",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.57",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "50",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "242",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "vbg": {
+            "type": "panel",
+            "panel": {
+              "local_code": "VBG",
+              "name": "Venous blood gas"
+            },
+            "accession": "L25175-9881",
+            "collected": "2025-06-24T21:17:00Z",
+            "specimen": "venous blood",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "VPH",
+                  "loinc": "2746-6",
+                  "name": "pH, venous"
+                },
+                "value": "7.08",
+                "ref_range": "7.32-7.43",
+                "flag": "LL"
+              },
+              {
+                "test": {
+                  "local_code": "VPCO2",
+                  "loinc": "2021-4",
+                  "name": "pCO2, venous"
+                },
+                "value": "27",
+                "unit": "mmHg",
+                "ref_range": "41-51",
+                "flag": "L"
+              }
+            ]
+          },
+          "bhb": {
+            "type": "result",
+            "test": {
+              "local_code": "BHB",
+              "name": "Beta-hydroxybutyrate"
+            },
+            "accession": "L25175-9054",
+            "collected": "2025-06-24T21:17:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "value": "6.6",
+            "unit": "mmol/L",
+            "ref_range": "<0.4",
+            "flag": "HH"
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Diabetic ketoacidosis, euglycemic",
+            "icd10cm": "E11.10",
+            "status": "active"
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-06-24T22:05:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 1000 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "1000 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "not_reconciled"
+          },
+          "med_dapagliflozin": {
+            "type": "home_med",
+            "drug_name": "dapagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1488564",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "not_reconciled"
+          },
+          "med_lisinopril": {
+            "type": "home_med",
+            "drug_name": "lisinopril 20 mg tablet",
+            "rxnorm_ingredient": "29046",
+            "dose_text": "20 mg",
+            "sig": "1 tab PO daily",
+            "status": "not_reconciled"
+          },
+          "med_hydrochlorothiazide": {
+            "type": "home_med",
+            "drug_name": "hydrochlorothiazide 25 mg tablet",
+            "rxnorm_ingredient": "5487",
+            "dose_text": "25 mg",
+            "sig": "1 tab PO daily",
+            "status": "not_reconciled"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JYQ2PGG05F73ATPM9BQW4F8F",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00388366",
+        "effective": "2025-06-25T01:00:00Z",
+        "effective_end": "2025-06-26T17:00:00Z",
+        "recorded": "2025-06-26T21:36:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31884",
+          "name": "Priya Raman, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Discharge summary\n\n**Reason for admission:** euglycemic diabetic ketoacidosis.\n\n**Hospital course.** The patient presented with nausea, weakness and fast breathing and was found to have a severe anion gap acidosis with a glucose of only 242. She was treated with an insulin infusion and D5 lactated Ringer's, and the gap closed within the first day. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated, resolved</ref>. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. She was transitioned to subcutaneous insulin and then ate normally.\n\n**Condition at discharge.** Vitals at 09:00: BP 130/78, HR 89, RR 17, T 98.7 F, SpO2 96%. She feels well and is eating. The final basic metabolic panel at 06:28 showed sodium 135, potassium 4.0, chloride 99, bicarbonate 24, anion gap 12, urea nitrogen 18, creatinine 1.36 (eGFR 60) and glucose 165. Kidney function is much improved from admission.\n\n**Allergies:** no known drug allergies.\n\n**Medications at discharge**\n\n- <ref id=\"med_dapagliflozin\">Dapagliflozin 10 mg daily: do not resume until reviewed by her PCP</ref>\n- <ref id=\"med_metformin\">Metformin 1000 mg twice daily with meals: continue</ref>\n- <ref id=\"med_lisinopril\">Lisinopril 20 mg daily: continue</ref>\n- <ref id=\"med_hydrochlorothiazide\">Hydrochlorothiazide 25 mg daily: continue</ref>\n\n**Follow-up.** See her primary care physician at Northgate Family Medicine within 1 week to decide whether dapagliflozin should be restarted and to recheck a basic metabolic panel. She should return to the ED for vomiting, abdominal pain, fast breathing or marked weakness.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6437094",
+            "document_kind": "discharge_summary",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-06-24T20:55:00Z",
+            "admitted": "2025-06-25T01:00:00Z",
+            "discharged": "2025-06-26T17:00:00Z",
+            "disposition": "home"
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "resolved",
+            "rank": "principal"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-06-26T14:00:00Z",
+            "bp": {
+              "systolic_mmhg": 130,
+              "diastolic_mmhg": 78
+            },
+            "heart_rate_bpm": 89,
+            "resp_rate_per_min": 17,
+            "temp_f": 98.7,
+            "spo2_pct": 96,
+            "weight_kg": 79.1
+          },
+          "bmp_dc": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25177-4459",
+            "collected": "2025-06-26T11:28:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "135",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.0",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "99",
+                "unit": "mmol/L",
+                "ref_range": "98-107"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "24",
+                "unit": "mmol/L",
+                "ref_range": "22-29"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "12",
+                "unit": "mmol/L",
+                "ref_range": "7-16"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "18",
+                "unit": "mg/dL",
+                "ref_range": "8-23"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.36",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "60",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "165",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 1000 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "1000 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "continue"
+          },
+          "med_dapagliflozin": {
+            "type": "home_med",
+            "drug_name": "dapagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1488564",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held",
+            "restart_advice": "advise_against",
+            "instructions": "Do not resume until reviewed by PCP"
+          },
+          "med_lisinopril": {
+            "type": "home_med",
+            "drug_name": "lisinopril 20 mg tablet",
+            "rxnorm_ingredient": "29046",
+            "dose_text": "20 mg",
+            "sig": "1 tab PO daily",
+            "status": "continue"
+          },
+          "med_hydrochlorothiazide": {
+            "type": "home_med",
+            "drug_name": "hydrochlorothiazide 25 mg tablet",
+            "rxnorm_ingredient": "5487",
+            "dose_text": "25 mg",
+            "sig": "1 tab PO daily",
+            "status": "continue"
+          },
+          "fu_pcp": {
+            "type": "follow_up",
+            "with": "Primary care (Northgate Family Medicine)",
+            "when_text": "within 1 week",
+            "purpose": "Decide whether to restart dapagliflozin; recheck basic metabolic panel"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JYJKTBX0JHW6WPW0AYVFHQPZ",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00388366",
+        "effective": "2025-06-25T02:06:00Z",
+        "recorded": "2025-06-25T03:59:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31884",
+          "name": "Priya Raman, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Admission history and physical\n\n**Reason for admission:** euglycemic diabetic ketoacidosis.\n\n**History of present illness.** The patient was seen in the ED this afternoon with malaise and a sense of being unwell, and was found to be markedly acidotic with a glucose of only 242. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. She takes dapagliflozin 10 mg daily for diabetes.\n\n**Allergies:** no known drug allergies.\n\n**Exam.** Vitals at 20:56: BP 110/66, HR 80, RR 21, T 98.2 F, SpO2 98%. Mildly tachypneic with deep respirations, appears somewhat dry.\n\n**Results.** The basic metabolic panel drawn at 16:17 showed sodium 134, potassium 5.3, chloride 94, bicarbonate 8, anion gap 32, urea nitrogen 35, creatinine 1.57 (eGFR 50) and glucose 242. The insulin infusion at 0.1 units/kg/h and D5 lactated Ringer's at 150 mL/h have both been running since 17:05.\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol with D5 lactated Ringer's, since glucose is not high. Repeat BMP every 4 hours until the gap closes. <ref id=\"med_dapagliflozin\">Hold dapagliflozin.</ref>\n2. Metformin: <ref id=\"med_metformin\">hold metformin</ref> while she is acidotic and NPO.\n3. Volume depletion with creatinine 1.57: <ref id=\"med_hydrochlorothiazide\">hold hydrochlorothiazide</ref> until volume is restored.\n4. Hypertension with potassium 5.3: <ref id=\"med_lisinopril\">hold lisinopril</ref> for volume depletion and potassium; resume when she is eating and the potassium and creatinine have settled.\n5. Hyperkalemia is mild and should improve with insulin and fluids; recheck with the next panel.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6437094",
+            "document_kind": "hp",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-06-24T20:55:00Z",
+            "admitted": "2025-06-25T01:00:00Z"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-06-25T01:56:00Z",
+            "bp": {
+              "systolic_mmhg": 110,
+              "diastolic_mmhg": 66
+            },
+            "heart_rate_bpm": 80,
+            "resp_rate_per_min": 21,
+            "temp_f": 98.2,
+            "spo2_pct": 98,
+            "weight_kg": 79.1
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "active",
+            "rank": "principal"
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25175-8693",
+            "collected": "2025-06-24T21:17:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "134",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "5.3",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "94",
+                "unit": "mmol/L",
+                "ref_range": "98-107",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "8",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "LL"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "32",
+                "unit": "mmol/L",
+                "ref_range": "7-16",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "35",
+                "unit": "mg/dL",
+                "ref_range": "8-23",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.57",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "50",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "242",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-06-24T22:05:00Z"
+          },
+          "iv_d5lr": {
+            "type": "inpatient_med",
+            "drug_name": "dextrose 5% in lactated Ringer's",
+            "route": "IV",
+            "dose_text": "150 mL/h",
+            "started": "2025-06-24T22:05:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 1000 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "1000 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "held",
+            "restart_advice": "resume_when_able",
+            "instructions": "Hold while acidotic and NPO"
+          },
+          "med_dapagliflozin": {
+            "type": "home_med",
+            "drug_name": "dapagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1488564",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_lisinopril": {
+            "type": "home_med",
+            "drug_name": "lisinopril 20 mg tablet",
+            "rxnorm_ingredient": "29046",
+            "dose_text": "20 mg",
+            "sig": "1 tab PO daily",
+            "status": "held",
+            "restart_advice": "resume_when_able",
+            "instructions": "Hold for volume depletion and potassium; resume when eating"
+          },
+          "med_hydrochlorothiazide": {
+            "type": "home_med",
+            "drug_name": "hydrochlorothiazide 25 mg tablet",
+            "rxnorm_ingredient": "5487",
+            "dose_text": "25 mg",
+            "sig": "1 tab PO daily",
+            "status": "held",
+            "restart_advice": "resume_when_able",
+            "instructions": "Hold for volume depletion"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JYKPTZ9086PHVSV520HTBDT3",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00388366",
+        "effective": "2025-06-25T12:39:00Z",
+        "recorded": "2025-06-25T14:11:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31884",
+          "name": "Priya Raman, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Progress note\n\n**Interval.** She feels much better this morning, with less nausea and easier breathing. Vitals at 07:19: BP 131/79, HR 105, RR 22, T 98.9 F, SpO2 96%. Heart rate remains a little fast. No known drug allergies.\n\n**Results.** On the 06:05 <ref id=\"bmp\">panel sodium was 131 mmol/L (L), potassium 4.1 mmol/L, chloride 100 mmol/L, bicarbonate 24 mmol/L, anion gap 7 mmol/L, urea nitrogen 16 mg/dL, creatinine 1.25 mg/dL, eGFR 66 mL/min/1.73m2 and glucose 127 mg/dL (H)</ref>. The gap has closed and creatinine is improved from 1.57 yesterday.\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. <ref id=\"sc_glargine\">Insulin glargine 17 units subcutaneously daily was started at 07:00</ref> to overlap before the drip comes off; the <ref id=\"iv_insulin\">insulin infusion is to stop at 09:00</ref>. Continue to check glucose closely.\n2. Hyponatremia is mild at 131 and improving with fluids.\n3. Dapagliflozin, metformin, lisinopril and hydrochlorothiazide all remain on hold for now.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6437094",
+            "document_kind": "progress_note",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-06-24T20:55:00Z",
+            "admitted": "2025-06-25T01:00:00Z"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-06-25T12:19:00Z",
+            "bp": {
+              "systolic_mmhg": 131,
+              "diastolic_mmhg": 79
+            },
+            "heart_rate_bpm": 105,
+            "resp_rate_per_min": 22,
+            "temp_f": 98.9,
+            "spo2_pct": 96,
+            "weight_kg": 79.1
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "active",
+            "rank": "principal"
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25176-9023",
+            "collected": "2025-06-25T11:05:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "131",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.1",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "100",
+                "unit": "mmol/L",
+                "ref_range": "98-107"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "24",
+                "unit": "mmol/L",
+                "ref_range": "22-29"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "7",
+                "unit": "mmol/L",
+                "ref_range": "7-16"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "16",
+                "unit": "mg/dL",
+                "ref_range": "8-23"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.25",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "66",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "127",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-06-24T22:05:00Z",
+            "stopped": "2025-06-25T14:00:00Z"
+          },
+          "sc_glargine": {
+            "type": "inpatient_med",
+            "drug_name": "insulin glargine",
+            "rxnorm_ingredient": "274783",
+            "route": "SubQ",
+            "dose_text": "17 units daily",
+            "started": "2025-06-25T12:00:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 1000 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "1000 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "held"
+          },
+          "med_dapagliflozin": {
+            "type": "home_med",
+            "drug_name": "dapagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1488564",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_lisinopril": {
+            "type": "home_med",
+            "drug_name": "lisinopril 20 mg tablet",
+            "rxnorm_ingredient": "29046",
+            "dose_text": "20 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_hydrochlorothiazide": {
+            "type": "home_med",
+            "drug_name": "hydrochlorothiazide 25 mg tablet",
+            "rxnorm_ingredient": "5487",
+            "dose_text": "25 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "patient": "RRH-00936699",
+    "items": [
+      {
+        "folio": "0.1",
+        "id": "01JVXP68B0Q28JC7FQRJAASR7A",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00936699",
+        "effective": "2025-05-23T02:23:00Z",
+        "recorded": "2025-05-23T04:25:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31920",
+          "name": "Luis Castellano, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Admission history and physical\n\n**Reason for admission:** euglycemic diabetic ketoacidosis.\n\n**History of present illness.** The patient has type 2 diabetes treated with oral agents and basal insulin. <ref id=\"precipitant\">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> She came to the ED today feeling weak, nauseated and short of breath, and was found to be acidotic with a glucose of only 155.\n\n**Home medications.** <ref id=\"med_empagliflozin\">Empagliflozin 10 mg daily</ref> and <ref id=\"med_metformin\">metformin 500 mg twice daily with meals</ref> are both held on admission. Metformin is held while she is acidotic and NPO. She also takes glipizide 5 mg daily, insulin glargine 10 units nightly and atorvastatin 40 mg nightly, all continued.\n\n**Allergies:** no known drug allergies.\n\n**Exam.** BP 108/65, HR 100, RR 23, T 98.4 F, SpO2 94% at 21:13. Looks tired and dry, with rapid respirations. Abdomen soft.\n\n**Results.** Sodium 130, potassium 4.6, chloride 97, bicarbonate 13, anion gap 20, urea nitrogen 29, creatinine 2.15 (eGFR 34), glucose 155, all on the 17:46 panel. Lipase 26.\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Insulin infusion per DKA protocol at 0.1 units/kg/h since 18:30, running with D5 lactated Ringer's at 150 mL/h since 18:30 because glucose is near normal. Repeat chemistries every 4 hours until the gap closes.\n2. <ref id=\"dx_pancreatitis\">Acute pancreatitis ruled out</ref>: lipase 26.\n3. Hyponatremia, sodium 130, likely from volume loss; expect improvement with fluids.\n4. Acute kidney injury on presentation, creatinine 2.15; recheck with the morning labs and avoid nephrotoxins.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6078842",
+            "document_kind": "hp",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-05-22T22:20:00Z",
+            "admitted": "2025-05-23T01:24:00Z"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-05-23T02:13:00Z",
+            "bp": {
+              "systolic_mmhg": 108,
+              "diastolic_mmhg": 65
+            },
+            "heart_rate_bpm": 100,
+            "resp_rate_per_min": 23,
+            "temp_f": 98.4,
+            "spo2_pct": 94,
+            "weight_kg": 111.6
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "active",
+            "rank": "principal"
+          },
+          "dx_pancreatitis": {
+            "type": "diagnosis",
+            "label": "Acute pancreatitis",
+            "icd10cm": "K85.90",
+            "status": "ruled_out",
+            "rank": "secondary"
+          },
+          "lipase": {
+            "type": "result",
+            "test": {
+              "local_code": "LIPASE",
+              "loinc": "3040-3",
+              "name": "Lipase"
+            },
+            "accession": "L25142-8423",
+            "collected": "2025-05-22T22:46:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "value": "26",
+            "unit": "U/L",
+            "ref_range": "13-60"
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25142-7544",
+            "collected": "2025-05-22T22:46:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "130",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.6",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "97",
+                "unit": "mmol/L",
+                "ref_range": "98-107",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "13",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "20",
+                "unit": "mmol/L",
+                "ref_range": "7-16",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "29",
+                "unit": "mg/dL",
+                "ref_range": "8-23",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "2.15",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "34",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "155",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-05-22T23:30:00Z"
+          },
+          "iv_d5lr": {
+            "type": "inpatient_med",
+            "drug_name": "dextrose 5% in lactated Ringer's",
+            "route": "IV",
+            "dose_text": "150 mL/h",
+            "started": "2025-05-22T23:30:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 500 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "500 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "held",
+            "restart_advice": "resume_when_able",
+            "instructions": "Hold while acidotic and NPO"
+          },
+          "med_empagliflozin": {
+            "type": "home_med",
+            "drug_name": "empagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1545653",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_glipizide": {
+            "type": "home_med",
+            "drug_name": "glipizide 5 mg tablet",
+            "rxnorm_ingredient": "4821",
+            "dose_text": "5 mg",
+            "sig": "1 tab PO daily",
+            "status": "continue"
+          },
+          "med_glargine": {
+            "type": "home_med",
+            "drug_name": "insulin glargine 100 units/mL pen",
+            "rxnorm_ingredient": "274783",
+            "dose_text": "10 units",
+            "sig": "10 units SubQ nightly",
+            "status": "continue"
+          },
+          "med_atorvastatin": {
+            "type": "home_med",
+            "drug_name": "atorvastatin 40 mg tablet",
+            "rxnorm_ingredient": "83367",
+            "dose_text": "40 mg",
+            "sig": "1 tab PO nightly",
+            "status": "continue"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JVXF51A0PA3QKGJXS50E2JJ0",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00936699",
+        "effective": "2025-05-22T22:20:00Z",
+        "recorded": "2025-05-23T02:22:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:40561",
+          "name": "Erik Lindqvist, DO",
+          "role": "Emergency physician"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## ED provider note\n\n**Chief complaint:** nausea, vomiting and shortness of breath.\n\n**History.** The patient has type 2 diabetes and reports several days of vomiting and very little to eat or drink. Today she became weak and breathless and came in. Her home list includes <ref id=\"med_empagliflozin\">empagliflozin 10 mg daily</ref>, not yet reconciled. Also on the list and not yet reconciled: metformin 500 mg twice daily, glipizide 5 mg daily, insulin glargine 10 units nightly and atorvastatin 40 mg nightly. No known drug allergies.\n\n**Exam.** At 17:26: BP 114/68, HR 106, RR 18, T 99.1 F, SpO2 94%. She appears dry and uncomfortable, with deep breathing. Abdomen soft with mild diffuse tenderness.\n\n**Results.** Venous gas: pH 7.16, pCO2 26. Beta-hydroxybutyrate 5.7. <ref id=\"bmp\">Basic metabolic panel at 17:46: sodium 130, potassium 4.6, chloride 97, bicarbonate 13, anion gap 20, urea nitrogen 29, creatinine 2.15, eGFR 34, glucose 155.</ref>\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Diabetic ketoacidosis, euglycemic</ref>: pH 7.16, bicarbonate 13, anion gap 20 and beta-hydroxybutyrate 5.7 with a glucose of 155. Insulin infusion per DKA protocol at 0.1 units/kg/h started 18:30, with D5 lactated Ringer's at 150 mL/h. Admit to the hospitalist service.\n2. <ref id=\"dx_pancreatitis\">R/O pancreatitis</ref> given the abdominal tenderness and vomiting; lipase was drawn with the 17:46 labs and is pending at the time of this note.\n3. Hyponatremia and elevated creatinine, consistent with volume depletion; fluids as above.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6078842",
+            "document_kind": "ed_note",
+            "class": "emergency",
+            "service": "Emergency Medicine",
+            "arrived": "2025-05-22T22:20:00Z",
+            "disposition": "admitted"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-05-22T22:26:00Z",
+            "bp": {
+              "systolic_mmhg": 114,
+              "diastolic_mmhg": 68
+            },
+            "heart_rate_bpm": 106,
+            "resp_rate_per_min": 18,
+            "temp_f": 99.1,
+            "spo2_pct": 94,
+            "weight_kg": 111.6
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25142-7544",
+            "collected": "2025-05-22T22:46:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "130",
+                "unit": "mmol/L",
+                "ref_range": "136-145",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.6",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "97",
+                "unit": "mmol/L",
+                "ref_range": "98-107",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "13",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "20",
+                "unit": "mmol/L",
+                "ref_range": "7-16",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "29",
+                "unit": "mg/dL",
+                "ref_range": "8-23",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "2.15",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "34",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "155",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "vbg": {
+            "type": "panel",
+            "panel": {
+              "local_code": "VBG",
+              "name": "Venous blood gas"
+            },
+            "accession": "L25142-2344",
+            "collected": "2025-05-22T22:46:00Z",
+            "specimen": "venous blood",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "VPH",
+                  "loinc": "2746-6",
+                  "name": "pH, venous"
+                },
+                "value": "7.16",
+                "ref_range": "7.32-7.43",
+                "flag": "LL"
+              },
+              {
+                "test": {
+                  "local_code": "VPCO2",
+                  "loinc": "2021-4",
+                  "name": "pCO2, venous"
+                },
+                "value": "26",
+                "unit": "mmHg",
+                "ref_range": "41-51",
+                "flag": "L"
+              }
+            ]
+          },
+          "bhb": {
+            "type": "result",
+            "test": {
+              "local_code": "BHB",
+              "name": "Beta-hydroxybutyrate"
+            },
+            "accession": "L25142-3909",
+            "collected": "2025-05-22T22:46:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "value": "5.7",
+            "unit": "mmol/L",
+            "ref_range": "<0.4",
+            "flag": "HH"
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Diabetic ketoacidosis, euglycemic",
+            "icd10cm": "E11.10",
+            "status": "active"
+          },
+          "dx_pancreatitis": {
+            "type": "diagnosis",
+            "label": "R/O pancreatitis",
+            "status": "working"
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-05-22T23:30:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 500 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "500 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "not_reconciled"
+          },
+          "med_empagliflozin": {
+            "type": "home_med",
+            "drug_name": "empagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1545653",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "not_reconciled"
+          },
+          "med_glipizide": {
+            "type": "home_med",
+            "drug_name": "glipizide 5 mg tablet",
+            "rxnorm_ingredient": "4821",
+            "dose_text": "5 mg",
+            "sig": "1 tab PO daily",
+            "status": "not_reconciled"
+          },
+          "med_glargine": {
+            "type": "home_med",
+            "drug_name": "insulin glargine 100 units/mL pen",
+            "rxnorm_ingredient": "274783",
+            "dose_text": "10 units",
+            "sig": "10 units SubQ nightly",
+            "status": "not_reconciled"
+          },
+          "med_atorvastatin": {
+            "type": "home_med",
+            "drug_name": "atorvastatin 40 mg tablet",
+            "rxnorm_ingredient": "83367",
+            "dose_text": "40 mg",
+            "sig": "1 tab PO nightly",
+            "status": "not_reconciled"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JVYQ6RY02VEEVD27N7JAVVC4",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00936699",
+        "effective": "2025-05-23T12:56:00Z",
+        "recorded": "2025-05-23T14:02:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31920",
+          "name": "Luis Castellano, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Progress note\n\n**Interval.** Overnight on the insulin infusion without events. She feels much better, is less nauseated and is taking sips.\n\n**Exam.** At 07:36: BP 115/69, HR 100, RR 19, T 98.9 F, SpO2 95%. Mucous membranes moist, breathing comfortably.\n\n**Results.** <ref id=\"bmp\">On the 06:27 panel sodium is 137, potassium 4.5, chloride 102, bicarbonate 21, anion gap 14, urea nitrogen 18, creatinine 1.89 (eGFR 39), glucose 126.</ref>\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving; the anion gap has closed to 14. <ref id=\"sc_glargine\">Insulin glargine 17 units daily was started at 07:00</ref> so that basal insulin is on board before the <ref id=\"iv_insulin\">insulin infusion is stopped at 09:00</ref>.\n2. Empagliflozin and metformin remain held. Glipizide, home glargine and atorvastatin are listed as continued.\n3. Creatinine 1.89 is improved from 2.15 on admission; continue to follow.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6078842",
+            "document_kind": "progress_note",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-05-22T22:20:00Z",
+            "admitted": "2025-05-23T01:24:00Z"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-05-23T12:36:00Z",
+            "bp": {
+              "systolic_mmhg": 115,
+              "diastolic_mmhg": 69
+            },
+            "heart_rate_bpm": 100,
+            "resp_rate_per_min": 19,
+            "temp_f": 98.9,
+            "spo2_pct": 95,
+            "weight_kg": 111.6
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "active",
+            "rank": "principal"
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25143-6720",
+            "collected": "2025-05-23T11:27:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "137",
+                "unit": "mmol/L",
+                "ref_range": "136-145"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.5",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "102",
+                "unit": "mmol/L",
+                "ref_range": "98-107"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "21",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "14",
+                "unit": "mmol/L",
+                "ref_range": "7-16"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "18",
+                "unit": "mg/dL",
+                "ref_range": "8-23"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.89",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "39",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "126",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "iv_insulin": {
+            "type": "inpatient_med",
+            "drug_name": "insulin regular (human) IV infusion",
+            "rxnorm_ingredient": "253182",
+            "route": "IV",
+            "dose_text": "per DKA protocol, 0.1 units/kg/h",
+            "started": "2025-05-22T23:30:00Z",
+            "stopped": "2025-05-23T14:00:00Z"
+          },
+          "sc_glargine": {
+            "type": "inpatient_med",
+            "drug_name": "insulin glargine",
+            "rxnorm_ingredient": "274783",
+            "route": "SubQ",
+            "dose_text": "17 units daily",
+            "started": "2025-05-23T12:00:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 500 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "500 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "held"
+          },
+          "med_empagliflozin": {
+            "type": "home_med",
+            "drug_name": "empagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1545653",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_glipizide": {
+            "type": "home_med",
+            "drug_name": "glipizide 5 mg tablet",
+            "rxnorm_ingredient": "4821",
+            "dose_text": "5 mg",
+            "sig": "1 tab PO daily",
+            "status": "continue"
+          },
+          "med_glargine": {
+            "type": "home_med",
+            "drug_name": "insulin glargine 100 units/mL pen",
+            "rxnorm_ingredient": "274783",
+            "dose_text": "10 units",
+            "sig": "10 units SubQ nightly",
+            "status": "continue"
+          },
+          "med_atorvastatin": {
+            "type": "home_med",
+            "drug_name": "atorvastatin 40 mg tablet",
+            "rxnorm_ingredient": "83367",
+            "dose_text": "40 mg",
+            "sig": "1 tab PO nightly",
+            "status": "continue"
+          }
+        }
+      },
+      {
+        "folio": "0.1",
+        "id": "01JW1AMEM0HJVXNCDTMXP1669D",
+        "issuer": "did:web:riverside-regional.example",
+        "patient": "RRH-00936699",
+        "effective": "2025-05-24T12:52:00Z",
+        "recorded": "2025-05-24T14:20:00Z",
+        "author": {
+          "id": "urn:riverside-regional:staff:31920",
+          "name": "Luis Castellano, MD",
+          "role": "Hospitalist"
+        },
+        "schema": {
+          "url": "https://riverside-regional.example/folio/schemas/riverside-doc-v1.d.ts",
+          "type": "RiversideEntry",
+          "sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
+        },
+        "narrative": "## Progress note\n\n**Interval.** No new complaints. She is eating meals and without nausea or vomiting.\n\n**Exam.** At 07:32: BP 124/74, HR 84, RR 19, T 98.6 F, SpO2 99%. Comfortable, lungs clear, abdomen soft.\n\n**Results.** <ref id=\"bmp\">The 06:30 panel shows sodium 136, potassium 4.2, chloride 100, bicarbonate 20, anion gap 16, urea nitrogen 18, creatinine 1.92 (eGFR 39), glucose 189.</ref>\n\n**Assessment and plan**\n\n1. <ref id=\"dx_dka\">Euglycemic DKA, SGLT2 inhibitor-associated</ref>: clinically well, but the bicarbonate of 20 and anion gap of 16 are slightly less favorable than yesterday, so we will keep watching the chemistries rather than assume it is fully behind her. Continue <ref id=\"sc_glargine\">insulin glargine 17 units daily</ref>, started 5/23.\n2. Empagliflozin and metformin remain held; glipizide, home glargine and atorvastatin are listed as continued.\n3. Creatinine 1.92, essentially unchanged from yesterday. Recheck tomorrow.",
+        "payload": {
+          "enc": {
+            "type": "encounter",
+            "encounter_id": "RRH-ENC-6078842",
+            "document_kind": "progress_note",
+            "class": "inpatient",
+            "service": "Hospital Medicine",
+            "arrived": "2025-05-22T22:20:00Z",
+            "admitted": "2025-05-23T01:24:00Z"
+          },
+          "vs_1": {
+            "type": "vitals",
+            "taken": "2025-05-24T12:32:00Z",
+            "bp": {
+              "systolic_mmhg": 124,
+              "diastolic_mmhg": 74
+            },
+            "heart_rate_bpm": 84,
+            "resp_rate_per_min": 19,
+            "temp_f": 98.6,
+            "spo2_pct": 99,
+            "weight_kg": 111.6
+          },
+          "dx_dka": {
+            "type": "diagnosis",
+            "label": "Euglycemic DKA, SGLT2 inhibitor-associated",
+            "icd10cm": "E11.10",
+            "riverside_dx": {
+              "code": "RRH-DX-4471",
+              "name": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated"
+            },
+            "status": "active",
+            "rank": "principal"
+          },
+          "bmp": {
+            "type": "panel",
+            "panel": {
+              "local_code": "BMP",
+              "loinc": "51990-0",
+              "name": "Basic metabolic panel"
+            },
+            "accession": "L25144-9209",
+            "collected": "2025-05-24T11:30:00Z",
+            "specimen": "serum",
+            "status": "final",
+            "components": [
+              {
+                "test": {
+                  "local_code": "NA",
+                  "loinc": "2951-2",
+                  "name": "Sodium"
+                },
+                "value": "136",
+                "unit": "mmol/L",
+                "ref_range": "136-145"
+              },
+              {
+                "test": {
+                  "local_code": "K",
+                  "loinc": "2823-3",
+                  "name": "Potassium"
+                },
+                "value": "4.2",
+                "unit": "mmol/L",
+                "ref_range": "3.5-5.1"
+              },
+              {
+                "test": {
+                  "local_code": "CL",
+                  "loinc": "2075-0",
+                  "name": "Chloride"
+                },
+                "value": "100",
+                "unit": "mmol/L",
+                "ref_range": "98-107"
+              },
+              {
+                "test": {
+                  "local_code": "CO2",
+                  "loinc": "2028-9",
+                  "name": "Bicarbonate (total CO2)"
+                },
+                "value": "20",
+                "unit": "mmol/L",
+                "ref_range": "22-29",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "AGAP",
+                  "loinc": "33037-3",
+                  "name": "Anion gap"
+                },
+                "value": "16",
+                "unit": "mmol/L",
+                "ref_range": "7-16"
+              },
+              {
+                "test": {
+                  "local_code": "BUN",
+                  "loinc": "3094-0",
+                  "name": "Urea nitrogen"
+                },
+                "value": "18",
+                "unit": "mg/dL",
+                "ref_range": "8-23"
+              },
+              {
+                "test": {
+                  "local_code": "CREAT",
+                  "loinc": "2160-0",
+                  "name": "Creatinine"
+                },
+                "value": "1.92",
+                "unit": "mg/dL",
+                "ref_range": "0.76-1.27",
+                "flag": "H"
+              },
+              {
+                "test": {
+                  "local_code": "EGFR",
+                  "loinc": "98979-8",
+                  "name": "eGFR (CKD-EPI 2021)"
+                },
+                "value": "39",
+                "unit": "mL/min/1.73m2",
+                "ref_range": ">59",
+                "flag": "L"
+              },
+              {
+                "test": {
+                  "local_code": "GLU",
+                  "loinc": "2345-7",
+                  "name": "Glucose"
+                },
+                "value": "189",
+                "unit": "mg/dL",
+                "ref_range": "70-99",
+                "flag": "H"
+              }
+            ]
+          },
+          "sc_glargine": {
+            "type": "inpatient_med",
+            "drug_name": "insulin glargine",
+            "rxnorm_ingredient": "274783",
+            "route": "SubQ",
+            "dose_text": "17 units daily",
+            "started": "2025-05-23T12:00:00Z"
+          },
+          "alg_nkda": {
+            "type": "allergy",
+            "substance": "NKDA",
+            "severity": "unknown"
+          },
+          "med_metformin": {
+            "type": "home_med",
+            "drug_name": "metformin 500 mg tablet",
+            "rxnorm_ingredient": "6809",
+            "dose_text": "500 mg",
+            "sig": "1 tab PO BID with meals",
+            "status": "held"
+          },
+          "med_empagliflozin": {
+            "type": "home_med",
+            "drug_name": "empagliflozin 10 mg tablet",
+            "rxnorm_ingredient": "1545653",
+            "dose_text": "10 mg",
+            "sig": "1 tab PO daily",
+            "status": "held"
+          },
+          "med_glipizide": {
+            "type": "home_med",
+            "drug_name": "glipizide 5 mg tablet",
+            "rxnorm_ingredient": "4821",
+            "dose_text": "5 mg",
+            "sig": "1 tab PO daily",
+            "status": "continue"
+          },
+          "med_glargine": {
+            "type": "home_med",
+            "drug_name": "insulin glargine 100 units/mL pen",
+            "rxnorm_ingredient": "274783",
+            "dose_text": "10 units",
+            "sig": "10 units SubQ nightly",
+            "status": "continue"
+          },
+          "med_atorvastatin": {
+            "type": "home_med",
+            "drug_name": "atorvastatin 40 mg tablet",
+            "rxnorm_ingredient": "83367",
+            "dose_text": "40 mg",
+            "sig": "1 tab PO nightly",
+            "status": "continue"
+          }
+        }
+      }
+    ]
+  }
+]

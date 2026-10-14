@@ -1,0 +1,29 @@
+bun test v1.3.14-canary.1 (0d9b296a)
+
+out/transform.test.ts:
+(pass) Chicago end of day uses the actual winter and summer offset [3.56ms]
+(pass) scope corrections by recorded time and issuer; a retraction does not resurrect ancestors [0.75ms]
+(pass) replacement restates the document, and removed entries never leak back [0.68ms]
+(pass) latest discharge list controls home drugs; held advise_against is not stopped [0.26ms]
+(pass) a new encounter snapshot supersedes the previous encounter's outpatient list [0.18ms]
+(pass) discharge restart dates use discharge, not the summary's admission effective date [0.22ms]
+(pass) dose and frequency parsing preserve uncertainty and explicitly stated units [0.64ms]
+(pass) working and ruled-out diagnoses do not become problems; omission does not resolve an established problem [0.64ms]
+(pass) CKD restaging and onset precision come from entries, never from eGFR [0.43ms]
+(pass) Riverside local diagnoses distinguish conditions sharing ICD; generic earlier copies join an unambiguous local concept [0.35ms]
+(pass) recoding the exact same condition does not produce two problems [0.18ms]
+(pass) an ICD-only entry with a matching name does not move to another local concept [0.31ms]
+(pass) explicit combination ingredients get separate rows without invented CUIs or doses [0.25ms]
+(pass) new during the stay does not invent the date the drug was first started [0.18ms]
+(pass) allergy nature and severity follow their meaning, and adverse-effect diagnoses are not problems [0.70ms]
+(pass) two drugs sharing a coarse adverse-effect ICD remain two substances [0.31ms]
+(pass) copied labs use accession and local test, corrected outranks final regardless of copy date [0.59ms]
+(pass) lab comparators, units, unsupported tests, and race-specific eGFR [0.40ms]
+(pass) vitals retain separate hospital sets, deduplicate copies, and combine nearby repeats [0.39ms]
+(pass) malformed input is skipped; narrative alone cannot manufacture rows [0.24ms]
+(pass) all sample outputs are invariant to item and payload-key order, without input mutation [11.34ms]
+
+ 21 pass
+ 0 fail
+ 70 expect() calls
+Ran 21 tests across 1 file. [41.00ms]

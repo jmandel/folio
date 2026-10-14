@@ -3,9 +3,10 @@
 //
 // - Each row's "evidence date" is the latest `effective` date among the items it cites.
 // - Medications, grouped by ingredient (or drug name when the ingredient is unknown): status, status
-//   date and reason come from the row whose status is most recently dated (status_since, else evidence
-//   date); 'unknown' only if nothing else is known. Dose and frequency come from the most recently
-//   dated clinician-recorded row that has a dose, else from a patient-reported row.
+//   date and reason come from the most recently dated clinician-recorded row (later of evidence date
+//   and status_since), else from the patient's own list; 'unknown' only if nothing else is known.
+//   Dose and frequency come from the most recently dated clinician-recorded row that has a dose,
+//   else from a patient-reported row.
 // - Problems, grouped by condition (ICD-10 family, else wording): active if any source says active;
 //   CKD stage from the most recently dated row that records one; onset from the most precise row.
 // - Allergies, grouped by substance: type and reaction from the most recently dated row; criticality
@@ -44,9 +45,12 @@ export function mergeRows(sources: SourceRows[]): Rows {
 
   const medications = groupBy(all("medications"), (r) => norm(r.ingredient) || `name:${norm(r.drug_name)}`).map((g) => {
     const known = g.filter((r) => r.status !== "unknown");
-    const st = latest(known.length ? known : g, (r) => r.status_since ?? r._date);
+    const pool = known.length ? known : g;
+    const clinical = pool.filter((r) => !r.patient_reported);
+    const when = (r: Row) => [r._date, r.status_since ?? ""].sort().pop()!;
+    const st = latest(clinical.length ? clinical : pool, when);
     const dosed = g.filter((r) => r.dose);
-    const doseRow = latest(dosed.filter((r) => !r.patient_reported), (r) => r.status_since ?? r._date) ?? latest(dosed, (r) => r._date);
+    const doseRow = latest(dosed.filter((r) => !r.patient_reported), when) ?? latest(dosed, when);
     return clean({
       ...st, dose: doseRow?.dose, frequency: doseRow?.frequency ?? st.frequency,
       patient_reported: g.every((r) => r.patient_reported), otc: g.some((r) => r.otc) || undefined, evidence: evidenceOf(g),

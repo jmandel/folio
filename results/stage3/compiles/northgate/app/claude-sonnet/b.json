@@ -1,0 +1,60 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "condition": "b",
+ "schemaSha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2024-05-01-visit-note.folio.md",
+  "p047/2024-06-01-void.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283-corrected.folio.md",
+  "p095/2025-09-16-referral-created.folio.md",
+  "p047/2019-06-27-problem-1-add.folio.md",
+  "p047/2025-07-01-allergy-dapagliflozin.folio.md",
+  "p047/2025-07-01-med-dapagliflozin-stop.folio.md",
+  "p047/2019-06-27-vitals.folio.md",
+  "p095/2025-09-16-medications-reviewed.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "20261014T121258516Z-y4he",
+   "ok": true,
+   "costUsd": 0.17991279999999998,
+   "durationMs": 26207,
+   "numTurns": 6,
+   "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 37243,
+    "cache_read_input_tokens": 77348,
+    "output_tokens": 2319
+   },
+   "feedbackItems": 9,
+   "evalPath": "results/stage3/evals/20261014T121258516Z-y4he.json",
+   "summary": "tsc=ok det=true errors=0/181 P=100.0% R=99.6% medi:96.5% prob:95.6% alle:100.0% labs:100.0% vita:100.0% 0.033ms/item"
+  },
+  {
+   "round": 2,
+   "runId": "20261014T121327949Z-386m",
+   "ok": true,
+   "costUsd": 0.1652429,
+   "durationMs": 22206,
+   "numTurns": 6,
+   "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 34254,
+    "cache_read_input_tokens": 94909,
+    "output_tokens": 1872
+   },
+   "feedbackItems": 9,
+   "evalPath": "results/stage3/evals/20261014T121327949Z-386m.json",
+   "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.032ms/item"
+  }
+ ],
+ "final": "20261014T121327949Z-386m",
+ "startedFrom": "20261014T121120169Z-4zza",
+ "note": "Prose-check discrepancies on dev-split items fed back."
+}

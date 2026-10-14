@@ -1,0 +1,77 @@
+{
+ "source": "riverside",
+ "schema_sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "view_set": "app",
+ "view_set_hash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "chosen": {
+  "condition": "b",
+  "runId": "20261014T121750720Z-pn2k",
+  "eval": "results/stage3/evals/20261014T121750720Z-pn2k.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 32,
+  "precision": 0.9991438356164384,
+  "recall": 0.9940374787052811,
+  "ms_per_item": 0.15928896453900712
+ },
+ "samples_from_training_patients": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T121408782Z-z7dy",
+   "rounds": [
+    {
+     "runId": "20261014T121408782Z-z7dy",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.157ms/item",
+     "costUsd": 0.4436685
+    }
+   ]
+  },
+  "b": {
+   "final": "20261014T121750720Z-pn2k",
+   "rounds": [
+    {
+     "runId": "20261014T121641921Z-0q0g",
+     "summary": "tsc=ok det=true errors=0/32 P=99.7% R=99.8% medi:100.0% prob:90.2% alle:100.0% labs:100.0% vita:100.0% 0.160ms/item",
+     "costUsd": 0.3107218
+    },
+    {
+     "runId": "20261014T121750720Z-pn2k",
+     "summary": "tsc=ok det=true errors=0/32 P=99.7% R=99.8% medi:100.0% prob:90.2% alle:100.0% labs:100.0% vita:100.0% 0.163ms/item",
+     "costUsd": 0.36152239999999997
+    }
+   ]
+  },
+  "c": {
+   "final": "20261014T124158739Z-qkcu",
+   "rounds": [
+    {
+     "runId": "20261014T124107222Z-rmt1",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=99.5% medi:100.0% prob:100.0% alle:31.4% labs:100.0% vita:100.0% 0.157ms/item",
+     "costUsd": 0.1068432
+    },
+    {
+     "runId": "20261014T124158739Z-qkcu",
+     "summary": "tsc=ok det=true errors=0/32 P=99.9% R=99.9% medi:100.0% prob:100.0% alle:88.6% labs:100.0% vita:100.0% 0.223ms/item",
+     "costUsd": 0.16579
+    }
+   ]
+  }
+ }
+}

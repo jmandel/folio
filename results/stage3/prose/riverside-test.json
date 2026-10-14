@@ -1,0 +1,2550 @@
+{
+ "source": "riverside",
+ "split": "test",
+ "runId": "20261014T120020440Z-ij5d",
+ "costUsd": 0.7911514,
+ "items": [
+  {
+   "patient": "p260",
+   "local": "RRH-00046468",
+   "item_id": "01JGJADMD03V0BTMEQA76TFEE7",
+   "file": "2025-01-01-discharge-summary.folio.md",
+   "as_of": "2025-01-01",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "resolved",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute pancreatitis",
+     "status": "ruled_out",
+     "ref": "dx_pancreatitis",
+     "quote": "Acute pancreatitis was ruled out"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_empagliflozin",
+     "quote": "Empagliflozin 10 mg daily: do not resume until reviewed by the PCP"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 1000 mg twice daily with meals: continue"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "active",
+     "dose": {
+      "value": 40,
+      "unit": "mg"
+     },
+     "ref": "med_lisinopril",
+     "quote": "Lisinopril 40 mg daily: continue"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "active",
+     "dose": {
+      "value": 12.5,
+      "unit": "mg"
+     },
+     "ref": "med_chlorthalidone",
+     "quote": "Chlorthalidone 12.5 mg (half of a 25 mg tablet) daily: continue"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 135,
+     "diastolic_mmhg": 81,
+     "ref": null,
+     "quote": "BP 135/81"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "RRH-00981873",
+   "item_id": "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+   "file": "2026-03-12-progress-note.folio.md",
+   "as_of": "2026-03-12",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 136,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "sodium 136"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 3.9,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "potassium 3.9"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 105,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "chloride 105"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 22,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "bicarbonate 22"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 9,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "anion gap 9"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 29,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "urea nitrogen 29 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 2.28,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "creatinine 2.28 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 37,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "eGFR 37 (L)"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 137,
+     "date": "2026-03-12",
+     "ref": "bmp",
+     "quote": "glucose 137 (H)"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia, still active"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and dapagliflozin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and dapagliflozin remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 126,
+     "diastolic_mmhg": 76,
+     "ref": null,
+     "quote": "BP 126/76"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+   "file": "2024-11-04-progress-note.folio.md",
+   "as_of": "2024-11-04",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 132,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "sodium 132"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.4,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "potassium 4.4"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 100,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "chloride 100"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 22,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "bicarbonate 22"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 10,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "anion gap 10"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 16,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "urea nitrogen 16"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.35,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "creatinine 1.35"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 45,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "eGFR 45"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 162,
+     "date": "2024-11-04",
+     "ref": "bmp",
+     "quote": "glucose 162"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "resolved",
+     "ref": "dx_edka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, is resolved."
+    },
+    {
+     "view": "problems",
+     "condition": "Hyponatremia",
+     "status": "active",
+     "ref": "dx_na",
+     "quote": "Hyponatremia, sodium 132, slowly improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": "med_losartan",
+     "quote": "Losartan stays on hold"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "held",
+     "ref": "med_chlorthalidone",
+     "quote": "chlorthalidone stays on hold"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 126,
+     "diastolic_mmhg": 74,
+     "ref": null,
+     "quote": "BP 126/74"
+    }
+   ]
+  },
+  {
+   "patient": "s03",
+   "local": "RRH-00453627",
+   "item_id": "01JERHGK507Q9C81J1PSKMQCGQ",
+   "file": "2024-12-10-progress-note.folio.md",
+   "as_of": "2024-12-10",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.4,
+     "date": "2024-12-10",
+     "ref": "bmp",
+     "quote": "potassium is 5.4"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.2,
+     "date": "2024-12-10",
+     "ref": "bmp",
+     "quote": "Creatinine has come down to 1.20"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 65,
+     "date": "2024-12-10",
+     "ref": "bmp",
+     "quote": "eGFR is 65"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury is nearly resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "spironolactone",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "hydrochlorothiazide",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "furosemide",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 121,
+     "diastolic_mmhg": 73,
+     "ref": null,
+     "quote": "BP 121/73"
+    }
+   ]
+  },
+  {
+   "patient": "p294",
+   "local": "RRH-00949795",
+   "item_id": "01KMQ4SMT0XDHQNXJ4TTCJC2KV",
+   "file": "2026-03-27-admission-hp.folio.md",
+   "as_of": "2026-03-27",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "community-acquired pneumonia"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": "med_metformin",
+     "quote": "hold metformin during the acute illness"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": "med_empagliflozin",
+     "quote": "Hold empagliflozin while he is not eating"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 107,
+     "diastolic_mmhg": 64,
+     "ref": null,
+     "quote": "BP 107/64"
+    }
+   ]
+  },
+  {
+   "patient": "p016",
+   "local": "RRH-00827796",
+   "item_id": "01JSZJXQD0SABDH7SYWDX8P7SD",
+   "file": "2025-04-28-admission-hp.folio.md",
+   "as_of": "2025-04-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute pancreatitis",
+     "status": "ruled_out",
+     "ref": "dx_pancreatitis",
+     "quote": "Acute pancreatitis ruled out"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": "med_empagliflozin",
+     "quote": "Hold empagliflozin."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": "med_metformin",
+     "quote": "hold metformin while acidotic and NPO"
+    },
+    {
+     "view": "medications",
+     "ingredient": "hydrochlorothiazide",
+     "status": "held",
+     "ref": "med_hydrochlorothiazide",
+     "quote": "hold hydrochlorothiazide for volume depletion"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "ref": "med_losartan",
+     "quote": "continue losartan"
+    },
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "intolerance",
+     "ref": null,
+     "quote": "Allergies: lisinopril (cough)"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 114,
+     "diastolic_mmhg": 68,
+     "ref": null,
+     "quote": "BP 114/68"
+    }
+   ]
+  },
+  {
+   "patient": "p220",
+   "local": "RRH-00671266",
+   "item_id": "01JDDAG070J59PBS3XT1QGVXGC",
+   "file": "2024-11-23-discharge-summary.folio.md",
+   "as_of": "2024-11-23",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "resolved",
+     "ref": "dx_pneumonia",
+     "quote": "community-acquired pneumonia, resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 500,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 500 mg by mouth twice daily with meals, continue"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 119,
+     "diastolic_mmhg": 71,
+     "ref": null,
+     "quote": "BP 119/71"
+    }
+   ]
+  },
+  {
+   "patient": "p163",
+   "local": "RRH-00892662",
+   "item_id": "01JVE0FJB0KWC40NTT7VATAR2M",
+   "file": "2025-05-16-admission-hp.folio.md",
+   "as_of": "2025-05-16",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury"
+    },
+    {
+     "view": "problems",
+     "condition": "Hyperkalemia",
+     "status": "active",
+     "ref": "dx_hyperk",
+     "quote": "Hyperkalemia, potassium 6.0 on arrival"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": "med_lisinopril",
+     "quote": "Hold lisinopril until creatinine is back to baseline."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 121,
+     "diastolic_mmhg": 73,
+     "ref": null,
+     "quote": "BP 121/73"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "RRH-00180333",
+   "item_id": "01G9BR3JK0PCKDWB92M2ZMMWXC",
+   "file": "2022-07-31-ed-note.folio.md",
+   "as_of": "2022-07-31",
+   "facts": []
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "item_id": "01GMF9ZZM0R9YCV8011W2NBNX0",
+   "file": "2022-12-16-ed-note.folio.md",
+   "as_of": "2022-12-16",
+   "facts": [
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "stopped",
+     "dose": {
+      "value": 40,
+      "unit": "mg"
+     },
+     "ref": "med_lisinopril",
+     "quote": "lisinopril 40 mg daily, which is now stopped"
+    },
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "adverse_reaction",
+     "ref": "dx_angioedema",
+     "quote": "Angioedema, ACE inhibitor-associated"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 120,
+     "diastolic_mmhg": 72,
+     "ref": null,
+     "quote": "BP 120/72"
+    }
+   ]
+  },
+  {
+   "patient": "p135",
+   "local": "RRH-00000354",
+   "item_id": "01JYH3R950FD9115XZ2GM3MXFY",
+   "file": "2025-06-24-progress-note.folio.md",
+   "as_of": "2025-06-24",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 137,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "sodium 137"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 3.9,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "potassium 3.9"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 102,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "chloride 102"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 23,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "bicarbonate 23"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 12,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "anion gap 12"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 23,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "urea nitrogen 23"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.55,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "creatinine 1.55 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 38,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "eGFR 38 (L)"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 158,
+     "date": "2025-06-24",
+     "ref": "bmp",
+     "quote": "glucose 158 (H)"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia, active but improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin, dapagliflozin and losartan remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin, dapagliflozin and losartan remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin, dapagliflozin and losartan remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 111,
+     "diastolic_mmhg": 67,
+     "ref": null,
+     "quote": "BP 111/67"
+    }
+   ]
+  },
+  {
+   "patient": "p224",
+   "local": "RRH-00455285",
+   "item_id": "01JD8GP4706YR9GMB3DB9B610Y",
+   "file": "2024-11-21-discharge-summary.folio.md",
+   "as_of": "2024-11-21",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "resolved",
+     "ref": "dx_dka",
+     "quote": "euglycemic DKA, SGLT2 inhibitor-associated, resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "held",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_dapagliflozin",
+     "quote": "Dapagliflozin 10 mg daily: do not take; do not resume until reviewed by his primary care physician."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 1000 mg twice daily with meals: continue."
+    },
+    {
+     "view": "medications",
+     "ingredient": "hydrochlorothiazide",
+     "status": "active",
+     "dose": {
+      "value": 25,
+      "unit": "mg"
+     },
+     "ref": "med_hydrochlorothiazide",
+     "quote": "Hydrochlorothiazide 25 mg daily: continue."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 118,
+     "diastolic_mmhg": 71,
+     "ref": null,
+     "quote": "BP 118/71"
+    }
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "item_id": "01GT2W4AK0Y5X7BMG5R2BJEV0T",
+   "file": "2023-02-24-discharge-summary.folio.md",
+   "as_of": "2023-02-24",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "resolved",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_empagliflozin",
+     "quote": "Empagliflozin 10 mg daily: do not resume until reviewed by her PCP"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 1000 mg twice daily with meals: continue"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "dose": {
+      "value": 50,
+      "unit": "mg"
+     },
+     "ref": "med_losartan",
+     "quote": "Losartan 50 mg daily: continue"
+    },
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "intolerance",
+     "ref": null,
+     "quote": "Allergies: lisinopril (cough)"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 123,
+     "diastolic_mmhg": 74,
+     "ref": null,
+     "quote": "BP 123/74"
+    }
+   ]
+  },
+  {
+   "patient": "p127",
+   "local": "RRH-00903997",
+   "item_id": "01JPC7P7609KSPR9H7014WARSW",
+   "file": "2025-03-14-ed-note.folio.md",
+   "as_of": "2025-03-15",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "wbc",
+     "value": 16.7,
+     "date": "2025-03-15",
+     "ref": "cbc",
+     "quote": "white blood cells 16.7 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "hemoglobin",
+     "value": 12.9,
+     "date": "2025-03-15",
+     "ref": "cbc",
+     "quote": "hemoglobin 12.9"
+    },
+    {
+     "view": "labs",
+     "analyte": "platelets",
+     "value": 286,
+     "date": "2025-03-15",
+     "ref": "cbc",
+     "quote": "platelets 286"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 123,
+     "diastolic_mmhg": 74,
+     "ref": null,
+     "quote": "BP 123/74"
+    }
+   ]
+  },
+  {
+   "patient": "p145",
+   "local": "RRH-00305402",
+   "item_id": "01H39YDMV0C5AAM3E4HFDRKRFB",
+   "file": "2023-06-19-progress-note.folio.md",
+   "as_of": "2023-06-19",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 138,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "sodium is 138"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.6,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "potassium 5.6"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 103,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "chloride 103"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 26,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "bicarbonate 26"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 9,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "anion gap 9"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 31,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "urea nitrogen 31"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.39,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "creatinine 1.39"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 46,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "eGFR 46"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 141,
+     "date": "2023-06-19",
+     "ref": "bmp",
+     "quote": "glucose 141"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury, improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan and metformin remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 132,
+     "diastolic_mmhg": 79,
+     "ref": null,
+     "quote": "BP 132/79"
+    }
+   ]
+  },
+  {
+   "patient": "p152",
+   "local": "RRH-00750259",
+   "item_id": "01K6TA5TT0VY91CBNN4Z5CK2WV",
+   "file": "2025-10-05-progress-note.folio.md",
+   "as_of": "2025-10-05",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 135,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "sodium 135"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 3.9,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "potassium 3.9"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 105,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "chloride 105"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 26,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "bicarbonate 26"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 4,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "anion gap 4"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 27,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "urea nitrogen 27"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.51,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "creatinine 1.51"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 55,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "eGFR 55"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 165,
+     "date": "2025-10-05",
+     "ref": "bmp",
+     "quote": "glucose 165"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia, active"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and dapagliflozin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and dapagliflozin remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 128,
+     "diastolic_mmhg": 77,
+     "ref": null,
+     "quote": "BP 128/77"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "RRH-00298275",
+   "item_id": "01JDP4Y2Z02YE3623EGK46P8BJ",
+   "file": "2024-11-26-ed-note.folio.md",
+   "as_of": "2024-11-27",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "wbc",
+     "value": 13.6,
+     "date": "2024-11-26",
+     "ref": "cbc",
+     "quote": "white blood cells 13.6"
+    },
+    {
+     "view": "labs",
+     "analyte": "hemoglobin",
+     "value": 12.3,
+     "date": "2024-11-26",
+     "ref": "cbc",
+     "quote": "hemoglobin 12.3"
+    },
+    {
+     "view": "labs",
+     "analyte": "platelets",
+     "value": 289,
+     "date": "2024-11-26",
+     "ref": "cbc",
+     "quote": "platelets 289"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 136,
+     "diastolic_mmhg": 82,
+     "ref": null,
+     "quote": "BP 136/82"
+    }
+   ]
+  },
+  {
+   "patient": "p250",
+   "local": "RRH-00313418",
+   "item_id": "01H1H5G5G0V97S9F5MDM2Q5VVX",
+   "file": "2023-05-28-admission-hp.folio.md",
+   "as_of": "2023-05-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury"
+    },
+    {
+     "view": "problems",
+     "condition": "Hyperkalemia",
+     "status": "active",
+     "ref": "dx_hyperk",
+     "quote": "Hyperkalemia, potassium 6.5 on arrival"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": "med_lisinopril",
+     "quote": "Hold lisinopril until creatinine is back to baseline"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "held",
+     "ref": "med_chlorthalidone",
+     "quote": "Hold chlorthalidone for volume depletion."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 131,
+     "diastolic_mmhg": 79,
+     "ref": null,
+     "quote": "BP 131/79"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "RRH-00147542",
+   "item_id": "01HMFD5YY0C7J8FPVWX1QJQVSA",
+   "file": "2024-01-18-discharge-summary.folio.md",
+   "as_of": "2024-01-18",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "resolved",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia, resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 1000 mg twice daily with meals: continue"
+    },
+    {
+     "view": "medications",
+     "ingredient": "spironolactone",
+     "status": "active",
+     "dose": {
+      "value": 25,
+      "unit": "mg"
+     },
+     "ref": "med_spironolactone",
+     "quote": "Spironolactone 25 mg daily: continue"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 136,
+     "diastolic_mmhg": 82,
+     "ref": null,
+     "quote": "BP 136/82"
+    }
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "RRH-00149489",
+   "item_id": "01KEM7FH30TTWEDNMEGBE9HJR8",
+   "file": "2026-01-10-progress-note.folio.md",
+   "as_of": "2026-01-10",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 135,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "sodium 135"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4.3,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "potassium 4.3"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 101,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "chloride 101"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 23,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "bicarbonate 23"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 11,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "anion gap 11"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 25,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "urea nitrogen 25"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.45,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "creatinine 1.45"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 39,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "eGFR 39"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 167,
+     "date": "2026-01-10",
+     "ref": "bmp",
+     "quote": "glucose 167"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "Empagliflozin and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Empagliflozin and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": null,
+     "quote": "Lisinopril remains held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 116,
+     "diastolic_mmhg": 70,
+     "ref": null,
+     "quote": "BP 116/70"
+    }
+   ]
+  },
+  {
+   "patient": "p114",
+   "local": "RRH-00450813",
+   "item_id": "01KG3AYNE019PX2VM7NQPJYDGD",
+   "file": "2026-01-28-endocrine-consult.folio.md",
+   "as_of": "2026-01-28",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated, responding to treatment"
+    },
+    {
+     "view": "medications",
+     "ingredient": "dapagliflozin",
+     "status": "held",
+     "ref": "med_dapagliflozin",
+     "quote": "Dapagliflozin is held, and I recommend against restarting it at discharge."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and lisinopril remain held for now"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and lisinopril remain held for now"
+    }
+   ]
+  },
+  {
+   "patient": "p155",
+   "local": "RRH-00732563",
+   "item_id": "01KEDZYMP0YT3AX1TR131Q624R",
+   "file": "2026-01-07-ed-note.folio.md",
+   "as_of": "2026-01-07",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-01-07",
+     "ref": "trop_1",
+     "quote": "Troponin I <0.01 ng/mL on the 19:05 draw"
+    },
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-01-07",
+     "ref": "trop_2",
+     "quote": "Troponin I <0.01 ng/mL on the 22:05 draw"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute coronary syndrome",
+     "status": "ruled_out",
+     "ref": "dx_acs",
+     "quote": "Acute coronary syndrome ruled out"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 154,
+     "diastolic_mmhg": 92,
+     "ref": null,
+     "quote": "BP 154/92"
+    }
+   ]
+  },
+  {
+   "patient": "p164",
+   "local": "RRH-00521716",
+   "item_id": "01KJY3F060E0VS70YP6Z44SWGK",
+   "file": "2026-03-04-ed-note.folio.md",
+   "as_of": "2026-03-04",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-03-04",
+     "ref": "trop_1",
+     "quote": "Troponin I <0.01 ng/mL at 19:38"
+    },
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-03-04",
+     "ref": "trop_2",
+     "quote": "Troponin I <0.01 ng/mL at 22:38"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute coronary syndrome",
+     "status": "ruled_out",
+     "ref": "dx_acs",
+     "quote": "Acute coronary syndrome ruled out"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 143,
+     "diastolic_mmhg": 86,
+     "ref": null,
+     "quote": "BP 143/86"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "item_id": "01JMQSW1803R1PKKTF69HGP7ZM",
+   "file": "2025-02-22-endocrine-consult.folio.md",
+   "as_of": "2025-02-22",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "euglycemic DKA, SGLT2 inhibitor-associated"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": "med_empagliflozin",
+     "quote": "Empagliflozin is held, and I recommend against restarting it at discharge."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin is held, chlorthalidone is held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin is held, chlorthalidone is held"
+    }
+   ]
+  },
+  {
+   "patient": "p128",
+   "local": "RRH-00941538",
+   "item_id": "01K5TRMH905J6T79GAWK9J6PJ0",
+   "file": "2025-09-22-ed-note.folio.md",
+   "as_of": "2025-09-23",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 134,
+     "ref": "bmp",
+     "quote": "sodium 134"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.4,
+     "ref": "bmp",
+     "quote": "potassium 5.4"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 93,
+     "ref": "bmp",
+     "quote": "chloride 93"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 14,
+     "ref": "bmp",
+     "quote": "bicarbonate 14"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 27,
+     "ref": "bmp",
+     "quote": "anion gap 27"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 30,
+     "ref": "bmp",
+     "quote": "urea nitrogen 30"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.76,
+     "ref": "bmp",
+     "quote": "creatinine 1.76"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 39,
+     "ref": "bmp",
+     "quote": "eGFR 39"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 175,
+     "ref": "bmp",
+     "quote": "glucose 175"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "Diabetic ketoacidosis, euglycemic"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 111,
+     "diastolic_mmhg": 67,
+     "ref": null,
+     "quote": "BP 111/67"
+    }
+   ]
+  },
+  {
+   "patient": "p178",
+   "local": "RRH-00696404",
+   "item_id": "01HZTWE930PSM6WBWNVPJ9AWST",
+   "file": "2024-06-07-admission-hp.folio.md",
+   "as_of": "2024-06-07",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury, prerenal from volume loss"
+    },
+    {
+     "view": "problems",
+     "condition": "Hyperkalemia",
+     "status": "active",
+     "ref": "dx_hyperk",
+     "quote": "Hyperkalemia, potassium 6.3 on arrival"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 131,
+     "diastolic_mmhg": 79,
+     "ref": null,
+     "quote": "BP 131/79"
+    }
+   ]
+  },
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "item_id": "01H24A8XZ0F0J4QQBRXSBKP21Z",
+   "file": "2023-06-04-ed-note.folio.md",
+   "as_of": "2023-06-04",
+   "facts": [
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "adverse_reaction",
+     "ref": "dx_angioedema",
+     "quote": "Angioedema, ACE inhibitor-associated"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "stopped",
+     "dose": {
+      "value": 10,
+      "unit": "mg"
+     },
+     "ref": "med_lisinopril",
+     "quote": "Lisinopril 10 mg daily is stopped."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 129,
+     "diastolic_mmhg": 77,
+     "ref": null,
+     "quote": "BP 129/77"
+    }
+   ]
+  },
+  {
+   "patient": "p208",
+   "local": "RRH-00264924",
+   "item_id": "01J2JAXNM04H4A4BFGBJB85SE2",
+   "file": "2024-07-11-ed-note.folio.md",
+   "as_of": "2024-07-11",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 136,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "sodium 136"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 6.7,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "potassium 6.7 (critical)"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 103,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "chloride 103"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 19,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "bicarbonate 19"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 14,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "anion gap 14"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 48,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "urea nitrogen 48"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 2.02,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "creatinine 2.02"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 39,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "eGFR 39"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 163,
+     "date": "2024-07-11",
+     "ref": "bmp",
+     "quote": "glucose 163"
+    },
+    {
+     "view": "problems",
+     "condition": "Hyperkalemia",
+     "status": "active",
+     "ref": "dx_hyperk",
+     "quote": "Hyperkalemia, potassium 6.7"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury, creatinine 2.02"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 115,
+     "diastolic_mmhg": 69,
+     "ref": null,
+     "quote": "BP 115/69"
+    }
+   ]
+  },
+  {
+   "patient": "p075",
+   "local": "RRH-00406420",
+   "item_id": "01KASZWMB066G2NJCKYZTQHZB9",
+   "file": "2025-11-23-ed-note.folio.md",
+   "as_of": "2025-11-23",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2025-11-23",
+     "ref": "trop_1",
+     "quote": "Troponin I <0.01 ng/mL"
+    },
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2025-11-23",
+     "ref": "trop_2",
+     "quote": "Troponin I <0.01 ng/mL"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute coronary syndrome",
+     "status": "ruled_out",
+     "ref": "dx_acs",
+     "quote": "Acute coronary syndrome ruled out"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 156,
+     "diastolic_mmhg": 94,
+     "ref": null,
+     "quote": "BP 156/94"
+    }
+   ]
+  },
+  {
+   "patient": "p201",
+   "local": "RRH-00846530",
+   "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+   "file": "2026-01-01-ed-note.folio.md",
+   "as_of": "2026-01-02",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-01-01",
+     "ref": "trop_1",
+     "quote": "troponin I was <0.01 ng/mL"
+    },
+    {
+     "view": "labs",
+     "analyte": "troponin",
+     "value": 0.01,
+     "comparator": "<",
+     "date": "2026-01-01",
+     "ref": "trop_2",
+     "quote": "troponin I was <0.01 ng/mL"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute coronary syndrome",
+     "status": "ruled_out",
+     "ref": "dx_acs",
+     "quote": "Acute coronary syndrome ruled out"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 145,
+     "diastolic_mmhg": 87,
+     "ref": null,
+     "quote": "BP 145/87"
+    }
+   ]
+  },
+  {
+   "patient": "p010",
+   "local": "RRH-00901190",
+   "item_id": "01GWBBQM10BXC77NG1AY2J26FC",
+   "file": "2023-03-24-ed-note.folio.md",
+   "as_of": "2023-03-24",
+   "facts": [
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "adverse_reaction",
+     "ref": "dx_angioedema",
+     "quote": "Angioedema, ACE inhibitor-associated"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "stopped",
+     "dose": {
+      "value": 20,
+      "unit": "mg"
+     },
+     "ref": "med_lisinopril",
+     "quote": "Lisinopril is stopped."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 146,
+     "diastolic_mmhg": 88,
+     "ref": null,
+     "quote": "BP 146/88"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "RRH-00513200",
+   "item_id": "01HGSCVNT0R25PW219ACT7KZH7",
+   "file": "2023-12-03-ed-note.folio.md",
+   "as_of": "2023-12-03",
+   "facts": [
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "adverse_reaction",
+     "ref": "dx_angioedema",
+     "quote": "Angioedema, ACE inhibitor-associated"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "stopped",
+     "dose": {
+      "value": 40,
+      "unit": "mg"
+     },
+     "ref": "med_lisinopril",
+     "quote": "lisinopril 40 mg once daily, which is stopped today"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 140,
+     "diastolic_mmhg": 84,
+     "ref": null,
+     "quote": "BP 140/84"
+    }
+   ]
+  },
+  {
+   "patient": "p260",
+   "local": "RRH-00046468",
+   "item_id": "01JGEM4V402J5DPM3ZR9AB3EAF",
+   "file": "2024-12-31-progress-note.folio.md",
+   "as_of": "2024-12-31",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 132,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "sodium 132"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "potassium 4.0"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 101,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "chloride 101"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 22,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "bicarbonate 22"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 9,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "anion gap 9"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 25,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "urea nitrogen 25"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.1,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "creatinine 1.10"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 56,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "eGFR 56"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 183,
+     "date": "2024-12-31",
+     "ref": "bmp",
+     "quote": "glucose 183"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "active",
+     "ref": "dx_dka",
+     "quote": "Euglycemic DKA, SGLT2 inhibitor-associated: the anion gap has closed"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "empagliflozin, metformin, lisinopril and chlorthalidone remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "empagliflozin, metformin, lisinopril and chlorthalidone remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": null,
+     "quote": "empagliflozin, metformin, lisinopril and chlorthalidone remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "held",
+     "ref": null,
+     "quote": "empagliflozin, metformin, lisinopril and chlorthalidone remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 112,
+     "diastolic_mmhg": 67,
+     "ref": null,
+     "quote": "BP 112/67"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "RRH-00981873",
+   "item_id": "01KKQ1JHT0TGSMZ27SX1TDN08F",
+   "file": "2026-03-14-discharge-summary.folio.md",
+   "as_of": "2026-03-14",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "resolved",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia resolved"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "dose": {
+      "value": 1000,
+      "unit": "mg"
+     },
+     "ref": "med_metformin",
+     "quote": "Metformin 1000 mg twice daily with meals: continue"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 123,
+     "diastolic_mmhg": 74,
+     "ref": null,
+     "quote": "BP 123/74"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+   "file": "2024-11-05-discharge-summary.folio.md",
+   "as_of": "2024-11-05",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "bhb",
+     "value": 0.3,
+     "date": "2024-11-03",
+     "ref": "bhb_3",
+     "quote": "Beta-hydroxybutyrate was 0.3 on 11/03."
+    },
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 133,
+     "date": "2024-11-05",
+     "ref": "bmp_dc",
+     "quote": "Sodium 133"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.33,
+     "date": "2024-11-05",
+     "ref": "bmp_dc",
+     "quote": "creatinine 1.33"
+    },
+    {
+     "view": "problems",
+     "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+     "status": "resolved",
+     "ref": "dx_edka",
+     "quote": "euglycemic DKA, SGLT2 inhibitor-associated, resolved"
+    },
+    {
+     "view": "allergies",
+     "substance": "empagliflozin",
+     "type": "adverse_reaction",
+     "ref": "dx_adverse",
+     "quote": "adverse effect of empagliflozin"
+    },
+    {
+     "view": "problems",
+     "condition": "Hyponatremia",
+     "status": "active",
+     "ref": "dx_na",
+     "quote": "hyponatremia, improving"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute pancreatitis",
+     "status": "ruled_out",
+     "ref": "dx_panc",
+     "quote": "Acute pancreatitis was considered and ruled out"
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": "med_empa",
+     "quote": "Empagliflozin: held. Do not resume until reviewed by her PCP."
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "active",
+     "ref": "med_metformin",
+     "quote": "Metformin: resume"
+    },
+    {
+     "view": "medications",
+     "ingredient": "chlorthalidone",
+     "status": "active",
+     "ref": "med_chlorthalidone",
+     "quote": "Chlorthalidone: resume"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "active",
+     "ref": "med_losartan",
+     "quote": "Losartan: resume"
+    }
+   ]
+  },
+  {
+   "patient": "s03",
+   "local": "RRH-00453627",
+   "item_id": "01JENXJE40JNNQAB4A6RBMXB5N",
+   "file": "2024-12-09-progress-note.folio.md",
+   "as_of": "2024-12-09",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.44,
+     "date": "2024-12-09",
+     "ref": "bmp",
+     "quote": "Creatinine is down to 1.44"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 23,
+     "date": "2024-12-09",
+     "ref": "bmp",
+     "quote": "urea nitrogen to 23"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.8,
+     "date": "2024-12-09",
+     "ref": "bmp",
+     "quote": "potassium 5.8"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury is improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "spironolactone",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "hydrochlorothiazide",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "furosemide",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Losartan, spironolactone, hydrochlorothiazide, furosemide and metformin remain held"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 115,
+     "diastolic_mmhg": 69,
+     "ref": null,
+     "quote": "BP 115/69"
+    }
+   ]
+  },
+  {
+   "patient": "p294",
+   "local": "RRH-00949795",
+   "item_id": "01KMQS7AS0VWV7VDMBMSY9ZJC4",
+   "file": "2026-03-27-progress-note.folio.md",
+   "as_of": "2026-03-27",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 138,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "sodium 138"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 4,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "potassium 4.0"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 102,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "chloride 102"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 23,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "bicarbonate 23"
+    },
+    {
+     "view": "labs",
+     "analyte": "anion_gap",
+     "value": 13,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "anion gap 13"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 25,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "urea nitrogen 25 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.6,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "creatinine 1.60 (H)"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 35,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "eGFR 35 (L)"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 127,
+     "date": "2026-03-27",
+     "ref": "bmp",
+     "quote": "glucose 127 (H)"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "Community-acquired pneumonia: improving clinically"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and empagliflozin remain held."
+    },
+    {
+     "view": "medications",
+     "ingredient": "empagliflozin",
+     "status": "held",
+     "ref": null,
+     "quote": "Metformin and empagliflozin remain held."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 120,
+     "diastolic_mmhg": 72,
+     "ref": null,
+     "quote": "BP 120/72"
+    }
+   ]
+  },
+  {
+   "patient": "p016",
+   "local": "RRH-00827796",
+   "item_id": "01GXJWW7V0FYBZGPAXTP73C1W8",
+   "file": "2023-04-09-admission-hp.folio.md",
+   "as_of": "2023-04-09",
+   "facts": [
+    {
+     "view": "problems",
+     "condition": "Hyperkalemia",
+     "status": "active",
+     "ref": "dx_hyperk",
+     "quote": "Hyperkalemia, potassium 6.8"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury, creatinine 2.89"
+    },
+    {
+     "view": "medications",
+     "ingredient": "losartan",
+     "status": "held",
+     "ref": "med_losartan",
+     "quote": "hold losartan until creatinine is back to baseline"
+    },
+    {
+     "view": "medications",
+     "ingredient": "hydrochlorothiazide",
+     "status": "held",
+     "ref": "med_hydrochlorothiazide",
+     "quote": "hold hydrochlorothiazide for volume depletion"
+    },
+    {
+     "view": "medications",
+     "ingredient": "metformin",
+     "status": "held",
+     "ref": "med_metformin",
+     "quote": "hold metformin during the acute illness"
+    },
+    {
+     "view": "allergies",
+     "substance": "lisinopril",
+     "type": "intolerance",
+     "ref": null,
+     "quote": "Allergies: lisinopril (cough)"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 108,
+     "diastolic_mmhg": 65,
+     "ref": null,
+     "quote": "BP 108/65"
+    }
+   ]
+  },
+  {
+   "patient": "p220",
+   "local": "RRH-00671266",
+   "item_id": "01JD5ZWNV092P24N1ZVVAXYCSZ",
+   "file": "2024-11-20-ed-note.folio.md",
+   "as_of": "2024-11-20",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "wbc",
+     "value": 16.2,
+     "date": "2024-11-20",
+     "ref": "cbc",
+     "quote": "white blood cell count is 16.2"
+    },
+    {
+     "view": "labs",
+     "analyte": "hemoglobin",
+     "value": 13.9,
+     "date": "2024-11-20",
+     "ref": "cbc",
+     "quote": "hemoglobin 13.9"
+    },
+    {
+     "view": "labs",
+     "analyte": "platelets",
+     "value": 204,
+     "date": "2024-11-20",
+     "ref": "cbc",
+     "quote": "platelets 204"
+    },
+    {
+     "view": "problems",
+     "condition": "Community-acquired pneumonia",
+     "status": "active",
+     "ref": "dx_pneumonia",
+     "quote": "community-acquired pneumonia"
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 139,
+     "diastolic_mmhg": 83,
+     "ref": null,
+     "quote": "BP 139/83"
+    }
+   ]
+  },
+  {
+   "patient": "p163",
+   "local": "RRH-00892662",
+   "item_id": "01JVF9VDM0FPFT7NHW8X10S937",
+   "file": "2025-05-17-progress-note.folio.md",
+   "as_of": "2025-05-17",
+   "facts": [
+    {
+     "view": "labs",
+     "analyte": "sodium",
+     "value": 138,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "sodium 138"
+    },
+    {
+     "view": "labs",
+     "analyte": "potassium",
+     "value": 5.5,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "potassium 5.5"
+    },
+    {
+     "view": "labs",
+     "analyte": "chloride",
+     "value": 104,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "chloride 104"
+    },
+    {
+     "view": "labs",
+     "analyte": "bicarbonate",
+     "value": 24,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "bicarbonate 24"
+    },
+    {
+     "view": "labs",
+     "analyte": "bun",
+     "value": 22,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "urea nitrogen 22"
+    },
+    {
+     "view": "labs",
+     "analyte": "creatinine",
+     "value": 1.55,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "creatinine 1.55"
+    },
+    {
+     "view": "labs",
+     "analyte": "egfr",
+     "value": 38,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "eGFR 38"
+    },
+    {
+     "view": "labs",
+     "analyte": "glucose",
+     "value": 102,
+     "date": "2025-05-17",
+     "ref": "bmp",
+     "quote": "glucose 102"
+    },
+    {
+     "view": "problems",
+     "condition": "Acute kidney injury",
+     "status": "active",
+     "ref": "dx_aki",
+     "quote": "Acute kidney injury is improving"
+    },
+    {
+     "view": "medications",
+     "ingredient": "lisinopril",
+     "status": "held",
+     "ref": null,
+     "quote": "Lisinopril stays on hold."
+    },
+    {
+     "view": "vitals",
+     "systolic_mmhg": 128,
+     "diastolic_mmhg": 77,
+     "ref": null,
+     "quote": "BP 128/77"
+    }
+   ]
+  }
+ ]
+}

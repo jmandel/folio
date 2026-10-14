@@ -1,0 +1,40 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "a",
+ "schemaSha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "viewSetHash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "samples": [
+  "p047/2024-05-01-visit-note.folio.md",
+  "p047/2024-06-01-void.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283.folio.md",
+  "p047/2024-05-01-lakeview-lv24-122-32283-corrected.folio.md",
+  "p095/2025-09-16-referral-created.folio.md",
+  "p047/2019-06-27-problem-1-add.folio.md",
+  "p047/2025-07-01-allergy-dapagliflozin.folio.md",
+  "p047/2025-07-01-med-dapagliflozin-stop.folio.md",
+  "p047/2019-06-27-vitals.folio.md",
+  "p095/2025-09-16-medications-reviewed.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T115457102Z-q41h",
+   "ok": true,
+   "costUsd": 1.1254772,
+   "durationMs": 269528,
+   "numTurns": 9,
+   "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 58916,
+    "cache_read_input_tokens": 269926,
+    "output_tokens": 30005
+   },
+   "evalPath": "results/stage3/evals/20261014T115457102Z-q41h.json",
+   "summary": "tsc=ok det=true errors=0/181 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.031ms/item"
+  }
+ ],
+ "final": "20261014T115457102Z-q41h"
+}

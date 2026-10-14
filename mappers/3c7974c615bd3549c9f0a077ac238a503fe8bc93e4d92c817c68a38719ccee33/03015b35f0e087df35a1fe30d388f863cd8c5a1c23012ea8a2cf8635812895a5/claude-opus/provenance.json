@@ -1,0 +1,76 @@
+{
+ "source": "riverside",
+ "schema_sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "view_set": "app",
+ "view_set_hash": "03015b35f0e087df35a1fe30d388f863cd8c5a1c23012ea8a2cf8635812895a5",
+ "backend": "claude-opus",
+ "model": "opus",
+ "chosen": {
+  "condition": "b",
+  "runId": "20261014T121918762Z-zlnm",
+  "eval": "results/stage3/evals/20261014T121918762Z-zlnm.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0
+ },
+ "held_out": {
+  "patients": 32,
+  "precision": 0.9991482112436116,
+  "recall": 0.9991482112436116,
+  "ms_per_item": 0.3520142836879434
+ },
+ "samples_from_training_patients": [
+  "p047/2025-06-24-ed-note.folio.md",
+  "p047/2025-06-26-discharge-summary.folio.md",
+  "p047/2025-06-24-admission-hp.folio.md",
+  "p047/2025-06-25-progress-note.folio.md",
+  "p057/2025-05-22-admission-hp.folio.md",
+  "p057/2025-05-22-ed-note.folio.md",
+  "p057/2025-05-23-progress-note.folio.md",
+  "p057/2025-05-24-progress-note.folio.md"
+ ],
+ "conditions": {
+  "a": {
+   "final": "20261014T121114257Z-yo0h-a2",
+   "rounds": [
+    {
+     "runId": "20261014T121114257Z-yo0h-a2",
+     "summary": "tsc=ok det=true errors=0/32 P=99.2% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.290ms/item",
+     "costUsd": 1.7610034
+    }
+   ]
+  },
+  "b": {
+   "final": "20261014T121918762Z-zlnm",
+   "rounds": [
+    {
+     "runId": "20261014T121745711Z-0vtk",
+     "summary": "tsc=ok det=true errors=0/32 P=99.2% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.287ms/item",
+     "costUsd": 0.794392
+    },
+    {
+     "runId": "20261014T121918762Z-zlnm",
+     "summary": "tsc=ok det=true errors=0/32 P=99.2% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.348ms/item",
+     "costUsd": 0.7920727999999999
+    }
+   ]
+  },
+  "c": {
+   "final": "20261014T124107016Z-8k81",
+   "rounds": [
+    {
+     "runId": "20261014T124107016Z-8k81",
+     "summary": "tsc=ok det=true errors=0/32 P=100.0% R=100.0% medi:100.0% prob:100.0% alle:100.0% labs:100.0% vita:100.0% 0.293ms/item",
+     "costUsd": 0.225856
+    },
+    {
+     "runId": "",
+     "summary": "no findings; stopped"
+    }
+   ]
+  }
+ }
+}

@@ -97,6 +97,7 @@ function compareFields(view: View, f: any, r: Row): FieldOutcome[] {
   const add = (field: string, ok: boolean, expected: unknown, actual: unknown) => out.push({ field, ok, expected, actual });
   switch (view) {
     case "medications":
+      if (f.ingredientDerivable !== false && f.scoreIngredient !== false) add("ingredient", !!r.ingredient && drugMatches(f.ingredient, r.ingredient), f.ingredient, r.ingredient);
       add("status", r.status === f.status, f.status, r.status);
       if (f.dose) add("dose", !!r.dose && eqNum(r.dose.value, f.dose.value, 1e-6) && normDoseUnit(r.dose.unit) === normDoseUnit(f.dose.unit), f.dose, r.dose);
       if (f.frequency) add("frequency", f.frequency.includes(r.frequency), f.frequency[0], r.frequency);

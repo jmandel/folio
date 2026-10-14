@@ -1,0 +1,110 @@
+bun test v1.3.14-canary.1 (0d9b296a)
+
+out/revision.test.ts:
+24 |   instructions: "Do not take lisinopril or any ACE inhibitor again" };
+25 | 
+26 | test("both feedback angioedema diagnoses link to the explicitly named avoidance drug", () => {
+27 |   for (const [id, date] of [["01J9FHFYN022XMP813A6DRS7EK", "2024-10-05"], ["01JAC693Q01AJZEY7TW6HHJFZF", "2024-10-16"]]) {
+28 |     const rows = at([fixture(id)], date);
+29 |     expect(rows.allergies).toEqual([{
+                                ^
+error: expect(received).toEqual(expected)
+
+- [
+-   {
+-     "criticality": "high",
+-     "evidence": [
+-       {
+-         "entry_id": "dx_angioedema",
+-         "item_id": "01J9FHFYN022XMP813A6DRS7EK",
+-       },
+-       {
+-         "entry_id": "med_lisinopril",
+-         "item_id": "01J9FHFYN022XMP813A6DRS7EK",
+-       },
+-     ],
+-     "reaction": "Angioedema, ACE inhibitor-associated",
+-     "rxnorm_ingredient": "29046",
+-     "substance": "lisinopril",
+-     "type": "adverse_reaction",
+-   },
+- ]
++ []
+
+- Expected  - 19
++ Received  + 1
+
+      at <anonymous> (/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e/out/revision.test.ts:29:28)
+(fail) both feedback angioedema diagnoses link to the explicitly named avoidance drug [4.98ms]
+35 |   }
+36 | });
+37 | 
+38 | test("attribution follows structured diagnosis and explicit class instructions, independent of keys and prose", () => {
+39 |   const rows = at([make({ randomDx: angioedema, renamedMed: { ...lisinopril, drug_name: "Zestril", instructions: "Avoid all ACE inhibitors" } })]);
+40 |   expect(rows.allergies[0]).toMatchObject({ substance: "lisinopril", rxnorm_ingredient: "29046", type: "adverse_reaction", criticality: "high" });
+                                 ^
+error: expect(received).toMatchObject(expected)
+
+Matcher error: received value must be a non-null object
+
+      at <anonymous> (/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e/out/revision.test.ts:40:29)
+(fail) attribution follows structured diagnosis and explicit class instructions, independent of keys and prose [14.63ms]
+42 | });
+43 | 
+44 | test("class attribution stays a class without an explicit, unambiguous medication link", () => {
+45 |   for (const instructions of [undefined, "Patient requested discontinuation", "Switch to an ACE inhibitor"]) {
+46 |     const rows = at([make({ d: angioedema, m: { ...lisinopril, instructions } })]);
+47 |     expect(rows.allergies).toMatchObject([{ substance: "ACE inhibitor", type: "adverse_reaction" }]);
+                                ^
+error: expect(received).toMatchObject(expected)
+
+- [
+-   {
+-     "substance": "ACE inhibitor",
+-     "type": "adverse_reaction",
+-   },
+- ]
++ []
+
+- Expected  - 6
++ Received  + 1
+
+      at <anonymous> (/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e/out/revision.test.ts:47:28)
+(fail) class attribution stays a class without an explicit, unambiguous medication link [0.50ms]
+(pass) working, ruled-out, and withdrawn adverse diagnoses do not create avoidance entries [0.48ms]
+62 | test("explicit nonimmune angioedema differs from an unspecified allergy-list reaction", () => {
+63 |   const rows = at([make({
+64 |     a: { type: "allergy", substance: "lisinopril", rxnorm_ingredient: "29046", reaction: "ACE inhibitor-associated angioedema", severity: "severe" },
+65 |     b: { type: "allergy", substance: "penicillins", reaction: "angioedema", severity: "severe" },
+66 |   })]);
+67 |   expect(rows.allergies.find(a => a.substance === "lisinopril")?.type).toBe("adverse_reaction");
+                                                                            ^
+error: expect(received).toBe(expected)
+
+Expected: "adverse_reaction"
+Received: "allergy"
+
+      at <anonymous> (/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e/out/revision.test.ts:67:72)
+(fail) explicit nonimmune angioedema differs from an unspecified allergy-list reaction [0.32ms]
+(pass) feedback troponins retain both specimens with their actual collection instants [1.55ms]
+(pass) feedback arrival BP remains on the prior local date alongside later inpatient vitals [0.38ms]
+(pass) feedback arrival panel and repeat panel are separate specimens, not conflicting values [0.59ms]
+106 | 
+107 | test("unrecognized strings and malformed discriminator objects never invoke prototype properties", () => {
+108 |   for (const name of ["constructor", "__proto__", "toString", "hasOwnProperty"]) {
+109 |     expect(() => at([make({ m: { ...lisinopril, drug_name: name, rxnorm_ingredient: name },
+110 |       r: { type: "result", accession: "x", status: "final", collected: "2025-01-01T15:00:00Z", specimen: "serum", test: { local_code: name, loinc: name, name }, value: "1", unit: "mg/dL" },
+111 |     })])).not.toThrow();
+                    ^
+error: expect(received).not.toThrow()
+
+Error name: "TypeError"
+Error message: "undefined is not a function (near '...row.ingredient?.split(/\\s*(?:\\/|\\+|\\band\\b)\\s*/)...')"
+
+      at <anonymous> (/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e/out/revision.test.ts:111:15)
+(fail) unrecognized strings and malformed discriminator objects never invoke prototype properties [0.52ms]
+
+ 4 pass
+ 5 fail
+ 17 expect() calls
+Ran 9 tests across 1 file. [43.00ms]

@@ -36,7 +36,7 @@ function itemIdsFor(patient: string, source: Source, basis: string[]): string[] 
 export function stripForUsCore(e: Expected): Expected {
   return {
     ...e, problems: [], allergies: [], vitals: [], anti: e.anti.filter((a) => a.view === "medications" || a.view === "labs"),
-    medications: e.medications.map((r) => ({ ...r, fields: { ...r.fields, status_since: undefined, stop_reason: undefined } })),
+    medications: e.medications.map((r) => ({ ...r, fields: { ...r.fields, status_since: undefined, stop_reason: undefined, scoreIngredient: false } as typeof r.fields })),
   };
 }
 

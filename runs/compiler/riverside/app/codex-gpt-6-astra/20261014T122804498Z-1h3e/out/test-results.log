@@ -1,0 +1,40 @@
+bun test v1.3.14-canary.1 (0d9b296a)
+
+out/revision.test.ts:
+(pass) both feedback angioedema diagnoses link to the explicitly named avoidance drug [5.90ms]
+(pass) attribution follows structured diagnosis and explicit class instructions, independent of keys and prose [0.30ms]
+(pass) class attribution stays a class without an explicit, unambiguous medication link [0.73ms]
+(pass) working, ruled-out, and withdrawn adverse diagnoses do not create avoidance entries [0.51ms]
+(pass) explicit nonimmune angioedema differs from an unspecified allergy-list reaction [0.25ms]
+(pass) feedback troponins retain both specimens with their actual collection instants [1.59ms]
+(pass) feedback arrival BP remains on the prior local date alongside later inpatient vitals [0.52ms]
+(pass) feedback arrival panel and repeat panel are separate specimens, not conflicting values [0.61ms]
+(pass) unrecognized strings and malformed discriminator objects never invoke prototype properties [0.93ms]
+
+out/transform.test.ts:
+(pass) Chicago end of day uses the actual winter and summer offset [0.50ms]
+(pass) scope corrections by recorded time and issuer; a retraction does not resurrect ancestors [0.45ms]
+(pass) replacement restates the document, and removed entries never leak back [0.23ms]
+(pass) latest discharge list controls home drugs; held advise_against is not stopped [0.22ms]
+(pass) a new encounter snapshot supersedes the previous encounter's outpatient list [0.15ms]
+(pass) discharge restart dates use discharge, not the summary's admission effective date [0.21ms]
+(pass) dose and frequency parsing preserve uncertainty and explicitly stated units [0.34ms]
+(pass) working and ruled-out diagnoses do not become problems; omission does not resolve an established problem [0.23ms]
+(pass) CKD restaging and onset precision come from entries, never from eGFR [0.33ms]
+(pass) Riverside local diagnoses distinguish conditions sharing ICD; generic earlier copies join an unambiguous local concept [0.27ms]
+(pass) recoding the exact same condition does not produce two problems [0.14ms]
+(pass) an ICD-only entry with a matching name does not move to another local concept [0.20ms]
+(pass) explicit combination ingredients get separate rows without invented CUIs or doses [0.18ms]
+(pass) new during the stay does not invent the date the drug was first started [0.12ms]
+(pass) allergy nature and severity follow their meaning, and adverse-effect diagnoses are not problems [0.38ms]
+(pass) two drugs sharing a coarse adverse-effect ICD remain two substances [0.22ms]
+(pass) copied labs use accession and local test, corrected outranks final regardless of copy date [0.30ms]
+(pass) lab comparators, units, unsupported tests, and race-specific eGFR [0.33ms]
+(pass) vitals retain separate hospital sets, deduplicate copies, and combine nearby repeats [0.24ms]
+(pass) malformed input is skipped; narrative alone cannot manufacture rows [0.21ms]
+(pass) all sample outputs are invariant to item and payload-key order, without input mutation [10.79ms]
+
+ 30 pass
+ 0 fail
+ 102 expect() calls
+Ran 30 tests across 2 files. [52.00ms]
