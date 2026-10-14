@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:lakeview-labs.example",
+  "verificationMethod": [
+    {
+      "id": "did:web:lakeview-labs.example#folio-demo-1",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:lakeview-labs.example",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "LSrTPuuc5TBxkLvBkKIccQdsKvNy0G4jP8Wci-GescU"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:lakeview-labs.example#folio-demo-1"
+  ]
+}

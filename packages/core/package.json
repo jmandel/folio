@@ -1,0 +1,17 @@
+{
+  "name": "@folio/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node": "./src/node.ts"
+  },
+  "scripts": {
+    "gen-keys": "bun scripts/gen-dev-keys.ts"
+  },
+  "dependencies": {
+    "@sd-jwt/core": "0.22.0",
+    "yaml": "2.9.1"
+  }
+}
