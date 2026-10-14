@@ -6,3 +6,4 @@ export * from "./classify.ts";
 export * from "./policy.ts";
 export * from "./agent.ts";
 export * from "./recorded.ts";
+export * from "./describe.ts";

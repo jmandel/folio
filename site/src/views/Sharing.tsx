@@ -1,21 +1,26 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { listUnits, presentWithholding, verify, type UnitInfo, type VerifiedItem } from "@folio/core";
 import {
-  CATEGORIES,
   DEFAULT_PRESET,
   PRESETS,
   PURPOSE,
-  applyPatch,
+  absentText,
+  andList,
   categoryById,
   decide,
+  describeShare,
+  whereText,
   presetOf,
   presetPolicy,
   suggestions,
   systemPrompt,
+  topicState,
   type Decision,
+  type ItemName,
   type Part,
   type Policy,
   type PresetId,
+  type ShareSummary,
   type Suggestion,
 } from "@folio/sharing";
 import type { Index } from "../lib/data.ts";
@@ -36,13 +41,17 @@ const DEFAULT_ITEMS = [
   ["lakeview", "2026-07-13-new-visit.folio.md"],
 ];
 
+const defaultRefs = (rec: { items: RecordItem[] }) =>
+  DEFAULT_ITEMS.map(([s, f]) => rec.items.find((i) => i.source.dir === s && i.file.file === f)?.ref).filter((x): x is string => !!x);
+const sameSet = (a: string[], b: string[]) => a.length === b.length && a.every((x) => b.includes(x));
+
 interface Received {
   ref: string;
   presentation: string;
   result: { ok: true; v: VerifiedItem } | { ok: false; error: string };
 }
 
-/** Deep links: ?preset=everything|private|private_meds (off = everything), ?detail=1, ?chat=recorded, ?s=context-loss. */
+/** Deep links: ?preset=everything|private|private_meds (off = everything), ?detail=1, ?chat=recorded[&turns=N], ?s=context-loss. */
 function initialPolicy(q: URLSearchParams): Policy {
   const p = q.get("preset");
   if (p === "off") return presetPolicy("everything");
@@ -50,9 +59,47 @@ function initialPolicy(q: URLSearchParams): Policy {
   return presetPolicy(DEFAULT_PRESET);
 }
 
+const clean = (t: string) => t.replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
+
 /** Text a person can read for one part: its words in the note, else a one-line summary of its entry. */
 const partText = (u: { spanTexts: string[]; entry?: unknown }) =>
   (u.spanTexts.length ? u.spanTexts.join(" … ") : summaryLine(u.entry)).replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
+
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+/** What kind of record this is, in plain words. */
+function plainKind(it: RecordItem): { kind: string; list?: boolean } {
+  const t = it.title.toLowerCase();
+  switch (it.source.dir) {
+    case "riverside":
+      if (/admission/.test(t)) return { kind: "hospital admission note" };
+      if (/discharge/.test(t)) return { kind: "hospital discharge summary" };
+      if (/^ed /.test(t)) return { kind: "emergency room note" };
+      return { kind: t.startsWith("hospital") ? t : `hospital ${t}` };
+    case "lakeview":
+      if (/telephone/.test(t)) return { kind: "kidney-clinic phone note" };
+      if (/visit/.test(t)) return { kind: "kidney-clinic note" };
+      return { kind: `Lakeview ${t.replace(/:.*/, "")}` };
+    case "northgate":
+      return { kind: /^visit/.test(t) ? "primary-care visit note" : "primary-care record" };
+    case "homelog":
+      return /medicines list/.test(t) ? { kind: "HomeLog medicine list", list: true } : { kind: "HomeLog day page" };
+  }
+  return { kind: t };
+}
+
+/** "your November 2024 hospital admission note"; the year is left out when it is the year of the newest record sent. */
+function plainNames(items: RecordItem[]): Map<string, ItemName> {
+  const newest = items.map((i) => i.env.effective.slice(0, 4)).sort().at(-1);
+  return new Map(
+    items.map((it) => {
+      const [y, m] = it.env.effective.slice(0, 7).split("-");
+      const when = m ? `${MONTHS[+m - 1]}${y === newest ? "" : ` ${y}`}` : y;
+      const k = plainKind(it);
+      return [it.ref, { name: `your ${when} ${k.kind}`, medicineList: k.list }];
+    }),
+  );
+}
 
 export function SharingView({ index, route }: { index: Index; route: Route }) {
   const rec = usePatientRecord(index, "hero");
@@ -66,7 +113,7 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
   // Initial selection.
   useEffect(() => {
     if (!rec || chosen) return;
-    setChosen(DEFAULT_ITEMS.map(([s, f]) => rec.items.find((i) => i.source.dir === s && i.file.file === f)?.ref).filter((x): x is string => !!x));
+    setChosen(defaultRefs(rec));
   }, [rec, chosen]);
 
   // Units of each chosen item.
@@ -90,7 +137,28 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
   }, [rec, chosen, units, ready]);
 
   const decisions = useMemo(() => decide(parts, policy), [parts, policy]);
-  const suggs = useMemo(() => suggestions(decisions, policy), [decisions, policy]);
+  const suggs = useMemo(() => suggestions(decisions), [decisions]);
+  const names = useMemo(() => plainNames((chosen ?? []).map((r) => rec!.items.find((i) => i.ref === r)!)), [rec, chosen]);
+  const describe = useCallback(
+    (ds: Decision[]) =>
+      describeShare(ds, {
+        names: (ref) => names.get(ref) ?? { name: ref },
+        partLabel: (d) => partText(d.part).slice(0, 50),
+        records: chosen?.length ?? 0,
+      }),
+    [names, chosen],
+  );
+  const summary = useMemo(() => describe(decisions), [describe, decisions]);
+  /** Slot number → the unit that fills it, per record. */
+  const slotOwner = useMemo(() => {
+    const m = new Map<string, Map<number, { key: string; text: string }>>();
+    for (const [ref, us] of units) {
+      const sm = new Map<number, { key: string; text: string }>();
+      for (const u of us) u.slots.forEach((slot, i) => sm.set(slot, { key: `${ref}#${u.id}`, text: u.spanTexts[i] ?? "" }));
+      m.set(ref, sm);
+    }
+    return m;
+  }, [units]);
   const withheldKey = useMemo(
     () => JSON.stringify(decisions.filter((d) => !d.share).map((d) => d.key)),
     [decisions],
@@ -146,27 +214,50 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
     return { ok, withheldUnits, totalUnits, found, bytes };
   }, [received, checkWords]);
 
+  /**
+   * For each context problem, what the clinic will read where the medicine was removed: one quote per
+   * run of adjacent withheld slots that includes one of the medicine's parts, taken from the
+   * verified presentation, with the words removed there.
+   */
   const contexts = useMemo(() => {
-    const out: { title: string; text: string }[] = [];
+    const hidden = new Set(suggs.flatMap((s) => s.hidden.map((d) => d.key)));
+    const out: { ref: string; title: string; text: string; removed: string[] }[] = [];
+    if (!hidden.size) return out;
     for (const r of received ?? []) {
       if (!r.result.ok) continue;
+      const owner = slotOwner.get(r.ref) ?? new Map();
       const vparts = r.result.v.parts;
-      vparts.forEach((p, i) => {
-        if (p.kind !== "withheld") return;
-        // One quotation per run of adjacent withheld slots.
-        const prev = vparts.slice(0, i).reverse().find((x) => !(x.kind === "prose" && !x.text.trim()));
-        if (prev?.kind === "withheld") return;
+      const blank = (x: (typeof vparts)[number]) => x.kind === "prose" && !x.text.trim();
+      for (let i = 0; i < vparts.length; i++) {
+        const p = vparts[i];
+        if (p.kind !== "withheld") continue;
+        const prev = vparts.slice(0, i).reverse().find((x) => !blank(x));
+        if (prev?.kind === "withheld") continue;
+        // The run: this slot and any withheld slots after it, with only blank prose between.
+        let j = i;
+        const run: number[] = [];
+        while (j < vparts.length && (vparts[j].kind === "withheld" || blank(vparts[j]))) {
+          const x = vparts[j];
+          if (x.kind === "withheld") run.push(x.slot);
+          j++;
+        }
+        if (!run.some((slot) => hidden.has(owner.get(slot)?.key ?? ""))) continue;
         const beforeLines = textOf(vparts.slice(0, i)).split("\n");
         let before = beforeLines.pop() ?? "";
         if (before.replace(/^\s*([-*]|\d+\.)\s*/, "").length < 30 && beforeLines.length) before = beforeLines.pop() + "\n" + before;
         before = before.length > 140 ? "…" + before.slice(-140).replace(/^\S*\s/, "") : before;
-        const after = textOf(vparts.slice(i + 1)).split("\n")[0].slice(0, 90);
-        const it = rec?.items.find((x) => x.ref === r.ref);
-        out.push({ title: it?.title ?? r.ref, text: `${before.trim() ? before : ""}⟦withheld⟧${after}` });
-      });
+        const after = textOf(vparts.slice(j)).split("\n")[0].slice(0, 90);
+        const marks = run.map(() => "⟦withheld⟧").join(" ");
+        out.push({
+          ref: r.ref,
+          title: rec?.items.find((x) => x.ref === r.ref)?.title ?? r.ref,
+          text: `${before}${marks}${after}`,
+          removed: run.map((slot) => clean(owner.get(slot)?.text ?? "")).filter(Boolean),
+        });
+      }
     }
     return out;
-  }, [received, rec]);
+  }, [received, rec, suggs, slotOwner]);
 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -175,11 +266,12 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
     requestAnimationFrame(() => document.getElementById("context-loss")?.scrollIntoView({ block: "start" }));
   }, [section, scrolled, contexts.length]);
 
+  const nameOf = (ref: string) => names.get(ref)?.name ?? ref;
   const titleOf = useCallback((ref: string) => rec?.items.find((i) => i.ref === ref)?.title ?? ref, [rec]);
   const effect = useCallback(
-    (p: Policy): Effect => {
+    (p: Policy, base?: Policy): Effect => {
       const next = decide(parts, p);
-      const now = new Map(decisions.map((d) => [d.key, d.share]));
+      const now = new Map((base ? decide(parts, base) : decisions).map((d) => [d.key, d.share]));
       const label = (d: Decision) => `“${partText(d.part).slice(0, 60).replace(/[.;,]$/, "")}” (${titleOf(d.part.item)})`;
       return {
         withheld: next.filter((d) => !d.share).length,
@@ -195,14 +287,14 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
       systemPrompt({
         items: (chosen ?? []).map((ref) => {
           const it = rec!.items.find((i) => i.ref === ref)!;
-          return { key: ref, title: it.title, source: it.source.name, date: fmtDate(it.env.effective), alwaysShared: alwaysShared(it) };
+          return { key: ref, title: it.title, name: names.get(ref)?.name, source: it.source.name, date: fmtDate(it.env.effective), alwaysShared: alwaysShared(it) };
         }),
         decisions,
         partSummary: (d) => partText(d.part).slice(0, 160),
         policy,
         suggestions: suggs,
       }),
-    [chosen, rec, decisions, policy, suggs],
+    [chosen, rec, decisions, policy, suggs, names],
   );
 
   if (!rec || !chosen) return <div className="loading">Loading Linda's record…</div>;
@@ -243,19 +335,14 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
           <div className="presets" role="radiogroup" aria-label="Sharing choice">
             {PRESETS.map((p) => {
               const on = current === p.id;
-              const n = decide(parts, p.policy).filter((d) => !d.share).length;
               return (
                 <label key={p.id} className={`preset${on ? " on" : ""}`} data-preset={p.id}>
                   <input type="radio" name="preset" checked={on} onChange={() => setPolicy(presetPolicy(p.id))} />
                   <span className="preset-body">
                     <span className="preset-title">{p.label}</span>
-                    <span className="preset-line">
-                      <b>The clinic sees:</b> {p.sees}
+                    <span className="preset-line" data-testid="choice-text">
+                      {on ? summary.text : describe(decide(parts, p.policy)).text}
                     </span>
-                    <span className="preset-line">
-                      <b>The clinic does not see:</b> {p.notSees}
-                    </span>
-                    <span className="preset-effect">{n === 0 ? "Holds back nothing in these records." : `Holds back ${n} ${n === 1 ? "part" : "parts"} of these records.`}</span>
                   </span>
                 </label>
               );
@@ -263,50 +350,21 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
             {current === "custom" && (
               <div className="preset on custom" data-preset="custom">
                 <span className="preset-body">
-                  <span className="preset-title">Your own choice</span>
-                  <span className="preset-effect">
-                    Holds back {nWithheld} {nWithheld === 1 ? "part" : "parts"} of these records. Pick a choice above to start over.
+                  <span className="preset-title">Custom</span>
+                  <span className="preset-line" data-testid="choice-text">
+                    {summary.text}
                   </span>
+                  <span className="preset-effect">Pick a choice above to start over.</span>
                 </span>
               </div>
             )}
           </div>
 
           {suggs.map((s) => (
-            <SuggestionBox key={s.id} s={s} onApply={() => setPolicy((p) => applyPatch(p, s.patch))} titleOf={titleOf} />
+            <SuggestionBox key={s.id} s={s} summary={summary} names={names} onApply={() => setPolicy((p) => s.apply(p))} />
           ))}
 
-          <fieldset className="topics">
-            <legend>Topics you keep private</legend>
-            {CATEGORIES.map((c) => {
-              const n = decisions.filter((d) => d.categories.includes(c.id)).length;
-              const on = policy.private.includes(c.id);
-              return (
-                <label key={c.id} className="topic">
-                  <input
-                    type="checkbox"
-                    checked={on}
-                    onChange={() => setPolicy((p) => ({ ...p, private: on ? p.private.filter((x) => x !== c.id) : [...p.private, c.id] }))}
-                  />
-                  <span>
-                    <span className="topic-name">{c.label}</span>
-                    <span className="topic-covers">{c.covers}</span>
-                    <span className="topic-count">{n ? `${n} ${n === 1 ? "part" : "parts"} in these records` : "Nothing in these records"}</span>
-                  </span>
-                </label>
-              );
-            })}
-            <label className="topic meds">
-              <input type="checkbox" checked={policy.shareMedicines} disabled={policy.private.length === 0} onChange={(e) => setPolicy((p) => ({ ...p, shareMedicines: e.target.checked }))} />
-              <span>
-                <span className="topic-name">List all my medicines, even ones for a private topic</span>
-                <span className="topic-covers">
-                  The clinic sees the medicine's name and dose, not the diagnosis or notes about it. Doctors know what most medicines are for, so they may
-                  guess.
-                </span>
-              </span>
-            </label>
-          </fieldset>
+          <Topics summary={summary} policy={policy} decisions={decisions} setPolicy={setPolicy} />
 
           <details className="layer" open={route.query.get("detail") === "1"} data-testid="detail-layer">
             <summary>
@@ -348,12 +406,17 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
 
           <SharingChat
             open={!!route.query.get("chat")}
-            autoplay={route.query.get("chat") === "recorded"}
+            autoplay={route.query.get("chat") === "recorded" ? +(route.query.get("turns") ?? Infinity) : null}
             systemPrompt={prompt}
             knownKeys={new Set(parts.map((p) => `${p.item}#${p.id}`))}
             current={policy}
+            recordsMatch={sameSet(chosen, defaultRefs(rec))}
             effect={effect}
             onApply={setPolicy}
+            onReset={(p) => {
+              setChosen(defaultRefs(rec));
+              setPolicy(p);
+            }}
           />
         </div>
       </section>
@@ -387,35 +450,43 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
             {busy && <span className="muted">Updating…</span>}
           </div>
         )}
-        {contexts.length > 0 && (
-          <div className="caveat" role="note" id="context-loss">
-            <h3>Withholding can change what the rest of a note means</h3>
-            <p>
-              The clinic sees that something is missing, not what it was. The sentences around a withheld part may now read differently. Here is what it
-              will read:
-            </p>
-            {contexts.map((c, i) => (
-              <blockquote key={i}>
-                <span className="small muted" style={{ fontFamily: "var(--sans)" }}>
-                  {c.title}
-                </span>
-                <br />
-                <span style={{ whiteSpace: "pre-line" }}>
-                  {c.text.split("⟦withheld⟧").map((t, j) => (
-                    <span key={j}>
-                      {j > 0 && <span className="withheld">withheld</span>}
-                      {t}
-                    </span>
+        {suggs.length > 0 && (
+          <div className="caveat" role="note" id="context-loss" data-testid="context-loss">
+            {suggs.map((sg) => {
+              const meds = andList(sg.medicines);
+              const evidence = andList([...new Set(sg.evidence.map((d) => d.part.item))].map((r) => nameOf(r)));
+              const quotes = contexts.filter((c) => sg.hidden.some((d) => d.part.item === c.ref));
+              return (
+                <div key={sg.id}>
+                  <h3>
+                    Withholding {meds} changes what the clinic reads about {sg.rule.finding}
+                  </h3>
+                  <p>
+                    {sg.rule.plain} The clinic will see {sg.rule.finding} in {evidence}. It will not see {meds} ({whereText(sg.hidden, (r) => names.get(r) ?? { name: r })}).
+                  </p>
+                  {quotes.length > 0 && <p>Here is what the clinic will read where {meds} was removed:</p>}
+                  {quotes.map((c, i) => (
+                    <blockquote key={i}>
+                      <span className="small muted" style={{ fontFamily: "var(--sans)" }}>
+                        {c.title}
+                      </span>
+                      <br />
+                      <span style={{ whiteSpace: "pre-line" }}>
+                        {c.text.split("⟦withheld⟧").map((t, j) => (
+                          <span key={j}>
+                            {j > 0 && <span className="withheld">withheld</span>}
+                            {t}
+                          </span>
+                        ))}
+                      </span>
+                      <span className="removed">Removed here: {c.removed.map((t) => `“${t}”`).join(" ")}</span>
+                    </blockquote>
                   ))}
-                </span>
-              </blockquote>
-            ))}
-            <p>
-              {contexts.some((c) => /chlorthalidone likely/i.test(c.text)) &&
-                "In the nephrology note, the shared text now suggests chlorthalidone is the only suspected cause of her low sodium. A clinician could change the diuretic and leave the real contributor in place. "}
-              {suggs.length > 0 && "Linda's app finds this case from her choice and the rules, and suggests listing the medicine. "}
-              The always-shared parts (author, role, dates, prose outside spans) can also be revealing on their own. See{" "}
-              <a href={href(["about", "signing"], { s: "context-loss" })}>context loss</a> in the signing spec.
+                </div>
+              );
+            })}
+            <p className="small muted">
+              See <a href={href(["about", "signing"], { s: "context-loss" })}>context loss</a> in the signing spec.
             </p>
           </div>
         )}
@@ -434,24 +505,81 @@ export function SharingView({ index, route }: { index: Index; route: Route }) {
   );
 }
 
-function SuggestionBox({ s, onApply, titleOf }: { s: Suggestion; onApply: () => void; titleOf: (ref: string) => string }) {
-  const cats = [...new Set(s.hidden.flatMap((d) => d.categories))].map((c) => categoryById(c).label.toLowerCase()).join(" and ");
-  const meds = s.medicines.join(" and ");
-  const where = [...new Set(s.evidence.map((d) => titleOf(d.part.item)))];
+function SuggestionBox({ s, summary, names, onApply }: { s: Suggestion; summary: ShareSummary; names: Map<string, ItemName>; onApply: () => void }) {
+  const meds = andList(s.medicines);
+  const cats = new Set(s.hidden.flatMap((d) => d.categories));
+  // What stays private after the fix: the withheld conditions in the medicine's topics.
+  const keep = [...new Set(summary.withheld.filter((m) => m.thing.kind === "condition" && cats.has(m.thing.category!)).map((m) => m.thing.label))];
+  const where = andList([...new Set(s.evidence.map((d) => d.part.item))].map((r) => names.get(r)?.name ?? r));
   return (
     <div className="suggest" role="note" data-testid="suggestion" data-id={s.id}>
       <h3>
-        Keeping {cats} private also hides {meds}
+        Hiding {meds} may mislead the clinic about your {s.rule.finding}
       </h3>
       <p>
-        {s.rule.plain} Your records show {s.rule.finding}, and the clinic will see that (in {where.length === 1 ? "one record" : `${where.length} records`}). If
-        they don't know you take {meds}, they may look for another cause.
+        {s.rule.plain} The clinic will see your {s.rule.finding} in {where}. If they don't know you take {meds}, they may look for another cause.
       </p>
-      <p>You can list {meds} with your other medicines and still keep the diagnosis private.</p>
       <button className="btn small primary" onClick={onApply}>
-        Share {meds}, keep the diagnosis private
+        {keep.length ? `Share ${meds}, keep ${andList(keep)} private` : `Share ${meds}`}
       </button>
     </div>
+  );
+}
+
+/** One row per topic that occurs in these records, showing whether it is private and what the clinic will see. */
+function Topics({
+  summary,
+  policy,
+  decisions,
+  setPolicy,
+}: {
+  summary: ShareSummary;
+  policy: Policy;
+  decisions: Decision[];
+  setPolicy: (f: (p: Policy) => Policy) => void;
+}) {
+  // The medicine switch matters only for medicines in a topic that is private.
+  const medCats = summary.present.filter((c) => policy.private.includes(c) && decisions.some((d) => d.medicineOnly && d.categories.includes(c)));
+  const all = [...summary.withheld, ...summary.shared];
+  const meds = [...new Set(all.filter((m) => m.thing.kind === "medicine" && medCats.includes(m.thing.category!)).map((m) => m.thing.label))];
+  const conds = [...new Set(summary.withheld.filter((m) => m.thing.kind === "condition" && medCats.includes(m.thing.category!)).map((m) => m.thing.label))];
+  const absent = absentText(summary);
+  return (
+    <fieldset className="topics" data-testid="topics">
+      <legend>Private topics</legend>
+      {summary.present.map((c) => {
+        const on = policy.private.includes(c);
+        const st = topicState(summary, c);
+        return (
+          <div key={c} className="topic" data-topic={c} data-private={on ? "1" : "0"}>
+            <label className="topic-toggle">
+              <input
+                type="checkbox"
+                checked={on}
+                onChange={() => setPolicy((p) => ({ ...p, private: on ? p.private.filter((x) => x !== c) : [...p.private, c] }))}
+              />
+              <span className="topic-name">Keep {categoryById(c).about} private</span>
+            </label>
+            {st.hidden.length > 0 && <span className="topic-line held">Kept private: {andList(st.hidden)}.</span>}
+            {st.seen.length > 0 && <span className="topic-line seen">The clinic will see: {andList(st.seen)}.</span>}
+          </div>
+        );
+      })}
+      {meds.length > 0 && (
+        <div className="topic meds">
+          <label className="topic-toggle">
+            <input type="checkbox" checked={policy.shareMedicines} onChange={(e) => setPolicy((p) => ({ ...p, shareMedicines: e.target.checked }))} />
+            <span className="topic-name">List {andList(meds)} with my other medicines</span>
+          </label>
+          <span className="topic-line">
+            {meds.length === 1
+              ? `Listing ${meds[0]} shows the clinic its name and dose${conds.length ? `, not ${andList(conds)}` : ""}. Doctors know what ${meds[0]} is usually taken for, so they may guess why you take it.`
+              : `Listing ${andList(meds)} shows the clinic their names and doses${conds.length ? `, not ${andList(conds)}` : ""}. Doctors know what these medicines are usually taken for, so they may guess why you take them.`}
+          </span>
+        </div>
+      )}
+      {absent && <p className="topics-absent">{absent}</p>}
+    </fieldset>
   );
 }
 

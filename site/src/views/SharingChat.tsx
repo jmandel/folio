@@ -1,9 +1,14 @@
 // A side panel where Linda talks the choice over with her own agent. With an OpenRouter key (kept in
 // this browser's localStorage only) it calls the model directly from the page; without one it
-// replays a recorded conversation. Either way the agent only proposes a policy; she applies it.
+// replays a recorded conversation.
+//
+// The recorded conversation is tied to a state: it starts from RECORDED_START with the default
+// records, playing it sets that state, and the turn where Linda agrees applies the proposed policy.
+// If the settings move away from what the conversation describes, the panel says so. A live
+// conversation always gets the current settings in its prompt, and its proposals apply to them.
 
 import { useEffect, useRef, useState } from "react";
-import { RECORDED, parseReply, type Policy, type RecordedTurn } from "@folio/sharing";
+import { PRESETS, RECORDED, RECORDED_START, parseReply, presetPolicy, type Policy, type RecordedTurn } from "@folio/sharing";
 
 const KEY_STORE = "folio.openrouter.key";
 const MODEL_STORE = "folio.openrouter.model";
@@ -35,43 +40,95 @@ export interface Effect {
   nowWithheld: string[];
 }
 
+interface ChatTurn extends RecordedTurn {
+  /** For live replies: the settings when the question was sent. */
+  basis?: Policy;
+}
+
+const START = presetPolicy(RECORDED_START);
+const START_LABEL = PRESETS.find((p) => p.id === RECORDED_START)!.label;
+
+/** The settings the recorded conversation describes once its first n turns are shown. */
+function recordedState(n: number): Policy {
+  let p = START;
+  for (const t of RECORDED.slice(0, n)) if (t.applies) p = parseReply(t.content).policy ?? p;
+  return p;
+}
+
 export function SharingChat({
   open,
   autoplay,
   systemPrompt,
   knownKeys,
   current,
+  recordsMatch,
   effect,
   onApply,
+  onReset,
 }: {
   open: boolean;
-  autoplay: boolean;
+  /** Show this many recorded turns at once (from a deep link), with the settings they describe. */
+  autoplay: number | null;
   systemPrompt: () => string;
   knownKeys: Set<string>;
   current: Policy;
-  effect: (p: Policy) => Effect;
+  /** True when the records being sent are the ones the recorded conversation was written for. */
+  recordsMatch: boolean;
+  effect: (p: Policy, base?: Policy) => Effect;
   onApply: (p: Policy) => void;
+  /** Go back to the default records and the given settings. */
+  onReset: (p: Policy) => void;
 }) {
   const [key, setKey] = useState(() => load(KEY_STORE));
   const [keyDraft, setKeyDraft] = useState("");
   const [model, setModel] = useState(() => load(MODEL_STORE) || DEFAULT_MODEL);
-  const [live, setLive] = useState<RecordedTurn[]>([]);
+  const [live, setLive] = useState<ChatTurn[]>([]);
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [shown, setShown] = useState(autoplay ? RECORDED.length : 0);
+  const [shown, setShown] = useState(0);
+  const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
-  // Recorded replay: one turn at a time.
+  const jumpTo = (n: number) => {
+    setPlaying(false);
+    setStarted(true);
+    setShown(n);
+    onReset(recordedState(n));
+  };
+  const play = () => {
+    setStarted(true);
+    setShown(0);
+    onReset(START);
+    setPlaying(true);
+  };
+
+  // Deep link: show the first n turns and the settings they describe.
+  useEffect(() => {
+    if (autoplay !== null && !key) jumpTo(Math.min(autoplay, RECORDED.length));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const expected = recordedState(shown);
+  const offTrack = !key && started && (!recordsMatch || !samePolicy(current, expected));
+
+  // Recorded replay: one turn at a time. The turn where Linda agrees applies its policy.
   useEffect(() => {
     if (!playing) return;
-    if (shown >= RECORDED.length) return setPlaying(false);
-    const t = setTimeout(() => setShown((n) => n + 1), shown === 0 ? 200 : RECORDED[shown].role === "assistant" ? 1400 : 900);
+    if (offTrack || shown >= RECORDED.length) return setPlaying(false);
+    const t = setTimeout(
+      () => {
+        const turn = RECORDED[shown];
+        setShown(shown + 1);
+        if (turn.applies) onApply(recordedState(shown + 1));
+      },
+      shown === 0 ? 200 : RECORDED[shown].role === "assistant" ? 1400 : 900,
+    );
     return () => clearTimeout(t);
-  }, [playing, shown]);
+  }, [playing, shown, offTrack, onApply]);
 
-  const turns = key ? live : RECORDED.slice(0, shown);
+  const turns: ChatTurn[] = key ? live : RECORDED.slice(0, shown);
   useEffect(() => {
     if (turns.length) endRef.current?.scrollIntoView({ block: "nearest" });
   }, [turns.length]);
@@ -79,6 +136,7 @@ export function SharingChat({
   async function send() {
     const text = draft.trim();
     if (!text || busy) return;
+    const basis = current;
     const next = [...live, { role: "user" as const, content: text }];
     setLive(next);
     setDraft("");
@@ -88,13 +146,13 @@ export function SharingChat({
       const r = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "X-Title": "FOLIO workbench" },
-        body: JSON.stringify({ model, messages: [{ role: "system", content: systemPrompt() }, ...next] }),
+        body: JSON.stringify({ model, messages: [{ role: "system", content: systemPrompt() }, ...next.map(({ role, content }) => ({ role, content }))] }),
       });
       const body = await r.json().catch(() => null);
       if (!r.ok) throw new Error(body?.error?.message ?? `HTTP ${r.status}`);
       const content = body?.choices?.[0]?.message?.content;
       if (typeof content !== "string" || !content.trim()) throw new Error("the model returned no text");
-      setLive([...next, { role: "assistant", content }]);
+      setLive([...next, { role: "assistant", content, basis }]);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -103,38 +161,55 @@ export function SharingChat({
   }
 
   return (
-    <details className="chat" open={open} data-testid="chat">
+    <details className="chat" open={open} data-testid="chat" data-shown={key ? undefined : shown} data-off-track={offTrack ? "1" : undefined}>
       <summary>
         Talk it over with your assistant <span className="muted">(optional)</span>
       </summary>
       <p className="chat-intro">
-        Say in your own words what you want to keep private. Your assistant explains what the clinic would see and suggests a choice. Nothing changes until you
-        press Apply.
+        Say in your own words what you want to keep private. Your assistant explains what the clinic would see and suggests a change to your current
+        settings. Nothing changes until you press Apply.
       </p>
 
       {!key && (
-        <div className="chat-mode">
-          <span>Showing a recorded conversation.</span>
-          {shown < RECORDED.length ? (
+        <div className="chat-mode" data-testid="chat-state">
+          {offTrack ? (
+            <span className="chat-off">
+              Your settings no longer match this conversation. It is written for the five default records and starts from “{START_LABEL}”.
+            </span>
+          ) : (
+            <span>
+              This example conversation starts from “{START_LABEL}”.{" "}
+              {started ? "The change is applied when Linda agrees to it." : "Playing it switches to that choice, and applies the change when Linda agrees to it."}
+            </span>
+          )}
+          {offTrack || shown >= RECORDED.length ? (
+            <button className="btn small" onClick={play}>
+              Replay from the start
+            </button>
+          ) : (
             <>
-              <button className="btn small" onClick={() => setPlaying((p) => !p)} disabled={false}>
+              <button className="btn small" onClick={() => (started ? setPlaying((p) => !p) : play())}>
                 {playing ? "Pause" : shown ? "Continue" : "Play"}
               </button>
-              <button className="btn small" onClick={() => (setPlaying(false), setShown(RECORDED.length))}>
+              <button className="btn small" onClick={() => jumpTo(RECORDED.length)}>
                 Show all
               </button>
             </>
-          ) : (
-            <button className="btn small" onClick={() => (setShown(0), setPlaying(true))}>
-              Replay
-            </button>
           )}
         </div>
       )}
 
       <div className="chat-log" aria-live="polite">
         {turns.map((t, i) => (
-          <Turn key={i} turn={t} knownKeys={knownKeys} current={current} effect={effect} onApply={onApply} />
+          <Turn
+            key={i}
+            turn={t}
+            knownKeys={knownKeys}
+            current={current}
+            effect={effect}
+            onApply={onApply}
+            recordedBase={key ? undefined : recordedState(i)}
+          />
         ))}
         {busy && <div className="chat-msg assistant muted">Thinking…</div>}
         <div ref={endRef} />
@@ -231,31 +306,42 @@ function Turn({
   current,
   effect,
   onApply,
+  recordedBase,
 }: {
-  turn: RecordedTurn;
+  turn: ChatTurn;
   knownKeys: Set<string>;
   current: Policy;
-  effect: (p: Policy) => Effect;
+  effect: (p: Policy, base?: Policy) => Effect;
   onApply: (p: Policy) => void;
+  /** Recorded turns: the settings the conversation describes just before this turn. */
+  recordedBase?: Policy;
 }) {
   if (turn.role === "user") return <div className="chat-msg user">{turn.content}</div>;
   const r = parseReply(turn.content, knownKeys);
-  const applied = r.policy && samePolicy(r.policy, current);
-  const fx = r.policy ? effect(r.policy) : null;
+  const p = r.policy;
+  // A recorded proposal is shown against the conversation's own state; a live one against the current settings.
+  const fx = p ? effect(p, recordedBase) : null;
+  const stale = !recordedBase && turn.basis && !samePolicy(turn.basis, current);
+  const inUse = p && samePolicy(p, current);
   return (
     <div className="chat-msg assistant">
       <MiniMarkdown text={r.text} />
-      {r.error && <div className="error-box small">The suggested choice could not be used: {r.error}</div>}
-      {r.policy && fx && (
+      {r.error && <div className="error-box small">The suggested change could not be used: {r.error}</div>}
+      {p && fx && (
         <div className="chat-proposal" data-testid="chat-proposal">
           <div>
-            <b>Suggested choice:</b> holds back {fx.withheld} of {fx.total} parts.
-            {fx.nowShared.length > 0 && <> Shares {list(fx.nowShared)}.</>}
-            {fx.nowWithheld.length > 0 && <> Holds back {list(fx.nowWithheld)}.</>}
+            <b>{recordedBase && turn.applies ? "Applied:" : "Suggested change:"}</b>{" "}
+            {fx.nowShared.length + fx.nowWithheld.length === 0 ? "No part changes. " : null}
+            {fx.nowShared.length > 0 && <>Shares {list(fx.nowShared)}. </>}
+            {fx.nowWithheld.length > 0 && <>Holds back {list(fx.nowWithheld)}. </>}
+            {fx.withheld} of {fx.total} parts held back after this change.
+            {stale && <div className="small muted">Your settings changed after this reply. The change shown is from your current settings.</div>}
           </div>
-          <button className="btn small primary" disabled={applied} onClick={() => onApply(r.policy!)}>
-            {applied ? "In use" : "Apply"}
-          </button>
+          {!recordedBase && (
+            <button className="btn small primary" disabled={!!inUse} onClick={() => onApply(p)}>
+              {inUse ? "In use" : "Apply"}
+            </button>
+          )}
         </div>
       )}
     </div>

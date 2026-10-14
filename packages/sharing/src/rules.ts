@@ -232,3 +232,32 @@ export const CONTEXT_RULES: ContextRule[] = [
     plain: "Lithium can harm the kidneys, and its dose depends on how well the kidneys work.",
   },
 ];
+
+/**
+ * Plain names for the conditions and tests a part can be about, so the site can say "your
+ * depression diagnosis" instead of naming a category. Matched against the part's diagnosis codes
+ * (ICD-10-CM prefixes), test codes, and condition words. A sensitive part that matches none is
+ * described by its category ("notes about your mental health").
+ */
+export interface PlainName {
+  category: CategoryId;
+  label: string;
+  icd10?: string[];
+  loinc?: string[];
+  terms?: string[];
+}
+
+export const PLAIN_NAMES: PlainName[] = [
+  { category: "mental_health", label: "your depression diagnosis", icd10: ["F32", "F33", "F34.1"], terms: ["depression", "depressive"] },
+  { category: "mental_health", label: "your anxiety diagnosis", icd10: ["F41"], terms: ["anxiety disorder"] },
+  { category: "mental_health", label: "your bipolar disorder diagnosis", icd10: ["F31"], terms: ["bipolar"] },
+  { category: "mental_health", label: "your schizophrenia diagnosis", icd10: ["F20", "F25"], terms: ["schizophren"] },
+  { category: "mental_health", label: "your PTSD diagnosis", icd10: ["F43.1"], terms: ["PTSD"] },
+  { category: "substance_use", label: "your alcohol use diagnosis", icd10: ["F10"], terms: ["alcohol use disorder", "alcohol abuse"] },
+  { category: "substance_use", label: "your opioid use diagnosis", icd10: ["F11"], terms: ["opioid use disorder"] },
+  { category: "sexual_reproductive", label: "your pregnancy", icd10: ["O", "Z33", "Z34"], terms: ["pregnan"] },
+  { category: "sexual_reproductive", label: "your birth control", icd10: ["Z30"], terms: ["contracept"] },
+  { category: "hiv_sti", label: "your HIV diagnosis", icd10: ["B20", "Z21"], terms: ["HIV"] },
+  { category: "hiv_sti", label: "your HIV and STI tests", loinc: ["56888-1", "75622-1", "20447-9", "43304-5", "43305-2"] },
+  { category: "genetic", label: "your genetic test results", icd10: ["Z15", "Z14"], terms: ["genetic test", "BRCA", "germline"] },
+];
