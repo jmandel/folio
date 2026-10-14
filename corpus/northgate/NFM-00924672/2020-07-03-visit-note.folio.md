@@ -1,0 +1,48 @@
+---
+folio: "0.1"
+id: "01ECBEZJ405BS1073PZFKMRDMX"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00924672"
+effective: "2020-07-03T13:30:00-05:00"
+recorded: "2020-07-03T18:08:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. Feels well, no complaints today.
+
+BP 135/82, pulse 79, wt 179 lb.
+Labs today: eGFR 62, K 4.4, UACR 10 mg/g, LDL 57 mg/dL.
+
+Reviewed history with pt, problem list started.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2020-070344",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-070344",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-070344",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

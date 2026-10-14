@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01GPPJGNH0CETSKXRVH82G71RD"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00665649"
+effective: "2023-01-13T11:20:00-06:00"
+recorded: "2023-01-13T16:03:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. No new complaints.
+BP 138/93, pulse 67, wt 198 lb.
+1/7 labs: eGFR 61, K 4.2, A1c 8.1%.
+A1c above goal. Semaglutide started, 0.5 mg weekly today. Reviewed injection and GI side effects.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-011341",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-011341",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

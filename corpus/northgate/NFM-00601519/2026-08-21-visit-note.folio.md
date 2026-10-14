@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01M0JY85H0S3H6G4VYQBK9XEBT"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00601519"
+effective: "2026-08-21T11:45:00-05:00"
+recorded: "2026-08-21T14:55:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. Feels fine.
+BP 136/82, pulse 79, wt 167 lb.
+Today: eGFR 35, K 4.4, UACR 234 mg/g, A1c 8.1%.
+Insulin glargine dose changed to 14 units at bedtime today (A1c 8.1). CKD now stage 3b by eGFR.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2026-082181",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-082181",
+    "rank": 1,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-082181",
+    "rank": 2,
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
+  }
+}
+```

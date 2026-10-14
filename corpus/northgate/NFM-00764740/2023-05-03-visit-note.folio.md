@@ -1,0 +1,41 @@
+---
+folio: "0.1"
+id: "01GZJ5VE20DEDJZMYE1P8HCEB7"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00764740"
+effective: "2023-05-03T15:15:00-05:00"
+recorded: "2023-05-03T20:26:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+F/u visit. No new concerns today.
+
+BP 121/72, pulse 73, wt 208 lb.
+
+eGFR 62. LDL 119 mg/dL. First K 6.2 but sample hemolyzed, repeat K 4.7 today.
+
+RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-050371",
+    "visit_type": "office",
+    "reason": "Follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-050371",
+    "rank": 1,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

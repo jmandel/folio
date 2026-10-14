@@ -1,0 +1,43 @@
+{
+  "runId": "20261014T011033Z-p072-lakeview-a1",
+  "family": "prose",
+  "backend": "claude",
+  "model": "sonnet",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Write,Read",
+    "--allowedTools=Write,Read",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "sonnet"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage1/runs/prose/20261014T011033Z-p072-lakeview-a1",
+  "startedAt": "2026-10-14T01:10:33.479Z",
+  "endedAt": "2026-10-14T01:10:45.301Z",
+  "durationMs": 11822,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.058218400000000003,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 10137,
+    "cache_read_input_tokens": 13824,
+    "output_tokens": 1628
+  },
+  "numTurns": 2,
+  "sessionId": "5a91875a-b38b-434e-8f72-a42e9b449a5b",
+  "producedFiles": [
+    "notes.md"
+  ]
+}

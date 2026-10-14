@@ -1,0 +1,38 @@
+{
+  "patient": "p017",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "snomed": "44054006",
+        "onset": { "value": "2013", "precision": "year" },
+        "sources": ["B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2020", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.32",
+        "snomed": "700378005",
+        "onset": { "value": "2023-05-10", "precision": "day" },
+        "stage": "3b A2",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-06-23",
+        "sources": ["B", "C"],
+        "basis": ["c_24"]
+      }
+    ],
+    "resolved": []
+  }
+}

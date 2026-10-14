@@ -1,0 +1,41 @@
+{
+  "runId": "codex",
+  "family": "smoke",
+  "backend": "codex",
+  "attempt": 1,
+  "cmd": [
+    "codex",
+    "exec",
+    "--json",
+    "-C",
+    "/home/jmandel/hobby/folio/.worktrees/stage1/runs/smoke/codex",
+    "--skip-git-repo-check",
+    "-s",
+    "workspace-write",
+    "-c",
+    "approval_policy=\"never\"",
+    "--ephemeral",
+    "--disable",
+    "memories",
+    "-"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage1/runs/smoke/codex",
+  "startedAt": "2026-10-14T00:05:05.444Z",
+  "endedAt": "2026-10-14T00:05:19.073Z",
+  "durationMs": 13629,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "usage": {
+    "input_tokens": 34515,
+    "cached_input_tokens": 17024,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+  },
+  "numTurns": 1,
+  "sessionId": "01a137ba-1996-78f3-8a83-d1950cdcb381",
+  "producedFiles": [
+    "hello.txt"
+  ]
+}

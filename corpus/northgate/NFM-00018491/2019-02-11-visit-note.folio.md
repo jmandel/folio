@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01D3FTR2104JHPF88PF9VG1DAF"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00018491"
+effective: "2019-02-11T15:30:00-06:00"
+recorded: "2019-02-11T21:07:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. History reviewed with pt.
+BP 148/85, pulse 71, wt 195 lb.
+Labs 2/9: eGFR 94, K 4.4, LDL 94 mg/dL.
+BP elevated today, will recheck at next visit.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2019-021164",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-021164",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

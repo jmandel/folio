@@ -1,0 +1,47 @@
+{
+  "runId": "claude-haiku-tmux",
+  "family": "smoke",
+  "backend": "claude",
+  "model": "haiku",
+  "attempt": 1,
+  "cmd": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--tools=Read,Write,Edit,Glob,Grep",
+    "--allowedTools=Read,Write,Edit,Glob,Grep",
+    "--safe-mode",
+    "--setting-sources=",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--model",
+    "haiku"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage1/runs/smoke/claude-haiku-tmux",
+  "startedAt": "2026-10-14T00:05:19.074Z",
+  "endedAt": "2026-10-14T00:05:21.813Z",
+  "durationMs": 2739,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "costUsd": 0.00035238,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 826,
+    "cache_read_input_tokens": 12578,
+    "output_tokens": 122
+  },
+  "numTurns": 2,
+  "sessionId": "78856b1f-516d-421b-8a5f-195f1691c29f",
+  "producedFiles": [
+    "hello.txt"
+  ],
+  "tmux": {
+    "session": "folio-agents-smoke",
+    "window": "smoke/claude-haiku-tmux"
+  }
+}

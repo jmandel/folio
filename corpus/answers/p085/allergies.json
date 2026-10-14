@@ -1,0 +1,18 @@
+{
+  "patient": "p085",
+  "view": "allergies",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "substance": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "type": "intolerance",
+      "reaction": "dry cough",
+      "criticality": "low",
+      "onset": { "value": "2023-07", "precision": "month" },
+      "negated_findings": ["angioedema", "lip, tongue or throat swelling"],
+      "sources": ["B", "P"],
+      "basis": ["a_41"]
+    }
+  ]
+}

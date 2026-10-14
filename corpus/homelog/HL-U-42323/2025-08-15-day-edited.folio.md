@@ -1,0 +1,38 @@
+---
+folio: "0.1"
+id: "01K2TTH28GSZQKC5N3CXFPXBY6"
+issuer: "did:web:homelog.example"
+patient: "HL-U-42323"
+effective: "2025-08-15"
+recorded: "2025-08-17T01:32:58Z"
+author:
+  id: "urn:homelog:user:HL-U-42323"
+  name: "Anjali Perez"
+  role: "Patient"
+schema:
+  url: "https://homelog.example/folio/schemas/homelog-v1.d.ts"
+  type: "HomeLogEntry"
+  sha256: "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34"
+supersedes:
+  - "01K2RWF4ER75MNSEZCG86P33G6"
+---
+
+```json payload
+{
+  "glu_1": {
+    "type": "glucose_reading",
+    "measured_at": "2025-08-15T06:05",
+    "value": 142,
+    "unit": "mg/dL",
+    "meal_marker": "fasting",
+    "entry_method": "meter_sync"
+  },
+  "bp_1": {
+    "type": "bp_reading",
+    "measured_at": "2025-08-15T06:15",
+    "systolic_mmhg": 119,
+    "diastolic_mmhg": 77,
+    "entry_method": "typed"
+  }
+}
+```

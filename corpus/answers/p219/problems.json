@@ -1,0 +1,45 @@
+{
+  "patient": "p219",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2007", "precision": "year" },
+        "sources": ["B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2015-01", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Primary osteoarthritis of knee",
+        "icd10": "M17.9",
+        "snomed": "239873007",
+        "onset": { "value": "2019", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2024-03-26", "precision": "day" },
+        "stage": "3a A3",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-07-09",
+        "sources": ["B", "C"],
+        "basis": ["c_58"]
+      }
+    ],
+    "resolved": []
+  }
+}

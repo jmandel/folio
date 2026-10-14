@@ -1,0 +1,11 @@
+{
+  "name": "@folio/agent-runner",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "bun test test/unit.test.ts",
+    "smoke": "FOLIO_SMOKE=1 bun test test/smoke.test.ts"
+  }
+}

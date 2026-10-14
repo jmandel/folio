@@ -1,0 +1,45 @@
+---
+folio: "0.1"
+id: "01E6YRCZC0W2NMSGY3F3WX0X7D"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00673395"
+effective: "2020-04-27T13:30:00-05:00"
+recorded: "2020-04-27T16:24:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:jpatel"
+  name: "Jaya Patel, NP"
+  role: "Nurse practitioner"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. BP 137/88, pulse 76, wt 153 lb.
+eGFR 47, K 4.7, A1c 7.8% today.
+CKD 3a added to problem list, discussed with pt.
+Continue current plan. RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2020-042773",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-042773",
+    "rank": 1,
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-042773",
+    "rank": 2,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  }
+}
+```

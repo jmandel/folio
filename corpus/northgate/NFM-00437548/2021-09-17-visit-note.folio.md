@@ -1,0 +1,42 @@
+---
+folio: "0.1"
+id: "01FFV1MFC00RM2HVNNBRVVFDXG"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00437548"
+effective: "2021-09-17T13:00:00-05:00"
+recorded: "2021-09-17T18:32:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. No new complaints, feels well.
+
+BP 120/70, pulse 85, wt 251 lb.
+eGFR 84, A1c 7.8% today.
+
+Discussed diet and activity. Will recheck A1c next visit.
+
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-091767",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-091767",
+    "rank": 1,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

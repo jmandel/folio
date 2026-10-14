@@ -1,0 +1,48 @@
+---
+folio: "0.1"
+id: "01EBPCD8D0WBN4ND3Z231SRXYD"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00392719"
+effective: "2020-06-25T10:40:00-05:00"
+recorded: "2020-06-25T13:39:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. BP 129/76, pulse 74, wt 212 lb.
+
+Labs 6/21: eGFR 43, K 4.7, UACR 161 mg/g, A1c 8.6%.
+
+Dulaglutide started today, 0.5 mg weekly (A1c 8.6). Injection technique reviewed.
+
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2020-062545",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-062545",
+    "rank": 1,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-062545",
+    "rank": 2,
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
+  }
+}
+```

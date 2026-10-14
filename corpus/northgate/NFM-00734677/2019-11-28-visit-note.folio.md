@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01DTT3PQK0X5JYR1JW6TMXM97A"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00734677"
+effective: "2019-11-28T11:30:00-06:00"
+recorded: "2019-11-28T16:57:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establish care. History reviewed with pt.
+BP 141/87, repeat 138/83. Pulse 79, wt 156 lb.
+Labs today: eGFR 56, K 4.7, A1c 7.1%, LDL 53.
+Reviewed results with pt. Records requested from prior office.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2019-112859",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-112859",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-112859",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

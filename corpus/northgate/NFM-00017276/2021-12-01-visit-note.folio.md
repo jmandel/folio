@@ -1,0 +1,60 @@
+---
+folio: "0.1"
+id: "01FNVVA9909GZFQTC8QV9YEXYA"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00017276"
+effective: "2021-12-01T08:20:00-06:00"
+recorded: "2021-12-01T14:35:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM2 f/u. No new symptoms.
+BP 124/76, pulse 80, wt 221 lb.
+Labs today: eGFR 38, K 4.7, UACR 288 mg/g, A1c 7.4%.
+Kidney numbers drifting slowly, will keep following. No changes today.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-120173",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-120173",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-120173",
+    "rank": 2,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-120173",
+    "rank": 3,
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-120173",
+    "rank": 4,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

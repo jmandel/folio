@@ -1,0 +1,53 @@
+{
+  "patient": "p208",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2019", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2013", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Hypothyroidism",
+        "icd10": "E03.9",
+        "snomed": "40930008",
+        "onset": { "value": "2015", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_3"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Acute kidney injury",
+        "icd10": "N17.9",
+        "snomed": "14669001",
+        "onset": { "value": "2024-07-11", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_33"],
+        "resolved_on": "2024-07-13"
+      },
+      {
+        "condition": "Hyperkalemia",
+        "icd10": "E87.5",
+        "snomed": "14140009",
+        "onset": { "value": "2024-07-11", "precision": "day" },
+        "sources": ["A", "B"],
+        "basis": ["c_34"],
+        "resolved_on": "2024-07-13"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01FAGZSNZ0JEE68RAMCSW11F0T"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00575599"
+effective: "2021-07-13T14:20:00-05:00"
+recorded: "2021-07-13T17:29:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+BP f/u. BP 134/80, pulse 63, wt 163 lb.
+Lisinopril: stopped today (dry cough). Lisinopril intolerance: dry cough.
+Losartan: started 50 mg daily today (ACE inhibitor cough).
+eGFR 80, K 4.3, LDL 63 mg/dL today.
+Recheck BP and labs at next visit.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-071327",
+    "visit_type": "office",
+    "reason": "BP follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-071327",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-071327",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

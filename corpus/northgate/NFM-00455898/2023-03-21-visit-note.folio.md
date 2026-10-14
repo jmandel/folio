@@ -1,0 +1,53 @@
+---
+folio: "0.1"
+id: "01GW2VPSB0DDB65G3K5970E0MP"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00455898"
+effective: "2023-03-21T12:10:00-05:00"
+recorded: "2023-03-21T14:53:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. BP 127/78, pulse 74, wt 228 lb.
+Labs 3/18: eGFR 49, K 4.8, A1c 7.7%, LDL 87 mg/dL.
+Dapagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit).
+Reviewed history with pt, no new complaints.
+RTC for recheck of labs.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-032174",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-032174",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-032174",
+    "rank": 2,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-032174",
+    "rank": 3,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

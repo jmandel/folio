@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01HCBJY1W0N2S9SY8R252ZPEKQ"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00719869"
+effective: "2023-10-09T14:20:00-05:00"
+recorded: "2023-10-09T20:24:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM2 f/u. No complaints.
+BP 135/87, pulse 76, wt 160 lb.
+Labs 10/5: eGFR 52, K 4.8, A1c 7.3%, LDL 69.
+Stable overall. Continue current plan.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-100958",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-100958",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-100958",
+    "rank": 2,
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
+  }
+}
+```

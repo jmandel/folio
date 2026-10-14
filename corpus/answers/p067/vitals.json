@@ -1,0 +1,70 @@
+{
+  "patient": "p067",
+  "view": "vitals",
+  "as_of": "2026-10-13",
+  "key": {
+    "clinic": [
+      {
+        "local_time": "2024-11-14T12:45",
+        "sources": ["B"],
+        "basis": ["v_9"],
+        "systolic": 136,
+        "diastolic": 82,
+        "pulse": 80,
+        "weight_kg": 87.3
+      },
+      {
+        "local_time": "2025-08-11T15:02",
+        "sources": ["B"],
+        "basis": ["v_24"],
+        "systolic": 150,
+        "diastolic": 95,
+        "pulse": 62,
+        "weight_kg": 87.2
+      },
+      {
+        "local_time": "2026-03-16T10:04",
+        "sources": ["B"],
+        "basis": ["v_30"],
+        "systolic": 148,
+        "diastolic": 87,
+        "repeat": { "systolic": 143, "diastolic": 84 },
+        "pulse": 77,
+        "weight_kg": 88.3
+      }
+    ],
+    "hospital": [],
+    "home_bp": [
+      { "local_time": "2026-06-15T06:34", "sources": ["P"], "basis": ["h_42"], "systolic": 138, "diastolic": 82, "pulse": 80 },
+      { "local_time": "2026-06-16T06:24", "sources": ["P"], "basis": ["h_44"], "systolic": 141, "diastolic": 82, "pulse": 63 },
+      { "local_time": "2026-06-22T06:08", "sources": ["P"], "basis": ["h_46"], "systolic": 149, "diastolic": 93, "pulse": 64 },
+      { "local_time": "2026-07-04T08:34", "sources": ["P"], "basis": ["h_48"], "systolic": 141, "diastolic": 87, "pulse": 68 },
+      { "local_time": "2026-07-07T08:54", "sources": ["P"], "basis": ["h_50"], "systolic": 147, "diastolic": 84, "pulse": 73 },
+      { "local_time": "2026-07-09T07:08", "sources": ["P"], "basis": ["h_52"], "systolic": 145, "diastolic": 90, "pulse": 72 },
+      { "local_time": "2026-07-16T08:57", "sources": ["P"], "basis": ["h_54"], "systolic": 144, "diastolic": 86, "pulse": 77 },
+      { "local_time": "2026-07-27T08:55", "sources": ["P"], "basis": ["h_56"], "systolic": 148, "diastolic": 93, "pulse": 61 },
+      { "local_time": "2026-08-12T07:07", "sources": ["P"], "basis": ["h_58"], "systolic": 138, "diastolic": 85, "pulse": 65 },
+      { "local_time": "2026-09-02T06:55", "sources": ["P"], "basis": ["h_60"], "systolic": 144, "diastolic": 83, "pulse": 71 },
+      { "local_time": "2026-09-07T06:29", "sources": ["P"], "basis": ["h_62"], "systolic": 138, "diastolic": 77, "pulse": 69 },
+      { "local_time": "2026-09-08T07:44", "sources": ["P"], "basis": ["h_64"], "systolic": 131, "diastolic": 82, "pulse": 76 },
+      { "local_time": "2026-09-15T07:29", "sources": ["P"], "basis": ["h_66"], "systolic": 137, "diastolic": 82, "pulse": 72 },
+      { "local_time": "2026-09-17T06:19", "sources": ["P"], "basis": ["h_68"], "systolic": 143, "diastolic": 91, "pulse": 66 }
+    ],
+    "home_glucose": [
+      { "local_time": "2026-06-15T06:24", "sources": ["P"], "basis": ["h_43"], "glucose_mg_dl": 121, "meal": "fasting" },
+      { "local_time": "2026-06-16T06:14", "sources": ["P"], "basis": ["h_45"], "glucose_mg_dl": 147, "meal": "fasting" },
+      { "local_time": "2026-06-22T06:00", "sources": ["P"], "basis": ["h_47"], "glucose_mg_dl": 193, "meal": "fasting" },
+      { "local_time": "2026-07-04T08:24", "sources": ["P"], "basis": ["h_49"], "glucose_mg_dl": 166, "meal": "fasting" },
+      { "local_time": "2026-07-07T08:44", "sources": ["P"], "basis": ["h_51"], "glucose_mg_dl": 163, "meal": "fasting" },
+      { "local_time": "2026-07-09T07:00", "sources": ["P"], "basis": ["h_53"], "glucose_mg_dl": 112, "meal": "fasting" },
+      { "local_time": "2026-07-16T08:47", "sources": ["P"], "basis": ["h_55"], "glucose_mg_dl": 137, "meal": "fasting" },
+      { "local_time": "2026-07-27T08:45", "sources": ["P"], "basis": ["h_57"], "glucose_mg_dl": 134, "meal": "fasting" },
+      { "local_time": "2026-08-12T07:00", "sources": ["P"], "basis": ["h_59"], "glucose_mg_dl": 153, "meal": "fasting" },
+      { "local_time": "2026-09-02T06:45", "sources": ["P"], "basis": ["h_61"], "glucose_mg_dl": 134, "meal": "fasting" },
+      { "local_time": "2026-09-07T06:19", "sources": ["P"], "basis": ["h_63"], "glucose_mg_dl": 159, "meal": "fasting" },
+      { "local_time": "2026-09-08T07:34", "sources": ["P"], "basis": ["h_65"], "glucose_mg_dl": 166, "meal": "fasting" },
+      { "local_time": "2026-09-15T07:19", "sources": ["P"], "basis": ["h_67"], "glucose_mg_dl": 156, "meal": "fasting" },
+      { "local_time": "2026-09-17T06:09", "sources": ["P"], "basis": ["h_69"], "glucose_mg_dl": 104, "meal": "fasting" }
+    ]
+  }
+}

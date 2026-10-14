@@ -6,7 +6,8 @@
 //
 // Flags:
 //   --items <pattern>    item directory per source; `{source}` is replaced by the source name
-//                        (default 'sources/{source}/examples')
+//                        (default 'build/signed/{source}' when `bun run sign` has built it, else
+//                        'sources/{source}/examples')
 //   --sources a,b,c      which sources (default riverside,northgate,lakeview,homelog)
 //   --base-port <n>      first port; sources get consecutive ports in the order given (default 8101)
 //   --host <h>           bind address (default 127.0.0.1)
@@ -14,6 +15,7 @@
 // Keys and schemas always come from sources/<source>/keys and sources/<source>/schema.
 // On start it prints the host map a client needs (DID host → local base URL).
 
+import { existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { DEFAULT_SOURCES, startNode } from "./index.ts";
 import { parseArgs } from "node:util";
@@ -21,7 +23,7 @@ import { parseArgs } from "node:util";
 const ROOT = resolve(import.meta.dir, "../../..");
 const { values } = parseArgs({
   options: {
-    items: { type: "string", default: "sources/{source}/examples" },
+    items: { type: "string", default: existsSync(join(ROOT, "build", "signed")) ? "build/signed/{source}" : "sources/{source}/examples" },
     sources: { type: "string", default: DEFAULT_SOURCES.join(",") },
     "base-port": { type: "string", default: "8101" },
     host: { type: "string", default: "127.0.0.1" },

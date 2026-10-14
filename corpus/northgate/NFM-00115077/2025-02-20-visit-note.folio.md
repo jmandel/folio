@@ -1,0 +1,54 @@
+---
+folio: "0.1"
+id: "01JMK5NKE0TT89YSAH1M15D0SG"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00115077"
+effective: "2025-02-20T15:15:00-06:00"
+recorded: "2025-02-20T20:34:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care f/u. BP 149/91, repeat 146/88, pulse 85, wt 235 lb.
+Labs 2/15: eGFR 76, K 4.4, UACR 41 mg/g, A1c 7.7%, LDL 56 mg/dL.
+BP above goal: amlodipine started 5 mg daily today.
+Pt to watch for ankle swelling.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-022011",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-022011",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-022011",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-022011",
+    "rank": 3,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
+  }
+}
+```

@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01FCS4PJC0YB4J9PYMK0Z2NVA7"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00356614"
+effective: "2021-08-10T13:40:00-05:00"
+recorded: "2021-08-10T18:00:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. Feels well.
+BP 144/87, pulse 88, wt 235 lb.
+eGFR 61, K 4.4, A1c 7.8% today.
+BP still above goal, will recheck at next visit.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-081085",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081085",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081085",
+    "rank": 2,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

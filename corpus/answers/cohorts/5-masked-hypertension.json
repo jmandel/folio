@@ -1,0 +1,304 @@
+{
+ "id": "5-masked-hypertension",
+ "title": "Masked hypertension",
+ "traps": [
+  "T10",
+  "T14"
+ ],
+ "definition": "At least 4 home BP readings in the 30 days before the evaluation date with mean systolic >= 135 (typed duplicates excluded, corrected values used); the last two office systolic readings (primary care or nephrology clinic; hospital readings excluded) both < 130.",
+ "members": [
+  {
+   "patient": "p009",
+   "basis": [
+    "h_202",
+    "h_203",
+    "h_204",
+    "h_205",
+    "h_206",
+    "h_207",
+    "h_208",
+    "h_209",
+    "h_210",
+    "v_40",
+    "v_48"
+   ],
+   "note": "home mean 142 (9 readings)"
+  },
+  {
+   "patient": "p030",
+   "basis": [
+    "h_100",
+    "h_101",
+    "h_102",
+    "h_103",
+    "h_104",
+    "h_105",
+    "h_106",
+    "h_107",
+    "h_108",
+    "h_109",
+    "h_110",
+    "v_41",
+    "v_47"
+   ],
+   "note": "home mean 141 (11 readings)"
+  },
+  {
+   "patient": "p071",
+   "basis": [
+    "h_992",
+    "h_994",
+    "h_996",
+    "h_998",
+    "h_1000",
+    "h_1002",
+    "h_1004",
+    "h_1006",
+    "h_1008",
+    "h_1010",
+    "v_33",
+    "v_39"
+   ],
+   "note": "home mean 144 (10 readings)"
+  },
+  {
+   "patient": "p096",
+   "basis": [
+    "h_129",
+    "h_130",
+    "h_131",
+    "h_132",
+    "h_133",
+    "h_134",
+    "h_135",
+    "h_136",
+    "h_137",
+    "h_138",
+    "h_139",
+    "h_140",
+    "v_54",
+    "v_60"
+   ],
+   "note": "home mean 142 (12 readings)"
+  },
+  {
+   "patient": "p141",
+   "basis": [
+    "h_452",
+    "h_454",
+    "h_456",
+    "h_458",
+    "h_460",
+    "h_462",
+    "h_464",
+    "h_466",
+    "h_468",
+    "v_188",
+    "v_194"
+   ],
+   "note": "home mean 142 (9 readings)"
+  },
+  {
+   "patient": "p142",
+   "basis": [
+    "h_800",
+    "h_802",
+    "h_804",
+    "h_806",
+    "h_808",
+    "h_810",
+    "h_812",
+    "h_814",
+    "v_70",
+    "v_77"
+   ],
+   "note": "home mean 141 (8 readings)"
+  },
+  {
+   "patient": "p144",
+   "basis": [
+    "h_159",
+    "h_160",
+    "h_161",
+    "h_162",
+    "h_163",
+    "h_164",
+    "h_165",
+    "h_166",
+    "h_167",
+    "h_168",
+    "h_169",
+    "h_170",
+    "h_171",
+    "v_38",
+    "v_79"
+   ],
+   "note": "home mean 144 (13 readings)"
+  },
+  {
+   "patient": "p164",
+   "basis": [
+    "h_413",
+    "h_415",
+    "h_417",
+    "h_419",
+    "h_421",
+    "h_423",
+    "h_425",
+    "h_427",
+    "h_429",
+    "h_431",
+    "h_433",
+    "h_435",
+    "h_437",
+    "h_439",
+    "v_79",
+    "v_94"
+   ],
+   "note": "home mean 143 (14 readings)"
+  },
+  {
+   "patient": "p184",
+   "basis": [
+    "h_541",
+    "h_544",
+    "h_547",
+    "h_550",
+    "h_553",
+    "h_556",
+    "h_559",
+    "h_562",
+    "h_565",
+    "h_568",
+    "h_571",
+    "v_119",
+    "v_125"
+   ],
+   "note": "home mean 141 (11 readings)"
+  },
+  {
+   "patient": "p208",
+   "basis": [
+    "h_126",
+    "h_127",
+    "h_128",
+    "h_129",
+    "h_130",
+    "h_131",
+    "h_132",
+    "h_133",
+    "h_134",
+    "h_135",
+    "h_136",
+    "h_137",
+    "h_138",
+    "h_139",
+    "h_140",
+    "v_17",
+    "v_19"
+   ],
+   "note": "home mean 145 (15 readings)"
+  },
+  {
+   "patient": "p215",
+   "basis": [
+    "h_518",
+    "h_520",
+    "h_522",
+    "h_524",
+    "h_526",
+    "h_528",
+    "h_530",
+    "h_532",
+    "h_534",
+    "h_536",
+    "h_538",
+    "v_168",
+    "v_185"
+   ],
+   "note": "home mean 141 (11 readings)"
+  },
+  {
+   "patient": "p224",
+   "basis": [
+    "h_466",
+    "h_468",
+    "h_470",
+    "h_472",
+    "h_474",
+    "h_476",
+    "h_478",
+    "h_480",
+    "h_482",
+    "h_484",
+    "h_486",
+    "v_91",
+    "v_99"
+   ],
+   "note": "home mean 143 (11 readings)"
+  },
+  {
+   "patient": "p225",
+   "basis": [
+    "h_778",
+    "h_780",
+    "h_782",
+    "h_784",
+    "h_786",
+    "h_788",
+    "h_790",
+    "h_792",
+    "h_794",
+    "h_796",
+    "h_798",
+    "h_800",
+    "h_802",
+    "h_804",
+    "h_806",
+    "h_808",
+    "v_58",
+    "v_65"
+   ],
+   "note": "home mean 141 (16 readings)"
+  },
+  {
+   "patient": "p257",
+   "basis": [
+    "h_310",
+    "h_313",
+    "h_316",
+    "h_319",
+    "h_322",
+    "h_325",
+    "h_328",
+    "h_331",
+    "h_334",
+    "h_337",
+    "h_340",
+    "v_139",
+    "v_145"
+   ],
+   "note": "home mean 142 (11 readings)"
+  },
+  {
+   "patient": "s04",
+   "basis": [
+    "h_67",
+    "h_68",
+    "h_69",
+    "h_70",
+    "h_72",
+    "h_74",
+    "h_75",
+    "h_76",
+    "h_77",
+    "h_78",
+    "h_79",
+    "v_25",
+    "v_27"
+   ],
+   "note": "home mean 143 (11 readings)"
+  }
+ ],
+ "as_of": "2026-10-13"
+}

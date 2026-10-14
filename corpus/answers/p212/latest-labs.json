@@ -1,0 +1,152 @@
+{
+  "patient": "p212",
+  "view": "latest-labs",
+  "as_of": "2026-10-13",
+  "key": {
+    "creatinine": {
+      "analyte": "creatinine",
+      "value": 1.84,
+      "unit": "mg/dL",
+      "loinc": "2160-0",
+      "collected": "2026-08-17T07:26:00-05:00",
+      "collected_local_date": "2026-08-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_202"]
+    },
+    "egfr": {
+      "analyte": "egfr",
+      "value": 34,
+      "unit": "mL/min/1.73m2",
+      "loinc": "98979-8",
+      "collected": "2026-08-17T07:26:00-05:00",
+      "collected_local_date": "2026-08-17",
+      "setting": "outpatient",
+      "equation": "ckd-epi-2021",
+      "reported": [{ "equation": "ckd-epi-2021", "value": 34 }],
+      "sources": ["B", "C"],
+      "basis": ["l_202_egfr"]
+    },
+    "potassium": {
+      "analyte": "potassium",
+      "value": 4.4,
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2026-08-17T07:26:00-05:00",
+      "collected_local_date": "2026-08-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_204"]
+    },
+    "a1c": {
+      "analyte": "a1c",
+      "value": 7.2,
+      "unit": "%",
+      "loinc": "4548-4",
+      "collected": "2026-03-03T07:21:00-06:00",
+      "collected_local_date": "2026-03-03",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_164"]
+    },
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 250,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-05-12T07:43:00-05:00",
+      "collected_local_date": "2025-05-12",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_148"]
+    },
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 256,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-05-12T07:43:00-05:00",
+      "collected_local_date": "2025-05-12",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_149"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 55,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-05-12T07:43:00-05:00",
+      "collected_local_date": "2025-05-12",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_150"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 144,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-05-12T07:43:00-05:00",
+      "collected_local_date": "2025-05-12",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_151"]
+    },
+    "uacr": {
+      "analyte": "uacr",
+      "value": 49,
+      "unit": "mg/g",
+      "loinc": "9318-7",
+      "collected": "2026-08-17T07:26:00-05:00",
+      "collected_local_date": "2026-08-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_205"]
+    },
+    "wbc": {
+      "analyte": "wbc",
+      "value": 6.8,
+      "unit": "10*3/uL",
+      "loinc": "6690-2",
+      "collected": "2024-06-17T07:44:00-05:00",
+      "collected_local_date": "2024-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_128"]
+    },
+    "hemoglobin": {
+      "analyte": "hemoglobin",
+      "value": 12.7,
+      "unit": "g/dL",
+      "loinc": "718-7",
+      "collected": "2024-06-17T07:44:00-05:00",
+      "collected_local_date": "2024-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_129"]
+    },
+    "platelets": {
+      "analyte": "platelets",
+      "value": 215,
+      "unit": "10*3/uL",
+      "loinc": "777-3",
+      "collected": "2024-06-17T07:44:00-05:00",
+      "collected_local_date": "2024-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_130"]
+    },
+    "sodium": {
+      "analyte": "sodium",
+      "value": 141,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
+      "collected": "2026-08-17T07:26:00-05:00",
+      "collected_local_date": "2026-08-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_203"]
+    }
+  }
+}

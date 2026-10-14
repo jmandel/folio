@@ -1,0 +1,53 @@
+---
+folio: "0.1"
+id: "01JSZ5MXN06R1J5P7VBMM6QN96"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00993518"
+effective: "2025-04-28T12:30:00-05:00"
+recorded: "2025-04-28T16:43:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Annual exam. Feels well.
+BP 127/85, pulse 70, wt 201 lb.
+Labs 4/22: eGFR 57, K 4.2, UACR 23 mg/g, A1c 6.8%, LDL 81 mg/dL.
+BP improved. eGFR trending down, will follow.
+RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-042881",
+    "visit_type": "office",
+    "reason": "Annual exam"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-042881",
+    "rank": 1,
+    "icd10cm": "Z00.00",
+    "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-042881",
+    "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-042881",
+    "rank": 3,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

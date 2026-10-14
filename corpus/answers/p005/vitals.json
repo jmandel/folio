@@ -1,0 +1,61 @@
+{
+  "patient": "p005",
+  "view": "vitals",
+  "as_of": "2026-10-13",
+  "key": {
+    "clinic": [
+      {
+        "local_time": "2024-04-26T13:00",
+        "sources": ["B"],
+        "basis": ["v_7"],
+        "systolic": 131,
+        "diastolic": 76,
+        "pulse": 75,
+        "weight_kg": 86.3
+      },
+      {
+        "local_time": "2025-01-13T09:52",
+        "sources": ["B"],
+        "basis": ["v_13"],
+        "systolic": 134,
+        "diastolic": 87,
+        "pulse": 87,
+        "weight_kg": 86.9
+      },
+      {
+        "local_time": "2025-11-28T09:51",
+        "sources": ["B"],
+        "basis": ["v_27"],
+        "systolic": 141,
+        "diastolic": 83,
+        "pulse": 82,
+        "weight_kg": 87.2
+      },
+      {
+        "local_time": "2026-07-02T14:37",
+        "sources": ["B"],
+        "basis": ["v_36"],
+        "systolic": 123,
+        "diastolic": 72,
+        "pulse": 75,
+        "weight_kg": 87
+      }
+    ],
+    "hospital": [],
+    "home_bp": [
+      { "local_time": "2026-07-02T07:12", "sources": ["P"], "basis": ["h_44"], "systolic": 122, "diastolic": 72, "pulse": 66 },
+      { "local_time": "2026-07-14T08:24", "sources": ["P"], "basis": ["h_46"], "systolic": 130, "diastolic": 78, "pulse": 80 },
+      { "local_time": "2026-07-21T08:36", "sources": ["P"], "basis": ["h_47"], "systolic": 127, "diastolic": 77, "pulse": 66 },
+      { "local_time": "2026-08-02T08:46", "sources": ["P"], "basis": ["h_48"], "systolic": 134, "diastolic": 78, "pulse": 78 },
+      { "local_time": "2026-08-08T07:23", "sources": ["P"], "basis": ["h_49"], "systolic": 136, "diastolic": 80, "pulse": 83 },
+      { "local_time": "2026-08-09T07:51", "sources": ["P"], "basis": ["h_50"], "systolic": 141, "diastolic": 86, "pulse": 72 },
+      { "local_time": "2026-08-12T07:35", "sources": ["P"], "basis": ["h_51"], "systolic": 132, "diastolic": 78, "pulse": 86 },
+      { "local_time": "2026-08-25T08:23", "sources": ["P"], "basis": ["h_52"], "systolic": 133, "diastolic": 83, "pulse": 80 },
+      { "local_time": "2026-08-27T07:19", "sources": ["P"], "basis": ["h_53"], "systolic": 143, "diastolic": 84, "pulse": 77 },
+      { "local_time": "2026-08-30T07:31", "sources": ["P"], "basis": ["h_55"], "systolic": 135, "diastolic": 83, "pulse": 69 },
+      { "local_time": "2026-09-06T06:22", "sources": ["P"], "basis": ["h_56"], "systolic": 128, "diastolic": 74, "pulse": 75 },
+      { "local_time": "2026-09-09T08:08", "sources": ["P"], "basis": ["h_57"], "systolic": 140, "diastolic": 79, "pulse": 61 }
+    ],
+    "home_glucose": []
+  }
+}

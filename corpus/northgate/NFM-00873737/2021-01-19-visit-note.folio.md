@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01EWDSBN10ZCPGGNQH3ZFQZH6E"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00873737"
+effective: "2021-01-19T09:20:00-06:00"
+recorded: "2021-01-19T10:59:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. No new complaints.
+BP 143/85, pulse 77, wt 192 lb.
+Labs today: eGFR 65, K 4.4, A1c 7.9%.
+BP and A1c reviewed with pt, diet and exercise discussed.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-011937",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-011937",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

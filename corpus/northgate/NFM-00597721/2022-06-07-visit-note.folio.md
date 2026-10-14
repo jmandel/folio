@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01G4ZNCXM0JAZMT1B9EP739133"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00597721"
+effective: "2022-06-07T09:10:00-05:00"
+recorded: "2022-06-07T13:04:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Annual exam. Doing well, no new concerns.
+BP 135/87, pulse 86, wt 271 lb.
+Labs 6/5: eGFR 98, K 4.7.
+Counseled on weight and diet.
+RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2022-060756",
+    "visit_type": "office",
+    "reason": "Annual exam"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-060756",
+    "rank": 1,
+    "icd10cm": "Z00.00",
+    "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-060756",
+    "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

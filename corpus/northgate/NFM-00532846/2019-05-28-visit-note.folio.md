@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01DBZZ48V0QAEV6XTDBMX6M3Q8"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00532846"
+effective: "2019-05-28T12:40:00-05:00"
+recorded: "2019-05-28T14:37:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care.
+BP 115/71, pulse 70, wt 206 lb.
+Labs today: eGFR 69, K 4.9, UACR 8 mg/g, A1c 8.5%, LDL 123 mg/dL.
+A1c above goal, so metformin goes to 1000 mg BID starting today.
+Reviewed history with pt. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2019-052836",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-052836",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-052836",
+    "rank": 2,
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
+  }
+}
+```

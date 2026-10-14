@@ -1,0 +1,28 @@
+{
+  "patient": "p016",
+  "view": "allergies",
+  "as_of": "2026-10-13",
+  "key": [
+    {
+      "substance": "lisinopril",
+      "rxnorm_ingredient": "29046",
+      "type": "intolerance",
+      "reaction": "dry cough",
+      "criticality": "low",
+      "onset": { "value": "2021-07", "precision": "month" },
+      "negated_findings": ["angioedema", "lip, tongue or throat swelling"],
+      "sources": ["A", "B", "P"],
+      "basis": ["a_45"]
+    },
+    {
+      "substance": "empagliflozin",
+      "rxnorm_ingredient": "1545653",
+      "type": "adverse-reaction",
+      "reaction": "euglycemic diabetic ketoacidosis",
+      "criticality": "high",
+      "onset": { "value": "2025-04-28", "precision": "day" },
+      "sources": ["A", "B"],
+      "basis": ["a_179"]
+    }
+  ]
+}

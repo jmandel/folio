@@ -1,0 +1,38 @@
+---
+folio: "0.1"
+id: "01J1R3WXF0RV2F4QMBZ4GEDEV6"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00129076"
+effective: "2024-07-01T14:40:00-05:00"
+recorded: "2024-07-01T16:41:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+BP f/u. BP 164/101, repeat 159/100, pulse 80, wt 191 lb.
+eGFR 70 today, K 4.
+BP still running high, discussed with pt.
+Home BP log encouraged. Recheck at next visit.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2024-070196",
+    "visit_type": "office",
+    "reason": "BP follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-070196",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

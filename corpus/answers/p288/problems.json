@@ -1,0 +1,54 @@
+{
+  "patient": "p288",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["B", "C"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2018", "precision": "year" },
+        "sources": ["B"],
+        "basis": ["c_2"]
+      },
+      {
+        "condition": "Obesity",
+        "icd10": "E66.9",
+        "snomed": "414916001",
+        "onset": { "value": "2005-07", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_3"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2018-12", "precision": "month" },
+        "sensitive": "behavioral-health",
+        "sources": ["B"],
+        "basis": ["c_4"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.32",
+        "snomed": "700379002",
+        "onset": { "value": "2019-11-03", "precision": "day" },
+        "stage": "3b A2",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-07-30",
+        "sources": ["B", "C"],
+        "basis": ["c_28"]
+      }
+    ],
+    "resolved": []
+  }
+}

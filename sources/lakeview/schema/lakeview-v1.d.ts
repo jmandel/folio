@@ -262,9 +262,10 @@ export interface LabResult {
   REPLACED_BY_RESULT_ID?: string;
 
   /**
-   * For calculated results (eGFR): the RESULT_ID of the creatinine row it was calculated from (same
-   * item). Lakeview calculates eGFR from creatinine, the patient's age and sex on the collection date,
-   * and, for the 2009 codes only, a race coefficient (both race variants are always reported; the lab
+   * For calculated results: the RESULT_ID of the row it was calculated from (same item): the
+   * creatinine row for eGFR, the total cholesterol row for calculated LDL (LK-LDLC).
+   * Lakeview calculates eGFR from creatinine, the patient's age and sex on the collection date, and,
+   * for the 2009 codes only, a race coefficient (both race variants are always reported; the lab
    * does not know the patient's race).
    */
   DERIVED_FROM_RESULT_ID?: string;
@@ -524,6 +525,25 @@ export declare enum LabTestCode {
   LK_HGB = 'LK-HGB',
   /** Platelet count (component of LK-CBC). Unit K/uL. LOINC 777-3 (always). In use 2015–. */
   LK_PLT = 'LK-PLT',
+  /**
+   * Lipid panel, serum. Order code only: produces LK-CHOL, LK-TRIG, LK-HDL and LK-LDLC result rows.
+   * In use 2015–.
+   */
+  LK_LIPID = 'LK-LIPID',
+  /** Total cholesterol (component of LK-LIPID). Serum. Unit mg/dL. LOINC 2093-3 (always). In use 2015–. */
+  LK_CHOL = 'LK-CHOL',
+  /** Triglycerides (component of LK-LIPID). Serum. Unit mg/dL. LOINC 2571-8 (always). In use 2015–. */
+  LK_TRIG = 'LK-TRIG',
+  /** HDL cholesterol (component of LK-LIPID). Serum. Unit mg/dL. LOINC 2085-9 (always). In use 2015–. */
+  LK_HDL = 'LK-HDL',
+  /**
+   * LDL cholesterol, calculated, not measured: total cholesterol − HDL − triglycerides/5 (Friedewald),
+   * from the rows of the same panel; DERIVED_FROM_RESULT_ID names the total cholesterol row. Unit
+   * mg/dL. LOINC 13457-7 (always). When triglycerides are 400 mg/dL or more the LDL is not calculated:
+   * the row then has RESULT_STATUS 'X', VALUE_TEXT "Not calculated: TG >400" and VALUE_NUM null.
+   * In use 2015–.
+   */
+  LK_LDLC = 'LK-LDLC',
 }
 
 /** Lakeview unit strings (LAB_RESULT.UNIT_CODE). Each member gives the UCUM equivalent. */

@@ -1,0 +1,34 @@
+---
+folio: "0.1"
+id: "01H6Y2F95GQBJP7FYRKAR58Y2K"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00133783"
+effective: "2023-08-03T11:07:00-05:00"
+recorded: "2023-08-03T11:07:42-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+<ref id="med_1">Losartan started 50 mg daily today for ACE inhibitor cough.</ref> Pt informed.
+
+```json payload
+{
+  "med_1": {
+    "type": "med_event",
+    "med_id": "ML-20611",
+    "action": "start",
+    "origin": "northgate",
+    "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979492" },
+    "dose": { "value": 50, "unit": "mg" },
+    "frequency": "QD",
+    "sig": "Take 1 tablet by mouth daily",
+    "reason_text": "ACE inhibitor cough",
+    "visit_id": "V-2023-080313"
+  }
+}
+```

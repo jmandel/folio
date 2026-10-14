@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01JCKJZEZ0YNSJSGGCKHYW5413"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00047094"
+effective: "2024-11-13T09:00:00-06:00"
+recorded: "2024-11-13T14:21:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. No new complaints.
+BP 150/88, repeat 142/84, pulse 72, wt 276 lb.
+eGFR 91, K 4.4 today.
+BP still above goal on repeat, will follow.
+RTC per plan.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2024-111366",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-111366",
+    "rank": 1,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

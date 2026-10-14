@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01JQAFR0802XJHVECCT8AD5YTS"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00377621"
+effective: "2025-03-26T14:45:00-05:00"
+recorded: "2025-03-26T19:24:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM2 f/u. No hypoglycemia symptoms.
+BP 131/77, pulse 78, wt 133 lb.
+Labs 3/24: A1c 8.3%, eGFR 50, K 4.4, UACR 2293 mg/g, LDL 99 mg/dL.
+Insulin glargine started, 10 units at bedtime today.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-032641",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-032641",
+    "rank": 1,
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-032641",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01H1YTC8S03J1MK821508FNJKD"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00665649"
+effective: "2023-06-02T12:00:00-05:00"
+recorded: "2023-06-02T14:47:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. Doing well.
+BP 132/73, pulse 76, wt 197 lb.
+5/28 labs: eGFR 62, K 4.3, A1c 7.3%, LDL 121.
+A1c improved. Continue current plan.
+RTC 4 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-060241",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-060241",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

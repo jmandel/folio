@@ -96,9 +96,30 @@ export class SyncNode {
   private async doRefresh(): Promise<void> {
     if (!existsSync(this.config.itemsDir)) return;
     const fresh: Item[] = [];
+    const presigned: { sdJwt: string; patient: string; id: string; recorded: string }[] = [];
     for (const path of listItemFiles(this.config.itemsDir)) {
       if (this.seenFiles.has(path)) continue;
       this.seenFiles.add(path);
+      if (path.endsWith(".folio.sd-jwt")) {
+        // Signed at build time (`bun run sign`); served as is, never re-signed.
+        const sdJwt = readFileSync(path, "utf8").trim();
+        let claims: any;
+        try {
+          claims = JSON.parse(Buffer.from(sdJwt.split("~")[0].split(".")[1], "base64url").toString("utf8"));
+        } catch {
+          this.say(`${this.config.source}: skipping ${path}: not an SD-JWT`);
+          continue;
+        }
+        const env = claims?.envelope;
+        if (claims?.iss !== this.issuer || !env?.id) {
+          this.say(`${this.config.source}: skipping ${path}: not signed for ${this.issuer}`);
+          continue;
+        }
+        if (this.seenIds.has(env.id)) continue;
+        this.seenIds.add(env.id);
+        presigned.push({ sdJwt, patient: env.patient, id: env.id, recorded: env.recorded });
+        continue;
+      }
       let item: Item;
       try {
         item = readItemFile(path);
@@ -122,12 +143,15 @@ export class SyncNode {
       this.seenIds.add(item.id);
       fresh.push(item);
     }
-    fresh.sort((a, b) => instant(a.recorded) - instant(b.recorded) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
-    for (const item of fresh) {
-      const sdJwt = await sign(item, this.key);
-      this.log.push({ seq: this.log.length + 1, patient: item.patient, key: item.id, sdJwt });
+    const entries: { sdJwt?: string; item?: Item; patient: string; id: string; recorded: string }[] = [
+      ...presigned, ...fresh.map((item) => ({ item, patient: item.patient, id: item.id, recorded: item.recorded })),
+    ];
+    entries.sort((a, b) => instant(a.recorded) - instant(b.recorded) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+    for (const e of entries) {
+      const sdJwt = e.sdJwt ?? (await sign(e.item!, this.key));
+      this.log.push({ seq: this.log.length + 1, patient: e.patient, key: e.id, sdJwt });
     }
-    if (fresh.length) this.say(`${this.config.source}: log now ${this.log.length} item(s)`);
+    if (entries.length) this.say(`${this.config.source}: log now ${this.log.length} item(s)`);
   }
 
   /** Handles one HTTP request. */

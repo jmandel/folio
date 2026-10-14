@@ -1,0 +1,41 @@
+---
+folio: "0.1"
+id: "01KHW4EEQ0MVKW77080WBW5BX4"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00332430"
+effective: "2026-02-19T14:40:00-06:00"
+recorded: "2026-02-19T17:41:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. Pt doing well, no new complaints.
+
+BP 134/80, pulse 83, wt 196 lb.
+
+Labs today: eGFR 77, K 4.7, A1c 6.5%, LDL 77 mg/dL, UACR 202 mg/g.
+
+Results reviewed with pt. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2026-021944",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-021944",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

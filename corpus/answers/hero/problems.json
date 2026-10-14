@@ -1,0 +1,72 @@
+{
+  "patient": "hero",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I12.9",
+        "snomed": "59621000",
+        "onset": { "value": "2014", "precision": "year" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_htn"]
+      },
+      {
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.22",
+        "snomed": "44054006",
+        "onset": { "value": "2016", "precision": "year" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_t2dm"]
+      },
+      {
+        "condition": "Hyperlipidemia",
+        "icd10": "E78.5",
+        "snomed": "55822004",
+        "onset": { "value": "2017", "precision": "year" },
+        "sources": ["A", "B"],
+        "basis": ["c_hld"]
+      },
+      {
+        "condition": "Major depressive disorder, recurrent, mild",
+        "icd10": "F33.0",
+        "snomed": "191611001",
+        "onset": { "value": "2019", "precision": "year" },
+        "sensitive": "behavioral-health",
+        "sources": ["A", "B"],
+        "basis": ["c_mdd"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.32",
+        "snomed": "700378005",
+        "onset": { "value": "2022-02-07", "precision": "day" },
+        "stage": "3b A3",
+        "stage_recorded_by": "C",
+        "stage_recorded_on": "2026-07-13",
+        "sources": ["A", "B", "C"],
+        "basis": ["c_ckd"]
+      },
+      {
+        "condition": "Hyponatremia",
+        "icd10": "E87.1",
+        "snomed": "89627008",
+        "onset": { "value": "2024-11-01", "precision": "day" },
+        "sources": ["A", "C"],
+        "basis": ["c_na"]
+      }
+    ],
+    "resolved": [
+      {
+        "condition": "Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated",
+        "icd10": "E11.10",
+        "snomed": "420422005",
+        "onset": { "value": "2024-11-01", "precision": "day" },
+        "sources": ["A", "B", "C"],
+        "basis": ["c_dka"],
+        "resolved_on": "2026-07-13"
+      }
+    ]
+  }
+}

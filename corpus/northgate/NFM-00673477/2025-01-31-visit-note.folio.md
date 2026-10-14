@@ -1,0 +1,40 @@
+---
+folio: "0.1"
+id: "01JJZB6A6093QDZQZCZPWM4XJ1"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00673477"
+effective: "2025-01-31T12:10:00-06:00"
+recorded: "2025-01-31T17:30:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+BP f/u. Feels well, no new complaints.
+
+BP 138/79, pulse 75, wt 163 lb.
+eGFR 71 and K 4.8 on 1/25.
+
+Labs reviewed with pt. Home BP log to continue. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-013125",
+    "visit_type": "office",
+    "reason": "BP follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-013125",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

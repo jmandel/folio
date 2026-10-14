@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01JWY0QQB0STG4GK0XPH58THSG"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00912291"
+effective: "2025-06-04T08:20:00-05:00"
+recorded: "2025-06-04T12:45:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM2 f/u. Doing well, no new complaints.
+BP 139/80, pulse 70, wt 150 lb.
+Labs today: eGFR 97, K 4.2, A1c 7.9%, unchanged from last check.
+Reviewed diet and exercise with pt.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-060456",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-060456",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

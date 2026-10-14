@@ -1,0 +1,31 @@
+---
+folio: "0.1"
+id: "01JKHE18J00TW6SWZR827TDJF4"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00743670"
+effective: "2025-02-07T14:45:00-06:00"
+recorded: "2025-02-07T18:06:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+F/u visit. Feels well, no new symptoms.
+BP 120/78, pulse 78, wt 211 lb.
+eGFR 87 and K 4.2 today. Pt informed.
+RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-020723",
+    "visit_type": "office",
+    "reason": "Follow-up"
+  }
+}
+```

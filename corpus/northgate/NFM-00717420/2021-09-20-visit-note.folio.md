@@ -1,0 +1,38 @@
+---
+folio: "0.1"
+id: "01FG2R8AE0G41438906CXV1XD7"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00717420"
+effective: "2021-09-20T14:00:00-05:00"
+recorded: "2021-09-20T18:22:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. Doing OK, no new symptoms.
+BP 121/76, pulse 68, wt 143 lb.
+eGFR 73, A1c 7.9%, LDL 73 mg/dL today.
+Continue current plan. RTC 3-4 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-092051",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-092051",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

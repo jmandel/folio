@@ -1,0 +1,45 @@
+---
+folio: "0.1"
+id: "01M1PXPFJ091Z8TPG8MDGCZRM9"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00531772"
+effective: "2026-09-04T09:30:00-05:00"
+recorded: "2026-09-04T14:18:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Diabetes f/u. BP 122/70, pulse 80, wt 220 lb.
+Labs today: eGFR 30, K 4.6, UACR 309 mg/g, A1c 8.9%, LDL 122 mg/dL.
+Reviewed results with pt. No new complaints.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2026-090495",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-090495",
+    "rank": 1,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-090495",
+    "rank": 2,
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
+  }
+}
+```

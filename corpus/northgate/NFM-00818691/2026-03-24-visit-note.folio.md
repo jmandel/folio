@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01KMGGM360KKASQ5JBHHYQJ41C"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00818691"
+effective: "2026-03-24T08:40:00-05:00"
+recorded: "2026-03-24T13:10:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:jpatel"
+  name: "Jaya Patel, NP"
+  role: "Nurse practitioner"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Annual exam. No new complaints.
+BP 140/89, repeat 138/85, pulse 77, wt 187 lb.
+Labs 3/18: eGFR 81, K 4.6.
+BP above goal, amlodipine started 5 mg daily today.
+Pt to watch for ankle swelling. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2026-032436",
+    "visit_type": "office",
+    "reason": "Annual exam"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-032436",
+    "rank": 1,
+    "icd10cm": "Z00.00",
+    "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-032436",
+    "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

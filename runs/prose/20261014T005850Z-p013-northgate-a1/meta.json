@@ -1,0 +1,41 @@
+{
+  "runId": "20261014T005850Z-p013-northgate-a1",
+  "family": "prose",
+  "backend": "codex",
+  "attempt": 1,
+  "cmd": [
+    "codex",
+    "exec",
+    "--json",
+    "-C",
+    "/home/jmandel/hobby/folio/.worktrees/stage1/runs/prose/20261014T005850Z-p013-northgate-a1",
+    "--skip-git-repo-check",
+    "-s",
+    "workspace-write",
+    "-c",
+    "approval_policy=\"never\"",
+    "--ephemeral",
+    "--disable",
+    "memories",
+    "-"
+  ],
+  "cwd": "/home/jmandel/hobby/folio/.worktrees/stage1/runs/prose/20261014T005850Z-p013-northgate-a1",
+  "startedAt": "2026-10-14T00:58:50.516Z",
+  "endedAt": "2026-10-14T00:59:17.455Z",
+  "durationMs": 26939,
+  "exitCode": 0,
+  "timedOut": false,
+  "ok": true,
+  "usage": {
+    "input_tokens": 71850,
+    "cached_input_tokens": 66816,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 475,
+    "reasoning_output_tokens": 183
+  },
+  "numTurns": 1,
+  "sessionId": "01a137eb-4f56-71b0-8be8-683b1a9e062c",
+  "producedFiles": [
+    "notes.md"
+  ]
+}

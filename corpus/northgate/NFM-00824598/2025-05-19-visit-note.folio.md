@@ -1,0 +1,32 @@
+---
+folio: "0.1"
+id: "01JVNMH0P080EMB56KM3T0K547"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00824598"
+effective: "2025-05-19T14:15:00-05:00"
+recorded: "2025-05-19T20:22:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. Pt feels well.
+BP 124/70, pulse 85, wt 259 lb.
+Labs today: eGFR 62, K 4.4, UACR 7 mg/g, A1c 7.4%, LDL 116 mg/dL.
+Results reviewed with pt.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2025-051911",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  }
+}
+```

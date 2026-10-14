@@ -1,0 +1,53 @@
+---
+folio: "0.1"
+id: "01FGQ4QTZ0740JQX737ZF198KZ"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00364929"
+effective: "2021-09-28T11:30:00-05:00"
+recorded: "2021-09-28T16:25:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Annual exam. BP 160/89, repeat 157/86, pulse 64, wt 248 lb.
+Labs 9/25: eGFR 78, K 4.8.
+BP running high today, will recheck at next visit.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-092898",
+    "visit_type": "office",
+    "reason": "Annual exam"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-092898",
+    "rank": 1,
+    "icd10cm": "Z00.00",
+    "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-092898",
+    "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-092898",
+    "rank": 3,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
+  }
+}
+```

@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01F397SNK0ZSBD76418SJYEHT6"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00382868"
+effective: "2021-04-14T11:15:00-05:00"
+recorded: "2021-04-14T17:25:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Chronic care visit. Doing well, no concerns today.
+BP 122/74, pulse 67, wt 202 lb.
+Labs 4/11: eGFR 80, A1c 7%, LDL 113 mg/dL.
+Reviewed results with pt.
+RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-041431",
+    "visit_type": "office",
+    "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-041431",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

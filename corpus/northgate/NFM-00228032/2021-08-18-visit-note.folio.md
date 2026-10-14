@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01FDDKXZD025EF4XX7PZFTES9R"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00228032"
+effective: "2021-08-18T12:00:00-05:00"
+recorded: "2021-08-18T16:51:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. History reviewed with pt, problem list entered.
+BP 127/70, pulse 64, wt 202 lb.
+Labs 8/16: eGFR 64, A1c 7.6%, LDL 81 mg/dL.
+Pt has no new complaints today.
+RTC to review as scheduled.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-081892",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081892",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-081892",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

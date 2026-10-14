@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01FQJ7CN70A05FXPKT87VRXWJ0"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00032392"
+effective: "2021-12-22T14:30:00-06:00"
+recorded: "2021-12-22T17:25:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+DM f/u. No new complaints.
+BP 133/79, pulse 70, wt 195 lb.
+12/17 labs: eGFR 86, UACR 153 mg/g, A1c 6.5%. K 6.2 was hemolyzed, repeat K 4.2.
+Pt reassured, no action needed on the K.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-122222",
+    "visit_type": "office",
+    "reason": "Diabetes follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-122222",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-122222",
+    "rank": 2,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

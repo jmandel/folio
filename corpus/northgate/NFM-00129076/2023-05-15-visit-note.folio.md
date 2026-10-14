@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01H0GCPRN07GH6REWZVJME242S"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00129076"
+effective: "2023-05-15T09:15:00-05:00"
+recorded: "2023-05-15T14:03:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:mbrennan"
+  name: "Moira Brennan, DO"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care.
+BP 133/76, pulse 79, wt 190 lb.
+eGFR 72 today, K 4.7.
+Records reviewed with pt, questions answered.
+RTC for annual exam later this year.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-051562",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-051562",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

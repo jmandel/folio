@@ -1,0 +1,45 @@
+---
+folio: "0.1"
+id: "01H30FNHA0HDMCPHDTWWVS30DF"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00089203"
+effective: "2023-06-15T13:10:00-05:00"
+recorded: "2023-06-15T16:34:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+Annual exam. BP 132/79, pulse 62, wt 203 lb.
+eGFR 60 today, K 4.6. UACR 762 mg/g.
+LDL 85 mg/dL.
+BP at goal today. RTC 6 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2023-061564",
+    "visit_type": "office",
+    "reason": "Annual exam"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-061564",
+    "rank": 1,
+    "icd10cm": "Z00.00",
+    "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-061564",
+    "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  }
+}
+```

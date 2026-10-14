@@ -1,0 +1,39 @@
+---
+folio: "0.1"
+id: "01EYKZNBW0ERE7Q21F5CHS2CHB"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00824598"
+effective: "2021-02-15T10:50:00-06:00"
+recorded: "2021-02-15T17:16:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. History reviewed with pt.
+BP 121/75, pulse 62, wt 263 lb.
+Labs today: eGFR 64, K 3.8, A1c 6.4%, LDL 144 mg/dL.
+Reviewed results with pt. Records requests discussed.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2021-021589",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-021589",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

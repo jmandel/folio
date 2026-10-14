@@ -92,8 +92,26 @@ export function itemToClaims(item: Item): FolioClaims {
   return { iss: item.issuer, envelope: envelopeOf(item), narrative: segments, units };
 }
 
+export interface SignOptions {
+  /** Salt source for disclosures. Default: random. Dev builds pass `seededSalts` for reproducible output. */
+  saltGenerator?: (length: number) => string | Promise<string>;
+}
+
+/**
+ * Deterministic salts for development builds: SHA-256 of `seed/counter`. With Ed25519's
+ * deterministic signatures this makes signing a pure function of (item, key, seed). Never use
+ * outside development: predictable salts let anyone confirm a guessed withheld value.
+ */
+export function seededSalts(seed: string): (length: number) => Promise<string> {
+  let i = 0;
+  return async (length: number) => {
+    const d = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(`${seed}/${i++}`)));
+    return b64u(d.slice(0, Math.min(32, Math.max(16, length))));
+  };
+}
+
 /** Signs an item. The result is an SD-JWT carrying every disclosure (what a sync node serves). */
-export async function sign(item: Item, key: IssuerKey): Promise<string> {
+export async function sign(item: Item, key: IssuerKey, opts: SignOptions = {}): Promise<string> {
   assertValid(item);
   if (item.issuer !== key.did) throw new Error(`item issuer ${item.issuer} does not match key DID ${key.did}`);
   if (!key.kid.startsWith(key.did + "#")) throw new Error(`kid ${key.kid} is not a key of ${key.did}`);
@@ -101,7 +119,7 @@ export async function sign(item: Item, key: IssuerKey): Promise<string> {
   const sd = new SDJwtInstance<FolioClaims>({
     hasher,
     hashAlg: "sha-256",
-    saltGenerator,
+    saltGenerator: opts.saltGenerator ?? saltGenerator,
     signAlg: SIGN_ALG,
     signer: async (data) => b64u(await crypto.subtle.sign("Ed25519", priv, enc.encode(data))),
   });

@@ -1,0 +1,46 @@
+---
+folio: "0.1"
+id: "01JBMR6XR0WXG5THC43Q4TTM16"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00924817"
+effective: "2024-11-01T10:45:00-05:00"
+recorded: "2024-11-01T15:56:00-05:00"
+author:
+  id: "urn:northgate-fm.example:staff:dkhan"
+  name: "Daniel Khan, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+BP f/u. No dizziness or headache.
+BP 134/81, pulse 79, wt 245 lb.
+Labs 10/26: eGFR 92, K 4.7.
+Reviewed with pt.
+RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2024-110125",
+    "visit_type": "office",
+    "reason": "BP follow-up"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-110125",
+    "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-110125",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  }
+}
+```

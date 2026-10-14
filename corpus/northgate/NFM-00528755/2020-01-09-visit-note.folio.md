@@ -1,0 +1,40 @@
+---
+folio: "0.1"
+id: "01DY5W52H008P7GF47X2TW3FRQ"
+issuer: "did:web:northgate-fm.example"
+patient: "NFM-00528755"
+effective: "2020-01-09T09:50:00-06:00"
+recorded: "2020-01-09T13:23:00-06:00"
+author:
+  id: "urn:northgate-fm.example:staff:treyes"
+  name: "Teresa Reyes, MD"
+  role: "Primary care physician"
+schema:
+  url: "https://northgate-fm.example/folio/schemas/northgate-chart-v1.d.ts"
+  type: "ChartEvent"
+  sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
+---
+New pt, establishing care. Hx of HTN, DM2 and hyperlipidemia per pt.
+
+BP 131/84, pulse 67, wt 196 lb.
+Labs today: eGFR 88, K 4.2, UACR 36 mg/g, A1c 7.6%, LDL 80 mg/dL.
+
+Records to be requested from prior office. RTC 3 mo.
+
+```json payload
+{
+  "visit": {
+    "type": "visit",
+    "visit_id": "V-2020-010954",
+    "visit_type": "office",
+    "reason": "New patient, establish care"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-010954",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  }
+}
+```

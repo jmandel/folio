@@ -1,0 +1,29 @@
+{
+  "patient": "p204",
+  "view": "problems",
+  "as_of": "2026-10-13",
+  "key": {
+    "active": [
+      {
+        "condition": "Essential hypertension",
+        "icd10": "I10",
+        "snomed": "59621000",
+        "onset": { "value": "2013-06", "precision": "month" },
+        "sources": ["B"],
+        "basis": ["c_1"]
+      },
+      {
+        "condition": "Chronic kidney disease",
+        "icd10": "N18.31",
+        "snomed": "700378005",
+        "onset": { "value": "2024-03-12", "precision": "day" },
+        "stage": "3a",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2024-03-12",
+        "sources": ["B", "C"],
+        "basis": ["c_19"]
+      }
+    ],
+    "resolved": []
+  }
+}
