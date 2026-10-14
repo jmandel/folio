@@ -23,6 +23,14 @@ describe("northgate reference mapper", () => {
   });
 });
 
+describe("reference mappers for the other sources agree with their keys", () => {
+  for (const source of ["lakeview", "riverside", "homelog"] as const) test(source, () => {
+    const ev = evaluateTransform(readFileSync(join(import.meta.dir, `fixtures/${source}-reference.ts`), "utf8"), source, "app", "test");
+    expect(ev.counts.all.recall).toBe(1);
+    expect(ev.counts.all.precision).toBe(1);
+  });
+});
+
 describe("broken variants are caught", () => {
   test("ignoring supersedes/retracts: withdrawn K shows (T3) and voided lines count (T4)", () => {
     const ev = run(patch("const dead = new Set<string>();", "const dead = new Set<string>(); const _ignore = new Set<string>();").replace("dead.add(id);", "_ignore.add(id);"));

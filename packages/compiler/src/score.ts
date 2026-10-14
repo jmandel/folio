@@ -83,6 +83,7 @@ function matchScore(view: View, f: any, r: Row): number {
     case "labs": return normAnalyte(r.analyte) === f.analyte && minuteOf(r.collected) === minuteOf(f.collected) ? 2 : 0;
     case "vitals": {
       if (r.setting !== f.setting) return 0;
+      if ((f.glucose_mg_dl !== undefined) !== (r.glucose_mg_dl !== undefined)) return 0;
       const d = Math.abs(localMinute(r.local_time) - localMinute(f.local_time));
       return d <= 10 ? 20 - d : 0;
     }

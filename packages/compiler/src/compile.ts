@@ -216,7 +216,7 @@ export async function compileWithFeedback(source: Source, vs: ViewSet["name"], b
     const n = cond === "b" ? (fb as { discrepancies: Discrepancy[] }).discrepancies.length : (fb as { n: number }).n;
     console.log(`[${source}/${vs}/${b.label}/${cond}] round ${round}: ${n} findings on dev`);
     if (!n) { rec.rounds.push({ round, runId: "", ok: true, durationMs: 0, feedbackItems: 0, summary: "no findings; stopped" }); break; }
-    const inputs = { ...wd.inputs, "feedback.md": fb.text };
+    const inputs: Record<string, string> = { ...wd.inputs, "feedback.md": fb.text };
     for (const [f, text] of Object.entries(prevFiles)) inputs[`previous/${f}`] = text;
     const r = await agentRun(source, vs, b, wd.prompt + REVISE(cond), inputs, `${cond}${round}`);
     const e = evaluateAndSave(r, source, vs);
