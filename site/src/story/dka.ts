@@ -29,12 +29,12 @@ export interface SourceColumn {
 export const DKA_COLUMNS: SourceColumn[] = [
   {
     source: "riverside",
-    caption: "A hospital document. At discharge the drug is held, not stopped, with advice not to restart it.",
+    caption: "The discharge summary marks the drug held, with advice not to restart it.",
     excerpts: [{ source: "riverside", item: "01JBZ2V178F5KZNWJ47TAN9ZT2", refs: [{ ref: "med_empa", fields: ["status", "restart_advice"] }] }],
   },
   {
     source: "northgate",
-    caption: "An event log. A week later the family doctor stops the drug and adds a separate allergy event.",
+    caption: "A week later the family doctor records a stop event, and a separate allergy event.",
     excerpts: [
       { source: "northgate", item: "01JCGH7E98RHEM3E2MSH4DMDZS", refs: [{ ref: "med_1", fields: ["action", "stop_reason"] }] },
       { source: "northgate", item: "01JCGHC7KGRYX1DZWYB8RTCAM0", refs: [{ ref: "alg_1", fields: ["reaction_type", "severity"] }] },
@@ -42,7 +42,7 @@ export const DKA_COLUMNS: SourceColumn[] = [
   },
   {
     source: "lakeview",
-    caption: "Coded rows. The DKA is a history diagnosis with status H. The decision not to re-try is in the prose only.",
+    caption: "The DKA is a coded history diagnosis (status H). The decision not to re-try the drug is only in the note text.",
     excerpts: [
       {
         source: "lakeview",
@@ -53,7 +53,7 @@ export const DKA_COLUMNS: SourceColumn[] = [
   },
   {
     source: "homelog",
-    caption: "Linda's own app. Only she wrote down that she kept taking her pills while she was sick.",
+    caption: "Linda's diary is the only record that she kept taking her pills while she was sick.",
     excerpts: [
       { source: "homelog", item: "01JBK1YV20HTJ26YZXQFQAKCMZ", refs: [{ ref: "note_1", fields: ["symptom_tags"] }] },
       { source: "homelog", item: "01KQN2FD70GFSXF3DM02V7HGMX", refs: [{ ref: "med_8", fields: ["name", "status", "note"] }] },

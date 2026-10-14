@@ -31,7 +31,7 @@ export function CompilerView({ index, route }: { index: Index; route: Route }) {
         </div>
         <div className="list-scroll">
           <div className="year" style={{ position: "static" }}>Mappers</div>
-          <div className="empty small">Mapper runs (schema to view) are being recorded in the next stage and will be listed here.</div>
+          <div className="empty small">Mapper runs (schema to view) are not recorded yet.</div>
           {grouped.map(([pid, rs]) => (
             <section key={pid}>
               <h2 className="year">
@@ -167,9 +167,9 @@ function RunViewer({ runId, index }: { runId: string; index: Index }) {
           <span className="n">4</span> Mapper code and scores
         </h2>
         <div className="placeholder-doc">
-          Prose runs like this one build the test corpus. The compiler runs come next: for each source schema and target view, an agent writes a
-          mapper and its tests, and the harness scores it against answer keys drawn from the clinical truth. Those runs, their code and their scores will
-          be replayed here in the same way.
+          This run wrote notes for the test data. Mapper runs are not recorded yet. In each, an agent will write a mapper and its tests for one source
+          schema and one target view, and the harness will score the mapper against answer keys built from the synthetic patients' clinical truth.
+          Those runs will be replayed here with their code and scores.
         </div>
       </section>
     </div>

@@ -48,7 +48,7 @@ export function App() {
   }, [pathKey]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const label = TABS.find((t) => t.id === tab)?.label;
-    document.title = label ? `${label}: FOLIO workbench` : "FOLIO: native clinical records, compiled mappers";
+    document.title = label ? `${label}: FOLIO workbench` : "FOLIO workbench";
   }, [tab]);
 
   return (
@@ -64,7 +64,7 @@ export function App() {
           </a>
           <span className="tab-group" role="group" aria-labelledby="nav-explore">
             <span className="tab-group-label" id="nav-explore">
-              Explore the data
+              Views
             </span>
             {TABS.map((t) => (
               <a key={t.id} href={`#/${t.id}`} aria-current={t.id === tab ? "page" : undefined}>

@@ -193,7 +193,7 @@ function Examples({ doc, index, dir, ex }: { doc: SourceDoc; index: Index; dir: 
         <button aria-pressed={raw} onClick={() => setRaw(true)}>
           .folio.md text
         </button>
-        <span className="small muted">Hand-written examples; the hero's record reproduces them exactly.</span>
+        <span className="small muted">Hand-written examples. Each one appears unchanged in Linda's record.</span>
       </div>
       {raw ? (
         <pre className="raw nowrap" style={{ maxHeight: "none" }}>
