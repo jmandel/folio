@@ -91,6 +91,7 @@ function matchScore(view: View, f: any, r: Row): number {
 }
 
 const eqNum = (a: unknown, b: number, tol: number) => typeof a === "number" && Math.abs(a - b) <= tol;
+const sameSet = (a: string[], b: unknown) => Array.isArray(b) && a.length === b.length && a.every((x) => b.includes(x));
 
 function compareFields(view: View, f: any, r: Row): FieldOutcome[] {
   const out: FieldOutcome[] = [];
@@ -103,21 +104,29 @@ function compareFields(view: View, f: any, r: Row): FieldOutcome[] {
       if (f.frequency) add("frequency", f.frequency.includes(r.frequency), f.frequency[0], r.frequency);
       if (f.status_since) add("status_since", r.status_since === f.status_since, f.status_since, r.status_since);
       if (f.stop_reason) add("stop_reason", r.stop_reason === f.stop_reason, f.stop_reason, r.stop_reason);
+      if (f.patient_reported !== undefined) add("patient_reported", r.patient_reported === f.patient_reported, f.patient_reported, r.patient_reported);
+      if (f.otc !== undefined) add("otc", !!r.otc === f.otc, f.otc, r.otc);
+      if (f.sensitivity) add("sensitivity", sameSet(f.sensitivity, r.sensitivity), f.sensitivity, r.sensitivity);
       break;
     case "problems":
       add("status", r.status === f.status, f.status, r.status);
       if (f.ckd_stage) add("ckd_stage", r.ckd_stage === f.ckd_stage, f.ckd_stage, r.ckd_stage);
       if (f.onset) add("onset", r.onset?.value === f.onset.value && r.onset?.precision === f.onset.precision, f.onset, r.onset);
+      if (f.sensitivity) add("sensitivity", sameSet(f.sensitivity, r.sensitivity), f.sensitivity, r.sensitivity);
       break;
     case "allergies":
-      add("type", r.type === f.type, f.type, r.type);
+      add("reaction_type", r.reaction_type === f.reaction_type, f.reaction_type, r.reaction_type);
+      if (f.mechanism) add("mechanism", f.mechanism.includes(r.mechanism), f.mechanism.join("|"), r.mechanism);
       if (f.criticality) add("criticality", r.criticality === f.criticality, f.criticality, r.criticality);
+      if (f.onset) add("onset", r.onset?.value === f.onset.value && r.onset?.precision === f.onset.precision, f.onset, r.onset);
+      if (f.reaction?.length) add("reaction", typeof r.reaction === "string" && f.reaction.some((w: string) => r.reaction.toLowerCase().includes(w)), f.reaction.join("|"), r.reaction);
       break;
     case "labs": {
       const tol = Math.max(0.0051, Math.abs(f.value) * 0.001);
       add("value", eqNum(r.value, f.value, tol) && (r.comparator ?? undefined) === (f.comparator ?? undefined), `${f.comparator ?? ""}${f.value}`, `${r.comparator ?? ""}${r.value}`);
       add("unit", normUnit(r.unit) === normUnit(f.unit), f.unit, r.unit);
       if (f.egfr_equation) add("egfr_equation", r.egfr_equation === f.egfr_equation, f.egfr_equation, r.egfr_equation);
+      if (f.status) add("status", r.status === f.status, f.status, r.status);
       break;
     }
     case "vitals":
@@ -132,7 +141,7 @@ function compareFields(view: View, f: any, r: Row): FieldOutcome[] {
 /** How many scored fields an unmatched mapper row asserts (it counts as that many false positives, plus presence). */
 function assertedFields(view: View, r: Row): number {
   const keys: Record<View, string[]> = {
-    medications: ["status", "dose", "frequency"], problems: ["status", "ckd_stage", "onset"], allergies: ["type", "criticality"],
+    medications: ["status", "dose", "frequency"], problems: ["status", "ckd_stage", "onset"], allergies: ["reaction_type", "criticality"],
     labs: ["value", "unit"], vitals: ["systolic_mmhg", "diastolic_mmhg", "pulse_bpm", "weight_kg", "glucose_mg_dl"],
   };
   return keys[view].filter((k) => r[k] !== undefined).length;
@@ -166,6 +175,11 @@ export function scoreRows(exp: Expected, actual: Partial<Record<View, Row[]>> | 
       const m = assigned.get(k);
       const r = m === undefined ? undefined : mine[m];
       const fields = r ? compareFields(view, kr.fields, r) : compareFields(view, kr.fields, {}).map((x) => ({ ...x, ok: false, actual: undefined }));
+      // Evidence: the row must cite at least one item that carries the fact (when the key knows those items).
+      if (kr.items?.length) {
+        const cited = r && Array.isArray(r.evidence) ? r.evidence.map((x: any) => x?.item_id) : [];
+        fields.push({ field: "evidence", ok: !!r && kr.items.some((id) => cited.includes(id)), expected: kr.items.slice(0, 3), actual: cited.slice(0, 3) });
+      }
       rows.push({ view, key: keyName(view, kr.fields), matched: !!r, duplicated: 0, fields, traps: kr.traps, modality: kr.modality, basis: kr.basis, evidence: r?.evidence });
     });
     const left = mine.filter((_, i) => !used.has(i));

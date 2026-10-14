@@ -46,7 +46,7 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
       ...(e.dose ? { dose: { value: e.dose.value, unit: e.dose.unit === "units" ? "units" : e.dose.unit === "tab" ? "tablet" : e.dose.unit } } : {}),
       ...(e.frequency ? { frequency: e.frequency === "OTHER" ? "other" : e.frequency } : {}),
       ...(status === "stopped" && e.stop_reason ? { stop_reason: e.stop_reason } : {}), ...(e.reason_text ? { status_reason_text: e.reason_text } : {}),
-      patient_reported: false, evidence: evs.map((x) => ({ item_id: x.item.id, entry_id: x.key })), _t: Date.parse(last.item.effective),
+      patient_reported: false, ...(e.restricted === "BH" ? { sensitivity: ["mental-health" as const] } : {}), evidence: evs.map((x) => ({ item_id: x.item.id, entry_id: x.key })), _t: Date.parse(last.item.effective),
     };
     const prev = byIng.get(ing);
     if (!prev || prev._t < row._t) byIng.set(ing, row);
@@ -65,6 +65,7 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
       condition: e.description, icd10cm: e.icd10cm, ...(e.snomed ? { snomed: e.snomed } : {}), status: e.action === "resolve" ? "resolved" : "active",
       ...(e.onset ? { onset: { value: e.onset.precision === "year" ? e.onset.date.slice(0, 4) : e.onset.precision === "month" ? e.onset.date.slice(0, 7) : e.onset.date, precision: e.onset.precision } } : {}),
       ...(/^N18/.test(e.icd10cm) && st ? { ckd_stage: `G${st}` as ProblemRow["ckd_stage"] } : {}),
+      ...(e.restricted === "BH" ? { sensitivity: ["mental-health" as const] } : {}),
       evidence: evs.map((x) => ({ item_id: x.item.id, entry_id: x.key })),
     });
   }
@@ -77,7 +78,7 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
     const e = evs[evs.length - 1].e;
     if (e.action === "inactivate") continue;
     allergies.push({
-      substance: String(e.substance.name).toLowerCase(), ...(e.substance.rxnorm ? { rxnorm_ingredient: e.substance.rxnorm } : {}), type: e.reaction_type,
+      substance: String(e.substance.name).toLowerCase(), ...(e.substance.rxnorm ? { rxnorm_ingredient: e.substance.rxnorm } : {}), reaction_type: e.reaction_type === "allergy" ? "hypersensitivity" : e.reaction_type === "intolerance" ? "side_effect" : "serious_adverse_event", mechanism: "unknown",
       reaction: (e.reactions ?? []).join("; "), criticality: e.severity,
       ...(e.onset ? { onset: { value: e.onset.precision === "year" ? e.onset.date.slice(0, 4) : e.onset.precision === "month" ? e.onset.date.slice(0, 7) : e.onset.date, precision: e.onset.precision } } : {}),
       evidence: evs.map((x) => ({ item_id: x.item.id, entry_id: x.key })),

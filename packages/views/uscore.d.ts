@@ -1,5 +1,5 @@
 /**
- * US Core FHIR R4 target, version 1: medications and laboratory results as FHIR resources.
+ * US Core FHIR R4 target, version 2 (builds on views v2): medications and laboratory results as FHIR resources.
  *
  * A second consumer of the same records: FHIR is one view, not the wire format. Which medications and
  * which results to emit, their statuses, the eGFR rule, the unit table and the time-scope rules are
@@ -72,7 +72,7 @@ export interface MedicationRequest {
    * Why it is held or stopped: `text` is the source's reason text; `coding` (optional) uses system
    * "urn:folio:stop-reason" with the app view's `stop_reason` code.
    */
-  statusReason?: CodeableConcept[];
+  statusReason?: CodeableConcept;
   /** 'order' for a clinician's prescription or order; 'plan' for a line copied from another organization's record or a patient's own list. */
   intent: 'order' | 'plan';
   /**
@@ -90,6 +90,12 @@ export interface MedicationRequest {
   medicationCodeableConcept: CodeableConcept;
   /** "Patient/<item.patient>". */
   subject: Reference;
+  /**
+   * Who ordered it: required when `intent` is 'order' (US Core constraint us-core-21). Use the prescriber
+   * the source names (`{ display: "<name>" }`, or `{ identifier: { system: "http://hl7.org/fhir/sid/us-npi", value: "<NPI>" } }`
+   * when only an NPI is given); when the source names no prescriber, the issuing organization as `{ display: "<organization>" }`.
+   */
+  requester?: { display?: string; identifier?: { system: string; value: string } };
   /** The app view's `status_since` for 'active' rows when known, else the date the line or order began; a FHIR date or dateTime. Omit if unknown. */
   authoredOn?: string;
   /** At most one. `text` is the sig as written; `doseAndRate[0].doseQuantity` is the app view's `dose` (UCUM code "mg", "ug", "[iU]", "mL", or "{tbl}"). `timing.code.text` is the app view's `frequency` code. */

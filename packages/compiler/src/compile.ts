@@ -12,13 +12,15 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSy
 import { dirname, join } from "node:path";
 import { type BackendName, runAgent, type RunResult } from "../../agent-runner/src/index.ts";
 import { VIEW_SETS, viewSetHash, type ViewSet } from "../../views/src/index.ts";
-import { EVAL_AS_OF, itemsForPatient, loadItems, patientById, patientsIn, REPO, schemaHash, type Source, trapIndex, truth } from "./data.ts";
-import { type Eval, evaluateTransform, rowsFor, stripForUsCore, summary } from "./evaluate.ts";
+import { createHash } from "node:crypto";
+import { EVAL_AS_OF, itemsForPatient, loadItems, patientById, patientsIn, REPO, schemaHash, schemaText, type Source, stripDocs, trapIndex, truth, type Variant } from "./data.ts";
+import { type Eval, evaluateTransform, expectedWithItems, rowsFor, summary } from "./evaluate.ts";
 import { execute, stage } from "./exec.ts";
 import { expectedFor } from "./keys.ts";
 import { compareFacts, type Discrepancy, proseSample } from "./prose.ts";
 import { codexDefaultModel, sandboxWrap } from "./sandbox.ts";
 import { rowWrong, scoreRows } from "./score.ts";
+import { scanRun } from "./scan.ts";
 import { buildWorkdir } from "./workdir.ts";
 
 export type Condition = "a" | "b" | "c";
@@ -36,11 +38,20 @@ export interface Round { round: number; runId: string; ok: boolean; error?: stri
 export interface CompileRecord {
   source: Source; viewSet: ViewSet["name"]; backend: string; model?: string; condition: Condition;
   schemaSha256: string; viewSetHash: string; samples: string[]; rounds: Round[]; startedFrom?: string; final?: string;
-  note?: string;
+  note?: string; rep: number; variant: Variant; keysSha256: string;
 }
 
+/** Hash of the key and scoring code, recorded with every compile so a later key change is visible. */
+export function keysHash(): string {
+  const h = createHash("sha256");
+  for (const f of ["keys.ts", "score.ts", "evaluate.ts", "data.ts"]) h.update(readFileSync(join(REPO, "packages/compiler/src", f)));
+  return h.digest("hex").slice(0, 16);
+}
+const schemaShaFor = (source: Source, variant: Variant) => variant === "full" ? schemaHash(source) : createHash("sha256").update(stripDocs(schemaText(source))).digest("hex");
+
 const family = (source: Source, vs: string, b: Backend) => `compiler/${source}/${vs}/${b.label}`;
-export const recordPath = (source: Source, vs: string, b: Backend, c: Condition) => join(RESULTS, "compiles", source, vs, b.label, `${c}.json`);
+export const recordPath = (source: Source, vs: string, b: Backend, c: Condition, rep = 1, variant: Variant = "full") =>
+  join(RESULTS, "compiles", source, vs, b.label, `${c}${variant === "types-only" ? "-typesonly" : ""}${rep > 1 ? `-r${rep}` : ""}.json`);
 export const evalPath = (runId: string) => join(RESULTS, "evals", `${runId}.json`);
 
 function save(path: string, data: unknown) { mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, JSON.stringify(data, null, 1) + "\n"); }
@@ -66,18 +77,23 @@ async function agentRun(source: Source, vs: ViewSet["name"], b: Backend, prompt:
   const r = await runAgent({
     family: family(source, vs, b), backend: b.backend, model: b.model, prompt, inputs, expectFiles: ["transform.ts"],
     allowedTools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash"], wrapCommand: sandboxWrap, timeoutMs: 40 * 60_000,
+    extraArgs: b.backend === "claude" ? ["--disallowedTools=WebFetch,WebSearch"] : [],
   }, { retries: 1 });
+  const findings = scanRun(r.runDir);
+  const blocking = findings.filter((f) => f.kind === "network" || f.kind === "ipc" || f.kind === "web-tool");
+  writeFileSync(join(r.runDir, "scan.json"), JSON.stringify({ findings, blocking: blocking.length }, null, 1) + "\n");
+  if (blocking.length) { r.meta.ok = false; r.meta.error = `isolation gate: ${blocking.length} network/IPC/web tool call(s); see scan.json`; delete r.outputs["transform.ts"]; }
   console.log(`[${source}/${vs}/${b.label}/${tag}] run ${r.meta.runId} ok=${r.meta.ok} ${((Date.now() - t0) / 1000).toFixed(0)}s cost=${r.meta.costUsd?.toFixed(2) ?? "n/a"} ${r.meta.error ?? ""}`);
   return r;
 }
 
 /** Condition (a), or reuse an existing (a) record. */
-export async function compileA(source: Source, vs: ViewSet["name"], b: Backend, force = false): Promise<CompileRecord> {
-  const path = recordPath(source, vs, b, "a");
+export async function compileA(source: Source, vs: ViewSet["name"], b: Backend, force = false, rep = 1, variant: Variant = "full"): Promise<CompileRecord> {
+  const path = recordPath(source, vs, b, "a", rep, variant);
   if (!force && existsSync(path)) return JSON.parse(readFileSync(path, "utf8"));
-  const wd = buildWorkdir(source, vs);
-  const rec: CompileRecord = { source, viewSet: vs, backend: b.label, model: b.model ?? codexDefaultModel().model, condition: "a", schemaSha256: schemaHash(source), viewSetHash: viewSetHash(VIEW_SETS[vs]), samples: wd.sampleList, rounds: [] };
-  const r = await agentRun(source, vs, b, wd.prompt, wd.inputs, "a");
+  const wd = buildWorkdir(source, vs, variant);
+  const rec: CompileRecord = { source, viewSet: vs, backend: b.label, model: b.model ?? codexDefaultModel().model, condition: "a", schemaSha256: schemaShaFor(source, variant), viewSetHash: viewSetHash(VIEW_SETS[vs]), samples: wd.sampleList, rounds: [], rep, variant, keysSha256: keysHash() };
+  const r = await agentRun(source, vs, b, wd.prompt, wd.inputs, `a${variant === "types-only" ? "-typesonly" : ""}-r${rep}`);
   const e = evaluateAndSave(r, source, vs);
   rec.rounds.push(roundOf(0, r, e));
   if (r.outputs["transform.ts"]) rec.final = r.meta.runId;
@@ -147,9 +163,7 @@ export function keyFeedback(transformTs: string, source: Source, vs: ViewSet["na
   const runs = runOnDev(transformTs, source, vs, dev.map((p) => ({ patient: p.patient, asOf: EVAL_AS_OF })));
   const wrong: { local: string; patient: string; view: string; key: string; detail: string; items: string[]; sig: string }[] = [];
   for (const r of runs) {
-    const p = patientById(r.patient);
-    let exp = expectedFor(p, source, r.asOf, trapIndex(p));
-    if (vs === "uscore") exp = stripForUsCore(exp);
+    const exp = expectedWithItems(r.patient, source, r.asOf, vs);
     const local = dev.find((x) => x.patient === r.patient)!.sources[source]!;
     if (r.error) { wrong.push({ local, patient: r.patient, view: "-", key: "-", detail: `transform threw: ${r.error.slice(0, 300)}`, items: [], sig: "error" }); continue; }
     const sc = scoreRows(exp, rowsFor(vs, r.rows));
@@ -204,7 +218,7 @@ export async function compileWithFeedback(source: Source, vs: ViewSet["name"], b
   const path = recordPath(source, vs, b, cond);
   if (!force && existsSync(path)) return JSON.parse(readFileSync(path, "utf8"));
   const a = await compileA(source, vs, b);
-  const rec: CompileRecord = { ...a, condition: cond, rounds: [], startedFrom: a.final, final: a.final,
+  const rec: CompileRecord = { ...a, condition: cond, rounds: [], startedFrom: a.final, final: a.final, keysSha256: keysHash(),
     note: cond === "c" ? "CALIBRATION ONLY: key-based counterexamples from the dev split were fed back (cheating-for-calibration upper bound)." : "Prose-check discrepancies on dev-split items fed back." };
   if (!a.final) { save(path, rec); return rec; }
   const wd = buildWorkdir(source, vs);

@@ -66,7 +66,7 @@ export function projectUsCore(out: any): { medications: any[]; labs: any[]; prob
       ingredient: ingCoding?.display ?? paren, drug_name: text, status: MR_STATUS[r?.status] ?? r?.status,
       ...(dq ? { dose: { value: dq.value, unit: UCUM_DOSE[dq.code] ?? dq.unit } } : {}),
       frequency: r?.dosageInstruction?.[0]?.timing?.code?.text,
-      stop_reason: (r?.statusReason ?? []).flatMap((s: any) => s?.coding ?? []).find((c: any) => c?.system === "urn:folio:stop-reason")?.code,
+      stop_reason: [r?.statusReason].flat().filter(Boolean).flatMap((s: any) => s?.coding ?? []).find((c: any) => c?.system === "urn:folio:stop-reason")?.code,
       status_since: r?.status === "active" ? undefined : undefined,
       evidence: [],
     };

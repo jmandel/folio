@@ -1,0 +1,102 @@
+== github via proxy
+curl: (7) CONNECT tunnel failed, response 403
+000
+== github direct
+curl: (6) Could not resolve host: github.com
+000
+== raw.githubusercontent via proxy
+curl: (7) CONNECT tunnel failed, response 403
+000
+== model API via proxy
+405
+== model API direct
+curl: (6) Could not resolve host: api.anthropic.com
+000
+== home
+total 8
+drwxr-xr-x 7 jmandel jmandel  160 Oct 14 08:49 .
+drwxr-xr-x 3 nobody  nobody  4096 May 26  2020 ..
+drwx------ 2 jmandel jmandel   40 Oct 14 08:49 .cache
+drwx------ 6 jmandel jmandel  180 Oct 14 08:49 .claude
+-rw-r--r-- 1 jmandel jmandel 1408 Oct 14 08:49 .claude.json
+drwx------ 3 jmandel jmandel   80 Oct 14 08:49 .codex
+drwx------ 5 jmandel jmandel  100 Oct 14 08:49 .local
+drwx------ 3 jmandel jmandel   60 Oct 14 08:49 hobby
+/home/jmandel/.claude:
+total 12
+drwx------ 6 jmandel jmandel  180 Oct 14 08:49 .
+drwxr-xr-x 7 jmandel jmandel  160 Oct 14 08:49 ..
+-rw------- 1 jmandel jmandel 2897 Oct 14 04:58 .credentials.json
+-rw-r--r-- 1 jmandel jmandel   24 Oct 14 08:49 .last-cleanup
+drwxr-xr-x 2 jmandel jmandel   60 Oct 14 08:49 backups
+drwxr-xr-x 3 jmandel jmandel   60 Oct 14 08:49 session-env
+drwx------ 2 jmandel jmandel   80 Oct 14 08:49 sessions
+-rw-r--r-- 1 jmandel jmandel   50 Oct 14 08:49 settings.json
+drwxr-xr-x 2 jmandel jmandel   60 Oct 14 08:49 shell-snapshots
+
+/home/jmandel/.codex:
+total 12
+drwx------ 3 jmandel jmandel   80 Oct 14 08:49 .
+drwxr-xr-x 7 jmandel jmandel  160 Oct 14 08:49 ..
+-rw------- 1 jmandel jmandel 4150 Oct  5 14:01 auth.json
+drwxr-xr-x 3 jmandel jmandel 4096 Jul  9 16:28 packages
+/home/jmandel/hobby:
+folio
+
+/home/jmandel/hobby/folio:
+== repo files
+cat: /home/jmandel/hobby/folio/truth/TRAPS.md: No such file or directory
+ls: cannot access '/home/jmandel/hobby/folio/.worktrees/stage3/truth': No such file or directory
+ls: cannot access '/home/jmandel/.claude/projects': No such file or directory
+== /tmp and /run/user
+/run/user/1000:
+total 0
+drwxr-xr-x 2 jmandel jmandel 40 Oct 14 08:49 .
+drwxr-xr-x 3 nobody  nobody  60 Aug 27 19:11 ..
+
+/tmp:
+total 4
+drwxr-xr-x  5 jmandel jmandel  100 Oct 14 08:49 .
+dr-xr-xr-x 21 nobody  nobody  4096 May 13 12:27 ..
+drwx------  2 jmandel jmandel   60 Oct 14 08:49 cc-socks
+drwx------  3 jmandel jmandel   60 Oct 14 08:49 claude-1000
+drwx------  2 jmandel jmandel   80 Oct 14 08:49 folio-net
+== dbus
+Failed to set bus address: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user)
+DBUS=
+== env
+AI_AGENT=claude-code_2-1-299_agent
+ALL_PROXY=http://127.0.0.1:18080
+CLAUDECODE=1
+CLAUDE_CODE_CHILD_SESSION=1
+CLAUDE_CODE_DISABLE_CLAUDE_MDS=1
+CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+CLAUDE_CODE_ENTRYPOINT=sdk-cli
+CLAUDE_CODE_EXECPATH=/home/jmandel/.local/share/claude/versions/2.1.299
+CLAUDE_CODE_MESSAGING_SOCKET=/tmp/cc-socks/2.sock
+CLAUDE_CODE_MESSAGING_TOKEN=62367363e37d66c578a8338776e3d40f
+CLAUDE_CODE_SAFE_MODE=1
+CLAUDE_CODE_SESSION_ATTENDED=0
+CLAUDE_CODE_SESSION_ID=43a6f100-2553-4621-acfc-1f881577f10b
+CLAUDE_EFFORT=medium
+CLAUDE_PID=2
+COREPACK_ENABLE_AUTO_PIN=0
+DISABLE_AUTOUPDATER=1
+DISABLE_ERROR_REPORTING=1
+DISABLE_TELEMETRY=1
+GIT_EDITOR=true
+HOME=/home/jmandel
+HTTPS_PROXY=http://127.0.0.1:18080
+HTTP_PROXY=http://127.0.0.1:18080
+LANG=C.UTF-8
+NO_PROXY=localhost,127.0.0.1
+NoDefaultCurrentDirectoryInExePath=1
+PATH=/home/jmandel/.local/bin:/usr/local/bin:/usr/bin:/bin
+PWD=/home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/isolation-probe-v2/claude/20261014T134946699Z-jm6q
+SHELL=/bin/bash
+SHLVL=1
+TERM=dumb
+USER=jmandel
+_=/usr/bin/env
+http_proxy=http://127.0.0.1:18080
+https_proxy=http://127.0.0.1:18080

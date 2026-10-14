@@ -8,6 +8,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 
 import { homedir, tmpdir } from "node:os";
 import { join } from "node:path";
 import { findRepoRoot } from "../../agent-runner/src/index.ts";
+import { ALLOW, FORWARDER, PROXY_PORT, spawnEgressProxy } from "./egress.ts";
 
 const HOME = homedir();
 
@@ -35,12 +36,24 @@ export function codexDefaultModel(): { model?: string; effort?: string } {
   } catch { return {}; }
 }
 
+/**
+ * Wrap an agent CLI command in bubblewrap:
+ * - filesystem: read-only root, empty tmpfs over $HOME, /tmp and /run/user/<uid> (no D-Bus or portals);
+ *   mounted back: the run dir (rw), CLI binaries, the CLI auth file, a fresh ~/.claude.json, TypeScript (ro);
+ * - no network (--unshare-net): the only route out is the allowlisting CONNECT proxy (egress.ts);
+ * - no IPC namespace sharing, new PID namespace, cleared environment with an explicit minimal set.
+ */
 export function sandboxWrap(cmd: string[], runDir: string): string[] {
   const repo = findRepoRoot();
   const ro = (p: string, to = p) => (existsSync(p) ? ["--ro-bind", p, to] : []);
   const rw = (p: string, to = p) => (existsSync(p) ? ["--bind", p, to] : []);
-  // Empty dir in the run dir to mount TypeScript on (bwrap needs the mount point inside a bind mount).
+  const backend = cmd[0] === "codex" ? "codex" : "claude";
+  const egress = spawnEgressProxy(runDir, ALLOW[backend]);
+  writeFileSync(join(egress.socketDir, "fwd.ts"), FORWARDER);
+  process.once("exit", () => egress.stop());
   mkdirSync(join(runDir, "node_modules", "typescript"), { recursive: true });
+  const uid = process.getuid?.() ?? 1000;
+  const proxy = `http://127.0.0.1:${PROXY_PORT}`;
   const args = [
     "bwrap",
     "--ro-bind", "/", "/",
@@ -48,33 +61,36 @@ export function sandboxWrap(cmd: string[], runDir: string): string[] {
     "--proc", "/proc",
     "--tmpfs", "/tmp",
     "--tmpfs", HOME,
-    // CLI binaries.
+    "--tmpfs", `/run/user/${uid}`,
     ...ro(join(HOME, ".local/share/claude")),
     ...ro(join(HOME, ".local/bin")),
     ...ro(join(HOME, ".codex/packages")),
-    // Auth only (read-write so token refreshes persist).
     ...rw(join(HOME, ".claude/.credentials.json")),
     ...rw(join(HOME, ".codex/auth.json")),
+    "--ro-bind", egress.socketDir, "/tmp/folio-net",
   ];
-  if (cmd[0] === "codex") {
+  if (backend === "codex") {
     codexCfg ??= codexConfig();
     args.push("--ro-bind", codexCfg, join(HOME, ".codex/config.toml"));
-  }
-  if (cmd[0] === "claude") {
-    // A fresh ~/.claude.json so no project history or settings leak in.
+  } else {
     const dir = mkdtempSync(join(tmpdir(), "folio-claude-json-"));
     writeFileSync(join(dir, "claude.json"), JSON.stringify({ hasCompletedOnboarding: true, autoUpdates: false }) + "\n");
     args.push("--bind", join(dir, "claude.json"), join(HOME, ".claude.json"));
   }
+  const env: Record<string, string> = {
+    HOME, USER: process.env.USER ?? "user", PATH: `${HOME}/.local/bin:/usr/local/bin:/usr/bin:/bin`, LANG: "C.UTF-8", TERM: "dumb",
+    HTTPS_PROXY: proxy, HTTP_PROXY: proxy, https_proxy: proxy, http_proxy: proxy, ALL_PROXY: proxy, NO_PROXY: "localhost,127.0.0.1",
+    DISABLE_TELEMETRY: "1", DISABLE_ERROR_REPORTING: "1", CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1",
+  };
   args.push(
     "--bind", runDir, runDir,
     ...ro(join(repo, "node_modules/typescript"), join(runDir, "node_modules/typescript")),
     "--chdir", runDir,
-    "--unshare-pid", "--die-with-parent",
-    "--setenv", "HOME", HOME,
+    "--unshare-pid", "--unshare-net", "--unshare-ipc", "--unshare-uts", "--die-with-parent",
+    "--clearenv", ...Object.entries(env).flatMap(([k, v]) => ["--setenv", k, v]),
     "--",
+    "sh", "-c", `bun /tmp/folio-net/fwd.ts /tmp/folio-net/proxy.sock ${PROXY_PORT} & sleep 0.5; exec "$@"`, "sh",
     ...cmd,
   );
   return args;
 }
-

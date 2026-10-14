@@ -1,5 +1,5 @@
 /**
- * Consumer views, version 1: the small shapes a patient-facing chart app reads.
+ * Consumer views, version 2: the small shapes a patient-facing chart app reads.
  *
  * These are defined by the consumer, not by any source. A mapper turns one source's FOLIO record items
  * for one patient into these rows. The consumer merges rows from several sources itself, so a mapper
@@ -18,14 +18,21 @@
  *   the items in scope: an item listed in another in-scope item's `supersedes` or `retracts` (same
  *   issuer) is not current; supersession is transitive. Use only current items, except where a view
  *   below says otherwise.
- * - **Time zone.** The consumer displays everything in America/Chicago. "Local date" and "local time"
- *   below mean wall-clock date/time in America/Chicago (UTC-6 standard, UTC-5 daylight time).
+ * - **Time zone.** The consumer displays everything in America/Chicago, the patients' home zone. "Local
+ *   date" and "local time" below mean wall-clock date/time in America/Chicago (UTC-6 standard, UTC-5
+ *   daylight time). A date-time with no offset and no zone (for example a phone's wall clock) is taken to
+ *   be America/Chicago local time: report it as written, do not shift it, and do not leave it out.
  * - **Partial dates.** `PartialDate` strings keep the precision the source actually knows: "2016"
  *   means some time in 2016, never 2016-01-01. Never pad a year-only or month-only date.
  * - **Only what the source records.** Rows come from structured payload entries. Narrative text may be
  *   used to understand an entry but must not be the only basis for a row.
  * - **Evidence.** Every row lists the items (and payload entry ids) it was built from, so the consumer
- *   can show the source text behind a fact.
+ *   can show the source text behind a fact. Cite at least the item whose entry gives the row's current
+ *   state.
+ * - **Sensitive entries are reported, never dropped.** Report every entry the source holds, including
+ *   ones it marks restricted, confidential or sensitive. Mark such rows with `sensitivity` (see
+ *   `Sensitivity`). Whether a sensitive fact is shown or shared is decided later, by the patient, at
+ *   disclosure time; it is never decided by a mapper.
  * - **Determinism.** Same input, same output: no clock, randomness, network or file access.
  */
 
@@ -74,6 +81,19 @@ export type PartialDate = string;
 /** The items (and entries inside them) a row was built from. At least one. */
 export type Evidence = { item_id: string; entry_id?: string }[];
 
+/**
+ * Sensitivity categories, for rows whose disclosure a patient may want to control separately.
+ * - 'mental-health': behavioral or mental health conditions and the medicines used for them.
+ * - 'substance-use': substance use disorders and their treatment.
+ * - 'sexual-reproductive-health': sexual and reproductive health, including pregnancy and contraception.
+ * - 'hiv-sti': HIV and other sexually transmitted infections.
+ * - 'genetic': genetic test results and genetic conditions.
+ * Set a category when the source marks the entry restricted or sensitive (map the source's own category,
+ * e.g. a behavioral-health restriction is 'mental-health'). You may also set one when the entry plainly
+ * belongs to a category. Omit the field when none applies.
+ */
+export type Sensitivity = 'mental-health' | 'substance-use' | 'sexual-reproductive-health' | 'hiv-sti' | 'genetic';
+
 // ─────────────────────────────────────────────────────────────────────────────────────────────────
 // Medications
 // ─────────────────────────────────────────────────────────────────────────────────────────────────
@@ -114,6 +134,8 @@ export interface MedicationRow {
    * - 'stopped': discontinued.
    * - 'unknown': the source lists the drug but records no decision about whether it is being taken
    *   (e.g. a hospital list marked as not reconciled).
+   * On a patient's own list, a medicine marked as being taken but annotated as paused or stopped for now
+   * (e.g. a note "doctor told me to stop for now") is 'held'.
    */
   status: 'active' | 'held' | 'stopped' | 'unknown';
   /**
@@ -125,8 +147,11 @@ export interface MedicationRow {
   /**
    * Amount per administration currently prescribed (for 'held' and 'stopped': the amount when it was
    * held or stopped). For a patient's own list: the amount the patient says they take, if they give
-   * one. `unit` is one of the listed units; convert source spellings ("unit", "UNT", "[iU]" ->
-   * "units"; "tab"/"tablets" -> "tablet"). Omit when the source gives no single amount.
+   * one; a direction that names no count ("morning", "bedtime") means one tablet or capsule. `unit` is
+   * one of the listed units; convert source spellings ("unit", "UNT", "[iU]" -> "units"). Express an
+   * amount in tablets as a mass when the record gives the strength per tablet ("200 mg" strength,
+   * "take 2" -> 400 mg); use 'tablet' only when the strength is unknown. Omit when the source gives no
+   * single amount (a range such as "1 or 2", a sliding scale).
    */
   dose?: { value: number; unit: 'mg' | 'mcg' | 'units' | 'mL' | 'tablet' };
   /**
@@ -151,6 +176,8 @@ export interface MedicationRow {
   patient_reported: boolean;
   /** True when the source says the drug was bought without a prescription. Omit otherwise. */
   otc?: boolean;
+  /** See `Sensitivity`. */
+  sensitivity?: Sensitivity[];
   evidence: Evidence;
 }
 
@@ -168,9 +195,11 @@ export interface MedicationRow {
  *   was ruled out, or one that was only suspected (working/provisional) and never confirmed.
  * - Billing codes attached to a visit or claim are not problem-list entries, unless the source says
  *   its problem list is built from them.
- * - An adverse effect of a drug (however the source records it, including as an ICD-10 T-code
- *   diagnosis) is an `AllergyIntoleranceRow` of type 'adverse_reaction', not a problem. The illness it
- *   caused (e.g. ketoacidosis) is still a problem.
+ * - **Drug-caused diagnoses.** A diagnosis the source attributes to a drug (for example "SGLT2
+ *   inhibitor-associated ketoacidosis", "ACE inhibitor-associated angioedema", or an ICD-10 T-code
+ *   "adverse effect of …" entry) yields an `AllergyIntoleranceRow` for the drug (see there) in addition
+ *   to a ProblemRow for the condition it caused. A T-code entry that names only the adverse effect and no
+ *   condition yields the AllergyIntoleranceRow alone.
  */
 export interface ProblemRow {
   /** The condition as the source words it, e.g. "Chronic kidney disease stage 3a". */
@@ -194,6 +223,8 @@ export interface ProblemRow {
   ckd_stage?: 'G1' | 'G2' | 'G3a' | 'G3b' | 'G4' | 'G5';
   /** For chronic kidney disease only: KDIGO albuminuria category as recorded ('A1', 'A2', 'A3'), if the source records one. */
   albuminuria?: 'A1' | 'A2' | 'A3';
+  /** See `Sensitivity`. */
+  sensitivity?: Sensitivity[];
   evidence: Evidence;
 }
 
@@ -202,24 +233,40 @@ export interface ProblemRow {
 // ─────────────────────────────────────────────────────────────────────────────────────────────────
 
 /**
- * One substance the patient should avoid or be careful with, as of `asOf`. Only current entries: an
- * entry the source marks inactive or invalid is not reported. "No known drug allergies" is not a row.
+ * One substance the patient should avoid, or be careful with, because of a past reaction, as of `asOf`.
+ * This is a list of substances to avoid; it does not claim a mechanism. Only current entries: an entry
+ * the source marks inactive or invalid is not reported. "No known drug allergies" is not a row.
+ *
+ * A diagnosis the source attributes to a drug (see `ProblemRow`) also yields a row here. Its substance
+ * is the specific drug when the record names it; when the diagnosis names only a drug class, it is the
+ * one drug of that class on the patient's medication list in the same item if there is exactly one;
+ * otherwise the class as written (e.g. "SGLT2 inhibitor").
  */
 export interface AllergyIntoleranceRow {
-  /** Substance: generic ingredient name, lower case, for drugs ("lisinopril"); as written otherwise. */
+  /** Substance: generic ingredient name, lower case, for drugs ("lisinopril"); a drug class or other substance as written otherwise. */
   substance: string;
   /** RxNorm ingredient CUI, if the source gives one. */
   rxnorm_ingredient?: string;
   /**
-   * What kind of reaction, by its nature (not by which list the source keeps it on):
-   * - 'allergy': immune-mediated (hives, rash, angioedema, anaphylaxis, bronchospasm).
-   * - 'intolerance': a non-immune, predictable side effect that made the drug unacceptable (e.g.
-   *   ACE-inhibitor cough, GI upset).
-   * - 'adverse_reaction': a serious harmful event attributed to the drug that is not an allergy (e.g.
-   *   drug-associated ketoacidosis, lactic acidosis).
-   * If the source keeps all three on one undifferentiated list, decide from the recorded reaction.
+   * What kind of reaction it was, by what happened (not by which list the source keeps it on, and not by
+   * mechanism):
+   * - 'hypersensitivity': a hypersensitivity-type reaction: hives, rash, angioedema, anaphylaxis,
+   *   bronchospasm. Includes ACE-inhibitor angioedema, which is not immune-mediated.
+   * - 'side_effect': a predictable, non-dangerous side effect that made the drug unacceptable (e.g.
+   *   ACE-inhibitor cough, GI upset, myalgia).
+   * - 'serious_adverse_event': serious harm attributed to the drug that is not a hypersensitivity-type
+   *   reaction (e.g. drug-associated ketoacidosis, lactic acidosis, severe hyperkalemia).
+   * If the source keeps all of these on one undifferentiated list, decide from the recorded reaction.
    */
-  type: 'allergy' | 'intolerance' | 'adverse_reaction';
+  reaction_type: 'hypersensitivity' | 'side_effect' | 'serious_adverse_event';
+  /**
+   * Mechanism, only as far as the record or well-established pharmacology says:
+   * - 'immune': immune-mediated (IgE or T-cell), stated by the source or by a confirmed allergy test.
+   * - 'non_immune': known not to be immune-mediated (e.g. ACE-inhibitor cough or angioedema, which are
+   *   bradykinin-mediated; drug-associated ketoacidosis).
+   * - 'unknown': not established. Use this when in doubt.
+   */
+  mechanism: 'immune' | 'non_immune' | 'unknown';
   /** Reaction(s) as the source words them, joined with "; ". Omit if not recorded. */
   reaction?: string;
   /**
@@ -232,6 +279,8 @@ export interface AllergyIntoleranceRow {
   criticality: 'low' | 'high' | 'unknown';
   /** When the reaction began, at the precision the source knows. */
   onset?: { value: PartialDate; precision: 'year' | 'month' | 'day' };
+  /** See `Sensitivity`. */
+  sensitivity?: Sensitivity[];
   evidence: Evidence;
 }
 

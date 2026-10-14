@@ -48,7 +48,7 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
     const cough = /cough|nausea|upset|myalgia/i.test(e.reaction ?? "");
     const adverse = /ketoacidosis|dka|lactic|acidosis/i.test(e.reaction ?? "");
     allergies.push({
-      substance: String(e.substance).toLowerCase(), ...(e.rxnorm_ingredient ? { rxnorm_ingredient: e.rxnorm_ingredient } : {}), type: adverse ? "adverse_reaction" : cough ? "intolerance" : "allergy",
+      substance: String(e.substance).toLowerCase(), ...(e.rxnorm_ingredient ? { rxnorm_ingredient: e.rxnorm_ingredient } : {}), reaction_type: adverse ? "serious_adverse_event" : cough ? "side_effect" : "hypersensitivity", mechanism: "unknown",
       ...(e.reaction ? { reaction: e.reaction } : {}), criticality: e.severity === "mild" ? "low" : e.severity === "severe" ? "high" : "unknown", evidence: [{ item_id: last.id, entry_id: k }],
     });
   }
@@ -58,14 +58,14 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
     if (e.type === "diagnosis") {
       const adv = String(e.label).match(/^Adverse effect of (.+)$/i);
       if (adv) {
-        if (!allergies.some((a) => a.substance === adv[1].toLowerCase())) allergies.push({ substance: adv[1].toLowerCase(), type: "adverse_reaction", criticality: "unknown", evidence: [{ item_id: d.id, entry_id: k }] });
+        if (!allergies.some((a) => a.substance === adv[1].toLowerCase())) allergies.push({ substance: adv[1].toLowerCase(), reaction_type: "serious_adverse_event", mechanism: "unknown", criticality: "unknown", evidence: [{ item_id: d.id, entry_id: k }] });
         continue;
       }
-      const cls = /SGLT2 inhibitor-associated/i.test(e.label) ? /empagliflozin|dapagliflozin|canagliflozin/ : /ACE inhibitor-associated/i.test(e.label) ? /lisinopril|enalapril/ : undefined;
+      const cls = /SGLT2 inhibitor-associated/i.test(e.label) ? { re: /empagliflozin|dapagliflozin|canagliflozin/, text: "SGLT2 inhibitor" } : /ACE inhibitor-associated/i.test(e.label) ? { re: /lisinopril|enalapril/, text: "ACE inhibitor" } : undefined;
       if (cls && e.status !== "working" && e.status !== "ruled_out") {
-        const drug = docs.flatMap((x) => Object.values(x.payload) as any[]).find((m) => m.type === "home_med" && cls.test(String(m.drug_name).toLowerCase()));
-        const sub = drug ? String(drug.drug_name).toLowerCase().split(/\s\d/)[0] : undefined;
-        if (sub && !allergies.some((a) => a.substance === sub)) allergies.push({ substance: sub, type: /angioedema/i.test(e.label) ? "allergy" : "adverse_reaction", reaction: e.label, criticality: "high", evidence: [{ item_id: d.id, entry_id: k }] });
+        const same = (Object.values(d.payload) as any[]).filter((m) => m.type === "home_med" && cls.re.test(String(m.drug_name).toLowerCase()));
+        const sub = same.length === 1 ? String(same[0].drug_name).toLowerCase().split(/\s\d/)[0] : cls.text;
+        if (!allergies.some((a) => a.substance === sub)) allergies.push({ substance: sub, reaction_type: /angioedema/i.test(e.label) ? "hypersensitivity" : "serious_adverse_event", mechanism: "non_immune", reaction: e.label, criticality: "high", evidence: [{ item_id: d.id, entry_id: k }] });
       }
       const key = (e.icd10cm ?? e.label).slice(0, 3) + (/^E1[013]\.1/.test(e.icd10cm ?? "") ? ".1" : "");
       const fam = /pancreatitis/i.test(e.label) ? "K85" : key;

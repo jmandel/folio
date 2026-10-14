@@ -27,6 +27,8 @@ export interface KeyRow<F> {
   modality: Modality;
   /** Not scored: recency used to keep one row per ingredient (the view's rule) when a source has several. */
   order?: number;
+  /** Item ids (this source) that carry the fact; set by the harness before scoring `evidence`. */
+  items?: string[];
 }
 
 export interface MedKey {
@@ -38,12 +40,24 @@ export interface MedKey {
   dose?: { value: number; unit: string };
   frequency?: string[];             // acceptable codes
   stop_reason?: string;
+  patient_reported?: boolean;
+  otc?: boolean;
+  sensitivity?: string[];
   /** false: do not score `ingredient` (US Core output need not carry it when an RxNorm product code is given). */
   scoreIngredient?: boolean;
 }
-export interface ProblemKey { family: string; condition: string; icd10?: string; status: "active" | "resolved"; ckd_stage?: string; onset?: { value: string; precision: string } }
-export interface AllergyKey { substance: string; type: "allergy" | "intolerance" | "adverse_reaction"; criticality?: "low" | "high" | "unknown"; onset?: { value: string; precision: string } }
-export interface LabKey { analyte: string; value: number; comparator?: string; unit: string; collected: string; egfr_equation?: string }
+export interface ProblemKey { family: string; condition: string; icd10?: string; status: "active" | "resolved"; ckd_stage?: string; onset?: { value: string; precision: string }; sensitivity?: string[] }
+export type ReactionType = "hypersensitivity" | "side_effect" | "serious_adverse_event";
+export interface AllergyKey {
+  substance: string; reaction_type: ReactionType; criticality?: "low" | "high" | "unknown"; onset?: { value: string; precision: string };
+  /** Words the recorded reaction must share with the mapper's `reaction` (any one suffices). */
+  reaction?: string[];
+  /** Acceptable mechanisms: the truth knows no immune-mediated reaction, so 'immune' is always wrong here. */
+  mechanism?: string[];
+}
+const RT: Record<string, ReactionType> = { allergy: "hypersensitivity", intolerance: "side_effect", "adverse-reaction": "serious_adverse_event" };
+const words = (xs: string[]) => [...new Set(xs.join(" ").toLowerCase().split(/[^a-z]+/).filter((w) => w.length > 3))];
+export interface LabKey { analyte: string; value: number; comparator?: string; unit: string; collected: string; egfr_equation?: string; status?: "final" | "preliminary" }
 export interface VitalKey {
   setting: "clinic" | "hospital" | "home"; local_time: string;
   systolic_mmhg?: number; diastolic_mmhg?: number; repeat_systolic_mmhg?: number; repeat_diastolic_mmhg?: number;
@@ -56,7 +70,7 @@ export interface Expected {
   allergies: KeyRow<AllergyKey>[];
   labs: KeyRow<LabKey>[];
   vitals: KeyRow<VitalKey>[];
-  anti: KeyRow<Partial<MedKey & ProblemKey & LabKey & VitalKey> & { reason: string }>[];
+  anti: KeyRow<Record<string, any> & { reason: string }>[];
 }
 
 export const SOURCE_KEY: Record<string, SourceKey> = { riverside: "A", northgate: "B", lakeview: "C", homelog: "P" };
@@ -93,7 +107,12 @@ const round = (v: number, d: number) => Number(v.toFixed(d));
 
 // ─── Trap tags and modality ────────────────────────────────────────────────────────────────────────
 
-export interface TrapIndex { /** truth id -> traps carried by the fact in the truth (fact-level and assignments). */ fact: Map<string, Set<string>>; /** `${source}|${truthId}` -> traps on rendered items of that source mentioning the fact. */ item: Map<string, Set<string>> }
+export interface TrapIndex {
+  /** truth id -> traps carried by the fact in the truth (fact-level and assignments). */ fact: Map<string, Set<string>>;
+  /** `${source}|${truthId}` -> traps on rendered items of that source mentioning the fact. */ item: Map<string, Set<string>>;
+  /** `${source}|${truthId}` -> earliest `recorded` (epoch ms) of a rendered item of that source carrying the fact. */ recorded?: Map<string, number>;
+  /** `${source}|${renderKey}` -> `recorded` of that rendered item (HomeLog list saves). */ itemRecorded?: Map<string, number>;
+}
 
 export function factTraps(p: Patient): Map<string, Set<string>> {
   const ft = new Map<string, Set<string>>();
@@ -129,7 +148,11 @@ export function expectedFor(p: Patient, source: string, asOf: string, ix: TrapIn
   if (s === "C") lakeview(p, t, e, ix);
   if (s === "A") riverside(p, t, e, ix);
   if (s === "P") homelog(p, t, e, ix);
-  // The view keeps one row per ingredient: the most recent line/order/entry.
+  // Scope by publication first: a fact counts only once some item of this source carrying it was recorded.
+  if (ix.recorded) for (const view of ["medications", "problems", "allergies", "labs", "vitals"] as const) {
+    (e as any)[view] = (e[view] as KeyRow<any>[]).filter((r) => r.basis.some((b) => (ix.recorded!.get(`${s}|${b}`) ?? Infinity) <= t));
+  }
+  // Then the view's one row per ingredient: the most recent line/order/entry.
   const best = new Map<string, KeyRow<MedKey>>();
   for (const r of e.medications) {
     const k = r.fields.ingredientDerivable ? r.fields.ingredient : `name:${r.fields.names[0]}`;
@@ -197,6 +220,7 @@ function northgate(p: Patient, t: number, e: Expected, ix: TrapIndex) {
       ingredient: ing, names: [drug(d.product).scdName], ingredientDerivable: true, status: cur.status as MedKey["status"],
       status_since: cur.status === "active" ? undefined : ld(ev[sinceIdx].at),
       dose: doseOf(d.dose), frequency: FREQ_OK[d.frequency], stop_reason: cur.status === "stopped" ? h?.stopReason ?? "other" : undefined,
+      patient_reported: false, ...(l.med.sensitive ? { sensitivity: ["mental-health"] } : {}),
     }, [l.med.id], "B", ix, modality(l.med, "B"), l.outside ? ["T1"] : []));
     e.medications[e.medications.length - 1].order = ms(cur.at);
   }
@@ -210,13 +234,13 @@ function northgate(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     const icd = [...bh].reverse().find((h) => h.icd10)?.icd10 ?? c.coding.find((x) => x.system === "icd10")!.code;
     e.problems.push(row("problems", {
       family: family(icd, c.name), condition: c.name, icd10: icd, status: last.status === "resolved" ? "resolved" : "active",
-      ...(/^N18/.test(icd) ? { ckd_stage: stageOf(stage).ckd_stage } : {}), onset: onsetOf(c.onset),
+      ...(/^N18/.test(icd) ? { ckd_stage: stageOf(stage).ckd_stage } : {}), onset: onsetOf(c.onset), ...(c.sensitive ? { sensitivity: ["mental-health"] } : {}),
     } as ProblemKey, [c.id], "B", ix, modality(c, "B")));
   }
 
   // Allergies.
   for (const a of p.allergies.filter((x) => x.recordedBy === "B" && sortKey(x.recordedAt) <= t)) {
-    e.allergies.push(row("allergies", { substance: a.substance.display, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type, criticality: a.criticality, onset: onsetOf(a.onset) } as AllergyKey, [a.id], "B", ix, modality(a, "B")));
+    e.allergies.push(row("allergies", { substance: a.substance.display, reaction_type: RT[a.type], criticality: a.criticality, onset: onsetOf(a.onset), reaction: words(a.reactions), mechanism: ["non_immune", "unknown"] } as AllergyKey, [a.id], "B", ix, modality(a, "B")));
   }
 
   // Imported results (copies of Lakeview results with copies including B).
@@ -246,7 +270,7 @@ function labRows(p: Patient, l: LabResult, s: "B" | "C", t: number, e: Expected,
   const mod = modality(l, s);
   if (l.analyte === "egfr") {
     const rep = (l.reported ?? []).find((r) => r.equation === "ckd-epi-2009-nonaa") ?? (l.reported ?? []).find((r) => r.equation === "ckd-epi-2021") ?? { equation: "ckd-epi-2021" as const, value: l.value };
-    const fields: LabKey = { analyte: "egfr", value: rep.value, ...(rep.comparator ? { comparator: rep.comparator } : {}), unit: UNIT.egfr, collected: l.collectedAt, egfr_equation: rep.equation === "ckd-epi-2021" ? "ckd-epi-2021" : "ckd-epi-2009" };
+    const fields: LabKey = { status: "final", analyte: "egfr", value: rep.value, ...(rep.comparator ? { comparator: rep.comparator } : {}), unit: UNIT.egfr, collected: l.collectedAt, egfr_equation: rep.equation === "ckd-epi-2021" ? "ckd-epi-2021" : "ckd-epi-2009" };
     const aa = (l.reported ?? []).find((r) => r.equation === "ckd-epi-2009-aa");
     // eGFR rows depend on the creatinine they were calculated from.
     const cr = p.labs.find((x) => x.id === l.derivedFrom?.[0]);
@@ -257,7 +281,7 @@ function labRows(p: Patient, l: LabResult, s: "B" | "C", t: number, e: Expected,
     return;
   }
   const v = round(l.value, DEC_C[l.analyte] ?? 1);
-  const fields: LabKey = { analyte: a, value: v, ...(l.comparator ? { comparator: l.comparator } : {}), unit: UNIT[a], collected: l.collectedAt };
+  const fields: LabKey = { status: "final", analyte: a, value: v, ...(l.comparator ? { comparator: l.comparator } : {}), unit: UNIT[a], collected: l.collectedAt };
   if (withdrawn) { e.anti.push(row("labs", { ...fields, reason: "result withdrawn by the lab (corrected away)" }, [l.id], s, ix, mod, ["T3"])); return; }
   e.labs.push(row("labs", fields, [l.id], s, ix, mod));
 }
@@ -281,7 +305,7 @@ function lakeview(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     const status = last.status === "stopped" ? "stopped" : last.status === "held" ? "held" : "active";
     e.medications.push(row("medications", {
       ingredient: d.ingredient, names: [`${d.ingredient} ${d.strength} mg ${d.form}`], ingredientDerivable: true, status,
-      status_since: status === "active" ? undefined : ld(ce[i].at), dose: doseOf(ce[0].dose ?? m.dose), frequency: FREQ_OK[m.frequency],
+      status_since: status === "active" ? undefined : ld(ce[i].at), dose: doseOf(ce[0].dose ?? m.dose), frequency: FREQ_OK[m.frequency], patient_reported: false,
     }, [m.id], "C", ix, modality(m, "C"), ce.some((h) => h.status === "held") ? ["T1"] : []));
     e.medications[e.medications.length - 1].order = sortKey(last.at);
   }
@@ -323,6 +347,15 @@ function lakeview(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   }
 }
 
+/** The home medication list a Riverside document re-lists for an encounter (renderer rule). */
+function homeList(p: Patient, enc: Patient["encounters"][number]): Medication[] {
+  return p.meds.filter((m) => m.setting !== "inpatient" && m.visibility.A && !m.otc).filter((m) => {
+    const before = m.history.filter((h) => h.by !== "A" && h.by !== "P" && (!h.at.includes("T") || ms(h.at) < ms(enc.start)));
+    const st = before[before.length - 1]?.status;
+    return st === "active" || st === "held";
+  });
+}
+
 // Riverside: documents; each re-lists home meds and allergies (T15); labs are copies (T14); UTC times (T10).
 function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   const docs = p.encounters.filter((x) => x.source === "A").flatMap((enc) => enc.documents.map((doc) => ({ enc, doc })))
@@ -344,7 +377,7 @@ function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     const d = medDoseAt(p, m.id, last?.dose ? doc.signedAt : enc.start);
     e.medications.push(row("medications", {
       ingredient: d.drug.ingredient, names: [`${d.drug.ingredient} ${d.drug.strength} mg ${d.drug.form}`], ingredientDerivable: true, status,
-      dose: doseOf(d.dose), frequency: FREQ_OK[d.frequency],
+      dose: doseOf(d.dose), frequency: FREQ_OK[d.frequency], patient_reported: false,
     }, [m.id], "A", ix, modality(m, "A"), ["T15", ...(status === "held" ? ["T1"] : [])]));
   }
 
@@ -353,22 +386,40 @@ function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   for (const a of p.allergies.filter((x) => x.visibility.A && ms(x.recordedAt.includes("T") ? x.recordedAt : x.recordedAt + "T00:00:00Z") < ms(enc.start))) {
     seen.add(a.id);
     const sev = a.type === "intolerance" ? "mild" : a.criticality === "high" ? "severe" : "moderate";
-    e.allergies.push(row("allergies", { substance: a.substance.display, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type, ...(sev !== "moderate" ? { criticality: a.criticality } : {}) } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
+    e.allergies.push(row("allergies", { substance: a.substance.display, reaction_type: RT[a.type], ...(sev !== "moderate" ? { criticality: a.criticality } : {}), reaction: words([a.reactions[0]]), mechanism: ["non_immune", "unknown"] } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
   }
-  // A diagnosis that names a drug-caused condition (SGLT2i-associated DKA, ACE-inhibitor angioedema) is the
-  // view's allergy row too: the truth links the reaction to the condition it caused (`manifestation`).
-  for (const { doc: d } of docs) for (const it of d.plan ?? []) {
-    if (it.kind !== "dx") continue;
-    const a = p.allergies.find((x) => x.manifestation === it.conditionId && x.visibility.A);
-    if (!a || seen.has(a.id)) continue;
-    seen.add(a.id);
-    e.allergies.push(row("allergies", { substance: a.substance.display, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
+  // Views v2: a diagnosis the source attributes to a drug class (SGLT2i-associated DKA, ACE-inhibitor
+  // angioedema) also yields a row here. Substance: the one drug of that class on the same document's home
+  // medication list if there is exactly one, else the class as written. The truth links the reaction to
+  // the condition it caused (`manifestation`).
+  const CLASS_OF: [RegExp, string[], string, ReactionType][] = [
+    [/SGLT2 inhibitor-associated/i, ["sglt2i"], "SGLT2 inhibitor", "serious_adverse_event"],
+    [/ACE inhibitor-associated/i, ["acei"], "ACE inhibitor", "hypersensitivity"],
+  ];
+  const doneCond = new Set<string>();
+  for (const { enc: en, doc: d } of docs) for (const it of d.plan ?? []) {
+    if (it.kind !== "dx" || doneCond.has(it.conditionId)) continue;
+    const c = p.conditions.find((x) => x.id === it.conditionId)!;
+    const hs = c.history.filter((h) => h.recordedBy === "A" && ms(h.at.includes("T") ? h.at : h.at + "T00:00:00Z") <= ms(d.signedAt));
+    const label = [...hs].reverse().find((h) => h.label)?.label ?? c.name;
+    const st = hs[hs.length - 1]?.status;
+    const cls = CLASS_OF.find(([re]) => re.test(label) || (re.source.startsWith("SGLT2") && hs.some((h) => h.subtype === "sglt2i")));
+    if (!cls || st === "working" || st === "ruled-out") continue;
+    doneCond.add(c.id);
+    const onList = homeList(p, en).filter((m) => cls[1].includes(drug(m.product).klass));
+    const substance = onList.length === 1 ? drug(onList[0].product).ingredient : cls[2];
+    const a = p.allergies.find((x) => x.manifestation === c.id);
+    if (a && seen.has(a.id)) continue;
+    if (a) seen.add(a.id);
+    // One row per substance: a substance already on the allergy list is not repeated.
+    if (e.allergies.some((x) => x.fields.substance === substance)) continue;
+    e.allergies.push(row("allergies", { substance, reaction_type: cls[3], mechanism: ["non_immune", "unknown"] } as AllergyKey, a ? [a.id, c.id] : [c.id], "A", ix, a ? modality(a, "A") : "structured", ["T18"]));
   }
   for (const { doc: d } of docs) for (const it of d.plan ?? []) {
     if (it.kind !== "adverse-dx" || seen.has(it.allergyId)) continue;
     seen.add(it.allergyId);
     const a = p.allergies.find((x) => x.id === it.allergyId)!;
-    e.allergies.push(row("allergies", { substance: a.substance.display, type: "adverse_reaction" } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
+    e.allergies.push(row("allergies", { substance: a.substance.display, reaction_type: RT[a.type], mechanism: ["non_immune", "unknown"] } as AllergyKey, [a.id], "A", ix, modality(a, "A"), ["T18"]));
   }
 
   // Problems: latest appearance of each condition in any document's diagnosis or history list.
@@ -399,9 +450,10 @@ function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   for (const id of labIds) {
     const l = p.labs.find((x) => x.id === id)!;
     const a = analyteName(l.analyte);
+    const final = docs.some(({ doc: d }) => (d.plan ?? []).some((it) => it.kind === "lab" && it.labIds.includes(id)) && (!l.finalAt || ms(d.signedAt) >= ms(l.finalAt)));
     e.labs.push(row("labs", {
       analyte: a, value: round(l.value, DEC_A[l.analyte] ?? 1), ...(l.comparator ? { comparator: l.comparator } : {}), unit: UNIT[a], collected: l.collectedAt,
-      ...(a === "egfr" ? { egfr_equation: "ckd-epi-2021" } : {}),
+      ...(a === "egfr" ? { egfr_equation: "ckd-epi-2021" } : {}), status: final ? "final" : "preliminary",
     }, [l.id], "A", ix, modality(l, "A"), ["T14", "T10"]));
   }
 
@@ -423,10 +475,22 @@ const BRAND_OK = (name: string, ingredient: string, brand?: string) => {
   return n.includes(ingredient.split(" ").slice(-1)[0]) || (!!brand && n.includes(brand.toLowerCase()));
 };
 
+/** Views v2 dose rule for a patient's list entry: count x strength; no count named = 1; ranges and conditions omit. */
+function homeDose(strength?: string, how?: string): { value: number; unit: string } | undefined {
+  if (!strength) return undefined;
+  if (/ if | or |sliding/i.test(how ?? "")) return undefined;
+  const units = (how ?? "").match(/^(\d+(?:\.\d+)?) units\b/);
+  if (/pen/i.test(strength)) return units ? { value: +units[1], unit: "units" } : undefined;
+  const mg = strength.match(/^(\d+(?:\.\d+)?) mg$/);
+  if (!mg) return undefined;
+  const count = (how ?? "").match(/^(\d+)\b(?! units)/);
+  return { value: +mg[1] * (count ? +count[1] : 1), unit: "mg" };
+}
+
 function homelog(p: Patient, t: number, e: Expected, ix: TrapIndex) {
   const plan = p.home;
   if (!plan) return;
-  const saves = plan.listSaves.filter((s) => ms(localAt(`${s.at}T00:00`)) <= t);
+  const saves = plan.listSaves.filter((s) => (ix.itemRecorded?.get(`P|P/meds/${s.at}`) ?? ms(localAt(`${s.at}T00:00`))) <= t);
   const save = saves[saves.length - 1];
   if (save) save.entries.forEach((en, i) => {
     const m = p.meds.find((x) => x.id === en.medId)!;
@@ -436,8 +500,10 @@ function homelog(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     e.medications.push(row("medications", {
       ingredient: d.ingredient, names: [en.name], ingredientDerivable: !!en.picked || BRAND_OK(en.name, d.ingredient, d.brand),
       status: en.status === "stopped" ? "stopped" : paused ? "held" : "active", status_since: en.status === "stopped" ? en.stopped : undefined,
+      dose: homeDose(en.strengthText, en.howITakeIt), patient_reported: true, otc: !!m.otc,
     }, [m.id], "P", ix, modality(m, "P"), [...(m.otc ? ["T13"] : []), ...(paused ? ["T1"] : [])]));
-    e.medications[e.medications.length - 1].order = (en.status === "stopped" ? 0 : 1000) + i;
+    // Two entries for one ingredient on one list: a current entry beats a stopped one; then the later start date; then list position.
+    e.medications[e.medications.length - 1].order = (en.status === "stopped" ? 0 : 1e13) + (en.started ? sortKey(en.started) / 1e3 : 0) + i;
   });
   for (const v of p.vitals.filter((x) => x.source === "P" && ms(x.at) <= t)) {
     const typoLive = v.typo && ms(localAt(`${v.typo.fixedAt.slice(0, 10)}T00:00`)) > t;
@@ -501,7 +567,7 @@ export function mergedExpected(p: Patient, keys: Record<string, any>, ix: TrapIn
   for (const [list, status] of [["active", "active"], ["resolved", "resolved"]] as const) for (const c of keys.problems[list]) e.problems.push(mk("problems", {
     family: family(c.icd10, c.condition), condition: c.condition, icd10: c.icd10, status, ...(/^N18/.test(c.icd10) ? { ckd_stage: stageOf(c.stage).ckd_stage } : {}), onset: c.onset,
   } as ProblemKey, c.basis));
-  for (const a of keys.allergies) e.allergies.push(mk("allergies", { substance: a.substance, type: a.type === "adverse-reaction" ? "adverse_reaction" : a.type, criticality: a.criticality } as AllergyKey, a.basis));
+  for (const a of keys.allergies) e.allergies.push(mk("allergies", { substance: a.substance, reaction_type: RT[a.type], criticality: a.criticality, mechanism: ["non_immune", "unknown"] } as AllergyKey, a.basis));
   for (const [analyte, series] of Object.entries(keys["lab-series"]) as [string, any[]][]) for (const l of series) {
     const a = analyteName(analyte);
     let value = l.value, comparator = l.comparator, eq: string | undefined;

@@ -1,33 +1,35 @@
-// Scorer sanity: the hand-written Northgate reference mapper scores 100% against the per-source keys,
-// and each deliberately broken variant loses exactly where its break should show (by trap).
+// Scorer sanity (train and dev splits only; the test split is never used for triage): the hand-written
+// reference mappers have no wrong or extra rows against the per-source keys at every as-of date, and each
+// deliberately broken Northgate variant loses exactly where its break should show (by trap).
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { evaluateTransform } from "../src/evaluate.ts";
 
 const ref = readFileSync(join(import.meta.dir, "fixtures/northgate-reference.ts"), "utf8");
-const run = (src: string) => evaluateTransform(src, "northgate", "app", "test");
+const run = (src: string) => evaluateTransform(src, "northgate", "app", "dev");
+const allRight = (ev: ReturnType<typeof run>) => Object.values(ev.views).every((v) => v.wrongRows === 0 && v.extraRows === 0);
 const patch = (from: string, to: string) => {
   if (!ref.includes(from)) throw new Error(`patch target missing: ${from}`);
   return ref.replace(from, to);
 };
-const rate = (ev: ReturnType<typeof run>, t: string) => ev.traps[t] ? ev.traps[t].errors / ev.traps[t].facts : 0;
+const rate = (ev: ReturnType<typeof run>, t: string) => (ev.traps[t] ? ev.traps[t].errors / ev.traps[t].facts : 0);
 
 describe("northgate reference mapper", () => {
   const ev = run(ref);
   test("agrees with the keys", () => {
     expect(ev.tsc.ok).toBe(true);
     expect(ev.deterministic).toBe(true);
-    expect(ev.counts.all.recall).toBe(1);
-    expect(ev.counts.all.precision).toBe(1);
+    expect(allRight(ev)).toBe(true);
   });
 });
 
 describe("reference mappers for the other sources agree with their keys", () => {
   for (const source of ["lakeview", "riverside", "homelog"] as const) test(source, () => {
-    const ev = evaluateTransform(readFileSync(join(import.meta.dir, `fixtures/${source}-reference.ts`), "utf8"), source, "app", "test");
-    expect(ev.counts.all.recall).toBe(1);
-    expect(ev.counts.all.precision).toBe(1);
+    for (const split of ["train", "dev"] as const) {
+      const ev = evaluateTransform(readFileSync(join(import.meta.dir, `fixtures/${source}-reference.ts`), "utf8"), source, "app", split);
+      expect(Object.values(ev.views).every((v) => v.wrongRows === 0 && v.extraRows === 0)).toBe(true);
+    }
   });
 });
 
@@ -36,7 +38,7 @@ describe("broken variants are caught", () => {
     const ev = run(patch("const dead = new Set<string>();", "const dead = new Set<string>(); const _ignore = new Set<string>();").replace("dead.add(id);", "_ignore.add(id);"));
     expect(rate(ev, "T4")).toBeGreaterThan(0.3);
     expect(ev.anti.some((a) => a.trap === "T3")).toBe(true);
-    expect(ev.counts.all.precision!).toBeLessThan(1);
+    expect(allRight(ev)).toBe(false);
   });
   test("hold read as stopped (T1)", () => {
     const ev = run(patch(`const status = e.action === "stop" ? "stopped" : e.action === "hold" ? "held" : "active";`, `const status = e.action === "stop" || e.action === "hold" ? "stopped" : "active";`));

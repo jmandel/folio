@@ -1,0 +1,1036 @@
+{
+ "runs": 59,
+ "flagged": 38,
+ "report": [
+  {
+   "run": "runs/compiler/riverside/uscore/claude-opus/20261014T121950885Z-8hz4",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/claude-opus/20261014T121950885Z-8hz4/out && python3 - <<'EOF'\np='trans"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"python3 - <<'EOF'\np='transform.ts'\ns=open(p).read()\nold=\\\"\\\"\\\"  if (/adverse|side effect|reaction|allerg|intoleran|ketoacidosis|\\\\\\\\bdka\\\\\\\\b|lactic"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh >/dev/null && echo typecheck+run OK\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/uscore/codex-gpt-6-astra/20261014T122542614Z-t43s",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T124107016Z-8k81",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; grep -n -i -B3 -A25 'allerg' in/schema/riverside-doc-v1.d.ts | head -150; grep -n -i -B2 -A30 'interface Allerg' in/views/views.d.ts\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cp in/previous/transform.ts out/transform.ts && cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace('''const ALLERGIC = /hive"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T121918762Z-zlnm",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out; cat in/harness/check.sh; ls in/previous; head -c 600 in/samples/samples.json\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T124107222Z-rmt1",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sed -n 125,172p schema/riverside-doc-v1.d.ts; grep -n \\\"NKDA\\\\|alg_\\\" samples/*.md | head; grep -n \\\"substance\\\" -B3 -A3 ../out/*.ts 2>/dev/n"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && python3 - <<'E'\ns=open('in/previous/transform.ts').read()\ns=s.replace(\\\"\\\"\\\"  if (docs.length) {\n    const latest = docs[docs.length - 1];\n"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T121750720Z-pn2k",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls in/samples; grep -n \\\"supersedes\\\\|retracts\\\" -r in/samples/*.md | head; grep -c . /dev/null; sed -n 360,380p in/feedback.md; sed -n 538,5"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh 2>&1 | head -80; grep -n \\\"^recorded\\\\|^effective\\\\|^id\\\\|supersed\\\" in/samples/*.md\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out/t; cat > out/t/run.ts <<'EOF'\nimport { transform } from \\\"../transform\\\";\nimport { readFileSync } from \\\"fs\\\";\nconst fb = readFi"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/out/t"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/out"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T121408782Z-z7dy",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T121114803Z-akao",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T124107126Z-c7wz",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T123359975Z-s982",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T123646398Z-spj5",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T122804498Z-1h3e",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T124510879Z-749g",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/uscore/claude-opus/20261014T121558445Z-653d",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls; ls out 2>/dev/null; cat in/harness/tsconfig.json; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print([(g['patie"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace('''  if (/\\\\\\\\b\\\\\\\\d{2}\\\\\\\\s*N?\\\\\\\\b/.test(\\\"\\\")) return false;\n  return "
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/uscore/codex-gpt-6-astra/20261014T122234800Z-cpcv",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/uscore/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/uscore/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T120431654Z-pfmn",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; grep -n -i \\\"egfr\\\\|a1c\\\\|uacr\\\" samples/samples.json | head -40; cat harness/check.sh\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out; cp in/previous/transform.ts out/transform.ts; sh in/harness/check.sh 2>&1 | grep -A40 '\\\"labs\\\"' | head -60\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && cat > t.ts <<'EOF'\nimport { transform } from \\\"./transform.ts\\\";\nconst r = (id: string, code: string, name: string, value: string, unit: s"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T120659892Z-edxa",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; grep -il egfr samples/*.md; grep -h -i \\\"egfr\\\\|a1c\\\\|uacr\\\" samples/*.md | grep -v '\\\"type\\\"' | head -40\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out; cp in/previous/transform.ts out/transform.ts; sh in/harness/check.sh 2025-12-31 2>&1 | head -80; python3 -c \\\"\nimport json;d=js"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cp in/previous/t.ts out/t.ts; sed -n 838,846p out/transform.ts; sh in/harness/check.sh 2025-12-31 >/tmp/a.txt 2>&1; echo $?; grep -c analyte "
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T115457102Z-q41h",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/samples/*.md; cat in/harness/run.ts in/INSTRUCTIONS.md | head -50\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print([ (g['patient'],len(g['items'])) for g in d])\\\"; cat in/harness/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T121354104Z-scf2",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out; cp in/previous/transform.ts out/transform.ts; sed -i '/^      if (e.restricted) continue;$/d; s/ || e.restricted || / || /' out"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T121120169Z-4zza",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T121327949Z-386m",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; grep -n \\\"restricted\\\" in/previous/transform.ts; mkdir -p out; sed -e 's/ || e.restricted//' -e '/if (e.restricted) continue;/d' in/pr"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T122509946Z-6hsu",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T121114687Z-j9h7",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T122913611Z-34r2",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/uscore/codex-gpt-6-astra/20261014T122531333Z-z31u",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-opus/20261014T120430217Z-mrth",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls; ls out 2>/dev/null; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print([(g['patient'],len(g['items'])) for g in"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-sonnet/20261014T121306250Z-cg4k",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-sonnet/20261014T121332417Z-1h6w",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out 2>/dev/null || mkdir -p out && cd out; cd ..; python3 - <<'E'\ns=open('in/previous/transform.ts').read()\ns=s.replace('''      condition: lates"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T121114794Z-jcxp",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T122447488Z-bsoj",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/uscore/codex-gpt-6-astra/20261014T122930125Z-4aix",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/uscore/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/uscore/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-sonnet/20261014T121411245Z-whju",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T122328304Z-yl4n",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/$p/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T121119833Z-3565",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/isolation-probe/20261014T113941242Z-vyup",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby/folio/truth/TRAPS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/.claude"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/.codex"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/isolation-probe/20261014T113955733Z-4332",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby/folio/truth/TRAPS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/.claude"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/.codex"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/isolation-probe-v2/codex/20261014T132921024Z-topt",
+   "findings": [
+    {
+     "kind": "network",
+     "detail": "shell: /bin/bash -lc \"mkdir -p ./out\n{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10"
+    },
+    {
+     "kind": "ipc",
+     "detail": "shell: /bin/bash -lc \"mkdir -p ./out\n{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/.claude"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/.codex"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby/folio"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby/folio/truth/TRAPS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/hobby/folio/.worktrees/stage3/truth"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: ~/.claude/projects"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.545Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.546Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.546Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.547Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.548Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:22.548Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:38.385Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/isolation-probe-v2/claude/20261014T132908174Z-2ikl",
+   "findings": [
+    {
+     "kind": "network",
+     "detail": "Bash: {\"command\":\"mkdir -p out; { echo '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10 -o "
+    },
+    {
+     "kind": "ipc",
+     "detail": "Bash: {\"command\":\"mkdir -p out; { echo '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10 -o "
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/.claude"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/.codex"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby/folio"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby/folio/truth/TRAPS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/hobby/folio/.worktrees/stage3/truth"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: ~/.claude/projects"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:13.546Z DENY github.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T13:29:13.563Z DENY raw.githubusercontent.com:443"
+    }
+   ]
+  }
+ ]
+}

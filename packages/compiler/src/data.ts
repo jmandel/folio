@@ -25,6 +25,12 @@ export const SCHEMA_FILE: Record<Source, string> = {
 };
 
 export function schemaText(s: Source): string { return readFileSync(join(REPO, SCHEMA_FILE[s]), "utf8"); }
+
+/** Documentation ablation: the schema with every comment removed (types, names and enum values only). */
+export function stripDocs(text: string): string {
+  return text.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "").replace(/[ \t]+$/gm, "").replace(/\n{3,}/g, "\n\n").trim() + "\n";
+}
+export type Variant = "full" | "types-only";
 export function schemaHash(s: Source): string { return createHash("sha256").update(readFileSync(join(REPO, SCHEMA_FILE[s]))).digest("hex"); }
 
 export interface FolioItem { id: string; issuer: string; patient: string; effective: string; recorded: string; narrative: string; payload: Record<string, any>; supersedes?: string[]; retracts?: string[]; [k: string]: unknown }
@@ -47,12 +53,19 @@ export function trapIndex(p: Patient): TrapIndex {
   let ix = ixCache.get(p.id);
   if (ix) return ix;
   const item = new Map<string, Set<string>>();
-  for (const it of truth().items.get(p.id)!) for (const f of it.facts) {
-    const k = `${it.source}|${f}`;
-    if (!item.has(k)) item.set(k, new Set());
-    for (const t of it.traps) item.get(k)!.add(t);
+  const recorded = new Map<string, number>();
+  const itemRecorded = new Map<string, number>();
+  for (const it of truth().items.get(p.id)!) {
+    const rec = Date.parse(it.item.recorded);
+    itemRecorded.set(`${it.source}|${it.key}`, rec);
+    for (const f of it.facts) {
+      const k = `${it.source}|${f}`;
+      if (!item.has(k)) item.set(k, new Set());
+      for (const t of it.traps) item.get(k)!.add(t);
+      recorded.set(k, Math.min(recorded.get(k) ?? Infinity, rec));
+    }
   }
-  ix = { fact: factTraps(p), item };
+  ix = { fact: factTraps(p), item, recorded, itemRecorded };
   ixCache.set(p.id, ix);
   return ix;
 }
@@ -70,10 +83,35 @@ export function patients(): PatientRef[] {
  * secondaries are always test.
  */
 export type Split = "train" | "dev" | "test";
+let splitCache: Map<string, Split> | undefined;
+
+/**
+ * Stratified split (v2). Each patient's profile is the set of (source, trap) pairs its rendered items carry
+ * at fact level (keys.ts trapsFor). Patients are ordered by their rarest pair (fewest patients carrying
+ * it), ties broken by a hash, and dealt in the cycle test, dev, test, train, test (60/20/20), so every
+ * pair is spread across splits in proportion. The hero and the secondaries are always test.
+ */
 export function splitOf(patient: string): Split {
+  if (!splitCache) {
+    const { trapsFor } = require("./keys.ts") as typeof import("./keys.ts");
+    const profile = new Map<string, string[]>();
+    const count = new Map<string, number>();
+    for (const p of truth().patients) {
+      const ix = trapIndex(p);
+      const pairs = new Set<string>();
+      for (const k of ix.item.keys()) { const [s, id] = k.split("|"); for (const t of trapsFor(ix, s as any, [id])) pairs.add(`${s}:${t}`); }
+      profile.set(p.id, [...pairs]);
+      for (const x of pairs) count.set(x, (count.get(x) ?? 0) + 1);
+    }
+    const h = (id: string) => createHash("sha256").update(`folio-stage3/${id}`).digest("hex");
+    const rarest = (id: string) => Math.min(Infinity, ...profile.get(id)!.map((x) => count.get(x)!));
+    const pool = truth().patients.map((p) => p.id).filter((id) => !(id === "hero" || /^s\d+$/.test(id)))
+      .sort((a, b) => rarest(a) - rarest(b) || h(a).localeCompare(h(b)));
+    const cycle: Split[] = ["test", "dev", "test", "train", "test"];
+    splitCache = new Map(pool.map((id, i) => [id, cycle[i % cycle.length]]));
+  }
   if (patient === "hero" || /^s\d+$/.test(patient)) return "test";
-  const b = createHash("sha256").update(`folio-stage3/${patient}`).digest()[0] % 10;
-  return b < 2 ? "train" : b < 4 ? "dev" : "test";
+  return splitCache.get(patient) ?? "test";
 }
 export function patientsIn(source: Source, split: Split): PatientRef[] {
   return patients().filter((p) => p.sources[source] && splitOf(p.patient) === split);

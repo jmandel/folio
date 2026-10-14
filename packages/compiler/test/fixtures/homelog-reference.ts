@@ -23,6 +23,16 @@ function ingredientOf(name: string, picked?: string): string | undefined {
   return undefined;
 }
 
+function homeDose(strength?: string, how?: string): { dose?: { value: number; unit: "mg" | "units" } } {
+  if (!strength || / if | or |sliding/i.test(how ?? "")) return {};
+  const units = (how ?? "").match(/^(\d+(?:\.\d+)?) units\b/);
+  if (/pen/i.test(strength)) return units ? { dose: { value: +units[1], unit: "units" } } : {};
+  const mg = strength.match(/^(\d+(?:\.\d+)?) mg$/);
+  if (!mg) return {};
+  const count = (how ?? "").match(/^(\d+)\b(?! units)/);
+  return { dose: { value: +mg[1] * (count ? +count[1] : 1), unit: "mg" } };
+}
+
 export function transform(items: FolioItem[], asOf: string): ViewRows {
   const inScope = items.filter((i) => localDay(i.recorded) <= asOf);
   const dead = new Set<string>();
@@ -37,7 +47,7 @@ export function transform(items: FolioItem[], asOf: string): ViewRows {
     return {
       ...(ing ? { ingredient: ing } : {}), drug_name: e.name, status: e.status === "stopped" ? "stopped" : paused ? "held" : "active",
       ...(e.status === "stopped" && e.stopped ? { status_since: e.stopped } : e.status === "taking" && e.started ? { status_since: e.started } : {}),
-      ...(e.picked_from_search?.rxnorm && !ing ? {} : {}), patient_reported: true, ...(e.kind === "over_the_counter" ? { otc: true } : {}),
+      ...homeDose(e.strength_text, e.how_i_take_it), patient_reported: true, ...(e.kind === "over_the_counter" ? { otc: true } : {}),
       ...(e.note ? { status_reason_text: e.note } : {}), evidence: [{ item_id: list.id, entry_id: k }],
     } as MedicationRow;
   }) : [];

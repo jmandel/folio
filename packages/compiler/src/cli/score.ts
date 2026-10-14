@@ -1,141 +1,202 @@
-// bun run score [--no-prose] : aggregate every compile record into results/stage3/scorecard.json and SCORECARD.md.
+// bun run score [--no-prose] [--no-fhir] [--reeval] : aggregate the round-2 compile records into results/stage3/scorecard.json and SCORECARD.md.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { BACKENDS, type CompileRecord, evalPath, readTransformOf, RESULTS } from "../compile.ts";
-import { evaluateTransform } from "../evaluate.ts";
+import { type CompileRecord, evalPath, keysHash, readTransformOf, RESULTS } from "../compile.ts";
 import { REPO, SOURCES, type Source } from "../data.ts";
-import { cacheMappers, endToEnd, loadEval, loadRecords, proseContribution } from "../report.ts";
+import { AS_OF_DATES, type Eval, evaluateTransform, VOLUME_TRAPS } from "../evaluate.ts";
+import { validateUsCore } from "../fhirvalidate.ts";
+import { backendOf, cacheMappers, endToEnd, loadEval, loadRecords, proseContribution, trapsInSamples } from "../report.ts";
 import { VIEWS } from "../score.ts";
 
-const { values } = parseArgs({ options: { "no-prose": { type: "boolean" }, "no-reeval": { type: "boolean" } } });
-const recs = loadRecords().sort((a, b) => `${a.source}${a.viewSet}${a.backend}${a.condition}`.localeCompare(`${b.source}${b.viewSet}${b.backend}${b.condition}`));
-const backendOf = (label: string) => Object.values(BACKENDS).find((b) => b.label === label)!;
+const { values } = parseArgs({ options: { "no-prose": { type: "boolean" }, "no-fhir": { type: "boolean" }, reeval: { type: "boolean" } } });
+const recs = loadRecords();
+const KEYS = keysHash();
+const TRAP_NAMES: Record<string, { name: string }> = JSON.parse(readFileSync(join(REPO, "corpus/MANIFEST.json"), "utf8")).traps;
+const BACKS = ["claude-opus", "codex-gpt-6-astra", "claude-sonnet"].filter((b) => recs.some((r) => r.backend === b));
+const short = (b: string) => b.replace("claude-", "").replace("-gpt-6-astra", "");
+const pct = (x: number | null | undefined, d = 1) => (x === null || x === undefined || Number.isNaN(x) ? "–" : `${(100 * x).toFixed(d)}`);
 
-// Re-evaluate every round's mapper with the current keys and scorer, so all numbers are on one footing.
-if (!values["no-reeval"]) {
-  const done = new Set<string>();
-  for (const r of recs) for (const round of r.rounds) {
-    if (!round.runId || done.has(round.runId)) continue;
-    done.add(round.runId);
+// Re-evaluate when asked (e.g. after a scorer fix); evaluations otherwise come from the compile loop.
+const evals = new Map<string, Eval & { runId: string }>();
+for (const r of recs) for (const round of r.rounds) {
+  if (!round.runId) continue;
+  let ev = loadEval(round.runId);
+  if (values.reeval || !ev) {
     let t: string;
     try { t = readTransformOf(r.source, r.viewSet, backendOf(r.backend), round.runId); } catch { continue; }
-    const ev = evaluateTransform(t, r.source, r.viewSet, "test");
-    writeFileSync(evalPath(round.runId), JSON.stringify({ runId: round.runId, ...ev }, null, 1) + "\n");
+    ev = { runId: round.runId, ...evaluateTransform(t, r.source, r.viewSet, "test") };
+    writeFileSync(evalPath(round.runId), JSON.stringify(ev, null, 1) + "\n");
   }
-  console.log(`re-evaluated ${done.size} mapper runs`);
+  evals.set(round.runId, ev);
 }
-const pct = (x: number | null | undefined) => (x === null || x === undefined ? "–" : `${(100 * x).toFixed(1)}`);
-const TRAP_NAMES: Record<string, { name: string }> = JSON.parse(readFileSync(join(REPO, "corpus/MANIFEST.json"), "utf8")).traps;
+const finalEval = (r?: CompileRecord) => (r?.final ? evals.get(r.final) : undefined);
+const find = (src: Source, vs: string, b: string, c: string, variant = "full") => recs.filter((r) => r.source === src && r.viewSet === vs && r.backend === b && r.condition === c && (r.variant ?? "full") === variant).sort((a, b2) => a.rep - b2.rep);
 
-interface Cell {
-  source: Source; viewSet: string; backend: string; model?: string; condition: string; runIds: string[]; finalRunId?: string;
-  compiled: boolean; tsc?: boolean; runtimeErrors?: number; deterministic?: boolean; contract?: string[];
-  precision?: number | null; recall?: number | null; views?: Record<string, { precision: number | null; recall: number | null }>;
-  byModality?: Record<string, { precision: number | null; recall: number | null }>; traps?: Record<string, { facts: number; errors: number }>;
-  msPerItem?: number; costUsd: number; agentMinutes: number; rounds: { runId: string; feedbackItems?: number; recall?: number | null; precision?: number | null }[];
-  fhir?: { resources: number; conformant: number }; prose?: Awaited<ReturnType<typeof proseContribution>>;
+// ─── Aggregates ──────────────────────────────────────────────────────────────────────────────────
+type Agg = { mean: number; min: number; max: number; n: number; rows: number; extra: number; runs: string[] };
+function aggView(rs: CompileRecord[], view: string): Agg | undefined {
+  const xs = rs.map((r) => ({ r, ev: finalEval(r) })).filter((x) => x.ev && (x.ev.views as any)[view]?.rows);
+  if (!xs.length) return undefined;
+  const rates = xs.map((x) => { const v = (x.ev!.views as any)[view]; return v.wrongRows / v.rows; });
+  return { mean: rates.reduce((a, b) => a + b, 0) / rates.length, min: Math.min(...rates), max: Math.max(...rates), n: rates.length, rows: (xs[0].ev!.views as any)[view].rows,
+    extra: Math.max(...xs.map((x) => (x.ev!.views as any)[view].extraRows)), runs: xs.map((x) => x.r.final!) };
+}
+const fmtAgg = (a?: Agg) => (!a ? "–" : `${pct(a.mean)}${a.n > 1 ? ` (${pct(a.min)}–${pct(a.max)})` : ""}${a.extra ? `, +${a.extra} extra` : ""}`);
+
+const L: string[] = [];
+L.push("# Stage 3 scorecard (round 2)", "",
+  "Generated by `bun run score` from the compile records in `results/stage3/compiles/` and the per-run evaluations in `results/stage3/evals/<runId>.json`.",
+  `Every number is from the held-out test split (stratified by trap), scored once per run against per-source keys frozen before the round-2 runs (key and scorer code hash \`${KEYS}\`; each record carries the hash it was scored with).`,
+  `Each mapper is scored at three as-of dates (${AS_OF_DATES.join(", ")}); rows are pooled over the dates. Views are v2 (\`packages/views/views.d.ts\`).`,
+  "A row is wrong if it is missing, duplicated, or has any scored field wrong (scored fields are listed under [Fields](#fields)). Extra rows are mapper rows with no expected counterpart.",
+  "Round 1 results (views v1, keys changed after triage) are kept in `results/stage3/round1/` and are not used here.", "");
+
+// Headline.
+L.push("## One-shot mappers by view", "", "Condition a (schema, views and about eight training samples; no feedback), three independent runs per cell. Wrong-row rate in percent, mean (min–max) over the runs, then extra rows in the worst run. `rows` is expected rows per run (all three dates).", "",
+  `| Source | View | rows | ${BACKS.map(short).join(" | ")} |`, `|---|---|---|${BACKS.map(() => "---").join("|")}|`);
+const headline: any[] = [];
+for (const s of SOURCES) for (const v of VIEWS) {
+  const cells = BACKS.map((b) => aggView(find(s, "app", b, "a"), v));
+  const rows = cells.find(Boolean)?.rows;
+  if (!rows) continue;
+  headline.push({ source: s, view: v, rows, cells: Object.fromEntries(BACKS.map((b, i) => [b, cells[i]])) });
+  L.push(`| ${s} | ${v} | ${rows} | ${cells.map(fmtAgg).join(" | ")} |`);
+}
+L.push("", "Runs per cell (run ids under `runs/compiler/<source>/app/<backend>/`):", "");
+for (const s of SOURCES) for (const b of BACKS) L.push(`- ${s}, ${short(b)}: ${find(s, "app", b, "a").map((r) => `\`${r.final ?? "failed"}\``).join(", ")}`);
+
+// Precision / recall.
+L.push("", "### Field-level precision and recall, one-shot", "", "Presence of each expected row plus each scored field, pooled over dates; mean over the three runs (precision / recall).", "",
+  `| Source | View | ${BACKS.map(short).join(" | ")} |`, `|---|---|${BACKS.map(() => "---").join("|")}|`);
+for (const h of headline) L.push(`| ${h.source} | ${h.view} | ${BACKS.map((b) => {
+  const evs = find(h.source, "app", b, "a").map(finalEval).filter(Boolean) as Eval[];
+  if (!evs.length) return "–";
+  const m = (k: "precision" | "recall") => evs.reduce((a, e) => a + ((e.views as any)[h.view][k] ?? 0), 0) / evs.length;
+  return `${pct(m("precision"))} / ${pct(m("recall"))}`;
+}).join(" | ")} |`);
+
+// Runtime problems.
+L.push("", "### Compile and run", "");
+for (const b of BACKS) {
+  const rs = recs.filter((r) => r.backend === b && r.viewSet === "app" && r.condition === "a" && (r.variant ?? "full") === "full");
+  const evs = rs.map(finalEval);
+  L.push(`- ${short(b)}: ${rs.length} one-shot runs; ${evs.filter((e) => e?.tsc.ok).length} type-check; ${evs.filter((e) => e && !e.runtime.patientErrors.length && !e.execError).length} ran without throwing on every patient and date; ${evs.filter((e) => e?.deterministic).length} deterministic; contract issues in ${evs.filter((e) => e?.contract.length).length}.`);
 }
 
-const cells: Cell[] = [];
-for (const r of recs) {
-  const ev = r.final ? loadEval(r.final) : undefined;
-  const cell: Cell = {
-    source: r.source, viewSet: r.viewSet, backend: r.backend, model: r.model, condition: r.condition,
-    runIds: r.rounds.map((x) => x.runId).filter(Boolean), finalRunId: r.final, compiled: !!ev?.tsc.ok,
-    costUsd: r.rounds.reduce((a, x) => a + (x.costUsd ?? 0), 0), agentMinutes: r.rounds.reduce((a, x) => a + x.durationMs, 0) / 60000,
-    rounds: r.rounds.filter((x) => x.runId).map((x) => { const e = loadEval(x.runId); return { runId: x.runId, feedbackItems: x.feedbackItems, recall: e?.counts.all.recall, precision: e?.counts.all.precision }; }),
-  };
-  if (ev) Object.assign(cell, {
-    tsc: ev.tsc.ok, runtimeErrors: ev.runtime.patientErrors.length + (ev.execError ? ev.runtime.patients : 0), deterministic: ev.deterministic, contract: ev.contract,
-    precision: ev.counts.all.precision, recall: ev.counts.all.recall,
-    views: Object.fromEntries(VIEWS.map((v) => [v, { precision: ev.counts[v].precision, recall: ev.counts[v].recall }])),
-    byModality: Object.fromEntries(Object.entries(ev.byModality).map(([k, v]) => [k, { precision: v.precision, recall: v.recall }])),
-    traps: ev.traps, msPerItem: ev.runtime.msPerItem, fhir: ev.fhir ? { resources: ev.fhir.resources, conformant: ev.fhir.conformant } : undefined,
-  });
-  if (!values["no-prose"] && ev && r.viewSet === "app" && r.condition !== "c" && r.final) {
-    cell.prose = await proseContribution(readTransformOf(r.source, r.viewSet, backendOf(r.backend), r.final), r.source, "app");
+// Traps.
+L.push("", "## Traps", "", "Per trap: errors / trap-bearing facts summed over the three one-shot runs (a fact is an expected row or a fact that must not appear), and in brackets the number of distinct held-out patients carrying the trap in that source. \"In samples\" marks traps visible in that source's training samples. Volume traps (carried by nearly every lab or reading) are listed after the judgment traps.", "");
+const trapRows: any[] = [];
+for (const s of SOURCES) {
+  const seen = new Set(find(s, "app", BACKS[0], "a")[0] ? trapsInSamples(find(s, "app", BACKS[0], "a")[0]) : []);
+  const allTraps = new Set<string>();
+  for (const b of BACKS) for (const r of find(s, "app", b, "a")) for (const t of Object.keys(finalEval(r)?.traps ?? {})) allTraps.add(t);
+  for (const t of [...allTraps].sort((a, b) => (VOLUME_TRAPS.includes(a) ? 1 : 0) - (VOLUME_TRAPS.includes(b) ? 1 : 0) || +a.slice(1) - +b.slice(1))) {
+    const per = BACKS.map((b) => { const evs = find(s, "app", b, "a").map(finalEval).filter(Boolean) as Eval[]; const xs = evs.map((e) => e.traps[t]).filter(Boolean); return xs.length ? { e: xs.reduce((a, x) => a + x.errors, 0), f: xs.reduce((a, x) => a + x.facts, 0), pe: Math.max(...xs.map((x) => x.patientsWithError)), p: xs[0].patients } : undefined; });
+    const p = per.find(Boolean)?.p ?? 0;
+    trapRows.push({ source: s, trap: t, patients: p, inSamples: seen.has(t), volume: VOLUME_TRAPS.includes(t), per: Object.fromEntries(BACKS.map((b, i) => [b, per[i]])) });
   }
-  cells.push(cell);
-  console.log(`${r.source}/${r.viewSet}/${r.backend}/${r.condition}: P=${pct(cell.precision)} R=${pct(cell.recall)}`);
+}
+L.push(`| Source | Trap | Patients | In samples | ${BACKS.map(short).join(" | ")} |`, `|---|---|---|---|${BACKS.map(() => "---").join("|")}|`);
+for (const x of trapRows) L.push(`| ${x.source} | ${x.trap} ${TRAP_NAMES[x.trap]?.name ?? ""}${x.volume ? " (volume)" : ""} | ${x.patients}${x.patients < 10 ? " (<10)" : ""} | ${x.inSamples ? "yes" : "no"} | ${BACKS.map((b) => { const c = x.per[b]; return c ? `${c.e}/${c.f}${c.e ? ` (${c.pe} pts)` : ""}` : "–"; }).join(" | ")} |`);
+L.push("", "Traps with fewer than 10 held-out patients in a source are marked: the corpus does not hold more (Lakeview T1 has 13 patients in all splits, T13 2, T19 1; Riverside T19 1; HomeLog T14 18, T19 1).");
+
+// Ablation.
+const ablSources = SOURCES.filter((s) => find(s, "app", "claude-opus", "a", "types-only").length);
+if (ablSources.length) {
+  L.push("", "## Documentation ablation", "", "Condition a with Opus, three runs each: the full schema versus the same schema with every comment removed (types, field names and enum values only). Views and samples are unchanged. Wrong-row rate, mean (min–max).", "",
+    "| Source | View | rows | full docs | types only |", "|---|---|---|---|---|");
+  for (const s of ablSources) for (const v of VIEWS) {
+    const full = aggView(find(s, "app", "claude-opus", "a"), v), bare = aggView(find(s, "app", "claude-opus", "a", "types-only"), v);
+    if (!full && !bare) continue;
+    L.push(`| ${s} | ${v} | ${(full ?? bare)!.rows} | ${fmtAgg(full)} | ${fmtAgg(bare)} |`);
+  }
+  L.push("");
+  for (const s of ablSources) L.push(`- ${s} types-only runs: ${find(s, "app", "claude-opus", "a", "types-only").map((r) => `\`${r.final ?? "failed"}\``).join(", ")}`);
 }
 
-// End to end: per backend and condition with app mappers for all four sources.
-const e2e = [];
-for (const b of [...new Set(recs.map((r) => r.backend))]) for (const c of ["a", "b", "c"]) {
-  const finals = Object.fromEntries(SOURCES.map((s) => [s, recs.find((r) => r.source === s && r.viewSet === "app" && r.backend === b && r.condition === c)?.final]));
-  if (SOURCES.some((s) => !finals[s] || !loadEval(finals[s]!)?.tsc.ok)) continue;
-  const mappers = Object.fromEntries(SOURCES.map((s) => [s, { runId: finals[s]!, transform: readTransformOf(s, "app", backendOf(b), finals[s]!) }])) as Record<Source, { runId: string; transform: string }>;
-  e2e.push(endToEnd(mappers, b, c));
-  console.log(`end-to-end ${b}/${c} done`);
+// Conditions b and c, prose.
+L.push("", "## Feedback conditions", "", "Conditions b (discrepancies from an independent reading of dev-split narratives, at most two rounds) and c (counterexamples from the dev-split keys, at most two rounds; a calibration upper bound, not deployable) start from the first one-shot run. Wrong-row rate per view after the last round, next to the starting run.", "",
+  `| Source | Backend | Condition | Rounds (findings fed back) | ${VIEWS.join(" | ")} |`, `|---|---|---|---|${VIEWS.map(() => "---").join("|")}|`);
+for (const s of SOURCES) for (const b of BACKS) for (const c of ["a", "b", "c"]) {
+  const r = c === "a" ? find(s, "app", b, "a")[0] : find(s, "app", b, c)[0];
+  if (!r) continue;
+  const ev = finalEval(r);
+  const rounds = c === "a" ? "start" : r.rounds.length ? r.rounds.map((x) => `${x.runId ? `\`${x.runId}\`` : "stopped"} (${x.feedbackItems})`).join(", ") : "none";
+  L.push(`| ${s} | ${short(b)} | ${c} | ${rounds} | ${VIEWS.map((v) => { const x = (ev?.views as any)?.[v]; return x?.rows ? `${pct(x.wrongRows / x.rows)}${x.extraRows ? ` +${x.extraRows}` : ""}` : "–"; }).join(" | ")} |`);
+}
+const prose: any[] = [];
+if (!values["no-prose"]) {
+  for (const s of SOURCES) for (const b of BACKS) for (const c of ["a", "b"]) {
+    const r = c === "a" ? find(s, "app", b, "a")[0] : find(s, "app", b, "b")[0];
+    if (!r?.final) continue;
+    prose.push({ source: s, backend: b, condition: c, run: r.final, ...(await proseContribution(readTransformOf(s, "app", backendOf(b), r.final), s)) });
+  }
+  L.push("", "### Prose cross-check on held-out items", "", "An independent agent (claude sonnet) read only the narratives (with ref spans) of 40 sampled narrated test items per source and stated their facts; the harness compared them with each mapper's rows as of the item's date. Confirmed: the key agrees the mapper row is wrong. Errors in scope: wrong expected rows about facts those items mention; flagged: pointed at by a discrepancy.", "",
+    "| Source | Backend | Condition | Prose run | Facts read | Discrepancies | Confirmed | False alarms | Errors in scope | Flagged |", "|---|---|---|---|---|---|---|---|---|---|");
+  for (const x of prose) L.push(`| ${x.source} | ${short(x.backend)} | ${x.condition} | \`${x.proseRunId}\` | ${x.facts} | ${x.discrepancies} | ${x.confirmed} | ${x.falseAlarms} | ${x.errorsInScope} | ${x.errorsFlagged} |`);
 }
 
-// Ceiling: the hand-written reference mappers (packages/compiler/test/fixtures) through the same merge.
+// US Core.
+const fhir: any[] = [];
+L.push("", "## US Core", "", "Condition a, one run per cell. Wrong-row rate for the projected medications and labs (status, dose, frequency; value, unit, equation, status), and the official HL7 FHIR validator (R4, US Core 8.0.1 loaded, each resource declaring its US Core profile, terminology offline) over the hero plus 25 held-out patients as of 2026-10-13.", "",
+  "| Source | Backend | Run | Meds wrong | Labs wrong | Resources validated | Errors | Warnings | Most common error |", "|---|---|---|---|---|---|---|---|---|");
+for (const s of SOURCES) for (const b of BACKS) {
+  const r = find(s, "uscore", b, "a")[0];
+  if (!r?.final) continue;
+  const ev = finalEval(r);
+  let v: any;
+  const cached = join(REPO, "results/stage3/fhir", `${r.final}.json`);
+  if (existsSync(cached)) v = JSON.parse(readFileSync(cached, "utf8"));
+  else if (!values["no-fhir"]) v = validateUsCore(readTransformOf(s, "uscore", backendOf(b), r.final), s, r.final);
+  fhir.push({ source: s, backend: b, run: r.final, views: ev?.views, validation: v && { resources: v.resources, errors: v.errors, warnings: v.warnings, topErrors: v.topErrors, topWarnings: v.topWarnings } });
+  const w = (x: any) => (x?.rows ? `${pct(x.wrongRows / x.rows)}${x.extraRows ? ` +${x.extraRows}` : ""}` : "–");
+  L.push(`| ${s} | ${short(b)} | \`${r.final}\` | ${w(ev?.views.medications)} | ${w(ev?.views.labs)} | ${v?.resources ?? "–"} | ${v?.errors ?? "–"} | ${v?.warnings ?? "–"} | ${v?.topErrors?.[0] ? `${v.topErrors[0][0].slice(0, 90)} (${v.topErrors[0][1]})` : "–"} |`);
+}
+L.push("", "Per-run validator reports, with every issue, are in `results/stage3/fhir/<runId>.json`. Most warnings are terminology codes not checked offline and the best-practice rules (narrative text, performer).");
+
+// End to end.
+const e2e: any[] = [];
 {
-  const mappers = Object.fromEntries(SOURCES.map((s) => [s, { runId: `fixture:${s}-reference.ts`, transform: readFileSync(join(REPO, "packages/compiler/test/fixtures", `${s}-reference.ts`), "utf8") }])) as Record<Source, { runId: string; transform: string }>;
-  e2e.unshift(endToEnd(mappers, "reference (hand-written)", "–"));
+  const fx = Object.fromEntries(SOURCES.map((s) => [s, { runId: `fixture:${s}-reference.ts`, transform: readFileSync(join(REPO, "packages/compiler/test/fixtures", `${s}-reference.ts`), "utf8") }])) as Record<Source, { runId: string; transform: string }>;
+  e2e.push(endToEnd(fx, "reference (hand-written)"));
+  for (const b of BACKS) for (let rep = 1; rep <= 3; rep++) {
+    const rs = SOURCES.map((s) => find(s, "app", b, "a").find((r) => r.rep === rep));
+    if (rs.some((r) => !r?.final || !finalEval(r)?.tsc.ok)) continue;
+    e2e.push(endToEnd(Object.fromEntries(SOURCES.map((s, i) => [s, { runId: rs[i]!.final!, transform: readTransformOf(s, "app", backendOf(b), rs[i]!.final!) }])) as any, `${short(b)} a run ${rep}`));
+  }
+}
+L.push("", "## End to end: merged chart", "", "Each source's one-shot mapper runs on its own items; the generic merge (`packages/compiler/src/merge.ts`, tuned in round 1 and frozen since) combines the rows; the result is scored against the merged truth key restricted to facts and fields some source records, as of 2026-10-13. Wrong-row rate per view (all test patients; hero in brackets).", "",
+  `| Mappers | Patients | ${VIEWS.join(" | ")} |`, `|---|---|${VIEWS.map(() => "---").join("|")}|`);
+for (const e of e2e) L.push(`| ${e.label} | ${e.patients} | ${VIEWS.map((v) => { const x = e.views[v], h = e.hero[v]; return x ? `${pct(x.wrongRows / x.rows)}${x.extraRows ? ` +${x.extraRows}` : ""} (${h ? `${h.wrongRows}/${h.rows}${h.extraRows ? ` +${h.extraRows}` : ""}` : "–"})` : "–"; }).join(" | ")} |`);
+
+// Fields.
+L.push("", "## Fields", "", "Field-level results pooled over all one-shot runs of each backend (all sources, dates): correct / scored. Only fields with at least one error are listed; every other scored field was always right.", "",
+  `| Field | ${BACKS.map(short).join(" | ")} |`, `|---|${BACKS.map(() => "---").join("|")}|`);
+const fieldNames = new Set<string>();
+const fieldAgg: Record<string, Record<string, { ok: number; total: number }>> = {};
+for (const b of BACKS) for (const r of recs.filter((x) => x.backend === b && x.viewSet === "app" && x.condition === "a" && (x.variant ?? "full") === "full")) {
+  const ev = finalEval(r); if (!ev) continue;
+  for (const [f, c] of Object.entries(ev.fields)) { fieldNames.add(f); const a = ((fieldAgg[f] ??= {})[b] ??= { ok: 0, total: 0 }); a.ok += c.ok; a.total += c.total; }
+}
+for (const f of [...fieldNames].sort()) if (BACKS.some((b) => fieldAgg[f]?.[b] && fieldAgg[f][b].ok < fieldAgg[f][b].total)) L.push(`| ${f} | ${BACKS.map((b) => { const c = fieldAgg[f]?.[b]; return c ? `${c.ok}/${c.total}` : "–"; }).join(" | ")} |`);
+L.push("", `All scored fields: ${[...fieldNames].sort().join(", ")}.`);
+
+// Cost and time.
+L.push("", "## Cost and time", "", "| Backend | Agent runs | Cost (USD, as the CLI reports it) | Agent minutes |", "|---|---|---|---|");
+for (const b of BACKS) {
+  const rounds = recs.filter((r) => r.backend === b).flatMap((r) => r.rounds).filter((x) => x.runId);
+  const uniq = [...new Map(rounds.map((x) => [x.runId, x])).values()];
+  L.push(`| ${short(b)} | ${uniq.length} | ${b.startsWith("codex") ? "not reported" : uniq.reduce((a, x) => a + (x.costUsd ?? 0), 0).toFixed(2)} | ${(uniq.reduce((a, x) => a + x.durationMs, 0) / 60000).toFixed(0)} |`);
 }
 
 const cached = cacheMappers(recs);
-const prior = existsSync(join(RESULTS, "scorecard.json")) ? JSON.parse(readFileSync(join(RESULTS, "scorecard.json"), "utf8")) : {};
-const scorecard = { generated_from: "results/stage3/compiles/**, results/stage3/evals/<runId>.json", as_of: "2026-10-13", split: "test (held out)", cells, end_to_end: e2e, cached, notes: prior.notes };
+L.push("", "## Cached mappers", "", "Mappers that pass the gates (type-check, no runtime errors on held-out patients at any date, deterministic, no contract issues, clean isolation scan), condition b else the first passing one-shot run; condition c and the ablation are never cached.", "");
+for (const c of cached) L.push(`- \`${c.path}\` (run \`${c.runId}\`, condition ${c.condition}${c.condition === "a" ? `, run ${c.rep}` : ""})`);
+
 mkdirSync(RESULTS, { recursive: true });
-writeFileSync(join(RESULTS, "scorecard.json"), JSON.stringify(scorecard, null, 1) + "\n");
-
-// ─── SCORECARD.md ────────────────────────────────────────────────────────────────────────────────
-const L: string[] = [];
-const cond = (c: string) => ({ a: "a one-shot", b: "b prose feedback", c: "c key feedback (calibration)" } as Record<string, string>)[c];
-L.push("# Stage 3 scorecard", "", "Generated by `bun run score` from the compile records in `results/stage3/compiles/` and the per-run evaluations in",
-  "`results/stage3/evals/<runId>.json`. Every number is computed on the held-out test split of patients, as of 2026-10-13, against the",
-  "per-source expected views (what a correct reader of that source alone should conclude). Run ids name directories under `runs/compiler/`.",
-  "Condition c fed key-based counterexamples back to the agent: it is a calibration upper bound, not a deployable result.", "");
-L.push("## Mappers", "", "Field-level precision and recall (presence of each expected row plus each scored field). Compiled = type-checks and runs.", "",
-  "| Source | Views | Backend | Condition | Final run | Compiled | Runtime errors | Precision | Recall | Meds R | Problems R | Allergies R | Labs R | Vitals R | ms/item | Cost USD | Agent min |",
-  "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|");
-for (const c of cells) L.push(`| ${c.source} | ${c.viewSet} | ${c.backend} | ${cond(c.condition)} | \`${c.finalRunId ?? "–"}\` | ${c.compiled ? "yes" : "no"} | ${c.runtimeErrors ?? "–"} | ${pct(c.precision)} | ${pct(c.recall)} | ${VIEWS.map((v) => pct(c.views?.[v]?.recall)).join(" | ")} | ${c.msPerItem?.toFixed(3) ?? "–"} | ${c.costUsd ? c.costUsd.toFixed(2) : "n/a"} | ${c.agentMinutes.toFixed(1)} |`);
-L.push("", "Cost is what the claude CLI reports per run; codex reports no cost. Rounds of conditions b and c (test-split recall after each round):", "");
-for (const c of cells.filter((x) => x.condition !== "a")) L.push(`- ${c.source}/${c.viewSet}/${c.backend}/${c.condition}: ` + (c.rounds.length ? c.rounds.map((r) => `\`${r.runId}\` (${r.feedbackItems} findings fed back) R=${pct(r.recall)} P=${pct(r.precision)}`).join(" → ") : "no findings on the dev split; the one-shot mapper stands"));
-
-const traps = [...new Set(cells.flatMap((c) => Object.keys(c.traps ?? {})))].sort((a, b) => +a.slice(1) - +b.slice(1));
-L.push("", "## Silent-error rate per trap", "", "Share of trap-bearing facts (expected rows, plus facts that must not appear) that a mapper which compiled and ran got wrong,",
-  "summed over the four sources: `errors/facts`. Sources with errors are named. Per-source counts are in scorecard.json (`cells[].traps`).", "");
-for (const vs of ["app", "uscore"]) {
-  const cols = [...new Set(cells.filter((c) => c.viewSet === vs && c.traps).map((c) => `${c.backend}|${c.condition}`))].sort();
-  if (!cols.length) continue;
-  L.push(`### ${vs} views`, "", `| Trap | ${cols.map((c) => c.replace("claude-", "").replace("|", " ")).join(" | ")} |`, `|---|${cols.map(() => "---").join("|")}|`);
-  for (const t of traps) {
-    const row = cols.map((col) => {
-      const cs = cells.filter((c) => c.viewSet === vs && `${c.backend}|${c.condition}` === col && c.traps?.[t]);
-      if (!cs.length) return "";
-      const f = cs.reduce((a, c) => a + c.traps![t].facts, 0), e = cs.reduce((a, c) => a + c.traps![t].errors, 0);
-      const who = cs.filter((c) => c.traps![t].errors).map((c) => c.source).join(", ");
-      return `${e}/${f}${who ? ` (${who})` : ""}`;
-    });
-    if (row.some(Boolean)) L.push(`| ${t} ${TRAP_NAMES[t]?.name ?? ""} | ${row.join(" | ")} |`);
-  }
-  L.push("");
-}
-L.push("## Structured-only vs narrated facts", "", "Recall by whether the source narrates the fact (truth visibility for that source). Unmatched mapper output cannot be split this way.", "",
-  "| Source | Views | Backend | Condition | Structured-only R | Narrated R |", "|---|---|---|---|---|---|");
-for (const c of cells.filter((x) => x.byModality)) L.push(`| ${c.source} | ${c.viewSet} | ${c.backend} | ${c.condition} | ${pct(c.byModality!.structured?.recall)} | ${pct(c.byModality!.narrated?.recall)} |`);
-L.push("", "## Prose cross-check on held-out items", "", "An independent agent (claude sonnet) read only the narratives (with ref spans) of 40 sampled narrated test items per source and stated their facts;",
-  "the harness compared them with each mapper's rows as of the item's date. Confirmed = the per-source key agrees the mapper row is wrong.",
-  "Errors in scope = wrong expected rows about facts those items mention; flagged = pointed at by a discrepancy.", "",
-  "| Source | Backend | Condition | Prose run | Facts read | Discrepancies | Confirmed | False alarms | Errors in scope | Flagged |", "|---|---|---|---|---|---|---|---|---|---|");
-for (const c of cells.filter((x) => x.prose)) L.push(`| ${c.source} | ${c.backend} | ${c.condition} | \`${c.prose!.proseRunId}\` | ${c.prose!.facts} | ${c.prose!.discrepancies} | ${c.prose!.confirmed} | ${c.prose!.falseAlarms} | ${c.prose!.errorsInScope} | ${c.prose!.errorsFlagged} |`);
-if (e2e.length) {
-  L.push("", "## End to end: merged chart", "", "Each source's mapper runs on its own items; the generic merge (`packages/compiler/src/merge.ts`) combines the rows; the result is scored",
-    "against the merged answer key from the truth (active and held medications, problems, allergies, all lab results, vitals). eGFR rows are",
-    "compared with the value as reported under the views' eGFR rule.", "",
-    "| Backend | Condition | Mapper runs (northgate, lakeview, riverside, homelog) | Patients | Precision | Recall | Meds R | Problems R | Allergies R | Labs R | Vitals R | Hero P | Hero R |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|");
-  for (const e of e2e) L.push(`| ${e.backend} | ${e.condition} | ${SOURCES.map((s) => `\`${e.runIds[s]}\``).join(", ")} | ${e.patients} | ${pct(e.counts.all.precision)} | ${pct(e.counts.all.recall)} | ${VIEWS.map((v) => pct(e.counts[v].recall)).join(" | ")} | ${pct(e.hero.all.precision)} | ${pct(e.hero.all.recall)} |`);
-}
-L.push("", "## US Core resources", "", "Structural check of every emitted resource against the elements `packages/views/uscore.d.ts` requires (profile, status, intent,",
-  "reportedBoolean, medication, subject, LOINC coding, category, effectiveDateTime with offset, UCUM valueQuantity).", "",
-  "| Source | Backend | Final run | Resources | Conformant |", "|---|---|---|---|---|");
-for (const c of cells.filter((x) => x.fhir)) L.push(`| ${c.source} | ${c.backend} | \`${c.finalRunId}\` | ${c.fhir!.resources} | ${c.fhir!.conformant} |`);
-L.push("", "## Cached mappers", "", "Passing (type-checks, no runtime errors on held-out patients, deterministic, no contract issues) deployable mappers (condition b, else a):", "");
-for (const c of cached) L.push(`- \`${c.path}\` (run \`${c.runId}\`, condition ${c.condition})`);
+writeFileSync(join(RESULTS, "scorecard.json"), JSON.stringify({ keys_sha256: KEYS, as_of: AS_OF_DATES, split: "test (stratified, held out)", headline, traps: trapRows, prose, fhir, end_to_end: e2e, fields: fieldAgg, cached,
+  records: recs.map((r) => ({ source: r.source, viewSet: r.viewSet, backend: r.backend, condition: r.condition, variant: r.variant, rep: r.rep, final: r.final, keysSha256: r.keysSha256, rounds: r.rounds.map((x) => ({ runId: x.runId, costUsd: x.costUsd, durationMs: x.durationMs, feedbackItems: x.feedbackItems })) })) }, null, 1) + "\n");
 writeFileSync(join(RESULTS, "SCORECARD.md"), L.join("\n") + "\n");
 console.log(`wrote ${join(RESULTS, "SCORECARD.md")}`);
-export type { CompileRecord };
+process.exit(0);

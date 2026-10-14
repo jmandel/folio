@@ -25,7 +25,7 @@ export interface ProseFact {
   view: "medications" | "problems" | "allergies" | "labs" | "vitals";
   ingredient?: string; status?: string; dose?: { value: number; unit: string };
   condition?: string; icd10cm?: string; ckd_stage?: string;
-  substance?: string; type?: string;
+  substance?: string; reaction_type?: string;
   analyte?: string; value?: number; comparator?: string; date?: string;
   systolic_mmhg?: number; diastolic_mmhg?: number;
   ref?: string; quote?: string;
@@ -64,7 +64,7 @@ Write \`out/facts.json\`: \`{ "items": [ { "item_id": "...", "facts": [Fact, ...
   \`MedicationRow.status\` (held = paused, not stopped). Give a dose only if the note states the current one.
 - \`{ "view": "problems", "condition": "...", "icd10cm"?: "...", "status": "active"|"resolved"|"ruled_out", "ckd_stage"?: "G3b" }\`:
   include conditions the note says were ruled out, as "ruled_out".
-- \`{ "view": "allergies", "substance": "lisinopril", "type": "allergy"|"intolerance"|"adverse_reaction" }\`
+- \`{ "view": "allergies", "substance": "lisinopril", "reaction_type": "hypersensitivity"|"side_effect"|"serious_adverse_event" }\`
 - \`{ "view": "labs", "analyte": "potassium", "value": 5.8, "comparator"?: "<"|">", "date"?: "YYYY-MM-DD" }\`: analyte
   names and units as in the \`Analyte\` table (convert units); \`date\` = local collection date if stated.
 - \`{ "view": "vitals", "systolic_mmhg": 138, "diastolic_mmhg": 84 }\`: blood pressure measured at this encounter.
@@ -92,7 +92,7 @@ export async function proseSample(source: Source, split: Split, n: number): Prom
   const { items, inputs } = proseInputs(source, split, n);
   const r = await runAgent({
     family: `compiler/prose/${source}-${split}`, backend: PROSE_MODEL.backend, model: PROSE_MODEL.model, prompt: PROMPT, inputs,
-    expectFiles: ["facts.json"], wrapCommand: sandboxWrap, timeoutMs: 30 * 60_000,
+    expectFiles: ["facts.json"], wrapCommand: sandboxWrap, extraArgs: ["--disallowedTools=WebFetch,WebSearch"], timeoutMs: 30 * 60_000,
   }, { retries: 1 });
   if (!r.meta.ok) throw new Error(`prose run failed: ${r.meta.error}`);
   const facts = JSON.parse(r.outputs["facts.json"]).items as { item_id: string; facts: ProseFact[] }[];
@@ -135,7 +135,7 @@ export function compareFacts(pi: ProseItem, rows: any): Discrepancy[] {
       const r = list("allergies").find((x) => drugEq(f.substance, x.substance));
       const k = `allergies:${normDrug(f.substance)}`;
       if (!r) d(f, "missing", k);
-      else if (f.type && f.type !== r.type) d(f, "type", k, r);
+      else if (f.reaction_type && f.reaction_type !== r.reaction_type) d(f, "type", k, r);
     } else if (f.view === "labs" && f.analyte && typeof f.value === "number") {
       const day = f.date ?? pi.as_of;
       const k = `labs:${normAnalyte(f.analyte)}@${day}`;

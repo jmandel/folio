@@ -5,7 +5,7 @@
 
 import { basename } from "node:path";
 import { VIEW_SETS, viewSetFiles, type ViewSet } from "../../views/src/index.ts";
-import { schemaText, SCHEMA_FILE, selectSamples, type Source } from "./data.ts";
+import { schemaText, SCHEMA_FILE, selectSamples, type Source, stripDocs, type Variant } from "./data.ts";
 
 export interface Workdir { inputs: Record<string, string>; prompt: string; sampleList: string[] }
 
@@ -95,11 +95,11 @@ When you are done, reply with a few lines on the judgment calls you made.
 `;
 }
 
-export function buildWorkdir(source: Source, viewSet: ViewSet["name"]): Workdir {
+export function buildWorkdir(source: Source, viewSet: ViewSet["name"], variant: Variant = "full"): Workdir {
   const vs = VIEW_SETS[viewSet];
   const samples = selectSamples(source);
   const inputs: Record<string, string> = {};
-  inputs[`schema/${basename(SCHEMA_FILE[source])}`] = schemaText(source);
+  inputs[`schema/${basename(SCHEMA_FILE[source])}`] = variant === "types-only" ? stripDocs(schemaText(source)) : schemaText(source);
   for (const [f, text] of Object.entries(viewSetFiles(vs))) inputs[`views/${f}`] = text;
   // Patients are named by their id at this source only.
   const groups = new Map<string, unknown[]>();
