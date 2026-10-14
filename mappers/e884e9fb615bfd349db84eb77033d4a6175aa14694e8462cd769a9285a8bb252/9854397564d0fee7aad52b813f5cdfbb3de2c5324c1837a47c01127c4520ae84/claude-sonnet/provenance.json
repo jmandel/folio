@@ -1,0 +1,126 @@
+{
+ "source": "lakeview",
+ "schema_sha256": "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252",
+ "view_set": "app",
+ "view_set_hash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "keys_sha256": "bb7c7cb090a2d081",
+ "chosen": {
+  "condition": "b",
+  "rep": 1,
+  "runId": "20261014T142528755Z-3i9p",
+  "eval": "results/stage3/evals/20261014T142528755Z-3i9p.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0,
+  "isolation_scan": "no network, IPC or web-tool calls"
+ },
+ "held_out": {
+  "patients": 164,
+  "as_of": [
+   "2023-06-30",
+   "2025-03-31",
+   "2026-10-13"
+  ],
+  "views": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 317,
+    "fp": 0,
+    "fn": 0,
+    "rows": 43,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 823,
+    "fp": 0,
+    "fn": 0,
+    "rows": 245,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 123877,
+    "fp": 0,
+    "fn": 0,
+    "rows": 24045,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 3702,
+    "fp": 0,
+    "fn": 0,
+    "rows": 617,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "ms_per_item": 0.06490419484108709
+ },
+ "samples_from_training_patients": [
+  "p038/2021-09-07-new-visit.folio.md",
+  "p038/2021-07-11-lab-rq-2107118918.folio.md",
+  "p038/2021-07-11-lab-rq-2107118918-corrected.folio.md",
+  "p038/2021-10-08-phone.folio.md",
+  "p038/2022-01-11-follow-up-visit.folio.md",
+  "p038/2022-06-24-follow-up-visit.folio.md",
+  "p038/2022-10-26-follow-up-visit.folio.md",
+  "p038/2023-03-06-follow-up-visit.folio.md",
+  "p038/2023-06-20-follow-up-visit.folio.md"
+ ],
+ "all_runs": [
+  {
+   "condition": "a",
+   "rep": 3,
+   "final": "20261014T142654003Z-mbfe",
+   "rounds": [
+    "20261014T142654003Z-mbfe"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 1,
+   "final": "20261014T142528755Z-3i9p",
+   "rounds": [
+    "20261014T142528755Z-3i9p"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 2,
+   "final": "20261014T142616921Z-4xt7",
+   "rounds": [
+    "20261014T142616921Z-4xt7"
+   ]
+  },
+  {
+   "condition": "b",
+   "rep": 1,
+   "final": "20261014T142528755Z-3i9p",
+   "rounds": []
+  }
+ ]
+}

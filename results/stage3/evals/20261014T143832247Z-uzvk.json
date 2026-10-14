@@ -1,0 +1,2764 @@
+{
+ "runId": "20261014T143832247Z-uzvk",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 35,
+  "items": 465,
+  "ms": 68.90776500000005,
+  "msPerItem": 0.14818874193548398,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 0.9733400402414487,
+   "recall": 0.9733400402414487,
+   "tp": 1935,
+   "fp": 53,
+   "fn": 53,
+   "rows": 284,
+   "wrongRows": 53,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 237,
+   "fp": 0,
+   "fn": 0,
+   "rows": 79,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 144,
+   "fp": 0,
+   "fn": 0,
+   "rows": 33,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 9272,
+   "fp": 0,
+   "fn": 0,
+   "rows": 1817,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 1444,
+   "fp": 0,
+   "fn": 0,
+   "rows": 241,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": 0.9735449735449735,
+    "recall": 0.9735449735449735,
+    "tp": 184,
+    "fp": 5,
+    "fn": 5,
+    "rows": 27,
+    "wrongRows": 5,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 24,
+    "fp": 0,
+    "fn": 0,
+    "rows": 8,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 22,
+    "fp": 0,
+    "fn": 0,
+    "rows": 5,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 577,
+    "fp": 0,
+    "fn": 0,
+    "rows": 113,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 108,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 0.974025974025974,
+    "recall": 0.974025974025974,
+    "tp": 675,
+    "fp": 18,
+    "fn": 18,
+    "rows": 99,
+    "wrongRows": 18,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 87,
+    "fp": 0,
+    "fn": 0,
+    "rows": 29,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 52,
+    "fp": 0,
+    "fn": 0,
+    "rows": 12,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2776,
+    "fp": 0,
+    "fn": 0,
+    "rows": 544,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 443,
+    "fp": 0,
+    "fn": 0,
+    "rows": 74,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 0.972875226039783,
+    "recall": 0.972875226039783,
+    "tp": 1076,
+    "fp": 30,
+    "fn": 30,
+    "rows": 158,
+    "wrongRows": 30,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "rows": 16,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 5919,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1160,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.status": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.dose": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.frequency": {
+   "ok": 231,
+   "total": 284
+  },
+  "medications.patient_reported": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.evidence": {
+   "ok": 284,
+   "total": 284
+  },
+  "problems.status": {
+   "ok": 79,
+   "total": 79
+  },
+  "problems.evidence": {
+   "ok": 79,
+   "total": 79
+  },
+  "allergies.reaction_type": {
+   "ok": 33,
+   "total": 33
+  },
+  "allergies.mechanism": {
+   "ok": 33,
+   "total": 33
+  },
+  "allergies.criticality": {
+   "ok": 6,
+   "total": 6
+  },
+  "allergies.reaction": {
+   "ok": 6,
+   "total": 6
+  },
+  "allergies.evidence": {
+   "ok": 33,
+   "total": 33
+  },
+  "labs.value": {
+   "ok": 1817,
+   "total": 1817
+  },
+  "labs.unit": {
+   "ok": 1817,
+   "total": 1817
+  },
+  "labs.status": {
+   "ok": 1817,
+   "total": 1817
+  },
+  "labs.evidence": {
+   "ok": 1817,
+   "total": 1817
+  },
+  "labs.egfr_equation": {
+   "ok": 187,
+   "total": 187
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.pulse_bpm": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.weight_kg": {
+   "ok": 239,
+   "total": 239
+  },
+  "vitals.evidence": {
+   "ok": 241,
+   "total": 241
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 0.9761797752808988,
+   "recall": 0.9761797752808988,
+   "tp": 2172,
+   "fp": 53,
+   "fn": 53
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 10860,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 284,
+   "errors": 53,
+   "patients": 35,
+   "patientsWithError": 26
+  },
+  "T1": {
+   "facts": 30,
+   "errors": 0,
+   "patients": 15,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 66,
+   "errors": 0,
+   "patients": 14,
+   "patientsWithError": 0
+  },
+  "T10": {
+   "facts": 2062,
+   "errors": 0,
+   "patients": 35,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 1817,
+   "errors": 0,
+   "patients": 31,
+   "patientsWithError": 0
+  },
+  "T12": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 13,
+   "patientsWithError": 0
+  },
+  "T19": {
+   "facts": 4,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "asOf": "2023-06-30",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01H24A8XZ0F0J4QQBRXSBKP21Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H24A8XZ0F0J4QQBRXSBKP21Z",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p049",
+   "local": "RRH-00209756",
+   "asOf": "2023-06-30",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GTX8FBZ0K3NMK938KWZRR3V4",
+    "01GTWWMB207PZBHB0YDK1F4P33",
+    "01GTY8SXE0WJTZRT1VHXKS3N03",
+    "01GV0TST90VFJWW4PC7CJFX2R2",
+    "01GV4EG6V097PWW2GFAVBSNAKA",
+    "01KFT0FWE0Z9B8NVJF13GBRRXV",
+    "01KFTCQQG0GFKMMBB4P45TJ46P",
+    "01KFXDG1H0DB6590YHJVQ5BGA3",
+    "01KFZY5TQ091NNY53X5M1D56B8",
+    "01KG35D1V0DANKAREE9CGE8D85"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GV4EG6V097PWW2GFAVBSNAKA",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GTX8FBZ0K3NMK938KWZRR3V4",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GTY8SXE0WJTZRT1VHXKS3N03",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GV0TST90VFJWW4PC7CJFX2R2",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "RRH-00180333",
+   "asOf": "2023-06-30",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01G9BR3JK0PCKDWB92M2ZMMWXC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9BR3JK0PCKDWB92M2ZMMWXC",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p145",
+   "local": "RRH-00305402",
+   "asOf": "2023-06-30",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01H39673P0KZDNT0QWKK0RNH6X",
+    "01H38T1370AJPMPJJFJJB2A5XG",
+    "01H39YDMV0C5AAM3E4HFDRKRFB",
+    "01H3D5DHK0FNB0XHMA2FVKAZKV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3D5DHK0FNB0XHMA2FVKAZKV",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39673P0KZDNT0QWKK0RNH6X",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39YDMV0C5AAM3E4HFDRKRFB",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "asOf": "2023-06-30",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GMF9ZZM0R9YCV8011W2NBNX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMF9ZZM0R9YCV8011W2NBNX0",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_atorvastatin"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5",
+    "01JBP1SKS0V37E3S3E28JT97KB",
+    "01JBSJ3HMG6CQ643DZVMXXQKFB",
+    "01JBS6NAWG438V4FFMFA897Y1T",
+    "01JBVVKP68RYMF7CEE9JBNZXD6",
+    "01JBZ2V178F5KZNWJ47TAN9ZT2",
+    "01JBYAAES035K0A0QM0RXD72CX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBP1SKS0V37E3S3E28JT97KB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBS6NAWG438V4FFMFA897Y1T",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBSJ3HMG6CQ643DZVMXXQKFB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBYAAES035K0A0QM0RXD72CX",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "s03",
+   "local": "RRH-00453627",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JEMX0J909P53ZNHXG3A4CNKZ",
+    "01JEM7CDV0SB9Z3Q33YG5MSC1T",
+    "01JENXJE40JNNQAB4A6RBMXB5N",
+    "01JERHGK507Q9C81J1PSKMQCGQ",
+    "01JEW47VM0WS4MJN9MFRTNMTKF"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JEW47VM0WS4MJN9MFRTNMTKF",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JEMX0J909P53ZNHXG3A4CNKZ",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JENXJE40JNNQAB4A6RBMXB5N",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JERHGK507Q9C81J1PSKMQCGQ",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01H24A8XZ0F0J4QQBRXSBKP21Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H24A8XZ0F0J4QQBRXSBKP21Z",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2",
+    "01JMM52VD0MJCE5FHXFHR91EB9",
+    "01JMQSW1803R1PKKTF69HGP7ZM",
+    "01JMQ16VB066W4V8W5CTA4ZF6V",
+    "01JMTNK710WEVW2K9CQJZ59XX5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JMTNK710WEVW2K9CQJZ59XX5",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMM52VD0MJCE5FHXFHR91EB9",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMQ16VB066W4V8W5CTA4ZF6V",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMQSW1803R1PKKTF69HGP7ZM",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p049",
+   "local": "RRH-00209756",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GTX8FBZ0K3NMK938KWZRR3V4",
+    "01GTWWMB207PZBHB0YDK1F4P33",
+    "01GTY8SXE0WJTZRT1VHXKS3N03",
+    "01GV0TST90VFJWW4PC7CJFX2R2",
+    "01GV4EG6V097PWW2GFAVBSNAKA",
+    "01KFT0FWE0Z9B8NVJF13GBRRXV",
+    "01KFTCQQG0GFKMMBB4P45TJ46P",
+    "01KFXDG1H0DB6590YHJVQ5BGA3",
+    "01KFZY5TQ091NNY53X5M1D56B8",
+    "01KG35D1V0DANKAREE9CGE8D85"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GV4EG6V097PWW2GFAVBSNAKA",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GTX8FBZ0K3NMK938KWZRR3V4",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GTY8SXE0WJTZRT1VHXKS3N03",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01GV0TST90VFJWW4PC7CJFX2R2",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01JDRH8Q1026RSQZT5P2ZX8BHS",
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4",
+    "01JDTBB7P0NJEQ37BK2AZ88019",
+    "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+    "01JDW6GHM0WA57V87GKJ4AW5YQ",
+    "01JDZQGW90GVGBZYMZNK7GBYP7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZQGW90GVGBZYMZNK7GBYP7",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDRH8Q1026RSQZT5P2ZX8BHS",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDTBB7P0NJEQ37BK2AZ88019",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDW6GHM0WA57V87GKJ4AW5YQ",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "RRH-00147542",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01HM61B7P0WG6C263FE7Q591T9",
+    "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+    "01HM9CSYR07BBN25QYVV4WM2WQ",
+    "01HMC0B9M03XZ58K2BG5YZAY1H",
+    "01HMFD5YY0C7J8FPVWX1QJQVSA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HMFD5YY0C7J8FPVWX1QJQVSA",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HM9CSYR07BBN25QYVV4WM2WQ",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HMC0B9M03XZ58K2BG5YZAY1H",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "RRH-00147542",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_104"
+   ],
+   "items": [
+    "01HM61B7P0WG6C263FE7Q591T9",
+    "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+    "01HM9CSYR07BBN25QYVV4WM2WQ",
+    "01HMC0B9M03XZ58K2BG5YZAY1H",
+    "01HMFD5YY0C7J8FPVWX1QJQVSA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HMFD5YY0C7J8FPVWX1QJQVSA",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HM9CSYR07BBN25QYVV4WM2WQ",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HMC0B9M03XZ58K2BG5YZAY1H",
+     "entry_id": "med_glargine"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "RRH-00180333",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01G9BR3JK0PCKDWB92M2ZMMWXC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9BR3JK0PCKDWB92M2ZMMWXC",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p145",
+   "local": "RRH-00305402",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01H39673P0KZDNT0QWKK0RNH6X",
+    "01H38T1370AJPMPJJFJJB2A5XG",
+    "01H39YDMV0C5AAM3E4HFDRKRFB",
+    "01H3D5DHK0FNB0XHMA2FVKAZKV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3D5DHK0FNB0XHMA2FVKAZKV",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39673P0KZDNT0QWKK0RNH6X",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39YDMV0C5AAM3E4HFDRKRFB",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p178",
+   "local": "RRH-00696404",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_2"
+   ],
+   "items": [
+    "01HZTWE930PSM6WBWNVPJ9AWST",
+    "01HZTJ4P70QD86NY4FN99NGSHF",
+    "01HZW17MW01XRH8RJ9VQP4ZPZ1",
+    "01HZYMQ550Y6Y02KS12B3XV79Q",
+    "01J02D5H00Y9N0D8P2EKT7RA8K"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J02D5H00Y9N0D8P2EKT7RA8K",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZTWE930PSM6WBWNVPJ9AWST",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZW17MW01XRH8RJ9VQP4ZPZ1",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZYMQ550Y6Y02KS12B3XV79Q",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "RRH-00513200",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01HGSCVNT0R25PW219ACT7KZH7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HGSCVNT0R25PW219ACT7KZH7",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p220",
+   "local": "RRH-00671266",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01JD6DQSH0VSN1HDDSTCERWNAR",
+    "01JD5ZWNV092P24N1ZVVAXYCSZ",
+    "01JD7KYY50KDF3QVTKY8D3MFYC",
+    "01JDA6FAB07WEGQERYX6NTW9FD",
+    "01JDDAG070J59PBS3XT1QGVXGC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDDAG070J59PBS3XT1QGVXGC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JD6DQSH0VSN1HDDSTCERWNAR",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JD7KYY50KDF3QVTKY8D3MFYC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDA6FAB07WEGQERYX6NTW9FD",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GMF9ZZM0R9YCV8011W2NBNX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMF9ZZM0R9YCV8011W2NBNX0",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "RRH-00981873",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JBZD9V304GHKW9E0D8719ZQ3",
+    "01KKB5D0Y0R5WAQ43KNBFQ8MK5",
+    "01KKBGKXA0T86SKWM8VXSATR84",
+    "01KKEKAFH0VV3HNSWE9NF3PFEA",
+    "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+    "01KKKQKE60MJPR8N7SCWXTZKGW",
+    "01KKQ1JHT0TGSMZ27SX1TDN08F"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZD9V304GHKW9E0D8719ZQ3",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p278",
+   "local": "RRH-00738611",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01J1C2ZDA0TYTTM11347HN7791",
+    "01J1CH7B50C6DC7W67T9AYTVX0",
+    "01J1FHH0E0FKVRBC10ZNCM8XWC",
+    "01J1J4E6S09JY6N21CG5S5HSG4",
+    "01J1NMMX40AN1JG6T53S3NKDG9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J1NMMX40AN1JG6T53S3NKDG9",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1CH7B50C6DC7W67T9AYTVX0",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1FHH0E0FKVRBC10ZNCM8XWC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1J4E6S09JY6N21CG5S5HSG4",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "RRH-00298275",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JDP4Y2Z02YE3623EGK46P8BJ",
+    "01JDPH9K70XC0DVTRCPCWQZYMB",
+    "01JDSM5N70PWV2B5XBSPPSD7X4",
+    "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+    "01JDZNVS20026XD21695A0VXT8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZNVS20026XD21695A0VXT8",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDPH9K70XC0DVTRCPCWQZYMB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDSM5N70PWV2B5XBSPPSD7X4",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "RRH-00298275",
+   "asOf": "2025-03-31",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_85"
+   ],
+   "items": [
+    "01JDP4Y2Z02YE3623EGK46P8BJ",
+    "01JDPH9K70XC0DVTRCPCWQZYMB",
+    "01JDSM5N70PWV2B5XBSPPSD7X4",
+    "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+    "01JDZNVS20026XD21695A0VXT8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZNVS20026XD21695A0VXT8",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDPH9K70XC0DVTRCPCWQZYMB",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDSM5N70PWV2B5XBSPPSD7X4",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+     "entry_id": "med_glargine"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_atorvastatin"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5",
+    "01JBP1SKS0V37E3S3E28JT97KB",
+    "01JBSJ3HMG6CQ643DZVMXXQKFB",
+    "01JBS6NAWG438V4FFMFA897Y1T",
+    "01JBVVKP68RYMF7CEE9JBNZXD6",
+    "01JBZ2V178F5KZNWJ47TAN9ZT2",
+    "01JBYAAES035K0A0QM0RXD72CX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBP1SKS0V37E3S3E28JT97KB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBS6NAWG438V4FFMFA897Y1T",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBSJ3HMG6CQ643DZVMXXQKFB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBVVKP68RYMF7CEE9JBNZXD6",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JBYAAES035K0A0QM0RXD72CX",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "s03",
+   "local": "RRH-00453627",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JEMX0J909P53ZNHXG3A4CNKZ",
+    "01JEM7CDV0SB9Z3Q33YG5MSC1T",
+    "01JENXJE40JNNQAB4A6RBMXB5N",
+    "01JERHGK507Q9C81J1PSKMQCGQ",
+    "01JEW47VM0WS4MJN9MFRTNMTKF"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JEW47VM0WS4MJN9MFRTNMTKF",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JEMX0J909P53ZNHXG3A4CNKZ",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JENXJE40JNNQAB4A6RBMXB5N",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JERHGK507Q9C81J1PSKMQCGQ",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "s04",
+   "local": "RRH-00649973",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01H24A8XZ0F0J4QQBRXSBKP21Z"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H24A8XZ0F0J4QQBRXSBKP21Z",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2",
+    "01JMM52VD0MJCE5FHXFHR91EB9",
+    "01JMQSW1803R1PKKTF69HGP7ZM",
+    "01JMQ16VB066W4V8W5CTA4ZF6V",
+    "01JMTNK710WEVW2K9CQJZ59XX5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JMTNK710WEVW2K9CQJZ59XX5",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMM52VD0MJCE5FHXFHR91EB9",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMQ16VB066W4V8W5CTA4ZF6V",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JMQSW1803R1PKKTF69HGP7ZM",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p049",
+   "local": "RRH-00209756",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GTX8FBZ0K3NMK938KWZRR3V4",
+    "01GTWWMB207PZBHB0YDK1F4P33",
+    "01GTY8SXE0WJTZRT1VHXKS3N03",
+    "01GV0TST90VFJWW4PC7CJFX2R2",
+    "01GV4EG6V097PWW2GFAVBSNAKA",
+    "01KFT0FWE0Z9B8NVJF13GBRRXV",
+    "01KFTCQQG0GFKMMBB4P45TJ46P",
+    "01KFXDG1H0DB6590YHJVQ5BGA3",
+    "01KFZY5TQ091NNY53X5M1D56B8",
+    "01KG35D1V0DANKAREE9CGE8D85"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KG35D1V0DANKAREE9CGE8D85",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KFTCQQG0GFKMMBB4P45TJ46P",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KFXDG1H0DB6590YHJVQ5BGA3",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KFZY5TQ091NNY53X5M1D56B8",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p057",
+   "local": "RRH-00936699",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01JVXP68B0Q28JC7FQRJAASR7A",
+    "01JVXF51A0PA3QKGJXS50E2JJ0",
+    "01JVYQ6RY02VEEVD27N7JAVVC4",
+    "01JW1AMEM0HJVXNCDTMXP1669D",
+    "01JW3TM8P0Z352G8VG4PVHP0K1",
+    "01JW73ERE0ZRT648HFM86Z5M68"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JW73ERE0ZRT648HFM86Z5M68",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JVXP68B0Q28JC7FQRJAASR7A",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JVYQ6RY02VEEVD27N7JAVVC4",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JW1AMEM0HJVXNCDTMXP1669D",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JW3TM8P0Z352G8VG4PVHP0K1",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p057",
+   "local": "RRH-00936699",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_58"
+   ],
+   "items": [
+    "01JVXP68B0Q28JC7FQRJAASR7A",
+    "01JVXF51A0PA3QKGJXS50E2JJ0",
+    "01JVYQ6RY02VEEVD27N7JAVVC4",
+    "01JW1AMEM0HJVXNCDTMXP1669D",
+    "01JW3TM8P0Z352G8VG4PVHP0K1",
+    "01JW73ERE0ZRT648HFM86Z5M68"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JW73ERE0ZRT648HFM86Z5M68",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JVXP68B0Q28JC7FQRJAASR7A",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JVYQ6RY02VEEVD27N7JAVVC4",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JW1AMEM0HJVXNCDTMXP1669D",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JW3TM8P0Z352G8VG4PVHP0K1",
+     "entry_id": "med_glargine"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01JDRH8Q1026RSQZT5P2ZX8BHS",
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4",
+    "01JDTBB7P0NJEQ37BK2AZ88019",
+    "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+    "01JDW6GHM0WA57V87GKJ4AW5YQ",
+    "01JDZQGW90GVGBZYMZNK7GBYP7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZQGW90GVGBZYMZNK7GBYP7",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDRH8Q1026RSQZT5P2ZX8BHS",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDTBB7P0NJEQ37BK2AZ88019",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDW6GHM0WA57V87GKJ4AW5YQ",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "RRH-00147542",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01HM61B7P0WG6C263FE7Q591T9",
+    "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+    "01HM9CSYR07BBN25QYVV4WM2WQ",
+    "01HMC0B9M03XZ58K2BG5YZAY1H",
+    "01HMFD5YY0C7J8FPVWX1QJQVSA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HMFD5YY0C7J8FPVWX1QJQVSA",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HM9CSYR07BBN25QYVV4WM2WQ",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HMC0B9M03XZ58K2BG5YZAY1H",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p061",
+   "local": "RRH-00147542",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_104"
+   ],
+   "items": [
+    "01HM61B7P0WG6C263FE7Q591T9",
+    "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+    "01HM9CSYR07BBN25QYVV4WM2WQ",
+    "01HMC0B9M03XZ58K2BG5YZAY1H",
+    "01HMFD5YY0C7J8FPVWX1QJQVSA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HMFD5YY0C7J8FPVWX1QJQVSA",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HM6HHDQ0CCRAPK9M5V2VY9BN",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HM9CSYR07BBN25QYVV4WM2WQ",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01HMC0B9M03XZ58K2BG5YZAY1H",
+     "entry_id": "med_glargine"
+    }
+   ]
+  },
+  {
+   "patient": "p075",
+   "local": "RRH-00406420",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_3"
+   ],
+   "items": [
+    "01KASZWMB066G2NJCKYZTQHZB9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KASZWMB066G2NJCKYZTQHZB9",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p114",
+   "local": "RRH-00450813",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01KFZE8SN06389DV8R3T51ZQYQ",
+    "01KFZM1QM0CZ9RBREAHGHHV7FN",
+    "01KG3AYNE019PX2VM7NQPJYDGD",
+    "01KG2FTR00HXY2258XEPVHYDV1",
+    "01KG52VKH0E2528V2ZPJJ59RB6",
+    "01KG8JS4X0BFSCPB3F2W5EKNQ9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KG8JS4X0BFSCPB3F2W5EKNQ9",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KFZE8SN06389DV8R3T51ZQYQ",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KFZM1QM0CZ9RBREAHGHHV7FN",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KG2FTR00HXY2258XEPVHYDV1",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KG3AYNE019PX2VM7NQPJYDGD",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KG52VKH0E2528V2ZPJJ59RB6",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p126",
+   "local": "RRH-00180333",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01G9BR3JK0PCKDWB92M2ZMMWXC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01G9BR3JK0PCKDWB92M2ZMMWXC",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p135",
+   "local": "RRH-00000354",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01JY87RRC0HEPZE49HZP1BNB1Y",
+    "01JY8WN3306HYK1PQ0DWX7YKTP",
+    "01JYBYKVK0YNAKPCAV2GV9QTV0",
+    "01JYEH9QJ0DBR43ZG3TA3YVFPP",
+    "01JYH3R950FD9115XZ2GM3MXFY",
+    "01JYKNF110CNHTJN9J0FRFE045",
+    "01JYPZKME04X0BCMFNTTCCXMF0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JYPZKME04X0BCMFNTTCCXMF0",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JY8WN3306HYK1PQ0DWX7YKTP",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JYBYKVK0YNAKPCAV2GV9QTV0",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JYEH9QJ0DBR43ZG3TA3YVFPP",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JYH3R950FD9115XZ2GM3MXFY",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JYKNF110CNHTJN9J0FRFE045",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p145",
+   "local": "RRH-00305402",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01H39673P0KZDNT0QWKK0RNH6X",
+    "01H38T1370AJPMPJJFJJB2A5XG",
+    "01H39YDMV0C5AAM3E4HFDRKRFB",
+    "01H3D5DHK0FNB0XHMA2FVKAZKV"
+   ],
+   "evidence": [
+    {
+     "item_id": "01H3D5DHK0FNB0XHMA2FVKAZKV",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39673P0KZDNT0QWKK0RNH6X",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01H39YDMV0C5AAM3E4HFDRKRFB",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p152",
+   "local": "RRH-00750259",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01K6Q0TVQ0SN4JBC4T31E4NEB2",
+    "01K6PG9P40BFSNA9MGKEBZ30YM",
+    "01K6QRBDR0WWHARST89J77P62B",
+    "01K6TA5TT0VY91CBNN4Z5CK2WV",
+    "01K6WY0AN03QNHWVR447C47BD6",
+    "01K6ZFHJR0F8GQ6BKAPMV9M86W",
+    "01K72P4NB0VS8ME2AVEWNCKN48"
+   ],
+   "evidence": [
+    {
+     "item_id": "01K72P4NB0VS8ME2AVEWNCKN48",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01K6Q0TVQ0SN4JBC4T31E4NEB2",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01K6QRBDR0WWHARST89J77P62B",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01K6TA5TT0VY91CBNN4Z5CK2WV",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01K6WY0AN03QNHWVR447C47BD6",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01K6ZFHJR0F8GQ6BKAPMV9M86W",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p155",
+   "local": "RRH-00732563",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_4"
+   ],
+   "items": [
+    "01KEDZYMP0YT3AX1TR131Q624R"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KEDZYMP0YT3AX1TR131Q624R",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p163",
+   "local": "RRH-00892662",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_5"
+   ],
+   "items": [
+    "01JVE0FJB0KWC40NTT7VATAR2M",
+    "01JVDSV5F0X3D57Z4VRKXESCXC",
+    "01JVF9VDM0FPFT7NHW8X10S937",
+    "01JVHWFF004Z60DZNG4663YENS",
+    "01JVN3DH5014DEGX1DBRJHCJSA"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JVN3DH5014DEGX1DBRJHCJSA",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01JVDSV5F0X3D57Z4VRKXESCXC",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01JVE0FJB0KWC40NTT7VATAR2M",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01JVF9VDM0FPFT7NHW8X10S937",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01JVHWFF004Z60DZNG4663YENS",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p164",
+   "local": "RRH-00521716",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01KJY3F060E0VS70YP6Z44SWGK"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KJY3F060E0VS70YP6Z44SWGK",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "RRH-00149489",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01KEH11Y90441KDENZYCQ71K0H",
+    "01KEHD2EZ0BTZ3AN2594AN7859",
+    "01KEM7FH30TTWEDNMEGBE9HJR8",
+    "01KER0EC90FZRAVX7Z8M0ZQ633"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KER0EC90FZRAVX7Z8M0ZQ633",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01KEHD2EZ0BTZ3AN2594AN7859",
+     "entry_id": "med_rosuvastatin"
+    },
+    {
+     "item_id": "01KEM7FH30TTWEDNMEGBE9HJR8",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p178",
+   "local": "RRH-00696404",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_2"
+   ],
+   "items": [
+    "01HZTWE930PSM6WBWNVPJ9AWST",
+    "01HZTJ4P70QD86NY4FN99NGSHF",
+    "01HZW17MW01XRH8RJ9VQP4ZPZ1",
+    "01HZYMQ550Y6Y02KS12B3XV79Q",
+    "01J02D5H00Y9N0D8P2EKT7RA8K"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J02D5H00Y9N0D8P2EKT7RA8K",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZTWE930PSM6WBWNVPJ9AWST",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZW17MW01XRH8RJ9VQP4ZPZ1",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01HZYMQ550Y6Y02KS12B3XV79Q",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p201",
+   "local": "RRH-00846530",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_6"
+   ],
+   "items": [
+    "01KDYPA9Z0WCA0Y9ZDQFNZAGE7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KDYPA9Z0WCA0Y9ZDQFNZAGE7",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p202",
+   "local": "RRH-00513200",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "rosuvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_8"
+   ],
+   "items": [
+    "01HGSCVNT0R25PW219ACT7KZH7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01HGSCVNT0R25PW219ACT7KZH7",
+     "entry_id": "med_rosuvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p220",
+   "local": "RRH-00671266",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01JD6DQSH0VSN1HDDSTCERWNAR",
+    "01JD5ZWNV092P24N1ZVVAXYCSZ",
+    "01JD7KYY50KDF3QVTKY8D3MFYC",
+    "01JDA6FAB07WEGQERYX6NTW9FD",
+    "01JDDAG070J59PBS3XT1QGVXGC"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDDAG070J59PBS3XT1QGVXGC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JD6DQSH0VSN1HDDSTCERWNAR",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JD7KYY50KDF3QVTKY8D3MFYC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDA6FAB07WEGQERYX6NTW9FD",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p241",
+   "local": "RRH-00630110",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01GMF9ZZM0R9YCV8011W2NBNX0"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GMF9ZZM0R9YCV8011W2NBNX0",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "RRH-00981873",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JBZD9V304GHKW9E0D8719ZQ3",
+    "01KKB5D0Y0R5WAQ43KNBFQ8MK5",
+    "01KKBGKXA0T86SKWM8VXSATR84",
+    "01KKEKAFH0VV3HNSWE9NF3PFEA",
+    "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+    "01KKKQKE60MJPR8N7SCWXTZKGW",
+    "01KKQ1JHT0TGSMZ27SX1TDN08F"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KKQ1JHT0TGSMZ27SX1TDN08F",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KKBGKXA0T86SKWM8VXSATR84",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KKEKAFH0VV3HNSWE9NF3PFEA",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01KKKQKE60MJPR8N7SCWXTZKGW",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p263",
+   "local": "RRH-00981873",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_136"
+   ],
+   "items": [
+    "01KKB5D0Y0R5WAQ43KNBFQ8MK5",
+    "01KKBGKXA0T86SKWM8VXSATR84",
+    "01KKEKAFH0VV3HNSWE9NF3PFEA",
+    "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+    "01KKKQKE60MJPR8N7SCWXTZKGW",
+    "01KKQ1JHT0TGSMZ27SX1TDN08F"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KKQ1JHT0TGSMZ27SX1TDN08F",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01KKBGKXA0T86SKWM8VXSATR84",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01KKEKAFH0VV3HNSWE9NF3PFEA",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01KKH49DP0KMT6WHMAYWDB0ZZ1",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01KKKQKE60MJPR8N7SCWXTZKGW",
+     "entry_id": "med_glargine"
+    }
+   ]
+  },
+  {
+   "patient": "p278",
+   "local": "RRH-00738611",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_7"
+   ],
+   "items": [
+    "01J1C2ZDA0TYTTM11347HN7791",
+    "01J1CH7B50C6DC7W67T9AYTVX0",
+    "01J1FHH0E0FKVRBC10ZNCM8XWC",
+    "01J1J4E6S09JY6N21CG5S5HSG4",
+    "01J1NMMX40AN1JG6T53S3NKDG9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J1NMMX40AN1JG6T53S3NKDG9",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1CH7B50C6DC7W67T9AYTVX0",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1FHH0E0FKVRBC10ZNCM8XWC",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01J1J4E6S09JY6N21CG5S5HSG4",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "RRH-00298275",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "atorvastatin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_9"
+   ],
+   "items": [
+    "01JDP4Y2Z02YE3623EGK46P8BJ",
+    "01JDPH9K70XC0DVTRCPCWQZYMB",
+    "01JDSM5N70PWV2B5XBSPPSD7X4",
+    "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+    "01JDZNVS20026XD21695A0VXT8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZNVS20026XD21695A0VXT8",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDPH9K70XC0DVTRCPCWQZYMB",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDSM5N70PWV2B5XBSPPSD7X4",
+     "entry_id": "med_atorvastatin"
+    },
+    {
+     "item_id": "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+     "entry_id": "med_atorvastatin"
+    }
+   ]
+  },
+  {
+   "patient": "p284",
+   "local": "RRH-00298275",
+   "asOf": "2026-10-13",
+   "view": "medications",
+   "key": "insulin glargine",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "frequency",
+     "expected": "QHS",
+     "actual": "QD"
+    }
+   ],
+   "traps": [
+    "T15"
+   ],
+   "modality": "narrated",
+   "basis": [
+    "m_85"
+   ],
+   "items": [
+    "01JDP4Y2Z02YE3623EGK46P8BJ",
+    "01JDPH9K70XC0DVTRCPCWQZYMB",
+    "01JDSM5N70PWV2B5XBSPPSD7X4",
+    "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+    "01JDZNVS20026XD21695A0VXT8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZNVS20026XD21695A0VXT8",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDPH9K70XC0DVTRCPCWQZYMB",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDSM5N70PWV2B5XBSPPSD7X4",
+     "entry_id": "med_glargine"
+    },
+    {
+     "item_id": "01JDW5BXR0RMKPZ0J0XHKZFYC9",
+     "entry_id": "med_glargine"
+    }
+   ]
+  }
+ ]
+}

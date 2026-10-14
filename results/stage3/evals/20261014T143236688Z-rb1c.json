@@ -1,0 +1,349 @@
+{
+ "runId": "20261014T143236688Z-rb1c",
+ "source": "northgate",
+ "viewSet": "uscore",
+ "split": "test",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 178,
+  "items": 26154,
+  "ms": 1036.8143260000015,
+  "msPerItem": 0.03964266750783825,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 8660,
+   "fp": 0,
+   "fn": 0,
+   "rows": 2165,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 99164,
+   "fp": 0,
+   "fn": 0,
+   "rows": 23884,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": null,
+   "recall": null,
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "rows": 0,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 2268,
+    "fp": 0,
+    "fn": 0,
+    "rows": 567,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 19005,
+    "fp": 0,
+    "fn": 0,
+    "rows": 4584,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 3096,
+    "fp": 0,
+    "fn": 0,
+    "rows": 774,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 33449,
+    "fp": 0,
+    "fn": 0,
+    "rows": 8057,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 3296,
+    "fp": 0,
+    "fn": 0,
+    "rows": 824,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 46710,
+    "fp": 0,
+    "fn": 0,
+    "rows": 11243,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.status": {
+   "ok": 2165,
+   "total": 2165
+  },
+  "medications.dose": {
+   "ok": 2165,
+   "total": 2165
+  },
+  "medications.frequency": {
+   "ok": 2165,
+   "total": 2165
+  },
+  "labs.value": {
+   "ok": 23884,
+   "total": 23884
+  },
+  "labs.unit": {
+   "ok": 23884,
+   "total": 23884
+  },
+  "labs.status": {
+   "ok": 23884,
+   "total": 23884
+  },
+  "labs.egfr_equation": {
+   "ok": 3628,
+   "total": 3628
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 8648,
+   "fp": 0,
+   "fn": 0
+  },
+  "structured": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 99176,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "traps": {
+  "T19": {
+   "facts": 3,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 134,
+   "errors": 0,
+   "patients": 44,
+   "patientsWithError": 0
+  },
+  "T14": {
+   "facts": 24420,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T9": {
+   "facts": 483,
+   "errors": 0,
+   "patients": 59,
+   "patientsWithError": 0
+  },
+  "T11": {
+   "facts": 7494,
+   "errors": 0,
+   "patients": 91,
+   "patientsWithError": 0
+  },
+  "T16": {
+   "facts": 6761,
+   "errors": 0,
+   "patients": 161,
+   "patientsWithError": 0
+  },
+  "T3": {
+   "facts": 152,
+   "errors": 0,
+   "patients": 38,
+   "patientsWithError": 0
+  },
+  "T2": {
+   "facts": 38,
+   "errors": 0,
+   "patients": 18,
+   "patientsWithError": 0
+  },
+  "T7": {
+   "facts": 1486,
+   "errors": 0,
+   "patients": 142,
+   "patientsWithError": 0
+  },
+  "T4": {
+   "facts": 32,
+   "errors": 0,
+   "patients": 22,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [],
+ "fhir": {
+  "resources": 12067,
+  "conformant": 12067,
+  "problems": {}
+ }
+}

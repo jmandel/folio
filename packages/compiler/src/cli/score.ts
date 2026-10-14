@@ -190,6 +190,17 @@ for (const b of BACKS) {
   L.push(`| ${short(b)} | ${uniq.length} | ${b.startsWith("codex") ? "not reported" : uniq.reduce((a, x) => a + (x.costUsd ?? 0), 0).toFixed(2)} | ${(uniq.reduce((a, x) => a + x.durationMs, 0) / 60000).toFixed(0)} |`);
 }
 
+// Isolation.
+{
+  const scanPath = join(REPO, "results/stage3/isolation/transcript-scan.json");
+  const scan = existsSync(scanPath) ? JSON.parse(readFileSync(scanPath, "utf8")) : undefined;
+  const agentRuns = (scan?.report ?? []).filter((r: any) => !r.run.includes("isolation-probe"));
+  const kinds = (k: string) => agentRuns.reduce((a: number, r: any) => a + r.findings.filter((f: any) => f.kind === k).length, 0);
+  L.push("", "## Isolation", "",
+    "Agents run under bubblewrap with no network namespace of their own: the only route out is a per-run CONNECT proxy that allows the model API hosts (claude: api.anthropic.com, platform.claude.com, console.anthropic.com; codex: chatgpt.com, api.openai.com, auth.openai.com) and logs every connection to `<run>/network.log`. $HOME, /tmp and /run/user are empty tmpfs mounts; the environment is cleared; IPC, PID and UTS namespaces are private; claude's web tools are disallowed. Probe runs `runs/compiler/isolation-probe-v2/` show github.com refused (403 at the proxy, no DNS directly), the model API reachable only through the proxy, the repo, ~/.claude/projects and the D-Bus session unreachable.",
+    `Transcript scan (\`bun packages/compiler/src/cli/scan.ts\`, results/stage3/isolation/transcript-scan.json) over ${scan?.runs ?? "?"} recorded runs: agent tool calls with network tools ${kinds("network")}, IPC ${kinds("ipc")}, web tools ${kinds("web-tool")}; denied connections ${kinds("denied-connection")} (all from the codex CLI itself: ab.chatgpt.com and an image CDN); ${kinds("path")} path mentions outside the run dir, reviewed by hand: codex's AGENTS.md lookups up the directory tree, \`cd ..\` inside the run dir, and globs over the empty parent mount. The compile loop applies the same scan as a gate; it rejected one round-2 run (\`20261014T142410689Z-3cbh\`) on a heredoc body that matched a tool name, which a corrected scan cleared and \`cli/regate.ts\` reinstated (noted in its compile record).`);
+}
+
 const cached = cacheMappers(recs);
 L.push("", "## Cached mappers", "", "Mappers that pass the gates (type-check, no runtime errors on held-out patients at any date, deterministic, no contract issues, clean isolation scan), condition b else the first passing one-shot run; condition c and the ablation are never cached.", "");
 for (const c of cached) L.push(`- \`${c.path}\` (run \`${c.runId}\`, condition ${c.condition}${c.condition === "a" ? `, run ${c.rep}` : ""})`);

@@ -1,0 +1,1738 @@
+{
+ "runId": "20261014T142749742Z-l677",
+ "source": "riverside",
+ "viewSet": "app",
+ "split": "test",
+ "asOfDates": [
+  "2023-06-30",
+  "2025-03-31",
+  "2026-10-13"
+ ],
+ "tsc": {
+  "ok": true,
+  "output": ""
+ },
+ "contract": [],
+ "deterministic": true,
+ "runtime": {
+  "patients": 35,
+  "items": 465,
+  "ms": 55.040212999999966,
+  "msPerItem": 0.11836604946236552,
+  "patientErrors": []
+ },
+ "views": {
+  "medications": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 1988,
+   "fp": 0,
+   "fn": 0,
+   "rows": 284,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "problems": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 237,
+   "fp": 0,
+   "fn": 0,
+   "rows": 79,
+   "wrongRows": 0,
+   "extraRows": 0
+  },
+  "allergies": {
+   "precision": 0.875,
+   "recall": 0.875,
+   "tp": 126,
+   "fp": 18,
+   "fn": 18,
+   "rows": 33,
+   "wrongRows": 17,
+   "extraRows": 0
+  },
+  "labs": {
+   "precision": 1,
+   "recall": 0.990832614322692,
+   "tp": 9187,
+   "fp": 0,
+   "fn": 85,
+   "rows": 1817,
+   "wrongRows": 17,
+   "extraRows": 0
+  },
+  "vitals": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 1444,
+   "fp": 0,
+   "fn": 0,
+   "rows": 241,
+   "wrongRows": 0,
+   "extraRows": 0
+  }
+ },
+ "byDate": {
+  "2023-06-30": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 189,
+    "fp": 0,
+    "fn": 0,
+    "rows": 27,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 24,
+    "fp": 0,
+    "fn": 0,
+    "rows": 8,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.9545454545454546,
+    "recall": 0.9545454545454546,
+    "tp": 21,
+    "fp": 1,
+    "fn": 1,
+    "rows": 5,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 0.9913344887348353,
+    "tp": 572,
+    "fp": 0,
+    "fn": 5,
+    "rows": 113,
+    "wrongRows": 1,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 108,
+    "fp": 0,
+    "fn": 0,
+    "rows": 18,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2025-03-31": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 693,
+    "fp": 0,
+    "fn": 0,
+    "rows": 99,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 87,
+    "fp": 0,
+    "fn": 0,
+    "rows": 29,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.8846153846153846,
+    "recall": 0.8846153846153846,
+    "tp": 46,
+    "fp": 6,
+    "fn": 6,
+    "rows": 12,
+    "wrongRows": 6,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 0.989193083573487,
+    "tp": 2746,
+    "fp": 0,
+    "fn": 30,
+    "rows": 544,
+    "wrongRows": 6,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 443,
+    "fp": 0,
+    "fn": 0,
+    "rows": 74,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "2026-10-13": {
+   "medications": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1106,
+    "fp": 0,
+    "fn": 0,
+    "rows": 158,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 126,
+    "fp": 0,
+    "fn": 0,
+    "rows": 42,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 0.8428571428571429,
+    "recall": 0.8428571428571429,
+    "tp": 59,
+    "fp": 11,
+    "fn": 11,
+    "rows": 16,
+    "wrongRows": 10,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 0.9915526271329617,
+    "tp": 5869,
+    "fp": 0,
+    "fn": 50,
+    "rows": 1160,
+    "wrongRows": 10,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 893,
+    "fp": 0,
+    "fn": 0,
+    "rows": 149,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  }
+ },
+ "fields": {
+  "medications.ingredient": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.status": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.dose": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.frequency": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.patient_reported": {
+   "ok": 284,
+   "total": 284
+  },
+  "medications.evidence": {
+   "ok": 284,
+   "total": 284
+  },
+  "problems.status": {
+   "ok": 79,
+   "total": 79
+  },
+  "problems.evidence": {
+   "ok": 79,
+   "total": 79
+  },
+  "allergies.reaction_type": {
+   "ok": 16,
+   "total": 33
+  },
+  "allergies.mechanism": {
+   "ok": 33,
+   "total": 33
+  },
+  "allergies.criticality": {
+   "ok": 6,
+   "total": 6
+  },
+  "allergies.reaction": {
+   "ok": 5,
+   "total": 6
+  },
+  "allergies.evidence": {
+   "ok": 33,
+   "total": 33
+  },
+  "labs.value": {
+   "ok": 1800,
+   "total": 1817
+  },
+  "labs.unit": {
+   "ok": 1800,
+   "total": 1817
+  },
+  "labs.status": {
+   "ok": 1800,
+   "total": 1817
+  },
+  "labs.evidence": {
+   "ok": 1800,
+   "total": 1817
+  },
+  "labs.egfr_equation": {
+   "ok": 187,
+   "total": 187
+  },
+  "vitals.systolic_mmhg": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.diastolic_mmhg": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.pulse_bpm": {
+   "ok": 241,
+   "total": 241
+  },
+  "vitals.weight_kg": {
+   "ok": 239,
+   "total": 239
+  },
+  "vitals.evidence": {
+   "ok": 241,
+   "total": 241
+  }
+ },
+ "byModality": {
+  "narrated": {
+   "precision": 1,
+   "recall": 1,
+   "tp": 2225,
+   "fp": 0,
+   "fn": 0
+  },
+  "structured": {
+   "precision": 0.9983294663573086,
+   "recall": 0.9905156537753222,
+   "tp": 10757,
+   "fp": 18,
+   "fn": 103
+  }
+ },
+ "traps": {
+  "T15": {
+   "facts": 284,
+   "errors": 0,
+   "patients": 35,
+   "patientsWithError": 0
+  },
+  "T1": {
+   "facts": 30,
+   "errors": 0,
+   "patients": 15,
+   "patientsWithError": 0
+  },
+  "T18": {
+   "facts": 66,
+   "errors": 17,
+   "patients": 14,
+   "patientsWithError": 10
+  },
+  "T10": {
+   "facts": 2062,
+   "errors": 17,
+   "patients": 35,
+   "patientsWithError": 10
+  },
+  "T14": {
+   "facts": 1817,
+   "errors": 17,
+   "patients": 31,
+   "patientsWithError": 10
+  },
+  "T12": {
+   "facts": 22,
+   "errors": 0,
+   "patients": 13,
+   "patientsWithError": 0
+  },
+  "T19": {
+   "facts": 4,
+   "errors": 0,
+   "patients": 1,
+   "patientsWithError": 0
+  }
+ },
+ "anti": [],
+ "wrongRows": [
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2023-06-30",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_161",
+    "c_124"
+   ],
+   "items": [
+    "01GSVGE6Y0DCYMPXGCY9AFVDB5",
+    "01GSV7CX40H3SSFENN0PJXNKV8",
+    "01GSWVJTM0A5E1K554NGCJ3JNW",
+    "01GSZDR780PJTM5YJKA0KPFK4R",
+    "01GT2W4AK0Y5X7BMG5R2BJEV0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GT2W4AK0Y5X7BMG5R2BJEV0T",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2023-06-30",
+   "view": "labs",
+   "key": "pco2@2023-02-21T14:58:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "26"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01GSV7CX40H3SSFENN0PJXNKV8"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_122"
+   ],
+   "items": [
+    "01GSV7CX40H3SSFENN0PJXNKV8"
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_empagliflozin",
+    "c_dka"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5",
+    "01JBP1SKS0V37E3S3E28JT97KB",
+    "01JBSJ3HMG6CQ643DZVMXXQKFB",
+    "01JBS6NAWG438V4FFMFA897Y1T",
+    "01JBVVKP68RYMF7CEE9JBNZXD6",
+    "01JBZ2V178F5KZNWJ47TAN9ZT2",
+    "01JBYAAES035K0A0QM0RXD72CX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "dx_adverse"
+    },
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "dx_edka"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2024-11-01T21:58:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "28"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JBNQXPD0M9S346Q3D25VT4F5"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_rrh_ed_pco2"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5"
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_161",
+    "c_124"
+   ],
+   "items": [
+    "01GSVGE6Y0DCYMPXGCY9AFVDB5",
+    "01GSV7CX40H3SSFENN0PJXNKV8",
+    "01GSWVJTM0A5E1K554NGCJ3JNW",
+    "01GSZDR780PJTM5YJKA0KPFK4R",
+    "01GT2W4AK0Y5X7BMG5R2BJEV0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GT2W4AK0Y5X7BMG5R2BJEV0T",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2023-02-21T14:58:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "26"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01GSV7CX40H3SSFENN0PJXNKV8"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_122"
+   ],
+   "items": [
+    "01GSV7CX40H3SSFENN0PJXNKV8"
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_139",
+    "c_111"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2",
+    "01JMM52VD0MJCE5FHXFHR91EB9",
+    "01JMQSW1803R1PKKTF69HGP7ZM",
+    "01JMQ16VB066W4V8W5CTA4ZF6V",
+    "01JMTNK710WEVW2K9CQJZ59XX5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JMTNK710WEVW2K9CQJZ59XX5",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2025-02-20T21:36:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "23"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JMKHGMB017HCEM3SW3Q8DQB2"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_108"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2"
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_118",
+    "c_81"
+   ],
+   "items": [
+    "01JDRH8Q1026RSQZT5P2ZX8BHS",
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4",
+    "01JDTBB7P0NJEQ37BK2AZ88019",
+    "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+    "01JDW6GHM0WA57V87GKJ4AW5YQ",
+    "01JDZQGW90GVGBZYMZNK7GBYP7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZQGW90GVGBZYMZNK7GBYP7",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2024-11-27T16:04:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "30"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JDR5FGQ0W8J5VEFA8JWJ5XW4"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_79"
+   ],
+   "items": [
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4"
+   ]
+  },
+  {
+   "patient": "p116",
+   "local": "RRH-00905172",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_80",
+    "c_54"
+   ],
+   "items": [
+    "01JB3N7W30VBSTD9ZSNC3Y51J7",
+    "01JB3V84E05M8V4MRJD29Q4E1M",
+    "01JB4HSJC067DHTGC4YKE0WV02",
+    "01JB8BV6V07B9AJWV4P2P3JAK8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JB8BV6V07B9AJWV4P2P3JAK8",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p116",
+   "local": "RRH-00905172",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2024-10-25T20:23:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "28"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JB3N7W30VBSTD9ZSNC3Y51J7"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_52"
+   ],
+   "items": [
+    "01JB3N7W30VBSTD9ZSNC3Y51J7"
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "RRH-00020584",
+   "asOf": "2025-03-31",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_103",
+    "c_56"
+   ],
+   "items": [
+    "01J6XM1V60CP35YYWDD6GT494Z",
+    "01J6XZ37S0S5282TNCSTN5H36A",
+    "01J6YPNMD0AT6HFCYFD8KB93ZT",
+    "01J716AEX07KD66MKWYAWK9XPC",
+    "01J73TKKG0RHWZ99AE6WJNRVQT",
+    "01J77BAS60XX3Q29QFCHJJW5NM",
+    "01KBKAY050J3597YYV9RVS98N1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J77BAS60XX3Q29QFCHJJW5NM",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "RRH-00020584",
+   "asOf": "2025-03-31",
+   "view": "labs",
+   "key": "pco2@2024-09-03T19:11:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "29"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01J6XM1V60CP35YYWDD6GT494Z"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_53"
+   ],
+   "items": [
+    "01J6XM1V60CP35YYWDD6GT494Z"
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_empagliflozin",
+    "c_dka"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5",
+    "01JBP1SKS0V37E3S3E28JT97KB",
+    "01JBSJ3HMG6CQ643DZVMXXQKFB",
+    "01JBS6NAWG438V4FFMFA897Y1T",
+    "01JBVVKP68RYMF7CEE9JBNZXD6",
+    "01JBZ2V178F5KZNWJ47TAN9ZT2",
+    "01JBYAAES035K0A0QM0RXD72CX"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "dx_adverse"
+    },
+    {
+     "item_id": "01JBZ2V178F5KZNWJ47TAN9ZT2",
+     "entry_id": "dx_edka"
+    }
+   ]
+  },
+  {
+   "patient": "hero",
+   "local": "RRH-00731846",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2024-11-01T21:58:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "28"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JBNQXPD0M9S346Q3D25VT4F5"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_rrh_ed_pco2"
+   ],
+   "items": [
+    "01JBNQXPD0M9S346Q3D25VT4F5"
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_161",
+    "c_124"
+   ],
+   "items": [
+    "01GSVGE6Y0DCYMPXGCY9AFVDB5",
+    "01GSV7CX40H3SSFENN0PJXNKV8",
+    "01GSWVJTM0A5E1K554NGCJ3JNW",
+    "01GSZDR780PJTM5YJKA0KPFK4R",
+    "01GT2W4AK0Y5X7BMG5R2BJEV0T"
+   ],
+   "evidence": [
+    {
+     "item_id": "01GT2W4AK0Y5X7BMG5R2BJEV0T",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "s02",
+   "local": "RRH-00773529",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2023-02-21T14:58:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "26"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01GSV7CX40H3SSFENN0PJXNKV8"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_122"
+   ],
+   "items": [
+    "01GSV7CX40H3SSFENN0PJXNKV8"
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_139",
+    "c_111"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2",
+    "01JMM52VD0MJCE5FHXFHR91EB9",
+    "01JMQSW1803R1PKKTF69HGP7ZM",
+    "01JMQ16VB066W4V8W5CTA4ZF6V",
+    "01JMTNK710WEVW2K9CQJZ59XX5"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JMTNK710WEVW2K9CQJZ59XX5",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p004",
+   "local": "RRH-00341271",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2025-02-20T21:36:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "23"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JMKHGMB017HCEM3SW3Q8DQB2"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_108"
+   ],
+   "items": [
+    "01JMKHGMB017HCEM3SW3Q8DQB2"
+   ]
+  },
+  {
+   "patient": "p057",
+   "local": "RRH-00936699",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_146",
+    "c_99"
+   ],
+   "items": [
+    "01JVXP68B0Q28JC7FQRJAASR7A",
+    "01JVXF51A0PA3QKGJXS50E2JJ0",
+    "01JVYQ6RY02VEEVD27N7JAVVC4",
+    "01JW1AMEM0HJVXNCDTMXP1669D",
+    "01JW3TM8P0Z352G8VG4PVHP0K1",
+    "01JW73ERE0ZRT648HFM86Z5M68"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JW73ERE0ZRT648HFM86Z5M68",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p057",
+   "local": "RRH-00936699",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2025-05-22T17:46:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "26"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JVXF51A0PA3QKGJXS50E2JJ0"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_96"
+   ],
+   "items": [
+    "01JVXF51A0PA3QKGJXS50E2JJ0"
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_118",
+    "c_81"
+   ],
+   "items": [
+    "01JDRH8Q1026RSQZT5P2ZX8BHS",
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4",
+    "01JDTBB7P0NJEQ37BK2AZ88019",
+    "01JDSJSPZ0DG1Q9W2BT29JDY4P",
+    "01JDW6GHM0WA57V87GKJ4AW5YQ",
+    "01JDZQGW90GVGBZYMZNK7GBYP7"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JDZQGW90GVGBZYMZNK7GBYP7",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p059",
+   "local": "RRH-00594395",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2024-11-27T16:04:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "30"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JDR5FGQ0W8J5VEFA8JWJ5XW4"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_79"
+   ],
+   "items": [
+    "01JDR5FGQ0W8J5VEFA8JWJ5XW4"
+   ]
+  },
+  {
+   "patient": "p103",
+   "local": "RRH-00167652",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_130",
+    "c_82"
+   ],
+   "items": [
+    "01KGRVTQK0H8DQ22CZW7JA3TBG",
+    "01KGS976H0THMV1FZTM4NCHVKF",
+    "01KGX3NN5036HD80XTHT1JTZFH",
+    "01KGW8Q7G02F4E25JN5X1K894N",
+    "01KGYTDZC0KAFW3K6672BTF5FT",
+    "01KH1E8F70R20N4PZGYTAMWNNA",
+    "01KH52XZW0QJHH8CDX0NYNX8NH"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KH52XZW0QJHH8CDX0NYNX8NH",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p103",
+   "local": "RRH-00167652",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2026-02-05T21:30:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "26"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01KGRVTQK0H8DQ22CZW7JA3TBG"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_80"
+   ],
+   "items": [
+    "01KGRVTQK0H8DQ22CZW7JA3TBG"
+   ]
+  },
+  {
+   "patient": "p114",
+   "local": "RRH-00450813",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_98",
+    "c_61"
+   ],
+   "items": [
+    "01KFZE8SN06389DV8R3T51ZQYQ",
+    "01KFZM1QM0CZ9RBREAHGHHV7FN",
+    "01KG3AYNE019PX2VM7NQPJYDGD",
+    "01KG2FTR00HXY2258XEPVHYDV1",
+    "01KG52VKH0E2528V2ZPJJ59RB6",
+    "01KG8JS4X0BFSCPB3F2W5EKNQ9"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KG8JS4X0BFSCPB3F2W5EKNQ9",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p114",
+   "local": "RRH-00450813",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2026-01-27T00:04:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "28"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01KFZE8SN06389DV8R3T51ZQYQ"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_59"
+   ],
+   "items": [
+    "01KFZE8SN06389DV8R3T51ZQYQ"
+   ]
+  },
+  {
+   "patient": "p116",
+   "local": "RRH-00905172",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "dapagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_80",
+    "c_54"
+   ],
+   "items": [
+    "01JB3N7W30VBSTD9ZSNC3Y51J7",
+    "01JB3V84E05M8V4MRJD29Q4E1M",
+    "01JB4HSJC067DHTGC4YKE0WV02",
+    "01JB8BV6V07B9AJWV4P2P3JAK8"
+   ],
+   "evidence": [
+    {
+     "item_id": "01JB8BV6V07B9AJWV4P2P3JAK8",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p116",
+   "local": "RRH-00905172",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2024-10-25T20:23:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "28"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01JB3N7W30VBSTD9ZSNC3Y51J7"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_52"
+   ],
+   "items": [
+    "01JB3N7W30VBSTD9ZSNC3Y51J7"
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "RRH-00149489",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_65",
+    "c_38"
+   ],
+   "items": [
+    "01KEH11Y90441KDENZYCQ71K0H",
+    "01KEHD2EZ0BTZ3AN2594AN7859",
+    "01KEM7FH30TTWEDNMEGBE9HJR8",
+    "01KER0EC90FZRAVX7Z8M0ZQ633"
+   ],
+   "evidence": [
+    {
+     "item_id": "01KER0EC90FZRAVX7Z8M0ZQ633",
+     "entry_id": "dx_dka"
+    }
+   ]
+  },
+  {
+   "patient": "p169",
+   "local": "RRH-00149489",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2026-01-08T23:54:00-06:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "30"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01KEH11Y90441KDENZYCQ71K0H"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_35"
+   ],
+   "items": [
+    "01KEH11Y90441KDENZYCQ71K0H"
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "RRH-00020584",
+   "asOf": "2026-10-13",
+   "view": "allergies",
+   "key": "empagliflozin",
+   "matched": true,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "reaction_type",
+     "expected": "serious_adverse_event",
+     "actual": "side_effect"
+    },
+    {
+     "field": "reaction",
+     "expected": "diabetic|ketoacidosis",
+     "actual": "Euglycemic DKA, SGLT2 inhibitor-associated"
+    }
+   ],
+   "traps": [
+    "T18"
+   ],
+   "modality": "structured",
+   "basis": [
+    "a_103"
+   ],
+   "items": [
+    "01KBKAY050J3597YYV9RVS98N1"
+   ],
+   "evidence": [
+    {
+     "item_id": "01J77BAS60XX3Q29QFCHJJW5NM",
+     "entry_id": "dx_dka"
+    },
+    {
+     "item_id": "01KBKAY050J3597YYV9RVS98N1",
+     "entry_id": "alg_empagliflozin"
+    }
+   ]
+  },
+  {
+   "patient": "p218",
+   "local": "RRH-00020584",
+   "asOf": "2026-10-13",
+   "view": "labs",
+   "key": "pco2@2024-09-03T19:11:00-05:00",
+   "matched": false,
+   "duplicated": 0,
+   "wrong": [
+    {
+     "field": "value",
+     "expected": "29"
+    },
+    {
+     "field": "unit",
+     "expected": "mmHg"
+    },
+    {
+     "field": "status",
+     "expected": "final"
+    },
+    {
+     "field": "evidence",
+     "expected": [
+      "01J6XM1V60CP35YYWDD6GT494Z"
+     ],
+     "actual": []
+    }
+   ],
+   "traps": [
+    "T10",
+    "T14"
+   ],
+   "modality": "structured",
+   "basis": [
+    "l_53"
+   ],
+   "items": [
+    "01J6XM1V60CP35YYWDD6GT494Z"
+   ]
+  }
+ ]
+}

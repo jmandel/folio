@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; ls; ls out 2>/dev/null; ls node_modules | head; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print(len(d), ["
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts';s=open(p).read()\ns=s.replace(\\\"if (cls) return { phrase: cls === undefined ? phrase : phrase, cls, effe"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh > /dev/null && echo OK; rm -f out/run.json; cd out && bun show.ts | grep -A3 \\\"## allergies\\\"\"}"
+  }
+ ],
+ "blocking": 0
+}

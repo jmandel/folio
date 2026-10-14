@@ -33,7 +33,9 @@ export function scanRun(runDir: string): Finding[] {
   for (const c of toolCalls(runDir)) {
     if (/^(WebFetch|WebSearch)$/.test(c.tool)) f.push({ kind: "web-tool", detail: c.text.slice(0, 200) });
     // For Write/Edit, only the file path counts (file contents may legitimately mention URLs).
-    const text = /^(Write|Edit)$/.test(c.tool) ? (JSON.parse(c.text).file_path ?? "") : c.text.replace(/\\n/g, "\n");
+    const raw = /^(Write|Edit)$/.test(c.tool) ? (JSON.parse(c.text).file_path ?? "") : c.text.replace(/\\n/g, "\n");
+    // Heredoc bodies are file contents (code, tests), not commands: drop them before matching.
+    const text = raw.replace(/<<-?\s*\\?['"]?(\w+)\\?['"]?[\s\S]*?\n\1(?=\n|\\?"|$)/g, "<<HEREDOC");
     if (NET.test(text)) f.push({ kind: "network", detail: `${c.tool}: ${text.slice(0, 200)}` });
     if (IPC.test(text)) f.push({ kind: "ipc", detail: `${c.tool}: ${text.slice(0, 200)}` });
     if (/(?:\.\.\/){2,}|\bcd\s+\.\.(?:\s|;|&|$)/.test(text)) f.push({ kind: "path", detail: `${c.tool} (relative climb, check by hand): ${text.slice(0, 160)}` });

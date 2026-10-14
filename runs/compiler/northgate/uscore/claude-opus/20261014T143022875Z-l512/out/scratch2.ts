@@ -1,0 +1,4 @@
+import { transform } from "./transform.ts";
+const mk=(name:string,dose:any)=>transform([{folio:"0.1",id:"a",issuer:"x",patient:"p",effective:"2024-01-01",recorded:"2024-01-01T10:00:00-06:00",narrative:"",payload:{m:{type:"med_event",med_id:"M",action:"start",origin:"northgate",drug:{name},dose}}}] as any,"2024-01-01").medicationRequests.map(m=>[m.medicationCodeableConcept.text,JSON.stringify(m.dosageInstruction?.[0]?.doseAndRate)]);
+for (const [n,d] of [["losartan potassium 50 MG Oral Tablet",{value:2,unit:"tab"}],["24 HR metoprolol succinate 25 MG Extended Release Oral Tablet",{value:1,unit:"tab"}],["empagliflozin 12.5 MG / metformin hydrochloride 1000 MG Oral Tablet",{value:1,unit:"tab"}],["potassium chloride 20 MEQ Extended Release Oral Tablet",{value:1,unit:"tab"}],["empagliflozin 10 MG Oral Tablet [Jardiance]",{value:1,unit:"tab"}]] as any) console.log(mk(n,d));
+console.log(transform([], "2024-01-01"), transform([{} as any, null as any], "2024-01-01"));

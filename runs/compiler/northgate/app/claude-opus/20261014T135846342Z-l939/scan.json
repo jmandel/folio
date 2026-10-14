@@ -1,0 +1,21 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/views/views.d.ts; cat in/INSTRUCTIONS.md | head -5; cat in/harness/*\",\"description\":\"Read views and harness\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'))\nfor g in d:\n  print(g['patient'], len(g['items']))\n  for i in g['items']:"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2>&1 | head -200\",\"description\":\"Type-check and run mapper on samples\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2021-07-11 | grep -c analyte; sh in/harness/check.sh 2020-08-24 | grep -E '\\\"(analyte|condition|drug_name|local_time"
+  }
+ ],
+ "blocking": 0
+}

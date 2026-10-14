@@ -1,0 +1,97 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "shell (relative climb, check by hand): /bin/bash -lc 'ls -la && for p in .. ../.. ../../.. ../../../.. ../../../../..; do if [ -f \"$p/AGENTS.md\" ]; then printf '\"'%s\\\n' \\\"\"'$p/AGENTS.md\"; cat \"$p/AGE"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.861Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.861Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.862Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.862Z DENY sdmntprcentralus.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.862Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:04:36.863Z DENY sdmntprnortheu.oaiusercontent.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:05:34.987Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:06:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:07:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:08:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:09:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:10:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:11:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:12:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:13:34.975Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:14:34.975Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:15:34.975Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:16:34.974Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:17:34.975Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:18:34.975Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:19:34.976Z DENY ab.chatgpt.com:443"
+  },
+  {
+   "kind": "denied-connection",
+   "detail": "2026-10-14T14:20:27.551Z DENY ab.chatgpt.com:443"
+  }
+ ],
+ "blocking": 0
+}

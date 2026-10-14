@@ -1,0 +1,229 @@
+{
+  "patient": "LV-0038372",
+  "asOf": "2026-10-13",
+  "rows": {
+    "medicationRequests": [
+      {
+        "resourceType": "MedicationRequest",
+        "id": "med-RX-22720-45af5dc76e6cb4d9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "on-hold",
+        "intent": "order",
+        "reportedBoolean": false,
+        "medicationCodeableConcept": {
+          "text": "finerenone 10 mg tablet (finerenone)"
+        },
+        "subject": {
+          "reference": "Patient/LV-0038372"
+        },
+        "requester": {
+          "display": "Tobi Adeyemi, MD"
+        },
+        "authoredOn": "2021-09-08",
+        "statusReason": {
+          "text": "K 5.6 / 5.5 confirmed"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "code": {
+                "text": "QD"
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 10,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "resourceType": "Observation",
+        "id": "lab-RS-63690409-9e2f65d9feccee26",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "sodium",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2"
+            },
+            {
+              "system": "urn:lakeview:test-code",
+              "code": "LK-NA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/LV-0038372"
+        },
+        "effectiveDateTime": "2021-07-11T07:59:00-05:00",
+        "valueQuantity": {
+          "value": 137,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      {
+        "resourceType": "Observation",
+        "id": "lab-RS-77444866-e63c6c271e2c7221",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "a1c",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            },
+            {
+              "system": "urn:lakeview:test-code",
+              "code": "LK-A1C"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/LV-0038372"
+        },
+        "effectiveDateTime": "2021-07-11T07:59:00-05:00",
+        "valueQuantity": {
+          "value": 8.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      {
+        "resourceType": "Observation",
+        "id": "lab-RS-79117129-a869ce437bbbd834",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "creatinine",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0"
+            },
+            {
+              "system": "urn:lakeview:test-code",
+              "code": "LK-CREAT"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/LV-0038372"
+        },
+        "effectiveDateTime": "2021-07-11T07:59:00-05:00",
+        "valueQuantity": {
+          "value": 1.13,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      {
+        "resourceType": "Observation",
+        "id": "lab-RS-91152783-56cb19bfec99ed8d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "egfr",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48642-3"
+            },
+            {
+              "system": "urn:lakeview:test-code",
+              "code": "LK-EGFR09N"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/LV-0038372"
+        },
+        "effectiveDateTime": "2021-07-11T07:59:00-05:00",
+        "valueQuantity": {
+          "value": 61,
+          "unit": "mL/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/{1.73_m2}"
+        },
+        "method": {
+          "text": "ckd-epi-2009"
+        }
+      }
+    ]
+  }
+}

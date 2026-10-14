@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; bun -e '\nconst g=JSON.parse(await Bun.file(\\\"in/samples/samples.json\\\").text());\nfor(const p of g){ for(const it of p.items){ const {n"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace('''  if (/adverse|side effect|reaction|intoleran|allerg|associated|induce"
+  }
+ ],
+ "blocking": 0
+}

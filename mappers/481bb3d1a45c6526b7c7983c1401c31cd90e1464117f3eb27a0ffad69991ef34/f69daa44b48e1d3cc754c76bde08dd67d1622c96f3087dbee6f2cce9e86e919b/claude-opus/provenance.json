@@ -1,0 +1,103 @@
+{
+ "source": "homelog",
+ "schema_sha256": "481bb3d1a45c6526b7c7983c1401c31cd90e1464117f3eb27a0ffad69991ef34",
+ "view_set": "uscore",
+ "view_set_hash": "f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b",
+ "backend": "claude-opus",
+ "model": "opus",
+ "keys_sha256": "bb7c7cb090a2d081",
+ "chosen": {
+  "condition": "a",
+  "rep": 1,
+  "runId": "20261014T143130921Z-c36o",
+  "eval": "results/stage3/evals/20261014T143130921Z-c36o.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0,
+  "isolation_scan": "no network, IPC or web-tool calls"
+ },
+ "held_out": {
+  "patients": 60,
+  "as_of": [
+   "2023-06-30",
+   "2025-03-31",
+   "2026-10-13"
+  ],
+  "views": {
+   "medications": {
+    "precision": 0.9990900818926297,
+    "recall": 0.9981818181818182,
+    "tp": 1098,
+    "fp": 1,
+    "fn": 2,
+    "rows": 371,
+    "wrongRows": 2,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": null,
+    "recall": null,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "rows": 0,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "ms_per_item": 0.009385602549246808
+ },
+ "samples_from_training_patients": [
+  "p225/2025-01-18-day.folio.md",
+  "p225/2024-10-20-my-medicines.folio.md",
+  "p065/2026-05-10-day.folio.md",
+  "p065/2026-02-11-my-medicines.folio.md",
+  "p065/2026-03-15-day.folio.md",
+  "p225/2024-04-28-my-medicines.folio.md",
+  "p065/2026-02-19-day.folio.md",
+  "p065/2026-02-20-day.folio.md"
+ ],
+ "all_runs": [
+  {
+   "condition": "a",
+   "rep": 1,
+   "final": "20261014T143130921Z-c36o",
+   "rounds": [
+    "20261014T143130921Z-c36o"
+   ]
+  }
+ ]
+}

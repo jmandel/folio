@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p out; cp in/previous/transform.ts out/transform.ts; cd out\nsed -i 's/\\\\\\\\bqhs\\\\\\\\b|bedtime|at night|\\\\\\\\bhs\\\\\\\\b/\\\\\\\\bqhs\\\\\\\\b|bedtime|at ni"
+  }
+ ],
+ "blocking": 0
+}

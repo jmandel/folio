@@ -1,0 +1,9 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && mkdir -p out && cp in/previous/transform.ts out/transform.ts && python3 - <<'EOF'\np='out/transform.ts'\ns=open(p).read()\nold=s[s.index(\\\"  l"
+  }
+ ],
+ "blocking": 0
+}

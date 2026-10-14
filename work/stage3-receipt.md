@@ -1,146 +1,165 @@
-# Stage 3 receipt
+# Stage 3 receipt (round 2)
 
-Branch `stage3`. Claim under test: from a source's `.d.ts` and a few sample items alone, a CLI coding agent
-writes a deterministic mapper into consumer-defined views that is correct on held-out patients; independent
-checks catch silent errors; passing mappers are cached by schema hash and run as plain code.
+Branch `stage3`. This round reworks Stage 3 after the audit in [`stage3-audit.md`](stage3-audit.md). The claim under
+test: given a source's `.d.ts` and about eight sample items, a CLI agent writes a deterministic mapper into
+consumer-defined views that is correct on held-out patients, and passing mappers are cached by schema hash.
 
-Short answer, on this corpus: yes for all three backends on structured facts, with a small number of
-silent errors that are mostly policy calls the views did not settle. The full matrix ran: 4 sources ×
-{claude opus, codex, claude sonnet} × conditions a/b/c on the app views, and 4 sources × {opus, codex} on US
-Core. The cost was about $20, against a budget of $150. All numbers are in
-[`results/stage3/SCORECARD.md`](../results/stage3/SCORECARD.md) and `scorecard.json`, and each one names its run ids.
+The full numbers are in [`results/stage3/SCORECARD.md`](../results/stage3/SCORECARD.md) and `scorecard.json`;
+every number there names its run ids. Round-1 results (views v1, keys changed after triage on the test split)
+are kept in `results/stage3/round1/` and are not used.
 
-## What exists
+## What changed since round 1
 
-| Path | What it is |
-|---|---|
-| `packages/views/views.d.ts` | Consumer views with docstrings: `MedicationRow` (status incl. held/unknown, `status_since`, dose, `stop_reason`), `ProblemRow` (CKD G-stage), `AllergyIntoleranceRow` (allergy / intolerance / adverse_reaction), `LabResultRow` (analyte table with fixed units, eGFR rule, `egfr_equation`), `VitalRow`, and the `Transform` contract with `asOf`. |
-| `packages/views/uscore.d.ts` | US Core target: MedicationRequest (chosen because US Core 3.1.1–7.0 profiles no MedicationStatement and represents reported meds with `reportedBoolean`), and lab Observation. |
-| `packages/compiler/src/keys.ts` | Per-source expected views from the truth plus renderer knowledge, as of any date. Anti rows hold facts that must not appear. Also the merged key, restricted to what some source records. |
-| `packages/compiler/src/{workdir,sandbox,compile}.ts` | Builds the workdir, runs the agent under bubblewrap, and runs conditions a/b/c (at most 2 feedback rounds). |
-| `packages/compiler/src/{exec,evaluate,score,fhir}.ts` | tsc, contract scan, held-out execution with a determinism re-run, field-level scoring, trap attribution, US Core checks and the projection back to rows. |
-| `packages/compiler/src/prose.ts` | Prose cross-check. Sonnet reads only the narratives: 30 dev items and 40 test items per source. |
-| `packages/compiler/src/merge.ts` | Generic merge of rows across sources (about 70 lines). |
-| `packages/compiler/test/` | Hand-written reference mappers for all four sources, plus scorer tests (9 pass). |
-| `mappers/<schema-sha256>/<view-set-hash>/<backend-model>/` | 20 cached mappers, each with `provenance.json`. |
-| `runs/compiler/…` | Every agent run, recorded: prompt, inputs, transcript and outputs. |
+### Isolation
+
+- **No network except the model APIs.** Agents now run under bubblewrap with `--unshare-net`. The only way out is a per-run CONNECT proxy, running in a separate process, which allows only the model API hosts and logs every connection (`packages/compiler/src/egress.ts`, `sandbox.ts`).
+- **Nothing else reachable.** `$HOME`, `/tmp` and `/run/user` are empty mounts. The environment is cleared. IPC, PID and UTS namespaces are private. Claude's web tools are disallowed.
+- **Probe runs** are kept in `runs/compiler/isolation-probe-v2/{claude,codex}/`. They show:
+  - github.com is refused (403 at the proxy; no DNS directly)
+  - the model API answers only through the proxy
+  - the repo, `~/.claude/projects` and the D-Bus session can't be reached
+- **Transcript scan.** `packages/compiler/src/scan.ts` checks every tool call for paths outside the run dir and for network, IPC or web tools. It covered all 136 recorded runs, rounds 1 and 2:
+  - **Agent calls:** 0 network-tool, IPC or web-tool calls.
+  - **Denied connections:** 397, all from the codex CLI itself (ab.chatgpt.com and an image CDN).
+  - **Out-of-run paths:** 392 path mentions. I checked them by hand. They are codex looking for `AGENTS.md` up the directory tree, `cd ..` inside the run dir, and globs over the empty parent mount.
+- **Gate.** The compile loop applies the same scan as a gate. It rejected one round-2 run (`20261014T142410689Z-3cbh`) because a heredoc body matched a tool name. I fixed the scanner, and `cli/regate.ts` reinstated that run; its record says so.
+
+### Keys
+
+- **Judge.** A separate Opus agent judged the three round-1 key changes (`results/stage3/key-judge.md`, run `20261014T135017132Z-r02v`). It saw only the source docs, the truth model, generator excerpts and the key code, with no mapper output and no scores. Its verdicts:
+  - **One row per ingredient:** before not justified, after justified.
+  - **HomeLog "taking" + "stop for now" → held:** before ambiguous, after justified.
+  - **Riverside drug-caused diagnosis → allergy row:** after not justified by v1, because the substance and the existence of the row depended on another source's record.
+- **v2 rules.** The Riverside rule now follows views v2 explicitly. The diagnosis label decides; the substance is the one drug of that class on the same document's list, otherwise the class as written.
+- **Defects the judge found, all fixed:**
+  - The one-per-ingredient collapse ran before publication scoping.
+  - A drug-diagnosis row could duplicate an allergy-list row.
+  - HomeLog recency used list position.
+- **HomeLog at earlier dates.** Keys are now scoped by when each item was published. This fixes the HomeLog day-page bug at earlier as-of dates.
+- **Freeze.** Keys and scorer were frozen at commit `a3df06b3`, hash `bb7c7cb090a2d081` (recorded in every compile record), before any round-2 compile.
+- **Triage on train and dev only.** The hand-written reference mappers have 0 wrong and 0 extra rows on train and dev at all three dates. The test split is scored once per run.
+
+### Views v2
+
+Changes in `packages/views/views.d.ts`:
+
+- **Sensitive entries** are reported and tagged with `sensitivity: Sensitivity[]`, never dropped. The categories are mental-health, substance-use, sexual-reproductive-health, hiv-sti and genetic.
+- **Zone-less times** are read as America/Chicago local time.
+- **Drug-caused diagnoses** yield both a problem row and an avoid-row, with the substance rule above.
+- **On a patient's list, "taking" with a "stop for now" note is `held`.**
+- **Tablet doses** are converted to mg when the strength is known; a range gives no dose.
+- **The allergy view** is now a list of substances to avoid. It has `reaction_type` (hypersensitivity / side_effect / serious_adverse_event) and `mechanism` (immune / non_immune / unknown). ACE-inhibitor angioedema is hypersensitivity, non-immune.
+- **US Core fixes.** In `uscore.d.ts`, `statusReason` is a single CodeableConcept, as FHIR R4 has it. `requester` is now included, which us-core-21 requires. The HL7 validator found both.
+
+### Scoring
+
+- **Per view, not pooled.** Each view is reported separately, with wrong-row rates next to precision and recall.
+- **More fields scored:**
+  - evidence citations
+  - allergy onset, reaction, reaction type and mechanism
+  - lab status
+  - `otc`, `patient_reported` and `sensitivity`
+- **Three as-of dates:** 2023-06-30, 2025-03-31 and 2026-10-13.
+- **Traps:** reported per trap, with the number of distinct held-out patients, and with volume traps listed separately.
+- **Stratified split.** The split is stratified by (source, trap). Every trap reaches 10 or more held-out patients except where the corpus has too few:
+  - Lakeview T1: 13 patients in all
+  - Lakeview T13: 2
+  - Lakeview T19: 1
+  - Riverside T19: 1
+  - HomeLog T14: 18
+  - HomeLog T19: 1
+- **Training samples.** For each trap, the scorecard says whether the training samples show it.
+
+### Other changes
+
+- **Repeats.** There are three independent one-shot runs per cell for Opus, codex and Sonnet; conditions b and c run once each.
+- **Ablation.** Opus, condition a, ran three times each on Northgate and Riverside with every schema comment removed.
+- **FHIR validation.** I ran the official HL7 validator (US Core 8.0.1, terminology offline) over the hero plus 25 held-out patients per source.
+
+## Headline: one-shot mappers by view
+
+Wrong-row rate in percent: mean (min–max) over three runs, pooled over three dates. Held-out test split.
+
+| Source | View | rows/run | Opus | codex | Sonnet |
+|---|---|---|---|---|---|
+| Northgate | meds / problems / allergies / labs / vitals | 2165 / 1753 / 66 / 23884 / 3228 | 0 in all views and runs | 0 | 0 |
+| Lakeview | meds / problems / labs / vitals | 43 / 245 / 24045 / 617 | 0 | 0 | 0 |
+| Riverside | medications | 284 | 0.0 | 0.0 | 12.4 (0.0–18.7) |
+| Riverside | allergies | 33 | 0.0 | 0.0 | 17.2 (0.0–51.5) |
+| Riverside | labs | 1817 | 0.0 | 0.0 | 0.9 (0.0–1.9) |
+| Riverside | problems / vitals | 79 / 241 | 0 | 0 | 0 |
+| HomeLog | medications | 371 | 0.7 (0.5–0.8) | 2.5 (0.3–3.8) | 1.6 (0.5–3.8) |
+| HomeLog | vitals | 10462 | 0.0 | 0.0 | 0.0 |
+
+All 36 one-shot runs type-check, run without exceptions on every patient and date, are deterministic, and have no
+contract issues. US Core: every run has 0 wrong medication or lab rows, except HomeLog medications at 0.5%. The
+HL7 validator reports 0 errors in 7 of 8 runs. The eighth, Riverside Opus, has 1 error: a duplicate resource id. Most
+warnings are offline terminology and best-practice rules.
+
+## What the remaining errors are
+
+- **Riverside, Sonnet:**
+  - "1 tab PO nightly" read as frequency `other` instead of QHS (53 rows per run in two runs).
+  - Venous blood-gas pH and pCO2 left out (one or two runs).
+  - SGLT2i-associated DKA typed `side_effect` instead of `serious_adverse_event` (one run, 16 rows).
+- **HomeLog, all backends:**
+  - "2 when my back hurts" (200 mg tablets) not converted to 400 mg, which is the v2 tablet rule.
+  - A list naming Jardiance twice, one entry `taking` with no dates and one `stopped` 2024-09. The key prefers the current entry; the view does not settle this, and the judge flagged the same point.
+  - One corpus quirk: the generator writes levothyroxine strength as "75 mg". Sonnet "corrected" it to mcg.
+- **Volume traps.** No backend made a single error on T7, T9, T11 or T16 in any run.
+- **Judgment traps.** T1, T3, T4, T5, T12, T17, T18 and T19 also had 0 errors, except Sonnet on Riverside T18 (17/198) and T15 (106/852).
+
+## Documentation ablation (Opus, three runs)
+
+| Source | full docs | types only |
+|---|---|---|
+| Northgate | 0 wrong rows in every view | 0 wrong rows in every view |
+| Riverside | 0 | meds 12.8% (1.1–18.7), allergies 4.0% (0.0–6.1); other views 0 |
+
+- **Northgate:** without docstrings, its field names, action codes and units are self-explanatory enough. The views v2 text and samples carry the rest.
+- **Riverside:** without the docstrings, the "nightly" frequency, a levothyroxine dose unit and the DKA reaction type go wrong.
+- **Caveat:** the views themselves are written with knowledge of each source's quirks (audit §5). This ablation removes the source docs only, so it understates how much documentation carries.
+
+## Feedback and prose checking
+
+- **Condition b.** Prose feedback changed nothing measurable. Sonnet Riverside medications stayed at 18.7%; labs went from 1.9 to 0.
+- **Condition c.** Key counterexamples (calibration only) fixed Sonnet Riverside and most HomeLog dose cases.
+- **Prose check on test items.** Every discrepancy it raised was a false alarm (9 Northgate, 14 Lakeview, 7 Riverside, 2 HomeLog), and it flagged none of the 33 Sonnet Riverside errors in its scope. With the round-2 views, the prose check added nothing.
+
+## End to end
+
+The generic merge was tuned in round 1 and is frozen now. Scored against the merged truth key restricted to what the records carry:
+
+- The hand-written references reach 0.9% wrong medication rows plus 9 extra rows. These are record limits, e.g. "water pill" can't be linked to chlorthalidone. All other views are at 0.
+- Opus matches the references in all three runs.
+- Codex reaches 0.9–2.2% medication rows; Sonnet 0.9–2.8%.
+
+## Spend and time
+
+| | Cost | Runs or time |
+|---|---|---|
+| Opus | $33.93 | 27 runs, 126 agent-minutes |
+| Sonnet | $5.52 | 18 runs |
+| Codex | not reported | 21 runs, 261 agent-minutes |
+| Prose extraction, key judge and probes | about $5 | |
+| **Round 2 total** | **about $45** | budget $120 |
+
+Wall time for the matrix was about 1.3 h.
 
 ## How to run
 
 ```
-bun run compile northgate --backend opus --condition a        # also: --views uscore, --workdir-only
-bun packages/compiler/src/cli/matrix.ts                        # the whole matrix
-bun run score                                                  # re-evaluates every round with current keys, writes SCORECARD.md
+bun packages/compiler/src/cli/probe.ts claude|codex      # isolation probe
+bun packages/compiler/src/cli/scan.ts                    # transcript scan
+bun packages/compiler/src/cli/refcheck.ts dev            # reference mappers vs keys (train/dev only)
+bun packages/compiler/src/cli/matrix.ts                  # round-2 matrix
+bun run score [--reeval]                                 # SCORECARD.md, prose check, HL7 validation, cache
 bun test packages/compiler/test
 ```
 
-## Isolation
+## Limits
 
-The agent CLI runs under `bwrap`. `$HOME` and `/tmp` are empty tmpfs mounts. Only these are mounted back:
-the run dir, the CLI binaries, the CLI auth file, a fresh `~/.claude.json` and a read-only TypeScript.
-
-The probe runs in `runs/compiler/isolation-probe/` checked this:
-
-- `ls ~/hobby` shows only the empty mount path.
-- `cat …/truth/TRAPS.md` fails with "No such file".
-- `~/.claude` has no projects or history.
-
-The Northgate workdir, which `bun run compile northgate --workdir-only` lists:
-
-- `in/schema/northgate-chart-v1.d.ts`
-- `in/views/views.d.ts`
-- `in/samples/01…10-*.folio.md` and `samples.json`: 10 items from 2 training patients, named by their Northgate id
-- `in/harness/{tsconfig.json,typecheck.ts,run.ts,check.sh}`
-- `in/INSTRUCTIONS.md`
-
-Patients are split by truth id into train (20%), dev (20%) and test (60%). The hero and secondaries are test. Samples come only from train.
-
-## Is the scoring sane?
-
-- **Reference mappers.** I wrote a mapper for each source from its schema. All four score 100% precision and recall against their keys: 47,410 fields for Northgate across 181 held-out patients.
-- **Broken variants.** Each broken Northgate variant is caught on its trap:
-  - ignoring supersedes and retracts (T3, T4)
-  - reading a hold as a stop (T1)
-  - platelets left unscaled (T7)
-  - keeping the race-coefficient eGFR rows (T11)
-  - padding year-only onsets to full dates (T17)
-- **Keys corrected after triage.** Three times an agent disagreed with a key and the agent was the one right by the schema or view text:
-  - The key needed one row per ingredient.
-  - In HomeLog, a `taking` entry with the note "doctor told me to stop for now" is held.
-  - In Riverside, a diagnosis of a drug-caused condition is also an allergy row.
-
-  I fixed each key and the reference mapper, re-evaluated every round, and re-ran condition c where the old key had been fed back. Superseded c runs remain in `runs/` unreferenced.
-- **Merge fixes after triage.** I changed the merge rule (latest evidence, clinician rows first) and restricted the merged key to facts and fields some source records.
-
-## Results
-
-Test split, field-level precision / recall, condition a (one-shot):
-
-| Source | Opus | Codex (gpt-6-astra, xhigh) | Sonnet |
-|---|---|---|---|
-| Northgate (event log) | 100.0 / 99.9 | 100.0 / 99.9 | 100.0 / 99.5 |
-| Lakeview (coded tables) | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 |
-| Riverside (documents) | 99.9 / 99.9 | 99.4 / 99.5 | 100.0 / 99.5 |
-| HomeLog (patient app) | 100.0 / 100.0 | 99.6 / **3.4** | 100.0 / 100.0 |
-
-- **Compiling.** Every run compiled. No mapper threw on a held-out patient, and all were deterministic.
-- **US Core.** Opus and codex reach 100 / 100 on all sources (codex HomeLog 99.4), and all 23,952 resources each backend emitted are structurally conformant.
-- **End to end.** The merged chart covers 184 test patients. Opus a scores 99.9 / 99.9, and so do the hand-written references, which set the ceiling at 100 / 100. Hero recall is 100% for Opus, and codex a has 15.6% hero recall because it emitted no home readings.
-- **Speed.** Compiled mappers take 0.02–0.35 ms per item.
-- **Agent time.** Opus takes 3–6 minutes per compile, Sonnet 1–3 and codex 10–17.
-- **Spend.** In total: opus $14.39 over 16 runs, sonnet $3.05 over 14, prose $2.53 over 8, and 2.4 hours of codex agent time (codex reports no cost).
-
-## The five most interesting silent errors
-
-1. **Sonnet withheld behavioral-health data on its own (Northgate, T19, 30 of 30 facts).**
-   - It drops every line with `restricted: "BH"`, e.g. hero sertraline `01DMXAJR8GTNM4Y0AKHSMSV93C` and depression `01DMXA2TG0PST203XFPBD0TA1G`.
-   - The view says nothing about sensitivity, so this was a disclosure decision taken silently inside a mapper.
-   - Prose feedback round 2 fixed it (`20261014T121327949Z-386m`).
-2. **All three backends: no `ingredient` for RxNorm names with a pack prefix (Northgate, 31 rows each).**
-   - The names are of the form "3 ML insulin glargine 100 UNT/ML Pen Injector", e.g. `01K2YTJFEGP8WKXSCRFXTGNCYM`.
-   - Each parser stops at the leading number. The merge then shows glargine twice.
-   - No feedback condition fixed it: the samples never show such a name.
-3. **Codex dropped every home reading (HomeLog, 6,963 rows, T6 748/748).**
-   - Example: hero `01GXT102J8HAJNV6TGVJ03EWFR`.
-   - Its code comment says zone-less phone times cannot honestly be placed in America/Chicago.
-   - This is a principled reading of a gap in my view. The prose check could not see it: 14 errors in scope, 0 flagged.
-4. **Drug-caused diagnoses at Riverside (T18).**
-   - Sonnet and codex one-shot made no allergy row from "Euglycemic DKA, SGLT2 inhibitor-associated" (hero `01JBZ2V178F5KZNWJ47TAN9ZT2`). Codex later named the substance "SGLT2 inhibitor" rather than the drug.
-   - Opus typed ACE-inhibitor angioedema (s04 `01H24A8XZ0F0J4QQBRXSBKP21Z`) as `adverse_reaction`. My view lists angioedema under `allergy` and also says drug adverse effects are `adverse_reaction`. It contradicts itself, so count this against the view.
-5. **Paused medicine left as `taking` (HomeLog, T1).**
-   - Example: p139 Kerendia, `01KVP09G5RCC6G2AX0ZH51Y92V`, note "doctor told me to stop for now".
-   - Sonnet and codex report it active. Opus reports held, which is the reading the schema's "no paused status" docstring supports.
-
-## Did prose checking help?
-
-A little, and noisily.
-
-**Where it helped:**
-- It fixed Sonnet's BH omission on Northgate (round 2).
-- It raised Riverside allergy recall for Sonnet and codex from 31.4 to 42.9.
-- On test items it confirmed 1 of 11 discrepancies for Sonnet on Northgate, and 4 of 11 for Sonnet and codex on Riverside.
-
-**Where it fell short:**
-- Most discrepancies are false alarms. Even for perfect mappers there were 10 on Northgate, 11 on Lakeview and 7 on Riverside. Typical causes:
-  - notes citing a recomputed CKD-EPI 2021 eGFR while the lab printed 2009
-  - labs resulted after the note
-  - UTC dates
-- One feedback round made a mapper worse. Sonnet moved ACE angioedema off the Riverside problem list (problems 100 → 90.2).
-- It cannot see structured-only facts: codex HomeLog had 14 errors in scope and 0 flagged.
-
-**Key feedback (c, calibration only).** It closed most remaining gaps. It did not fix the pack-prefix names, or Sonnet's angioedema typing.
-
-## Documentation gaps the errors point to
-
-- **Sensitive entries.** The views (and FOLIO) need to say whether restricted or sensitive entries are mapped, and to carry a `sensitive` flag. Withholding belongs to disclosure, not to mappers (error 1).
-- **Northgate drug names.** The schema should say that `drug.name` is an RxNorm SCD/SBD name, with pack and timing prefixes, or carry an ingredient code (error 2).
-- **Zone-less times.** The views must state how to place zone-less local times, e.g. "assume the patient's home zone, America/Chicago" (error 3).
-- **Drug-caused diagnoses.** The views need one rule for a drug-caused diagnosis: problem, allergy row, or both, and which type for angioedema (error 4).
-- **HomeLog paused medicines.** HomeLog would be clearer with a paused status. Failing that, the view should say that patient notes count toward status (error 5).
-- **Lakeview DKA history.** Lakeview codes DKA history as Z86.39 "Personal history of other endocrine…", which no reader can link to DKA. This is a source-side quirk and it cost the merged chart in every run.
-- **Doses in tablets.** The views should say whether a dose given in tablets is converted to mg using the strength. Mappers and the merge disagreed on ibuprofen.
-
-## Open decisions for the gate
-
-- Whether to fix the five view gaps above now, which would put the views at version 2 and require recompiling, or keep the views fixed until Stage 7's ablation.
-- The corpus schemas document every trap, so with full docstrings silent-error rates are near zero. The interesting signal will come from Stage 7.
+- **The views know the sources.** The views were written by the corpus author, with knowledge of each source's traps. The keys are truth plus renderer knowledge from the same author. The reference-mapper check shows only that the keys and the author's reading agree.
+- **Held-out is not unseen.** Held-out patients come from the same generator as the training patients. The samples show most traps: Northgate's samples show 11 of its 15 traps, including a pack-prefixed glargine line this round.
+- **Small trap counts.** Some trap counts are small (see the split notes above). The one-shot cells where everything is 0 say only that no error occurred in 3 runs × the listed rows.
+- **The merge was tuned on test.** The end-to-end merge rules were tuned in round 1 while looking at test-split results.

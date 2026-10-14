@@ -1,17 +1,17 @@
 {
- "runs": 59,
- "flagged": 38,
+ "runs": 136,
+ "flagged": 85,
  "report": [
   {
    "run": "runs/compiler/riverside/uscore/claude-opus/20261014T121950885Z-8hz4",
    "findings": [
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/claude-opus/20261014T121950885Z-8hz4/out && python3 - <<'EOF'\np='trans"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/claude-opus/20261014T121950885Z-8hz4/out && python3 - <<HEREDOC\ngrep -"
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"python3 - <<'EOF'\np='transform.ts'\ns=open(p).read()\nold=\\\"\\\"\\\"  if (/adverse|side effect|reaction|allerg|intoleran|ketoacidosis|\\\\\\\\bdka\\\\\\\\b|lactic"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"python3 - <<HEREDOC\nbun edge.ts | grep 6809; cd .. && sh in/harness/check.sh 2026-10-13 >/tmp/o.json && echo OK && grep -c '\\\"resourceType\\\"' /tmp/o"
     },
     {
      "kind": "path",
@@ -69,6 +69,148 @@
    ]
   },
   {
+   "run": "runs/compiler/riverside/uscore/codex-gpt-6-astra/20261014T143346140Z-rnob",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/uscore/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.186Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.186Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.187Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.187Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.187Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.187Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:46.757Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:46.746Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:36:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:37:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:38:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:39:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:40:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:41:46.746Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:42:46.746Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:43:46.745Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:44:46.746Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:45:46.746Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:46:12.229Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T140748893Z-1n8w",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls -R in | head -50; wc -l in/previous/* in/schema/* in/views/*; grep -n \\\"^## \\\\|^- Narrative\\\\|^- Your\\\\|^- Quote\\\" in/feedback.md\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/previous/fb.ts in/previous/show.ts in/previous/edge.ts; cat in/harness/check.sh; ls out 2>/dev/null\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sed -n 912,2000p in/feedback.md | grep -v '^\\\\s*$' | head -5; sh in/harness/check.sh 2>&1 | head -80\"}"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/riverside/app/claude-opus/20261014T124107016Z-8k81",
    "findings": [
     {
@@ -77,7 +219,54 @@
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cp in/previous/transform.ts out/transform.ts && cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace('''const ALLERGIC = /hive"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cp in/previous/transform.ts out/transform.ts && cd out && python3 - <<HEREDOC\ngrep -n 'classifyDiagnosisReaction' transform.ts; cd .. && sh in/harne"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T140638040Z-t7b8",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; ls -R in out; wc -l in/schema/* in/views/* in/previous/*\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cp in/previous/transform.ts out/transform.ts; cat > out/fb.ts <<HEREDOC\nbun out/fb.ts\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh > /tmp/o.txt && echo OK; grep -c analyte /tmp/o.txt; cp in/previous/edge.ts in/previous/show.ts out/ 2>/dev/null; bun "
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T135846919Z-s27j",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; ls; ls out 2>/dev/null; ls node_modules | head; python3 -c \\\"\nimport json;d=json.load(open('in/samples/samples.json'));print(len(d), ["
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ngrep -n \\\"effectOnly ||\\\\|isDrugWord(first)\\\" transform.ts; cd .. && sh in/harness/check.sh > out/run.json; echo $?; h"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh > /dev/null && echo OK; rm -f out/run.json; cd out && bun show.ts | grep -A3 \\\"## allergies\\\"\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-opus/20261014T135846981Z-3dxu",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; bun -e '\nconst g=JSON.parse(await Bun.file(\\\"in/samples/samples.json\\\").text());\nfor(const p of g){ for(const it of p.items){ const {n"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd .. && bun out/edge.ts | grep -E '\\\"(substance|reaction_type|criticality|stop_reason)\\\"' ; sh in/harness/check.sh >/"
     }
    ]
   },
@@ -99,7 +288,88 @@
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && python3 - <<'E'\ns=open('in/previous/transform.ts').read()\ns=s.replace(\\\"\\\"\\\"  if (docs.length) {\n    const latest = docs[docs.length - 1];\n"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && python3 - <<HEREDOC\nsh in/harness/check.sh 2>&1 | tail -15\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T143002544Z-0iak",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd .. && bun out/fb.ts | grep -o '\\\"ph\\\"[^]]*\\\\]\\\\|\\\"pco2[^]]*\\\\]'; sh in/harness/check.sh 2>&1 | tail -15\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T142715000Z-ovzs",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T142736609Z-aur6",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/out"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T143203603Z-okt4",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p out; cp in/previous/transform.ts out/transform.ts; cd out\nsed -i 's/\\\\\\\\bqhs\\\\\\\\b|bedtime|at night|\\\\\\\\bhs\\\\\\\\b/\\\\\\\\bqhs\\\\\\\\b|bedtime|at ni"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/claude-sonnet/20261014T143057136Z-kpsx",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sed -n 641,840p in/feedback.md | cut -c1-400 | grep -v '^\\\\s*$' | head -150\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && cp in/previous/transform.ts out/transform.ts && rm -f out/t.ts out/t2.ts && sh in/harness/check.sh 2>&1 | tail -5\"}"
     }
    ]
   },
@@ -116,7 +386,7 @@
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out/t; cat > out/t/run.ts <<'EOF'\nimport { transform } from \\\"../transform\\\";\nimport { readFileSync } from \\\"fs\\\";\nconst fb = readFi"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out/t; cat > out/t/run.ts <<HEREDOC\ncp in/previous/transform.ts out/transform.ts; bun out/t/run.ts\"}"
     },
     {
      "kind": "path",
@@ -158,6 +428,95 @@
     {
      "kind": "path",
      "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T142703096Z-1yfl",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.451Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.451Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.452Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.452Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.453Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:04.453Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:28:03.722Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:03.705Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:03.705Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:45.161Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -232,6 +591,393 @@
     {
      "kind": "path",
      "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T140928466Z-x10r",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.050Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.051Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.051Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.052Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.052Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:30.052Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:29.086Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:29.070Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:29.070Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:29.070Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:29.069Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:29.070Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:29.070Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:48.470Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T140810015Z-5ukf",
+   "findings": [
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.010Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.010Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.010Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.011Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.011Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:11.012Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:10.608Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:10.594Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:10.594Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:10.596Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:10.596Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:10.595Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:01.756Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T140912286Z-hgve",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/riverside/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.230Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.231Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.231Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.232Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.232Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:13.232Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:12.876Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:12.864Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:12.862Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:28:12.863Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:12.864Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:24.556Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -323,6 +1069,55 @@
    ]
   },
   {
+   "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T143046506Z-4i0i",
+   "findings": [
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.639Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.640Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.640Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.641Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.641Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:47.642Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:31:47.099Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:47.083Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:47.082Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:47.082Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:21.585Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/riverside/app/codex-gpt-6-astra/20261014T124510879Z-749g",
    "findings": [
     {
@@ -352,7 +1147,156 @@
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\np='transform.ts'; s=open(p).read()\ns=s.replace('''  if (/\\\\\\\\b\\\\\\\\d{2}\\\\\\\\s*N?\\\\\\\\b/.test(\\\"\\\")) return false;\n  return "
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ngrep -n 'test(\\\"\\\")\\\\|vitamin\\\\|EGFR09' transform.ts; cd .. && sh in/harness/check.sh\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/uscore/codex-gpt-6-astra/20261014T143236688Z-rb1c",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/uscore/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/uscore/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.705Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.705Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.705Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.706Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.706Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:37.706Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:37.299Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:36:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:37:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:38:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:39:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:40:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:41:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:42:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:43:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:44:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:45:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:46:37.288Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:47:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:48:37.290Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:49:37.289Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:49:59.643Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -406,6 +1350,57 @@
    ]
   },
   {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T135846342Z-l939",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/views/views.d.ts; cat in/INSTRUCTIONS.md | head -5; cat in/harness/*\",\"description\":\"Read views and harness\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'))\nfor g in d:\n  print(g['patient'], len(g['items']))\n  for i in g['items']:"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2>&1 | head -200\",\"description\":\"Type-check and run mapper on samples\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && sh in/harness/check.sh 2021-07-11 | grep -c analyte; sh in/harness/check.sh 2020-08-24 | grep -E '\\\"(analyte|condition|drug_name|local_time"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T135845477Z-2w5l",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd ..; bun out/scratch.ts | grep -A8 '\\\"allergies\\\"'; sh in/harness/check.sh >/dev/null && echo OK\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd ..; sh in/harness/check.sh >/dev/null && bun out/scratch.ts | grep -A3 '\\\"ACE' \"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-opus/20261014T143532572Z-d57e",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; head -c 600 in/schema/northgate-chart-v1.d.ts | od -c | head; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\",\""
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd in/samples; python3 -I -c \\\"\nimport json;d=json.load(open('samples.json'))\nfor g in d:\n  print(g['patient'])\n  for i in g['items']: print(' ',i['"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/northgate/app/claude-opus/20261014T120431654Z-pfmn",
    "findings": [
     {
@@ -418,7 +1413,7 @@
     },
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && cat > t.ts <<'EOF'\nimport { transform } from \\\"./transform.ts\\\";\nconst r = (id: string, code: string, name: string, value: string, unit: s"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && cat > t.ts <<HEREDOC\nbun t.ts; cd .. && sh in/harness/check.sh >/dev/null && echo CHECK OK\"}"
     }
    ]
   },
@@ -479,11 +1474,50 @@
    ]
   },
   {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T142410689Z-3cbh",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T142327387Z-iite",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; mkdir -p out; cp in/previous/transform.ts out/transform.ts; sh in/harness/check.sh 2>&1 | tail -5\"}"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/northgate/app/claude-sonnet/20261014T121327949Z-386m",
    "findings": [
     {
      "kind": "path",
      "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cd ..; grep -n \\\"restricted\\\" in/previous/transform.ts; mkdir -p out; sed -e 's/ || e.restricted//' -e '/if (e.restricted) continue;/d' in/pr"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/claude-sonnet/20261014T142501451Z-w7f1",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; tail -50 samples/10*.md; sed -n 1,40p harness/run.ts\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../out; cat > ../out/transform.ts <<HEREDOC\ncd ..; sh in/harness/check.sh 2>&1 | head -150\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncd ..; sh in/harness/check.sh 2>&1 | grep -ci error\"}"
     }
    ]
   },
@@ -537,6 +1571,115 @@
    ]
   },
   {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T140540130Z-jlue",
+   "findings": [
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.096Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.097Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.097Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.097Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.098Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:41.098Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:40.733Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:07:40.723Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:40.715Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:40.715Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:40.715Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:40.715Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:40.715Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:40.717Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:40.717Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:40.717Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:40.717Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:40.716Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:20.354Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T121114687Z-j9h7",
    "findings": [
     {
@@ -586,6 +1729,91 @@
    ]
   },
   {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T142037581Z-9cfu",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.554Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.554Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.555Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.555Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.555Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:38.556Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:38.196Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:38.185Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:12.075Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T122913611Z-34r2",
    "findings": [
     {
@@ -631,6 +1859,390 @@
     {
      "kind": "path",
      "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T140513740Z-oz3y",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/northgate/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.722Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.723Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.723Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.724Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.724Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:14.724Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:14.331Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:07:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:14.316Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:14.316Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:14.316Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:14.316Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:14.318Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:14.318Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:14.317Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:21.476Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T142321679Z-p4d3",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.653Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.654Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.654Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.655Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.655Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:22.655Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:22.295Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:50.630Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/northgate/app/codex-gpt-6-astra/20261014T140434389Z-zv85",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell (relative climb, check by hand): /bin/bash -lc 'ls -la && for p in .. ../.. ../../.. ../../../.. ../../../../..; do if [ -f \"$p/AGENTS.md\" ]; then printf '\"'%s\\\n' \\\"\"'$p/AGENTS.md\"; cat \"$p/AGE"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.861Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.861Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.862Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.862Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.862Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:04:36.863Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:34.987Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:07:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:34.975Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:34.975Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:34.975Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:34.974Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:34.975Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:34.975Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:34.976Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:27.551Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/uscore/codex-gpt-6-astra/20261014T143327087Z-69l0",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell (relative climb, check by hand): /bin/bash -lc 'for p in . .. ../.. ../../.. ../../../.. ../../../../.. ../../../../../.. ../../../../../../.. ../../../../../../../.. ../../../../../../../../.."
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.079Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.080Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.080Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.080Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.081Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:28.081Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:27.707Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:27.698Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:36:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:37:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:38:27.689Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:39:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:40:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:41:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:42:27.690Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:43:27.691Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:43:40.985Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -686,7 +2298,42 @@
    "findings": [
     {
      "kind": "path",
-     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out 2>/dev/null || mkdir -p out && cd out; cd ..; python3 - <<'E'\ns=open('in/previous/transform.ts').read()\ns=s.replace('''      condition: lates"
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out 2>/dev/null || mkdir -p out && cd out; cd ..; python3 - <<HEREDOC\nsh in/harness/check.sh 2>&1 | tail -30; grep -n \\\"conditionText\\\" -A6 out/t"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-sonnet/20261014T142654003Z-mbfe",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/20261014T142654003Z-mbfe/out && cd $_ && cat > transfo"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-sonnet/20261014T142528755Z-3i9p",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/claude-sonnet/*/in/samples"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/claude-sonnet/20261014T142616921Z-4xt7",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../out; cat > ../out/transform.ts <<HEREDOC\ncd ..; sh in/harness/check.sh 2024-01-01 2>&1 | head -150\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; pwd; ls; ls in/out 2>/dev/null; mkdir -p out; mv in/out/transform.ts out/ && rmdir in/out; sh in/harness/check.sh 2024-01-01 2>&1 | head -170"
     }
    ]
   },
@@ -712,11 +2359,481 @@
    ]
   },
   {
+   "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T140559921Z-8lsl",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.958Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.959Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.960Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.960Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.960Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:00.961Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:07:00.542Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:00.526Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:00.526Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:00.526Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:00.525Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:00.526Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:00.526Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:44.843Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T140805914Z-7jnl",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/.agents"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.870Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.870Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.871Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.871Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.872Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:06.872Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:06.505Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:06.494Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:06.492Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:06.492Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:06.492Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:06.493Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:06.494Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:06.492Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:06.493Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:06.493Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:06.493Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:06.493Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:18.680Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T140541422Z-t8m7",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/lakeview/app/codex-gpt-6-astra"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.694Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.694Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.695Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.695Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.695Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:05:42.696Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:06:42.012Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:07:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:08:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:09:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:10:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:11:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:12:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:13:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:14:42.001Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:15:42.001Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:16:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:17:42.000Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:18:42.001Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:42.001Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:42.001Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:03.648Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/lakeview/app/codex-gpt-6-astra/20261014T122447488Z-bsoj",
    "findings": [
     {
      "kind": "path",
      "detail": "shell: /home/jmandel"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/prose/riverside-dev/20261014T135529405Z-6xv6",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Read: /home/.claude/projects/-home-jmandel-hobby-folio--worktrees-stage3-runs-compiler-prose-riverside-dev-20261014T135529405Z-6xv6/8c2d5dda-3cd7-4d9d-a7e9-4744df7089fb/tool-results/toolu_01KzHcHc8w2iXBStnN5XBrF4.txt"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/uscore/claude-opus/20261014T143130921Z-c36o",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<HEREDOC\ncat > scratch.ts <<HEREDOC\nbun scratch.ts; cd .. && bun node_modules/typescript/lib/tsc.js -p in/harness/tsconfig.json"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/uscore/codex-gpt-6-astra/20261014T143451369Z-c7j9",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.541Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.541Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.542Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.542Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.542Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:52.543Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:51.993Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:36:51.979Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:37:51.978Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:38:51.978Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:39:51.980Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:40:51.979Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:41:51.979Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:42:51.980Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:43:51.979Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:44:51.979Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:45:51.979Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -770,6 +2887,96 @@
    ]
   },
   {
+   "run": "runs/compiler/homelog/app/claude-opus/20261014T140344791Z-mykn",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; cat in/views/views.d.ts in/INSTRUCTIONS.md in/harness/*\",\"description\":\"Read views and harness\"}"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && sed -i 's/(?:of a\\\\\\\\s+)?(?:tablets?/(?:of\\\\\\\\s+)?(?:an?\\\\\\\\s+)?(?:tablets?/' transform.ts && grep -n 'of\\\\\\\\\\\\\\\\s+)?' transform.ts && bun"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-opus/20261014T140306045Z-1sjr",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; python3 -c \\\"\nimport json;d=json.load(open('samples/samples.json'))\nfor g in d:\n  for i in g['items']: print(g['patient'],i['id'],i['effectiv"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; sh in/harness/check.sh 2>&1 | python3 -c \\\"\nimport json,sys\ntxt=sys.stdin.read()\ndec=json.JSONDecoder();i=0\nwhile i<len(txt):\n  j=txt.find('{"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-opus/20261014T140735387Z-wgf8",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"cd .. && mkdir -p out && cp in/previous/transform.ts out/transform.ts && python3 - <<HEREDOC\ngrep -n \\\"toMcg\\\" out/transform.ts; sh in/harness/check"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-sonnet/20261014T142817403Z-u57v",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../../out; cat > ../../out/transform.ts <<HEREDOC\ncd ../..; sh in/harness/check.sh 2>&1 | head -80\"}"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-sonnet/20261014T142926055Z-93jx",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in/samples"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/claude-sonnet/20261014T143008354Z-vxvw",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/in"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/"
+    },
+    {
+     "kind": "path",
+     "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
    "run": "runs/compiler/homelog/app/claude-sonnet/20261014T121411245Z-whju",
    "findings": [
     {
@@ -779,6 +2986,232 @@
     {
      "kind": "path",
      "detail": "Bash: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/claude-sonnet/*/"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T143456335Z-u4ro",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/codex-gpt-6-astra"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.337Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.338Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.338Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.339Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.339Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:57.339Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:56.930Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:36:56.922Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:37:56.921Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:38:56.921Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:39:08.928Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T141950438Z-6r7k",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.619Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.620Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.620Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.621Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.621Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:19:51.621Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:51.052Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:51.041Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:51.041Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:51.041Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:51.041Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:28:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:31:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:51.042Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:47.115Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -816,6 +3249,264 @@
     {
      "kind": "path",
      "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/$p/AGENTS.md"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T142111215Z-6z0a",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/codex-gpt-6-astra"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.253Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.254Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.254Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.254Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.255Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:12.255Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:11.815Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:28:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:11.801Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:31:11.800Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:11.801Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:11.801Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:34:11.801Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:11.801Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:35:28.804Z DENY ab.chatgpt.com:443"
+    }
+   ]
+  },
+  {
+   "run": "runs/compiler/homelog/app/codex-gpt-6-astra/20261014T142023573Z-5iol",
+   "findings": [
+    {
+     "kind": "path",
+     "detail": "shell: /home/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/AGENTS.md"
+    },
+    {
+     "kind": "path",
+     "detail": "shell: /home/jmandel/hobby/folio/.worktrees/stage3/runs/compiler/homelog/app/codex-gpt-6-astra/AGENTS.md"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.596Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.597Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.597Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.597Z DENY sdmntprcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.598Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:20:24.598Z DENY sdmntprnortheu.oaiusercontent.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:21:24.166Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:22:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:23:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:24:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:25:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:26:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:27:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:28:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:29:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:30:24.153Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:31:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:32:24.152Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:24.153Z DENY ab.chatgpt.com:443"
+    },
+    {
+     "kind": "denied-connection",
+     "detail": "2026-10-14T14:33:42.552Z DENY ab.chatgpt.com:443"
     }
    ]
   },
@@ -915,15 +3606,15 @@
    ]
   },
   {
-   "run": "runs/compiler/isolation-probe-v2/codex/20261014T132921024Z-topt",
+   "run": "runs/compiler/isolation-probe-v2/codex/20261014T134955410Z-m8fn",
    "findings": [
     {
      "kind": "network",
-     "detail": "shell: /bin/bash -lc \"mkdir -p ./out\n{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10"
+     "detail": "shell: /bin/bash -lc \"{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10 -o /dev/null -"
     },
     {
      "kind": "ipc",
-     "detail": "shell: /bin/bash -lc \"mkdir -p ./out\n{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10"
+     "detail": "shell: /bin/bash -lc \"{\necho '== github via proxy'; curl -sS -m 10 -o /dev/null -w '%{http_code}\\\n' https://github.com/jmandel/folio 2>&1; echo '== github direct'; curl --noproxy '*' -sS -m 10 -o /dev/null -"
     },
     {
      "kind": "path",
@@ -955,36 +3646,36 @@
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.545Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.367Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.546Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.368Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.546Z DENY sdmntprcentralindia.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.368Z DENY sdmntprcentralindia.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.547Z DENY sdmntprcentralus.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.368Z DENY sdmntprcentralus.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.548Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.368Z DENY sdmntprsouthcentralus.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:22.548Z DENY sdmntprnortheu.oaiusercontent.com:443"
+     "detail": "2026-10-14T13:49:56.369Z DENY sdmntprnortheu.oaiusercontent.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:38.385Z DENY ab.chatgpt.com:443"
+     "detail": "2026-10-14T13:50:13.092Z DENY ab.chatgpt.com:443"
     }
    ]
   },
   {
-   "run": "runs/compiler/isolation-probe-v2/claude/20261014T132908174Z-2ikl",
+   "run": "runs/compiler/isolation-probe-v2/claude/20261014T134946699Z-jm6q",
    "findings": [
     {
      "kind": "network",
@@ -1024,11 +3715,11 @@
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:13.546Z DENY github.com:443"
+     "detail": "2026-10-14T13:49:53.659Z DENY github.com:443"
     },
     {
      "kind": "denied-connection",
-     "detail": "2026-10-14T13:29:13.563Z DENY raw.githubusercontent.com:443"
+     "detail": "2026-10-14T13:49:53.671Z DENY raw.githubusercontent.com:443"
     }
    ]
   }

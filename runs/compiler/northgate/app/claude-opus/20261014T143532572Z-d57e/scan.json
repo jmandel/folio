@@ -1,0 +1,13 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; head -c 600 in/schema/northgate-chart-v1.d.ts | od -c | head; cat in/INSTRUCTIONS.md | head -5; cat in/samples/*.md; cat in/harness/run.ts\",\""
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd in/samples; python3 -I -c \\\"\nimport json;d=json.load(open('samples.json'))\nfor g in d:\n  print(g['patient'])\n  for i in g['items']: print(' ',i['"
+  }
+ ],
+ "blocking": 0
+}

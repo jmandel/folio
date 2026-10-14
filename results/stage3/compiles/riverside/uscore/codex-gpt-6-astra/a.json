@@ -1,0 +1,41 @@
+{
+ "source": "riverside",
+ "viewSet": "uscore",
+ "backend": "codex-gpt-6-astra",
+ "model": "gpt-6-astra",
+ "condition": "a",
+ "schemaSha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "viewSetHash": "f69daa44b48e1d3cc754c76bde08dd67d1622c96f3087dbee6f2cce9e86e919b",
+ "samples": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "runId": "20261014T143346140Z-rnob",
+   "ok": true,
+   "durationMs": 746065,
+   "numTurns": 1,
+   "usage": {
+    "input_tokens": 557964,
+    "cached_input_tokens": 492032,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 26856,
+    "reasoning_output_tokens": 8003
+   },
+   "evalPath": "results/stage3/evals/20261014T143346140Z-rnob.json",
+   "summary": "tsc=ok det=true errors=0 wrong rows: medi 0/284, prob –, alle –, labs 0/1817, vita –"
+  }
+ ],
+ "rep": 1,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T143346140Z-rnob"
+}

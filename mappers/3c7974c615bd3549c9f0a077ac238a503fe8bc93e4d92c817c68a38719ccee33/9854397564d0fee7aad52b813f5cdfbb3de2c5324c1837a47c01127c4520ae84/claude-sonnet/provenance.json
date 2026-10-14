@@ -1,0 +1,128 @@
+{
+ "source": "riverside",
+ "schema_sha256": "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33",
+ "view_set": "app",
+ "view_set_hash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "backend": "claude-sonnet",
+ "model": "sonnet",
+ "keys_sha256": "bb7c7cb090a2d081",
+ "chosen": {
+  "condition": "b",
+  "rep": 1,
+  "runId": "20261014T143057136Z-kpsx",
+  "eval": "results/stage3/evals/20261014T143057136Z-kpsx.json"
+ },
+ "gates": {
+  "tsc": true,
+  "deterministic": true,
+  "runtime_errors": 0,
+  "contract_issues": 0,
+  "isolation_scan": "no network, IPC or web-tool calls"
+ },
+ "held_out": {
+  "patients": 35,
+  "as_of": [
+   "2023-06-30",
+   "2025-03-31",
+   "2026-10-13"
+  ],
+  "views": {
+   "medications": {
+    "precision": 0.9733400402414487,
+    "recall": 0.9733400402414487,
+    "tp": 1935,
+    "fp": 53,
+    "fn": 53,
+    "rows": 284,
+    "wrongRows": 53,
+    "extraRows": 0
+   },
+   "problems": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 237,
+    "fp": 0,
+    "fn": 0,
+    "rows": 79,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "allergies": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 144,
+    "fp": 0,
+    "fn": 0,
+    "rows": 33,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "labs": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 9272,
+    "fp": 0,
+    "fn": 0,
+    "rows": 1817,
+    "wrongRows": 0,
+    "extraRows": 0
+   },
+   "vitals": {
+    "precision": 1,
+    "recall": 1,
+    "tp": 1444,
+    "fp": 0,
+    "fn": 0,
+    "rows": 241,
+    "wrongRows": 0,
+    "extraRows": 0
+   }
+  },
+  "ms_per_item": 0.2601441247311831
+ },
+ "samples_from_training_patients": [
+  "p016/2025-04-28-admission-hp.folio.md",
+  "p016/2023-04-12-discharge-summary.folio.md",
+  "p016/2023-04-08-ed-note.folio.md",
+  "p016/2023-04-09-admission-hp.folio.md",
+  "p016/2023-04-10-progress-note.folio.md",
+  "p016/2023-04-11-progress-note.folio.md",
+  "p016/2025-04-28-ed-note.folio.md",
+  "p016/2025-04-29-endocrine-consult.folio.md"
+ ],
+ "all_runs": [
+  {
+   "condition": "a",
+   "rep": 3,
+   "final": "20261014T142749742Z-l677",
+   "rounds": [
+    "20261014T142749742Z-l677"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 1,
+   "final": "20261014T142715000Z-ovzs",
+   "rounds": [
+    "20261014T142715000Z-ovzs"
+   ]
+  },
+  {
+   "condition": "a",
+   "rep": 2,
+   "final": "20261014T142736609Z-aur6",
+   "rounds": [
+    "20261014T142736609Z-aur6"
+   ]
+  },
+  {
+   "condition": "b",
+   "rep": 1,
+   "final": "20261014T143057136Z-kpsx",
+   "rounds": [
+    "20261014T143002544Z-0iak",
+    "20261014T143057136Z-kpsx"
+   ]
+  }
+ ]
+}

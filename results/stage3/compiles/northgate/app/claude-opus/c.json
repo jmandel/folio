@@ -1,0 +1,37 @@
+{
+ "source": "northgate",
+ "viewSet": "app",
+ "backend": "claude-opus",
+ "model": "opus",
+ "condition": "c",
+ "schemaSha256": "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b",
+ "viewSetHash": "9854397564d0fee7aad52b813f5cdfbb3de2c5324c1837a47c01127c4520ae84",
+ "samples": [
+  "p038/2021-07-15-referral-created.folio.md",
+  "p038/2020-08-24-visit-note.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597.folio.md",
+  "p038/2021-07-11-lakeview-lv21-192-42597-corrected.folio.md",
+  "p133/2025-10-31-void.folio.md",
+  "p038/2020-08-24-problem-1-add.folio.md",
+  "p038/2021-07-15-med-glargine-start.folio.md",
+  "p038/2020-08-24-vitals.folio.md",
+  "p038/2021-07-15-medications-reviewed.folio.md",
+  "p016/2021-09-07-allergy-lisinopril.folio.md"
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "runId": "",
+   "ok": true,
+   "durationMs": 0,
+   "feedbackItems": 0,
+   "summary": "no findings; stopped"
+  }
+ ],
+ "rep": 1,
+ "variant": "full",
+ "keysSha256": "bb7c7cb090a2d081",
+ "final": "20261014T135845477Z-2w5l",
+ "startedFrom": "20261014T135845477Z-2w5l",
+ "note": "CALIBRATION ONLY: key-based counterexamples from the dev split were fed back (cheating-for-calibration upper bound)."
+}

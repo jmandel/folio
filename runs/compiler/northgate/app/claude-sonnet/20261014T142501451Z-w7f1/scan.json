@@ -1,0 +1,17 @@
+{
+ "findings": [
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd ..; tail -50 samples/10*.md; sed -n 1,40p harness/run.ts\"}"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"mkdir -p ../out; cat > ../out/transform.ts <<'EOF'\nimport type {\n  FolioItem, ViewRows, MedicationRow, ProblemRow, AllergyIntoleranceRow, LabResultR"
+  },
+  {
+   "kind": "path",
+   "detail": "Bash (relative climb, check by hand): {\"command\":\"cd out && python3 - <<'EOF'\ns=open('transform.ts').read()\na=s.index('  let m = /^(.*?)[\\\\\\\\s-]+(?:associated')\nb=s.index('  const t = code')\ns=s[:a]"
+  }
+ ],
+ "blocking": 0
+}
