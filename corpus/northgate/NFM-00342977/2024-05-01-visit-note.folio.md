@@ -14,9 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM2 f/u. No new complaints.
+DM2 f/u. Feels well.
+
 BP 142/84, repeat 140/84, pulse 63, wt 173 lb.
-Today eGFR 74, UACR 9 mg/g, A1c 7.2%. First K 6, sample hemolyzed; repeat K 4.5.
+
+Labs today: eGFR 74, UACR 9 mg/g, A1c 7.2%. K 6 on first draw, hemolyzed; repeat K 4.5.
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
 

@@ -17,23 +17,23 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnosis:** <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
+**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated, resolved.</ref>
 
-**Hospital course.** The patient came in with nausea, fatigue and fast breathing and was found to have a wide-gap metabolic acidosis with a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He was treated with an insulin infusion and dextrose-containing fluids, followed by subcutaneous insulin, and his acidosis cleared. He ate normally before discharge.
+**Hospital course.** The patient was admitted with ketoacidosis despite a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He was treated with an insulin infusion and dextrose-containing fluids, and the acidosis cleared. He feels well and is eating.
 
-**Condition at discharge.** Vitals at 12:30: BP 125/75, HR 88, RR 20, T 98.6 F, SpO2 96%. He feels well. The final panel on 10/27 at 06:22 showed sodium 132, potassium 4.3, chloride 100, bicarbonate 19, anion gap 13, urea nitrogen 20, creatinine 0.76, eGFR 80 and glucose 184.
+**Condition at discharge.** Vitals at 12:30: BP 125/75, HR 88, RR 20, T 98.6 F, SpO2 96%. Basic metabolic panel on the 06:22 draw on 10/27: sodium 132, potassium 4.3, chloride 100, bicarbonate 19, anion gap 13, urea nitrogen 20, creatinine 0.76, eGFR 80, glucose 184.
 
-**Allergies:** no known drug allergies.
+**Allergies:** NKDA.
 
 **Discharge medications**
 
-- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not resume until reviewed by his PCP</ref>
-- <ref id="med_metformin">Metformin 500 mg twice daily with meals: continue</ref>
-- <ref id="med_lisinopril">Lisinopril 20 mg daily: continue</ref>
-- Glipizide 5 mg daily: continue
-- Amlodipine 5 mg daily: continue
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by his PCP.</ref>
+- <ref id="med_metformin">Metformin 500 mg twice daily with meals: continue.</ref>
+- <ref id="med_lisinopril">Lisinopril 20 mg daily: continue.</ref>
+- Glipizide 5 mg daily: continue.
+- Amlodipine 5 mg daily: continue.
 
-**Follow-up.** He will see his primary care physician at Northgate Family Medicine within 1 week to decide whether dapagliflozin should be restarted and to recheck a basic metabolic panel. He was advised to return for vomiting, abdominal pain, fast breathing or marked weakness.
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel.
 
 ```json payload
 {
@@ -126,10 +126,10 @@ schema:
     "sig": "1 tab PO BID with meals",
     "status": "continue"
   },
-  "med_dapagliflozin": {
+  "med_empagliflozin": {
     "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",
@@ -164,7 +164,7 @@ schema:
     "type": "follow_up",
     "with": "Primary care (Northgate Family Medicine)",
     "when_text": "within 1 week",
-    "purpose": "Decide whether to restart dapagliflozin; recheck basic metabolic panel"
+    "purpose": "Decide whether to restart empagliflozin; recheck basic metabolic panel"
   }
 }
 ```

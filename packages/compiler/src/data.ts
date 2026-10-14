@@ -9,10 +9,12 @@ import { build } from "../../render/src/corpus.ts";
 import type { RenderedItem } from "../../render/src/context.ts";
 import type { Patient, SourceKey } from "../../truth/src/model.ts";
 import { findRepoRoot } from "../../agent-runner/src/index.ts";
+import { COHORT, corpusDir } from "../../truth/src/cohort.ts";
 import { factTraps, SOURCE_KEY, type TrapIndex } from "./keys.ts";
 
 export const REPO = findRepoRoot(import.meta.dir);
-export const CORPUS = join(REPO, "corpus");
+export const CORPUS = join(REPO, corpusDir());
+export { COHORT };
 export const SOURCES = ["northgate", "lakeview", "riverside", "homelog"] as const;
 export type Source = (typeof SOURCES)[number];
 export const EVAL_AS_OF = "2026-10-13";
@@ -92,6 +94,8 @@ let splitCache: Map<string, Split> | undefined;
  * pair is spread across splits in proportion. The hero and the secondaries are always test.
  */
 export function splitOf(patient: string): Split {
+  // The fresh cohort (round 3) is held out as a whole.
+  if (COHORT === "fresh") return "test";
   if (!splitCache) {
     const { trapsFor } = require("./keys.ts") as typeof import("./keys.ts");
     const profile = new Map<string, string[]>();

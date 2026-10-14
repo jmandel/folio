@@ -18,21 +18,22 @@ schema:
 
 **Reason for admission:** euglycemic diabetic ketoacidosis.
 
-**History of present illness.** The patient was seen in the ED this afternoon with malaise and a sense of being unwell, and was found to be markedly acidotic with a glucose of only 242. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. She takes dapagliflozin 10 mg daily for diabetes.
+**History of present illness.** The patient has type 2 diabetes and takes an SGLT2 inhibitor at home. They presented to the ED this afternoon feeling unwell, with nausea and fatigue, and were found to be markedly acidotic with a glucose of only 242. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. An insulin infusion with dextrose-containing fluids was started at 17:05 in the ED and is still running.
 
-**Allergies:** no known drug allergies.
+**Home medications.** Empagliflozin 10 mg daily, metformin 1000 mg twice daily with meals, lisinopril 20 mg daily, and hydrochlorothiazide 25 mg daily.
 
-**Exam.** Vitals at 20:56: BP 110/66, HR 80, RR 21, T 98.2 F, SpO2 98%. Mildly tachypneic with deep respirations, appears somewhat dry.
+**Allergies:** NKDA.
 
-**Results.** The basic metabolic panel drawn at 16:17 showed sodium 134, potassium 5.3, chloride 94, bicarbonate 8, anion gap 32, urea nitrogen 35, creatinine 1.57 (eGFR 50) and glucose 242. The insulin infusion at 0.1 units/kg/h and D5 lactated Ringer's at 150 mL/h have both been running since 17:05.
+**Exam.** Vitals at 20:56: BP 110/66, HR 80, RR 21, T 98.2 F, SpO2 98%. Appears tired but comfortable, with somewhat dry mucous membranes and deep respirations. Abdomen soft and non-tender.
+
+**Results.** BMP drawn 16:17: sodium 134, potassium 5.3, chloride 94, bicarbonate 8, anion gap 32, urea nitrogen 35, creatinine 1.57, eGFR 50, glucose 242.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol with D5 lactated Ringer's, since glucose is not high. Repeat BMP every 4 hours until the gap closes. <ref id="med_dapagliflozin">Hold dapagliflozin.</ref>
-2. Metformin: <ref id="med_metformin">hold metformin</ref> while she is acidotic and NPO.
-3. Volume depletion with creatinine 1.57: <ref id="med_hydrochlorothiazide">hold hydrochlorothiazide</ref> until volume is restored.
-4. Hypertension with potassium 5.3: <ref id="med_lisinopril">hold lisinopril</ref> for volume depletion and potassium; resume when she is eating and the potassium and creatinine have settled.
-5. Hyperkalemia is mild and should improve with insulin and fluids; recheck with the next panel.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated.</ref> Continue the insulin infusion per DKA protocol with D5 lactated Ringer's at 150 mL/h, since glucose is not high. Repeat BMP and beta-hydroxybutyrate every 4 hours until the gap closes. <ref id="med_empagliflozin">Hold empagliflozin.</ref>
+2. Type 2 diabetes: <ref id="med_metformin">hold metformin while acidotic and NPO.</ref>
+3. Volume depletion with mild hyperkalemia and creatinine of 1.57: <ref id="med_lisinopril">hold lisinopril for volume depletion and potassium; resume when eating.</ref> <ref id="med_hydrochlorothiazide">Hold hydrochlorothiazide for volume depletion.</ref> Both can be resumed when able.
+4. Monitor on telemetry overnight with frequent glucose checks.
 
 ```json payload
 {
@@ -166,10 +167,10 @@ schema:
     "restart_advice": "resume_when_able",
     "instructions": "Hold while acidotic and NPO"
   },
-  "med_dapagliflozin": {
+  "med_empagliflozin": {
     "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"

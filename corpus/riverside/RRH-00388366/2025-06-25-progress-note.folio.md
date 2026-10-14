@@ -16,15 +16,18 @@ schema:
 ---
 ## Progress note
 
-**Interval.** She feels much better this morning, with less nausea and easier breathing. Vitals at 07:19: BP 131/79, HR 105, RR 22, T 98.9 F, SpO2 96%. Heart rate remains a little fast. No known drug allergies.
+**Interval events.** Overnight the patient was treated with the insulin infusion per DKA protocol. They feel much better this morning, nausea has resolved, and they are asking to eat. Allergies: NKDA.
 
-**Results.** On the 06:05 <ref id="bmp">panel sodium was 131 mmol/L (L), potassium 4.1 mmol/L, chloride 100 mmol/L, bicarbonate 24 mmol/L, anion gap 7 mmol/L, urea nitrogen 16 mg/dL, creatinine 1.25 mg/dL, eGFR 66 mL/min/1.73m2 and glucose 127 mg/dL (H)</ref>. The gap has closed and creatinine is improved from 1.57 yesterday.
+**Exam.** Vitals at 07:19: BP 131/79, HR 105, RR 22, T 98.9 F, SpO2 96%. Comfortable, mucous membranes moist, abdomen soft and non-tender.
+
+**Results.** BMP drawn 06:05: <ref id="bmp">sodium 131, potassium 4.1, chloride 100, bicarbonate 24, anion gap 7, urea nitrogen 16, creatinine 1.25, eGFR 66, glucose 127.</ref> The gap has closed and the kidney function is improved.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolving. <ref id="sc_glargine">Insulin glargine 17 units subcutaneously daily was started at 07:00</ref> to overlap before the drip comes off; the <ref id="iv_insulin">insulin infusion is to stop at 09:00</ref>. Continue to check glucose closely.
-2. Hyponatremia is mild at 131 and improving with fluids.
-3. Dapagliflozin, metformin, lisinopril and hydrochlorothiazide all remain on hold for now.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving with a closed anion gap and bicarbonate of 24. Started <ref id="sc_glargine">insulin glargine 17 units subcutaneously daily at 07:00</ref> to overlap before stopping the drip. The <ref id="iv_insulin">insulin infusion is to stop at 09:00</ref>. Advance diet as tolerated.
+2. Mild hyponatremia, sodium 131; recheck with the next panel.
+3. Heart rate remains 105 despite the improvement in chemistries; continue to monitor.
+4. Metformin, empagliflozin, lisinopril and hydrochlorothiazide remain held.
 
 ```json payload
 {
@@ -131,10 +134,10 @@ schema:
     "sig": "1 tab PO BID with meals",
     "status": "held"
   },
-  "med_dapagliflozin": {
+  "med_empagliflozin": {
     "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"

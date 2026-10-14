@@ -108,3 +108,20 @@ Each change was checked against the regenerated raw items (corpus/), not only th
     matched mapper rows are neither right, wrong nor extra).
 - All 165 notes whose requests changed were regenerated with the Stage 1 note pipeline (`bun run prose`, sonnet).
   `check:corpus` finds 0 problems.
+
+## Stage 3 round 3: freeze and held-out design (recorded before the fresh cohort was generated)
+
+- **Key and scorer code frozen** at hash `26ee28163e5c6e69` (sha256 over packages/compiler/src/{keys,score,evaluate,data}.ts,
+  first 16 hex). Every round-3 compile record carries it; any later change shows as a different hash.
+- **Fresh held-out cohort**: `FOLIO_COHORT=fresh`, seed `folio-stage3-fresh-final`, 180 patients, ids f001…, trap-targeted
+  quotas (packages/truth/src/cohort.ts), written to corpus-fresh/ with notes from the Stage 1 note pipeline. Only
+  aggregate trap counts are looked at (to size it); no record, key row or mapper output from it is looked at for
+  triage. All round-3 headline numbers come from it; the main corpus's old test split is reported as a secondary table.
+  (An earlier seed, `folio-stage3-fresh-2026-10-14`, was used to debug generator plausibility and is not used.)
+- **Generator plausibility**: population patients that break a plausibility rule are regenerated from a derived seed
+  with the same archetypes (packages/truth/src/plausibility.ts); baseline SGLT2i is not given to planned-DKA patients
+  (random draws kept, so only p047, p116, p260 of the main cohort changed; their notes were regenerated).
+- **Cache gate**: a cached (deployable) mapper must also have (wrong + extra rows) / rows < 1% in every view on the
+  main cohort's dev split at the latest as-of date (report.ts DEV_GATE), besides type-checking, running without
+  errors, determinism and a clean isolation scan.
+- **Compile loop**: scores each new mapper on the main dev split only; held-out scoring is a separate step (`bun run score`).

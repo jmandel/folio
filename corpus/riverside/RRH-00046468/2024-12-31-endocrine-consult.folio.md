@@ -14,21 +14,21 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Endocrinology consultation
+## Endocrinology consult
 
-**Reason for consultation:** <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>, requested by the hospitalist team.
+**Reason for consult:** euglycemic ketoacidosis in a patient on an SGLT2 inhibitor.
 
-**History.** The patient was admitted yesterday with ketoacidosis and a glucose of only 210. Beta-hydroxybutyrate on arrival was 6.7 (drawn 12/30 at 16:25). The insulin infusion per DKA protocol ran from 17:05 on 12/30 and was stopped at 09:00 today. No known drug allergies.
+**History.** The patient is a man with type 2 diabetes and hypertension admitted with <ref id="dx_dka">euglycemic DKA, SGLT2 inhibitor-associated</ref>. He had been taking <ref id="med_dapagliflozin">dapagliflozin 10 mg daily</ref>. Admission beta-hydroxybutyrate was 6.7. No known drug allergies.
 
-**Medications.** Metformin, lisinopril and chlorthalidone are held on the primary team's plan, and amlodipine continues. <ref id="med_empagliflozin">Empagliflozin is held, and I recommend against restarting it at discharge.</ref>
+**Hospital course.** The insulin infusion per DKA protocol ran from 17:05 on 12/30 until 09:00 today, when it was stopped. He was started on <ref id="sc_glargine">insulin glargine 17 units daily</ref> at 07:00 today so that basal insulin was on board before the infusion came off. He has been tolerating the transition.
+
+**Medications.** Metformin, lisinopril and chlorthalidone are held; amlodipine continues.
 
 **Assessment and plan**
 
-1. Euglycemic DKA associated with the SGLT2 inhibitor. The gap has closed and the patient is transitioning off the infusion. <ref id="sc_glargine">Insulin glargine 17 units subcutaneously daily was started at 07:00 today</ref> and overlapped with the infusion before it was stopped.
-2. Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
-3. The patient should understand why this happened and what symptoms to bring to attention early. I will review this with the patient before discharge and am glad to see the patient in follow-up.
-
-Thank you for involving us in this patient's care.
+1. Euglycemic DKA, resolved on the infusion. Continue glargine and reassess the dose daily.
+2. Recommend against restarting dapagliflozin at discharge. Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
+3. We will follow while he is in the hospital, and he should see his primary care physician soon after discharge.
 
 ```json payload
 {
@@ -90,10 +90,10 @@ Thank you for involving us in this patient's care.
     "sig": "1 tab PO BID with meals",
     "status": "held"
   },
-  "med_empagliflozin": {
+  "med_dapagliflozin": {
     "type": "home_med",
-    "drug_name": "empagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1545653",
+    "drug_name": "dapagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1488564",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",

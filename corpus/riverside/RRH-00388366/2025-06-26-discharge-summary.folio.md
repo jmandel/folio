@@ -17,22 +17,22 @@ schema:
 ---
 ## Discharge summary
 
-**Reason for admission:** euglycemic diabetic ketoacidosis.
+**Diagnosis:** <ref id="dx_dka">Euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved.</ref>
 
-**Hospital course.** The patient presented with nausea, weakness and fast breathing and was found to have a severe anion gap acidosis with a glucose of only 242. She was treated with an insulin infusion and D5 lactated Ringer's, and the gap closed within the first day. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated, resolved</ref>. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. She was transitioned to subcutaneous insulin and then ate normally.
+**Hospital course.** The patient presented to the ED with nausea, weakness and rapid breathing, and was found to have a severe anion gap acidosis with a glucose of only 242. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery. They were treated with an insulin infusion per DKA protocol and dextrose-containing fluids, and the acidosis and anion gap cleared. They were then transitioned to subcutaneous insulin and resumed eating without difficulty. Kidney function, which was mildly impaired on arrival, improved with fluids.
 
-**Condition at discharge.** Vitals at 09:00: BP 130/78, HR 89, RR 17, T 98.7 F, SpO2 96%. She feels well and is eating. The final basic metabolic panel at 06:28 showed sodium 135, potassium 4.0, chloride 99, bicarbonate 24, anion gap 12, urea nitrogen 18, creatinine 1.36 (eGFR 60) and glucose 165. Kidney function is much improved from admission.
+**Condition at discharge.** Feeling well and eating normally. Vitals at 09:00: BP 130/78, HR 89, RR 17, T 98.7 F, SpO2 96%. Allergies: NKDA.
 
-**Allergies:** no known drug allergies.
+**Discharge labs.** BMP drawn 6/26 at 06:28: sodium 135, potassium 4.0, chloride 99, bicarbonate 24, anion gap 12, urea nitrogen 18, creatinine 1.36, eGFR 60, glucose 165.
 
 **Medications at discharge**
 
-- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not resume until reviewed by her PCP</ref>
-- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
-- <ref id="med_lisinopril">Lisinopril 20 mg daily: continue</ref>
-- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: continue</ref>
+- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by the PCP.</ref>
+- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
+- <ref id="med_lisinopril">Lisinopril 20 mg daily: continue.</ref>
+- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: continue.</ref>
 
-**Follow-up.** See her primary care physician at Northgate Family Medicine within 1 week to decide whether dapagliflozin should be restarted and to recheck a basic metabolic panel. She should return to the ED for vomiting, abdominal pain, fast breathing or marked weakness.
+**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel. The patient was advised to return for nausea, vomiting, abdominal pain or fast breathing.
 
 ```json payload
 {
@@ -125,10 +125,10 @@ schema:
     "sig": "1 tab PO BID with meals",
     "status": "continue"
   },
-  "med_dapagliflozin": {
+  "med_empagliflozin": {
     "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held",
@@ -155,7 +155,7 @@ schema:
     "type": "follow_up",
     "with": "Primary care (Northgate Family Medicine)",
     "when_text": "within 1 week",
-    "purpose": "Decide whether to restart dapagliflozin; recheck basic metabolic panel"
+    "purpose": "Decide whether to restart empagliflozin; recheck basic metabolic panel"
   }
 }
 ```

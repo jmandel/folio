@@ -13,6 +13,7 @@ import {
 } from "./model.ts";
 import { FAMILY, GIVEN_F, GIVEN_M } from "./names.ts";
 import { Rng } from "./rng.ts";
+import { plausibility } from "./plausibility.ts";
 
 export type Archetype =
   | "ckd_prog_sglt2" | "ckd_prog_sglt2_held" | "ckd_inpatient_dip" | "dka_prec" | "dka_noprec" | "hyperk_conf" | "hyperk_hem"
@@ -122,7 +123,7 @@ class Gen {
     const t = ms(when.includes("T") ? when : when + "T23:59:00-05:00");
     // A planned ACE-inhibitor angioedema stops every ACE inhibitor from that date, for all later simulation steps
     // (the ED visit itself is written later in the run, back-dated).
-    if (this.aceiStopFrom && drug(m.product).klass === "acei" && t > ms(this.aceiStopFrom + "T23:59:59-05:00")) return "stopped";
+    if (this.aceiStopFrom && drug(m.product).klass === "acei" && t > ms(addDays(this.aceiStopFrom, 3) + "T23:59:59-05:00")) return "stopped";
     let s: string | undefined, best = -Infinity;
     for (const h of m.history) { const k = sortKey(h.at); if (k <= t && k >= best) { best = k; s = h.status; } }
     return s;
@@ -346,7 +347,12 @@ export function generatePatient(spec: PatientSpec): Patient {
   if (g.mdd) baseMed(r.pick(["sertraline-50", "sertraline-100", "escitalopram-10"]), { sensitive: true });
   if (g.hypothyroid) baseMed("levothyroxine-75");
   const sglt2Planned = has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || has("dka_prec") || has("dka_noprec") || has("ckd_inpatient_dip") || has("sick_day") || (g.dm && g.ckd && r.chance(0.35)) || (g.hf && r.chance(0.5));
-  if (sglt2Planned && (has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || r.chance(0.4))) baseMed(r.pick(["empagliflozin-10", "dapagliflozin-10"]));
+  // Not a baseline SGLT2i for a planned DKA: that patient's SGLT2i comes from the DKA plan (it may predate the first visit).
+  // (Random draws are made as before so other patients' streams do not shift.)
+  if (sglt2Planned && (has("ckd_prog_sglt2") || has("ckd_prog_sglt2_held") || r.chance(0.4))) {
+    const prod = r.pick(["empagliflozin-10", "dapagliflozin-10"]);
+    if (!has("dka_prec") && !has("dka_noprec")) baseMed(prod);
+  }
 
   // ─── Primary-care simulation ────────────────────────────────────────────────────────────────
   const visits: string[] = [];
@@ -1203,12 +1209,12 @@ function homeLog(g: Gen, o: { masked: boolean; mmol: boolean; nsaid: boolean; ty
 
 // ─── the population ─────────────────────────────────────────────────────────────────────────────
 
-export function assignArchetypes(seed: string, n: number): Archetype[][] {
+export function assignArchetypes(seed: string, n: number, quotas?: Record<Archetype, number>): Archetype[][] {
   const rng = new Rng(`${seed}/archetypes`);
   const out: Archetype[][] = Array.from({ length: n }, () => []);
-  const scale = n / 295;
+  const scale = quotas ? 1 : n / 295;
   const exclusive: Archetype[][] = [["ckd_prog_sglt2", "ckd_prog_sglt2_held", "ckd_inpatient_dip", "dka_prec", "dka_noprec", "insulin_ckd"]];
-  for (const [a, q] of Object.entries(QUOTAS) as [Archetype, number][]) {
+  for (const [a, q] of Object.entries(quotas ?? QUOTAS) as [Archetype, number][]) {
     const count = Math.round(q * scale);
     const group = exclusive.find((gr) => gr.includes(a));
     const order = rng.shuffle([...Array(n).keys()]);
@@ -1226,9 +1232,15 @@ export function assignArchetypes(seed: string, n: number): Archetype[][] {
   return out;
 }
 
-export function generatePopulation(seed: string, n: number, idPrefix = "p", startIndex = 1): Patient[] {
-  const arche = assignArchetypes(seed, n);
-  return arche.map((a, i) => generatePatient({ id: `${idPrefix}${String(startIndex + i).padStart(3, "0")}`, role: "population", seed: `${seed}/patient/${startIndex + i}`, arche: a }));
+export function generatePopulation(seed: string, n: number, idPrefix = "p", startIndex = 1, quotas?: Record<Archetype, number>): Patient[] {
+  const arche = assignArchetypes(seed, n, quotas);
+  // A patient that breaks a plausibility rule (plausibility.ts) is regenerated from a derived seed, same archetypes.
+  return arche.map((a, i) => {
+    const id = `${idPrefix}${String(startIndex + i).padStart(3, "0")}`;
+    let p = generatePatient({ id, role: "population", seed: `${seed}/patient/${startIndex + i}`, arche: a });
+    for (let k = 1; k <= 8 && plausibility(p).length; k++) p = generatePatient({ id, role: "population", seed: `${seed}/patient/${startIndex + i}/retry${k}`, arche: a });
+    return p;
+  });
 }
 
 export { EVAL_DATE };

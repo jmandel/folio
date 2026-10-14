@@ -3,7 +3,7 @@
 
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { buildTruth, DEFAULT_SEED, POPULATION_SIZE } from "../../truth/src/index.ts";
+import { buildCohort, buildTruth, COHORT, corpusDir, DEFAULT_SEED, FRESH, POPULATION_SIZE } from "../../truth/src/index.ts";
 import { cohorts, patientKeys } from "../../truth/src/keys.ts";
 import { EVAL_DATE, type Patient, type SourceKey } from "../../truth/src/model.ts";
 import { assignArchetypes } from "../../truth/src/population.ts";
@@ -13,12 +13,13 @@ import { renderPatient } from "./index.ts";
 import { formatPayload, REPO, toMarkdown } from "./item.ts";
 import { ledgerNarrative, loadLedger, requestHash } from "./prose.ts";
 
-export const CORPUS = join(REPO, "corpus");
+export const CORPUS = join(REPO, corpusDir());
 
 export interface Built { patients: Patient[]; items: Map<string, RenderedItem[]>; seed: string }
 
-export function build(seed = DEFAULT_SEED, size = POPULATION_SIZE): Built {
-  const patients = buildTruth(seed, size);
+export function build(seed?: string, size?: number): Built {
+  const patients = seed || size ? buildTruth(seed ?? DEFAULT_SEED, size ?? POPULATION_SIZE) : buildCohort();
+  seed ??= COHORT === "fresh" ? FRESH.seed : DEFAULT_SEED;
   const items = new Map<string, RenderedItem[]>();
   for (const p of patients) items.set(p.id, renderPatient(p, seed));
   return { patients, items, seed };
@@ -81,7 +82,7 @@ export function writeCorpus(b: Built, narrativeCounts: Record<string, number>) {
 
 function manifest(b: Built, perSource: Record<string, { patients: number; items: number }>, narrative: Record<string, number>, cs: ReturnType<typeof cohorts>) {
   const pop = b.patients.filter((p) => p.role === "population");
-  const arche = assignArchetypes(b.seed, pop.length);
+  const arche = assignArchetypes(b.seed, pop.length, COHORT === "fresh" ? FRESH.quotas : undefined);
   const ledger = loadLedger();
   // Trap coverage: assigned in the truth, and evidenced by a rendered item.
   const traps: Record<string, { name: string; patients: string[]; rendered: string[] }> = {};

@@ -51,8 +51,8 @@ My Medicines, saved 11 February 2024.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Dapagliflozin",
-    "picked_from_search": { "rxnorm": "1488569", "display": "dapagliflozin 10 MG Oral Tablet" },
+    "name": "Empagliflozin",
+    "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",

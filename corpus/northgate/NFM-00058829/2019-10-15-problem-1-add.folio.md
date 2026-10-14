@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="prob_1">Essential HTN, onset 2005 per pt.</ref> Added at first visit here.
+<ref id="prob_1">Essential hypertension, onset 2005 per pt.</ref> Added at first visit.
 
 ```json payload
 {
@@ -25,7 +25,7 @@ schema:
     "description": "Essential hypertension",
     "icd10cm": "I10",
     "onset": { "date": "2005-01-01", "precision": "year" },
-    "visit_id": "V-2019-101522"
+    "visit_id": "V-2019-101527"
   }
 }
 ```

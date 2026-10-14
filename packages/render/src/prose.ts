@@ -3,6 +3,7 @@
 // failures go back to the agent with the problems listed. Accepted notes are recorded in a ledger
 // (corpus/prose-ledger.json) that points at recorded runs, so `gen` can replay them offline.
 
+import { corpusDir } from "../../truth/src/cohort.ts";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -12,7 +13,7 @@ import { type NoteRequest, type RenderedItem, SOURCE_DIR } from "./context.ts";
 import { parseItem, REPO } from "./item.ts";
 import { validateNarrative } from "./validate.ts";
 
-export const LEDGER_PATH = join(REPO, "corpus", "prose-ledger.json");
+export const LEDGER_PATH = join(REPO, corpusDir(), "prose-ledger.json");
 
 export interface LedgerRun { run: string; backend: BackendName; model?: string; attempt: number; requested: number; accepted: number; costUsd?: number; durationMs: number; ok: boolean; error?: string }
 export interface LedgerBatch { patient: string; source: SourceKey; items: Record<string, { run: string; hash: string }>; runs: LedgerRun[] }

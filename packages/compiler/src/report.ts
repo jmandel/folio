@@ -5,7 +5,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { BACKENDS, type CompileRecord, evalPath, readTransformOf, RESULTS } from "./compile.ts";
-import { EVAL_AS_OF, itemsForPatient, patientById, patients, REPO, SOURCES, type Source, sourceKey, splitOf, trapIndex, truth } from "./data.ts";
+import { CORPUS, EVAL_AS_OF, itemsForPatient, patientById, patients, REPO, SOURCES, type Source, sourceKey, splitOf, trapIndex, truth } from "./data.ts";
 import { type Eval, expectedWithItems, rowsFor } from "./evaluate.ts";
 import { execute, stage } from "./exec.ts";
 import { family, mergedExpected, trapsFor } from "./keys.ts";
@@ -22,6 +22,14 @@ export function loadRecords(): CompileRecord[] {
   const walk = (d: string) => { if (!existsSync(d)) return; for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p); else if (f.endsWith(".json")) out.push(JSON.parse(readFileSync(p, "utf8"))); } };
   walk(root);
   return out;
+}
+
+/** Cache gate: maximum (wrong + extra rows) / expected rows in any view on the main cohort's dev split, latest as-of date. */
+export const DEV_GATE = 0.01;
+
+export function loadEvalAt(runId: string, where: string): (Eval & { runId: string }) | undefined {
+  const p = evalPath(runId, where);
+  return existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : undefined;
 }
 
 export function loadEval(runId: string): (Eval & { runId: string }) | undefined {
@@ -107,7 +115,7 @@ export function endToEnd(mappers: Record<Source, { runId: string; transform: str
     const parts = SOURCES.filter((s) => p.sources[s]).map((s) => ({ source: s, rows: runs[s].get(p.patient)?.rows ?? {}, items: itemsForPatient(s, p).map((i) => ({ id: i.id, effective: i.effective })) }));
     const merged = mergeRows(parts);
     const shown = { ...merged, medications: merged.medications.filter((m) => m.status === "active" || m.status === "held") };
-    const keys = Object.fromEntries(["active-meds", "problems", "allergies", "lab-series", "vitals"].map((v) => [v, JSON.parse(readFileSync(join(REPO, "corpus/answers", p.patient, `${v}.json`), "utf8")).key]));
+    const keys = Object.fromEntries(["active-meds", "problems", "allergies", "lab-series", "vitals"].map((v) => [v, JSON.parse(readFileSync(join(CORPUS, "answers", p.patient, `${v}.json`), "utf8")).key]));
     const tp = patientById(p.patient);
     const sc = scoreRows(mergedExpected(tp, keys, trapIndex(tp)), shown);
     for (const r of sc.rows) {
@@ -143,6 +151,10 @@ export function cacheMappers(recs: CompileRecord[]): { path: string; runId: stri
       if (!r.final) continue;
       const ev = loadEval(r.final);
       if (!ev || !ev.tsc.ok || ev.runtime.patientErrors.length || !ev.deterministic || ev.contract.length || ev.execError) continue;
+      // Dev-split gate (set before any round-3 held-out run): wrong-row rate below DEV_GATE in every view at the latest date.
+      const dev = loadEvalAt(r.final, "main-dev");
+      const last = dev?.byDate?.[dev.asOfDates[dev.asOfDates.length - 1]];
+      if (!dev || !last || Object.values(last).some((v: any) => v.rows && (v.wrongRows + v.extraRows) / v.rows >= DEV_GATE)) continue;
       const dir = join(REPO, "mappers", r.schemaSha256, r.viewSetHash, r.backend);
       mkdirSync(dir, { recursive: true });
       writeFileSync(join(dir, "transform.ts"), readTransformOf(r.source, r.viewSet, backendOf(r.backend), r.final));

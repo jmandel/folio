@@ -13,7 +13,7 @@ import { dirname, join } from "node:path";
 import { type BackendName, runAgent, type RunResult } from "../../agent-runner/src/index.ts";
 import { VIEW_SETS, viewSetHash, type ViewSet } from "../../views/src/index.ts";
 import { createHash } from "node:crypto";
-import { EVAL_AS_OF, itemsForPatient, loadItems, patientById, patientsIn, REPO, schemaHash, schemaText, type Source, stripDocs, trapIndex, truth, type Variant } from "./data.ts";
+import { COHORT, EVAL_AS_OF, itemsForPatient, loadItems, patientById, patientsIn, REPO, schemaHash, schemaText, type Source, stripDocs, trapIndex, truth, type Variant } from "./data.ts";
 import { type Eval, evaluateTransform, expectedWithItems, rowsFor, summary } from "./evaluate.ts";
 import { execute, stage } from "./exec.ts";
 import { expectedFor } from "./keys.ts";
@@ -52,15 +52,18 @@ const schemaShaFor = (source: Source, variant: Variant) => variant === "full" ? 
 const family = (source: Source, vs: string, b: Backend) => `compiler/${source}/${vs}/${b.label}`;
 export const recordPath = (source: Source, vs: string, b: Backend, c: Condition, rep = 1, variant: Variant = "full") =>
   join(RESULTS, "compiles", source, vs, b.label, `${c}${variant === "types-only" ? "-typesonly" : ""}${rep > 1 ? `-r${rep}` : ""}.json`);
-export const evalPath = (runId: string) => join(RESULTS, "evals", `${runId}.json`);
+/** Evaluations are stored per cohort and split: evals-fresh/ (round-3 held-out cohort), evals-main-test/, evals-main-dev/. */
+export const evalPath = (runId: string, where = `${COHORT}-test`) => join(RESULTS, `evals-${where}`, `${runId}.json`);
 
 function save(path: string, data: unknown) { mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, JSON.stringify(data, null, 1) + "\n"); }
 
+/** In the compile loop a mapper is scored on the main cohort's dev split only (the cache gate); held-out scoring is `bun run score`. */
 function evaluateAndSave(r: RunResult, source: Source, vs: ViewSet["name"]): { ev?: Eval; path?: string } {
   const t = r.outputs["transform.ts"];
   if (!t) return {};
-  const ev = evaluateTransform(t, source, vs, "test");
-  const path = evalPath(r.meta.runId);
+  if (COHORT !== "main") throw new Error("compile runs use the main cohort (training samples, dev split)");
+  const ev = evaluateTransform(t, source, vs, "dev");
+  const path = evalPath(r.meta.runId, "main-dev");
   save(path, { runId: r.meta.runId, ...ev });
   return { ev, path };
 }

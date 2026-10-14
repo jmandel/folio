@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HQ6ZS670880P7XRVTWWGMTGE"
+id: "01HQ6ZS670YWNG0E2XEBZVRHRF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00058829"
 effective: "2024-02-21T12:00:00-06:00"
@@ -14,23 +14,23 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. No new symptoms.
-BP 133/76, pulse 79, wt 228 lb.
-Today: eGFR 69, K 4.2, UACR 65 mg/g, A1c 7.2%.
-Reviewed results with pt, A1c a bit higher than last time.
+DM f/u. BP 133/76, pulse 79, wt 228 lb.
+Labs today: eGFR 69, K 4.2, UACR 65 mg/g, A1c 7.2%.
+A1c above goal, dapagliflozin started 10 mg daily today.
+Pt agrees with plan.
 RTC 3 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-022174",
+    "visit_id": "V-2024-022126",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-022174",
+    "visit_id": "V-2024-022126",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

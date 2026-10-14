@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FNPFF2NGM8X7JS2ZBB99WFXF"
+id: "01FNPFF2NGYXTZNTTJ54JVKZRB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00058829"
 effective: "2021-11-29T12:31:00-06:00"
@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">BP above goal. Amlodipine started at 5 mg daily.</ref>
+<ref id="med_1">BP above goal. Amlodipine 5 mg daily started today.</ref> Pt informed.
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-37048",
+    "med_id": "ML-38962",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "amlodipine 5 MG Oral Tablet", "rxnorm": "197361" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2021-112911"
+    "visit_id": "V-2021-112985"
   }
 }
 ```

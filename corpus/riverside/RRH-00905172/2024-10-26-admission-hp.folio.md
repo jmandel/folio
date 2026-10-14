@@ -18,20 +18,19 @@ schema:
 
 **Reason for admission:** euglycemic diabetic ketoacidosis.
 
-**History of present illness.** The patient is seen shortly after arrival from the ED with nausea, fatigue and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> His glucose in the ED was only 165, despite significant acidosis. He takes <ref id="med_dapagliflozin">dapagliflozin 10 mg daily</ref>, which is held on admission.
+**History of present illness.** The patient is admitted from the ED with nausea, abdominal discomfort and fast breathing. Glucose in the ED was only modestly elevated, yet the labs showed a wide anion gap acidosis. <ref id="precipitant">The ketoacidosis was precipitated by a weekend of heavy alcohol use with little food.</ref> He takes empagliflozin at home.
 
-**Allergies:** no known drug allergies.
+**Allergies:** NKDA.
 
-**Exam.** Vitals at 00:00: BP 130/78, HR 103, RR 24, T 98.6 F, SpO2 98%. He is tired, with dry mucous membranes and deep, rapid respirations. Lungs are clear and the abdomen is soft.
+**Exam.** Vitals at 00:00: BP 130/78, HR 103, RR 24, T 98.6 F, SpO2 98%. Dry mucous membranes, deep respirations, abdomen soft.
 
-**Results.** The ED panel from 20:23 showed sodium 132, potassium 5.0, chloride 92, bicarbonate 13, anion gap 27, urea nitrogen 35, creatinine 0.93, eGFR 63 and glucose 165.
+**Results.** Basic metabolic panel drawn 20:23: sodium 132, potassium 5.0, chloride 92, bicarbonate 13, anion gap 27, urea nitrogen 35, creatinine 0.93, eGFR 63, glucose 165.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol at 0.1 units/kg/h, running since 21:15, together with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. Check chemistries regularly until the anion gap closes.
-2. <ref id="med_metformin">Hold metformin</ref> while acidotic and NPO.
-3. <ref id="med_lisinopril">Hold lisinopril</ref> for volume depletion and potassium; resume when eating.
-4. Continue glipizide 5 mg daily and amlodipine 5 mg daily as listed.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated.</ref> Continue the insulin infusion per DKA protocol at 0.1 units/kg/h, running since 21:15, together with D5 lactated Ringer's at 150 mL/h, since glucose is near normal. <ref id="med_empagliflozin">Hold empagliflozin.</ref>
+2. Diabetes: <ref id="med_metformin">hold metformin</ref> while acidotic and NPO. Glipizide continues as listed on the home medication list.
+3. Hypertension: <ref id="med_lisinopril">hold lisinopril</ref> for volume depletion and potassium; resume when eating. Amlodipine continues as listed.
 
 ```json payload
 {
@@ -157,10 +156,10 @@ schema:
     "restart_advice": "resume_when_able",
     "instructions": "Hold while acidotic and NPO"
   },
-  "med_dapagliflozin": {
+  "med_empagliflozin": {
     "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
+    "drug_name": "empagliflozin 10 mg tablet",
+    "rxnorm_ingredient": "1545653",
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
