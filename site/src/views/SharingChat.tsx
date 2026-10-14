@@ -9,7 +9,7 @@ const KEY_STORE = "folio.openrouter.key";
 const MODEL_STORE = "folio.openrouter.model";
 export const DEFAULT_MODEL = "anthropic/claude-sonnet-5.5";
 // Exact ids from https://openrouter.ai/api/v1/models (checked 2026-10-14). Any id can be typed.
-const MODELS = ["anthropic/claude-sonnet-5.5", "deepseek/deepseek-v4-pro", "anthropic/claude-haiku-5.5", "google/gemini-3.8-flash"];
+const MODELS = ["anthropic/claude-sonnet-5.5", "deepseek/deepseek-v4.1-flash", "deepseek/deepseek-v4-pro", "anthropic/claude-haiku-5.5", "google/gemini-3.8-flash"];
 
 const load = (k: string) => {
   try {
