@@ -15,6 +15,8 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
   const history = route.query.get("history") === "1";
   const trapMode = route.query.get("traps") === "1";
   const trapFilter = route.query.get("trap") ?? "";
+  // Deep link: #/record/hero/<source>/<item>?ref=<ref id> selects that span or entry.
+  const focus = route.query.get("ref") ?? undefined;
   const rec = usePatientRecord(index, pid);
   useChecks();
   const patient = index.patients.find((p) => p.patient === pid) ?? index.patients[0];
@@ -189,7 +191,7 @@ export function RecordView({ index, route }: { index: Index; route: Route }) {
             <a className="back-link" href={href(["record", pid], qs())}>
               Back to the timeline
             </a>
-            <ItemDetail it={selected} rec={rec} pid={pid} index={index} trapMode={trapMode} qs={qs} />
+            <ItemDetail it={selected} rec={rec} pid={pid} index={index} trapMode={trapMode} trapFilter={trapFilter} focus={focus} qs={qs} />
           </>
         ) : (
           <Overview index={index} rec={rec} pid={pid} trapMode={trapMode} />
@@ -221,7 +223,7 @@ function Row({ it, pid, href, current, trapMode }: { it: RecordItem; pid: string
   );
 }
 
-function ItemDetail({ it, rec, pid, index, trapMode, qs }: { it: RecordItem; rec: PatientRecord; pid: string; index: Index; trapMode: boolean; qs: (o?: Record<string, string | undefined>) => Record<string, string | undefined> }) {
+function ItemDetail({ it, rec, pid, index, trapMode, trapFilter, focus, qs }: { it: RecordItem; rec: PatientRecord; pid: string; index: Index; trapMode: boolean; trapFilter: string; focus?: string; qs: (o?: Record<string, string | undefined>) => Record<string, string | undefined> }) {
   const c = checkOf(pid, it.ref);
   const link = (key: string) => {
     const t = rec.byKey.get(key);
@@ -259,15 +261,16 @@ function ItemDetail({ it, rec, pid, index, trapMode, qs }: { it: RecordItem; rec
         title={it.title}
         status={c ? c.ok ? <Seal state="ok" label="Signature verified" /> : <Seal state="bad" label="Signature failed" /> : <Seal state="wait" label="Checking signature" />}
         banner={banner}
+        focus={focus}
       >
-        {trapMode && it.file.traps.length > 0 && <TrapPanel ids={it.file.traps} index={index} />}
+        {trapMode && it.file.traps.length > 0 && <TrapPanel ids={it.file.traps} index={index} open={trapFilter} />}
         <Provenance sdJwt={it.file.sdJwt} result={c} env={it.env} />
       </ItemDoc>
     </>
   );
 }
 
-function TrapPanel({ ids, index }: { ids: string[]; index: Index }) {
+function TrapPanel({ ids, index, open }: { ids: string[]; index: Index; open?: string }) {
   return (
     <div className="traps">
       <h3>Planted traps in this item</h3>
@@ -279,7 +282,7 @@ function TrapPanel({ ids, index }: { ids: string[]; index: Index }) {
         const t = index.traps.find((x) => x.id === id);
         if (!t) return null;
         return (
-          <details key={id} className="trap">
+          <details key={id} className="trap" open={id === open || undefined} data-trap={id}>
             <summary>
               {t.id}. {t.title}
             </summary>

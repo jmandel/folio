@@ -73,6 +73,8 @@ export interface ItemDocProps {
   /** Number of withheld units (for a partial presentation). */
   withheldUnits?: number;
   id?: string;
+  /** A ref id to select on arrival (from a deep link): its words are highlighted and its entry opened. */
+  focus?: string;
 }
 
 /** One record item as a document: letterhead, narrative with ref spans, structured entries. */
@@ -96,6 +98,25 @@ export function ItemDoc(p: ItemDocProps) {
     setOpen(new Set());
     setPop(null);
   }, [p.env.id, p.env.issuer]);
+
+  // Deep link to a ref: select its span (with the entry popover) or, for an entry with no words, the entry.
+  useEffect(() => {
+    const id = p.focus;
+    if (!id) return;
+    const t = setTimeout(() => {
+      const m = narrRef.current?.querySelector(`mark.ref[data-ref="${CSS.escape(id)}"]`) as HTMLElement | null;
+      if (m) {
+        m.scrollIntoView({ block: "center" });
+        fromNarrative(m);
+      } else if (id in p.payload) {
+        setActive(id);
+        setOpen((o) => new Set(o).add(id));
+        entriesRef.current?.querySelector(`[data-entry="${CSS.escape(id)}"]`)?.scrollIntoView({ block: "center" });
+      }
+    }, 60);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [p.focus, p.env.id, p.env.issuer]);
 
   useEffect(() => {
     narrRef.current?.querySelectorAll("mark.ref").forEach((m) => m.classList.toggle("active", (m as HTMLElement).dataset.ref === active));

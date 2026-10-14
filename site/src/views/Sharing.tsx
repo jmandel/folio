@@ -25,12 +25,14 @@ interface Received {
   result: { ok: true; v: VerifiedItem } | { ok: false; error: string };
 }
 
-export function SharingView({ index }: { index: Index; route: Route }) {
+export function SharingView({ index, route }: { index: Index; route: Route }) {
   const rec = usePatientRecord(index, "hero");
   const [chosen, setChosen] = useState<string[] | null>(null);
   const [units, setUnits] = useState<Map<string, UnitInfo[]>>(new Map());
   const [withheld, setWithheld] = useState<Map<string, Set<string>>>(new Map());
-  const [preset, setPreset] = useState(true);
+  // Deep links: ?preset=off starts with nothing withheld; ?s=context-loss scrolls to the context-loss note.
+  const [preset, setPreset] = useState(route.query.get("preset") !== "off");
+  const section = route.query.get("s");
   const [received, setReceived] = useState<Received[] | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -133,6 +135,13 @@ export function SharingView({ index }: { index: Index; route: Route }) {
     return out;
   }, [received, rec]);
 
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (section !== "context-loss" || scrolled || contexts.length === 0) return;
+    setScrolled(true);
+    requestAnimationFrame(() => document.getElementById("context-loss")?.scrollIntoView({ block: "start" }));
+  }, [section, scrolled, contexts.length]);
+
   if (!rec || !chosen) return <div className="loading">Loading Linda's record…</div>;
   const candidates = rec.items.filter((i) => !i.hidden && i.hasNarrative && !chosen.includes(i.ref));
 
@@ -234,7 +243,7 @@ export function SharingView({ index }: { index: Index; route: Route }) {
           </div>
         )}
         {contexts.length > 0 && (
-          <div className="caveat" role="note">
+          <div className="caveat" role="note" id="context-loss">
             <h3>Withholding can change what the rest of a note means</h3>
             <p>
               The clinic sees that something is missing, not what it was. The sentences around a withheld part may now read differently. Here is what it
