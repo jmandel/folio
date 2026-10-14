@@ -1,6 +1,6 @@
 // Reference data shared by the truth generator and the renderers: drug products, conditions,
-// analytes. RxNorm/SNOMED/ICD-10/LOINC codes are best-effort and were not checked against the
-// terminology files (see README). Hero codes follow the Stage 0 examples.
+// analytes. RxNorm, LOINC and ICD-10-CM codes are checked against NLM by work/verify-codes.ts
+// (results in work/code-verification.json); SNOMED codes are not checked.
 
 import type { Analyte, Coding, Freq } from "./model.ts";
 
@@ -36,16 +36,16 @@ export const DRUGS: Record<string, DrugProduct> = Object.fromEntries([
   p("metformin-500", "metformin", "6809", 500, "tablet", "861007", "biguanide", "Glucophage"),
   p("metformin-1000", "metformin", "6809", 1000, "tablet", "861004", "biguanide", "Glucophage"),
   p("empagliflozin-10", "empagliflozin", "1545653", 10, "tablet", "1545658", "sglt2i", "Jardiance"),
-  p("empagliflozin-25", "empagliflozin", "1545653", 25, "tablet", "1545664", "sglt2i", "Jardiance"),
-  p("dapagliflozin-10", "dapagliflozin", "1488564", 10, "tablet", "1488574", "sglt2i", "Farxiga"),
+  p("empagliflozin-25", "empagliflozin", "1545653", 25, "tablet", "1545666", "sglt2i", "Jardiance"),
+  p("dapagliflozin-10", "dapagliflozin", "1488564", 10, "tablet", "1488569", "sglt2i", "Farxiga"),
   p("canagliflozin-100", "canagliflozin", "1373458", 100, "tablet", "1373463", "sglt2i", "Invokana"),
   p("glipizide-5", "glipizide", "4821", 5, "tablet", "310490", "sulfonylurea", "Glucotrol"),
   p("sitagliptin-100", "sitagliptin", "593411", 100, "tablet", "665033", "dpp4i", "Januvia"),
   p("semaglutide-1", "semaglutide", "1991302", 1, "pen", undefined, "glp1ra", "Ozempic", "mg"),
   p("dulaglutide-1.5", "dulaglutide", "1551291", 1.5, "pen", undefined, "glp1ra", "Trulicity", "mg"),
   p("glargine-100", "insulin glargine", "274783", 100, "pen", "847230", "basal-insulin", "Lantus", "units/mL"),
-  p("detemir-100", "insulin detemir", "139825", 100, "pen", "847241", "basal-insulin", "Levemir", "units/mL"),
-  p("lispro-100", "insulin lispro", "86009", 100, "pen", "847211", "rapid-insulin", "Humalog", "units/mL"),
+  p("detemir-100", "insulin detemir", "139825", 100, "pen", "847239", "basal-insulin", "Levemir", "units/mL"),
+  p("lispro-100", "insulin lispro", "86009", 100, "pen", "1652639", "rapid-insulin", "Humalog", "units/mL"),
   p("regular-insulin", "insulin regular (human)", "253182", 100, "injection", undefined, "regular-insulin"),
   p("fluid-lr", "lactated Ringer's", "", 0, "injection", undefined, "fluid"),
   p("fluid-d5lr", "dextrose 5% in lactated Ringer's", "", 0, "injection", undefined, "fluid"),
@@ -58,9 +58,9 @@ export const DRUGS: Record<string, DrugProduct> = Object.fromEntries([
   p("lisinopril-20", "lisinopril", "29046", 20, "tablet", "314077", "acei", "Zestril"),
   p("lisinopril-40", "lisinopril", "29046", 40, "tablet", "197884", "acei", "Zestril"),
   p("enalapril-10", "enalapril", "3827", 10, "tablet", "858817", "acei", "Vasotec"),
-  p("losartan-50", "losartan", "52175", 50, "tablet", "979485", "arb", "Cozaar"),
+  p("losartan-50", "losartan", "52175", 50, "tablet", "979492", "arb", "Cozaar"),
   p("losartan-100", "losartan", "52175", 100, "tablet", "979480", "arb", "Cozaar"),
-  p("valsartan-160", "valsartan", "69749", 160, "tablet", "349200", "arb", "Diovan"),
+  p("valsartan-160", "valsartan", "69749", 160, "tablet", "349201", "arb", "Diovan"),
   p("chlorthalidone-25", "chlorthalidone", "2409", 25, "tablet", "197499", "thiazide"),
   p("hctz-25", "hydrochlorothiazide", "5487", 25, "tablet", "310798", "thiazide"),
   p("amlodipine-5", "amlodipine", "17767", 5, "tablet", "197361", "ccb", "Norvasc"),
@@ -72,7 +72,7 @@ export const DRUGS: Record<string, DrugProduct> = Object.fromEntries([
   p("furosemide-40", "furosemide", "4603", 40, "tablet", "313988", "loop", "Lasix"),
   p("atorvastatin-20", "atorvastatin", "83367", 20, "tablet", "617310", "statin", "Lipitor"),
   p("atorvastatin-40", "atorvastatin", "83367", 40, "tablet", "617311", "statin", "Lipitor"),
-  p("atorvastatin-80", "atorvastatin", "83367", 80, "tablet", "617314", "statin", "Lipitor"),
+  p("atorvastatin-80", "atorvastatin", "83367", 80, "tablet", "259255", "statin", "Lipitor"),
   p("rosuvastatin-20", "rosuvastatin", "301542", 20, "tablet", "859751", "statin", "Crestor"),
   p("sertraline-50", "sertraline", "36437", 50, "tablet", "312941", "ssri", "Zoloft"),
   p("sertraline-100", "sertraline", "36437", 100, "tablet", "312938", "ssri", "Zoloft"),
@@ -88,9 +88,12 @@ DRUGS["metoprolol-50"].scdName = "24 HR metoprolol succinate 50 MG Extended Rele
 DRUGS["levothyroxine-75"].scdName = "levothyroxine sodium 0.075 MG Oral Tablet";
 DRUGS["semaglutide-1"].scdName = "semaglutide 1 MG/0.75 ML Pen Injector";
 DRUGS["dulaglutide-1.5"].scdName = "dulaglutide 1.5 MG/0.5 ML Pen Injector";
-DRUGS["glargine-100"].scdName = "insulin glargine 100 UNT/ML Pen Injector";
-DRUGS["detemir-100"].scdName = "insulin detemir 100 UNT/ML Pen Injector";
-DRUGS["lispro-100"].scdName = "insulin lispro 100 UNT/ML Pen Injector";
+DRUGS["glargine-100"].scdName = "3 ML insulin glargine 100 UNT/ML Pen Injector";
+DRUGS["detemir-100"].scdName = "3 ML insulin detemir 100 UNT/ML Pen Injector";
+DRUGS["lispro-100"].scdName = "3 ML insulin lispro 100 UNT/ML Pen Injector";
+DRUGS["naproxen-220"].scdName = "naproxen sodium 220 MG Oral Tablet";
+DRUGS["enalapril-10"].scdName = "enalapril maleate 10 MG Oral Tablet";
+DRUGS["rosuvastatin-20"].scdName = "rosuvastatin calcium 20 MG Oral Tablet";
 
 export function drug(key: string): DrugProduct {
   const d = DRUGS[key];

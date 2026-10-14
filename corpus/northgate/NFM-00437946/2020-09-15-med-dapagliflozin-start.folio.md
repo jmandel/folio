@@ -23,7 +23,7 @@ schema:
     "med_id": "ML-35643",
     "action": "start",
     "origin": "northgate",
-    "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },
+    "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488569" },
     "dose": { "value": 10, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",

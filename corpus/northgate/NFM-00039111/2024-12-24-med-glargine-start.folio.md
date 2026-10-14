@@ -23,7 +23,7 @@ schema:
     "med_id": "ML-24969",
     "action": "start",
     "origin": "northgate",
-    "drug": { "name": "insulin glargine 100 UNT/ML Pen Injector", "rxnorm": "847230" },
+    "drug": { "name": "3 ML insulin glargine 100 UNT/ML Pen Injector", "rxnorm": "847230" },
     "dose": { "value": 10, "unit": "units" },
     "frequency": "QHS",
     "sig": "Inject 10 units under the skin at bedtime",

@@ -22,7 +22,7 @@ schema:
     "med_id": "ML-22182",
     "action": "start",
     "origin": "northgate",
-    "drug": { "name": "atorvastatin 80 MG Oral Tablet", "rxnorm": "617314" },
+    "drug": { "name": "atorvastatin 80 MG Oral Tablet", "rxnorm": "259255" },
     "dose": { "value": 80, "unit": "mg" },
     "frequency": "QHS",
     "sig": "Take 1 tablet by mouth at bedtime"

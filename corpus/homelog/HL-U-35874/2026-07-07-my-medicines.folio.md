@@ -70,7 +70,7 @@ My Medicines, saved 7 July 2026.
     "type": "my_med",
     "homelog_med_id": "med_6",
     "name": "Aleve",
-    "picked_from_search": { "rxnorm": "849574", "display": "naproxen 220 MG Oral Tablet" },
+    "picked_from_search": { "rxnorm": "849574", "display": "naproxen sodium 220 MG Oral Tablet" },
     "strength_text": "220 mg",
     "how_i_take_it": "1 or 2 for my knee, most days",
     "status": "taking",

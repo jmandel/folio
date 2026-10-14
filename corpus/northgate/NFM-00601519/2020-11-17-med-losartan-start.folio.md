@@ -22,7 +22,7 @@ schema:
     "med_id": "ML-27965",
     "action": "start",
     "origin": "northgate",
-    "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979485" },
+    "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979492" },
     "dose": { "value": 50, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",

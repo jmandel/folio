@@ -22,7 +22,7 @@ schema:
     "med_id": "ML-24520",
     "action": "start",
     "origin": "northgate",
-    "drug": { "name": "rosuvastatin 20 MG Oral Tablet", "rxnorm": "859751" },
+    "drug": { "name": "rosuvastatin calcium 20 MG Oral Tablet", "rxnorm": "859751" },
     "dose": { "value": 20, "unit": "mg" },
     "frequency": "QHS",
     "sig": "Take 1 tablet by mouth at bedtime",

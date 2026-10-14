@@ -60,7 +60,7 @@ My Medicines, saved 18 September 2025.
     "type": "my_med",
     "homelog_med_id": "med_5",
     "name": "Farxiga",
-    "picked_from_search": { "rxnorm": "1488574", "display": "dapagliflozin 10 MG Oral Tablet" },
+    "picked_from_search": { "rxnorm": "1488569", "display": "dapagliflozin 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",

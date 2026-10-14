@@ -55,7 +55,7 @@ My Medicines, saved 18 February 2026.
     "type": "my_med",
     "homelog_med_id": "med_4",
     "name": "Losartan",
-    "picked_from_search": { "rxnorm": "979485", "display": "losartan potassium 50 MG Oral Tablet" },
+    "picked_from_search": { "rxnorm": "979492", "display": "losartan potassium 50 MG Oral Tablet" },
     "strength_text": "50 mg",
     "how_i_take_it": "morning",
     "status": "taking",

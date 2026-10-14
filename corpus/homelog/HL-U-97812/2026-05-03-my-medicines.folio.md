@@ -32,7 +32,7 @@ My Medicines, saved 3 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_2",
     "name": "Crestor",
-    "picked_from_search": { "rxnorm": "859751", "display": "rosuvastatin 20 MG Oral Tablet" },
+    "picked_from_search": { "rxnorm": "859751", "display": "rosuvastatin calcium 20 MG Oral Tablet" },
     "strength_text": "20 mg",
     "how_i_take_it": "bedtime",
     "status": "taking",
