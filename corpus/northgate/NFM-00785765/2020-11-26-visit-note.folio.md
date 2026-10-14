@@ -14,10 +14,10 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. No hypoglycemia, no new symptoms.
+DM2 f/u. No problems since last visit.
 BP 139/76, pulse 66, wt 218 lb.
 Today: eGFR 65, K 4.2, UACR 7 mg/g, A1c 8%.
-Discussed diet and exercise.
+Went over results, A1c a little higher. Pt agrees to keep working on diet.
 RTC 6 mo.
 
 ```json payload

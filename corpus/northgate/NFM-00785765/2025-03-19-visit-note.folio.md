@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JPR6CA600Y4YXQ0H1DJVA8BV"
+id: "01JPR6CA60WK47VWT3QR4XH7ZE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00785765"
 effective: "2025-03-19T12:10:00-05:00"
@@ -17,34 +17,34 @@ schema:
 Chronic care visit. Feels well.
 BP 128/75, pulse 78, wt 221 lb.
 Labs 3/15: eGFR 53, K 4.4, A1c 7.5%.
-Discussed CKD stage 3a with pt, eGFR has slipped over the past year.
+CKD stage 3a on problem list now. Discussed with pt, will keep following eGFR and urine albumin.
 RTC 4 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-031926",
+    "visit_id": "V-2025-031957",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031926",
+    "visit_id": "V-2025-031957",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031926",
+    "visit_id": "V-2025-031957",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031926",
+    "visit_id": "V-2025-031957",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

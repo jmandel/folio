@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H2VDJ57076RDN2V9MR1T588Y"
+id: "01H2VDJ5709FNTR3HR9KZ77878"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00438305"
 effective: "2023-06-13T12:41:00-05:00"
@@ -14,24 +14,25 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-ED f/u, angioedema. Lip and tongue swelling has settled, breathing fine now.
-Lisinopril allergy: angioedema of lips and tongue. Added to allergy list.
-Lisinopril: stopped today (angioedema).
-Amlodipine: started 5 mg daily today (replacing lisinopril (angioedema)).
-Pt told to avoid lisinopril going forward and to seek care right away if swelling returns.
-RTC for BP recheck.
+ED f/u, angioedema. Swelling has settled, lips and tongue back to normal today.
+
+Lisinopril allergy: angioedema of lips and tongue. Lisinopril: stopped today (angioedema). Added to allergy list.
+
+Amlodipine: dose changed to 10 mg daily today, replacing lisinopril (angioedema).
+
+Pt to call or go to ED if swelling returns. RTC 1 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-061391",
+    "visit_id": "V-2023-061359",
     "visit_type": "office",
     "reason": "ED follow-up: angioedema"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-061391",
+    "visit_id": "V-2023-061359",
     "rank": 1,
     "icd10cm": "T78.3XXA",
     "display": "Angioneurotic edema, initial encounter"

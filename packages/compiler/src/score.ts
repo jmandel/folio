@@ -172,6 +172,7 @@ export function scoreRows(exp: Expected, actual: Partial<Record<View, Row[]>> | 
     const assigned = new Map<number, number>();
     for (const p of pairs) if (!assigned.has(p.k) && !used.has(p.m)) { assigned.set(p.k, p.m); used.add(p.m); }
     keyRows.forEach((kr, k) => {
+      if (kr.excluded) return;
       const m = assigned.get(k);
       const r = m === undefined ? undefined : mine[m];
       const fields = r ? compareFields(view, kr.fields, r) : compareFields(view, kr.fields, {}).map((x) => ({ ...x, ok: false, actual: undefined }));
@@ -184,11 +185,14 @@ export function scoreRows(exp: Expected, actual: Partial<Record<View, Row[]>> | 
     });
     const left = mine.filter((_, i) => !used.has(i));
     // Duplicates: a leftover row that would have matched an expected row of the same view.
-    const outcomes = rows.filter((x) => x.view === view);
+    const outcomeOf = new Map<number, RowOutcome>();
+    { const outs = rows.filter((x) => x.view === view); let j = 0; keyRows.forEach((kr, k) => { if (!kr.excluded) outcomeOf.set(k, outs[j++]); }); }
     const rest: Row[] = [];
     for (const r of left) {
       const k = keyRows.findIndex((kr) => matchScore(view, kr.fields, r) > 0 && (view !== "vitals" || matchScore(view, kr.fields, r) >= 17));
-      if (k >= 0 && outcomes[k].matched) outcomes[k].duplicated++;
+      if (k >= 0 && keyRows[k].excluded) continue;
+      const o = k >= 0 ? outcomeOf.get(k) : undefined;
+      if (o?.matched) o.duplicated++;
       rest.push(r);
     }
     unmatchedByView.set(view, rest);

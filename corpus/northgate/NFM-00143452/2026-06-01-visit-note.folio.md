@@ -14,11 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Diabetes f/u. No new concerns.
-BP 117/73, pulse 79, wt 204 lb.
-Labs 5/30: eGFR 83, K 4.8, A1c 7.7%.
-Reviewed results with pt, continue current plan.
-RTC 3 mo.
+DM2 f/u. Doing OK, no low sugars reported.
+
+BP 124/77, pulse 79, wt 204 lb.
+
+Labs 5/30: A1c 7.7%, eGFR 83, K 4.5. A1c improved.
+
+Continue current plan. RTC 3 mo.
 
 ```json payload
 {

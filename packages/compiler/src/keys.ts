@@ -29,6 +29,11 @@ export interface KeyRow<F> {
   order?: number;
   /** Item ids (this source) that carry the fact; set by the harness before scoring `evidence`. */
   items?: string[];
+  /**
+   * Not scored. A matching mapper row is neither right nor wrong nor extra. Used where the views leave the answer
+   * open (a patient's list naming one drug twice with different statuses).
+   */
+  excluded?: string;
 }
 
 export interface MedKey {
@@ -377,7 +382,8 @@ function riverside(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     const d = medDoseAt(p, m.id, last?.dose ? doc.signedAt : enc.start);
     e.medications.push(row("medications", {
       ingredient: d.drug.ingredient, names: [`${d.drug.ingredient} ${d.drug.strength} mg ${d.drug.form}`], ingredientDerivable: true, status,
-      dose: doseOf(d.dose), frequency: FREQ_OK[d.frequency], patient_reported: false,
+      // Riverside writes once-daily-at-bedtime as "nightly": the views accept QHS or QD for it.
+      dose: doseOf(d.dose), frequency: d.frequency === "QHS" ? ["QHS", "QD"] : FREQ_OK[d.frequency], patient_reported: false,
     }, [m.id], "A", ix, modality(m, "A"), ["T15", ...(status === "held" ? ["T1"] : [])]));
   }
 
@@ -477,8 +483,9 @@ const BRAND_OK = (name: string, ingredient: string, brand?: string) => {
 
 /** Views v2 dose rule for a patient's list entry: count x strength; no count named = 1; ranges and conditions omit. */
 function homeDose(strength?: string, how?: string): { value: number; unit: string } | undefined {
-  if (!strength) return undefined;
-  if (/ if | or |sliding/i.test(how ?? "")) return undefined;
+  // No directions, no dose: the strength alone does not say how much the patient takes (views v3).
+  if (!strength || !how) return undefined;
+  if (/ if | or |sliding/i.test(how)) return undefined;
   const units = (how ?? "").match(/^(\d+(?:\.\d+)?) units\b/);
   if (/pen/i.test(strength)) return units ? { value: +units[1], unit: "units" } : undefined;
   const mg = strength.match(/^(\d+(?:\.\d+)?) mg$/);
@@ -504,6 +511,9 @@ function homelog(p: Patient, t: number, e: Expected, ix: TrapIndex) {
     }, [m.id], "P", ix, modality(m, "P"), [...(m.otc ? ["T13"] : []), ...(paused ? ["T1"] : [])]));
     // Two entries for one ingredient on one list: a current entry beats a stopped one; then the later start date; then list position.
     e.medications[e.medications.length - 1].order = (en.status === "stopped" ? 0 : 1e13) + (en.started ? sortKey(en.started) / 1e3 : 0) + i;
+    // The same drug listed twice with different statuses: the views do not say which entry stands; not scored.
+    const twins = save.entries.filter((x) => drug(p.meds.find((m2) => m2.id === x.medId)!.product).ingredient === d.ingredient);
+    if (twins.length > 1 && new Set(twins.map((x) => x.status)).size > 1) e.medications[e.medications.length - 1].excluded = "patient list names the drug twice with different statuses";
   });
   for (const v of p.vitals.filter((x) => x.source === "P" && ms(x.at) <= t)) {
     const typoLive = v.typo && ms(localAt(`${v.typo.fixedAt.slice(0, 10)}T00:00`)) > t;
@@ -602,7 +612,9 @@ function restrictToRecords(p: Patient, e: Expected, ix: TrapIndex): Expected {
       if (!same.length) return [];
       const f = { ...r.fields };
       for (const k of ["dose", "onset", "ckd_stage", "status_since", "criticality", "frequency"]) if (k in f && !same.some((x) => x.fields[k] !== undefined)) delete f[k];
-      return [{ ...r, fields: f }];
+      // A status no structured record carries (e.g. a resumption written only in a visit note) is scored apart, as prose-only.
+      const proseOnly = "status" in f && !same.some((x) => x.fields.status === f.status);
+      return [{ ...r, fields: f, ...(proseOnly ? { modality: "prose-only" as const } : {}) }];
     });
   }
   return e;

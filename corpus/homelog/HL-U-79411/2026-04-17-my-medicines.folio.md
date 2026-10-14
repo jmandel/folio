@@ -41,7 +41,7 @@ My Medicines, saved 17 April 2026.
     "type": "my_med",
     "homelog_med_id": "med_3",
     "name": "Synthroid",
-    "strength_text": "75 mg",
+    "strength_text": "75 mcg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

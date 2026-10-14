@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01M24H8F60RFS2YJ0FFKH8CEJW"
+id: "01M24H8F600DAK0JN5B5DAZ4JK"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0067326"
 effective: "2026-09-09T14:00:00-05:00"
@@ -14,19 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
+<ref id="dx_ckd">CKD G3b</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. Follow-up visit.
 
-eGFR 33 today, K 4.6. Down from 37 in April, a larger step than before.
+<ref id="bp_sys">BP 133/80, HR 70, weight 97.7 kg.</ref> No new complaints. No edema.
 
-<ref id="bp_sys">BP 133/80, HR 70, weight 97.7 kg.</ref> Blood pressure better than recent visits. No edema, no new complaints.
+eGFR 33 and K 4.8 today. Kidney function lower than at earlier visits.
 
-Repeat labs in 6 weeks to confirm the trend. Return after.
+Repeat labs soon and return in 3 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2026-09-09T14:00:00-05:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +35,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +43,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +59,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 133,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +77,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 70,
     "UNIT_CODE": "/min",
@@ -86,7 +86,7 @@ Repeat labs in 6 weeks to confirm the trend. Return after.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-102178",
+    "VISIT_ID": "NV-117133",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 97.7,
     "UNIT_CODE": "kg",

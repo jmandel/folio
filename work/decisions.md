@@ -77,3 +77,34 @@ Resolved at Stage 0a → 0b handoff (2026-10-13):
 - **Feed authentication**: out of scope for the demo; spec/sync.md names it as a deployment requirement (OAuth/SMART), nothing more.
 - **Node log persistence across restarts**: not needed; nodes serve a directory.
 - **Key binding for agent exchanges**: decide in Stage 6.
+
+## Stage 3 round 3 (2026-10-14): truth and key fixes after the round-2 audit
+
+Each change was checked against the regenerated raw items (corpus/), not only the truth.
+
+- **HomeLog strength text in the product's unit.** The generator wrote every tablet strength as "<n> mg", so
+  levothyroxine 75 mcg appeared as "75 mg" next to a picked RxNorm product "levothyroxine sodium 0.075 MG Oral
+  Tablet". It now writes the catalog unit ("75 mcg"; pens "<n> mg pen" / "100 units/mL pen"). Reason: a mapper that
+  read the record's own RxNorm code was scored wrong.
+- **No restart after an adverse reaction.** p218 was restarted on empagliflozin for HFrEF three months after
+  SGLT2i-associated DKA: the DKA's SGLT2i line is created later in the simulation, back-dated, after the visit loop had
+  already planned a later start. The visit loop now skips a planned SGLT2i start on or after a planned DKA date.
+  ACE-inhibitor angioedema (p010 and others): the visit loop kept escalating and holding the lisinopril line after the
+  (back-dated) ED visit. The simulation now treats every ACE inhibitor as stopped from the day after a planned
+  angioedema date, and the angioedema follow-up reuses an existing amlodipine line (raising its dose) instead of
+  opening a second one. `buildTruth` now checks plausibility on every build and fails on: two active lines of one
+  ingredient at once; a start or re-activation after an allergy or adverse-reaction entry for the same ingredient,
+  or after an adverse reaction to a drug of the same class.
+- **Duplicate active-meds answers.** s04 (amlodipine twice: baseline line plus the angioedema replacement) and p104
+  (dapagliflozin twice: Lakeview's back-dated start plus Northgate's later start). Fixed by the rules above (amlodipine
+  line reused; Lakeview does not open an SGLT2i line when one exists anywhere in the simulation).
+- **Merged-chart status from structured records only.** When no source's structured record carries the truth's
+  current status for a medication (e.g. a resumption written only as "resumed today" in a visit note), the merged-key
+  row is reported in a separate "prose-only" category, not counted as a wrong row.
+- **Underdetermined cases become accepted equivalents or exclusions, stated in the views (v3):**
+  - a once-daily-at-night direction written only as "nightly" (Riverside) is accepted as QHS or QD;
+  - a patient-list entry with a strength but no directions has no dose (the key no longer asserts one);
+  - a patient list that names one drug twice with different statuses is not scored for that drug (excluded rows:
+    matched mapper rows are neither right, wrong nor extra).
+- All 165 notes whose requests changed were regenerated with the Stage 1 note pipeline (`bun run prose`, sonnet).
+  `check:corpus` finds 0 problems.

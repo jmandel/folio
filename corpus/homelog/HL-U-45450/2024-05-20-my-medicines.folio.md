@@ -78,7 +78,7 @@ My Medicines, saved 20 May 2024.
   "med_7": {
     "type": "my_med",
     "homelog_med_id": "med_7",
-    "name": "Farxiga",
+    "name": "Kerendia",
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",
@@ -87,17 +87,8 @@ My Medicines, saved 20 May 2024.
   "med_8": {
     "type": "my_med",
     "homelog_med_id": "med_8",
-    "name": "Kerendia",
-    "picked_from_search": { "rxnorm": "2562816", "display": "finerenone 10 MG Oral Tablet" },
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_9": {
-    "type": "my_med",
-    "homelog_med_id": "med_9",
     "name": "Aleve",
+    "picked_from_search": { "rxnorm": "849574", "display": "naproxen sodium 220 MG Oral Tablet" },
     "strength_text": "220 mg",
     "how_i_take_it": "1 or 2 for my knee, most days",
     "status": "taking",

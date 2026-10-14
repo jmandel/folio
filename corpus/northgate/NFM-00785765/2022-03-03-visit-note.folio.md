@@ -17,7 +17,7 @@ schema:
 Chronic care visit. Feels well.
 BP 136/79, pulse 80, wt 217 lb.
 Labs 2/27: eGFR 65, K 4, A1c 7.3%.
-Wt down a few lb, encouraged to keep it up.
+Improved from last check. Continue current plan.
 RTC 5 mo.
 
 ```json payload

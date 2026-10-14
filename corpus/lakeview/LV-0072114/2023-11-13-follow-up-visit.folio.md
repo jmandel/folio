@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HF60D010FWXM65A747FV7ZQP"
+id: "01HF60D0104M0RM91FZRQYBKZ0"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0072114"
 effective: "2023-11-13T15:40:00-06:00"
@@ -14,19 +14,17 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>. Doing well, no new symptoms.
+Follow-up. <ref id="dx_ckd">CKD G3b A3</ref>, <ref id="dx_dm">type 2 diabetes since 2014</ref>, <ref id="dx_htn">hypertension since 2006</ref>.
 
-<ref id="bp_sys">BP 128/80, HR 85, weight 71 kg</ref>. BP at goal.
+eGFR 42 today, K 5.1, UACR 354 mg/g. <ref id="bp_sys">BP 128/80, HR 85, weight 71 kg</ref>.
 
-eGFR 42, K 5.1 (upper range), UACR 354 mg/g. Diet review for potassium.
-
-Repeat labs before the next visit. Return 5 months.
+Potassium is at the upper end, worth watching. No symptoms. Repeat K and creatinine at next visit.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2023-11-13T15:40:00-06:00",
     "PROVIDER_NPI": "1999000042",
@@ -35,7 +33,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +41,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +49,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +57,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 128,
     "UNIT_CODE": "mmHg",
@@ -68,7 +66,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +75,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 85,
     "UNIT_CODE": "/min",
@@ -86,7 +84,7 @@ Repeat labs before the next visit. Return 5 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-114137",
+    "VISIT_ID": "NV-105309",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 71,
     "UNIT_CODE": "kg",

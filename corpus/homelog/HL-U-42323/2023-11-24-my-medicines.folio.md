@@ -61,7 +61,7 @@ My Medicines, saved 24 November 2023.
     "type": "my_med",
     "homelog_med_id": "med_5",
     "name": "Synthroid",
-    "strength_text": "75 mg",
+    "strength_text": "75 mcg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

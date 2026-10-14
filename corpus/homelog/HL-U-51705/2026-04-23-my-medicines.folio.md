@@ -53,7 +53,7 @@ My Medicines, saved 23 April 2026.
     "homelog_med_id": "med_4",
     "name": "Synthroid",
     "picked_from_search": { "rxnorm": "966222", "display": "levothyroxine sodium 0.075 MG Oral Tablet" },
-    "strength_text": "75 mg",
+    "strength_text": "75 mcg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

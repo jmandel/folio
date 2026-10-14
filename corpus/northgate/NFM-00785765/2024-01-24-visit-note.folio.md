@@ -14,11 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. No new symptoms.
-BP 142/82, repeat 134/80, pulse 85, wt 220 lb.
+DM2 f/u. No new complaints.
+BP 149/86, repeat 141/84, pulse 85, wt 220 lb.
 Today: eGFR 62, K 4.9, A1c 7%.
-Repeat BP improved.
-RTC 4 mo.
+BP still above goal, chlorthalidone started 12.5 mg daily today. Will recheck K and BP after.
+RTC 3 mo.
 
 ```json payload
 {

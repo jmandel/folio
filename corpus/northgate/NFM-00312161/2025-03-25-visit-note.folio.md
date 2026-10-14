@@ -14,11 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. Feels well.
-BP 145/88, repeat 137/86, pulse 87, wt 215 lb.
-Labs today: eGFR 40, K 4.1, UACR 122 mg/g, A1c 8.3%, LDL 104 mg/dL.
-Empagliflozin: started 10 mg daily today (A1c 8.3, CKD).
-RTC 3 mo.
+DM2 f/u. No new complaints.
+
+BP 152/92, repeat 144/90, pulse 87, wt 215 lb.
+Labs today: eGFR 40, K 3.9, UACR 122 mg/g, A1c 8.3%, LDL 104 mg/dL.
+Empagliflozin started 10 mg daily today (A1c 8.3, CKD). Losartan started 50 mg daily today (BP above goal).
+Pt to drink fluids and report any problems. Recheck labs in a few weeks, RTC 3 mo.
 
 ```json payload
 {

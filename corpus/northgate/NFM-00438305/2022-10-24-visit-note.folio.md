@@ -14,9 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. Pt doing well, no new complaints.
-BP 125/72, pulse 80, wt 215 lb.
-Exam unremarkable. Encouraged regular walking.
+Annual exam. Pt feels well, no chest pain or SOB.
+
+BP 125/72, pulse 80, wt 215 lb. BP at goal.
+
+Wt stable. Encouraged exercise.
+
 RTC 1 yr.
 
 ```json payload

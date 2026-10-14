@@ -59,15 +59,6 @@ My Medicines, saved 19 April 2024.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
-  },
-  "med_5": {
-    "type": "my_med",
-    "homelog_med_id": "med_5",
-    "name": "Farxiga",
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
   }
 }
 ```

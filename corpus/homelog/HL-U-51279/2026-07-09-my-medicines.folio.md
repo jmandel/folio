@@ -22,8 +22,8 @@ My Medicines, saved 9 July 2026.
     "type": "my_med",
     "homelog_med_id": "med_1",
     "name": "Amlodipine",
-    "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
-    "strength_text": "5 mg",
+    "picked_from_search": { "rxnorm": "308135", "display": "amlodipine 10 MG Oral Tablet" },
+    "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
@@ -50,9 +50,9 @@ My Medicines, saved 9 July 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Amlodipine",
-    "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
-    "strength_text": "5 mg",
+    "name": "Losartan",
+    "picked_from_search": { "rxnorm": "979492", "display": "losartan potassium 50 MG Oral Tablet" },
+    "strength_text": "50 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

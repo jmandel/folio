@@ -14,10 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. Feels well, no new concerns.
+Annual exam. Feels well, no new complaints.
 BP 135/79, pulse 80, wt 155 lb.
 Labs 10/18: eGFR 40, K 4.6, A1c 6.3%.
-No changes today. RTC 6 mo.
+Reviewed results with pt, kidney function stable.
+RTC 6 mo.
 
 ```json payload
 {

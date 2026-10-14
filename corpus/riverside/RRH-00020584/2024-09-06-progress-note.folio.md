@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J73TKKG0RHWZ99AE6WJNRVQT"
+id: "01J73TKKG0DTZB28BVKVJ76RA0"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-06T12:49:00Z"
@@ -16,23 +16,23 @@ schema:
 ---
 ## Progress note
 
-**Interval.** The patient had a good night and is eating well. They have no new complaints. Allergies: NKDA.
+**Interval.** The patient has no new complaints, is eating meals and walking in the hallway. Allergy list: NKDA.
 
-**Exam.** At 07:29: BP 136/82, HR 95, RR 20, T 98.2 F, SpO2 98%. Comfortable, lungs clear, abdomen soft and non-tender.
+**Exam.** Vitals at 07:29: BP 136/82, HR 95, RR 20, T 98.2 F, SpO2 98%. Comfortable, speaking in full sentences. Abdomen soft.
 
-**Results.** The 06:11 panel shows sodium 132, potassium 4.4, chloride 104, bicarbonate 19, anion gap 9, urea nitrogen 23, creatinine 0.77, eGFR 84 and glucose 126. Bicarbonate is lower than yesterday while the anion gap remains normal.
+**Results.** <ref id="bmp">The 06:11 panel shows sodium 132, potassium 4.4, chloride 104, bicarbonate 19, anion gap 9, urea nitrogen 23, creatinine 0.77, eGFR 84, glucose 126</ref>. Bicarbonate is a little lower than yesterday while the gap stays closed.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, ketoacidosis resolved with a normal gap. The <ref id="bmp">06:11 panel</ref> shows bicarbonate of 19 with chloride up to 104, so we will recheck it in the morning. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily continues.</ref>
-2. Sodium 132, stable and mildly low.
-3. Empagliflozin, metformin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, clinically resolved with the anion gap closed. Continue <ref id="sc_glargine">insulin glargine 18 units daily</ref>, started 9/4. Recheck bicarbonate on tomorrow's panel.
+2. Metformin, empagliflozin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
+3. Sodium is 132 and creatinine is stable.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6196344",
+    "encounter_id": "RRH-ENC-6905994",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -60,7 +60,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24250-8806",
+    "accession": "L24250-4248",
     "collected": "2024-09-06T11:11:00Z",
     "specimen": "serum",
     "status": "final",

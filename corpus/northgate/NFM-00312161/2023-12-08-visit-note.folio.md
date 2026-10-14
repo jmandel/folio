@@ -14,12 +14,12 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-ED f/u, angioedema. Swelling of lips and tongue has settled, breathing fine.
-Lisinopril allergy: angioedema of lips and tongue, added to allergy list.
-Lisinopril: stopped today (angioedema).
-Amlodipine: started 5 mg daily today (replacing lisinopril (angioedema)).
-Pt to call or return right away if swelling comes back.
-RTC 1 mo for BP check.
+ED f/u, angioedema. Swelling much improved, breathing normally, no lip or tongue swelling today.
+
+Lisinopril allergy: angioedema of lips and tongue. Lisinopril stopped today (angioedema), added to allergy list.
+Amlodipine started 5 mg daily today, replacing lisinopril (angioedema).
+Pt told to avoid ACE inhibitors and call or go to ED if swelling returns.
+RTC 4 wk for BP check.
 
 ```json payload
 {

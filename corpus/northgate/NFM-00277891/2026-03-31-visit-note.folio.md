@@ -14,13 +14,14 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. Feels well, no complaints.
+Annual exam. Feels well.
 
-BP 136/86, pulse 81, wt 164 lb.
+BP 143/90, repeat 141/87, pulse 81, wt 164 lb.
 eGFR 68, K 4.1 today.
 
-Labs reviewed with pt. Continue current plan.
-RTC 6 mo.
+BP above goal, amlodipine continued today.
+
+RTC 3 mo.
 
 ```json payload
 {

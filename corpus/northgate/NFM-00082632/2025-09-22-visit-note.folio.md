@@ -14,10 +14,11 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit. BP 136/84, pulse 77, wt 196 lb.
-Labs today: eGFR 87, K 4.3, A1c 7.7%, UACR 230 mg/g.
-A1c and UACR both up from May. Discussed with pt.
-RTC 5 mo.
+Chronic care visit. No acute concerns, doing ok.
+BP 143/88, pulse 77, wt 196 lb. BP above goal today.
+A1c 7.7%, eGFR 87, K 4.1, UACR 230 mg/g.
+Discussed diet and home BP checks, bring log next visit.
+RTC 3 mo.
 
 ```json payload
 {

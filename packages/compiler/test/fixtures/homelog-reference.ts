@@ -24,7 +24,7 @@ function ingredientOf(name: string, picked?: string): string | undefined {
 }
 
 function homeDose(strength?: string, how?: string): { dose?: { value: number; unit: "mg" | "units" } } {
-  if (!strength || / if | or |sliding/i.test(how ?? "")) return {};
+  if (!strength || !how || / if | or |sliding/i.test(how)) return {};
   const units = (how ?? "").match(/^(\d+(?:\.\d+)?) units\b/);
   if (/pen/i.test(strength)) return units ? { dose: { value: +units[1], unit: "units" } } : {};
   const mg = strength.match(/^(\d+(?:\.\d+)?) mg$/);

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KFC0GHZ007JMEXAP5EGZSPN2"
+id: "01KFC0GHZ06BW2J7DN9HV5M1F2"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0066163"
 effective: "2026-01-19T09:00:00-06:00"
@@ -14,17 +14,19 @@ schema:
   type: "ClinicRow"
   sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3b A2</ref>, <ref id="dx_dm">diabetic</ref>. Steady course.
+Follow-up for <ref id="dx_ckd">CKD G3b A2</ref>, diabetic.
 
-<ref id="bp_sys">BP 123/80, HR 83, weight 84.6 kg</ref>. eGFR 35 today, K 4.2, UACR 50 mg/g. No change from prior.
+eGFR 35 today, K 4.2, UACR 50 mg/g. Steady over the past year.
 
-Doing well, no new complaints. Continue current plan. Return in 4 months.
+<ref id="bp_sys">BP 123/80, HR 83, weight 84.6 kg.</ref> Feels well. No swelling or urinary changes. <ref id="dx_dm">Type 2 diabetes</ref> remains the underlying cause.
+
+Labs and return in 4 months.
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2026-01-19T09:00:00-06:00",
     "PROVIDER_NPI": "1999000042",
@@ -33,7 +35,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -41,7 +43,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -49,7 +51,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 123,
     "UNIT_CODE": "mmHg",
@@ -58,7 +60,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -67,7 +69,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 83,
     "UNIT_CODE": "/min",
@@ -76,7 +78,7 @@ Doing well, no new complaints. Continue current plan. Return in 4 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105160",
+    "VISIT_ID": "NV-101196",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 84.6,
     "UNIT_CODE": "kg",

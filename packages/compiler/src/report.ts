@@ -90,7 +90,7 @@ export async function proseContribution(transformTs: string, source: Source): Pr
 
 // ─── End to end ───────────────────────────────────────────────────────────────────────────────────
 
-export interface EndToEnd { label: string; runIds: Record<string, string>; patients: number; views: Record<string, { rows: number; wrongRows: number; extraRows: number; precision: number | null; recall: number | null }>; hero: Record<string, { rows: number; wrongRows: number; extraRows: number }> }
+export interface EndToEnd { label: string; runIds: Record<string, string>; patients: number; views: Record<string, { rows: number; wrongRows: number; extraRows: number; precision: number | null; recall: number | null }>; hero: Record<string, { rows: number; wrongRows: number; extraRows: number }>; proseOnly: Record<string, { rows: number; wrongRows: number }> }
 
 export function endToEnd(mappers: Record<Source, { runId: string; transform: string }>, label: string): EndToEnd {
   const test = patients().filter((p) => splitOf(p.patient) === "test");
@@ -101,6 +101,7 @@ export function endToEnd(mappers: Record<Source, { runId: string; transform: str
   }
   const acc: Record<string, Counts & { rows: number; wrongRows: number; extraRows: number }> = {};
   const hero: Record<string, { rows: number; wrongRows: number; extraRows: number }> = {};
+  const proseOnly: Record<string, { rows: number; wrongRows: number; extraRows: number }> = {};
   const get = (o: any, v: string) => (o[v] ??= { ...zero(), rows: 0, wrongRows: 0, extraRows: 0 });
   for (const p of test) {
     const parts = SOURCES.filter((s) => p.sources[s]).map((s) => ({ source: s, rows: runs[s].get(p.patient)?.rows ?? {}, items: itemsForPatient(s, p).map((i) => ({ id: i.id, effective: i.effective })) }));
@@ -110,6 +111,7 @@ export function endToEnd(mappers: Record<Source, { runId: string; transform: str
     const tp = patientById(p.patient);
     const sc = scoreRows(mergedExpected(tp, keys, trapIndex(tp)), shown);
     for (const r of sc.rows) {
+      if (r.modality === "prose-only") { const q = get(proseOnly, r.view); q.rows++; if (rowWrong(r)) q.wrongRows++; continue; }
       const o = get(acc, r.view); add(o, rowCounts(r)); o.rows++; if (rowWrong(r)) o.wrongRows++;
       if (p.patient === "hero") { const h = get(hero, r.view); h.rows++; if (rowWrong(r)) h.wrongRows++; }
     }
@@ -119,6 +121,7 @@ export function endToEnd(mappers: Record<Source, { runId: string; transform: str
     label, runIds: Object.fromEntries(SOURCES.map((s) => [s, mappers[s].runId])), patients: test.length,
     views: Object.fromEntries(Object.entries(acc).map(([v, c]) => { const p = prf(c); return [v, { rows: c.rows, wrongRows: c.wrongRows, extraRows: c.extraRows, precision: p.precision, recall: p.recall }]; })),
     hero: Object.fromEntries(Object.entries(hero).map(([v, c]) => [v, { rows: c.rows, wrongRows: c.wrongRows, extraRows: c.extraRows }])),
+    proseOnly: Object.fromEntries(Object.entries(proseOnly).map(([v, c]) => [v, { rows: c.rows, wrongRows: c.wrongRows }])),
   };
 }
 

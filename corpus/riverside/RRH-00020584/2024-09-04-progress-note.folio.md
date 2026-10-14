@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J6YPNMD0AT6HFCYFD8KB93ZT"
+id: "01J6YPNMD0GRAHXTQWHQ8A2753"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-04T12:54:00Z"
@@ -16,23 +16,23 @@ schema:
 ---
 ## Progress note
 
-**Interval.** The patient slept reasonably and reports feeling better, with less nausea. Allergies: NKDA.
+**Interval.** The patient slept reasonably and reports feeling much better, with less nausea and easier breathing. Allergy list: NKDA.
 
-**Exam.** At 07:34: BP 133/80, HR 112, RR 18, T 99 F, SpO2 96%. Breathing is comfortable, abdomen soft. The heart rate is higher than overnight and we will watch it as fluids and intake continue.
+**Exam.** Vitals at 07:34: BP 133/80, HR 112, RR 18, T 99 F, SpO2 96%. Heart rate is higher than overnight; the patient looks comfortable and is not in distress. Abdomen soft.
 
-**Results.** The 06:28 panel shows sodium 132, potassium 4.0, chloride 98, bicarbonate 22, anion gap 12, urea nitrogen 16, creatinine 0.84, eGFR 76 and glucose 171. The anion gap has closed and bicarbonate has recovered.
+**Results.** <ref id="bmp">The 06:28 panel shows sodium 132, potassium 4.0, chloride 98, bicarbonate 22, anion gap 12, urea nitrogen 16, creatinine 0.84, eGFR 76, glucose 171</ref>.
 
 **Assessment and plan**
 
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving. The gap is closed on the <ref id="bmp">06:28 panel</ref>. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily was started at 07:00</ref>, and the <ref id="iv_insulin">insulin infusion per DKA protocol is stopped at 09:00</ref> to overlap with the long-acting dose.
-2. Empagliflozin, metformin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
-3. Hyponatremia is improving at sodium 132; recheck tomorrow.
+1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving: the anion gap has closed and bicarbonate has recovered to 22. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily was started at 07:00</ref> and the <ref id="iv_insulin">insulin infusion is to be stopped at 09:00</ref>, two hours after the glargine, so there is overlap.
+2. Metformin, empagliflozin, losartan and furosemide remain held. Carvedilol and spironolactone continue.
+3. Sodium is improving at 132; follow on the next panel. Heart rate to be watched.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6196344",
+    "encounter_id": "RRH-ENC-6905994",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -60,7 +60,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24248-8843",
+    "accession": "L24248-1339",
     "collected": "2024-09-04T11:28:00Z",
     "specimen": "serum",
     "status": "final",

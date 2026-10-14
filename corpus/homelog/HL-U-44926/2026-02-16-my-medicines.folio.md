@@ -50,16 +50,6 @@ My Medicines, saved 16 February 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Dapagliflozin",
-    "picked_from_search": { "rxnorm": "1488569", "display": "dapagliflozin 10 MG Oral Tablet" },
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_5": {
-    "type": "my_med",
-    "homelog_med_id": "med_5",
     "name": "Ibuprofen",
     "picked_from_search": { "rxnorm": "310965", "display": "ibuprofen 200 MG Oral Tablet" },
     "strength_text": "200 mg",

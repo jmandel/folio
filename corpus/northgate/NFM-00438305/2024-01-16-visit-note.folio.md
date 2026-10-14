@@ -14,10 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. No new complaints.
-BP 140/83, repeat 135/81, pulse 84, wt 217 lb.
-Exam unremarkable. Reviewed home BP readings with pt.
-RTC 1 yr.
+Annual exam. Feels well, no new complaints.
+
+BP 147/87, repeat 142/85, pulse 84, wt 217 lb. BP still a bit high on repeat.
+
+Will watch at next visit. Diet and exercise reviewed.
+
+RTC 3 mo for BP.
 
 ```json payload
 {
