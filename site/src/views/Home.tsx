@@ -68,17 +68,24 @@ export function HomeView({ index }: { index: Index; route: Route }) {
       <header className="home-head">
         <h1>FOLIO</h1>
         <p className="home-lede">
-          Each health system publishes signed records in its own data model. A reader uses an AI agent to write code that maps that model into the
-          views the reader needs. The agent runs once per schema version; later reads run the saved code.
+          FOLIO tests a different way to exchange health records. The sending system publishes signed records in its own data
+          model, with a schema that documents it. The receiving system has an AI agent write code that maps that model into the views it needs. The agent
+          runs once per schema version; every later read runs the saved code.
         </p>
       </header>
 
       <section className="home-sec" aria-labelledby="h-problem">
         <h2 id="h-problem">How records move between systems today</h2>
         <p className="home-text">
-          Either the systems agree on a schema in advance, or one system exports everything it holds. An agreed schema drops local detail that does not
-          fit it, and usually carries notes separately from the coded data they describe. A full export, such as a Cures Act EHI export, is complete, but
-          it comes in the vendor's own layout and each reader has to work that out.
+          Several channels run side by side. Referrals and records requests still often go by fax or scanned PDF. Lab results, admissions and orders mostly
+          travel as HL7 v2 messages. Visit summaries and discharge documents are exchanged as C-CDA documents, by Direct secure messaging or through query
+          networks such as Carequality, CommonWell, eHealth Exchange, regional HIEs and, since 2023, TEFCA. Certified EHRs must also offer FHIR APIs that
+          follow US Core; patient apps use them for single records, and Bulk FHIR serves population exports.
+        </p>
+        <p className="home-text">
+          Each structured channel depends on a format agreed before the data moves, and the receiver gets what that format can carry. Data outside
+          the agreed set, such as a clinic's own flowsheet rows or the link between a sentence in a note and the coded entry it describes, usually is not
+          sent, or arrives as free text or as an extension the receiver may ignore. FOLIO asks whether the receiver can instead read the sender's own model directly, if an agent writes the mapping and the mapping is checked.
         </p>
       </section>
       </div>
@@ -133,9 +140,9 @@ export function HomeView({ index }: { index: Index; route: Route }) {
             Each source documents its own model in a TypeScript schema. The test data contains planted traps. In trap T1, the hospital marks empagliflozin
             held and the family doctor marks it stopped.
           </TourStep>
-          <TourStep n={3} title="Recorded agent runs" links={[["Open the Compiler view", href(["compiler"])]]} note="Mapper runs not recorded yet">
-            The Compiler view will replay runs in which an agent reads a schema, writes a mapper, and has it scored against answer keys. For now it replays
-            the runs that wrote the notes in the test data.
+          <TourStep n={3} title="Recorded agent runs" links={[["Open the Compiler view", href(["compiler"])]]} note="Mapper results under review">
+            Agents have written mappers for all four sources, and every run is recorded. The scores are being audited before they are published here.
+            Until then the Compiler view replays the runs that wrote the notes in the test data.
           </TourStep>
           <TourStep n={4} title="Sharing part of a record" links={[["Open the sharing example", href(["sharing"], { s: "context-loss" })]]}>
             Linda shares items with her kidney clinic and withholds her depression treatment, sertraline. Every shared item still verifies. Without the sertraline, the
@@ -151,7 +158,7 @@ export function HomeView({ index }: { index: Index; route: Route }) {
         <h2 id="h-isnt">About this site</h2>
         <ul>
           <li>Every patient and record here is synthetic. No real health data is used.</li>
-          <li>This is a reference implementation of a draft format, with four synthetic sources and the code that signs, verifies and shares their records.</li>
+          <li>This is a test bed for a draft format: four synthetic sources, and the code that signs, syncs, verifies, shares and maps their records.</li>
           <li>
             Read the <a href={href(["about", "record-item"])}>specification</a>, or the code on <a href={REPO}>GitHub (jmandel/folio)</a>.
           </li>
@@ -207,7 +214,7 @@ function Flow() {
         <h3>Once per schema version</h3>
         <ol className="flow-steps">
           <li>An AI agent reads the schema and writes a mapper.</li>
-          <li>The mapper is tested against answer keys the agent did not see.</li>
+          <li>The mapper is checked. In this test bed, it is scored against answer keys the agent did not see.</li>
           <li>
             It is cached under the schema's hash, <code className="hash">6acf8173…</code>
           </li>
@@ -291,7 +298,7 @@ function Merged({ items, index }: { items: Map<string, Loaded> | null; index: In
       </div>
       <p className="merged-note">
         {answerKey
-          ? "Mappers are not built yet. These rows were written by hand from the synthetic patient's underlying data, as the expected mapper output. Each part cites the source, item and ref it comes from."
+          ? "These rows were written by hand from the synthetic patient's underlying data, as the result a correct mapper should produce. Compiled mapper output replaces them once the mapper scores are audited. Each part cites the source, item and ref it comes from."
           : m.basis}
       </p>
       <div className="m-rows">

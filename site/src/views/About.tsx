@@ -73,14 +73,16 @@ function Overview({ index }: { index: Index }) {
     <div className="prose">
       <h1>Overview</h1>
       <p>
-        Health records usually travel in a shared format that each system translates into before sending. In FOLIO, each system publishes its data in
-        its own model, as signed, append-only <strong>record items</strong>. An item binds the readable note a
+        Today's structured exchange (HL7 v2, C-CDA, FHIR US Core) relies on formats agreed in advance; each sender translates into them and each
+        receiver gets what they can express. FOLIO tests a different arrangement. Each system publishes its data in its own model, as signed,
+        append-only <strong>record items</strong>. An item binds the readable note a
         clinician wrote to the structured data behind it: words in the note are wrapped in <code>&lt;ref&gt;</code> spans that point at structured
         entries. Each source describes its data with a plain TypeScript schema whose docstrings say what the fields mean.
       </p>
       <p>
         A consumer that needs the data in its own shape (a medication list, a lab chart, FHIR) uses an AI agent once per schema version to write an
-        ordinary, deterministic mapper. The mapper is tested against answer keys the agent did not see, and cached under the schema's hash. Later reads
+        ordinary, deterministic mapper, checks it, and caches it under the schema's hash. In this test bed the check is a score against answer keys
+        the agent did not see. Later reads
         run the cached mapper; no model runs at read time. We call this late binding with compiled mappers.
       </p>
       <h2>What this site shows</h2>
@@ -102,15 +104,15 @@ function Overview({ index }: { index: Index }) {
           <a href={href(["sources"])}>Sources</a>: each system's README, schema and hand-written examples.
         </li>
         <li>
-          <a href={href(["compiler"])}>Compiler</a>: replays of recorded agent runs. So far these are the runs that wrote the notes in the test data. Mapper
-          runs will be added.
+          <a href={href(["compiler"])}>Compiler</a>: replays of recorded agent runs. So far these are the runs that wrote the notes in the test data.
+          Mapper runs are recorded and will be added once their scores have been audited.
         </li>
       </ul>
       <h2>Not built yet</h2>
       <p>
-        The record view merges sources by date only. It does not read them through mappers into shared views, and it does not de-duplicate a lab
-        result reported by two sources. Both depend on the compiler stage. The planted traps (switch them on in the record view) are the cases the
-        mappers will be scored on.
+        The record view merges sources by date only. It does not yet read them through the compiled mappers into shared views, and it does not
+        de-duplicate a lab result reported by two sources. The planted traps (switch them on in the record view) are the cases the mappers are scored
+        on. Population search is not built.
       </p>
       <h2>Specification</h2>
       <p>

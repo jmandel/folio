@@ -34,7 +34,7 @@ export const DKA_COLUMNS: SourceColumn[] = [
   },
   {
     source: "northgate",
-    caption: "A week later the family doctor records a stop event, and a separate allergy event.",
+    caption: "A week after discharge the family doctor records a stop event and adds an adverse-reaction entry to the allergy list.",
     excerpts: [
       { source: "northgate", item: "01JCGH7E98RHEM3E2MSH4DMDZS", refs: [{ ref: "med_1", fields: ["action", "stop_reason"] }] },
       { source: "northgate", item: "01JCGHC7KGRYX1DZWYB8RTCAM0", refs: [{ ref: "alg_1", fields: ["reaction_type", "severity"] }] },
