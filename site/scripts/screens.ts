@@ -82,15 +82,39 @@ const fail = (m: string) => {
   const t = await page.getByTestId("tamper-result").innerText();
   if (!/Check fails/.test(t)) fail(`tampered item did not fail: ${t}`);
   else console.log(`tamper: ${t.replace(/\s+/g, " ").slice(0, 160)}`);
-  // Sharing: presentations verify as the recipient would, and the withheld words are absent.
+  // Sharing: presentations verify as the recipient would, in each preset, and the withheld words are absent.
+  const settle = async () => {
+    await page.waitForSelector('[data-testid="share-summary"]', { timeout: 30_000 });
+    await page.waitForFunction(() => !document.querySelector('[data-testid="share-summary"]')?.textContent?.includes("Updating"));
+    await page.waitForTimeout(200);
+    await page.waitForFunction(() => !document.querySelector('[data-testid="share-summary"]')?.textContent?.includes("Updating"));
+  };
+  const summary = async () => {
+    const s = page.getByTestId("share-summary");
+    return { ok: await s.getAttribute("data-ok"), total: await s.getAttribute("data-total"), withheld: +(await s.getAttribute("data-withheld"))!, text: (await s.innerText()).replace(/\s+/g, " ") };
+  };
+  for (const [preset, expectWithheld, words] of [["private", 5, true], ["everything", 0, false], ["private_meds", 1, true]] as const) {
+    await page.goto("about:blank");
+    await page.goto(`${BASE}#/sharing?preset=${preset}`);
+    await settle();
+    const r = await summary();
+    const sugg = await page.getByTestId("suggestion").count();
+    if (r.ok !== r.total || r.withheld !== expectWithheld || (words && !/appears? nowhere/.test(r.text)) || sugg !== (preset === "private" ? 1 : 0))
+      fail(`sharing ${preset}: ${r.text} (withheld ${r.withheld}, suggestions ${sugg})`);
+    else console.log(`sharing ${preset}: ${r.text}`);
+  }
+  // The suggested refinement re-shares the medicine and keeps the diagnosis private.
+  await page.goto("about:blank");
   await page.goto(`${BASE}#/sharing`);
-  await page.waitForSelector('[data-testid="share-summary"]', { timeout: 30_000 });
-  await page.waitForFunction(() => !document.querySelector('[data-testid="share-summary"]')?.textContent?.includes("Updating"));
-  const s = page.getByTestId("share-summary");
-  const sOk = await s.getAttribute("data-ok"), sTotal = await s.getAttribute("data-total");
-  const sText = await s.innerText();
-  if (sOk !== sTotal || !/appear nowhere/.test(sText)) fail(`sharing: ${sText}`);
-  else console.log(`sharing: ${sText.replace(/\s+/g, " ")}`);
+  await settle();
+  await page.getByTestId("suggestion").getByRole("button").click();
+  await settle();
+  {
+    const r = await summary();
+    const preset = await page.getByTestId("policy-panel").getAttribute("data-preset");
+    if (r.ok !== r.total || r.withheld !== 1 || preset !== "private_meds") fail(`sharing refinement: ${r.text}, preset ${preset}`);
+    else console.log(`sharing refinement: ${r.text}`);
+  }
   // Front page: every quoted item verifies, every citation resolves, and every link into the workbench lands.
   await page.goto(`${BASE}#/`);
   await page.waitForFunction(() => document.querySelectorAll('[data-testid="excerpt"]').length > 0 && !document.querySelector('[data-testid="cite"][data-state="wait"]'), null, { timeout: 30_000 });
@@ -168,6 +192,34 @@ if (!values["no-screens"]) {
       prep: async (p) => void (await p.waitForSelector('[data-testid="ref-pop"]')),
     },
     { name: "sharing", hash: "#/sharing", prep: async (p) => void (await p.waitForSelector(".caveat")) },
+    { name: "sharing-everything", hash: "#/sharing?preset=everything", prep: async (p) => void (await p.waitForSelector('[data-testid="share-summary"]')) },
+    { name: "sharing-meds", hash: "#/sharing?preset=private_meds", prep: async (p) => void (await p.waitForSelector('[data-testid="share-summary"]')) },
+    {
+      name: "sharing-detail",
+      hash: "#/sharing?detail=1",
+      prep: async (p) => {
+        await p.waitForSelector(".caveat");
+        await p.locator('[data-testid="detail-layer"] .pick').first().evaluate((e) => e.scrollIntoView({ block: "start" }));
+      },
+    },
+    {
+      name: "sharing-chat",
+      hash: "#/sharing?chat=recorded",
+      prep: async (p) => {
+        await p.waitForSelector('[data-testid="chat-proposal"]');
+        await p.locator('[data-testid="chat"] .chat-msg.user').first().evaluate((e) => e.scrollIntoView({ block: "start" }));
+      },
+    },
+    {
+      name: "sharing-chat-applied",
+      hash: "#/sharing?chat=recorded",
+      prep: async (p) => {
+        await p.waitForSelector('[data-testid="chat-proposal"]');
+        await p.getByTestId("chat-proposal").last().getByRole("button", { name: "Apply" }).click();
+        await p.waitForSelector('[data-testid="policy-panel"][data-preset="private_meds"]');
+        await p.locator('[data-testid="chat-proposal"]').last().evaluate((e) => e.scrollIntoView({ block: "center" }));
+      },
+    },
     { name: "sources", hash: "#/sources/lakeview?tab=schema" },
     { name: "compiler", hash: "#/compiler/20261014T005518Z-hero-homelog-a2" },
     { name: "about", hash: "#/about/signing?s=context-loss" },
