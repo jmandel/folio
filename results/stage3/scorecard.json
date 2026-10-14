@@ -1499,7 +1499,221 @@
    }
   }
  ],
- "fhir": [],
+ "fhir": [
+  {
+   "source": "northgate",
+   "backend": "claude-opus",
+   "run": "20261014T143022875Z-l512",
+   "resources": 1888,
+   "errors": 36,
+   "structuralErrors": 1,
+   "terminologyErrors": 0,
+   "warnings": 3899,
+   "terminologyWarnings": 0,
+   "codes": 49,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 35,
+   "topErrors": [
+    [
+     "Constraint failed: bdl-7: 'FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundl",
+     1
+    ]
+   ],
+   "topTerminology": []
+  },
+  {
+   "source": "northgate",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143236688Z-rb1c",
+   "resources": 1888,
+   "errors": 35,
+   "structuralErrors": 0,
+   "terminologyErrors": 0,
+   "warnings": 3899,
+   "terminologyWarnings": 0,
+   "codes": 49,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 35,
+   "topErrors": [],
+   "topTerminology": []
+  },
+  {
+   "source": "lakeview",
+   "backend": "claude-opus",
+   "run": "20261014T143039261Z-a0zl",
+   "resources": 2201,
+   "errors": 0,
+   "structuralErrors": 0,
+   "terminologyErrors": 0,
+   "warnings": 4738,
+   "terminologyWarnings": 2,
+   "codes": 26,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [],
+   "topTerminology": [
+    [
+     "http://www.nlm.nih.gov/research/umls/rxnorm|# \"empagliflozin # mg tablet\": Wrong Display Name '…' for http://www.nlm.nih.gov/research/umls/rxnorm##. Valid display is one of # choic",
+     1
+    ],
+    [
+     "http://www.nlm.nih.gov/research/umls/rxnorm|# \"dapagliflozin # mg tablet\": Wrong Display Name '…' for http://www.nlm.nih.gov/research/umls/rxnorm##. Valid display is one of # choic",
+     1
+    ]
+   ]
+  },
+  {
+   "source": "lakeview",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143327087Z-69l0",
+   "resources": 2201,
+   "errors": 0,
+   "structuralErrors": 0,
+   "terminologyErrors": 0,
+   "warnings": 4736,
+   "terminologyWarnings": 0,
+   "codes": 26,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [],
+   "topTerminology": []
+  },
+  {
+   "source": "riverside",
+   "backend": "claude-opus",
+   "run": "20261014T143102452Z-s6h8",
+   "resources": 999,
+   "errors": 3,
+   "structuralErrors": 1,
+   "terminologyErrors": 2,
+   "warnings": 1965,
+   "terminologyWarnings": 13,
+   "codes": 50,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [
+    [
+     "Constraint failed: bdl-7: 'FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundl",
+     1
+    ]
+   ],
+   "topTerminology": [
+    [
+     "http://loinc.org|#-# \"Beta-hydroxybutyrate\": Unknown code '…' in the CodeSystem '…' version '…'",
+     1
+    ],
+    [
+     "http://unitsofmeasure.org|mmHg: Unknown code '…' in the CodeSystem '…' version '…'",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Anion gap\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-DE), 'Anión gap",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Urea nitrogen\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (ar-JO), '…' (cs-CZ), '…' (d",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Chloride\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (ar-JO), '…' (cs-CZ), '…' (de-DE)",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Bicarbonate (total CO#)\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-D",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Creatinine\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-DE), 'Creatini",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"eGFR (CKD-EPI #)\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: 'Glomerular filtration rate [Volume Rate/Area] in Serum",
+     1
+    ]
+   ]
+  },
+  {
+   "source": "riverside",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143346140Z-rnob",
+   "resources": 999,
+   "errors": 2,
+   "structuralErrors": 0,
+   "terminologyErrors": 2,
+   "warnings": 1965,
+   "terminologyWarnings": 13,
+   "codes": 50,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [],
+   "topTerminology": [
+    [
+     "http://loinc.org|#-# \"Beta-hydroxybutyrate\": Unknown code '…' in the CodeSystem '…' version '…'",
+     1
+    ],
+    [
+     "http://unitsofmeasure.org|mmHg: Unknown code '…' in the CodeSystem '…' version '…'",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Anion gap\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-DE), 'Anión gap",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Urea nitrogen\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (ar-JO), '…' (cs-CZ), '…' (d",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Chloride\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (ar-JO), '…' (cs-CZ), '…' (de-DE)",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Bicarbonate (total CO#)\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-D",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"Creatinine\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: '…' (en-US), '…' (en-US), '…' (cs-CZ), '…' (de-DE), 'Creatini",
+     1
+    ],
+    [
+     "http://loinc.org|#-# \"eGFR (CKD-EPI #)\": Wrong Display Name '…' for http://loinc.org##-#. Valid display is one of # choices: 'Glomerular filtration rate [Volume Rate/Area] in Serum",
+     1
+    ]
+   ]
+  },
+  {
+   "source": "homelog",
+   "backend": "claude-opus",
+   "run": "20261014T143130921Z-c36o",
+   "resources": 131,
+   "errors": 0,
+   "structuralErrors": 0,
+   "terminologyErrors": 0,
+   "warnings": 131,
+   "terminologyWarnings": 0,
+   "codes": 31,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [],
+   "topTerminology": []
+  },
+  {
+   "source": "homelog",
+   "backend": "codex-gpt-6-astra",
+   "run": "20261014T143451369Z-c7j9",
+   "resources": 131,
+   "errors": 0,
+   "structuralErrors": 0,
+   "terminologyErrors": 0,
+   "warnings": 131,
+   "terminologyWarnings": 0,
+   "codes": 31,
+   "validatorTerminologyErrors": 0,
+   "engineExceptions": 0,
+   "topErrors": [],
+   "topTerminology": []
+  }
+ ],
  "end_to_end": [
   {
    "label": "reference (hand-written)",

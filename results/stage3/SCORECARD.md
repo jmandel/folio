@@ -31,6 +31,8 @@ Condition a: schema, views v3, training samples; no feedback. Three independent 
 | homelog | medications | 463 | 1.2 (0.0–3.0) | 8.1 (6.0–9.1) | 3.9 (2.8–6.0) |
 | homelog | vitals | 10663 | 0.0 (0.0–0.0) | 0.0 (0.0–0.0) | 0.0 (0.0–0.0) |
 
+Northgate allergies: the wrong rows are the `mechanism` field (see [Fields](#fields)). Every backend reports `immune` for entries Northgate types `allergy`; Northgate's schema defines that type as immune-mediated and views v3 say to report `immune` when the source says so, while the frozen key accepts only `non_immune` or `unknown` (the truth has no immune-mediated reaction). This is a conflict between the key and the source's documentation, found on the main corpus's dev split; the key was not changed after the fresh cohort was scored.
+
 Runs:
 
 - northgate, opus: `20261014T153538312Z-nujp`, `20261014T153538677Z-z4fp`, `20261014T153539049Z-zvsb`
@@ -200,6 +202,21 @@ The same round-3 v3 mappers on the main corpus's test split (patients that earli
 | homelog | medications | 0.8 | 7.2 | 4.5 |
 | homelog | vitals | 0.0 | 0.0 | 0.0 |
 
+## US Core output and the HL7 validator
+
+The round-2 US Core mappers (written against views v2 and the round-2 `uscore.d.ts`, which already had the `statusReason` and `requester` fixes; not recompiled in round 3), run on 25 fresh patients per source at 2026-10-13. Structure and US Core profile conformance: the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) over every resource, terminology offline. Terminology: every distinct coding and UCUM unit checked with tx.fhir.org `CodeSystem/$validate-code` (code exists; display matches). Value-set binding checks against tx.fhir.org were not completed: run through the validator they took over 15 minutes per 40 resources. Validator engine exceptions (its own calls to tx.fhir.org timing out or failing, although run with offline terminology) are counted apart; they are not findings about the resources. Both invalid codes in the Riverside output come from `uscore.d.ts` itself, which tells the mapper to use LOINC 53060-9 for beta-hydroxybutyrate (tx.fhir.org: unknown code) and the analyte unit "mmHg" as the UCUM code (UCUM is `mm[Hg]`); the display mismatches are short display names where LOINC and RxNorm expect their own. Every issue is in `results/stage3/fhir/fresh-<runId>.json`.
+
+| Source | Backend | Run | Resources | Structural errors | Validator terminology errors | Distinct codes | Invalid codes (tx.fhir.org) | Display mismatches | Validator engine exceptions | Most common error |
+|---|---|---|---|---|---|---|---|---|---|---|
+| northgate | opus | `20261014T143022875Z-l512` | 1888 | 1 | 0 | 49 | 0 | 0 | 35 | Constraint failed: bdl-7: 'FullUrl must be unique in a bundle, or else entries with the same fullUrl (1) |
+| northgate | codex | `20261014T143236688Z-rb1c` | 1888 | 0 | 0 | 49 | 0 | 0 | 35 | – |
+| lakeview | opus | `20261014T143039261Z-a0zl` | 2201 | 0 | 0 | 26 | 0 | 2 | 0 | – |
+| lakeview | codex | `20261014T143327087Z-69l0` | 2201 | 0 | 0 | 26 | 0 | 0 | 0 | – |
+| riverside | opus | `20261014T143102452Z-s6h8` | 999 | 1 | 0 | 50 | 2 | 13 | 0 | Constraint failed: bdl-7: 'FullUrl must be unique in a bundle, or else entries with the same fullUrl (1) |
+| riverside | codex | `20261014T143346140Z-rnob` | 999 | 0 | 0 | 50 | 2 | 13 | 0 | – |
+| homelog | opus | `20261014T143130921Z-c36o` | 131 | 0 | 0 | 31 | 0 | 0 | 0 | – |
+| homelog | codex | `20261014T143451369Z-c7j9` | 131 | 0 | 0 | 31 | 0 | 0 | 0 | – |
+
 ## Merged chart (end to end)
 
 Each source's v3 one-shot mapper runs on its own items for every fresh patient; the generic merge (`packages/compiler/src/merge.ts`, tuned in round 1, unchanged since) combines them; the result is scored at 2026-10-13 against the merged truth key, restricted to facts and fields some source records. A medication whose current status no structured record carries (it is only in a note) is counted under prose-only, not as a wrong row. Wrong-row rate per view, `+n` extra rows; prose-only rows: wrong/total.
@@ -251,7 +268,7 @@ New round-3 compile runs only (the reused round-2 v2 runs are not counted). Note
 ## Isolation
 
 Agents run under bubblewrap with no network of their own (`--unshare-net`); the only route out is a per-run CONNECT proxy that allows the model API hosts and logs every connection to `<run>/network.log`. $HOME, /tmp and /run/user are empty mounts; the environment is cleared; IPC, PID and UTS namespaces are private; claude's web tools are disallowed. Probe runs in `runs/compiler/isolation-probe-v2/`: claude, and codex with its own command sandbox turned off inside bwrap (`codex-nosandbox/`), each get 403 from the proxy for github.com and raw.githubusercontent.com, cannot resolve any host directly, reach the model API host only through the proxy, and see no repo files, agent histories or D-Bus session.
-The transcript scan (`bun packages/compiler/src/cli/scan.ts`) over 187 recorded runs found 0 agent tool calls using network tools, 0 using IPC and 0 web-tool calls outside the probes; 654 connections were denied, all made by the CLIs themselves (telemetry and image hosts).
+The transcript scan (`bun packages/compiler/src/cli/scan.ts`) over 187 recorded runs found 1 agent tool calls using network tools, 0 using IPC and 0 web-tool calls outside the probes; 654 connections were denied. All but 2 were the codex CLI's own connections (ab.chatgpt.com, oaiusercontent.com image hosts). The others: registry.npmjs.org:443 (views-v3/20261014T151559955Z-roja): the blind views writer ran `npx -y tsc` to type-check its file, and the proxy refused the package download.
 
 ## Cached mappers
 

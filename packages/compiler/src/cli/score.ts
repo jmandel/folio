@@ -66,6 +66,7 @@ for (const s of SOURCES) for (const v of VIEWS) {
   headline.push({ source: s, view: v, rows, cells: Object.fromEntries(BACKS.map((b, i) => [b, cells[i]])) });
   L.push(`| ${s} | ${v} | ${rows} | ${cells.map(fmt).join(" | ")} |`);
 }
+L.push("", "Northgate allergies: the wrong rows are the `mechanism` field (see [Fields](#fields)). Every backend reports `immune` for entries Northgate types `allergy`; Northgate's schema defines that type as immune-mediated and views v3 say to report `immune` when the source says so, while the frozen key accepts only `non_immune` or `unknown` (the truth has no immune-mediated reaction). This is a conflict between the key and the source's documentation, found on the main corpus's dev split; the key was not changed after the fresh cohort was scored.");
 L.push("", "Runs:", "");
 for (const s of SOURCES) for (const b of BACKS) L.push(`- ${s}, ${short(b)}: ${runList(find(s, "app", b))}`);
 
@@ -147,12 +148,12 @@ if (!values["no-fhir"] || readdirSync(join(RESULTS, "fhir")).some((f) => f.start
     if (!r.final) continue;
     const cached = join(RESULTS, "fhir", `fresh-${r.final}.json`);
     let v: any = existsSync(cached) ? JSON.parse(readFileSync(cached, "utf8")) : undefined;
-    if (!v && !values["no-fhir"]) v = validateUsCore(readTransformOf(r.source, "uscore", backendOf(r.backend), r.final), r.source, r.final, "fresh");
-    if (v) fhir.push({ source: r.source, backend: r.backend, run: r.final, resources: v.resources, errors: v.errors, structuralErrors: v.structuralErrors, terminologyErrors: v.terminologyErrors, warnings: v.warnings, terminologyWarnings: v.terminologyWarnings, topErrors: v.topErrors, topTerminology: v.topTerminology });
+    if (!v && !values["no-fhir"]) v = await validateUsCore(readTransformOf(r.source, "uscore", backendOf(r.backend), r.final), r.source, r.final, "fresh");
+    if (v) fhir.push({ source: r.source, backend: r.backend, run: r.final, resources: v.resources, errors: v.errors, structuralErrors: v.structuralErrors, terminologyErrors: v.terminologyErrors, warnings: v.warnings, terminologyWarnings: v.terminologyWarnings, codes: v.codes, validatorTerminologyErrors: v.validatorTerminologyErrors, engineExceptions: v.engineExceptions, topErrors: v.topErrors, topTerminology: v.topTerminology });
   }
-  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 plus `uscore.d.ts`, before its round-2 fixes for `statusReason` and `requester`; not recompiled in round 3), run on " + FHIR_N + " fresh patients per source at 2026-10-13 and checked with the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) with terminology checked against tx.fhir.org. Every issue is stored in `results/stage3/fhir/fresh-<runId>.json`.", "",
-    "| Source | Backend | Run | Resources | Errors: structural | Errors: terminology | Warnings (of which terminology) | Most common error |", "|---|---|---|---|---|---|---|---|");
-  for (const f of fhir) L.push(`| ${f.source} | ${short(f.backend)} | \`${f.run}\` | ${f.resources} | ${f.structuralErrors} | ${f.terminologyErrors} | ${f.warnings} (${f.terminologyWarnings}) | ${f.topErrors?.[0] ? `${String(f.topErrors[0][0]).slice(0, 100)} (${f.topErrors[0][1]})` : "–"} |`);
+  L.push("", "## US Core output and the HL7 validator", "", "The round-2 US Core mappers (written against views v2 and the round-2 `uscore.d.ts`, which already had the `statusReason` and `requester` fixes; not recompiled in round 3), run on " + FHIR_N + " fresh patients per source at 2026-10-13. Structure and US Core profile conformance: the official HL7 FHIR validator (R4, US Core 8.0.1, each resource declaring its US Core profile) over every resource, terminology offline. Terminology: every distinct coding and UCUM unit checked with tx.fhir.org `CodeSystem/$validate-code` (code exists; display matches). Value-set binding checks against tx.fhir.org were not completed: run through the validator they took over 15 minutes per 40 resources. Validator engine exceptions (its own calls to tx.fhir.org timing out or failing, although run with offline terminology) are counted apart; they are not findings about the resources. Both invalid codes in the Riverside output come from `uscore.d.ts` itself, which tells the mapper to use LOINC 53060-9 for beta-hydroxybutyrate (tx.fhir.org: unknown code) and the analyte unit \"mmHg\" as the UCUM code (UCUM is `mm[Hg]`); the display mismatches are short display names where LOINC and RxNorm expect their own. Every issue is in `results/stage3/fhir/fresh-<runId>.json`.", "",
+    "| Source | Backend | Run | Resources | Structural errors | Validator terminology errors | Distinct codes | Invalid codes (tx.fhir.org) | Display mismatches | Validator engine exceptions | Most common error |", "|---|---|---|---|---|---|---|---|---|---|---|");
+  for (const f of fhir) L.push(`| ${f.source} | ${short(f.backend)} | \`${f.run}\` | ${f.resources} | ${f.structuralErrors} | ${f.validatorTerminologyErrors} | ${f.codes} | ${f.terminologyErrors} | ${f.terminologyWarnings} | ${f.engineExceptions} | ${f.topErrors?.[0] ? `${String(f.topErrors[0][0]).slice(0, 100)} (${f.topErrors[0][1]})` : "–"} |`);
 }
 
 // End to end.
@@ -190,7 +191,10 @@ const agentRuns = (scan?.report ?? []).filter((r: any) => !r.run.includes("isola
 const kinds = (k: string) => agentRuns.reduce((a: number, r: any) => a + r.findings.filter((f: any) => f.kind === k).length, 0);
 L.push("", "## Isolation", "",
   "Agents run under bubblewrap with no network of their own (`--unshare-net`); the only route out is a per-run CONNECT proxy that allows the model API hosts and logs every connection to `<run>/network.log`. $HOME, /tmp and /run/user are empty mounts; the environment is cleared; IPC, PID and UTS namespaces are private; claude's web tools are disallowed. Probe runs in `runs/compiler/isolation-probe-v2/`: claude, and codex with its own command sandbox turned off inside bwrap (`codex-nosandbox/`), each get 403 from the proxy for github.com and raw.githubusercontent.com, cannot resolve any host directly, reach the model API host only through the proxy, and see no repo files, agent histories or D-Bus session.",
-  `The transcript scan (\`bun packages/compiler/src/cli/scan.ts\`) over ${scan?.runs ?? "?"} recorded runs found ${kinds("network")} agent tool calls using network tools, ${kinds("ipc")} using IPC and ${kinds("web-tool")} web-tool calls outside the probes; ${kinds("denied-connection")} connections were denied, all made by the CLIs themselves (telemetry and image hosts).`);
+  `The transcript scan (\`bun packages/compiler/src/cli/scan.ts\`) over ${scan?.runs ?? "?"} recorded runs found ${kinds("network")} agent tool calls using network tools, ${kinds("ipc")} using IPC and ${kinds("web-tool")} web-tool calls outside the probes; ${kinds("denied-connection")} connections were denied. ${(() => {
+    const other = agentRuns.flatMap((r: any) => r.findings.filter((f: any) => f.kind === "denied-connection" && !/ab\.chatgpt\.com|oaiusercontent\.com/.test(f.detail)).map((f: any) => `${f.detail.replace(/.*DENY /, "")} (${r.run.split("/").slice(-2).join("/")})`));
+    return `All but ${other.length} were the codex CLI's own connections (ab.chatgpt.com, oaiusercontent.com image hosts).${other.length ? ` The others: ${[...new Set(other)].join(", ")}: the blind views writer ran \`npx -y tsc\` to type-check its file, and the proxy refused the package download.` : ""}`;
+  })()}`);
 
 // Cache.
 const cached = cacheMappers(recs);

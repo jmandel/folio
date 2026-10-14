@@ -5310,6 +5310,10 @@
    "run": "runs/compiler/views-v3/20261014T151559955Z-roja",
    "findings": [
     {
+     "kind": "network",
+     "detail": "Bash: {\"command\":\"cd out && diff <(sed -e 's#/\\\\*\\\\*.*\\\\*/##' ../in/skeleton.d.ts | perl -0pe 's#/\\\\*\\\\*.*?\\\\*/##gs' | grep -v '^\\\\s*$') <(perl -0pe 's#/\\\\*\\\\*.*?\\\\*/##gs' views.d.ts | grep -v '^\\\\s*$') && "
+    },
+    {
      "kind": "denied-connection",
      "detail": "2026-10-14T15:17:48.624Z DENY registry.npmjs.org:443"
     },

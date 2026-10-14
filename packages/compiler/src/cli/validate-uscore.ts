@@ -11,7 +11,7 @@ for (const s of SOURCES) for (const b of ["claude-opus", "codex-gpt-6-astra"]) {
   const r = JSON.parse(readFileSync(p, "utf8"));
   if (existsSync(join(RESULTS, "fhir", `fresh-${r.final}.json`))) continue;
   const t0 = Date.now();
-  const v = validateUsCore(readTransformOf(s, "uscore", backendOf(b), r.final), s, r.final, "fresh");
-  console.log(s, b, r.final, `${v.resources} resources, errors ${v.structuralErrors} structural + ${v.terminologyErrors} terminology, warnings ${v.warnings}`, `${((Date.now() - t0) / 60000).toFixed(1)} min`);
+  const v = await validateUsCore(readTransformOf(s, "uscore", backendOf(b), r.final), s, r.final, "fresh");
+  console.log(s, b, r.final, `${v.resources} resources, ${v.structuralErrors} structural errors; ${v.codes} distinct codes, ${v.terminologyErrors} terminology errors, ${v.terminologyWarnings} display warnings`, `${((Date.now() - t0) / 60000).toFixed(1)} min`);
 }
 process.exit(0);

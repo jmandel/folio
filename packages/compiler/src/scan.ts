@@ -8,7 +8,7 @@ import { join } from "node:path";
 
 export interface Finding { kind: "path" | "network" | "ipc" | "web-tool" | "denied-connection"; detail: string }
 
-const NET = /(^|[\s;&|(])(curl|wget|ncat|nc|ssh|scp|rsync|telnet|ftp)\s|\bgit\s+(clone|fetch|pull|ls-remote)\b|\bfetch\(\s*["'`]https?:/;
+const NET = /(^|[\s;&|(])(curl|wget|ncat|nc|ssh|scp|rsync|telnet|ftp|npx|bunx)\s|\b(npm|bun|pnpm|yarn)\s+(install|add|i)\b|\bgit\s+(clone|fetch|pull|ls-remote)\b|\bfetch\(\s*["'`]https?:/;
 const IPC = /\b(busctl|systemd-run|dbus-send|gdbus|loginctl)\b|\/run\/user\/|DBUS_SESSION/;
 const PATH = /(?:^|[\s"'=(:])((?:\/home\/[^\s"'`;|&)]+)|(?:~\/[^\s"'`;|&)]*))/g;
 

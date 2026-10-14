@@ -87,7 +87,19 @@ The hand-written reference mappers give 1.2% wrong medication rows with 12 extra
 
 ## US Core
 
-The round-2 US Core mappers were validated with the HL7 validator on fresh patients, with terminology checked against tx.fhir.org. The results are in the scorecard's US Core section and in `results/stage3/fhir/fresh-<runId>.json`, which keeps every issue. The bundles are 5 patients per source, because tx.fhir.org validation takes several minutes per bundle. These mappers were not recompiled after the round-2 fixes to `uscore.d.ts`.
+I validated the round-2 US Core mappers on 25 fresh patients per source (scorecard, US Core section; every issue is kept in `results/stage3/fhir/fresh-<runId>.json`).
+
+- **Structure and profile:** the HL7 validator, with terminology offline. 1 error each in Northgate Opus and Riverside Opus (a duplicate `fullUrl`); 0 elsewhere.
+- **Terminology:** every distinct code checked with tx.fhir.org `$validate-code`.
+  - Northgate, Lakeview and HomeLog have 0 invalid codes.
+  - Riverside has 2 invalid codes, both prescribed by my `uscore.d.ts`: LOINC 53060-9, and "mmHg" where UCUM is `mm[Hg]`.
+  - There are display-name mismatches: 13 in Riverside, 2 in Lakeview Opus.
+- **Value-set binding:** not completed. Run through the validator against tx.fhir.org, it took more than 15 minutes per 40 resources.
+- **Engine exceptions:** the validator's own calls to tx.fhir.org timed out on Northgate (35 per run). They are counted apart and are not findings about the resources.
+
+## Isolation
+
+The transcript scan covered 187 runs. No compile run made a network, IPC or web-tool call. The blind views writer ran `npx -y tsc` once, and the proxy refused the package download (2 denied connections to registry.npmjs.org). Every other denied connection was the codex CLI's own traffic. The scan now also flags `npx`, `bunx` and package installs.
 
 ## Cost
 
@@ -105,4 +117,5 @@ The round-2 US Core mappers were validated with the HL7 validator on fresh patie
 - **The Northgate mechanism conflict stays in the headline.** It is a frozen-key problem. Fixing it after seeing fresh-cohort numbers would be triage on the held-out set, so it is reported, not corrected.
 - **The v2 condition reuses round-2 runs.** They are not new compiles, to stay within budget.
 - **Some traps don't reach 10 fresh patients, or any.** Lakeview T13 (8; a prose-only fact no view row carries) and T19 in Riverside, Lakeview and HomeLog (0): the generator places those cases only on the hero.
-- **HL7 validation covers 5 fresh patients per source**, not 25, because of tx.fhir.org latency.
+- **Value-set binding was not checked against tx.fhir.org**, because it was too slow through the validator. Codes were checked individually instead.
+- **The US Core view prescribes two invalid codes** (LOINC 53060-9, and "mmHg" as UCUM). I have not fixed it, because the US Core mappers were not recompiled in round 3.
