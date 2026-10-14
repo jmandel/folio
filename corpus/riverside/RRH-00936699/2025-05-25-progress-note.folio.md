@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JW3TM8P0K69H4K43BS0P04FG"
+id: "01JW3TM8P0Z352G8VG4PVHP0K1"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00936699"
 effective: "2025-05-25T12:47:00Z"
@@ -24,7 +24,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6272414",
+    "encounter_id": "RRH-ENC-6078842",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -52,7 +52,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25145-5171",
+    "accession": "L25145-8407",
     "collected": "2025-05-25T11:09:00Z",
     "specimen": "serum",
     "status": "final",
@@ -138,6 +138,14 @@ schema:
     "rxnorm_ingredient": "4821",
     "dose_text": "5 mg",
     "sig": "1 tab PO daily",
+    "status": "continue"
+  },
+  "med_glargine": {
+    "type": "home_med",
+    "drug_name": "insulin glargine 100 units/mL pen",
+    "rxnorm_ingredient": "274783",
+    "dose_text": "10 units",
+    "sig": "10 units SubQ nightly",
     "status": "continue"
   },
   "med_atorvastatin": {

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GRVYQDM0J76W5BM0GC7CETFH"
+id: "01GRVYQDM0CG7RC4ZBE5YMH6VP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00472987"
 effective: "2023-02-09T10:15:00-06:00"
@@ -22,30 +22,31 @@ metformin: dose changed to 500 mg twice daily today (eGFR 42)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-020914",
+    "visit_id": "V-2023-020947",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020914",
+    "visit_id": "V-2023-020947",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020914",
+    "visit_id": "V-2023-020947",
     "rank": 2,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020914",
+    "visit_id": "V-2023-020947",
     "rank": 3,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

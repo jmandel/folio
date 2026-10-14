@@ -37,16 +37,8 @@ empagliflozin: started 10 mg daily today (A1c 8.3, CKD)
     "type": "billing_dx",
     "visit_id": "V-2019-040521",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2019-040521",
-    "rank": 3,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

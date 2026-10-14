@@ -37,8 +37,8 @@ metformin: dose changed to 500 mg twice daily today (eGFR 39)
     "type": "billing_dx",
     "visit_id": "V-2019-120347",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

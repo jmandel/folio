@@ -40,7 +40,7 @@
       "status": "active",
       "since": "2023-11-02",
       "sources": ["B"],
-      "basis": ["m_112"]
+      "basis": ["m_129"]
     },
     {
       "medication": "empagliflozin",
@@ -73,13 +73,13 @@
       "rxnorm_ingredient": "274783",
       "product": "insulin glargine 100 UNT/ML Pen Injector",
       "rxnorm_product": "847230",
-      "dose": { "value": 14, "unit": "units" },
-      "dose_text": "14 units",
+      "dose": { "value": 18, "unit": "units" },
+      "dose_text": "18 units",
       "frequency": "QHS",
       "status": "active",
       "since": "2019-07-03",
       "sources": ["B"],
-      "basis": ["m_27"]
+      "basis": ["m_31"]
     },
     {
       "medication": "losartan",
@@ -106,6 +106,18 @@
       "since": "2018",
       "sources": ["B"],
       "basis": ["m_8"]
+    },
+    {
+      "medication": "semaglutide",
+      "rxnorm_ingredient": "1991302",
+      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2022-09-22",
+      "sources": ["B"],
+      "basis": ["m_99"]
     },
     {
       "medication": "spironolactone",

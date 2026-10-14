@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JENXJE40X8NJKCWYXFAZYQQA"
+id: "01JENXJE40JNNQAB4A6RBMXB5N"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00453627"
 effective: "2024-12-09T13:32:00Z"
@@ -14,25 +14,16 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Progress note, hospital day 2
+## Progress note
 
-**Interval.** Overnight the patient had no new complaints. Normal saline continues at 125 mL/h after the bolus. Allergies: NKDA.
-
-**Exam.** Vitals at 07:12: BP 115/69, HR 112, RR 22, T 98.6 F, SpO2 96%. Heart rate remains fast. Mucous membranes are moist and the patient feels less lightheaded.
-
-**Results.** On the 06:13 panel: <ref id="bmp">sodium 136, potassium 5.8, chloride 103, bicarbonate 25, anion gap 8, urea nitrogen 23, creatinine 1.44, eGFR 52, glucose 168</ref>. Compared with admission, sodium and bicarbonate have normalized, urea nitrogen has fallen, and potassium has come down from 6.4 though it is still high.
-
-**Assessment and plan**
-
-1. <ref id="dx_aki">Acute kidney injury</ref>, improving with fluids; creatinine down to 1.44. Continue saline and repeat the panel tomorrow morning. Potassium is still 5.8 and will be followed.
-2. Metformin, losartan, hydrochlorothiazide, spironolactone and furosemide remain held.
-3. Continue carvedilol and atorvastatin.
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 12/9 06:13 (local time): Sodium 136 mmol/L, Potassium 5.8 mmol/L (H), Chloride 103 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 8 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 1.44 mg/dL (H), eGFR (CKD-EPI 2021) 52 mL/min/1.73m2 (L), Glucose 168 mg/dL (H)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6217776",
+    "encounter_id": "RRH-ENC-6987721",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -59,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24344-3022",
+    "accession": "L24344-2894",
     "collected": "2024-12-09T12:13:00Z",
     "specimen": "serum",
     "status": "final",

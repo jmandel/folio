@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01ED5856K0PFC5ZCAHAJ98YB7Y"
+id: "01ED5856K0DC8R8BM7PPNXP09S"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00058829"
 effective: "2020-07-13T15:10:00-05:00"
@@ -22,16 +22,16 @@ lisinopril: dose changed to 40 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-071361",
+    "visit_id": "V-2020-071331",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-071361",
+    "visit_id": "V-2020-071331",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

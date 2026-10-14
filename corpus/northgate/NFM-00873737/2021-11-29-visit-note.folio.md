@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FNPTF680535WHMJC24QMXN7Z"
+id: "01FNPTF680CFNBP7V3BGN1C3SZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00873737"
 effective: "2021-11-29T11:00:00-06:00"
@@ -16,31 +16,22 @@ schema:
 ---
 Diabetes follow-up.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.4)
-
 chlorthalidone: started 12.5 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-112939",
+    "visit_id": "V-2021-112948",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-112939",
+    "visit_id": "V-2021-112948",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2021-112939",
-    "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

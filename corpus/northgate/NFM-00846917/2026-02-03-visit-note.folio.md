@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KGJCGTE0DW17WN8RNKAEJGRD"
+id: "01KGJCGTE0E884BY8SVBDWWJG6"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00846917"
 effective: "2026-02-03T08:10:00-06:00"
@@ -16,19 +16,19 @@ schema:
 ---
 Diabetes follow-up.
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.7)
+dulaglutide: started 0.5 mg weekly today (A1c 8.1)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-020327",
+    "visit_id": "V-2026-020369",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-020327",
+    "visit_id": "V-2026-020369",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

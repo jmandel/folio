@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K4ZE9F6GQE0DN195MA9F9KC5"
+id: "01K4ZE9F6GNQCB86YCREYB537K"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00873737"
 effective: "2025-09-12T12:06:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-19168",
+    "med_id": "ML-10700",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "semaglutide 1 MG/0.75 ML Pen Injector" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "OTHER",
     "sig": "Inject 0.5 mg under the skin once weekly",
     "reason_text": "A1c 8.1",
-    "visit_id": "V-2025-091226"
+    "visit_id": "V-2025-091259"
   }
 }
 ```

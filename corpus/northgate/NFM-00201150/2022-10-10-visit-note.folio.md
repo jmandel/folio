@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GF1XV310NQXYFH3Q0ZCQR61C"
+id: "01GF1XV310TKBGJYGBDT8SM105"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00201150"
 effective: "2022-10-10T12:15:00-05:00"
@@ -16,27 +16,32 @@ schema:
 ---
 Annual exam.
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.1)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-101095",
+    "visit_id": "V-2022-101015",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-101095",
+    "visit_id": "V-2022-101015",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-101095",
+    "visit_id": "V-2022-101015",
     "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-101015",
+    "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GW0WY4008V7B3HAYQ48KPBQG"
+id: "01GW0WY400MGT2E1XYJGKGGP4H"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00674394"
 effective: "2023-03-20T14:10:00-05:00"
@@ -16,22 +16,28 @@ schema:
 ---
 Chronic care visit.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-032085",
+    "visit_id": "V-2023-032083",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-032085",
+    "visit_id": "V-2023-032083",
     "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-032083",
+    "rank": 2,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

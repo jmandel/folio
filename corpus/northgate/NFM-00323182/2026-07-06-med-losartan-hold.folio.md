@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KWWJZKDG8E0G6WSPHVEW0WJX"
+id: "01KWWHCASG8E0G6WSPHVEW0WJX"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00323182"
-effective: "2026-07-06T15:47:00-05:00"
-recorded: "2026-07-06T15:47:42-05:00"
+effective: "2026-07-06T15:19:00-05:00"
+recorded: "2026-07-06T15:19:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 5.9 confirmed on repeat",
     "review_on": "2026-07-20",
-    "visit_id": "V-2026-070644"
+    "visit_id": "V-2026-070628"
   }
 }
 ```

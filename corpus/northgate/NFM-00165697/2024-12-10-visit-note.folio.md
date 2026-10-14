@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JESBE240S3GEM8AVSA7M981F"
+id: "01JESBE240YV1N7N4R1DD0NVC1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00165697"
 effective: "2024-12-10T12:10:00-06:00"
@@ -16,31 +16,33 @@ schema:
 ---
 Diabetes follow-up.
 
+dulaglutide: started 0.5 mg weekly today (A1c 8.2)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-121073",
+    "visit_id": "V-2024-121048",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-121073",
+    "visit_id": "V-2024-121048",
     "rank": 1,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-121073",
+    "visit_id": "V-2024-121048",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-121073",
+    "visit_id": "V-2024-121048",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

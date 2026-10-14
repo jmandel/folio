@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JEVQ4HN0QZY9BQVVVS6SR5Y5"
+id: "01JEVQ4HN0S79Z3X2XEGB5ZMPX"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00920167"
 effective: "2024-12-11T11:20:00-06:00"
@@ -16,20 +16,22 @@ schema:
 ---
 Chronic care visit.
 
+dulaglutide: started 0.5 mg weekly today (A1c 8.7)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-121114",
+    "visit_id": "V-2024-121168",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-121114",
+    "visit_id": "V-2024-121168",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

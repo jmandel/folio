@@ -44,14 +44,6 @@ New patient, establish care.
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
-  },
-  "dx_4": {
-    "type": "billing_dx",
-    "visit_id": "V-2022-110738",
-    "rank": 4,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

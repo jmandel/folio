@@ -12,7 +12,7 @@
       "collected_local_date": "2026-06-11",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_47"]
+      "basis": ["l_57"]
     },
     "egfr": {
       "analyte": "egfr",
@@ -25,29 +25,7 @@
       "equation": "ckd-epi-2021",
       "reported": [{ "equation": "ckd-epi-2021", "value": 90, "comparator": ">" }],
       "sources": ["B", "C"],
-      "basis": ["l_47_egfr"]
-    },
-    "potassium": {
-      "analyte": "potassium",
-      "value": 4.6,
-      "unit": "mmol/L",
-      "loinc": "2823-3",
-      "collected": "2026-06-11T07:33:00-05:00",
-      "collected_local_date": "2026-06-11",
-      "setting": "outpatient",
-      "sources": ["B", "C"],
-      "basis": ["l_48"]
-    },
-    "glucose": {
-      "analyte": "glucose",
-      "value": 105,
-      "unit": "mg/dL",
-      "loinc": "2345-7",
-      "collected": "2026-06-11T07:33:00-05:00",
-      "collected_local_date": "2026-06-11",
-      "setting": "outpatient",
-      "sources": ["B", "C"],
-      "basis": ["l_49"]
+      "basis": ["l_57_egfr"]
     },
     "sodium": {
       "analyte": "sodium",
@@ -58,40 +36,73 @@
       "collected_local_date": "2023-09-29",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_18"]
+      "basis": ["l_22"]
     },
-    "wbc": {
-      "analyte": "wbc",
+    "potassium": {
+      "analyte": "potassium",
       "value": 4.6,
-      "unit": "10*3/uL",
-      "loinc": "6690-2",
-      "collected": "2024-05-22T07:16:00-05:00",
-      "collected_local_date": "2024-05-22",
+      "unit": "mmol/L",
+      "loinc": "2823-3",
+      "collected": "2026-06-11T07:33:00-05:00",
+      "collected_local_date": "2026-06-11",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_26"]
+      "basis": ["l_58"]
     },
-    "hemoglobin": {
-      "analyte": "hemoglobin",
-      "value": 13,
-      "unit": "g/dL",
-      "loinc": "718-7",
-      "collected": "2024-05-22T07:16:00-05:00",
-      "collected_local_date": "2024-05-22",
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 148,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-08-11T07:44:00-05:00",
+      "collected_local_date": "2025-08-11",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_27"]
+      "basis": ["l_50"]
     },
-    "platelets": {
-      "analyte": "platelets",
-      "value": 216,
-      "unit": "10*3/uL",
-      "loinc": "777-3",
-      "collected": "2024-05-22T07:16:00-05:00",
-      "collected_local_date": "2024-05-22",
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 115,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-08-11T07:44:00-05:00",
+      "collected_local_date": "2025-08-11",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_28"]
+      "basis": ["l_51"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 49,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-08-11T07:44:00-05:00",
+      "collected_local_date": "2025-08-11",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_52"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 76,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-08-11T07:44:00-05:00",
+      "collected_local_date": "2025-08-11",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_53"]
+    },
+    "glucose": {
+      "analyte": "glucose",
+      "value": 105,
+      "unit": "mg/dL",
+      "loinc": "2345-7",
+      "collected": "2026-06-11T07:33:00-05:00",
+      "collected_local_date": "2026-06-11",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_59"]
     }
   }
 }

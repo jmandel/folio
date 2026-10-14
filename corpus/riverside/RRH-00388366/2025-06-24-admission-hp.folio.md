@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JYJKTBX0MWS6F5882NZTYTGR"
+id: "01JYJKTBX0JHW6WPW0AYVFHQPZ"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00388366"
 effective: "2025-06-25T02:06:00Z"
@@ -16,30 +16,18 @@ schema:
 ---
 ## Admission history and physical
 
-**Reason for admission:** euglycemic diabetic ketoacidosis.
-
-**History of present illness.** The patient is a man with type 2 diabetes on insulin glargine, dulaglutide, metformin and an SGLT2 inhibitor, who was seen in the ED this afternoon feeling unwell, with nausea and fatigue. Labs drawn at 16:17 showed a bicarbonate of 8 with an anion gap of 32 and a glucose of only 242. The insulin infusion and D5 lactated Ringer's at 150 mL/h were started at 17:05 and are still running. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
-
-**Home medications.** Dapagliflozin 10 mg daily, metformin 1000 mg twice daily with meals, lisinopril 20 mg daily, hydrochlorothiazide 25 mg daily, insulin glargine 10 units nightly and dulaglutide 0.5 mg weekly.
-
-**Allergies:** no known drug allergies.
-
-**Exam.** At 20:56: BP 110/66, HR 80, RR 21, temperature 98.2 F, SpO2 98%. Appears mildly dry, breathing deeply but comfortably. Abdomen soft.
-
-**Results.** On the 16:17 panel sodium 134, potassium 5.3, chloride 94, bicarbonate 8, anion gap 32, urea nitrogen 35, creatinine 1.57 (eGFR 50), glucose 242.
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol with D5 lactated Ringer's, since glucose is not high. <ref id="med_dapagliflozin">Hold dapagliflozin.</ref> Continue home glargine and dulaglutide as listed.
-2. Metformin: <ref id="med_metformin">hold while acidotic and NPO</ref>; resume when able.
-3. Volume depletion with potassium 5.3 and creatinine 1.57: <ref id="med_lisinopril">hold lisinopril</ref> for volume depletion and potassium, and resume when eating. <ref id="med_hydrochlorothiazide">Hold hydrochlorothiazide</ref> for volume depletion as well, to be resumed when able.
-4. Repeat chemistry on the usual DKA schedule to follow the gap and potassium.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
+- <ref id="med_lisinopril">home med lisinopril 20 mg tablet, 20 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
+- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6402248",
+    "encounter_id": "RRH-ENC-6437094",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -67,7 +55,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25175-5927",
+    "accession": "L25175-8693",
     "collected": "2025-06-24T21:17:00Z",
     "specimen": "serum",
     "status": "final",
@@ -174,22 +162,6 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
-  },
-  "med_dulaglutide": {
-    "type": "home_med",
-    "drug_name": "dulaglutide pen",
-    "rxnorm_ingredient": "1551291",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
-  },
-  "med_glargine": {
-    "type": "home_med",
-    "drug_name": "insulin glargine 100 units/mL pen",
-    "rxnorm_ingredient": "274783",
-    "dose_text": "10 units",
-    "sig": "10 units SubQ nightly",
-    "status": "continue"
   },
   "med_lisinopril": {
     "type": "home_med",

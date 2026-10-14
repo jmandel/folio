@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HBW0Q230YMZ56GZ7EXA4AEVJ"
+id: "01HBW0Q2302808347M9WSC5NM1"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0034182"
 effective: "2023-10-03T15:20:00-05:00"
@@ -12,21 +12,21 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G2 A3</ref>, <ref id="dx_dm">diabetic</ref> and <ref id="dx_htn">hypertensive</ref>.
-
-eGFR 65, K 5.2 today, a little higher than last time. UACR 358 mg/g.
-
-<ref id="bp_sys">BP 131/80, HR 69, weight 87 kg</ref>. Feels well, no swelling.
-
-Will repeat labs at the next visit. Return in 3 to 4 months.
+- <ref id="bp_sys">BP 131/80, HR 69, weight 87 kg at 2023-10-03 15:24</ref>
+- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2025-05-24</ref>
+- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2015</ref>
+- <ref id="dx_htn">Essential hypertension, onset 2008</ref>
+- eGFR 65 (today)
+- K 5.2 (today)
+- UACR 358 mg/g (today)
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2023-10-03T15:20:00-05:00",
     "PROVIDER_NPI": "1999000066",
@@ -35,7 +35,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "DX_RANK": 1,
     "ICD10CM": "N18.2",
     "DX_TEXT": "Chronic kidney disease, stage 2 (mild)",
@@ -43,7 +43,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,7 +59,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 131,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -77,7 +77,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 69,
     "UNIT_CODE": "/min",
@@ -86,7 +86,7 @@ Will repeat labs at the next visit. Return in 3 to 4 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-107172",
+    "VISIT_ID": "NV-118945",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 87,
     "UNIT_CODE": "kg",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JWRTM5P0SKJWQTFE57K2BV2J"
+id: "01JWRTM5P0ME891H38WW07C3KD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00984511"
 effective: "2025-06-02T09:15:00-05:00"
@@ -22,23 +22,23 @@ lisinopril: dose changed to 40 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-060224",
+    "visit_id": "V-2025-060293",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-060224",
+    "visit_id": "V-2025-060293",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-060224",
+    "visit_id": "V-2025-060293",
     "rank": 2,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

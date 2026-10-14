@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HTGCPHD0CGXY2SXG03TW19SH"
+id: "01HTGCPHD0M9CEE5MRRSR4FRTY"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00734677"
 effective: "2024-04-02T12:40:00-05:00"
@@ -16,7 +16,7 @@ schema:
 ---
 Diabetes follow-up.
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.2)
+empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
 
 chlorthalidone: started 12.5 mg daily today (BP above goal)
 
@@ -24,34 +24,34 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-040234",
+    "visit_id": "V-2024-040256",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040234",
+    "visit_id": "V-2024-040256",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040234",
+    "visit_id": "V-2024-040256",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040234",
+    "visit_id": "V-2024-040256",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040234",
+    "visit_id": "V-2024-040256",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

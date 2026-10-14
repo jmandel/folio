@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01E5TQ27R0V161DBKCWCYPMGAS"
+id: "01E5TQ27R0PQC989RSVM9YAB85"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00503403"
 effective: "2020-04-13T10:15:00-05:00"
@@ -16,6 +16,8 @@ schema:
 ---
 Annual exam.
 
+dapagliflozin: started 10 mg daily today (A1c 8.6, CKD)
+
 lisinopril: stopped today (dry cough)
 
 losartan: started 50 mg daily today (ACE inhibitor cough)
@@ -26,34 +28,34 @@ lisinopril intolerance: dry cough
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-041386",
+    "visit_id": "V-2020-041322",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041386",
+    "visit_id": "V-2020-041322",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041386",
+    "visit_id": "V-2020-041322",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041386",
+    "visit_id": "V-2020-041322",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041386",
+    "visit_id": "V-2020-041322",
     "rank": 4,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

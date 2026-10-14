@@ -30,13 +30,20 @@ empagliflozin: started 10 mg daily today (HFrEF)
     "type": "billing_dx",
     "visit_id": "V-2024-032071",
     "rank": 1,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
     "visit_id": "V-2024-032071",
     "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-032071",
+    "rank": 3,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GQSZBWK0PVCP09EH11FVP89Y"
+id: "01GQSZBWK0Y8FHS7QVY8FQC3H5"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00530802"
 effective: "2023-01-27T08:15:00-06:00"
@@ -16,33 +16,31 @@ schema:
 ---
 Chronic care visit.
 
-semaglutide: started 0.5 mg weekly today (A1c 8.1)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-012771",
+    "visit_id": "V-2023-012749",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-012771",
+    "visit_id": "V-2023-012749",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-012771",
+    "visit_id": "V-2023-012749",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-012771",
+    "visit_id": "V-2023-012749",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

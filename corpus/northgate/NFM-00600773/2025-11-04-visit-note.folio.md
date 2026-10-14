@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K981Q8X0HN3JPMTS3XMEWT7N"
+id: "01K981Q8X025GZKDH8NWDV6CBG"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00600773"
 effective: "2025-11-04T10:40:00-06:00"
@@ -16,31 +16,33 @@ schema:
 ---
 Annual exam.
 
+insulin glargine: started 10 units at bedtime today (A1c 8.1)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-110446",
+    "visit_id": "V-2025-110434",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-110446",
+    "visit_id": "V-2025-110434",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-110446",
+    "visit_id": "V-2025-110434",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-110446",
+    "visit_id": "V-2025-110434",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

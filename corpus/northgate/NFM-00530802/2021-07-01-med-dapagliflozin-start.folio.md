@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F9H3PXKGP723NGRH5XBNBM8E"
+id: "01F9H3PXKGVCF47M3EJGVH6WE1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00530802"
 effective: "2021-07-01T08:21:00-05:00"
@@ -14,21 +14,21 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start dapagliflozin: A1c 8.4.</ref>
+<ref id="med_1">start dapagliflozin: A1c 8.3.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-42961",
+    "med_id": "ML-23271",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },
     "dose": { "value": 10, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
-    "reason_text": "A1c 8.4",
-    "visit_id": "V-2021-070116"
+    "reason_text": "A1c 8.3",
+    "visit_id": "V-2021-070194"
   }
 }
 ```

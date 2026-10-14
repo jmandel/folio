@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K0F3SQ8GKGBVEVZNKQ194J8Z"
+id: "01K0F3SQ8GT5NNVE9S6AW4ZY8X"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00283863"
 effective: "2025-07-18T10:52:00-05:00"
@@ -14,21 +14,21 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start insulin glargine: A1c 8.3.</ref>
+<ref id="med_1">start insulin glargine: A1c 8.8.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-19965",
+    "med_id": "ML-16346",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "insulin glargine 100 UNT/ML Pen Injector", "rxnorm": "847230" },
     "dose": { "value": 10, "unit": "units" },
     "frequency": "QHS",
     "sig": "Inject 10 units under the skin at bedtime",
-    "reason_text": "A1c 8.3",
-    "visit_id": "V-2025-071811"
+    "reason_text": "A1c 8.8",
+    "visit_id": "V-2025-071886"
   }
 }
 ```

@@ -22,7 +22,7 @@ supersedes:
   "glu_1": {
     "type": "glucose_reading",
     "measured_at": "2026-04-05T07:00",
-    "value": 124,
+    "value": 106,
     "unit": "mg/dL",
     "meal_marker": "fasting",
     "entry_method": "meter_sync"
@@ -33,15 +33,6 @@ supersedes:
     "systolic_mmhg": 129,
     "diastolic_mmhg": 75,
     "entry_method": "typed"
-  },
-  "dose_1": {
-    "type": "dose_log",
-    "at": "2026-04-05T21:18",
-    "homelog_med_id": "med_8",
-    "med_name": "Lantus",
-    "status": "taken",
-    "amount": 10,
-    "amount_unit": "units"
   }
 }
 ```

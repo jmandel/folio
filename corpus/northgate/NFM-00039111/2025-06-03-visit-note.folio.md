@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JWVASFH0M9JCKA77H5804JSP"
+id: "01JWVASFH0AX4CC14FMNE9FDCX"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00039111"
 effective: "2025-06-03T09:00:00-05:00"
@@ -26,20 +26,20 @@ empagliflozin adverse reaction: euglycemic diabetic ketoacidosis
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-060358",
+    "visit_id": "V-2025-060332",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-060358",
+    "visit_id": "V-2025-060332",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-060358",
+    "visit_id": "V-2025-060332",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

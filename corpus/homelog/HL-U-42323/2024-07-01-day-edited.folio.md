@@ -22,7 +22,7 @@ supersedes:
   "glu_1": {
     "type": "glucose_reading",
     "measured_at": "2024-07-01T06:42",
-    "value": 9.5,
+    "value": 9,
     "unit": "mmol/L",
     "meal_marker": "fasting",
     "entry_method": "meter_sync"

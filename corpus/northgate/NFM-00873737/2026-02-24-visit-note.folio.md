@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KJ9D0WB0K62N6ET9R7XZGYYV"
+id: "01KJ9D0WB0RY785MFC3187NF9J"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00873737"
 effective: "2026-02-24T15:15:00-06:00"
@@ -22,20 +22,20 @@ metformin: dose changed to 500 mg twice daily today (eGFR 43)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-022416",
+    "visit_id": "V-2026-022472",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-022416",
+    "visit_id": "V-2026-022472",
     "rank": 1,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-022416",
+    "visit_id": "V-2026-022472",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

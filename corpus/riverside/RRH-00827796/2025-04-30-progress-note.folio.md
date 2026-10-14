@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JT3GXPV0SYVYY581NY16JDH7"
+id: "01JT3GXPV0F6BZ5NHY334Q4MY0"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2025-04-30T12:48:00Z"
@@ -16,24 +16,15 @@ schema:
 ---
 ## Progress note
 
-**Interval history.** The patient is eating and has no nausea. No abdominal pain.
-
-**Exam.** At 07:28: BP 135/81, HR 110, RR 22, T 98.5 F, SpO2 96%. The patient is alert and comfortable, lungs are clear, and the abdomen is soft.
-
-**Results.** <ref id="bmp">On the 06:14 panel: sodium 132 (L), potassium 4.2, chloride 103, bicarbonate 22, anion gap 7, urea nitrogen 23, creatinine 1.64 (H), eGFR 46 (L), glucose 187 (H).</ref> The anion gap has closed.
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, with the gap now closed. Continue <ref id="sc_glargine">insulin glargine 18 units daily</ref>.
-2. Empagliflozin, metformin and hydrochlorothiazide remain held.
-3. Losartan and semaglutide continue.
-4. Allergy: lisinopril (cough).
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 4/30 06:14 (local time): Sodium 132 mmol/L (L), Potassium 4.2 mmol/L, Chloride 103 mmol/L, Bicarbonate (total CO2) 22 mmol/L, Anion gap 7 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 1.64 mg/dL (H), eGFR (CKD-EPI 2021) 46 mL/min/1.73m2 (L), Glucose 187 mg/dL (H)</ref>
+- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 4/29 07:00, still running (local times)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6322209",
+    "encounter_id": "RRH-ENC-6374142",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -61,7 +52,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25120-0896",
+    "accession": "L25120-0355",
     "collected": "2025-04-30T11:14:00Z",
     "specimen": "serum",
     "status": "final",
@@ -136,14 +127,6 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

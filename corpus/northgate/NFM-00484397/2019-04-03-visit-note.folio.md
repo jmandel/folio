@@ -28,8 +28,8 @@ New patient, establish care.
     "type": "billing_dx",
     "visit_id": "V-2019-040393",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

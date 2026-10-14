@@ -39,13 +39,6 @@ dapagliflozin: started 10 mg daily today (A1c 9, CKD)
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2020-091528",
-    "rank": 3,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

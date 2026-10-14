@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H39673P0XQV1EF5C5HBE0SE8"
+id: "01H39673P0KZDNT0QWKK0RNH6X"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00305402"
 effective: "2023-06-19T04:52:00Z"
@@ -20,14 +20,13 @@ schema:
 - <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
 - <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
 - <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
-- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (resume_when_able) "Hold while not eating"</ref>
 - <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6518452",
+    "encounter_id": "RRH-ENC-6441424",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -61,7 +60,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23169-5428",
+    "accession": "L23169-1695",
     "collected": "2023-06-18T22:58:00Z",
     "specimen": "serum",
     "status": "final",
@@ -145,16 +144,6 @@ schema:
     "status": "held",
     "restart_advice": "resume_when_able",
     "instructions": "Hold during acute illness"
-  },
-  "med_dapagliflozin": {
-    "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
-    "dose_text": "10 mg",
-    "sig": "1 tab PO daily",
-    "status": "held",
-    "restart_advice": "resume_when_able",
-    "instructions": "Hold while not eating"
   },
   "med_losartan": {
     "type": "home_med",

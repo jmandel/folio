@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KDXRKZT0RY85EWFYPDK8AYCS"
+id: "01KDXRKZT04F3G16R4AKAQFGVA"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00769987"
 effective: "2026-01-01T09:20:00-06:00"
@@ -20,9 +20,16 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-010196",
+    "visit_id": "V-2026-010187",
     "visit_type": "office",
     "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2026-010187",
+    "rank": 1,
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
   }
 }
 ```

@@ -24,7 +24,6 @@ My Medicines, saved 20 July 2026.
     "type": "my_med",
     "homelog_med_id": "med_1",
     "name": "Glucophage",
-    "picked_from_search": { "rxnorm": "861007", "display": "metformin hydrochloride 500 MG Oral Tablet" },
     "strength_text": "500 mg",
     "how_i_take_it": "morning and supper",
     "status": "stopped",
@@ -35,7 +34,7 @@ My Medicines, saved 20 July 2026.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Rosuvastatin",
+    "name": "Crestor",
     "picked_from_search": { "rxnorm": "859751", "display": "rosuvastatin 20 MG Oral Tablet" },
     "strength_text": "20 mg",
     "how_i_take_it": "bedtime",
@@ -45,7 +44,7 @@ My Medicines, saved 20 July 2026.
   "med_3": {
     "type": "my_med",
     "homelog_med_id": "med_3",
-    "name": "Lexapro",
+    "name": "Escitalopram",
     "picked_from_search": { "rxnorm": "349332", "display": "escitalopram 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
@@ -55,7 +54,7 @@ My Medicines, saved 20 July 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Levothyroxine",
+    "name": "Synthroid",
     "picked_from_search": { "rxnorm": "966222", "display": "levothyroxine sodium 0.075 MG Oral Tablet" },
     "strength_text": "75 mg",
     "how_i_take_it": "morning",
@@ -65,16 +64,7 @@ My Medicines, saved 20 July 2026.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Jardiance",
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
-    "name": "Lantus",
+    "name": "Insulin glargine",
     "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
     "strength_text": "100 units/mL pen",
     "how_i_take_it": "10 units at bedtime",

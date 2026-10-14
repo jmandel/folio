@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GRSJZ3G00AZ5DYM349PZ5XDG"
+id: "01GRSJZ3G0H805X2ZRV96TZZWZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2023-02-08T13:20:00-06:00"
@@ -16,31 +16,33 @@ schema:
 ---
 Annual exam.
 
+insulin glargine: dose changed to 14 units at bedtime today (A1c 8.2)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-020838",
+    "visit_id": "V-2023-020899",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020838",
+    "visit_id": "V-2023-020899",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020838",
+    "visit_id": "V-2023-020899",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-020838",
+    "visit_id": "V-2023-020899",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

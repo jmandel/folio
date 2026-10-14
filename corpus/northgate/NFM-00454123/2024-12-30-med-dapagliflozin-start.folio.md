@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JGCPJ2NG9SFENKRRR5CFE1H2"
+id: "01JGCPJ2NGDWH2SVCTZ7YYG485"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00454123"
 effective: "2024-12-30T15:11:00-06:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-30985",
+    "med_id": "ML-31175",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "HFrEF",
-    "visit_id": "V-2024-123086"
+    "visit_id": "V-2024-123071"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FC6PH2E0ZF36XWXEBNSZG2ED"
+id: "01FC6PH2E0VVS3Q1Y6WY1QG2H1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2021-08-03T08:40:00-05:00"
@@ -20,27 +20,27 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-080319",
+    "visit_id": "V-2021-080361",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-080319",
+    "visit_id": "V-2021-080361",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-080319",
+    "visit_id": "V-2021-080361",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2021-080319",
+    "visit_id": "V-2021-080361",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

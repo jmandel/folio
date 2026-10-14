@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KEWT6DP0D7J7YY74X5F3EFJJ"
+id: "01KEWT6DP07V4DNPPXTNETB6EQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00735634"
 effective: "2026-01-13T13:00:00-06:00"
@@ -16,40 +16,38 @@ schema:
 ---
 Chronic care visit.
 
-dapagliflozin: started 10 mg daily today (A1c 8.3, CKD)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-011382",
+    "visit_id": "V-2026-011331",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011382",
+    "visit_id": "V-2026-011331",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011382",
+    "visit_id": "V-2026-011331",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011382",
+    "visit_id": "V-2026-011331",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011382",
+    "visit_id": "V-2026-011331",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

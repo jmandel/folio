@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HWV89FB0R5WHYKBSEGNVEGPJ"
+id: "01HWV89FB0D13YS7WMT56C113S"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00342977"
 effective: "2024-05-01T15:50:00-05:00"
@@ -14,23 +14,21 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM2 f/u. A1c 8.3% today, up from last time; started insulin glargine 10 units at bedtime today.
-BP 142/84, repeat 140/84, pulse 63, wt 173 lb.
-eGFR 74, UACR 9 mg/g. K 6.2 on first draw but hemolyzed; repeat K 4.7.
+Diabetes follow-up.
+
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
-RTC 3 mo.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-050182",
+    "visit_id": "V-2024-050162",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-050182",
+    "visit_id": "V-2024-050162",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

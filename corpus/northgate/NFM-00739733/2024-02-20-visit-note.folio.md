@@ -23,13 +23,6 @@ New patient, establish care.
     "visit_id": "V-2024-022047",
     "visit_type": "office",
     "reason": "New patient, establish care"
-  },
-  "dx_1": {
-    "type": "billing_dx",
-    "visit_id": "V-2024-022047",
-    "rank": 1,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

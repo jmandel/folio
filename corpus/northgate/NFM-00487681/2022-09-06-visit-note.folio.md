@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GCARJG30PPXWTC6AG27MT39D"
+id: "01GCARJG30GN6ZQ3R502WZ26KC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00487681"
 effective: "2022-09-06T14:50:00-05:00"
@@ -22,20 +22,20 @@ Patient ran out of losartan about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-090614",
+    "visit_id": "V-2022-090684",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-090614",
+    "visit_id": "V-2022-090684",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-090614",
+    "visit_id": "V-2022-090684",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

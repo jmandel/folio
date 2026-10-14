@@ -35,6 +35,13 @@ Annual exam.
     "type": "billing_dx",
     "visit_id": "V-2021-042397",
     "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-042397",
+    "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   }

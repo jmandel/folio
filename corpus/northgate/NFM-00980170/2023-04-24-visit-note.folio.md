@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GYTDJ6X0MDVGFB5ET311M27M"
+id: "01GYTDJ6X0HJ28D9WE0CDS1E7G"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00980170"
 effective: "2023-04-24T08:30:00-05:00"
@@ -20,31 +20,30 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-042467",
+    "visit_id": "V-2023-042448",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-042467",
+    "visit_id": "V-2023-042448",
     "rank": 1,
-    "icd10cm": "N18.32",
-    "display": "Chronic kidney disease, stage 3b"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-042467",
+    "visit_id": "V-2023-042448",
     "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-042467",
+    "visit_id": "V-2023-042448",
     "rank": 3,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

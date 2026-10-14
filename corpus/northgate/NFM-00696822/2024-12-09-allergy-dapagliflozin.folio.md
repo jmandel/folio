@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JENYNRZGVMSP3JB9F7T35NDD"
+id: "01JENYNRZGPAHYN2PZD1N4TD6V"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00696822"
 effective: "2024-12-09T08:55:00-06:00"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2925",
+    "allergy_id": "AL-2730",
     "action": "add",
     "substance": { "name": "dapagliflozin", "rxnorm": "1488564" },
     "reaction_type": "adverse_reaction",
     "reactions": ["Diabetic ketoacidosis"],
     "severity": "high",
     "onset": { "date": "2024-11-27", "precision": "day" },
-    "visit_id": "V-2024-120962"
+    "visit_id": "V-2024-120978"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G3YCGZY0A1RDAXFNXAT5RBQ9"
+id: "01G3YCGZY0Z7EVN3VQNPPHG9QW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00096311"
 effective: "2022-05-25T09:40:00-05:00"
@@ -16,26 +16,26 @@ schema:
 ---
 Annual exam.
 
-insulin glargine: dose changed to 14 units at bedtime today (A1c 8.1)
+insulin glargine: dose changed to 14 units at bedtime today (A1c 8.4)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-052592",
+    "visit_id": "V-2022-052528",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-052592",
+    "visit_id": "V-2022-052528",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-052592",
+    "visit_id": "V-2022-052528",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

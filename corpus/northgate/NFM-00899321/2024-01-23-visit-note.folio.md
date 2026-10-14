@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HMVQRXE0SG5987ZMD44JEZ0N"
+id: "01HMVQRXE0ANV5NJKV99J351TQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00899321"
 effective: "2024-01-23T09:40:00-06:00"
@@ -22,13 +22,13 @@ Patient ran out of losartan about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-012317",
+    "visit_id": "V-2024-012375",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-012317",
+    "visit_id": "V-2024-012375",
     "rank": 1,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

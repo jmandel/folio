@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01JWBYAW4G5EKNFFM7JC7DAQRE"
+id: "01JWC9YJNG5EKNFFM7JC7DAQRE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484559"
-effective: "2025-05-28T12:16:00-05:00"
-recorded: "2025-05-28T12:16:42-05:00"
+effective: "2025-05-28T15:39:00-05:00"
+recorded: "2025-05-28T15:39:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">Metformin held today, vomiting and poor oral intake. Review 6/4.</ref>
+<ref id="med_1">hold metformin: vomiting, poor oral intake.</ref>
 
 ```json payload
 {

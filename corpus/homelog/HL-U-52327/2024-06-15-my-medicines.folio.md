@@ -112,9 +112,9 @@ My Medicines, saved 15 June 2024.
   "med_10": {
     "type": "my_med",
     "homelog_med_id": "med_10",
-    "name": "Ozempic",
-    "strength_text": "1 mg pen",
-    "how_i_take_it": "once a week, Sunday",
+    "name": "Lantus",
+    "strength_text": "100 units/mL pen",
+    "how_i_take_it": "10 units at bedtime",
     "status": "taking",
     "kind": "prescription"
   }

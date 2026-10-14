@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HKQPYN50MPZF9G0KW8BBP7PE"
+id: "01HKQPYN50ES0V75F5TETGKG21"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00939231"
 effective: "2024-01-09T09:15:00-06:00"
@@ -22,41 +22,41 @@ losartan: dose changed to 100 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2024-010938",
+    "visit_id": "V-2024-010945",
     "rank": 5,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

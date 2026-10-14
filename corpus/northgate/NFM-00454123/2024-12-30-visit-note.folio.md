@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JGD9D1K0QGSR5E24TDF55MXB"
+id: "01JGD9D1K0HXFYEF4KRK22ZBA4"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00454123"
 effective: "2024-12-30T14:50:00-06:00"
@@ -22,20 +22,20 @@ dapagliflozin: started 10 mg daily today (HFrEF)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-123086",
+    "visit_id": "V-2024-123071",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-123086",
+    "visit_id": "V-2024-123071",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-123086",
+    "visit_id": "V-2024-123071",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

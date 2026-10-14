@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FN4KQQG0STE21VP9W920P1Q4"
+id: "01FN4KQQG0HEXNSKZ4SRTPAN00"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00225232"
 effective: "2021-11-22T08:40:00-06:00"
@@ -22,14 +22,21 @@ losartan: dose changed to 100 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-112296",
+    "visit_id": "V-2021-112223",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-112296",
+    "visit_id": "V-2021-112223",
     "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-112223",
+    "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   }

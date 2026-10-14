@@ -30,8 +30,8 @@ lisinopril: dose changed to 20 mg daily today (BP above goal)
     "type": "billing_dx",
     "visit_id": "V-2023-020384",
     "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   }
 }
 ```

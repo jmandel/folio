@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. History reviewed with pt.
-BP 145/93, pulse 79, wt 187 lb.
-Labs today: eGFR 83, K 4.1, UACR 8 mg/g, A1c 7.1%.
-BP above goal today. Will recheck at next visit.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {
@@ -41,14 +37,6 @@ RTC 3 mo.
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2021-120964",
-    "rank": 3,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

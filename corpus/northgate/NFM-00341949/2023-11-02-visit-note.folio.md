@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HE8T3H9064GC5BWCN40PKXGR"
+id: "01HE8T3H90SZECDS356QB3XBCC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00341949"
 effective: "2023-11-02T11:10:00-05:00"
@@ -22,27 +22,27 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-110269",
+    "visit_id": "V-2023-110272",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-110269",
+    "visit_id": "V-2023-110272",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-110269",
+    "visit_id": "V-2023-110272",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-110269",
+    "visit_id": "V-2023-110272",
     "rank": 3,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

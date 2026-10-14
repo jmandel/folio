@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GW2HD6F0AFXRE8YA1BTEH24Z"
+id: "01GW2HD6F04B8BHAQVPS3JXARJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00165827"
 effective: "2023-03-21T10:15:00-05:00"
@@ -22,13 +22,13 @@ losartan: resumed today (creatinine back to baseline)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-032193",
+    "visit_id": "V-2023-032179",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-032193",
+    "visit_id": "V-2023-032179",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"

@@ -27,7 +27,7 @@
       "status": "active",
       "since": "2024-10-11",
       "sources": ["A", "B"],
-      "basis": ["m_49"]
+      "basis": ["m_60"]
     },
     {
       "medication": "atorvastatin",
@@ -56,18 +56,6 @@
       "basis": ["m_10"]
     },
     {
-      "medication": "dulaglutide",
-      "rxnorm_ingredient": "1551291",
-      "product": "dulaglutide 1.5 MG/0.5 ML Pen Injector",
-      "dose": { "value": 0.5, "unit": "mg" },
-      "dose_text": "0.5 mg",
-      "frequency": "QW",
-      "status": "active",
-      "since": "2025-07-16",
-      "sources": ["A", "B"],
-      "basis": ["m_35"]
-    },
-    {
       "medication": "empagliflozin",
       "rxnorm_ingredient": "1545653",
       "product": "empagliflozin 10 MG Oral Tablet",
@@ -78,7 +66,7 @@
       "status": "active",
       "since": "2023-11-22",
       "sources": ["A", "B"],
-      "basis": ["m_20"]
+      "basis": ["m_24"]
     },
     {
       "medication": "furosemide",
@@ -105,6 +93,19 @@
       "since": "2022",
       "sources": ["A", "B"],
       "basis": ["m_8"]
+    },
+    {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2025-07-16",
+      "sources": ["A", "B"],
+      "basis": ["m_46"]
     },
     {
       "medication": "metformin",

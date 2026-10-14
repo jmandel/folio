@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GF1J1B4GA9MZPBEPDBZC9J3E"
+id: "01GF1J1B4GZNP0XF1M83HVSPBE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00764740"
 effective: "2022-10-10T13:20:00-05:00"
@@ -19,7 +19,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-21542",
+    "med_id": "ML-32491",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "furosemide 40 MG Oral Tablet", "rxnorm": "313988" },

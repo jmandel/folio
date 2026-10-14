@@ -53,9 +53,9 @@ My Medicines, saved 19 April 2024.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Empagliflozin",
-    "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
-    "strength_text": "10 mg",
+    "name": "Amlodipine",
+    "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
+    "strength_text": "5 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
@@ -63,8 +63,8 @@ My Medicines, saved 19 April 2024.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Norvasc",
-    "strength_text": "5 mg",
+    "name": "Farxiga",
+    "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

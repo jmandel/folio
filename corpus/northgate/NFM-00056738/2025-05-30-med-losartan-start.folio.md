@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JWGVB9CG9RR0VWEXZP0ZRQ0Q"
+id: "01JWGVB9CGFJ1C0DW6NM7E6RTT"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00056738"
 effective: "2025-05-30T10:00:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-23569",
+    "med_id": "ML-22096",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979485" },

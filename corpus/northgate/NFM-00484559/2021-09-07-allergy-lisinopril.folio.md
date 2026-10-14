@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FF0VDX3GD25CVJYHBM5KN2MT"
+id: "01FF0VDX3GHD98DY819R54DSCZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484559"
 effective: "2021-09-07T14:23:00-05:00"
@@ -14,20 +14,20 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">Dry cough on lisinopril.</ref> Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).
+<ref id="alg_1">lisinopril: dry cough.</ref> Cough only with the ACE inhibitor: no lip, tongue or throat swelling (not angioedema).
 
 ```json payload
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2323",
+    "allergy_id": "AL-2066",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "intolerance",
     "reactions": ["Cough"],
     "severity": "low",
     "onset": { "date": "2021-07-01", "precision": "month" },
-    "visit_id": "V-2021-090791"
+    "visit_id": "V-2021-090736"
   }
 }
 ```

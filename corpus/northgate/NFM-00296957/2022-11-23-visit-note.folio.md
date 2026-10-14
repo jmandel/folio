@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GJKS7TW0Z1JEJPCBT401WWW0"
+id: "01GJKS7TW09WG5ADTGZHF9Z4TP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00296957"
 effective: "2022-11-23T15:10:00-06:00"
@@ -16,22 +16,27 @@ schema:
 ---
 Annual exam.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.6)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-112351",
+    "visit_id": "V-2022-112362",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-112351",
+    "visit_id": "V-2022-112362",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-112362",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

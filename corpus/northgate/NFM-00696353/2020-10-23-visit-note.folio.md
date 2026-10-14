@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01ENBMD0G0GYESY010PDX0PCAP"
+id: "01ENBMD0G0JER27ZSX1D1P8FRQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00696353"
 effective: "2020-10-23T11:40:00-05:00"
@@ -20,30 +20,37 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-102317",
+    "visit_id": "V-2020-102381",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-102317",
+    "visit_id": "V-2020-102381",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-102317",
+    "visit_id": "V-2020-102381",
     "rank": 2,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2020-102317",
+    "visit_id": "V-2020-102381",
     "rank": 3,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-102381",
+    "rank": 4,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

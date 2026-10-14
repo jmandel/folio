@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01DNG7BQ601VPZMFRX7BM9B9AX"
+id: "01DNG7BQ60V8ETCNM5HA2SM4KR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00017276"
 effective: "2019-09-23T13:45:00-05:00"
@@ -16,31 +16,33 @@ schema:
 ---
 Diabetes follow-up.
 
+empagliflozin: started 10 mg daily today (A1c 8.2, CKD)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2019-092364",
+    "visit_id": "V-2019-092338",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2019-092364",
+    "visit_id": "V-2019-092338",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2019-092364",
+    "visit_id": "V-2019-092338",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2019-092364",
+    "visit_id": "V-2019-092338",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

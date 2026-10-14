@@ -35,8 +35,8 @@ Annual exam.
     "type": "billing_dx",
     "visit_id": "V-2021-030126",
     "rank": 2,
-    "icd10cm": "I50.22",
-    "display": "Chronic systolic (congestive) heart failure"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   }
 }
 ```

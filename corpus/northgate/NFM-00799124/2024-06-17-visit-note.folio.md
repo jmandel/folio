@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J0M9N7F0QJPW208EWVWJZ9A5"
+id: "01J0M9N7F09BF8E5ME2DK93T6V"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00799124"
 effective: "2024-06-17T15:20:00-05:00"
@@ -20,27 +20,27 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-061723",
+    "visit_id": "V-2024-061749",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061723",
+    "visit_id": "V-2024-061749",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061723",
+    "visit_id": "V-2024-061749",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061723",
+    "visit_id": "V-2024-061749",
     "rank": 3,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

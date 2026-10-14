@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JZ3FFK4G21RZBK1VW5N9CTM2"
+id: "01JZ3FFK4G35044WYMCAHDS4CB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00342977"
 effective: "2025-07-01T12:10:00-05:00"
@@ -14,20 +14,20 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="alg_1">Dapagliflozin: euglycemic DKA.</ref> Entered as adverse reaction.
+<ref id="alg_1">dapagliflozin: euglycemic diabetic ketoacidosis.</ref>
 
 ```json payload
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-3387",
+    "allergy_id": "AL-3452",
     "action": "add",
     "substance": { "name": "dapagliflozin", "rxnorm": "1488564" },
     "reaction_type": "adverse_reaction",
     "reactions": ["Diabetic ketoacidosis"],
     "severity": "high",
     "onset": { "date": "2025-06-24", "precision": "day" },
-    "visit_id": "V-2025-070145"
+    "visit_id": "V-2025-070123"
   }
 }
 ```

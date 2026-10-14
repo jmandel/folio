@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FXNMHDTG31D140CTF1G2VM3E"
+id: "01FXNMHDTGNERN3Q68VCW5H3S8"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00007594"
 effective: "2022-03-08T14:46:00-06:00"
@@ -19,7 +19,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-44521",
+    "med_id": "ML-13262",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "carvedilol 12.5 MG Oral Tablet", "rxnorm": "200032" },

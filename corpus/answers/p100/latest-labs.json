@@ -12,7 +12,7 @@
       "collected_local_date": "2025-11-28",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_31"]
+      "basis": ["l_40"]
     },
     "egfr": {
       "analyte": "egfr",
@@ -25,7 +25,7 @@
       "equation": "ckd-epi-2021",
       "reported": [{ "equation": "ckd-epi-2021", "value": 78 }],
       "sources": ["B", "C"],
-      "basis": ["l_31_egfr"]
+      "basis": ["l_40_egfr"]
     },
     "potassium": {
       "analyte": "potassium",
@@ -36,18 +36,73 @@
       "collected_local_date": "2025-11-28",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_32"]
+      "basis": ["l_41"]
     },
-    "glucose": {
-      "analyte": "glucose",
-      "value": 70,
-      "unit": "mg/dL",
-      "loinc": "2345-7",
+    "sodium": {
+      "analyte": "sodium",
+      "value": 137,
+      "unit": "mmol/L",
+      "loinc": "2951-2",
       "collected": "2023-11-01T07:26:00-05:00",
       "collected_local_date": "2023-11-01",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_15"]
+      "basis": ["l_14"]
+    },
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 124,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-03-31T07:49:00-05:00",
+      "collected_local_date": "2025-03-31",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_33"]
+    },
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 112,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-03-31T07:49:00-05:00",
+      "collected_local_date": "2025-03-31",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_34"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 45,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-03-31T07:49:00-05:00",
+      "collected_local_date": "2025-03-31",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_35"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 57,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-03-31T07:49:00-05:00",
+      "collected_local_date": "2025-03-31",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_36"]
+    },
+    "glucose": {
+      "analyte": "glucose",
+      "value": 99,
+      "unit": "mg/dL",
+      "loinc": "2345-7",
+      "collected": "2025-03-31T07:49:00-05:00",
+      "collected_local_date": "2025-03-31",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_32"]
     }
   }
 }

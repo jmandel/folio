@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J47WX2T00R1N3NN3H89RZVWK"
+id: "01J47WX2T0CSCN13BRBGD2N6JR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00072209"
 effective: "2024-08-01T11:00:00-05:00"
@@ -20,27 +20,27 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-080118",
+    "visit_id": "V-2024-080146",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-080118",
+    "visit_id": "V-2024-080146",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-080118",
+    "visit_id": "V-2024-080146",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-080118",
+    "visit_id": "V-2024-080146",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

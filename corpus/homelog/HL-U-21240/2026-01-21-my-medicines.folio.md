@@ -50,18 +50,18 @@ My Medicines, saved 21 January 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Trulicity",
-    "strength_text": "1.5 mg pen",
-    "how_i_take_it": "once a week, Sunday",
+    "name": "water pill",
+    "strength_text": "25 mg",
+    "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
   },
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Chlorthalidone",
-    "picked_from_search": { "rxnorm": "197499", "display": "chlorthalidone 25 MG Oral Tablet" },
-    "strength_text": "25 mg",
+    "name": "Amlodipine",
+    "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
+    "strength_text": "5 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
@@ -69,10 +69,10 @@ My Medicines, saved 21 January 2026.
   "med_6": {
     "type": "my_med",
     "homelog_med_id": "med_6",
-    "name": "Amlodipine",
-    "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
-    "strength_text": "5 mg",
-    "how_i_take_it": "morning",
+    "name": "Dulaglutide",
+    "picked_from_search": { "rxnorm": "1551291", "display": "dulaglutide" },
+    "strength_text": "1.5 mg pen",
+    "how_i_take_it": "once a week, Sunday",
     "status": "taking",
     "kind": "prescription"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HFAQR4G0MP4KXJTEJF2QPDFJ"
+id: "01HFAQR4G0ZBHY4FKFCTZH51TF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00277891"
 effective: "2023-11-15T13:10:00-06:00"
@@ -22,13 +22,13 @@ lisinopril: held today (K 5.6 confirmed on repeat); review 2023-11-29
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-111597",
+    "visit_id": "V-2023-111547",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-111597",
+    "visit_id": "V-2023-111547",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

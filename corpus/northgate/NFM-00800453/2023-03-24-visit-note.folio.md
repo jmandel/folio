@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GWATCT406Z6XZ10X2ZHY4VFH"
+id: "01GWATCT40H7W4PDHN6DSZ6C9K"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00800453"
 effective: "2023-03-24T14:10:00-05:00"
@@ -22,21 +22,28 @@ Patient ran out of losartan about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-032415",
+    "visit_id": "V-2023-032451",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-032415",
+    "visit_id": "V-2023-032451",
     "rank": 1,
-    "icd10cm": "N18.32",
-    "display": "Chronic kidney disease, stage 3b"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-032415",
+    "visit_id": "V-2023-032451",
     "rank": 2,
+    "icd10cm": "N18.32",
+    "display": "Chronic kidney disease, stage 3b"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-032451",
+    "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   }

@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01GP4J07XGQQH29Z1AJB63JA60"
+id: "01GP4HYDAGQQH29Z1AJB63JA60"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00312161"
-effective: "2023-01-06T16:07:00-06:00"
-recorded: "2023-01-06T16:07:42-06:00"
+effective: "2023-01-06T16:06:00-06:00"
+recorded: "2023-01-06T16:06:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:jpatel"
   name: "Jaya Patel, NP"
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2023-010627"
+    "visit_id": "V-2023-010691"
   }
 }
 ```

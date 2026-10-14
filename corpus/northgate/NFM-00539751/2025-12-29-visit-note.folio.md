@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KDNZN2D0Q5ZP0ZXA2G5DRXZV"
+id: "01KDNZN2D0ZYN6M4935ANF08Y7"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00539751"
 effective: "2025-12-29T13:10:00-06:00"
@@ -28,23 +28,16 @@ lisinopril intolerance: dry cough
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-122955",
+    "visit_id": "V-2025-122943",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-122955",
+    "visit_id": "V-2025-122943",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2025-122955",
-    "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

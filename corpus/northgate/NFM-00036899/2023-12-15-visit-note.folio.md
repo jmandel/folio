@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HHR53MX0KMNEQ2P4JF4N80YN"
+id: "01HHR53MX0PDZ6ER2G2WMV0RBM"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00036899"
 effective: "2023-12-15T14:00:00-06:00"
@@ -16,40 +16,38 @@ schema:
 ---
 Chronic care visit.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-121563",
+    "visit_id": "V-2023-121573",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-121563",
+    "visit_id": "V-2023-121573",
     "rank": 1,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-121563",
+    "visit_id": "V-2023-121573",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-121563",
+    "visit_id": "V-2023-121573",
     "rank": 3,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-121563",
+    "visit_id": "V-2023-121573",
     "rank": 4,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

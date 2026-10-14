@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J56PBGC0N0CKTJ8F8KM4EMCP"
+id: "01J56PBGC0YF4ZX639G0ME2FA0"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00211240"
 effective: "2024-08-13T08:50:00-05:00"
@@ -20,13 +20,13 @@ BP follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-081328",
+    "visit_id": "V-2024-081398",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-081328",
+    "visit_id": "V-2024-081398",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

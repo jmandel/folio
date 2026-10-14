@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F4ZAN7Y0BZ3WZJ2A1T4Y6TE1"
+id: "01F4ZAN7Y0REENWBK1CKWJQBPZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00759365"
 effective: "2021-05-05T15:40:00-05:00"
@@ -14,36 +14,35 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit. BP 142/90, repeat 136/88. Pulse 79, wt 196 lb.
-Labs 5/3: eGFR 65, K 4.4, A1c 7.3%.
-Amlodipine started 5 mg daily today (BP above goal).
-Pt to watch for ankle swelling. RTC 4 mo.
+Chronic care visit.
+
+amlodipine: started 5 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-050551",
+    "visit_id": "V-2021-050568",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-050551",
+    "visit_id": "V-2021-050568",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-050551",
+    "visit_id": "V-2021-050568",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2021-050551",
+    "visit_id": "V-2021-050568",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

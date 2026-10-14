@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JSFEQS60HCB2D8EK1Y58N8M1"
+id: "01JSFEQS607GVSAC1DRJDVJ0B4"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484559"
 effective: "2025-04-22T12:15:00-05:00"
@@ -14,37 +14,43 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. BP 132/77, pulse 67, wt 181 lb.
-Labs 4/17: eGFR 53, K 4.7, A1c 7.5%.
-Empagliflozin started 10 mg daily today (CKD + DM, cardiorenal benefit). Counseled on genital hygiene and hydration.
-RTC 3 mo.
+Annual exam.
+
+empagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-042255",
+    "visit_id": "V-2025-042281",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-042255",
+    "visit_id": "V-2025-042281",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-042255",
+    "visit_id": "V-2025-042281",
     "rank": 2,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-042255",
+    "visit_id": "V-2025-042281",
     "rank": 3,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-042281",
+    "rank": 4,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   }

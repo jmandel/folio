@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KKA6C1HGJG89501V9AD1PK3F"
+id: "01KKA3JAEGJG89501V9AD1PK3F"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00351993"
-effective: "2026-03-09T15:59:00-05:00"
-recorded: "2026-03-09T15:59:42-05:00"
+effective: "2026-03-09T15:10:00-05:00"
+recorded: "2026-03-09T15:10:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">hold losartan: K 6.2 confirmed on repeat.</ref>
+<ref id="med_1">hold losartan: K 5.7 confirmed on repeat.</ref>
 
 ```json payload
 {
@@ -27,9 +27,9 @@ schema:
     "dose": { "value": 50, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
-    "reason_text": "K 6.2 confirmed on repeat",
+    "reason_text": "K 5.7 confirmed on repeat",
     "review_on": "2026-03-23",
-    "visit_id": "V-2026-030977"
+    "visit_id": "V-2026-030943"
   }
 }
 ```

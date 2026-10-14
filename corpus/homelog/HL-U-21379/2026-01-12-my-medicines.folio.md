@@ -23,7 +23,7 @@ My Medicines, saved 12 January 2026.
   "med_1": {
     "type": "my_med",
     "homelog_med_id": "med_1",
-    "name": "Losartan",
+    "name": "Cozaar",
     "picked_from_search": { "rxnorm": "979485", "display": "losartan potassium 50 MG Oral Tablet" },
     "strength_text": "50 mg",
     "how_i_take_it": "morning",
@@ -33,7 +33,7 @@ My Medicines, saved 12 January 2026.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Glucophage",
+    "name": "Metformin",
     "picked_from_search": { "rxnorm": "861004", "display": "metformin hydrochloride 1000 MG Oral Tablet" },
     "strength_text": "1000 mg",
     "how_i_take_it": "morning and supper",
@@ -43,19 +43,10 @@ My Medicines, saved 12 January 2026.
   "med_3": {
     "type": "my_med",
     "homelog_med_id": "med_3",
-    "name": "Atorvastatin",
+    "name": "Lipitor",
     "picked_from_search": { "rxnorm": "617311", "display": "atorvastatin 40 MG Oral Tablet" },
     "strength_text": "40 mg",
     "how_i_take_it": "bedtime",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_4": {
-    "type": "my_med",
-    "homelog_med_id": "med_4",
-    "name": "Farxiga",
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GT2W4AK02GN8T64BCV5PCKAE"
+id: "01GT2W4AK0Y5X7BMG5R2BJEV0T"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00773529"
 effective: "2023-02-21T23:42:00Z"
@@ -17,28 +17,17 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnosis:** <ref id="dx_dka">euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated, resolved</ref>.
-
-**Hospital course.** The patient has type 2 diabetes and hypertension. She was admitted with weakness, nausea and rapid breathing and was found to have a high anion gap acidosis with a near-normal glucose. <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> She was treated with an insulin infusion per DKA protocol and dextrose-containing fluids, followed by subcutaneous insulin glargine. The acidosis cleared and she resumed eating.
-
-**Condition at discharge.** Vitals at 09:00: BP 123/74, HR 104, RR 17, T 98.2 F, SpO2 94%. She is eating and feels well. The discharge basic metabolic panel at 06:12 showed sodium 131 (L), potassium 4.4, chloride 102, bicarbonate 22, anion gap 7, urea nitrogen 16, creatinine 1.29 (H), eGFR 47 (L) and glucose 158 (H).
-
-**Allergies:** lisinopril (cough).
-
-**Discharge medications**
-
-- <ref id="med_empagliflozin">Empagliflozin 10 mg daily: do not resume until reviewed by her primary care physician.</ref>
-- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue.</ref>
-- <ref id="med_losartan">Losartan 50 mg daily: continue.</ref>
-- Amlodipine 5 mg daily: continue.
-
-**Follow-up.** Primary care at Northgate Family Medicine within 1 week to decide whether to restart empagliflozin and to recheck a basic metabolic panel. She should return for repeated vomiting, inability to eat or drink, abdominal pain or fast breathing.
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
+- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: continue</ref>
+- <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6412994",
+    "encounter_id": "RRH-ENC-6123698",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -68,7 +57,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23055-5383",
+    "accession": "L23055-7238",
     "collected": "2023-02-24T12:12:00Z",
     "specimen": "serum",
     "status": "final",
@@ -137,6 +126,14 @@ schema:
     "status": "held",
     "restart_advice": "advise_against",
     "instructions": "Do not resume until reviewed by PCP"
+  },
+  "med_semaglutide": {
+    "type": "home_med",
+    "drug_name": "semaglutide pen",
+    "rxnorm_ingredient": "1991302",
+    "dose_text": "0.5 mg",
+    "sig": "0.5 mg SubQ weekly",
+    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

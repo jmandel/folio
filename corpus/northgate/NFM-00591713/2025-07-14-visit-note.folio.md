@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K05EHDM03BQHKNADYC031JV8"
+id: "01K05EHDM0A5K8AWGS9N9VZ8JB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00591713"
 effective: "2025-07-14T12:45:00-05:00"
@@ -20,13 +20,13 @@ Follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-071419",
+    "visit_id": "V-2025-071498",
     "visit_type": "office",
     "reason": "Follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-071419",
+    "visit_id": "V-2025-071498",
     "rank": 1,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

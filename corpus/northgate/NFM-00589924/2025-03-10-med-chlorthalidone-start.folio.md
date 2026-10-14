@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01JP0XT2QG4H165NBET7X4TRAA"
+id: "01JP0XVXAG1NNM92FVD29THVDQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00589924"
-effective: "2025-03-10T16:01:00-05:00"
-recorded: "2025-03-10T16:01:42-05:00"
+effective: "2025-03-10T16:02:00-05:00"
+recorded: "2025-03-10T16:02:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:mbrennan"
   name: "Moira Brennan, DO"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-26710",
+    "med_id": "ML-33925",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "chlorthalidone 25 MG Oral Tablet", "rxnorm": "197499" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1/2 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2025-031049"
+    "visit_id": "V-2025-031043"
   }
 }
 ```

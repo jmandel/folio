@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2020-070335"
+    "visit_id": "V-2020-070367"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HMW6TVA0QST7FRTXCG32DCJS"
+id: "01HMW6TVA027F0ZZQNZRC9HH0X"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00920167"
 effective: "2024-01-23T16:25:00-06:00"
@@ -20,7 +20,7 @@ schema:
   "review": {
     "type": "list_reviewed",
     "list": "medications",
-    "lines_on_list": ["ML-14940", "ML-42403", "ML-15501", "ML-41617", "ML-32472", "ML-33269"],
+    "lines_on_list": ["ML-14940", "ML-42403", "ML-15501", "ML-41617", "ML-36393", "ML-33750"],
     "visit_id": "V-2024-012388"
   }
 }

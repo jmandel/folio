@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JDSM5N70STWY6R26T69MGTR9"
+id: "01JDSM5N70PWV2B5XBSPPSD7X4"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00298275"
 effective: "2024-11-28T13:44:00Z"
@@ -23,7 +23,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6065955",
+    "encounter_id": "RRH-ENC-6138496",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -50,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24333-3048",
+    "accession": "L24333-8259",
     "collected": "2024-11-28T12:06:00Z",
     "specimen": "serum",
     "status": "final",
@@ -131,8 +131,8 @@ schema:
     "type": "home_med",
     "drug_name": "insulin glargine 100 units/mL pen",
     "rxnorm_ingredient": "274783",
-    "dose_text": "10 units",
-    "sig": "10 units SubQ nightly",
+    "dose_text": "14 units",
+    "sig": "14 units SubQ nightly",
     "status": "continue"
   },
   "med_lisinopril": {

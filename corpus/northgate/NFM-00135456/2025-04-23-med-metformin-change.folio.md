@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">change metformin: A1c 8.1.</ref>
+<ref id="med_1">change metformin: A1c 8.4.</ref>
 
 ```json payload
 {
@@ -27,8 +27,8 @@ schema:
     "dose": { "value": 1000, "unit": "mg" },
     "frequency": "BID",
     "sig": "Take 1 tablet by mouth twice daily with meals",
-    "reason_text": "A1c 8.1",
-    "visit_id": "V-2025-042379"
+    "reason_text": "A1c 8.4",
+    "visit_id": "V-2025-042327"
   }
 }
 ```

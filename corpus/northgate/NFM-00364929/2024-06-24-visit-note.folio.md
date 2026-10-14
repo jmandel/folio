@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J15QEBB018061DN8VAZB95ZX"
+id: "01J15QEBB060BH5GQVZ38KJR44"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00364929"
 effective: "2024-06-24T09:45:00-05:00"
@@ -20,27 +20,27 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-062414",
+    "visit_id": "V-2024-062444",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-062414",
+    "visit_id": "V-2024-062444",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-062414",
+    "visit_id": "V-2024-062444",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-062414",
+    "visit_id": "V-2024-062444",
     "rank": 3,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

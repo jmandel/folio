@@ -23,7 +23,7 @@ My Medicines, saved 11 March 2026.
   "med_1": {
     "type": "my_med",
     "homelog_med_id": "med_1",
-    "name": "Zestril",
+    "name": "Lisinopril",
     "picked_from_search": { "rxnorm": "197884", "display": "lisinopril 40 MG Oral Tablet" },
     "strength_text": "40 mg",
     "how_i_take_it": "morning",
@@ -34,6 +34,7 @@ My Medicines, saved 11 March 2026.
     "type": "my_med",
     "homelog_med_id": "med_2",
     "name": "Glucophage",
+    "picked_from_search": { "rxnorm": "861004", "display": "metformin hydrochloride 1000 MG Oral Tablet" },
     "strength_text": "1000 mg",
     "how_i_take_it": "morning and supper",
     "status": "taking",
@@ -42,8 +43,7 @@ My Medicines, saved 11 March 2026.
   "med_3": {
     "type": "my_med",
     "homelog_med_id": "med_3",
-    "name": "Rosuvastatin",
-    "picked_from_search": { "rxnorm": "859751", "display": "rosuvastatin 20 MG Oral Tablet" },
+    "name": "Crestor",
     "strength_text": "20 mg",
     "how_i_take_it": "bedtime",
     "status": "taking",
@@ -62,16 +62,6 @@ My Medicines, saved 11 March 2026.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Dulaglutide",
-    "picked_from_search": { "rxnorm": "1551291", "display": "dulaglutide" },
-    "strength_text": "1.5 mg pen",
-    "how_i_take_it": "once a week, Sunday",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
     "name": "Chlorthalidone",
     "picked_from_search": { "rxnorm": "197499", "display": "chlorthalidone 25 MG Oral Tablet" },
     "strength_text": "25 mg",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GSVGE6Y08HM7QPKT9P0QMH84"
+id: "01GSVGE6Y0DCYMPXGCY9AFVDB5"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00773529"
 effective: "2023-02-22T00:40:00Z"
@@ -16,29 +16,17 @@ schema:
 ---
 ## Admission history and physical
 
-**Reason for admission:** <ref id="dx_dka">euglycemic diabetic ketoacidosis, SGLT2 inhibitor-associated</ref>.
-
-**History.** The patient has type 2 diabetes and hypertension and was sent up from the ED after presenting with weakness, nausea and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref> Her glucose in the ED was only modestly raised, which fits the euglycemic picture. She is allergic to lisinopril (cough).
-
-**Home medications.** Empagliflozin 10 mg daily, metformin 1000 mg twice daily with meals, losartan 50 mg daily and amlodipine 5 mg daily.
-
-**Exam.** Vitals at 18:30: BP 111/67, HR 96, RR 22, T 99.1 F, SpO2 96%. She looks tired and dry, with deep, rapid respirations. Abdomen soft and non-tender. Alert and oriented.
-
-**Results.** The 14:58 basic metabolic panel showed sodium 132, potassium 5.0, chloride 97, bicarbonate 11, anion gap 24, urea nitrogen 26, creatinine 1.29, eGFR 47 and glucose 207.
-
-**Assessment and plan**
-
-1. Euglycemic DKA with an anion gap of 24 and bicarbonate of 11. The insulin infusion per DKA protocol at 0.1 units/kg/h has been running since 15:51, together with D5 lactated Ringer's at 150 mL/h, because glucose is near normal and dextrose must continue while insulin clears the ketones. Repeat chemistries on a regular schedule until the gap closes.
-2. SGLT2 inhibitor exposure: <ref id="med_empagliflozin">hold empagliflozin</ref>.
-3. Type 2 diabetes: <ref id="med_metformin">hold metformin</ref> while she is acidotic and NPO.
-4. Hypertension: <ref id="med_losartan">hold losartan</ref> for volume depletion and the potassium of 5.0; resume when she is eating. Continue amlodipine.
-5. Kidney function: creatinine 1.29 on arrival; recheck with morning labs.
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
+- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion and potassium; resume when eating"</ref>
+- <ref id="precipitant">The ketoacidosis was precipitated by a viral gastroenteritis with vomiting and almost no oral intake for several days.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6412994",
+    "encounter_id": "RRH-ENC-6123698",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -66,7 +54,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23052-7954",
+    "accession": "L23052-2088",
     "collected": "2023-02-21T20:58:00Z",
     "specimen": "serum",
     "status": "final",
@@ -169,6 +157,14 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
+  },
+  "med_semaglutide": {
+    "type": "home_med",
+    "drug_name": "semaglutide pen",
+    "rxnorm_ingredient": "1991302",
+    "dose_text": "0.5 mg",
+    "sig": "0.5 mg SubQ weekly",
+    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

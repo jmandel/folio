@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KTAC7JR0C767MXJ6HB1FTM3E"
+id: "01KTAC7JR0YGK2G7XRCSBC3FNJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00007594"
 effective: "2026-06-04T15:30:00-05:00"
@@ -20,7 +20,7 @@ Follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-060452",
+    "visit_id": "V-2026-060417",
     "visit_type": "office",
     "reason": "Follow-up"
   }

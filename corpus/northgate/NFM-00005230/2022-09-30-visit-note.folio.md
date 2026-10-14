@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GE7NKWD0VEMK7709Y7WW2TBZ"
+id: "01GE7NKWD06CK3Z4RW9RFEWHZ8"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00005230"
 effective: "2022-09-30T09:15:00-05:00"
@@ -16,19 +16,17 @@ schema:
 ---
 Diabetes follow-up.
 
-empagliflozin: started 10 mg daily today (A1c 8.3)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-093092",
+    "visit_id": "V-2022-093095",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-093092",
+    "visit_id": "V-2022-093095",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

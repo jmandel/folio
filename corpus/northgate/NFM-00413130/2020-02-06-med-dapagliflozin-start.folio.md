@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01E0E8MYAGAMSDCZ70B72AN36R"
+id: "01E0E8MYAGVQTW3HJZ1JFAXMZ2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00413130"
 effective: "2020-02-06T16:06:00-06:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-39865",
+    "med_id": "ML-33452",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },

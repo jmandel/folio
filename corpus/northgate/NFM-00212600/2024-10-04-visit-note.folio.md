@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J9CW5VC0YG92KVE3E57W170A"
+id: "01J9CW5VC04HTTR1QFDGDTP6N9"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00212600"
 effective: "2024-10-04T14:30:00-05:00"
@@ -20,20 +20,20 @@ Diabetes follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-100493",
+    "visit_id": "V-2024-100437",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-100493",
+    "visit_id": "V-2024-100437",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-100493",
+    "visit_id": "V-2024-100437",
     "rank": 2,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

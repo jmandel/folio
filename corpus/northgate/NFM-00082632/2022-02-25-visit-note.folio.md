@@ -30,8 +30,8 @@ empagliflozin: started 10 mg daily today (A1c 8.1)
     "type": "billing_dx",
     "visit_id": "V-2022-022516",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

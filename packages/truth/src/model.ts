@@ -178,7 +178,7 @@ export interface Medication {
 export type Analyte =
   | "creatinine" | "egfr" | "potassium" | "sodium" | "chloride" | "bicarbonate" | "anion-gap" | "bun"
   | "glucose" | "a1c" | "uacr" | "platelets" | "wbc" | "hemoglobin" | "bhb" | "ph" | "pco2" | "lipase"
-  | "troponin";
+  | "troponin" | "cholesterol" | "triglycerides" | "hdl" | "ldl";
 
 /** One blood/urine draw (a requisition): the specimens collected at one time for one orderer. */
 export interface LabDraw {

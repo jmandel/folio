@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EMJB8290Z0YNB080A3QP5P3Y"
+id: "01EMJB8290S2EHTB94G200MWJP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00891028"
 effective: "2020-10-13T15:45:00-05:00"
@@ -22,20 +22,20 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-101392",
+    "visit_id": "V-2020-101372",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-101392",
+    "visit_id": "V-2020-101372",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-101392",
+    "visit_id": "V-2020-101372",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

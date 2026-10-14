@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01ECBQ3JE09RDWGD365BQYDT8G"
+id: "01ECBQ3JE03MP15V5QVRB4ZYZZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00005230"
 effective: "2020-07-03T14:10:00-05:00"
@@ -22,30 +22,23 @@ lisinopril: dose changed to 20 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-070335",
+    "visit_id": "V-2020-070367",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-070335",
+    "visit_id": "V-2020-070367",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-070335",
+    "visit_id": "V-2020-070367",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2020-070335",
-    "rank": 3,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

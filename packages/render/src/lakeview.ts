@@ -28,6 +28,10 @@ const TESTS: Partial<Record<Analyte, Test>> = {
   wbc: { code: "LK-WBC", name: "WBC", loinc: "6690-2", unit: "K/uL", range: () => "3.4-10.8", dec: 1 },
   hemoglobin: { code: "LK-HGB", name: "Hemoglobin", loinc: "718-7", unit: "g/dL", range: (s) => (s === "F" ? "11.1-15.9" : "13.0-17.7"), dec: 1 },
   platelets: { code: "LK-PLT", name: "Platelets", loinc: "777-3", unit: "K/uL", range: () => "150-450", dec: 0 },
+  cholesterol: { code: "LK-CHOL", name: "Cholesterol, Total", loinc: "2093-3", unit: "mg/dL", range: () => "100-199", dec: 0 },
+  triglycerides: { code: "LK-TRIG", name: "Triglycerides", loinc: "2571-8", unit: "mg/dL", range: () => "0-149", dec: 0 },
+  hdl: { code: "LK-HDL", name: "HDL Cholesterol", loinc: "2085-9", unit: "mg/dL", range: () => ">39", dec: 0 },
+  ldl: { code: "LK-LDLC", name: "LDL Cholesterol Calc", loinc: "13457-7", unit: "mg/dL", range: () => "0-99", dec: 0 },
 };
 
 const ORDER: Record<string, { code: string; name: string; spec: Spec; short: string }> = {
@@ -41,9 +45,13 @@ const ORDER: Record<string, { code: string; name: string; spec: Spec; short: str
   wbc: { code: "LK-CBC", name: "CBC without differential", spec: "WB", short: "cbc" },
   hemoglobin: { code: "LK-CBC", name: "CBC without differential", spec: "WB", short: "cbc" },
   platelets: { code: "LK-CBC", name: "CBC without differential", spec: "WB", short: "cbc" },
+  cholesterol: { code: "LK-LIPID", name: "Lipid panel", spec: "SER", short: "lipid" },
+  triglycerides: { code: "LK-LIPID", name: "Lipid panel", spec: "SER", short: "lipid" },
+  hdl: { code: "LK-LIPID", name: "Lipid panel", spec: "SER", short: "lipid" },
+  ldl: { code: "LK-LIPID", name: "Lipid panel", spec: "SER", short: "lipid" },
 };
-const ORDER_SEQ = ["creat", "na", "k", "glu", "uacr", "a1c", "cbc"];
-const RES_SHORT: Partial<Record<Analyte, string>> = { creatinine: "creat", sodium: "na", potassium: "k", glucose: "glu", uacr: "uacr", a1c: "a1c", wbc: "wbc", hemoglobin: "hgb", platelets: "plt", egfr: "egfr" };
+const ORDER_SEQ = ["creat", "na", "k", "glu", "uacr", "a1c", "cbc", "lipid"];
+const RES_SHORT: Partial<Record<Analyte, string>> = { creatinine: "creat", sodium: "na", potassium: "k", glucose: "glu", uacr: "uacr", a1c: "a1c", wbc: "wbc", hemoglobin: "hgb", platelets: "plt", egfr: "egfr", cholesterol: "chol", triglycerides: "trig", hdl: "hdl", ldl: "ldl" };
 
 const EGFR09_COMMENT = "Calculated by CKD-EPI 2009. Report the African American value for patients who identify as African American.";
 const EGFR21_COMMENT = "Calculated by CKD-EPI 2021 (race-free) equation.";
@@ -201,6 +209,7 @@ function renderRequisition(ctx: Ctx, d: LabDraw): RenderedItem[] {
           VALUE_TEXT: text, VALUE_NUM: l.comparator ? 9999999 : Number(text), UNIT_CODE: t.unit, REF_RANGE_TEXT: range,
           ABN_FLAG: flag ?? "N", RESULT_STATUS: withdrawn ? "C" : "F", RESULTED_AT: inZone(l.resultedAt!),
           ...(withdrawn ? { STATUS_CHANGED_AT: inZone(l.correctedAt!), ...(l.replacedBy ? { REPLACED_BY_RESULT_ID: resultIdFor(ctx, l.replacedBy) } : {}) } : {}),
+          ...(l.analyte === "ldl" && l.derivedFrom ? { DERIVED_FROM_RESULT_ID: resultIdFor(ctx, l.derivedFrom.find((x) => p.labs.find((y) => y.id === x)?.analyte === "cholesterol") ?? l.derivedFrom[0]) } : {}),
           ...(comment ? { COMMENT_TEXT: comment } : {}),
         };
         void k;
@@ -243,6 +252,7 @@ function commentFor(ctx: Ctx, l: LabResult, d: LabDraw, withdrawn: boolean): str
     }
     return c;
   }
+  if (l.analyte === "ldl") return "Calculated (Friedewald).";
   if (l.annotations?.includes("not hemolyzed") && p.labs.some((x) => x.confirms === l.id)) {
     const by = d.orderingClinician ? `Dr. ${nameParts(staff(d.orderingClinician)).last}` : "the ordering clinician";
     return `No hemolysis detected. Repeat requested by ${by}.`;

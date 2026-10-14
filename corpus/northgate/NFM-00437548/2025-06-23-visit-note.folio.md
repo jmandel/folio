@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JYF49MP0HA9CXFW8P1QX6AX1"
+id: "01JYF49MP0T6PVCMZ8J5DTTPWK"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00437548"
 effective: "2025-06-23T08:15:00-05:00"
@@ -20,13 +20,13 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-062369",
+    "visit_id": "V-2025-062321",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-062369",
+    "visit_id": "V-2025-062321",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"

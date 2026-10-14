@@ -30,8 +30,8 @@ empagliflozin: started 10 mg daily today (HFrEF)
     "type": "billing_dx",
     "visit_id": "V-2024-120578",
     "rank": 1,
-    "icd10cm": "I50.22",
-    "display": "Chronic systolic (congestive) heart failure"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

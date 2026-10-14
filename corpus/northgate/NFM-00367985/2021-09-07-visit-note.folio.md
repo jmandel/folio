@@ -44,13 +44,6 @@ New patient, establish care.
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
-  },
-  "dx_4": {
-    "type": "billing_dx",
-    "visit_id": "V-2021-090719",
-    "rank": 4,
-    "icd10cm": "I50.22",
-    "display": "Chronic systolic (congestive) heart failure"
   }
 }
 ```

@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. History of HTN, DM2 and lipids per pt.
-BP 151/91, repeat 147/91. Pulse 72, wt 194 lb.
-Labs today: eGFR 69, K 4.2, A1c 6.5%.
-Problem list built from pt history. Will recheck BP at next visit.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {

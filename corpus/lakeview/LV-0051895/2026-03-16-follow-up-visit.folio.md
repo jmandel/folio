@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KKWQ4FS0QMDGKEPGVV7TAF61"
+id: "01KKWQ4FS01HM7C0FCJDZEB60K"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0051895"
 effective: "2026-03-16T14:40:00-05:00"
@@ -12,21 +12,19 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G3a A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>.
-
-<ref id="bp_sys">BP 136/80, HR 88, weight 92.4 kg</ref>. No new symptoms, no edema.
-
-eGFR 49 today, K 4.5. Down from 51 in November.
-
-Repeat labs and return in 3 to 4 months.
+- <ref id="bp_sys">BP 136/80, HR 88, weight 92.4 kg at 2026-03-16 14:44</ref>
+- <ref id="dx_ckd">Chronic kidney disease (stage 3a A3), onset 2025-08-03</ref>
+- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012-11</ref>
+- eGFR 49 (today)
+- K 4.5 (today)
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2026-03-16T14:40:00-05:00",
     "PROVIDER_NPI": "1999000066",
@@ -35,7 +33,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "DX_RANK": 1,
     "ICD10CM": "N18.31",
     "DX_TEXT": "Chronic kidney disease, stage 3a",
@@ -43,7 +41,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +49,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 136,
     "UNIT_CODE": "mmHg",
@@ -60,7 +58,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -69,7 +67,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 88,
     "UNIT_CODE": "/min",
@@ -78,7 +76,7 @@ Repeat labs and return in 3 to 4 months.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-101284",
+    "VISIT_ID": "NV-110991",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 92.4,
     "UNIT_CODE": "kg",

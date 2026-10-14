@@ -66,15 +66,6 @@ My Medicines, saved 10 November 2025.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
-    "name": "Lantus",
-    "strength_text": "100 units/mL pen",
-    "how_i_take_it": "10 units at bedtime",
-    "status": "taking",
-    "kind": "prescription"
   }
 }
 ```

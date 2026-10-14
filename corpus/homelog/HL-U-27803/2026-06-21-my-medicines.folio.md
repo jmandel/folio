@@ -80,7 +80,17 @@ My Medicines, saved 21 June 2026.
   "med_7": {
     "type": "my_med",
     "homelog_med_id": "med_7",
+    "name": "Ozempic",
+    "strength_text": "1 mg pen",
+    "how_i_take_it": "once a week, Sunday",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_8": {
+    "type": "my_med",
+    "homelog_med_id": "med_8",
     "name": "Kerendia",
+    "picked_from_search": { "rxnorm": "2562816", "display": "finerenone 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",

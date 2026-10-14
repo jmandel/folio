@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01GSXFE6N0Y66MK6FXZPRW1XBR"
+id: "01GSXHAM80X6P0GDDF9D79B6AJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00201150"
-effective: "2023-02-22T12:13:00-06:00"
-recorded: "2023-02-22T15:11:00-06:00"
+effective: "2023-02-22T13:33:00-06:00"
+recorded: "2023-02-22T15:44:00-06:00"
 author:
   id: "urn:northgate-fm.example:staff:jpatel"
   name: "Jaya Patel, NP"
@@ -22,7 +22,7 @@ metformin: held today (vomiting, poor oral intake); review 2023-03-01
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-022219",
+    "visit_id": "V-2023-022251",
     "visit_type": "phone",
     "reason": "Phone: sick, vomiting"
   }

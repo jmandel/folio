@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G2ZW21K0A21GWA8AJE94SPVH"
+id: "01G2ZW21K09ZYX8QBR63VZTRF8"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484397"
 effective: "2022-05-13T14:45:00-05:00"
@@ -22,21 +22,28 @@ lisinopril: resumed today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-051312",
+    "visit_id": "V-2022-051369",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-051312",
+    "visit_id": "V-2022-051369",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-051312",
+    "visit_id": "V-2022-051369",
     "rank": 2,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-051369",
+    "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   }

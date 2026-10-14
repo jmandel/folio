@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. Hx of HTN and DM2 per pt.
-BP 131/77, pulse 62, wt 174 lb.
-Labs 6/22: eGFR 78, K 4.7, UACR 8 mg/g, A1c 7.3%.
-Reviewed results with pt, no concerns today.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {
@@ -32,6 +28,13 @@ RTC 3 mo.
     "type": "billing_dx",
     "visit_id": "V-2019-062733",
     "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-062733",
+    "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   }

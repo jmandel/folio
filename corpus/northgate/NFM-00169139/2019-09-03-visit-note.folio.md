@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. History reviewed with pt, problem list entered.
-BP 129/78, pulse 72, wt 204 lb.
-Labs today: eGFR 97, K 4.7, UACR 13 mg/g, A1c 6.6%.
-Pt asked to bring all pill bottles next time.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {
@@ -32,15 +28,15 @@ RTC 3 mo.
     "type": "billing_dx",
     "visit_id": "V-2019-090356",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
     "visit_id": "V-2019-090356",
     "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
   }
 }
 ```

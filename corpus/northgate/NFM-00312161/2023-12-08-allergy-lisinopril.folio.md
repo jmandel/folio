@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HH53S9MGR0JE64AKDM4MRP3Y"
+id: "01HH53S9MG4HWDG1MKPNGVHV7J"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00312161"
 effective: "2023-12-08T10:22:00-06:00"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2144",
+    "allergy_id": "AL-4877",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "allergy",
     "reactions": ["Angioedema"],
     "severity": "high",
     "onset": { "date": "2023-12-03", "precision": "day" },
-    "visit_id": "V-2023-120887"
+    "visit_id": "V-2023-120871"
   }
 }
 ```

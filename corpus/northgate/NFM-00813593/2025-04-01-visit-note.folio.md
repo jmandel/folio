@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JQT1GB900AJN83VAZ72545XK"
+id: "01JQT1GB90REMGP7BGY2NCRMRE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00813593"
 effective: "2025-04-01T15:15:00-05:00"
@@ -20,20 +20,20 @@ Diabetes follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-040166",
+    "visit_id": "V-2025-040197",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-040166",
+    "visit_id": "V-2025-040197",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-040166",
+    "visit_id": "V-2025-040197",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

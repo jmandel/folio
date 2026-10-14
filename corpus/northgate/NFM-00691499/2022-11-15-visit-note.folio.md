@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GHYS2E3027725F9M4RZDWTAB"
+id: "01GHYS2E302W4HXWX86B3VH1D2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00691499"
 effective: "2022-11-15T11:40:00-06:00"
@@ -20,20 +20,20 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-111566",
+    "visit_id": "V-2022-111543",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-111566",
+    "visit_id": "V-2022-111543",
     "rank": 1,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-111566",
+    "visit_id": "V-2022-111543",
     "rank": 2,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

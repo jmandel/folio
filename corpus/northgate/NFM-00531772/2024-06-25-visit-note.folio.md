@@ -18,7 +18,7 @@ New patient, establish care.
 
 metformin: dose changed to 500 mg twice daily today (eGFR 37)
 
-insulin glargine: started 10 units at bedtime today (A1c 8.7)
+insulin glargine: started 10 units at bedtime today (A1c 8.4)
 
 ```json payload
 {
@@ -27,13 +27,6 @@ insulin glargine: started 10 units at bedtime today (A1c 8.7)
     "visit_id": "V-2024-062579",
     "visit_type": "office",
     "reason": "New patient, establish care"
-  },
-  "dx_1": {
-    "type": "billing_dx",
-    "visit_id": "V-2024-062579",
-    "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

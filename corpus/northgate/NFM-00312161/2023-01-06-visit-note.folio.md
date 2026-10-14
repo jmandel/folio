@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GP4YAF50685NE0H8G84A7Y5Y"
+id: "01GP4YAF50XKJQJ3P9JW7059EB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00312161"
 effective: "2023-01-06T15:45:00-06:00"
@@ -16,42 +16,40 @@ schema:
 ---
 Diabetes follow-up.
 
-empagliflozin: started 10 mg daily today (A1c 8.4, CKD)
-
 lisinopril: dose changed to 40 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-010627",
+    "visit_id": "V-2023-010691",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-010627",
+    "visit_id": "V-2023-010691",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-010627",
+    "visit_id": "V-2023-010691",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-010627",
+    "visit_id": "V-2023-010691",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-010627",
+    "visit_id": "V-2023-010691",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

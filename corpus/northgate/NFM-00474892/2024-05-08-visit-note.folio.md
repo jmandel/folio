@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HXCJMQK00WM21BBRMSPRDNBM"
+id: "01HXCJMQK0P2GN8MCSW35XFPTX"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00474892"
 effective: "2024-05-08T09:45:00-05:00"
@@ -14,24 +14,27 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. Doing well, no concerns.
-BP 123/72, pulse 86, wt 136 lb.
-Labs 5/3: eGFR 52, K 4.5, A1c 7.5%.
-Continue current plan.
-RTC 3 mo.
+Diabetes follow-up.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-050825",
+    "visit_id": "V-2024-050885",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-050825",
+    "visit_id": "V-2024-050885",
     "rank": 1,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-050885",
+    "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   }

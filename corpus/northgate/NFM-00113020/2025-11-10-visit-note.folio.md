@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K9RBJFX0EK50YDGQETWXN1BJ"
+id: "01K9RBJFX0WVM13QE8G861EMP1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00113020"
 effective: "2025-11-10T14:15:00-06:00"
@@ -16,6 +16,8 @@ schema:
 ---
 Diabetes follow-up.
 
+metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
+
 dapagliflozin: started 10 mg daily today (A1c above goal)
 
 lisinopril: dose changed to 40 mg daily today (BP above goal)
@@ -24,20 +26,20 @@ lisinopril: dose changed to 40 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-111039",
+    "visit_id": "V-2025-111023",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-111039",
+    "visit_id": "V-2025-111023",
     "rank": 1,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-111039",
+    "visit_id": "V-2025-111023",
     "rank": 2,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KMGQ4TW0TZ2CVC89NG0PF15N"
+id: "01KMGQ4TW0FK2R6EDPKG17G2CW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00531772"
 effective: "2026-03-24T11:10:00-05:00"
@@ -22,13 +22,13 @@ metformin: stopped today (eGFR 30)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-032474",
+    "visit_id": "V-2026-032473",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-032474",
+    "visit_id": "V-2026-032473",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

@@ -33,7 +33,7 @@ My Medicines, saved 1 September 2024.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Lipitor",
+    "name": "Atorvastatin",
     "picked_from_search": { "rxnorm": "617310", "display": "atorvastatin 20 MG Oral Tablet" },
     "strength_text": "20 mg",
     "how_i_take_it": "bedtime",
@@ -53,8 +53,7 @@ My Medicines, saved 1 September 2024.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Losartan",
-    "picked_from_search": { "rxnorm": "979480", "display": "losartan potassium 100 MG Oral Tablet" },
+    "name": "Cozaar",
     "strength_text": "100 mg",
     "how_i_take_it": "morning",
     "status": "taking",
@@ -75,6 +74,16 @@ My Medicines, saved 1 September 2024.
     "name": "Ozempic",
     "strength_text": "1 mg pen",
     "how_i_take_it": "once a week, Sunday",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_7": {
+    "type": "my_med",
+    "homelog_med_id": "med_7",
+    "name": "Insulin glargine",
+    "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
+    "strength_text": "100 units/mL pen",
+    "how_i_take_it": "10 units at bedtime",
     "status": "taking",
     "kind": "prescription"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HTJFH6X0366Y3MV4D86QJMM7"
+id: "01HTJFH6X030FYBB1MWP9YSYTR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00546774"
 effective: "2024-04-03T09:20:00-05:00"
@@ -22,41 +22,41 @@ Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2024-040387",
+    "visit_id": "V-2024-040385",
     "rank": 5,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

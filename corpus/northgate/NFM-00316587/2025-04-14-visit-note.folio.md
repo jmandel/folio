@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JRV66KM0KSNEMYEYYF32NRRH"
+id: "01JRV66KM0DB94P0D5REHP97QK"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00316587"
 effective: "2025-04-14T13:00:00-05:00"
@@ -16,24 +16,26 @@ schema:
 ---
 Diabetes follow-up.
 
+dapagliflozin: started 10 mg daily today (A1c 8.2, CKD)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-041481",
+    "visit_id": "V-2025-041444",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-041481",
+    "visit_id": "V-2025-041444",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-041481",
+    "visit_id": "V-2025-041444",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

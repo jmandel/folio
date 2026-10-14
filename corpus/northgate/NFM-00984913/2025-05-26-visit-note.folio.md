@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JW7R03K0CS8S3GPEC6MRTVXG"
+id: "01JW7R03K0WCKG1J8DW7M3PN1J"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00984913"
 effective: "2025-05-26T15:00:00-05:00"
@@ -22,13 +22,13 @@ lisinopril: resumed today (creatinine back to baseline)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-052698",
+    "visit_id": "V-2025-052667",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-052698",
+    "visit_id": "V-2025-052667",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"

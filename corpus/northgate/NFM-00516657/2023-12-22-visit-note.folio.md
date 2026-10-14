@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HJA0Z6V0VFBP1STYA4V37GNA"
+id: "01HJA0Z6V05FRKR59SA1E1WW9Y"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00516657"
 effective: "2023-12-22T15:30:00-06:00"
@@ -22,20 +22,20 @@ lisinopril: resumed today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-122223",
+    "visit_id": "V-2023-122211",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-122223",
+    "visit_id": "V-2023-122211",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-122223",
+    "visit_id": "V-2023-122211",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H2RVGDS017FZ88BZ1VFJFJ3R"
+id: "01H2RVGDS0WT7JEK33WNPMQ1FC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00172148"
 effective: "2023-06-12T11:50:00-05:00"
@@ -28,20 +28,20 @@ Patient ran out of amlodipine about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-061262",
+    "visit_id": "V-2023-061293",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-061262",
+    "visit_id": "V-2023-061293",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-061262",
+    "visit_id": "V-2023-061293",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

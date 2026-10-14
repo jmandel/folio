@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KQT5CV9GVM7E65NSRFHDJY5N"
+id: "01KQT5ENWGDP3PE3HW6DGECARB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00352869"
-effective: "2026-05-04T13:53:00-05:00"
-recorded: "2026-05-04T13:53:18-05:00"
+effective: "2026-05-04T13:54:00-05:00"
+recorded: "2026-05-04T13:54:18-05:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-4612",
+    "allergy_id": "AL-4279",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "intolerance",
     "reactions": ["Cough"],
     "severity": "low",
     "onset": { "date": "2026-02-01", "precision": "month" },
-    "visit_id": "V-2026-050435"
+    "visit_id": "V-2026-050425"
   }
 }
 ```

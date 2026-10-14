@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01H5TC0EBG6SNQGREPCC6A5AWJ"
+id: "01H5TCT2NG6SNQGREPCC6A5AWJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00169139"
-effective: "2023-07-20T14:21:00-05:00"
-recorded: "2023-07-20T14:21:42-05:00"
+effective: "2023-07-20T14:35:00-05:00"
+recorded: "2023-07-20T14:35:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">K 6.2 confirmed on repeat. Spironolactone held today.</ref> Review 8/3.
+<ref id="med_1">hold spironolactone: K 6.2 confirmed on repeat.</ref>
 
 ```json payload
 {
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 6.2 confirmed on repeat",
     "review_on": "2023-08-03",
-    "visit_id": "V-2023-072017"
+    "visit_id": "V-2023-072075"
   }
 }
 ```

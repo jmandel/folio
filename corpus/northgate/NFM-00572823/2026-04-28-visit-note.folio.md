@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KQAVSSK0JKKDHXNGAW9DNQN2"
+id: "01KQAVSSK0R3SPW734PS276CCK"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00572823"
 effective: "2026-04-28T11:30:00-05:00"
@@ -20,38 +20,30 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-042863",
+    "visit_id": "V-2026-042837",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042863",
+    "visit_id": "V-2026-042837",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042863",
+    "visit_id": "V-2026-042837",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042863",
+    "visit_id": "V-2026-042837",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
-  },
-  "dx_4": {
-    "type": "billing_dx",
-    "visit_id": "V-2026-042863",
-    "rank": 4,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

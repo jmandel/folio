@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JWRXC26085R4EYZMVNY5WJD4"
+id: "01JWRXC260518E29WWREQ24ZBQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00516657"
 effective: "2025-06-02T08:50:00-05:00"
@@ -20,13 +20,13 @@ BP follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-060271",
+    "visit_id": "V-2025-060285",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-060271",
+    "visit_id": "V-2025-060285",
     "rank": 1,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

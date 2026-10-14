@@ -86,16 +86,6 @@ My Medicines, saved 21 September 2025.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
-  },
-  "med_8": {
-    "type": "my_med",
-    "homelog_med_id": "med_8",
-    "name": "Lantus",
-    "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
-    "strength_text": "100 units/mL pen",
-    "how_i_take_it": "10 units at bedtime",
-    "status": "taking",
-    "kind": "prescription"
   }
 }
 ```

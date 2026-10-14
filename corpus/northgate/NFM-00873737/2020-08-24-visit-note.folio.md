@@ -28,8 +28,8 @@ New patient, establish care.
     "type": "billing_dx",
     "visit_id": "V-2020-082472",
     "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   }
 }
 ```

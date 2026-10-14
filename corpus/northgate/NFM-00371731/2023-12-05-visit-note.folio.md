@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HGY8YSJ08GA47K2JZKJ6VVJF"
+id: "01HGY8YSJ0QNRR8M26WSB0HXTD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00371731"
 effective: "2023-12-05T12:40:00-06:00"
@@ -22,34 +22,34 @@ losartan: dose changed to 100 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-120544",
+    "visit_id": "V-2023-120534",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-120544",
+    "visit_id": "V-2023-120534",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-120544",
+    "visit_id": "V-2023-120534",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-120544",
+    "visit_id": "V-2023-120534",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-120544",
+    "visit_id": "V-2023-120534",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

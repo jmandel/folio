@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HPFNCXB058NHD044347A2AEN"
+id: "01HPFNCXB0ENHCVB0XK6BV4ERW"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0051895"
 effective: "2024-02-12T10:00:00-06:00"
@@ -12,21 +12,20 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G2 A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>.
-
-<ref id="bp_sys">BP 124/80, HR 67, weight 94.6 kg</ref>. Feels well, no edema.
-
-eGFR 66 today, K 4, UACR 474 mg/g. GFR stable, albuminuria continues to rise (398 → 474).
-
-Return in 6 months with labs.
+- <ref id="bp_sys">BP 124/80, HR 67, weight 94.6 kg at 2024-02-12 10:04</ref>
+- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2025-08-03</ref>
+- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012-11</ref>
+- eGFR 66 (today)
+- K 4 (today)
+- UACR 474 mg/g (today)
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2024-02-12T10:00:00-06:00",
     "PROVIDER_NPI": "1999000066",
@@ -35,7 +34,7 @@ Return in 6 months with labs.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "DX_RANK": 1,
     "ICD10CM": "N18.2",
     "DX_TEXT": "Chronic kidney disease, stage 2 (mild)",
@@ -43,7 +42,7 @@ Return in 6 months with labs.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +50,7 @@ Return in 6 months with labs.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 124,
     "UNIT_CODE": "mmHg",
@@ -60,7 +59,7 @@ Return in 6 months with labs.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -69,7 +68,7 @@ Return in 6 months with labs.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 67,
     "UNIT_CODE": "/min",
@@ -78,7 +77,7 @@ Return in 6 months with labs.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-100968",
+    "VISIT_ID": "NV-106019",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 94.6,
     "UNIT_CODE": "kg",

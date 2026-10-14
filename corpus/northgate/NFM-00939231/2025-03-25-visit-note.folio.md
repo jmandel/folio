@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JQ74M8R0QM5BV2P3NZ1HJTSK"
+id: "01JQ74M8R0M54F1EYB74AW7559"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00939231"
 effective: "2025-03-25T09:00:00-05:00"
@@ -16,47 +16,47 @@ schema:
 ---
 Chronic care visit.
 
-insulin glargine: started 10 units at bedtime today (A1c 7.1)
+insulin glargine: started 10 units at bedtime today (A1c 6.9)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032567",
+    "visit_id": "V-2025-032597",
     "rank": 5,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

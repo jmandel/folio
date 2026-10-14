@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H6EZFWX0HBGHMGNB6YM5TNVC"
+id: "01H6EZFWX0Y7E49CQKSFNYW1Q6"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00528755"
 effective: "2023-07-28T11:40:00-05:00"
@@ -18,26 +18,24 @@ Diabetes follow-up.
 
 <ref id="sick_day">Sick-day rules reviewed: hold the SGLT2 inhibitor, metformin and ARB/ACE inhibitor when unable to eat or drink.</ref>
 
-dulaglutide: started 0.5 mg weekly today (A1c 8.2)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-072879",
+    "visit_id": "V-2023-072833",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-072879",
+    "visit_id": "V-2023-072833",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-072879",
+    "visit_id": "V-2023-072833",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

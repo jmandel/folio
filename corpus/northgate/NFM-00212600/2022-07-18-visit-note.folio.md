@@ -35,8 +35,9 @@ Diabetes follow-up.
     "type": "billing_dx",
     "visit_id": "V-2022-071853",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

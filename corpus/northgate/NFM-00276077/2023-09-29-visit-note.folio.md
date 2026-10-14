@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HBHME460VPV06FJ2A1TX8Q41"
+id: "01HBHME460FGPDKM0EBK4QWVP5"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00276077"
 effective: "2023-09-29T13:15:00-05:00"
@@ -24,37 +24,45 @@ empagliflozin: started 10 mg daily today (A1c above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-092913",
+    "visit_id": "V-2023-092951",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-092913",
+    "visit_id": "V-2023-092951",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-092913",
+    "visit_id": "V-2023-092951",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-092913",
+    "visit_id": "V-2023-092951",
     "rank": 3,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-092913",
+    "visit_id": "V-2023-092951",
     "rank": 4,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_5": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-092951",
+    "rank": 5,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

@@ -182,9 +182,22 @@ class Gen {
       labs.push(l);
       this.labs.push(l);
     }
+    const ldl = labs.find((l) => l.analyte === "ldl");
+    if (ldl) ldl.derivedFrom = labs.filter((l) => ["cholesterol", "hdl", "triglycerides"].includes(l.analyte)).map((l) => l.id);
     return { draw, labs };
   }
-  routineValues(date: string, opts: { k?: boolean; a1c?: boolean; uacr?: boolean; cbc?: boolean; na?: boolean; glu?: boolean } = {}) {
+  /** Lipid panel values; LDL is calculated (Friedewald) from the others, as the lab does. */
+  lipids(date: string) {
+    const r = this.rng.fork(`lipid/${date}`);
+    const statin = this.activeClass(date, ["statin"]).length > 0;
+    const hdl = Math.round(Math.max(28, r.normal(this.sex === "F" ? 54 : 44, 9)));
+    const tg = Math.round(Math.min(380, Math.max(55, r.normal(this.dm ? 170 : 135, 45))));
+    const ldl = Math.round(Math.max(40, r.normal(statin ? 88 : 132, statin ? 20 : 26)));
+    const chol = Math.round(ldl + hdl + tg / 5);
+    return { cholesterol: chol, triglycerides: tg, hdl, ldl: Math.round(chol - hdl - tg / 5) };
+  }
+  lastLipid = "1900-01-01";
+  routineValues(date: string, opts: { k?: boolean; a1c?: boolean; uacr?: boolean; cbc?: boolean; na?: boolean; glu?: boolean; lipid?: boolean } = {}) {
     const v: Partial<Record<LabIn["analyte"], number>> = { creatinine: this.creat(date) };
     if (opts.na) v.sodium = Math.round(this.rng.fork(`na/${date}`).normal(this.activeClass(date, ["thiazide"]).length ? 135 : 139, 2));
     if (opts.k ?? true) v.potassium = this.potassium(date);
@@ -195,6 +208,7 @@ class Gen {
       const r = this.rng.fork(`cbc/${date}`);
       v.wbc = r1(r.normal(7, 1.4)); v.hemoglobin = r1(r.normal(this.sex === "F" ? 12.8 : 14.2, 0.9) - (this.eT < 40 ? 1.2 : 0)); v.platelets = Math.round(r.normal(245, 45));
     }
+    if (opts.lipid) { Object.assign(v, this.lipids(date)); this.lastLipid = date; }
     return v;
   }
 
@@ -387,10 +401,11 @@ export function generatePatient(spec: PatientSpec): Patient {
       const ld = addDays(date, vr.chance(0.6) ? 0 : -vr.int(2, 6));
       const drawAt = at(`${ld}T${hhmm(7, vr.int(15, 59))}`);
       if (ms(drawAt) < ms(start)) {
-        const vals = g.routineValues(ld, { a1c: g.dm, uacr: (g.dm || g.ckd) && vr.chance(0.5), cbc: vr.chance(0.25), na: vr.chance(0.3), glu: !g.dm && vr.chance(0.3), k: g.htn || g.ckd || g.hf || vr.chance(0.5) });
-        const dr = g.drawC(drawAt, "B", e.clinician, vals);
+        const lipid = yrs(g.lastLipid, ld) > 0.9 && vr.chance(g.hld || g.dm ? 0.85 : 0.35);
+        const vals = g.routineValues(ld, { a1c: g.dm, uacr: (g.dm || g.ckd) && vr.chance(0.5), cbc: vr.chance(0.25), na: vr.chance(0.3), glu: !g.dm && vr.chance(0.3), k: g.htn || g.ckd || g.hf || vr.chance(0.5), lipid });
+        const dr = g.drawC(drawAt, "B", e.clinician, vals, lipid ? { fasting: "Y" } : {});
         lastLabs = dr;
-        for (const l of dr.labs) if (["creatinine", "a1c", "potassium", "uacr"].includes(l.analyte)) doc.factIds.push(l.analyte === "creatinine" ? `${l.id}_egfr` : l.id);
+        for (const l of dr.labs) if (["creatinine", "a1c", "potassium", "uacr", "ldl"].includes(l.analyte)) doc.factIds.push(l.analyte === "creatinine" ? `${l.id}_egfr` : l.id);
         if (date < "2022-01-10") for (const l of dr.labs) traps(l.id, "T11");
         // CKD stage recorded on Northgate's problem list when two eGFRs < 60 are 90+ days apart.
         const e0 = g.egfr(ld);
@@ -526,7 +541,7 @@ export function generatePatient(spec: PatientSpec): Patient {
   // Lakeview patients with no Northgate chart: labs ordered by another practice.
   if (inC && !inB) {
     for (let d = weekday(addDays(g.bStart, r.int(0, 60)), r); d < addDays(T, -10); d = weekday(addDays(d, r.int(120, 240)), r)) {
-      g.drawC(at(`${d}T${hhmm(7, r.int(10, 55))}`), "outside", undefined, g.routineValues(d, { a1c: g.dm, uacr: (g.dm || g.ckd) && r.chance(0.5), na: r.chance(0.3), glu: !g.dm, cbc: r.chance(0.2) }));
+      g.drawC(at(`${d}T${hhmm(7, r.int(10, 55))}`), "outside", undefined, g.routineValues(d, { a1c: g.dm, uacr: (g.dm || g.ckd) && r.chance(0.5), na: r.chance(0.3), glu: !g.dm, cbc: r.chance(0.2), lipid: yrs(g.lastLipid, d) > 0.9 && r.chance(0.6) }));
     }
   }
 

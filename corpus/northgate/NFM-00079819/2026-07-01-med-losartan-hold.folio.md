@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KWFSEQYGX2W3AZBYDWS7D35N"
+id: "01KWFNGCZGP8SSEK15CVXDDWG8"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00079819"
-effective: "2026-07-01T16:30:00-05:00"
-recorded: "2026-07-01T16:30:42-05:00"
+effective: "2026-07-01T15:21:00-05:00"
+recorded: "2026-07-01T15:21:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-24205",
+    "med_id": "ML-10142",
     "action": "hold",
     "origin": "northgate",
     "drug": { "name": "losartan potassium 100 MG Oral Tablet", "rxnorm": "979480" },
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 5.6 confirmed on repeat",
     "review_on": "2026-07-15",
-    "visit_id": "V-2026-070191"
+    "visit_id": "V-2026-070155"
   }
 }
 ```

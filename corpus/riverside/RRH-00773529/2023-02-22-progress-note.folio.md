@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GSWVJTM09F0T05RNNC1VF0C6"
+id: "01GSWVJTM0A5E1K554NGCJ3JNW"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00773529"
 effective: "2023-02-22T13:55:00Z"
@@ -16,23 +16,16 @@ schema:
 ---
 ## Progress note
 
-**Interval.** Overnight course was uneventful. She feels much better, is less short of breath and is tolerating liquids. Allergy: lisinopril (cough).
-
-**Exam.** Vitals at 07:35: BP 131/79, HR 92, RR 17, T 98 F, SpO2 98%. Comfortable, breathing easily, mucous membranes moist.
-
-**Results.** <ref id="bmp">The 06:02 panel: sodium 133 (L), potassium 4.4, chloride 102, bicarbonate 21 (L), anion gap 10, urea nitrogen 26 (H), creatinine 1.32 (H), eGFR 45 (L), glucose 123 (H).</ref>
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>: the anion gap has closed, from 24 on arrival to 10. Started <ref id="sc_glargine">insulin glargine 18 units subcutaneously daily at 07:00</ref>; the <ref id="iv_insulin">insulin infusion is being stopped at 09:00</ref> after the glargine overlap.
-2. Medications: metformin, empagliflozin and losartan remain held. Continue amlodipine 5 mg daily.
-3. Kidney function is stable, creatinine 1.32. Recheck tomorrow morning.
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 2/22 06:02 (local time): Sodium 133 mmol/L (L), Potassium 4.4 mmol/L, Chloride 102 mmol/L, Bicarbonate (total CO2) 21 mmol/L (L), Anion gap 10 mmol/L, Urea nitrogen 26 mg/dL (H), Creatinine 1.32 mg/dL (H), eGFR (CKD-EPI 2021) 45 mL/min/1.73m2 (L), Glucose 123 mg/dL (H)</ref>
+- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 2/22 07:00, still running (local times)</ref>
+- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 2/21 15:51, stopped 2/22 09:00 (local times)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6412994",
+    "encounter_id": "RRH-ENC-6123698",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -60,7 +53,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23053-2088",
+    "accession": "L23053-1797",
     "collected": "2023-02-22T12:02:00Z",
     "specimen": "serum",
     "status": "final",
@@ -151,6 +144,14 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
+  },
+  "med_semaglutide": {
+    "type": "home_med",
+    "drug_name": "semaglutide pen",
+    "rxnorm_ingredient": "1991302",
+    "dose_text": "0.5 mg",
+    "sig": "0.5 mg SubQ weekly",
+    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

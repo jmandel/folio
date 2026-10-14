@@ -44,6 +44,15 @@ My Medicines, saved 9 April 2026.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
+  },
+  "med_4": {
+    "type": "my_med",
+    "homelog_med_id": "med_4",
+    "name": "Jardiance",
+    "strength_text": "10 mg",
+    "how_i_take_it": "morning",
+    "status": "taking",
+    "kind": "prescription"
   }
 }
 ```

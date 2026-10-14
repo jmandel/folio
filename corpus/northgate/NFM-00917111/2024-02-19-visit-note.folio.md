@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HQ19MYA09TPD9M9NDJWWM064"
+id: "01HQ19MYA0QC5XJQ25EPNCPB95"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00917111"
 effective: "2024-02-19T09:47:00-06:00"
@@ -22,7 +22,7 @@ metformin: resumed today (eating and drinking normally)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-021926",
+    "visit_id": "V-2024-021912",
     "visit_type": "phone",
     "reason": "Phone: feeling better"
   }

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KAC9JR70V1BSEYZZH9DT9H8J"
+id: "01KAC9JR70YX47D88VKZQAK81C"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484559"
 effective: "2025-11-18T11:10:00-06:00"
@@ -14,29 +14,26 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. BP 120/70, pulse 72, wt 181 lb.
-Labs 11/14: eGFR 50, K 4.5, UACR 14 mg/g, A1c 7.5%.
-Stable, no changes today.
-RTC 3 mo.
+Diabetes follow-up.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-111869",
+    "visit_id": "V-2025-111822",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-111869",
+    "visit_id": "V-2025-111822",
     "rank": 1,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-111869",
+    "visit_id": "V-2025-111822",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

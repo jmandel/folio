@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FW7KJZ30ZAMRFK86NB1G26EX"
+id: "01FW7KJZ30BPY6CMDNYD8NCT06"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00236387"
 effective: "2022-02-18T11:20:00-06:00"
@@ -22,20 +22,20 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-021823",
+    "visit_id": "V-2022-021833",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-021823",
+    "visit_id": "V-2022-021833",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-021823",
+    "visit_id": "V-2022-021833",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

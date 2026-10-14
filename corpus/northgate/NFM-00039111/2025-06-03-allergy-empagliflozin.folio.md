@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JWV2XB5GQ5ZFVGG9BF3P2M1R"
+id: "01JWV2XB5GTS8H7CFVB311A8ET"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00039111"
 effective: "2025-06-03T09:25:00-05:00"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2703",
+    "allergy_id": "AL-3574",
     "action": "add",
     "substance": { "name": "empagliflozin", "rxnorm": "1545653" },
     "reaction_type": "adverse_reaction",
     "reactions": ["Diabetic ketoacidosis"],
     "severity": "high",
     "onset": { "date": "2025-05-22", "precision": "day" },
-    "visit_id": "V-2025-060358"
+    "visit_id": "V-2025-060332"
   }
 }
 ```

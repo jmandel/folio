@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JBYE3BXGEW56NA5E079J8W93"
+id: "01JBYE3BXGYRM21JVQKPYZ3DZJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00978964"
 effective: "2024-11-05T09:11:00-06:00"
@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">Start dapagliflozin 10 mg daily today for CKD + DM, cardiorenal benefit.</ref>
+<ref id="med_1">start dapagliflozin: CKD + DM, cardiorenal benefit.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-46835",
+    "med_id": "ML-38147",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JG08AFR0ZYZQ5EFZ8Y83S4RP"
+id: "01JG08AFR0MEXBM35CBJRFHXDB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00759365"
 effective: "2024-12-25T15:50:00-06:00"
@@ -14,29 +14,26 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Chronic care visit. BP 127/75, pulse 69, wt 197 lb.
-Labs 12/22: eGFR 59, K 4.1, UACR 438 mg/g, A1c 7.1%.
-BP at goal. Kidney numbers reviewed with pt.
-RTC 5 mo.
+Chronic care visit.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-122578",
+    "visit_id": "V-2024-122558",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-122578",
+    "visit_id": "V-2024-122558",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-122578",
+    "visit_id": "V-2024-122558",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

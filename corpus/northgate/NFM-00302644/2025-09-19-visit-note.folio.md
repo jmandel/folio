@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K5HEGQV0044V0HDC4PN1ZF2C"
+id: "01K5HEGQV0X2KR2X1AW7YD6DNT"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00302644"
 effective: "2025-09-19T08:15:00-05:00"
@@ -22,23 +22,23 @@ lisinopril: dose changed to 20 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-091984",
+    "visit_id": "V-2025-091991",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-091984",
+    "visit_id": "V-2025-091991",
     "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-091984",
+    "visit_id": "V-2025-091991",
     "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

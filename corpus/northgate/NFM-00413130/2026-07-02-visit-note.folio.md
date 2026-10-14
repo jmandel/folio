@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KWJ81AR0QGB2KQW0MVNX4QTV"
+id: "01KWJ81AR09866SKV52SACPYNV"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00413130"
 effective: "2026-07-02T12:00:00-05:00"
@@ -20,23 +20,23 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-070277",
+    "visit_id": "V-2026-070219",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-070277",
+    "visit_id": "V-2026-070219",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-070277",
+    "visit_id": "V-2026-070219",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   }
 }
 ```

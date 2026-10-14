@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K7JDSKH01NR0N88D9Q14N9KT"
+id: "01K7JDSKH0WXBB519QCNHXBQWG"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00474892"
 effective: "2025-10-14T13:00:00-05:00"
@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. Feels well.
-BP 123/70, pulse 80, wt 142 lb.
-Labs today: eGFR 48, K 4.2, UACR 15 mg/g, A1c 7.5%.
-Reviewed results with pt.
-RTC 3 mo.
+Diabetes follow-up.
 
 ```json payload
 {

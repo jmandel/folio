@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GMY537H0ZB1TKXD0YRR859WQ"
+id: "01GMY537H0QM062PN8VNQC70TC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00176898"
 effective: "2022-12-22T14:40:00-06:00"
@@ -26,27 +26,27 @@ lisinopril intolerance: dry cough
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-122256",
+    "visit_id": "V-2022-122291",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-122256",
+    "visit_id": "V-2022-122291",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-122256",
+    "visit_id": "V-2022-122291",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2022-122256",
+    "visit_id": "V-2022-122291",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

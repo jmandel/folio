@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KTVYRNX06N2CS1G3J80RGS7T"
+id: "01KTVYRNX01HZ0X4RR88JW8TKT"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00681589"
 effective: "2026-06-11T10:50:00-05:00"
@@ -20,27 +20,27 @@ BP follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-061135",
+    "visit_id": "V-2026-061121",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-061135",
+    "visit_id": "V-2026-061121",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-061135",
+    "visit_id": "V-2026-061121",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-061135",
+    "visit_id": "V-2026-061121",
     "rank": 3,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

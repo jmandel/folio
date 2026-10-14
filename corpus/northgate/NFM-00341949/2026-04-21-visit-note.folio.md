@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KPRZWD20ZV760N1EDFDX3FJC"
+id: "01KPRZWD20DD57SYD532X9QYFC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00341949"
 effective: "2026-04-21T10:15:00-05:00"
@@ -20,41 +20,41 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2026-042181",
+    "visit_id": "V-2026-042167",
     "rank": 5,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K0STSKS07RNQH5JZ5JG1ZMYS"
+id: "01K0STSKS0ZSQY70E6ZRR6W28Y"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00303697"
 effective: "2025-07-22T09:20:00-05:00"
@@ -26,20 +26,20 @@ lisinopril intolerance: dry cough
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-072296",
+    "visit_id": "V-2025-072247",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-072296",
+    "visit_id": "V-2025-072247",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-072296",
+    "visit_id": "V-2025-072247",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

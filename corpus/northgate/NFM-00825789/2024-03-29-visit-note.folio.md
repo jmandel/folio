@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HT66Q0T0S2CAXV14A4G6HFQS"
+id: "01HT66Q0T0VCME5QGAW1MZ2QXD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00825789"
 effective: "2024-03-29T11:40:00-05:00"
@@ -22,27 +22,27 @@ dapagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-032916",
+    "visit_id": "V-2024-032955",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-032916",
+    "visit_id": "V-2024-032955",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-032916",
+    "visit_id": "V-2024-032955",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-032916",
+    "visit_id": "V-2024-032955",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

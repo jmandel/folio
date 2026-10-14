@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JK6QJCZ00ZT136B6VKQMYJ2Z"
+id: "01JK6QJCZ063NMWQNP1YKGY13J"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2025-02-03T12:00:00-06:00"
@@ -20,20 +20,20 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-020354",
+    "visit_id": "V-2025-020398",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-020354",
+    "visit_id": "V-2025-020398",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-020354",
+    "visit_id": "V-2025-020398",
     "rank": 2,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

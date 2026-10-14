@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J1R9AVW0PPC194T3D2WM2PJM"
+id: "01J1R9AVW0ECF3FRZQS9AXKWFA"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00356614"
 effective: "2024-07-01T14:40:00-05:00"
@@ -20,13 +20,13 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-070151",
+    "visit_id": "V-2024-070164",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-070151",
+    "visit_id": "V-2024-070164",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

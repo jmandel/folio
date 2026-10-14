@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JJQ5EGSGPDKHTQH3WHZR23Y5"
+id: "01JJQ5EGSGZVARQD5FF06S411S"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00082632"
 effective: "2025-01-28T13:15:00-06:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-26345",
+    "med_id": "ML-42758",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "amlodipine 5 MG Oral Tablet", "rxnorm": "197361" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "replacing lisinopril (angioedema)",
-    "visit_id": "V-2025-012816"
+    "visit_id": "V-2025-012839"
   }
 }
 ```

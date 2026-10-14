@@ -26,6 +26,10 @@ const NFM: Record<string, { code: string; name: string; key: string }> = {
   "LK-WBC": { code: "WBC", name: "White blood cell count", key: "wbc" },
   "LK-HGB": { code: "HGB", name: "Hemoglobin", key: "hgb" },
   "LK-PLT": { code: "PLT", name: "Platelet count", key: "plt" },
+  "LK-CHOL": { code: "CHOL", name: "Cholesterol, total", key: "chol" },
+  "LK-TRIG": { code: "TRIG", name: "Triglycerides", key: "trig" },
+  "LK-HDL": { code: "HDL", name: "HDL cholesterol", key: "hdl" },
+  "LK-LDLC": { code: "LDL-CALC", name: "LDL cholesterol, calculated", key: "ldl" },
 };
 
 const FREQ_SIG: Record<string, string> = { QD: "daily", BID: "twice daily", TID: "three times daily", QHS: "at bedtime", PRN: "as needed", QW: "once weekly" };

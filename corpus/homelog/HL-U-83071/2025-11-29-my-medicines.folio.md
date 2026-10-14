@@ -32,8 +32,8 @@ My Medicines, saved 29 November 2025.
     "type": "my_med",
     "homelog_med_id": "med_2",
     "name": "Glucophage",
-    "picked_from_search": { "rxnorm": "861004", "display": "metformin hydrochloride 1000 MG Oral Tablet" },
-    "strength_text": "1000 mg",
+    "picked_from_search": { "rxnorm": "861007", "display": "metformin hydrochloride 500 MG Oral Tablet" },
+    "strength_text": "500 mg",
     "how_i_take_it": "morning and supper",
     "status": "taking",
     "kind": "prescription"

@@ -30,13 +30,6 @@ New patient, establish care.
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2020-042724",
-    "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

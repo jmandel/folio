@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JNEPGA1GPNTNHP1VNSQEP078"
+id: "01JNEPGA1GKQ8YYW8DFKTZ3CYE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00727449"
 effective: "2025-03-03T13:07:00-06:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-21170",
+    "med_id": "ML-24848",
     "action": "stop",
     "origin": "northgate",
     "drug": { "name": "empagliflozin 10 MG Oral Tablet", "rxnorm": "1545658" },
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "stop_reason": "adverse_reaction",
     "reason_text": "euglycemic DKA",
-    "visit_id": "V-2025-030372"
+    "visit_id": "V-2025-030354"
   }
 }
 ```

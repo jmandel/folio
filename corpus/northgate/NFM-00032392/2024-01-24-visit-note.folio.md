@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HMYS1PT00YHH2KKQFP3SY7AB"
+id: "01HMYS1PT0DE59ZKDW64MF391C"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00032392"
 effective: "2024-01-24T13:20:00-06:00"
@@ -22,13 +22,13 @@ Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-012434",
+    "visit_id": "V-2024-012462",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-012434",
+    "visit_id": "V-2024-012462",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

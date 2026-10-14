@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K0S9CDPGYQDRPERA0GTY7PCJ"
+id: "01K0S9CDPG5RHXRK518JGY9C6Y"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00303697"
 effective: "2025-07-22T09:42:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-17710",
+    "med_id": "ML-23460",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979485" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "ACE inhibitor cough",
-    "visit_id": "V-2025-072296"
+    "visit_id": "V-2025-072247"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FDBBKGX0Y3PX6J7E9YJJX08R"
+id: "01FDBBKGX0G5C387PE382P95X3"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00575599"
 effective: "2021-08-17T15:32:00-05:00"
@@ -22,7 +22,7 @@ losartan: resumed today (eating and drinking normally)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-081785",
+    "visit_id": "V-2021-081768",
     "visit_type": "phone",
     "reason": "Phone: feeling better"
   }

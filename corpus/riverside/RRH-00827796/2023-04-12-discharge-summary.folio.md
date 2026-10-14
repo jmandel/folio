@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GXW376300BRTXVX5G83W4Z0A"
+id: "01GXW37630HYEJYZ8WXWG05528"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2023-04-09T08:49:00Z"
@@ -17,30 +17,17 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnoses.** <ref id="dx_aki">Acute kidney injury, resolved.</ref> Hyperkalemia, resolved.
-
-**Hospital course.** The patient was admitted with weakness after four days of diarrhea and was found to have creatinine 2.89 and potassium 6.8. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> Calcium gluconate was given in the ED, and normal saline was run from 4/8 until 4/10. Creatinine improved steadily and diarrhea settled.
-
-**Condition at discharge.** Vitals at 12:45: BP 123/74, HR 103, RR 16, T 99.1 F, SpO2 95%. The patient is eating and drinking.
-
-**Discharge labs (4/12, 06:21).** Sodium 133 (L), potassium 5.6 (H), chloride 100, bicarbonate 22, anion gap 11, urea nitrogen 29 (H), creatinine 1.63 (H), eGFR 47 (L), glucose 107 (H).
-
-**Allergies:** lisinopril (cough).
-
-**Discharge medications**
-
-- <ref id="med_metformin">Metformin 1000 mg by mouth twice daily with meals: continue.</ref>
-- Semaglutide 0.5 mg subcutaneously weekly: continue.
-- <ref id="med_losartan">Losartan 50 mg daily: held; the PCP will decide on restarting after a repeat BMP.</ref>
-- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: held; the PCP will decide after a repeat BMP.</ref>
-
-**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision about restarting the held blood pressure medicines.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
+- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6590130",
+    "encounter_id": "RRH-ENC-6281782",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -76,7 +63,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23102-9037",
+    "accession": "L23102-4163",
     "collected": "2023-04-12T11:21:00Z",
     "specimen": "serum",
     "status": "final",
@@ -146,14 +133,6 @@ schema:
     "rxnorm_ingredient": "6809",
     "dose_text": "1000 mg",
     "sig": "1 tab PO BID with meals",
-    "status": "continue"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
     "status": "continue"
   },
   "med_losartan": {

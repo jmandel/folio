@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HWRG7FJ08XDZDKDGDY49HN0F"
+id: "01HWRG7FJ0880R1ZRSQ05HVG07"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0009187"
 effective: "2024-04-30T11:00:00-05:00"
@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
 - <ref id="bp_sys">BP 123/80, HR 80, weight 97.2 kg at 2024-04-30 11:04</ref>
 - <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2023-08-16</ref>
@@ -25,7 +25,7 @@ schema:
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2024-04-30T11:00:00-05:00",
     "PROVIDER_NPI": "1999000066",
@@ -34,7 +34,7 @@ schema:
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "DX_RANK": 1,
     "ICD10CM": "N18.2",
     "DX_TEXT": "Chronic kidney disease, stage 2 (mild)",
@@ -42,7 +42,7 @@ schema:
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -50,7 +50,7 @@ schema:
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 123,
     "UNIT_CODE": "mmHg",
@@ -59,7 +59,7 @@ schema:
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ schema:
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 80,
     "UNIT_CODE": "/min",
@@ -77,7 +77,7 @@ schema:
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104762",
+    "VISIT_ID": "NV-107542",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 97.2,
     "UNIT_CODE": "kg",

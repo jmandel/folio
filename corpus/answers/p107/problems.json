@@ -9,7 +9,7 @@
         "icd10": "I10",
         "snomed": "59621000",
         "onset": { "value": "2008", "precision": "year" },
-        "sources": ["B", "C"],
+        "sources": ["B"],
         "basis": ["c_1"]
       },
       {
@@ -17,7 +17,7 @@
         "icd10": "E11.9",
         "snomed": "44054006",
         "onset": { "value": "2016", "precision": "year" },
-        "sources": ["B", "C"],
+        "sources": ["B"],
         "basis": ["c_2"]
       },
       {
@@ -38,14 +38,14 @@
       },
       {
         "condition": "Chronic kidney disease",
-        "icd10": "N18.4",
+        "icd10": "N18.32",
         "snomed": "700379002",
         "onset": { "value": "2019-09-17", "precision": "day" },
-        "stage": "4 A3",
-        "stage_recorded_by": "C",
-        "stage_recorded_on": "2026-06-16",
+        "stage": "3b",
+        "stage_recorded_by": "B",
+        "stage_recorded_on": "2019-09-17",
         "sources": ["B", "C"],
-        "basis": ["c_27"]
+        "basis": ["c_31"]
       }
     ],
     "resolved": []

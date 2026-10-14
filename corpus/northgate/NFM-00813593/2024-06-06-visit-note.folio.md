@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HZQ7Y870KETS011KAGFTRQBS"
+id: "01HZQ7Y870C42RAKR0JSTT8A7Y"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00813593"
 effective: "2024-06-06T09:30:00-05:00"
@@ -16,18 +16,27 @@ schema:
 ---
 Diabetes follow-up.
 
+metformin: dose changed to 1000 mg twice daily today (A1c 8.2)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-060646",
+    "visit_id": "V-2024-060645",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-060646",
+    "visit_id": "V-2024-060645",
     "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-060645",
+    "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   }

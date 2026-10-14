@@ -66,6 +66,16 @@ My Medicines, saved 8 January 2024.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
+  },
+  "med_6": {
+    "type": "my_med",
+    "homelog_med_id": "med_6",
+    "name": "Ozempic",
+    "picked_from_search": { "rxnorm": "1991302", "display": "semaglutide" },
+    "strength_text": "1 mg pen",
+    "how_i_take_it": "once a week, Sunday",
+    "status": "taking",
+    "kind": "prescription"
   }
 }
 ```

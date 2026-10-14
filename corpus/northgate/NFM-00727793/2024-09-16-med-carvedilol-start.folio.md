@@ -26,7 +26,7 @@ schema:
     "dose": { "value": 12.5, "unit": "mg" },
     "frequency": "BID",
     "sig": "Take 1 tablet by mouth twice daily",
-    "visit_id": "V-2024-091633"
+    "visit_id": "V-2024-091632"
   }
 }
 ```

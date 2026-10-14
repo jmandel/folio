@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01DMEF8QJ0Z2P49H0J44EMR10T"
+id: "01DMEF8QJ0BYFDZ9EZFE9HTEFP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00759365"
 effective: "2019-09-10T13:40:00-05:00"
@@ -14,29 +14,28 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Annual exam. BP 148/88, repeat 145/85. Pulse 84, wt 193 lb.
-Labs 9/7: eGFR 69, K 4.3, A1c 6.6%.
-BP above goal. Lisinopril dose changed to 40 mg daily today (BP above goal).
-RTC 3 mo for BP recheck.
+Annual exam.
+
+lisinopril: dose changed to 40 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2019-091084",
+    "visit_id": "V-2019-091029",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2019-091084",
+    "visit_id": "V-2019-091029",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2019-091084",
+    "visit_id": "V-2019-091029",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

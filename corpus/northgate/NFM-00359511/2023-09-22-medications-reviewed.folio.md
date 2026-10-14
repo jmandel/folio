@@ -20,7 +20,7 @@ schema:
   "review": {
     "type": "list_reviewed",
     "list": "medications",
-    "lines_on_list": ["ML-18122", "ML-35713", "ML-23439", "ML-31769"],
+    "lines_on_list": ["ML-18122", "ML-35713", "ML-23439", "ML-38094"],
     "visit_id": "V-2023-092272"
   }
 }

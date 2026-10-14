@@ -60,16 +60,6 @@ My Medicines, saved 5 January 2026.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Dulaglutide",
-    "picked_from_search": { "rxnorm": "1551291", "display": "dulaglutide" },
-    "strength_text": "1.5 mg pen",
-    "how_i_take_it": "once a week, Sunday",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
     "name": "Chlorthalidone",
     "picked_from_search": { "rxnorm": "197499", "display": "chlorthalidone 25 MG Oral Tablet" },
     "strength_text": "25 mg",

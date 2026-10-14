@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JZNJFFQ0ETPXHH9Y16MDF0YB"
+id: "01JZNJFFQ0Q5R5J22R77HQ6QSR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00453430"
 effective: "2025-07-08T08:00:00-05:00"
@@ -22,30 +22,23 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-070833",
+    "visit_id": "V-2025-070868",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070833",
+    "visit_id": "V-2025-070868",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070833",
+    "visit_id": "V-2025-070868",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2025-070833",
-    "rank": 3,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

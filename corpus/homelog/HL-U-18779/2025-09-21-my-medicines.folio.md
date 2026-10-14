@@ -51,6 +51,16 @@ My Medicines, saved 21 September 2025.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
+    "name": "Insulin glargine",
+    "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
+    "strength_text": "100 units/mL pen",
+    "how_i_take_it": "10 units at bedtime",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_5": {
+    "type": "my_med",
+    "homelog_med_id": "med_5",
     "name": "Chlorthalidone",
     "picked_from_search": { "rxnorm": "197499", "display": "chlorthalidone 25 MG Oral Tablet" },
     "strength_text": "25 mg",
@@ -58,9 +68,9 @@ My Medicines, saved 21 September 2025.
     "status": "taking",
     "kind": "prescription"
   },
-  "med_5": {
+  "med_6": {
     "type": "my_med",
-    "homelog_med_id": "med_5",
+    "homelog_med_id": "med_6",
     "name": "Naproxen",
     "picked_from_search": { "rxnorm": "849574", "display": "naproxen 220 MG Oral Tablet" },
     "strength_text": "220 mg",

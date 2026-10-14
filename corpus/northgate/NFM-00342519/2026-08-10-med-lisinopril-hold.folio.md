@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KZPMS0EGEMZFSXZJVC68K79G"
+id: "01KZPMFVFGEMZFSXZJVC68K79G"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00342519"
-effective: "2026-08-10T15:10:00-05:00"
-recorded: "2026-08-10T15:10:42-05:00"
+effective: "2026-08-10T15:05:00-05:00"
+recorded: "2026-08-10T15:05:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:mbrennan"
   name: "Moira Brennan, DO"
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 5.8 confirmed on repeat",
     "review_on": "2026-08-24",
-    "visit_id": "V-2026-081097"
+    "visit_id": "V-2026-081055"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HAZ9SKFG3GKFVF6SBCJYRQJC"
+id: "01HAZ9SKFGNHD74SEAQK421WE7"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00359511"
 effective: "2023-09-22T15:37:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-31769",
+    "med_id": "ML-38094",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "empagliflozin 10 MG Oral Tablet", "rxnorm": "1545658" },

@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KPP30KD0XBDXFHPE5YYJVA70"
+id: "01KPPFKE10F65C96913KD1XM6S"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0067326"
-effective: "2026-04-20T09:00:00-05:00"
-recorded: "2026-04-20T13:39:00-05:00"
+effective: "2026-04-20T10:20:00-05:00"
+recorded: "2026-04-20T17:19:00-05:00"
 author:
   id: "npi:1999000042"
   name: "Helen Marsh, MD"
@@ -12,9 +12,9 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-- <ref id="bp_sys">BP 141/80, HR 76, weight 96.9 kg at 2026-04-20 09:04</ref>
+- <ref id="bp_sys">BP 141/80, HR 79, weight 97.3 kg at 2026-04-20 10:24</ref>
 - <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2020-01-09</ref>
 - <ref id="dx_dm">Type 2 diabetes mellitus, onset 2013</ref>
 - <ref id="dx_htn">Essential hypertension, onset 2016</ref>
@@ -26,16 +26,16 @@ schema:
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "VISIT_TYPE": "FU",
-    "VISIT_AT": "2026-04-20T09:00:00-05:00",
+    "VISIT_AT": "2026-04-20T10:20:00-05:00",
     "PROVIDER_NPI": "1999000042",
     "CKD_G": "G3b",
     "CKD_A": "A2"
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -43,7 +43,7 @@ schema:
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +51,7 @@ schema:
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -59,39 +59,39 @@ schema:
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 141,
     "UNIT_CODE": "mmHg",
     "READING_NO": 1,
-    "TAKEN_AT": "2026-04-20T09:04:00-05:00"
+    "TAKEN_AT": "2026-04-20T10:24:00-05:00"
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
     "READING_NO": 1,
-    "TAKEN_AT": "2026-04-20T09:04:00-05:00"
+    "TAKEN_AT": "2026-04-20T10:24:00-05:00"
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "VITAL_CODE": "HR",
-    "VALUE_NUM": 76,
+    "VALUE_NUM": 79,
     "UNIT_CODE": "/min",
     "READING_NO": 1,
-    "TAKEN_AT": "2026-04-20T09:04:00-05:00"
+    "TAKEN_AT": "2026-04-20T10:24:00-05:00"
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-104682",
+    "VISIT_ID": "NV-116915",
     "VITAL_CODE": "WT",
-    "VALUE_NUM": 96.9,
+    "VALUE_NUM": 97.3,
     "UNIT_CODE": "kg",
     "READING_NO": 1,
-    "TAKEN_AT": "2026-04-20T09:02:00-05:00"
+    "TAKEN_AT": "2026-04-20T10:22:00-05:00"
   }
 }
 ```

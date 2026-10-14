@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HXW6GTK0EMB54PAY16JVKJN5"
+id: "01HXW6GTK0635YS82QKS9JAEPQ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00168882"
 effective: "2024-05-14T11:30:00-05:00"
@@ -20,23 +20,30 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-051498",
+    "visit_id": "V-2024-051461",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-051498",
+    "visit_id": "V-2024-051461",
     "rank": 1,
-    "icd10cm": "N18.31",
-    "display": "Chronic kidney disease, stage 3a"
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-051498",
+    "visit_id": "V-2024-051461",
     "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-051461",
+    "rank": 3,
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
   }
 }
 ```

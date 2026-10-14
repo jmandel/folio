@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EFZ2JD1009V2GAVVJTV267BE"
+id: "01EFZ2JD10J894AEN9Z2DG301T"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00939437"
 effective: "2020-08-17T09:40:00-05:00"
@@ -16,7 +16,7 @@ schema:
 ---
 Annual exam.
 
-empagliflozin: started 10 mg daily today (A1c 9)
+empagliflozin: started 10 mg daily today (A1c 8.1)
 
 chlorthalidone: started 12.5 mg daily today (BP above goal)
 
@@ -24,41 +24,41 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2020-081793",
+    "visit_id": "V-2020-081736",
     "rank": 5,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KP4KEQ40APR0YCXSAG8W3587"
+id: "01KP4KEQ40GRZA2KGPB73X92BY"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00850400"
 effective: "2026-04-13T14:20:00-05:00"
@@ -16,17 +16,19 @@ schema:
 ---
 Chronic care visit.
 
+semaglutide: started 0.5 mg weekly today (A1c 8.4)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-041381",
+    "visit_id": "V-2026-041342",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-041381",
+    "visit_id": "V-2026-041342",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

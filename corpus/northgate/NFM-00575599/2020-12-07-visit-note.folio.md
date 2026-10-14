@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01ERZN35C0VRQYY7H4PZKXX0ZZ"
+id: "01ERZN35C0W891Z4SGCNQBWQYJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00575599"
 effective: "2020-12-07T12:40:00-06:00"
@@ -20,20 +20,20 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-120731",
+    "visit_id": "V-2020-120748",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-120731",
+    "visit_id": "V-2020-120748",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-120731",
+    "visit_id": "V-2020-120748",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

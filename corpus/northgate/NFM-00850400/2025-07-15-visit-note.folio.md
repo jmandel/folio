@@ -16,6 +16,8 @@ schema:
 ---
 Diabetes follow-up.
 
+insulin glargine: started 10 units at bedtime today (A1c 8.8)
+
 ```json payload
 {
   "visit": {

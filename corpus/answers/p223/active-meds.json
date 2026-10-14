@@ -27,7 +27,7 @@
       "status": "active",
       "since": "2023-12-25",
       "sources": ["B"],
-      "basis": ["m_17"]
+      "basis": ["m_23"]
     },
     {
       "medication": "glipizide",
@@ -56,6 +56,19 @@
       "basis": ["m_5"]
     },
     {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2024-11-13",
+      "sources": ["B"],
+      "basis": ["m_45"]
+    },
+    {
       "medication": "lisinopril",
       "rxnorm_ingredient": "29046",
       "product": "lisinopril 10 MG Oral Tablet",
@@ -80,18 +93,6 @@
       "since": "2022",
       "sources": ["B"],
       "basis": ["m_6"]
-    },
-    {
-      "medication": "semaglutide",
-      "rxnorm_ingredient": "1991302",
-      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
-      "dose": { "value": 0.5, "unit": "mg" },
-      "dose_text": "0.5 mg",
-      "frequency": "QW",
-      "status": "active",
-      "since": "2025-09-16",
-      "sources": ["B"],
-      "basis": ["m_50"]
     }
   ]
 }

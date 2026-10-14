@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JYKPTZ90QWW5X7NJ11XV2RG5"
+id: "01JYKPTZ9086PHVSV520HTBDT3"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00388366"
 effective: "2025-06-25T12:39:00Z"
@@ -16,21 +16,16 @@ schema:
 ---
 ## Progress note
 
-**Interval.** Overnight course was uneventful. The patient feels much better and is hungry. Vitals at 07:19: BP 131/79, HR 105, RR 22, temperature 98.9 F, SpO2 96%.
-
-**Results.** <ref id="bmp">The 06:05 panel: sodium 131, potassium 4.1, chloride 100, bicarbonate 24, anion gap 7, urea nitrogen 16, creatinine 1.25, eGFR 66, glucose 127.</ref> The gap has closed and creatinine is better than on admission.
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, now with a closed gap and normal bicarbonate. <ref id="sc_glargine">Insulin glargine 17 units subcutaneously daily was started at 07:00</ref> to overlap with the drip, and the <ref id="iv_insulin">insulin infusion will be stopped at 09:00</ref> per protocol.
-2. Dapagliflozin and metformin remain on hold. Lisinopril and hydrochlorothiazide remain held. Home dulaglutide and glargine are listed to continue.
-3. Sodium is 131 and will be rechecked. Advance diet as tolerated.
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 6/25 06:05 (local time): Sodium 131 mmol/L (L), Potassium 4.1 mmol/L, Chloride 100 mmol/L, Bicarbonate (total CO2) 24 mmol/L, Anion gap 7 mmol/L, Urea nitrogen 16 mg/dL, Creatinine 1.25 mg/dL, eGFR (CKD-EPI 2021) 66 mL/min/1.73m2, Glucose 127 mg/dL (H)</ref>
+- <ref id="sc_glargine">inpatient order insulin glargine SubQ 17 units daily, started 6/25 07:00, still running (local times)</ref>
+- <ref id="iv_insulin">inpatient order insulin regular (human) IV infusion IV per DKA protocol, 0.1 units/kg/h, started 6/24 17:05, stopped 6/25 09:00 (local times)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6402248",
+    "encounter_id": "RRH-ENC-6437094",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -58,7 +53,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25176-3142",
+    "accession": "L25176-9023",
     "collected": "2025-06-25T11:05:00Z",
     "specimen": "serum",
     "status": "final",
@@ -138,22 +133,6 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
-  },
-  "med_dulaglutide": {
-    "type": "home_med",
-    "drug_name": "dulaglutide pen",
-    "rxnorm_ingredient": "1551291",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
-  },
-  "med_glargine": {
-    "type": "home_med",
-    "drug_name": "insulin glargine 100 units/mL pen",
-    "rxnorm_ingredient": "274783",
-    "dose_text": "10 units",
-    "sig": "10 units SubQ nightly",
-    "status": "continue"
   },
   "med_lisinopril": {
     "type": "home_med",

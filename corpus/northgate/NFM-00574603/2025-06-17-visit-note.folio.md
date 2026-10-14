@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JXZAPEA01SJW88BEW5WTX864"
+id: "01JXZAPEA0RC6DF1CSRZNC82MJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00574603"
 effective: "2025-06-17T08:15:00-05:00"
@@ -16,15 +16,20 @@ schema:
 ---
 Chronic care visit.
 
-dapagliflozin: started 10 mg daily today (A1c 8.3)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-061741",
+    "visit_id": "V-2025-061776",
     "visit_type": "office",
     "reason": "Chronic care visit"
+  },
+  "dx_1": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-061776",
+    "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

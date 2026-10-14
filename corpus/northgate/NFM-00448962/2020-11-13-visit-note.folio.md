@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EQ1AG8E098PAS5P1XQ53P6E9"
+id: "01EQ1AG8E0JMACFVD50P5P1E1Q"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00448962"
 effective: "2020-11-13T09:40:00-06:00"
@@ -20,30 +20,30 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-111349",
+    "visit_id": "V-2020-111352",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-111349",
+    "visit_id": "V-2020-111352",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-111349",
+    "visit_id": "V-2020-111352",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2020-111349",
+    "visit_id": "V-2020-111352",
     "rank": 3,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "I50.22",
+    "display": "Chronic systolic (congestive) heart failure"
   }
 }
 ```

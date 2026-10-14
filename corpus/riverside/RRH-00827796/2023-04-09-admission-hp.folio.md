@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GXJWW7V0WJPDYXDSW7PN9T51"
+id: "01GXJWW7V0FYBZGPAXTP73C1W8"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2023-04-09T09:35:00Z"
@@ -16,30 +16,18 @@ schema:
 ---
 ## Admission history and physical
 
-**Reason for admission:** acute kidney injury with hyperkalemia.
-
-**History of present illness.** The patient was admitted overnight from the ED after four days of diarrhea with poor oral intake, followed by weakness and lightheadedness. Through those days the patient kept taking the usual blood pressure pills. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
-
-**Allergies:** lisinopril (cough).
-
-**Exam.** At 04:25: BP 108/65, HR 85, RR 21, T 98.1 F, SpO2 97%. Mucous membranes are dry. Lungs are clear and the abdomen is soft.
-
-**Results.** The 4/8 23:17 panel showed sodium 131, potassium 6.8, bicarbonate 22, urea nitrogen 52, creatinine 2.89, eGFR 24 and glucose 112. Normal saline was started at 23:45 and continues at 125 mL/h.
-
-**Assessment and plan**
-
-1. <ref id="dx_aki">Acute kidney injury</ref>, as above. Continue IV saline and recheck the creatinine in the morning.
-2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.8 on arrival, treated in the ED. Repeat potassium with the morning labs.
-3. <ref id="med_losartan">Hold losartan until creatinine is back to baseline.</ref>
-4. <ref id="med_hydrochlorothiazide">Hold hydrochlorothiazide for volume depletion.</ref>
-5. <ref id="med_metformin">Hold metformin during the acute illness.</ref>
-6. Semaglutide weekly is continued.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "Hold for volume depletion"</ref>
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
+- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
+- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
+- <ref id="precipitant">AKI attributed to several days of over-the-counter naproxen for back pain on top of an ARB/diuretic, with poor fluid intake.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6590130",
+    "encounter_id": "RRH-ENC-6281782",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -73,7 +61,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23098-3693",
+    "accession": "L23098-5908",
     "collected": "2023-04-09T04:17:00Z",
     "specimen": "serum",
     "status": "final",
@@ -153,14 +141,6 @@ schema:
     "status": "held",
     "restart_advice": "resume_when_able",
     "instructions": "Hold during acute illness"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

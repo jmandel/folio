@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H2Y2RKA0CS905DMTJ9G63PXR"
+id: "01H2Y2RKA0RT5JY3XEC8M1HNFE"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00034785"
 effective: "2023-06-14T12:30:00-05:00"
@@ -24,13 +24,13 @@ chlorthalidone: stopped today (AKI with hyperkalemia)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-061458",
+    "visit_id": "V-2023-061463",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-061458",
+    "visit_id": "V-2023-061463",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"

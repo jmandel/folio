@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G16T5310YXJWN9SKG1DSTJBM"
+id: "01G16T5310G9R04G4F3X3Z08SF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00655539"
 effective: "2022-04-21T12:45:00-05:00"
@@ -20,17 +20,16 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-042197",
+    "visit_id": "V-2022-042191",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-042197",
+    "visit_id": "V-2022-042191",
     "rank": 1,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JDTBB7P0Q4B39YWVZY2B8VM8"
+id: "01JDTBB7P0NJEQ37BK2AZ88019"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00594395"
 effective: "2024-11-28T20:15:00Z"
@@ -25,7 +25,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6465390",
+    "encounter_id": "RRH-ENC-6654902",
     "document_kind": "consult",
     "class": "inpatient",
     "service": "Endocrinology",
@@ -42,7 +42,7 @@ schema:
   "bhb_1": {
     "type": "result",
     "test": { "local_code": "BHB", "name": "Beta-hydroxybutyrate" },
-    "accession": "L24332-1564",
+    "accession": "L24332-6875",
     "collected": "2024-11-27T22:04:00Z",
     "specimen": "serum",
     "status": "final",

@@ -14,7 +14,7 @@
       "status": "active",
       "since": "2021-10-05",
       "sources": ["B"],
-      "basis": ["m_36"]
+      "basis": ["m_44"]
     },
     {
       "medication": "atorvastatin",
@@ -40,20 +40,21 @@
       "status": "active",
       "since": "2021-02-15",
       "sources": ["B"],
-      "basis": ["m_28"]
+      "basis": ["m_36"]
     },
     {
-      "medication": "dapagliflozin",
-      "rxnorm_ingredient": "1488564",
-      "product": "dapagliflozin 10 MG Oral Tablet",
-      "rxnorm_product": "1488574",
+      "medication": "finerenone",
+      "rxnorm_ingredient": "2562811",
+      "product": "finerenone 10 MG Oral Tablet",
+      "rxnorm_product": "2562816",
       "dose": { "value": 10, "unit": "mg" },
       "dose_text": "10 mg",
       "frequency": "QD",
-      "status": "active",
-      "since": "2026-01-13",
-      "sources": ["B"],
-      "basis": ["m_84"]
+      "status": "held",
+      "since": "2022-01-27",
+      "intend_resume": true,
+      "sources": ["B", "C"],
+      "basis": ["m_111"]
     },
     {
       "medication": "losartan",
@@ -77,7 +78,7 @@
       "dose_text": "500 mg",
       "frequency": "BID",
       "status": "active",
-      "since": "2020-07-07",
+      "since": "2023-03-17",
       "sources": ["B"],
       "basis": ["m_5"]
     }

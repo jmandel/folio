@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J5S2D8B04F7YDYYVA274MB75"
+id: "01J5S2D8B0DBQXKHY8J4X55AJ7"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00701971"
 effective: "2024-08-20T12:20:00-05:00"
@@ -22,23 +22,16 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-082086",
+    "visit_id": "V-2024-082025",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-082086",
+    "visit_id": "V-2024-082025",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2024-082086",
-    "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

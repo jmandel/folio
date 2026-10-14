@@ -23,7 +23,7 @@ My Medicines, saved 18 May 2026.
   "med_1": {
     "type": "my_med",
     "homelog_med_id": "med_1",
-    "name": "Losartan",
+    "name": "Cozaar",
     "picked_from_search": { "rxnorm": "979480", "display": "losartan potassium 100 MG Oral Tablet" },
     "strength_text": "100 mg",
     "how_i_take_it": "morning",
@@ -33,7 +33,7 @@ My Medicines, saved 18 May 2026.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Glucophage",
+    "name": "Metformin",
     "picked_from_search": { "rxnorm": "861004", "display": "metformin hydrochloride 1000 MG Oral Tablet" },
     "strength_text": "1000 mg",
     "how_i_take_it": "morning and supper",
@@ -64,6 +64,7 @@ My Medicines, saved 18 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_5",
     "name": "Lasix",
+    "picked_from_search": { "rxnorm": "313988", "display": "furosemide 40 MG Oral Tablet" },
     "strength_text": "40 mg",
     "how_i_take_it": "morning",
     "status": "taking",
@@ -73,7 +74,6 @@ My Medicines, saved 18 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_6",
     "name": "Aldactone",
-    "picked_from_search": { "rxnorm": "313096", "display": "spironolactone 25 MG Oral Tablet" },
     "strength_text": "25 mg",
     "how_i_take_it": "morning",
     "status": "taking",
@@ -83,18 +83,9 @@ My Medicines, saved 18 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_7",
     "name": "Farxiga",
+    "picked_from_search": { "rxnorm": "1488574", "display": "dapagliflozin 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_8": {
-    "type": "my_med",
-    "homelog_med_id": "med_8",
-    "name": "Insulin glargine",
-    "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
-    "strength_text": "100 units/mL pen",
-    "how_i_take_it": "10 units at bedtime",
     "status": "taking",
     "kind": "prescription"
   }

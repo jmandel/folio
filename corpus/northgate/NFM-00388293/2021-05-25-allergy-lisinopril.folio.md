@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F6JMAR6G1P9KM9B2XQNZX96N"
+id: "01F6JMAR6GVD6T5H3AV9MQWVAW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00388293"
 effective: "2021-05-25T15:44:00-05:00"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-4853",
+    "allergy_id": "AL-3397",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "intolerance",
     "reactions": ["Cough"],
     "severity": "low",
     "onset": { "date": "2021-03-01", "precision": "month" },
-    "visit_id": "V-2021-052596"
+    "visit_id": "V-2021-052577"
   }
 }
 ```

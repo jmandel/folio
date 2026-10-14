@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G8PY23B09AWZ2NY8A1S6RJFD"
+id: "01G8PY23B0VGBFV0YTV9MG8QQB"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00110301"
 effective: "2022-07-20T22:32:00Z"
@@ -23,7 +23,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6467890",
+    "encounter_id": "RRH-ENC-6941198",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -52,7 +52,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L22204-0660",
+    "accession": "L22204-0823",
     "collected": "2022-07-23T11:09:00Z",
     "specimen": "serum",
     "status": "final",

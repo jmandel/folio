@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EP4QXYYGAHM91993SBS0J8QM"
+id: "01EP4QXYYGHZ5TEK53DJYNK424"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00356614"
 effective: "2020-11-02T09:06:00-06:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-23192",
+    "med_id": "ML-41483",
     "action": "change",
     "origin": "northgate",
     "drug": { "name": "losartan potassium 100 MG Oral Tablet", "rxnorm": "979480" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2020-110234"
+    "visit_id": "V-2020-110288"
   }
 }
 ```

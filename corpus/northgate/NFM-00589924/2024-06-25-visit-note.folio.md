@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J18WNFP0M5S6K8SWERAAGKR9"
+id: "01J18WNFP04Y7671CJJTRQ9HJP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00589924"
 effective: "2024-06-25T13:30:00-05:00"
@@ -37,8 +37,9 @@ lisinopril: dose changed to 40 mg daily today (BP above goal)
     "type": "billing_dx",
     "visit_id": "V-2024-062512",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

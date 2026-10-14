@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H39YDMV0N68GQHCDQ0K5RHHD"
+id: "01H39YDMV0C5AAM3E4HFDRKRFB"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00305402"
 effective: "2023-06-19T12:48:00Z"
@@ -23,7 +23,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6518452",
+    "encounter_id": "RRH-ENC-6441424",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -50,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23170-1458",
+    "accession": "L23170-5527",
     "collected": "2023-06-19T11:06:00Z",
     "specimen": "serum",
     "status": "final",
@@ -119,14 +119,6 @@ schema:
     "rxnorm_ingredient": "6809",
     "dose_text": "1000 mg",
     "sig": "1 tab PO BID with meals",
-    "status": "held"
-  },
-  "med_dapagliflozin": {
-    "type": "home_med",
-    "drug_name": "dapagliflozin 10 mg tablet",
-    "rxnorm_ingredient": "1488564",
-    "dose_text": "10 mg",
-    "sig": "1 tab PO daily",
     "status": "held"
   },
   "med_losartan": {

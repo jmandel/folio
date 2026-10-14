@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J59NM6Z0X3GJ168HEGVMWZSZ"
+id: "01J59NM6Z0QQGAYVHN91QFG1XC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00808670"
 effective: "2024-08-14T15:45:00-05:00"
@@ -22,27 +22,27 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-081455",
+    "visit_id": "V-2024-081498",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-081455",
+    "visit_id": "V-2024-081498",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-081455",
+    "visit_id": "V-2024-081498",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-081455",
+    "visit_id": "V-2024-081498",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

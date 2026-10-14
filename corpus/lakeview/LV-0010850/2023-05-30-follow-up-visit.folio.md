@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H1Q41JP04A8M9EZX3NF05RGX"
+id: "01H1Q41JP07NJPRXW9P8NCRHNE"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0010850"
 effective: "2023-05-30T11:00:00-05:00"
@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
 - <ref id="bp_sys">BP 131/80, HR 62, weight 80.2 kg at 2023-05-30 11:04</ref>
 - <ref id="dx_ckd">Chronic kidney disease (stage 3b A2), onset 2019-11-03</ref>
@@ -25,7 +25,7 @@ schema:
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2023-05-30T11:00:00-05:00",
     "PROVIDER_NPI": "1999000042",
@@ -34,7 +34,7 @@ schema:
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "DX_RANK": 1,
     "ICD10CM": "N18.32",
     "DX_TEXT": "Chronic kidney disease, stage 3b",
@@ -42,7 +42,7 @@ schema:
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "DX_RANK": 2,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -50,7 +50,7 @@ schema:
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 131,
     "UNIT_CODE": "mmHg",
@@ -59,7 +59,7 @@ schema:
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -68,7 +68,7 @@ schema:
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 62,
     "UNIT_CODE": "/min",
@@ -77,7 +77,7 @@ schema:
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-113518",
+    "VISIT_ID": "NV-110979",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 80.2,
     "UNIT_CODE": "kg",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J0MBHN20B29E0YWZPY2A526P"
+id: "01J0MBHN204EVHJ9EA52YQ4595"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00351993"
 effective: "2024-06-17T15:45:00-05:00"
@@ -20,28 +20,35 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-061737",
+    "visit_id": "V-2024-061794",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061737",
+    "visit_id": "V-2024-061794",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061737",
+    "visit_id": "V-2024-061794",
     "rank": 2,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-061737",
+    "visit_id": "V-2024-061794",
     "rank": 3,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-061794",
+    "rank": 4,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   }

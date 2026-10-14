@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KNQ9G2ERMTR0JB8RDP0P9T0K"
+id: "01KNQ9G2ER0YP8CEYKJBAA7FXW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00033047"
 effective: "2026-04-08T14:33:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-14469",
+    "med_id": "ML-49728",
     "action": "start",
     "origin": "outside",
     "drug": { "name": "finerenone 10 mg tablet", "outside_code": { "system": "lakeview-drug", "code": "LVD-04471" } },

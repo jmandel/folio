@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JEMX0J90V7DY9R2K141N50YR"
+id: "01JEMX0J909P53ZNHXG3A4CNKZ"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00453627"
 effective: "2024-12-09T02:41:00Z"
@@ -16,26 +16,20 @@ schema:
 ---
 ## Admission history and physical
 
-**Reason for admission:** acute kidney injury with high potassium after several days of diarrhea.
-
-**History.** The patient was seen in the ED today after four days of watery diarrhea with poor intake and lightheadedness on standing. Throughout this time they kept taking their usual blood pressure medicines. Home medications include carvedilol 12.5 mg twice daily and atorvastatin 40 mg nightly, in addition to those addressed below. Allergies: NKDA.
-
-**Exam.** Vitals at 20:31: BP 124/74, HR 100, RR 24, T 98.7 F, SpO2 96%. Mildly tachycardic, breathing a little fast but comfortable on room air.
-
-**Results.** The 14:20 panel showed sodium 130, potassium 6.4, chloride 104, bicarbonate 16, anion gap 10, urea nitrogen 48, creatinine 1.67, eGFR 43 and glucose 210. Normal saline 1000 mL bolus was started at 14:45, followed by 125 mL/h, and is still running.
-
-**Assessment and plan**
-
-1. <ref id="dx_aki">Acute kidney injury</ref>. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> Continue IV saline and recheck a basic metabolic panel in the morning.
-2. <ref id="dx_hyperk">Hyperkalemia</ref>, potassium 6.4 on arrival, in the setting of the kidney injury and potassium-sparing therapy. Recheck with the morning panel.
-3. Medications: <ref id="med_hydrochlorothiazide">hold hydrochlorothiazide</ref> and <ref id="med_furosemide">hold furosemide</ref> for volume depletion. <ref id="med_losartan">Hold losartan</ref> and <ref id="med_spironolactone">hold spironolactone</ref> until creatinine is back to baseline. <ref id="med_metformin">Hold metformin</ref> during the acute illness.
-4. Continue carvedilol and atorvastatin.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "Hold for volume depletion"</ref>
+- <ref id="med_furosemide">home med furosemide 40 mg tablet, 40 mg 1 tab PO daily: held (prescriber_decides) "Hold for volume depletion"</ref>
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
+- <ref id="dx_hyperk">diagnosis "Hyperkalemia", status active</ref>
+- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
+- <ref id="med_spironolactone">home med spironolactone 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold until creatinine back to baseline"</ref>
+- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: held (resume_when_able) "Hold during acute illness"</ref>
+- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6217776",
+    "encounter_id": "RRH-ENC-6987721",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -69,7 +63,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24343-9471",
+    "accession": "L24343-4270",
     "collected": "2024-12-08T20:20:00Z",
     "specimen": "serum",
     "status": "final",

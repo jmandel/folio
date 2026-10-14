@@ -20,11 +20,11 @@
    },
    "northgate": {
     "patients": 293,
-    "items": 14039
+    "items": 13964
    },
    "lakeview": {
     "patients": 272,
-    "items": 3505
+    "items": 3482
    },
    "homelog": {
     "patients": 107,
@@ -44,22 +44,22 @@
    "riverside+homelog": 1,
    "lakeview+homelog": 1
   },
-  "items": 25470,
+  "items": 25372,
   "narrative": {
    "fixture": 21,
    "app": 151,
-   "prose": 292,
-   "template": 5022,
-   "none": 19984
+   "prose": 87,
+   "template": 5196,
+   "none": 19917
   },
-  "prose_requests": 5314,
-  "prose_accepted": 292
+  "prose_requests": 5283,
+  "prose_accepted": 87
  },
  "traps": {
   "T1": {
    "name": "held vs discontinued",
-   "assigned": 83,
-   "rendered": 77,
+   "assigned": 82,
+   "rendered": 76,
    "patients": [
     "hero",
     "s01",
@@ -88,7 +88,6 @@
     "p098",
     "p103",
     "p104",
-    "p107",
     "p110",
     "p114",
     "p116",
@@ -187,8 +186,8 @@
   },
   "T3": {
    "name": "superseded/corrected vs confirmed result",
-   "assigned": 60,
-   "rendered": 60,
+   "assigned": 61,
+   "rendered": 61,
    "patients": [
     "hero",
     "s01",
@@ -196,6 +195,7 @@
     "p004",
     "p010",
     "p020",
+    "p028",
     "p038",
     "p047",
     "p048",
@@ -323,7 +323,7 @@
   "T5": {
    "name": "stale problem list",
    "assigned": 27,
-   "rendered": 66,
+   "rendered": 65,
    "patients": [
     "hero",
     "s01",
@@ -332,12 +332,12 @@
     "p038",
     "p069",
     "p095",
-    "p107",
     "p110",
     "p120",
     "p122",
     "p140",
     "p141",
+    "p167",
     "p168",
     "p175",
     "p195",
@@ -391,16 +391,16 @@
   },
   "T7": {
    "name": "platelets x10^3",
-   "assigned": 226,
-   "rendered": 225,
+   "assigned": 230,
+   "rendered": 227,
    "patients": [
     "hero",
     "s01",
     "s02",
     "s03",
     "p001",
-    "p002",
     "p003",
+    "p004",
     "p005",
     "p006",
     "p008",
@@ -408,8 +408,8 @@
     "p010",
     "p011",
     "p012",
+    "p013",
     "p014",
-    "p015",
     "p016",
     "p017",
     "p020",
@@ -420,35 +420,36 @@
     "p025",
     "p027",
     "p028",
-    "p030",
+    "p029",
     "p032",
     "p033",
     "p034",
     "p035",
     "p036",
+    "p037",
     "p038",
     "p039",
     "p042",
     "p043",
+    "p044",
     "p045",
     "p047",
     "p048",
     "p049",
     "p050",
-    "p053",
-    "p056",
     "p057",
     "p058",
     "p059",
     "p060",
     "p061",
     "p062",
-    "p063",
     "p064",
-    "p065",
+    "p066",
+    "p067",
     "p068",
     "p069",
     "p070",
+    "p071",
     "p072",
     "p073",
     "p074",
@@ -458,7 +459,6 @@
     "p080",
     "p081",
     "p082",
-    "p083",
     "p084",
     "p086",
     "p087",
@@ -474,9 +474,9 @@
     "p098",
     "p099",
     "p101",
-    "p102",
-    "p103",
     "p104",
+    "p105",
+    "p106",
     "p107",
     "p108",
     "p109",
@@ -484,20 +484,21 @@
     "p112",
     "p113",
     "p115",
-    "p118",
+    "p116",
     "p119",
     "p120",
-    "p121",
     "p122",
     "p124",
     "p125",
     "p126",
     "p127",
+    "p128",
     "p129",
     "p131",
     "p132",
     "p134",
     "p135",
+    "p136",
     "p137",
     "p138",
     "p139",
@@ -505,7 +506,6 @@
     "p141",
     "p142",
     "p143",
-    "p144",
     "p145",
     "p146",
     "p147",
@@ -515,27 +515,30 @@
     "p151",
     "p152",
     "p153",
+    "p154",
     "p157",
     "p158",
     "p159",
     "p160",
-    "p161",
     "p162",
+    "p163",
     "p164",
     "p165",
     "p167",
     "p168",
     "p170",
+    "p171",
+    "p172",
     "p174",
     "p175",
     "p177",
     "p178",
+    "p179",
     "p180",
     "p183",
     "p184",
     "p186",
     "p187",
-    "p188",
     "p189",
     "p191",
     "p192",
@@ -552,20 +555,20 @@
     "p203",
     "p204",
     "p205",
+    "p206",
     "p207",
     "p209",
     "p210",
-    "p211",
     "p212",
-    "p213",
     "p214",
     "p215",
     "p217",
+    "p219",
     "p220",
     "p221",
     "p222",
     "p223",
-    "p225",
+    "p224",
     "p226",
     "p227",
     "p230",
@@ -573,13 +576,11 @@
     "p234",
     "p236",
     "p237",
-    "p238",
     "p239",
     "p240",
     "p241",
     "p242",
     "p243",
-    "p244",
     "p246",
     "p247",
     "p248",
@@ -604,11 +605,14 @@
     "p269",
     "p270",
     "p272",
+    "p273",
     "p274",
     "p275",
     "p276",
+    "p277",
     "p278",
     "p279",
+    "p280",
     "p282",
     "p284",
     "p285",
@@ -1237,7 +1241,7 @@
   },
   "T13": {
    "name": "prose-only facts",
-   "assigned": 96,
+   "assigned": 94,
    "rendered": 27,
    "patients": [
     "hero",
@@ -1268,7 +1272,6 @@
     "p081",
     "p084",
     "p085",
-    "p088",
     "p095",
     "p096",
     "p101",
@@ -1308,7 +1311,6 @@
     "p193",
     "p199",
     "p200",
-    "p202",
     "p207",
     "p208",
     "p210",
@@ -2312,7 +2314,7 @@
   }
  },
  "prose_only_patients": {
-  "count": 96,
+  "count": 94,
   "patients": [
    {
     "patient": "hero",
@@ -2330,20 +2332,20 @@
    {
     "patient": "s01",
     "facts": [
-     "nf_45 (teaching; B)",
-     "nf_173 (decision; C)"
+     "nf_54 (teaching; B)",
+     "nf_200 (decision; C)"
     ]
    },
    {
     "patient": "s02",
     "facts": [
-     "nf_107 (precipitant; AP)"
+     "nf_128 (precipitant; AP)"
     ]
    },
    {
     "patient": "s03",
     "facts": [
-     "nf_106 (precipitant; A)"
+     "nf_122 (precipitant; A)"
     ]
    },
    {
@@ -2355,36 +2357,36 @@
    {
     "patient": "p004",
     "facts": [
-     "nf_97 (precipitant; A)",
-     "nf_118 (decision; A)",
-     "nf_122 (teaching; B)"
+     "nf_116 (precipitant; A)",
+     "nf_137 (decision; A)",
+     "nf_141 (teaching; B)"
     ]
    },
    {
     "patient": "p011",
     "facts": [
-     "nf_212 (patient-report; P)"
+     "nf_225 (patient-report; P)"
     ]
    },
    {
     "patient": "p012",
     "facts": [
-     "nf_60 (patient-report; B)"
+     "nf_68 (patient-report; B)"
     ]
    },
    {
     "patient": "p013",
     "facts": [
-     "nf_30 (patient-report; B)"
+     "nf_40 (patient-report; B)"
     ]
    },
    {
     "patient": "p016",
     "facts": [
-     "nf_120 (precipitant; AP)",
-     "nf_162 (decision; A)",
-     "nf_183 (precipitant; A)",
-     "nf_370 (patient-report; P)"
+     "nf_135 (precipitant; AP)",
+     "nf_177 (decision; A)",
+     "nf_198 (precipitant; A)",
+     "nf_385 (patient-report; P)"
     ]
    },
    {
@@ -2396,166 +2398,160 @@
    {
     "patient": "p027",
     "facts": [
-     "nf_48 (patient-report; B)",
-     "nf_81 (decision; C)"
+     "nf_55 (patient-report; B)",
+     "nf_98 (decision; C)"
     ]
    },
    {
     "patient": "p033",
     "facts": [
-     "nf_107 (patient-report; P)"
+     "nf_129 (patient-report; P)"
     ]
    },
    {
     "patient": "p040",
     "facts": [
-     "nf_141 (patient-report; P)"
+     "nf_148 (patient-report; P)"
     ]
    },
    {
     "patient": "p045",
     "facts": [
-     "nf_128 (decision; C)"
+     "nf_143 (decision; C)"
     ]
    },
    {
     "patient": "p047",
     "facts": [
-     "nf_75 (teaching; B)",
-     "nf_139 (teaching; B)"
+     "nf_84 (teaching; B)",
+     "nf_150 (teaching; B)"
     ]
    },
    {
     "patient": "p049",
     "facts": [
-     "nf_57 (precipitant; A)"
+     "nf_62 (precipitant; A)"
     ]
    },
    {
     "patient": "p051",
     "facts": [
-     "nf_104 (patient-report; P)"
+     "nf_118 (patient-report; P)"
     ]
    },
    {
     "patient": "p057",
     "facts": [
-     "nf_84 (precipitant; A)",
-     "nf_128 (teaching; B)"
+     "nf_104 (precipitant; A)",
+     "nf_148 (teaching; B)"
     ]
    },
    {
     "patient": "p059",
     "facts": [
-     "nf_105 (decision; A)",
-     "nf_123 (decision; C)",
-     "nf_124 (decision; C)"
+     "nf_116 (decision; A)",
+     "nf_134 (decision; C)",
+     "nf_135 (decision; C)"
     ]
    },
    {
     "patient": "p062",
     "facts": [
-     "nf_46 (teaching; B)"
+     "nf_57 (teaching; B)"
     ]
    },
    {
     "patient": "p065",
     "facts": [
-     "nf_126 (patient-report; P)"
+     "nf_160 (patient-report; P)"
     ]
    },
    {
     "patient": "p067",
     "facts": [
-     "nf_58 (patient-report; P)"
+     "nf_70 (patient-report; P)"
     ]
    },
    {
     "patient": "p072",
     "facts": [
-     "nf_43 (decision; C)"
+     "nf_52 (decision; C)"
     ]
    },
    {
     "patient": "p076",
     "facts": [
-     "nf_44 (teaching; B)",
-     "nf_52 (patient-report; B)"
+     "nf_53 (teaching; B)",
+     "nf_64 (patient-report; B)"
     ]
    },
    {
     "patient": "p081",
     "facts": [
-     "nf_66 (decision; C)"
+     "nf_84 (decision; C)"
     ]
    },
    {
     "patient": "p084",
     "facts": [
-     "nf_103 (decision; C)"
+     "nf_123 (decision; C)"
     ]
    },
    {
     "patient": "p085",
     "facts": [
-     "nf_23 (teaching; B)"
-    ]
-   },
-   {
-    "patient": "p088",
-    "facts": [
-     "nf_158 (decision; C)"
+     "nf_26 (teaching; B)"
     ]
    },
    {
     "patient": "p095",
     "facts": [
-     "nf_174 (decision; C)"
+     "nf_199 (decision; C)"
     ]
    },
    {
     "patient": "p096",
     "facts": [
-     "nf_125 (patient-report; P)"
+     "nf_141 (patient-report; P)"
     ]
    },
    {
     "patient": "p101",
     "facts": [
-     "nf_80 (patient-report; B)"
+     "nf_99 (patient-report; B)"
     ]
    },
    {
     "patient": "p103",
     "facts": [
-     "nf_77 (precipitant; AP)",
-     "nf_119 (decision; A)"
+     "nf_86 (precipitant; AP)",
+     "nf_128 (decision; A)"
     ]
    },
    {
     "patient": "p104",
     "facts": [
-     "nf_54 (teaching; B)",
-     "nf_318 (patient-report; P)"
+     "nf_66 (teaching; B)",
+     "nf_337 (patient-report; P)"
     ]
    },
    {
     "patient": "p112",
     "facts": [
-     "nf_144 (patient-report; P)"
+     "nf_169 (patient-report; P)"
     ]
    },
    {
     "patient": "p114",
     "facts": [
-     "nf_88 (decision; A)",
-     "nf_92 (teaching; B)"
+     "nf_96 (decision; A)",
+     "nf_100 (teaching; B)"
     ]
    },
    {
     "patient": "p116",
     "facts": [
-     "nf_50 (precipitant; A)"
+     "nf_58 (precipitant; A)"
     ]
    },
    {
@@ -2567,103 +2563,103 @@
    {
     "patient": "p121",
     "facts": [
-     "nf_37 (teaching; B)"
+     "nf_44 (teaching; B)"
     ]
    },
    {
     "patient": "p128",
     "facts": [
-     "nf_65 (precipitant; A)"
+     "nf_80 (precipitant; A)"
     ]
    },
    {
     "patient": "p134",
     "facts": [
-     "nf_129 (patient-report; P)"
+     "nf_147 (patient-report; P)"
     ]
    },
    {
     "patient": "p135",
     "facts": [
-     "nf_143 (decision; C)"
+     "nf_155 (decision; C)"
     ]
    },
    {
     "patient": "p138",
     "facts": [
-     "nf_63 (decision; C)"
+     "nf_72 (decision; C)"
     ]
    },
    {
     "patient": "p140",
     "facts": [
-     "nf_126 (decision; C)"
+     "nf_142 (decision; C)"
     ]
    },
    {
     "patient": "p144",
     "facts": [
-     "nf_46 (decision; C)"
+     "nf_51 (decision; C)"
     ]
    },
    {
     "patient": "p145",
     "facts": [
-     "nf_99 (precipitant; A)"
+     "nf_119 (precipitant; A)"
     ]
    },
    {
     "patient": "p148",
     "facts": [
-     "nf_56 (patient-report; B)"
+     "nf_67 (patient-report; B)"
     ]
    },
    {
     "patient": "p149",
     "facts": [
-     "nf_43 (patient-report; B)"
+     "nf_52 (patient-report; B)"
     ]
    },
    {
     "patient": "p151",
     "facts": [
-     "nf_327 (patient-report; P)"
+     "nf_338 (patient-report; P)"
     ]
    },
    {
     "patient": "p156",
     "facts": [
-     "nf_33 (decision; C)"
+     "nf_41 (decision; C)"
     ]
    },
    {
     "patient": "p160",
     "facts": [
-     "nf_33 (teaching; B)"
+     "nf_35 (teaching; B)"
     ]
    },
    {
     "patient": "p163",
     "facts": [
-     "nf_41 (precipitant; A)"
+     "nf_51 (precipitant; A)"
     ]
    },
    {
     "patient": "p164",
     "facts": [
-     "nf_72 (teaching; B)"
+     "nf_92 (teaching; B)"
     ]
    },
    {
     "patient": "p165",
     "facts": [
-     "nf_59 (teaching; B)"
+     "nf_71 (teaching; B)"
     ]
    },
    {
     "patient": "p167",
     "facts": [
-     "nf_133 (decision; C)"
+     "nf_157 (decision; C)"
     ]
    },
    {
@@ -2682,31 +2678,31 @@
    {
     "patient": "p174",
     "facts": [
-     "nf_48 (teaching; B)"
+     "nf_63 (teaching; B)"
     ]
    },
    {
     "patient": "p175",
     "facts": [
-     "nf_139 (decision; C)"
+     "nf_157 (decision; C)"
     ]
    },
    {
     "patient": "p177",
     "facts": [
-     "nf_38 (patient-report; B)"
+     "nf_49 (patient-report; B)"
     ]
    },
    {
     "patient": "p178",
     "facts": [
-     "nf_42 (precipitant; A)"
+     "nf_51 (precipitant; A)"
     ]
    },
    {
     "patient": "p179",
     "facts": [
-     "nf_94 (patient-report; P)"
+     "nf_106 (patient-report; P)"
     ]
    },
    {
@@ -2718,19 +2714,19 @@
    {
     "patient": "p183",
     "facts": [
-     "nf_123 (patient-report; P)"
+     "nf_133 (patient-report; P)"
     ]
    },
    {
     "patient": "p192",
     "facts": [
-     "nf_149 (decision; C)"
+     "nf_174 (decision; C)"
     ]
    },
    {
     "patient": "p193",
     "facts": [
-     "nf_53 (patient-report; B)"
+     "nf_65 (patient-report; B)"
     ]
    },
    {
@@ -2742,19 +2738,13 @@
    {
     "patient": "p200",
     "facts": [
-     "nf_137 (teaching; B)"
-    ]
-   },
-   {
-    "patient": "p202",
-    "facts": [
-     "nf_105 (decision; C)"
+     "nf_159 (teaching; B)"
     ]
    },
    {
     "patient": "p207",
     "facts": [
-     "nf_64 (patient-report; P)"
+     "nf_75 (patient-report; P)"
     ]
    },
    {
@@ -2766,47 +2756,47 @@
    {
     "patient": "p210",
     "facts": [
-     "nf_46 (patient-report; B)"
+     "nf_55 (patient-report; B)"
     ]
    },
    {
     "patient": "p212",
     "facts": [
-     "nf_158 (decision; C)"
+     "nf_179 (decision; C)"
     ]
    },
    {
     "patient": "p215",
     "facts": [
-     "nf_129 (teaching; B)"
+     "nf_146 (teaching; B)"
     ]
    },
    {
     "patient": "p217",
     "facts": [
-     "nf_51 (teaching; B)",
-     "nf_142 (decision; C)"
+     "nf_56 (teaching; B)",
+     "nf_163 (decision; C)"
     ]
    },
    {
     "patient": "p219",
     "facts": [
-     "nf_80 (decision; C)"
+     "nf_101 (decision; C)"
     ]
    },
    {
     "patient": "p224",
     "facts": [
-     "nf_104 (precipitant; AP)",
-     "nf_136 (decision; A)",
-     "nf_140 (teaching; B)",
-     "nf_464 (patient-report; P)"
+     "nf_128 (precipitant; AP)",
+     "nf_160 (decision; A)",
+     "nf_164 (teaching; B)",
+     "nf_488 (patient-report; P)"
     ]
    },
    {
     "patient": "p233",
     "facts": [
-     "nf_175 (decision; C)"
+     "nf_195 (decision; C)"
     ]
    },
    {
@@ -2818,98 +2808,98 @@
    {
     "patient": "p237",
     "facts": [
-     "nf_120 (decision; C)"
+     "nf_130 (decision; C)"
     ]
    },
    {
     "patient": "p239",
     "facts": [
-     "nf_28 (patient-report; B)"
+     "nf_38 (patient-report; B)"
     ]
    },
    {
     "patient": "p240",
     "facts": [
-     "nf_97 (patient-report; P)"
+     "nf_112 (patient-report; P)"
     ]
    },
    {
     "patient": "p241",
     "facts": [
-     "nf_159 (decision; C)"
+     "nf_181 (decision; C)"
     ]
    },
    {
     "patient": "p248",
     "facts": [
-     "nf_86 (patient-report; P)"
+     "nf_103 (patient-report; P)"
     ]
    },
    {
     "patient": "p250",
     "facts": [
-     "nf_86 (precipitant; A)"
+     "nf_95 (precipitant; A)"
     ]
    },
    {
     "patient": "p251",
     "facts": [
-     "nf_221 (patient-report; P)"
+     "nf_306 (patient-report; P)"
     ]
    },
    {
     "patient": "p253",
     "facts": [
-     "nf_27 (patient-report; B)"
+     "nf_30 (patient-report; B)"
     ]
    },
    {
     "patient": "p257",
     "facts": [
-     "nf_108 (decision; C)"
+     "nf_124 (decision; C)"
     ]
    },
    {
     "patient": "p258",
     "facts": [
-     "nf_141 (decision; C)"
+     "nf_165 (decision; C)"
     ]
    },
    {
     "patient": "p260",
     "facts": [
-     "nf_106 (precipitant; A)",
-     "nf_127 (decision; A)"
+     "nf_127 (precipitant; A)",
+     "nf_148 (decision; A)"
     ]
    },
    {
     "patient": "p270",
     "facts": [
-     "nf_102 (decision; C)"
+     "nf_116 (decision; C)"
     ]
    },
    {
     "patient": "p276",
     "facts": [
-     "nf_129 (decision; C)"
+     "nf_149 (decision; C)"
     ]
    },
    {
     "patient": "p278",
     "facts": [
-     "nf_90 (precipitant; A)"
+     "nf_100 (precipitant; A)"
     ]
    },
    {
     "patient": "p279",
     "facts": [
-     "nf_139 (decision; C)"
+     "nf_158 (decision; C)"
     ]
    },
    {
     "patient": "p289",
     "facts": [
-     "nf_32 (patient-report; B)"
+     "nf_37 (patient-report; B)"
     ]
    },
    {
@@ -2922,7 +2912,7 @@
  },
  "cohorts": {
   "1-ckd-progression-on-sglt2i": {
-   "members": 16,
+   "members": 15,
    "patients": [
     "p012",
     "p095",
@@ -2930,7 +2920,6 @@
     "p140",
     "p168",
     "p175",
-    "p185",
     "p192",
     "p205",
     "p215",
@@ -2963,6 +2952,7 @@
    "patients": [
     "hero",
     "p016",
+    "p028",
     "p038",
     "p048",
     "p049",
@@ -2972,7 +2962,6 @@
     "p085",
     "p091",
     "p103",
-    "p107",
     "p110",
     "p136",
     "p139",
@@ -3005,14 +2994,15 @@
    ]
   },
   "4-uncontrolled-diabetes-insulin-ckd": {
-   "members": 16,
+   "members": 19,
    "patients": [
     "hero",
     "p017",
     "p032",
+    "p045",
     "p053",
+    "p057",
     "p069",
-    "p095",
     "p150",
     "p153",
     "p167",
@@ -3022,7 +3012,9 @@
     "p233",
     "p237",
     "p257",
-    "p270"
+    "p258",
+    "p270",
+    "p276"
    ]
   },
   "5-masked-hypertension": {

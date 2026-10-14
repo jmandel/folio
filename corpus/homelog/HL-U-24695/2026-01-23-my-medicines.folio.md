@@ -52,6 +52,16 @@ My Medicines, saved 23 January 2026.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
+    "name": "Jardiance",
+    "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
+    "strength_text": "10 mg",
+    "how_i_take_it": "morning",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_5": {
+    "type": "my_med",
+    "homelog_med_id": "med_5",
     "name": "Chlorthalidone",
     "picked_from_search": { "rxnorm": "197499", "display": "chlorthalidone 25 MG Oral Tablet" },
     "strength_text": "25 mg",

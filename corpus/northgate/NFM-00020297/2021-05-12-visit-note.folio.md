@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F5GX85P0TBM440RDJE6NCTAE"
+id: "01F5GX85P03JV4F7T69CKWJCT3"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00020297"
 effective: "2021-05-12T08:40:00-05:00"
@@ -20,28 +20,35 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-051296",
+    "visit_id": "V-2021-051271",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-051296",
+    "visit_id": "V-2021-051271",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-051296",
+    "visit_id": "V-2021-051271",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2021-051296",
+    "visit_id": "V-2021-051271",
     "rank": 3,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2021-051271",
+    "rank": 4,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",
     "restricted": "BH"

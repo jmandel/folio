@@ -33,7 +33,7 @@ My Medicines, saved 20 October 2024.
   "med_2": {
     "type": "my_med",
     "homelog_med_id": "med_2",
-    "name": "Amlodipine",
+    "name": "Norvasc",
     "picked_from_search": { "rxnorm": "197361", "display": "amlodipine 5 MG Oral Tablet" },
     "strength_text": "5 mg",
     "how_i_take_it": "morning",
@@ -44,7 +44,6 @@ My Medicines, saved 20 October 2024.
     "type": "my_med",
     "homelog_med_id": "med_3",
     "name": "Glucophage",
-    "picked_from_search": { "rxnorm": "861004", "display": "metformin hydrochloride 1000 MG Oral Tablet" },
     "strength_text": "1000 mg",
     "how_i_take_it": "morning and supper",
     "status": "taking",
@@ -53,7 +52,8 @@ My Medicines, saved 20 October 2024.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Glucotrol",
+    "name": "Glipizide",
+    "picked_from_search": { "rxnorm": "310490", "display": "glipizide 5 MG Oral Tablet" },
     "strength_text": "5 mg",
     "how_i_take_it": "morning",
     "status": "taking",
@@ -62,7 +62,7 @@ My Medicines, saved 20 October 2024.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Rosuvastatin",
+    "name": "Crestor",
     "picked_from_search": { "rxnorm": "859751", "display": "rosuvastatin 20 MG Oral Tablet" },
     "strength_text": "20 mg",
     "how_i_take_it": "bedtime",
@@ -72,9 +72,19 @@ My Medicines, saved 20 October 2024.
   "med_6": {
     "type": "my_med",
     "homelog_med_id": "med_6",
-    "name": "Synthroid",
+    "name": "Levothyroxine",
     "picked_from_search": { "rxnorm": "966222", "display": "levothyroxine sodium 0.075 MG Oral Tablet" },
     "strength_text": "75 mg",
+    "how_i_take_it": "morning",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_7": {
+    "type": "my_med",
+    "homelog_med_id": "med_7",
+    "name": "Dapagliflozin",
+    "picked_from_search": { "rxnorm": "1488574", "display": "dapagliflozin 10 MG Oral Tablet" },
+    "strength_text": "10 mg",
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"

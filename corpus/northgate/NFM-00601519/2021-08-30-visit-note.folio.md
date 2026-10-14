@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FECHG7Q06QCFSPZJXWJTKVJQ"
+id: "01FECHG7Q0S9NQAH6EXDB40NX6"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00601519"
 effective: "2021-08-30T12:20:00-05:00"
@@ -22,20 +22,20 @@ metformin: dose changed to 500 mg twice daily today (eGFR 45)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-083019",
+    "visit_id": "V-2021-083089",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-083019",
+    "visit_id": "V-2021-083089",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-083019",
+    "visit_id": "V-2021-083089",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

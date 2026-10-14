@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J6AZJXY0K26PV8Y4CFD853ER"
+id: "01J6AZJXY0F47M93TQ2WX6HF41"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00455898"
 effective: "2024-08-27T11:20:00-05:00"
@@ -16,29 +16,43 @@ schema:
 ---
 Diabetes follow-up.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
+metformin: dose changed to 1000 mg twice daily today (A1c 8.2)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-082728",
+    "visit_id": "V-2024-082786",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-082728",
+    "visit_id": "V-2024-082786",
     "rank": 1,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-082728",
+    "visit_id": "V-2024-082786",
     "rank": 2,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-082786",
+    "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-082786",
+    "rank": 4,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

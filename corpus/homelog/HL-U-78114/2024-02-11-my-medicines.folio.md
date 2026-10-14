@@ -57,16 +57,6 @@ My Medicines, saved 11 February 2024.
     "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
-  },
-  "med_5": {
-    "type": "my_med",
-    "homelog_med_id": "med_5",
-    "name": "Dulaglutide",
-    "picked_from_search": { "rxnorm": "1551291", "display": "dulaglutide" },
-    "strength_text": "1.5 mg pen",
-    "how_i_take_it": "once a week, Sunday",
-    "status": "taking",
-    "kind": "prescription"
   }
 }
 ```

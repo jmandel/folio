@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FCGG3KX0S68C1AS36R4D1900"
+id: "01FCGG3KX0XWFE71XQSB0281R1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2021-08-07T09:25:00-05:00"
@@ -19,7 +19,7 @@ schema:
 {
   "referral": {
     "type": "referral_event",
-    "referral_id": "RF-2021-1322",
+    "referral_id": "RF-2021-1560",
     "action": "scheduled",
     "to": { "org": "Lakeview Kidney Care", "specialty": "Nephrology" },
     "question": "eGFR 43, UACR 248 mg/g: CKD evaluation and management",
@@ -28,19 +28,19 @@ schema:
   },
   "dx_1": {
     "type": "referral_dx",
-    "referral_id": "RF-2021-1322",
+    "referral_id": "RF-2021-1560",
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease stage 3b"
   },
   "dx_2": {
     "type": "referral_dx",
-    "referral_id": "RF-2021-1322",
+    "referral_id": "RF-2021-1560",
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus"
   },
   "dx_3": {
     "type": "referral_dx",
-    "referral_id": "RF-2021-1322",
+    "referral_id": "RF-2021-1560",
     "icd10cm": "I10",
     "display": "Essential hypertension"
   }

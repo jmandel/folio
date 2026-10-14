@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H2736CN0FS6X56B4T79H9HTM"
+id: "01H2736CN0VHA0F3N3F12ZXMCG"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00493958"
 effective: "2023-06-05T15:00:00-05:00"
@@ -22,16 +22,30 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-060542",
+    "visit_id": "V-2023-060532",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-060542",
+    "visit_id": "V-2023-060532",
     "rank": 1,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-060532",
+    "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2023-060532",
+    "rank": 3,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

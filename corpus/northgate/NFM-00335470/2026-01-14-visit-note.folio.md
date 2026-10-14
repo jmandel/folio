@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KEZBEGT0WRTA1BHGQEND2XJC"
+id: "01KEZBEGT031FMSAJZ75FXSD8H"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00335470"
 effective: "2026-01-14T13:40:00-06:00"
@@ -16,41 +16,43 @@ schema:
 ---
 Annual exam.
 
+metformin: dose changed to 1000 mg twice daily today (A1c 8.3)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-011432",
+    "visit_id": "V-2026-011495",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011432",
+    "visit_id": "V-2026-011495",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011432",
+    "visit_id": "V-2026-011495",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011432",
+    "visit_id": "V-2026-011495",
     "rank": 3,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2026-011432",
+    "visit_id": "V-2026-011495",
     "rank": 4,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K4ZJA6B0S7YGEN4QFY4RP3XW"
+id: "01K4ZJA6B0KT6KNG7BEB2ZVRB7"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00873737"
 effective: "2025-09-12T11:45:00-05:00"
@@ -22,20 +22,20 @@ semaglutide: started 0.5 mg weekly today (A1c 8.1)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-091226",
+    "visit_id": "V-2025-091259",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-091226",
+    "visit_id": "V-2025-091259",
     "rank": 1,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-091226",
+    "visit_id": "V-2025-091259",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

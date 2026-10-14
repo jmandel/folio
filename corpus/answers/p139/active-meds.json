@@ -14,7 +14,7 @@
       "status": "active",
       "since": "2021-01-18",
       "sources": ["B", "P"],
-      "basis": ["m_38"]
+      "basis": ["m_46"]
     },
     {
       "medication": "chlorthalidone",
@@ -27,7 +27,7 @@
       "status": "active",
       "since": "2020-09-09",
       "sources": ["B", "P"],
-      "basis": ["m_30"]
+      "basis": ["m_32"]
     },
     {
       "medication": "dapagliflozin",
@@ -55,7 +55,7 @@
       "since": "2022-11-28",
       "intend_resume": true,
       "sources": ["B", "C", "P"],
-      "basis": ["m_158"]
+      "basis": ["m_180"]
     },
     {
       "medication": "insulin glargine",
@@ -66,9 +66,9 @@
       "dose_text": "14 units",
       "frequency": "QHS",
       "status": "active",
-      "since": "2021-10-22",
+      "since": "2021-05-18",
       "sources": ["B", "P"],
-      "basis": ["m_54"]
+      "basis": ["m_53"]
     },
     {
       "medication": "lisinopril",
@@ -95,6 +95,18 @@
       "since": "2018",
       "sources": ["B", "P"],
       "basis": ["m_5"]
+    },
+    {
+      "medication": "semaglutide",
+      "rxnorm_ingredient": "1991302",
+      "product": "semaglutide 1 MG/0.75 ML Pen Injector",
+      "dose": { "value": 0.5, "unit": "mg" },
+      "dose_text": "0.5 mg",
+      "frequency": "QW",
+      "status": "active",
+      "since": "2023-01-13",
+      "sources": ["B", "P"],
+      "basis": ["m_92"]
     }
   ]
 }

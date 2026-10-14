@@ -12,7 +12,7 @@
       "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_48"]
+      "basis": ["l_56"]
     },
     "egfr": {
       "analyte": "egfr",
@@ -25,40 +25,84 @@
       "equation": "ckd-epi-2021",
       "reported": [{ "equation": "ckd-epi-2021", "value": 90, "comparator": ">" }],
       "sources": ["B", "C"],
-      "basis": ["l_48_egfr"]
+      "basis": ["l_56_egfr"]
     },
-    "potassium": {
-      "analyte": "potassium",
-      "value": 4.2,
+    "sodium": {
+      "analyte": "sodium",
+      "value": 138,
       "unit": "mmol/L",
-      "loinc": "2823-3",
-      "collected": "2026-03-13T07:31:00-05:00",
-      "collected_local_date": "2026-03-13",
+      "loinc": "2951-2",
+      "collected": "2023-05-22T07:39:00-05:00",
+      "collected_local_date": "2023-05-22",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_49"]
+      "basis": ["l_18"]
     },
     "uacr": {
       "analyte": "uacr",
-      "value": 10,
+      "value": 8,
       "unit": "mg/g",
       "loinc": "9318-7",
-      "collected": "2025-06-17T07:40:00-05:00",
-      "collected_local_date": "2025-06-17",
+      "collected": "2024-09-27T07:28:00-05:00",
+      "collected_local_date": "2024-09-27",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_42"]
+      "basis": ["l_39"]
     },
     "a1c": {
       "analyte": "a1c",
-      "value": 7.5,
+      "value": 8.6,
       "unit": "%",
       "loinc": "4548-4",
       "collected": "2026-03-13T07:31:00-05:00",
       "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
+      "basis": ["l_58"]
+    },
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 212,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-06-17T07:40:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_49"]
+    },
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 103,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-06-17T07:40:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
       "basis": ["l_50"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 42,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-06-17T07:40:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_51"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 149,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-06-17T07:40:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_52"]
     },
     "wbc": {
       "analyte": "wbc",
@@ -69,7 +113,7 @@
       "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_51"]
+      "basis": ["l_59"]
     },
     "hemoglobin": {
       "analyte": "hemoglobin",
@@ -80,7 +124,7 @@
       "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_52"]
+      "basis": ["l_60"]
     },
     "platelets": {
       "analyte": "platelets",
@@ -91,18 +135,18 @@
       "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_53"]
+      "basis": ["l_61"]
     },
-    "sodium": {
-      "analyte": "sodium",
-      "value": 139,
+    "potassium": {
+      "analyte": "potassium",
+      "value": 4.2,
       "unit": "mmol/L",
-      "loinc": "2951-2",
-      "collected": "2025-06-17T07:40:00-05:00",
-      "collected_local_date": "2025-06-17",
+      "loinc": "2823-3",
+      "collected": "2026-03-13T07:31:00-05:00",
+      "collected_local_date": "2026-03-13",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_40"]
+      "basis": ["l_57"]
     }
   }
 }

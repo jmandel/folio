@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KD6Q8F5GTFAG7218E0XZ299Q"
+id: "01KD6NC1JGTFAG7218E0XZ299Q"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00861057"
-effective: "2025-12-23T17:03:00-06:00"
-recorded: "2025-12-23T17:03:42-06:00"
+effective: "2025-12-23T16:30:00-06:00"
+recorded: "2025-12-23T16:30:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 6.2 confirmed on repeat",
     "review_on": "2026-01-06",
-    "visit_id": "V-2025-122371"
+    "visit_id": "V-2025-122355"
   }
 }
 ```

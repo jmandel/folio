@@ -22,7 +22,7 @@ supersedes:
   "glu_1": {
     "type": "glucose_reading",
     "measured_at": "2026-03-22T08:28",
-    "value": 176,
+    "value": 168,
     "unit": "mg/dL",
     "meal_marker": "fasting",
     "entry_method": "meter_sync"

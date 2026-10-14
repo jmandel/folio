@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FXKKKQG0R6Y7EQQ4JWWHBWM7"
+id: "01FXKKKQG064454TPYCEY6PTA5"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00423020"
 effective: "2022-03-07T13:50:00-06:00"
@@ -22,20 +22,20 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-030782",
+    "visit_id": "V-2022-030763",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-030782",
+    "visit_id": "V-2022-030763",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-030782",
+    "visit_id": "V-2022-030763",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

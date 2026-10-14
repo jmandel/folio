@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K842YY00VVSVZTYVKVJ0T4DC"
+id: "01K842YY00R1RG6TSKTR25S3S9"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00356614"
 effective: "2025-10-21T08:45:00-05:00"
@@ -15,6 +15,8 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Diabetes follow-up.
+
+insulin glargine: dose changed to 14 units at bedtime today (A1c 8.2)
 
 ```json payload
 {

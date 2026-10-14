@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K6ENKTX0CM0R3BQAN7KYQAAC"
+id: "01K6ENKTX06EY6S2DJTTF7ZMM9"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00657531"
 effective: "2025-09-30T15:50:00-05:00"
@@ -22,20 +22,20 @@ metformin: dose changed to 1000 mg twice daily today (A1c 8.2)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-093021",
+    "visit_id": "V-2025-093079",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-093021",
+    "visit_id": "V-2025-093079",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-093021",
+    "visit_id": "V-2025-093079",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

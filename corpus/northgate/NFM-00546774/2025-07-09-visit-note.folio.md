@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JZR9EP70CP1MA844G3XTCR7S"
+id: "01JZR9EP70EEPX9SG552C4RRVN"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00546774"
 effective: "2025-07-09T10:10:00-05:00"
@@ -22,27 +22,27 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-070935",
+    "visit_id": "V-2025-070912",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070935",
+    "visit_id": "V-2025-070912",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070935",
+    "visit_id": "V-2025-070912",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070935",
+    "visit_id": "V-2025-070912",
     "rank": 3,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J4SVZ600GKSAK2P52FW25HKV"
+id: "01J4SVZ6005TW5TAMDWD80DGZZ"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0051895"
 effective: "2024-08-08T12:00:00-05:00"
@@ -12,21 +12,19 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
-Follow-up. <ref id="dx_ckd">CKD G2 A3</ref>, <ref id="dx_dm">type 2 diabetes</ref>.
-
-<ref id="bp_sys">BP 129/80, HR 79, weight 91.8 kg</ref>. No new symptoms.
-
-eGFR 62 today, K 3.8. GFR down from 66 in February.
-
-Return in 5 months with labs, including urine albumin.
+- <ref id="bp_sys">BP 129/80, HR 79, weight 91.8 kg at 2024-08-08 12:04</ref>
+- <ref id="dx_ckd">Chronic kidney disease (stage 2 A3), onset 2025-08-03</ref>
+- <ref id="dx_dm">Type 2 diabetes mellitus, onset 2012-11</ref>
+- eGFR 62 (today)
+- K 3.8 (today)
 
 ```json payload
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2024-08-08T12:00:00-05:00",
     "PROVIDER_NPI": "1999000066",
@@ -35,7 +33,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "DX_RANK": 1,
     "ICD10CM": "N18.2",
     "DX_TEXT": "Chronic kidney disease, stage 2 (mild)",
@@ -43,7 +41,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -51,7 +49,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 129,
     "UNIT_CODE": "mmHg",
@@ -60,7 +58,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -69,7 +67,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 79,
     "UNIT_CODE": "/min",
@@ -78,7 +76,7 @@ Return in 5 months with labs, including urine albumin.
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-119843",
+    "VISIT_ID": "NV-100986",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 91.8,
     "UNIT_CODE": "kg",

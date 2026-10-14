@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01F53P6MGG0TK89JEJBN3RQ2W3"
+id: "01F53P4SXG0TP121P2Y18CH1ZW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00939437"
-effective: "2021-05-07T10:12:00-05:00"
-recorded: "2021-05-07T10:12:42-05:00"
+effective: "2021-05-07T10:11:00-05:00"
+recorded: "2021-05-07T10:11:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-32438",
+    "med_id": "ML-29175",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "amlodipine 5 MG Oral Tablet", "rxnorm": "197361" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2021-050732"
+    "visit_id": "V-2021-050713"
   }
 }
 ```

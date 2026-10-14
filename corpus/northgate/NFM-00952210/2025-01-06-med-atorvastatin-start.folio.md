@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JGYKSJVG8AVT4K8MPS39J3M1"
+id: "01JGYKSJVGDDFRCNTA80PB24EM"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00952210"
 effective: "2025-01-06T14:09:00-06:00"
@@ -19,7 +19,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-10469",
+    "med_id": "ML-21394",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "atorvastatin 80 MG Oral Tablet", "rxnorm": "617314" },

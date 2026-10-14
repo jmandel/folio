@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HGKZWCX05AN73NVT230HR3WJ"
+id: "01HGKZWCX0N39949A4BTF45575"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00824598"
 effective: "2023-12-01T14:40:00-06:00"
@@ -20,7 +20,7 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-120129",
+    "visit_id": "V-2023-120178",
     "visit_type": "office",
     "reason": "Chronic care visit"
   }

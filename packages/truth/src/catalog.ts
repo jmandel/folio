@@ -170,6 +170,10 @@ export const ANALYTES: Record<Analyte, { unit: string; loinc?: string; name: str
   pco2: { unit: "mmHg", loinc: "2021-4", name: "pCO2, venous" },
   lipase: { unit: "U/L", loinc: "3040-3", name: "Lipase" },
   troponin: { unit: "ng/mL", loinc: "10839-9", name: "Troponin I" },
+  cholesterol: { unit: "mg/dL", loinc: "2093-3", name: "Cholesterol, total" },
+  triglycerides: { unit: "mg/dL", loinc: "2571-8", name: "Triglycerides" },
+  hdl: { unit: "mg/dL", loinc: "2085-9", name: "HDL cholesterol" },
+  ldl: { unit: "mg/dL", loinc: "13457-7", name: "LDL cholesterol (calculated)" },
 };
 
 export const MGDL_PER_MMOL_GLUCOSE = 18.016;

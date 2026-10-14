@@ -14,7 +14,7 @@
       "status": "active",
       "since": "2023-12-08",
       "sources": ["A", "B", "P"],
-      "basis": ["m_96"]
+      "basis": ["m_113"]
     },
     {
       "medication": "chlorthalidone",
@@ -27,7 +27,20 @@
       "status": "active",
       "since": "2025-12-08",
       "sources": ["A", "B", "P"],
-      "basis": ["m_88"]
+      "basis": ["m_105"]
+    },
+    {
+      "medication": "dapagliflozin",
+      "rxnorm_ingredient": "1488564",
+      "product": "dapagliflozin 10 MG Oral Tablet",
+      "rxnorm_product": "1488574",
+      "dose": { "value": 10, "unit": "mg" },
+      "dose_text": "10 mg",
+      "frequency": "QD",
+      "status": "active",
+      "since": "2023-12-25",
+      "sources": ["A", "B", "C", "P"],
+      "basis": ["m_122"]
     },
     {
       "medication": "empagliflozin",
@@ -38,22 +51,9 @@
       "dose_text": "10 mg",
       "frequency": "QD",
       "status": "active",
-      "since": "2023-01-06",
-      "sources": ["A", "B", "P"],
-      "basis": ["m_49"]
-    },
-    {
-      "medication": "insulin glargine",
-      "rxnorm_ingredient": "274783",
-      "product": "insulin glargine 100 UNT/ML Pen Injector",
-      "rxnorm_product": "847230",
-      "dose": { "value": 10, "unit": "units" },
-      "dose_text": "10 units",
-      "frequency": "QHS",
-      "status": "active",
       "since": "2025-03-25",
       "sources": ["A", "B", "P"],
-      "basis": ["m_79"]
+      "basis": ["m_96"]
     },
     {
       "medication": "metformin",

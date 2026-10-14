@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G8BYAKJ0B4CY82S7D131R7SZ"
+id: "01G8BYAKJ0J4WXFWPHGZ123RWV"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00453430"
 effective: "2022-07-19T11:00:00-05:00"
@@ -20,34 +20,34 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-071978",
+    "visit_id": "V-2022-071996",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-071978",
+    "visit_id": "V-2022-071996",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-071978",
+    "visit_id": "V-2022-071996",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2022-071978",
+    "visit_id": "V-2022-071996",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2022-071978",
+    "visit_id": "V-2022-071996",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

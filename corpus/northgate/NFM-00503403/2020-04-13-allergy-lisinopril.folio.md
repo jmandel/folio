@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01E5T31XGGAJRAMAD5NN05WFNV"
+id: "01E5T33R3GS5VPNPTSP7NB2FTS"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00503403"
-effective: "2020-04-13T10:38:00-05:00"
-recorded: "2020-04-13T10:38:18-05:00"
+effective: "2020-04-13T10:39:00-05:00"
+recorded: "2020-04-13T10:39:18-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -20,14 +20,14 @@ schema:
 {
   "alg_1": {
     "type": "allergy_event",
-    "allergy_id": "AL-2976",
+    "allergy_id": "AL-2163",
     "action": "add",
     "substance": { "name": "lisinopril", "rxnorm": "29046" },
     "reaction_type": "intolerance",
     "reactions": ["Cough"],
     "severity": "low",
     "onset": { "date": "2020-03-01", "precision": "month" },
-    "visit_id": "V-2020-041386"
+    "visit_id": "V-2020-041322"
   }
 }
 ```

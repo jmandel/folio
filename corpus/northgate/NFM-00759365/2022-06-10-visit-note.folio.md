@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G57V9N70BP2PYHPQFFBAHG5M"
+id: "01G57V9N70SXGEN912M0C9HBVF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00759365"
 effective: "2022-06-10T14:45:00-05:00"
@@ -14,29 +14,26 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM2 f/u. BP 134/85, pulse 66, wt 195 lb.
-Labs today: eGFR 65, K 4.4, A1c 7.1%.
-Doing OK, no new symptoms. Wt stable.
-RTC 5 mo.
+Diabetes follow-up.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-061022",
+    "visit_id": "V-2022-061093",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-061022",
+    "visit_id": "V-2022-061093",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-061022",
+    "visit_id": "V-2022-061093",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

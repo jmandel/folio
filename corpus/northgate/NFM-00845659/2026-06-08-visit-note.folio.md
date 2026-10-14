@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KTMAS250ECZTYAFJEV9CJA6M"
+id: "01KTMAS250SNAY02YRC6AK4CJC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00845659"
 effective: "2026-06-08T12:45:00-05:00"
@@ -16,33 +16,31 @@ schema:
 ---
 Diabetes follow-up.
 
-dapagliflozin: started 10 mg daily today (A1c 8.6)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-060892",
+    "visit_id": "V-2026-060827",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060892",
+    "visit_id": "V-2026-060827",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060892",
+    "visit_id": "V-2026-060827",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060892",
+    "visit_id": "V-2026-060827",
     "rank": 3,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

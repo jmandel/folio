@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KZ6JDN7GZFHWSPHDW5NZ8NDS"
+id: "01KZ6JDN7GTAXR1JQZK7546J9A"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00032392"
 effective: "2026-08-04T09:21:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-46970",
+    "med_id": "ML-20864",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "chlorthalidone 25 MG Oral Tablet", "rxnorm": "197499" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1/2 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2026-080455"
+    "visit_id": "V-2026-080476"
   }
 }
 ```

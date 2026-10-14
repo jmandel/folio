@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H6AK7ZM0Y0R4X1CRR4G2QR09"
+id: "01H6AK7ZM0QTZ6QSBJ27D69V41"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00474892"
 effective: "2023-07-26T15:15:00-05:00"
@@ -14,30 +14,26 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM f/u. No new complaints.
-BP 129/80, pulse 84, wt 135 lb.
-Labs 7/24: eGFR 54, K 4.4, A1c 8.3%.
-Semaglutide: started 0.5 mg weekly today (A1c 8.3). Injection technique reviewed with pt.
-RTC 3 mo.
+Diabetes follow-up.
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-072617",
+    "visit_id": "V-2023-072659",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-072617",
+    "visit_id": "V-2023-072659",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-072617",
+    "visit_id": "V-2023-072659",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

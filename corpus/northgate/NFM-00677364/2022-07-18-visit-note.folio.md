@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G899GZM0P2AHAJ93T2QVD56Y"
+id: "01G899GZM066KTBZF54ANQY6W6"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00677364"
 effective: "2022-07-18T11:10:00-05:00"
@@ -16,19 +16,19 @@ schema:
 ---
 Chronic care visit.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.1)
+metformin: dose changed to 1000 mg twice daily today (A1c 8.2)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-071825",
+    "visit_id": "V-2022-071829",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-071825",
+    "visit_id": "V-2022-071829",
     "rank": 1,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

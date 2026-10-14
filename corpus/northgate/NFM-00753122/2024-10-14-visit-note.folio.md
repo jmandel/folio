@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JA68PTM0HDP82AT2T2Q7RXYM"
+id: "01JA68PTM0E5984QA2ACVDPM9T"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00753122"
 effective: "2024-10-14T11:43:00-05:00"
@@ -22,7 +22,7 @@ lisinopril: resumed today (eating and drinking normally)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-101446",
+    "visit_id": "V-2024-101422",
     "visit_type": "phone",
     "reason": "Phone: feeling better"
   }

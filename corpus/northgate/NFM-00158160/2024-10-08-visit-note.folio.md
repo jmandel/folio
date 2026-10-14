@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J9Q479B06W6MK7MN1PZQXQC9"
+id: "01J9Q479B0862FJN01KVJDH6X4"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00158160"
 effective: "2024-10-08T14:15:00-05:00"
@@ -16,7 +16,7 @@ schema:
 ---
 Diabetes follow-up.
 
-insulin glargine: started 10 units at bedtime today (A1c 7.5)
+insulin glargine: started 10 units at bedtime today (A1c 7.7)
 
 amlodipine: started 5 mg daily today (BP above goal)
 
@@ -24,20 +24,20 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-100826",
+    "visit_id": "V-2024-100836",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-100826",
+    "visit_id": "V-2024-100836",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-100826",
+    "visit_id": "V-2024-100836",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

@@ -63,15 +63,6 @@ My Medicines, saved 19 October 2025.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Jardiance",
-    "strength_text": "10 mg",
-    "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
     "name": "Lantus",
     "strength_text": "100 units/mL pen",
     "how_i_take_it": "10 units at bedtime",

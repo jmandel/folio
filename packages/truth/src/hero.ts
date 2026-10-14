@@ -227,6 +227,12 @@ C_DRAW("d_2023_03_06", "2023-03-06T08:02", "2023-03-06T09:15", "Y", "B");
 lab("l_2023_03_06_cr", "creatinine", "d_2023_03_06", 1.28, { resultedAt: T("2023-03-06T11:20") });
 lab("l_2023_03_06_a1c", "a1c", "d_2023_03_06", 7.9, { resultedAt: T("2023-03-06T12:45") });
 
+C_DRAW("d_2025_02_17", "2025-02-17T07:48", "2025-02-17T08:40", "Y", "B");
+lab("l_2025_02_17_chol", "cholesterol", "d_2025_02_17", 168, { resultedAt: T("2025-02-17T10:35") });
+lab("l_2025_02_17_tg", "triglycerides", "d_2025_02_17", 140, { resultedAt: T("2025-02-17T10:35") });
+lab("l_2025_02_17_hdl", "hdl", "d_2025_02_17", 48, { resultedAt: T("2025-02-17T10:35") });
+lab("l_2025_02_17_ldl", "ldl", "d_2025_02_17", 92, { resultedAt: T("2025-02-17T10:35"), derivedFrom: ["l_2025_02_17_chol", "l_2025_02_17_hdl", "l_2025_02_17_tg"] });
+
 C_DRAW("d_2025_08_18", "2025-08-18T08:31", "2025-08-18T09:48", "N", "B");
 lab("l_2025_08_18_a1c", "a1c", "d_2025_08_18", 8.6, { resultedAt: T("2025-08-18T11:20") });
 lab("l_2025_08_18_a1c_dup", "a1c", "d_2025_08_18", 8.6, { status: "entered-in-error", duplicateOf: "l_2025_08_18_a1c", resultedAt: T("2025-08-18T11:20"), correctedAt: T("2025-08-18T12:41"), traps: ["T4"] });
@@ -406,7 +412,7 @@ const encounters: Encounter[] = [
     { billingExtra: [{ icd10: "Z00.00", display: "Encounter for general adult medical examination without abnormal findings" }] }),
   ngVisit("2024-11-12", "2024-11-12T09:30", "Hosp f/u", ["c_t2dm", "c_ckd"], ["c_dka", "m_empagliflozin", "a_empagliflozin", "m_metformin", "m_chlorthalidone", "nf_sick_day"],
     { billingExtra: [{ icd10: "Z09", display: "Follow-up exam after completed treatment" }], addressed: [{ conditionId: "c_t2dm", icd10: "E11.22" }, { conditionId: "c_ckd" }] }),
-  ngVisit("2025-02-17", "2025-02-17T09:10", "Diabetes follow-up", ["c_t2dm", "c_htn"], ["v_ng_2025_02_17", "c_t2dm"]),
+  ngVisit("2025-02-17", "2025-02-17T09:10", "Diabetes follow-up", ["c_t2dm", "c_htn", "c_hld"], ["v_ng_2025_02_17", "c_t2dm", "l_2025_02_17_ldl", "m_atorvastatin"]),
   ngVisit("2025-08-18", "2025-08-18T09:15", "Diabetes follow-up", ["c_t2dm", "c_htn", "c_ckd"], ["l_2025_08_18_a1c", "m_glargine", "m_losartan", "v_ng_2025_08_18"]),
   ngVisit("2026-05-04", "2026-05-04T10:10", "Kidney function, referral", ["c_ckd", "c_t2dm", "c_htn"], ["l_2026_02_09_cr_egfr", "l_2026_02_09_uacr", "c_ckd", "c_dka", "m_empagliflozin", "v_ng_2026_05_04"],
     { reviewed: ["problems", "medications"] }),

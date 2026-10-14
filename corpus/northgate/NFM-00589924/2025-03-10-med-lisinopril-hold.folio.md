@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01JP0XXQXGR3EM2KJ3BZARBVA0"
+id: "01JP0YQC7GR3EM2KJ3BZARBVA0"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00589924"
-effective: "2025-03-10T16:03:00-05:00"
-recorded: "2025-03-10T16:03:42-05:00"
+effective: "2025-03-10T16:17:00-05:00"
+recorded: "2025-03-10T16:17:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:mbrennan"
   name: "Moira Brennan, DO"
@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">hold lisinopril: K 5.9 confirmed on repeat.</ref>
+<ref id="med_1">hold lisinopril: K 6.1 confirmed on repeat.</ref>
 
 ```json payload
 {
@@ -27,9 +27,9 @@ schema:
     "dose": { "value": 40, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
-    "reason_text": "K 5.9 confirmed on repeat",
+    "reason_text": "K 6.1 confirmed on repeat",
     "review_on": "2025-03-24",
-    "visit_id": "V-2025-031049"
+    "visit_id": "V-2025-031043"
   }
 }
 ```

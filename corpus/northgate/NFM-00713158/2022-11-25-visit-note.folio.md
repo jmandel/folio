@@ -16,7 +16,7 @@ schema:
 ---
 New patient, establish care.
 
-dulaglutide: started 0.5 mg weekly today (A1c 9.1)
+insulin glargine: started 10 units at bedtime today (A1c 9.1)
 
 ```json payload
 {
@@ -30,8 +30,9 @@ dulaglutide: started 0.5 mg weekly today (A1c 9.1)
     "type": "billing_dx",
     "visit_id": "V-2022-112574",
     "rank": 1,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

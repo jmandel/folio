@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FQD612V0V10WKKJJVBEAX3A3"
+id: "01FQD612V0A7FRY39VR7Y0TD3R"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00850967"
 effective: "2021-12-20T14:15:00-06:00"
@@ -16,27 +16,22 @@ schema:
 ---
 Chronic care visit.
 
+empagliflozin: started 10 mg daily today (A1c 8.3)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-122035",
+    "visit_id": "V-2021-122082",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-122035",
+    "visit_id": "V-2021-122082",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2021-122035",
-    "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

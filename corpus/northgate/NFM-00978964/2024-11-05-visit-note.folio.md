@@ -14,11 +14,9 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establish care.
-BP 141/93, pulse 72, wt 177 lb.
-11/1: eGFR 40, K 5, UACR 398 mg/g.
-A1c 6.6% on 11/1.
-Started dapagliflozin 10 mg daily today for CKD + DM, cardiorenal benefit.
+New patient, establish care.
+
+dapagliflozin: started 10 mg daily today (CKD + DM, cardiorenal benefit)
 
 ```json payload
 {
@@ -32,6 +30,13 @@ Started dapagliflozin 10 mg daily today for CKD + DM, cardiorenal benefit.
     "type": "billing_dx",
     "visit_id": "V-2024-110522",
     "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-110522",
+    "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   }

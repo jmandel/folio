@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H4HE2N70ZNS7XJKQ14201201"
+id: "01H4HE2N702ABFDRJSDMJ8396H"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00377621"
 effective: "2023-07-04T14:30:00-05:00"
@@ -20,34 +20,34 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-070412",
+    "visit_id": "V-2023-070471",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-070412",
+    "visit_id": "V-2023-070471",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-070412",
+    "visit_id": "V-2023-070471",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-070412",
+    "visit_id": "V-2023-070471",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-070412",
+    "visit_id": "V-2023-070471",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

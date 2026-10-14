@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JDAVMT104FY14JS33MDA52GY"
+id: "01JDAVMT108M7ABWZJEETR57MZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00591713"
 effective: "2024-11-22T09:10:00-06:00"
@@ -20,20 +20,20 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-112277",
+    "visit_id": "V-2024-112236",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-112277",
+    "visit_id": "V-2024-112236",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-112277",
+    "visit_id": "V-2024-112236",
     "rank": 2,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",

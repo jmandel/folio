@@ -28,6 +28,13 @@ BP follow-up.
     "type": "billing_dx",
     "visit_id": "V-2020-042073",
     "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2020-042073",
+    "rank": 2,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"
   }

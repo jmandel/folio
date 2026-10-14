@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JERHGK50N95731KP82JR882N"
+id: "01JERHGK507Q9C81J1PSKMQCGQ"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00453627"
 effective: "2024-12-10T13:37:00Z"
@@ -14,25 +14,16 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Progress note, hospital day 3
+## Progress note
 
-**Interval.** The patient feels much better, is eating and drinking, and the diarrhea has stopped. The saline infusion was stopped at 19:30 yesterday. Allergies: NKDA.
-
-**Exam.** Vitals at 07:17: BP 121/73, HR 87, RR 22, T 98.2 F, SpO2 94%. Heart rate has settled. Comfortable, with moist mucous membranes.
-
-**Results.** On the 06:19 panel: <ref id="bmp">sodium 138, potassium 5.4, chloride 100, bicarbonate 25, anion gap 13, urea nitrogen 21, creatinine 1.20, eGFR 65, glucose 149</ref>. Creatinine continues to improve, and potassium is lower than yesterday but not yet normal.
-
-**Assessment and plan**
-
-1. <ref id="dx_aki">Acute kidney injury</ref>, resolving off IV fluids; creatinine 1.20 now that saline has been stopped. Repeat the panel in the morning.
-2. Metformin, losartan, hydrochlorothiazide, spironolactone and furosemide remain held.
-3. Continue carvedilol and atorvastatin.
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 12/10 06:19 (local time): Sodium 138 mmol/L, Potassium 5.4 mmol/L (H), Chloride 100 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 13 mmol/L, Urea nitrogen 21 mg/dL, Creatinine 1.20 mg/dL, eGFR (CKD-EPI 2021) 65 mL/min/1.73m2, Glucose 149 mg/dL (H)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6217776",
+    "encounter_id": "RRH-ENC-6987721",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -59,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24345-4135",
+    "accession": "L24345-4667",
     "collected": "2024-12-10T12:19:00Z",
     "specimen": "serum",
     "status": "final",

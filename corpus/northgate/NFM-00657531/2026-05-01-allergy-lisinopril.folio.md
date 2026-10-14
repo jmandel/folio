@@ -26,8 +26,8 @@ schema:
     "reaction_type": "intolerance",
     "reactions": ["Cough"],
     "severity": "low",
-    "onset": { "date": "2026-02-01", "precision": "month" },
-    "visit_id": "V-2026-050189"
+    "onset": { "date": "2026-03-01", "precision": "month" },
+    "visit_id": "V-2026-050111"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KPCAMW40G7843853BMTTAJ38"
+id: "01KPCAMW405HY1G165J0R9A5G2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00801357"
 effective: "2026-04-16T14:45:00-05:00"
@@ -22,27 +22,27 @@ Patient ran out of lisinopril about 3 weeks ago and has not been taking it.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-041685",
+    "visit_id": "V-2026-041615",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-041685",
+    "visit_id": "V-2026-041615",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-041685",
+    "visit_id": "V-2026-041615",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-041685",
+    "visit_id": "V-2026-041615",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

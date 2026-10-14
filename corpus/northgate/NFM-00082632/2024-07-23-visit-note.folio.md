@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J3GZ5F503NNC8EMWQDPR8NP7"
+id: "01J3GZ5F50QGMPJ9381N5H9P4P"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00082632"
 effective: "2024-07-23T15:20:00-05:00"
@@ -16,26 +16,26 @@ schema:
 ---
 Diabetes follow-up.
 
-semaglutide: started 0.5 mg weekly today (A1c 8.6)
+semaglutide: started 0.5 mg weekly today (A1c 8.3)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-072345",
+    "visit_id": "V-2024-072331",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-072345",
+    "visit_id": "V-2024-072331",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-072345",
+    "visit_id": "V-2024-072331",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

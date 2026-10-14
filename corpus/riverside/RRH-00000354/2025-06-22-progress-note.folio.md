@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JYBYKVK09A9172AW6ADPNP6X"
+id: "01JYBYKVK0YNAKPCAV2GV9QTV0"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00000354"
 effective: "2025-06-22T12:44:00Z"
@@ -23,7 +23,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6524159",
+    "encounter_id": "RRH-ENC-6753669",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -50,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25173-4175",
+    "accession": "L25173-9784",
     "collected": "2025-06-22T11:19:00Z",
     "specimen": "serum",
     "status": "final",
@@ -123,6 +123,14 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
+  },
+  "med_dulaglutide": {
+    "type": "home_med",
+    "drug_name": "dulaglutide pen",
+    "rxnorm_ingredient": "1551291",
+    "dose_text": "0.5 mg",
+    "sig": "0.5 mg SubQ weekly",
+    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

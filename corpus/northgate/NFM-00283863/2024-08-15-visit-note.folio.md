@@ -30,8 +30,16 @@ metformin: dose changed to 500 mg twice daily today (eGFR 33)
     "type": "billing_dx",
     "visit_id": "V-2024-081515",
     "rank": 1,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2024-081515",
+    "rank": 2,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

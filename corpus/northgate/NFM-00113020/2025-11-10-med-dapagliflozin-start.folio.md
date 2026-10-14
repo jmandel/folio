@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01K9QQRCWGJWEGY9YEZ43XY7XF"
+id: "01K9QQT7FGDTB14DW9ZPVE98RK"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00113020"
-effective: "2025-11-10T14:36:00-06:00"
-recorded: "2025-11-10T14:36:42-06:00"
+effective: "2025-11-10T14:37:00-06:00"
+recorded: "2025-11-10T14:37:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-16067",
+    "med_id": "ML-26743",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dapagliflozin 10 MG Oral Tablet", "rxnorm": "1488574" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "A1c above goal",
-    "visit_id": "V-2025-111039"
+    "visit_id": "V-2025-111023"
   }
 }
 ```

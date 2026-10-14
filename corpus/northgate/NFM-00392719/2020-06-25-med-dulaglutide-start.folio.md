@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EBP3D7KGEK8SKWJ82WCSKXWQ"
+id: "01EBP3D7KGHQ8PYTPS5SD2ND82"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2020-06-25T11:01:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-11813",
+    "med_id": "ML-32519",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dulaglutide 1.5 MG/0.5 ML Pen Injector" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "OTHER",
     "sig": "Inject 0.5 mg under the skin once weekly",
     "reason_text": "A1c 8.6",
-    "visit_id": "V-2020-062578"
+    "visit_id": "V-2020-062545"
   }
 }
 ```

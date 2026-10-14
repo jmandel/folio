@@ -35,8 +35,9 @@ New patient, establish care.
     "type": "billing_dx",
     "visit_id": "V-2023-091215",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

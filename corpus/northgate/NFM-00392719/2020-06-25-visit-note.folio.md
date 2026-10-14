@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EBPCD8D03AZA67EXH8JTA320"
+id: "01EBPCD8D0WBN4ND3Z231SRXYD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00392719"
 effective: "2020-06-25T10:40:00-05:00"
@@ -22,20 +22,20 @@ dulaglutide: started 0.5 mg weekly today (A1c 8.6)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-062578",
+    "visit_id": "V-2020-062545",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-062578",
+    "visit_id": "V-2020-062545",
     "rank": 1,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-062578",
+    "visit_id": "V-2020-062545",
     "rank": 2,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"

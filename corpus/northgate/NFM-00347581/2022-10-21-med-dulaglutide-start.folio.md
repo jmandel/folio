@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GFXP5NDGZQRBKXHG5YB99DKE"
+id: "01GFXP5NDGZQ8F5GQV6HYTXB9Y"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00347581"
 effective: "2022-10-21T11:31:00-05:00"
@@ -14,21 +14,21 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start dulaglutide: A1c 8.1.</ref>
+<ref id="med_1">start dulaglutide: A1c 8.2.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-12956",
+    "med_id": "ML-37996",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "dulaglutide 1.5 MG/0.5 ML Pen Injector" },
     "dose": { "value": 0.5, "unit": "mg" },
     "frequency": "OTHER",
     "sig": "Inject 0.5 mg under the skin once weekly",
-    "reason_text": "A1c 8.1",
-    "visit_id": "V-2022-102115"
+    "reason_text": "A1c 8.2",
+    "visit_id": "V-2022-102174"
   }
 }
 ```

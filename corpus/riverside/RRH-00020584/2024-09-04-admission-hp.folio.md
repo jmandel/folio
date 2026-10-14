@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J6XZ37S0HVADSKP2BCF3Z7B2"
+id: "01J6XZ37S0S5282TNCSTN5H36A"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00020584"
 effective: "2024-09-04T05:29:00Z"
@@ -28,7 +28,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6857923",
+    "encounter_id": "RRH-ENC-6196344",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -63,7 +63,7 @@ schema:
   "lipase": {
     "type": "result",
     "test": { "local_code": "LIPASE", "loinc": "3040-3", "name": "Lipase" },
-    "accession": "L24247-0073",
+    "accession": "L24247-5690",
     "collected": "2024-09-04T00:11:00Z",
     "specimen": "serum",
     "status": "final",
@@ -74,7 +74,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24247-0873",
+    "accession": "L24247-6568",
     "collected": "2024-09-04T00:11:00Z",
     "specimen": "serum",
     "status": "final",

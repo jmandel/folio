@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GXNQB4J030WACH6BEX9HZHMK"
+id: "01GXNQB4J00AS3HK39H2TT55XQ"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2023-04-10T12:35:00Z"
@@ -16,24 +16,14 @@ schema:
 ---
 ## Progress note
 
-**Interval history.** The patient reports less diarrhea and is drinking more. Saline was stopped at 03:49 this morning.
-
-**Exam.** At 07:15: BP 124/74, HR 107, RR 24, T 98.8 F, SpO2 95%. The patient is comfortable at rest, mucous membranes are moist, and the abdomen is soft.
-
-**Results.** <ref id="bmp">On the 06:11 panel: sodium 135 (L), potassium 6.1 (H), chloride 99, bicarbonate 25, anion gap 11, urea nitrogen 23, creatinine 2.47 (H), eGFR 29 (L), glucose 140 (H).</ref> Creatinine is down from 2.89 at admission, and potassium has come down from 6.8 but remains high.
-
-**Assessment and plan**
-
-1. <ref id="dx_aki">Acute kidney injury</ref>, improving with fluids. Repeat the panel in the morning.
-2. Hyperkalemia, still elevated at 6.1. Continue to follow the potassium closely.
-3. Losartan, hydrochlorothiazide and metformin remain held. Semaglutide continues.
-4. Allergy: lisinopril (cough).
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status active</ref>
+- <ref id="bmp">Basic metabolic panel drawn 4/10 06:11 (local time): Sodium 135 mmol/L (L), Potassium 6.1 mmol/L (H), Chloride 99 mmol/L, Bicarbonate (total CO2) 25 mmol/L, Anion gap 11 mmol/L, Urea nitrogen 23 mg/dL, Creatinine 2.47 mg/dL (H), eGFR (CKD-EPI 2021) 29 mL/min/1.73m2 (L), Glucose 140 mg/dL (H)</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6590130",
+    "encounter_id": "RRH-ENC-6281782",
     "document_kind": "progress_note",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -60,7 +50,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L23100-9041",
+    "accession": "L23100-1293",
     "collected": "2023-04-10T11:11:00Z",
     "specimen": "serum",
     "status": "final",
@@ -133,14 +123,6 @@ schema:
     "dose_text": "1000 mg",
     "sig": "1 tab PO BID with meals",
     "status": "held"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

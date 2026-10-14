@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">AKI with hyperkalemia. Hydrochlorothiazide stopped today.</ref>
+<ref id="med_1">stop hydrochlorothiazide: AKI with hyperkalemia.</ref>
 
 ```json payload
 {
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "stop_reason": "adverse_reaction",
     "reason_text": "AKI with hyperkalemia",
-    "visit_id": "V-2024-122073"
+    "visit_id": "V-2024-122071"
   }
 }
 ```

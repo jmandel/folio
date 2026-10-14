@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01HPHJ6RXG9FFZ9D7J7EF5M9P5"
+id: "01HPHJ4YAG9FFZ9D7J7EF5M9P5"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00492858"
-effective: "2024-02-13T09:43:00-06:00"
-recorded: "2024-02-13T09:43:42-06:00"
+effective: "2024-02-13T09:42:00-06:00"
+recorded: "2024-02-13T09:42:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -14,7 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">Lisinopril 20 mg stopped today, dry cough.</ref>
+<ref id="med_1">stop lisinopril: dry cough.</ref>
 
 ```json payload
 {
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "stop_reason": "adverse_reaction",
     "reason_text": "dry cough",
-    "visit_id": "V-2024-021334"
+    "visit_id": "V-2024-021399"
   }
 }
 ```

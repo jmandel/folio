@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01DPS5WBV0GNYGHSKY4JKZ6TEA"
+id: "01DPS5WBV0EPR25XD69X938CDR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00018491"
 effective: "2019-10-09T09:50:00-05:00"
@@ -22,13 +22,13 @@ losartan: dose changed to 100 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2019-100951",
+    "visit_id": "V-2019-100996",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2019-100951",
+    "visit_id": "V-2019-100996",
     "rank": 1,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

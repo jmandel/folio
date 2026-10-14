@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FEP5MF20Z1RCNGYNA6724Y2W"
+id: "01FEP5MF20FHHQ53YHTGYF93VJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00824598"
 effective: "2021-09-03T09:00:00-05:00"
@@ -20,13 +20,13 @@ Diabetes follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-090341",
+    "visit_id": "V-2021-090335",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-090341",
+    "visit_id": "V-2021-090335",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

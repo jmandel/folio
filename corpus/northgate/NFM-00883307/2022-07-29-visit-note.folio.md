@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G95T4FB0ZFK51WD8GHKWESD9"
+id: "01G95T4FB0707Y626TBKYNZCH3"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00883307"
 effective: "2022-07-29T12:30:00-05:00"
@@ -20,28 +20,35 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-072969",
+    "visit_id": "V-2022-072929",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-072969",
+    "visit_id": "V-2022-072929",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-072969",
+    "visit_id": "V-2022-072929",
     "rank": 2,
-    "icd10cm": "E11.22",
-    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2022-072969",
+    "visit_id": "V-2022-072929",
     "rank": 3,
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-072929",
+    "rank": 4,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   }

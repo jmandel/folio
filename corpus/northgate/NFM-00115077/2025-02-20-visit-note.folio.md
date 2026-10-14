@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JMK5NKE0TSN61B31MGKX4C34"
+id: "01JMK5NKE0TT89YSAH1M15D0SG"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00115077"
 effective: "2025-02-20T15:15:00-06:00"
@@ -22,21 +22,28 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-022022",
+    "visit_id": "V-2025-022011",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-022022",
+    "visit_id": "V-2025-022011",
     "rank": 1,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-022022",
+    "visit_id": "V-2025-022011",
     "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-022011",
+    "rank": 3,
     "icd10cm": "F33.0",
     "display": "Major depressive disorder, recurrent, mild",
     "restricted": "BH"

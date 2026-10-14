@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G6X9X1C0H2WTW1VXQ2071E75"
+id: "01G6X9X1C08H0MS28XNVHM33ZM"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00296957"
 effective: "2022-07-01T08:00:00-05:00"
@@ -16,24 +16,26 @@ schema:
 ---
 Diabetes follow-up.
 
+insulin glargine: started 10 units at bedtime today (A1c 8.1)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-070129",
+    "visit_id": "V-2022-070114",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-070129",
+    "visit_id": "V-2022-070114",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-070129",
+    "visit_id": "V-2022-070114",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

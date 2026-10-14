@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HFPVBPJ0K8DNAM5ZY0DEK1R1"
+id: "01HFPVBPJ0MP6BPN1M90364C20"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00939437"
 effective: "2023-11-20T09:10:00-06:00"
@@ -16,17 +16,19 @@ schema:
 ---
 Diabetes follow-up.
 
+semaglutide: started 0.5 mg weekly today (A1c 8.1)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-112083",
+    "visit_id": "V-2023-112073",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-112083",
+    "visit_id": "V-2023-112073",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

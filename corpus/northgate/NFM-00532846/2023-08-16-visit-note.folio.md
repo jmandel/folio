@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01H800PQX0YA05ZWE8QMXNCA3N"
+id: "01H800PQX01SZZZDHH24525Q7X"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00532846"
 effective: "2023-08-16T10:00:00-05:00"
@@ -16,45 +16,47 @@ schema:
 ---
 Annual exam.
 
+insulin glargine: started 10 units at bedtime today (A1c 8.4)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "rank": 4,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_5": {
     "type": "billing_dx",
-    "visit_id": "V-2023-081688",
+    "visit_id": "V-2023-081673",
     "rank": 5,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KTA0X160K3P8WT4TK64CF24X"
+id: "01KTA0X160JWA5NSQ6CGK0F9MN"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00532846"
 effective: "2026-06-04T12:10:00-05:00"
@@ -16,33 +16,31 @@ schema:
 ---
 Diabetes follow-up.
 
-insulin glargine: dose changed to 14 units at bedtime today (A1c 8.8)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-060477",
+    "visit_id": "V-2026-060442",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060477",
+    "visit_id": "V-2026-060442",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060477",
+    "visit_id": "V-2026-060442",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-060477",
+    "visit_id": "V-2026-060442",
     "rank": 3,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

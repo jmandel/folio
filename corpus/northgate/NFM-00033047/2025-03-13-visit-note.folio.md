@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JP8JAQD042WN1K793X4YHZN3"
+id: "01JP8JAQD0PWFT69CSMGPQ4T4C"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00033047"
 effective: "2025-03-13T12:00:00-05:00"
@@ -16,31 +16,33 @@ schema:
 ---
 Annual exam.
 
+dulaglutide: started 0.5 mg weekly today (A1c 8.3)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-031394",
+    "visit_id": "V-2025-031316",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031394",
+    "visit_id": "V-2025-031316",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031394",
+    "visit_id": "V-2025-031316",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-031394",
+    "visit_id": "V-2025-031316",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

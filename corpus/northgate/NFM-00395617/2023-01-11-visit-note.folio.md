@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GPHJMPK0T3Q4RADN34E81RFB"
+id: "01GPHJMPK01RAPW0J8TEZ7D0S9"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00395617"
 effective: "2023-01-11T13:00:00-06:00"
@@ -16,33 +16,31 @@ schema:
 ---
 Annual exam.
 
-empagliflozin: started 10 mg daily today (A1c 8.1)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-011139",
+    "visit_id": "V-2023-011175",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-011139",
+    "visit_id": "V-2023-011175",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2023-011139",
+    "visit_id": "V-2023-011175",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2023-011139",
+    "visit_id": "V-2023-011175",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

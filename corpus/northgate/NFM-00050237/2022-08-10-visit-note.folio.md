@@ -34,6 +34,13 @@ lisinopril intolerance: dry cough
     "type": "billing_dx",
     "visit_id": "V-2022-081012",
     "rank": 1,
+    "icd10cm": "I10",
+    "display": "Essential (primary) hypertension"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-081012",
+    "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
   }

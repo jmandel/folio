@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JYQ2PGG0DSYXEZ3QJQWB950J"
+id: "01JYQ2PGG05F73ATPM9BQW4F8F"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00388366"
 effective: "2025-06-25T01:00:00Z"
@@ -17,30 +17,18 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnosis:** <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, resolved.
-
-**Hospital course.** The patient was admitted on 6/24 with a bicarbonate of 8, an anion gap of 32 and a glucose of 242, and was treated with an insulin infusion and dextrose-containing fluids. The acidosis cleared within the first day and the patient transitioned to subcutaneous insulin and began eating. No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
-
-**Condition at discharge.** Feeling well and eating. Vitals at 09:00: BP 130/78, HR 89, RR 17, temperature 98.7 F, SpO2 96%. Basic metabolic panel on 6/26 at 06:28: sodium 135, potassium 4.0, chloride 99, bicarbonate 24, anion gap 12, urea nitrogen 18, creatinine 1.36, eGFR 60, glucose 165.
-
-**Allergies:** no known drug allergies.
-
-**Discharge medications**
-
-- <ref id="med_dapagliflozin">Dapagliflozin 10 mg daily: do not resume until reviewed by the primary care physician</ref>
-- <ref id="med_metformin">Metformin 1000 mg twice daily with meals: continue</ref>
-- <ref id="med_lisinopril">Lisinopril 20 mg daily: continue</ref>
-- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: continue</ref>
-- Insulin glargine 10 units nightly: continue
-- Dulaglutide 0.5 mg weekly: continue
-
-**Follow-up.** Primary care at Northgate Family Medicine within 1 week, to decide whether to restart dapagliflozin and to recheck a basic metabolic panel. The patient should return for nausea, vomiting, abdominal pain or fast breathing.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: continue</ref>
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status resolved</ref>
+- <ref id="med_dapagliflozin">home med dapagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Do not resume until reviewed by PCP"</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: continue</ref>
+- <ref id="med_lisinopril">home med lisinopril 20 mg tablet, 20 mg 1 tab PO daily: continue</ref>
+- No clear precipitant was identified: no infection, no missed meals reported, no alcohol, no recent surgery.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6402248",
+    "encounter_id": "RRH-ENC-6437094",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -70,7 +58,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25177-8868",
+    "accession": "L25177-4459",
     "collected": "2025-06-26T11:28:00Z",
     "specimen": "serum",
     "status": "final",
@@ -136,22 +124,6 @@ schema:
     "status": "held",
     "restart_advice": "advise_against",
     "instructions": "Do not resume until reviewed by PCP"
-  },
-  "med_dulaglutide": {
-    "type": "home_med",
-    "drug_name": "dulaglutide pen",
-    "rxnorm_ingredient": "1551291",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
-  },
-  "med_glargine": {
-    "type": "home_med",
-    "drug_name": "insulin glargine 100 units/mL pen",
-    "rxnorm_ingredient": "274783",
-    "dose_text": "10 units",
-    "sig": "10 units SubQ nightly",
-    "status": "continue"
   },
   "med_lisinopril": {
     "type": "home_med",

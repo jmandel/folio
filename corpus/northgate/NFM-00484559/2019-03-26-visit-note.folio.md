@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. Hx of HTN, DM2 and knee OA, all per pt.
-BP 123/75, pulse 72, wt 186 lb.
-Labs 3/21: eGFR 65, K 4.2, UACR 10 mg/g, A1c 7.7%.
-Problem list entered from pt's history. Will request old records.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {

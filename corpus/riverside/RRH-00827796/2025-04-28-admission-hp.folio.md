@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JSZJXQD0KXST9NA62JZ4597R"
+id: "01JSZJXQD0SABDH7SYWDX8P7SD"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2025-04-29T00:02:00Z"
@@ -16,30 +16,19 @@ schema:
 ---
 ## Admission history and physical
 
-**Reason for admission:** euglycemic diabetic ketoacidosis.
-
-**History of present illness.** The patient has diabetes and presented to the ED this afternoon with nausea, fatigue and fast breathing. <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref> Glucose in the ED was only 192, with bicarbonate 11 and an anion gap of 27.
-
-**Allergies:** lisinopril (cough).
-
-**Exam.** At 18:52: BP 114/68, HR 94, RR 21, T 99.2 F, SpO2 95%. Mucous membranes are dry and breathing is deep. The abdomen is soft.
-
-**Results.** The 14:28 panel: sodium 132, potassium 4.8, chloride 94, bicarbonate 11, anion gap 27, urea nitrogen 26, creatinine 1.85, eGFR 40, glucose 192. Lipase 41. The insulin infusion and D5 lactated Ringer's at 150 mL/h have run since 15:22.
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>. Continue the insulin infusion per DKA protocol at 0.1 units/kg/h with dextrose-containing fluid.
-2. <ref id="med_empagliflozin">Hold empagliflozin.</ref>
-3. <ref id="med_metformin">Hold metformin while acidotic and NPO.</ref>
-4. <ref id="dx_pancreatitis">Acute pancreatitis ruled out</ref>: lipase 41.
-5. <ref id="med_hydrochlorothiazide">Hold hydrochlorothiazide for volume depletion.</ref>
-6. <ref id="med_losartan">Continue losartan.</ref> Continue semaglutide weekly.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (resume_when_able) "Hold for volume depletion"</ref>
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held</ref>
+- <ref id="med_metformin">home med metformin 1000 mg tablet, 1000 mg 1 tab PO BID with meals: held (resume_when_able) "Hold while acidotic and NPO"</ref>
+- <ref id="med_losartan">home med losartan 50 mg tablet, 50 mg 1 tab PO daily: continue</ref>
+- <ref id="dx_pancreatitis">diagnosis "Acute pancreatitis", status ruled_out</ref>
+- <ref id="precipitant">The ketoacidosis was precipitated by prolonged fasting for religious observance while continuing the SGLT2 inhibitor.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6322209",
+    "encounter_id": "RRH-ENC-6374142",
     "document_kind": "hp",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -74,7 +63,7 @@ schema:
   "lipase": {
     "type": "result",
     "test": { "local_code": "LIPASE", "loinc": "3040-3", "name": "Lipase" },
-    "accession": "L25118-1549",
+    "accession": "L25118-5105",
     "collected": "2025-04-28T19:28:00Z",
     "specimen": "serum",
     "status": "final",
@@ -85,7 +74,7 @@ schema:
   "bmp": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L25118-0822",
+    "accession": "L25118-5335",
     "collected": "2025-04-28T19:28:00Z",
     "specimen": "serum",
     "status": "final",
@@ -188,14 +177,6 @@ schema:
     "dose_text": "10 mg",
     "sig": "1 tab PO daily",
     "status": "held"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

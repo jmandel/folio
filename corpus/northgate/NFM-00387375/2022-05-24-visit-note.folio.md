@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G3W7EX90TEC7T192FZ0CR0KE"
+id: "01G3W7EX90Q52SPMQZEKF66J33"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00387375"
 effective: "2022-05-24T14:45:00-05:00"
@@ -20,16 +20,23 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-052448",
+    "visit_id": "V-2022-052438",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-052448",
+    "visit_id": "V-2022-052438",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2022-052438",
+    "rank": 2,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

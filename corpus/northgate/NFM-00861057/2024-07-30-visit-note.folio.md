@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J42B0AV01AE82B5VD07Y5B8Z"
+id: "01J42B0AV0W4PN3Q5RKSTKWTAK"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00861057"
 effective: "2024-07-30T08:30:00-05:00"
@@ -20,13 +20,13 @@ BP follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-073078",
+    "visit_id": "V-2024-073075",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-073078",
+    "visit_id": "V-2024-073075",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

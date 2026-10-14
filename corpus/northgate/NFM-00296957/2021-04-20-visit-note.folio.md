@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F3R2CE50J8SJTG9650ASW9P3"
+id: "01F3R2CE50N8R04C314TAWEVAJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00296957"
 effective: "2021-04-20T08:10:00-05:00"
@@ -20,7 +20,7 @@ Diabetes follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-042077",
+    "visit_id": "V-2021-042032",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   }

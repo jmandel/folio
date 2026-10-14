@@ -14,10 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-DM2 f/u. Pt reports no low sugars, some missed readings.
-BP 134/82, pulse 78, wt 188 lb.
-Encouraged diet changes and more walking.
-RTC 6 mo.
+Diabetes follow-up.
 
 ```json payload
 {
@@ -40,6 +37,13 @@ RTC 6 mo.
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
+  },
+  "dx_3": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-021721",
+    "rank": 3,
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

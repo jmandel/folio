@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JEPKA7R0XHHVH7RZM3HAKQ1A"
+id: "01JEPKA7R0T193WVEWPJ9VSNFW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00696822"
 effective: "2024-12-09T08:30:00-06:00"
@@ -24,20 +24,20 @@ dapagliflozin adverse reaction: euglycemic diabetic ketoacidosis
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-120962",
+    "visit_id": "V-2024-120978",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-120962",
+    "visit_id": "V-2024-120978",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-120962",
+    "visit_id": "V-2024-120978",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01F85X8MKGNMFZ63N7TFW2XDKH"
+id: "01F85X8MKG2CS9FDCEZQV3H8XC"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00528755"
 effective: "2021-06-14T13:41:00-05:00"
@@ -14,21 +14,21 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">start empagliflozin: A1c 8.7.</ref>
+<ref id="med_1">start empagliflozin: A1c 8.6.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-19389",
+    "med_id": "ML-27367",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "empagliflozin 10 MG Oral Tablet", "rxnorm": "1545658" },
     "dose": { "value": 10, "unit": "mg" },
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
-    "reason_text": "A1c 8.7",
-    "visit_id": "V-2021-061451"
+    "reason_text": "A1c 8.6",
+    "visit_id": "V-2021-061469"
   }
 }
 ```

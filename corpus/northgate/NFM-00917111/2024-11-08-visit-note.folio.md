@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JC6PTC60WXB5ZCT6CWY7W30X"
+id: "01JC6PTC607RFQ8YGGWJHETP4H"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00917111"
 effective: "2024-11-08T09:50:00-06:00"
@@ -28,8 +28,8 @@ Diabetes follow-up.
     "type": "billing_dx",
     "visit_id": "V-2024-110878",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_2": {
     "type": "billing_dx",

@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01KHYF735GDHZ02XPKBZWWGATY"
+id: "01KHYEXY6G6XF1VRHW1TEGXAM2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00176879"
-effective: "2026-02-20T15:27:00-06:00"
-recorded: "2026-02-20T15:27:42-06:00"
+effective: "2026-02-20T15:22:00-06:00"
+recorded: "2026-02-20T15:22:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-38999",
+    "med_id": "ML-44932",
     "action": "hold",
     "origin": "northgate",
     "drug": { "name": "losartan potassium 50 MG Oral Tablet", "rxnorm": "979485" },
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "K 6.3 confirmed on repeat",
     "review_on": "2026-03-06",
-    "visit_id": "V-2026-022093"
+    "visit_id": "V-2026-022087"
   }
 }
 ```

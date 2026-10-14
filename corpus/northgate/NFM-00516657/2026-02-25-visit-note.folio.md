@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KJAY5RC0G89N0J5D8WGB6MZ2"
+id: "01KJAY5RC0RPW6FGHHY5VGFP02"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00516657"
 effective: "2026-02-25T09:15:00-06:00"
@@ -22,20 +22,20 @@ amlodipine: started 5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-022522",
+    "visit_id": "V-2026-022595",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-022522",
+    "visit_id": "V-2026-022595",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-022522",
+    "visit_id": "V-2026-022595",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

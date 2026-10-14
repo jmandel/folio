@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G936ZD1G72RGA3BMHVH6ZQGH"
+id: "01G936ZD1GYE230D8061EXH6Z1"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00089203"
 effective: "2022-07-28T15:11:00-05:00"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-12730",
+    "med_id": "ML-17745",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "amlodipine 5 MG Oral Tablet", "rxnorm": "197361" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2022-072834"
+    "visit_id": "V-2022-072857"
   }
 }
 ```

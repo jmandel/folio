@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JQ7QSNN0Y7G138H8QVJ6QG69"
+id: "01JQ7QSNN07A9JQVYNQR98385E"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00312161"
 effective: "2025-03-25T14:15:00-05:00"
@@ -16,29 +16,29 @@ schema:
 ---
 Diabetes follow-up.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.1)
+empagliflozin: started 10 mg daily today (A1c 8.3, CKD)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-032563",
+    "visit_id": "V-2025-032551",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032563",
+    "visit_id": "V-2025-032551",
     "rank": 1,
-    "icd10cm": "N18.31",
-    "display": "Chronic kidney disease, stage 3a"
+    "icd10cm": "E11.22",
+    "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-032563",
+    "visit_id": "V-2025-032551",
     "rank": 2,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
+    "icd10cm": "N18.31",
+    "display": "Chronic kidney disease, stage 3a"
   }
 }
 ```

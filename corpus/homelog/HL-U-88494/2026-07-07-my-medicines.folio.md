@@ -78,8 +78,17 @@ My Medicines, saved 7 July 2026.
   "med_7": {
     "type": "my_med",
     "homelog_med_id": "med_7",
-    "name": "Ibuprofen",
-    "picked_from_search": { "rxnorm": "310965", "display": "ibuprofen 200 MG Oral Tablet" },
+    "name": "Empagliflozin",
+    "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
+    "strength_text": "10 mg",
+    "how_i_take_it": "morning",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_8": {
+    "type": "my_med",
+    "homelog_med_id": "med_8",
+    "name": "Advil",
     "strength_text": "200 mg",
     "how_i_take_it": "2 when my back hurts, a few times a week",
     "status": "taking",

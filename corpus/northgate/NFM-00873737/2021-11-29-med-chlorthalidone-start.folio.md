@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01FNPBGQPGT4YXP5HY09054D3G"
+id: "01FNPBEX3G3R7JZ4DTTGEMDJ7E"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00873737"
-effective: "2021-11-29T11:22:00-06:00"
-recorded: "2021-11-29T11:22:42-06:00"
+effective: "2021-11-29T11:21:00-06:00"
+recorded: "2021-11-29T11:21:42-06:00"
 author:
   id: "urn:northgate-fm.example:staff:treyes"
   name: "Teresa Reyes, MD"
@@ -20,7 +20,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-35968",
+    "med_id": "ML-19753",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "chlorthalidone 25 MG Oral Tablet", "rxnorm": "197499" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1/2 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2021-112939"
+    "visit_id": "V-2021-112948"
   }
 }
 ```

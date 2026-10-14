@@ -14,11 +14,7 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-New pt, establishing care. Brings history from prior practice.
-BP 129/82, pulse 66, wt 203 lb.
-Labs today: eGFR 72, K 4.3, A1c 7.2%.
-Reviewed problem list with pt, entered today.
-RTC 3 mo.
+New patient, establish care.
 
 ```json payload
 {
@@ -32,6 +28,13 @@ RTC 3 mo.
     "type": "billing_dx",
     "visit_id": "V-2019-082258",
     "rank": 1,
+    "icd10cm": "E11.9",
+    "display": "Type 2 diabetes mellitus without complications"
+  },
+  "dx_2": {
+    "type": "billing_dx",
+    "visit_id": "V-2019-082258",
+    "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   }

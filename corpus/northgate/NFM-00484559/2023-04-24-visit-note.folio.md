@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01GYTFAZA00BJ9WXPCBAK3ZQPZ"
+id: "01GYTFAZA0FXVSA81160CD277F"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00484559"
 effective: "2023-04-24T13:30:00-05:00"
@@ -14,23 +14,23 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u after AKI. Feels back to baseline.
-BP 146/78, repeat 144/75, pulse 84, wt 181 lb.
-Hydrochlorothiazide resumed today (creatinine back to baseline). Losartan resumed today (creatinine back to baseline).
-Recheck BP at next visit.
-RTC 3 mo.
+Hosp f/u.
+
+hydrochlorothiazide: resumed today (creatinine back to baseline)
+
+losartan: resumed today (creatinine back to baseline)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-042456",
+    "visit_id": "V-2023-042448",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-042456",
+    "visit_id": "V-2023-042448",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"

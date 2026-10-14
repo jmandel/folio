@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HMFD5YY0CTPZ51MJ0KSNF5HF"
+id: "01HMFD5YY0C7J8FPVWX1QJQVSA"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00147542"
 effective: "2024-01-15T09:58:00Z"
@@ -25,7 +25,7 @@ schema:
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6709726",
+    "encounter_id": "RRH-ENC-6091462",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -54,7 +54,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24018-8820",
+    "accession": "L24018-0560",
     "collected": "2024-01-18T12:12:00Z",
     "specimen": "serum",
     "status": "final",
@@ -122,12 +122,12 @@ schema:
     "sig": "1 tab PO daily",
     "status": "continue"
   },
-  "med_semaglutide": {
+  "med_glargine": {
     "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
+    "drug_name": "insulin glargine 100 units/mL pen",
+    "rxnorm_ingredient": "274783",
+    "dose_text": "10 units",
+    "sig": "10 units SubQ nightly",
     "status": "continue"
   },
   "med_losartan": {

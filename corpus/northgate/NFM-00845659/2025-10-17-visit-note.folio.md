@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K7SSQ1J0G03HHRNV9DPE2AKR"
+id: "01K7SSQ1J07TG76H00TA825XQX"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00845659"
 effective: "2025-10-17T11:00:00-05:00"
@@ -37,14 +37,6 @@ Diabetes follow-up.
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2025-101763",
-    "rank": 3,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

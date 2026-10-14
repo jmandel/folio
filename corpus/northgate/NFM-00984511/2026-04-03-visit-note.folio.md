@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KNANW2Y0WP1W8EGRGKJM9QMA"
+id: "01KNANW2Y0R2G5TR135AJHWQXD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00984511"
 effective: "2026-04-03T13:10:00-05:00"
@@ -22,23 +22,23 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-040333",
+    "visit_id": "V-2026-040396",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-040333",
+    "visit_id": "V-2026-040396",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-040333",
+    "visit_id": "V-2026-040396",
     "rank": 2,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

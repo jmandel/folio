@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FZ96J8S0FYMJDTZY4XQ7NK5Q"
+id: "01FZ96J8S0C4C3JG06G0TVHGVR"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00634370"
 effective: "2022-03-28T11:45:00-05:00"
@@ -20,38 +20,23 @@ BP follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-032816",
+    "visit_id": "V-2022-032822",
     "visit_type": "office",
     "reason": "BP follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-032816",
+    "visit_id": "V-2022-032822",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2022-032816",
-    "rank": 2,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
-  "dx_3": {
+  "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2022-032816",
-    "rank": 3,
+    "visit_id": "V-2022-032822",
+    "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
-  },
-  "dx_4": {
-    "type": "billing_dx",
-    "visit_id": "V-2022-032816",
-    "rank": 4,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

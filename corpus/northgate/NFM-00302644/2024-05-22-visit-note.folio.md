@@ -37,8 +37,8 @@ empagliflozin: started 10 mg daily today (A1c 8.6)
     "type": "billing_dx",
     "visit_id": "V-2024-052231",
     "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
+    "icd10cm": "E78.5",
+    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

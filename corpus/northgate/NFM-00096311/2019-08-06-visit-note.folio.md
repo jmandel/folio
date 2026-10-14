@@ -16,7 +16,7 @@ schema:
 ---
 New patient, establish care.
 
-insulin glargine: started 10 units at bedtime today (A1c 8.4)
+dulaglutide: started 0.5 mg weekly today (A1c 8.4)
 
 ```json payload
 {
@@ -32,13 +32,6 @@ insulin glargine: started 10 units at bedtime today (A1c 8.4)
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
-  },
-  "dx_2": {
-    "type": "billing_dx",
-    "visit_id": "V-2019-080666",
-    "rank": 2,
-    "icd10cm": "E11.9",
-    "display": "Type 2 diabetes mellitus without complications"
   }
 }
 ```

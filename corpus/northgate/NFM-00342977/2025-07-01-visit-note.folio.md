@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JZ3XA580H3D5C690DDDVFRA4"
+id: "01JZ3XA580CKC55R6H2MB9S6DF"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00342977"
 effective: "2025-07-01T11:45:00-05:00"
@@ -14,30 +14,32 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-Hosp f/u, euglycemic DKA associated with the SGLT2 inhibitor. Feels back to baseline.
-BP 142/78, repeat 138/75, pulse 73, wt 177 lb.
-Dapagliflozin stopped today, entered as adverse reaction (euglycemic diabetic ketoacidosis).
+Hosp f/u.
+
 <ref id="sick_day">Sick-day rules reviewed.</ref>
-RTC 3 mo.
+
+dapagliflozin: stopped today (euglycemic DKA)
+
+dapagliflozin adverse reaction: euglycemic diabetic ketoacidosis
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-070145",
+    "visit_id": "V-2025-070123",
     "visit_type": "office",
     "reason": "Hosp f/u"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070145",
+    "visit_id": "V-2025-070123",
     "rank": 1,
     "icd10cm": "Z09",
     "display": "Follow-up exam after completed treatment"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-070145",
+    "visit_id": "V-2025-070123",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

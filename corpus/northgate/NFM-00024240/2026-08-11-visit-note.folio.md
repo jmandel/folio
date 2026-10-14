@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KZSAJA20PJ2GJESRWH6T3V95"
+id: "01KZSAJA20FCSENZJ6AS5SG1Y2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00024240"
 effective: "2026-08-11T10:45:00-05:00"
@@ -16,24 +16,26 @@ schema:
 ---
 Annual exam.
 
+metformin: dose changed to 1000 mg twice daily today (A1c 8.5)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-081161",
+    "visit_id": "V-2026-081173",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-081161",
+    "visit_id": "V-2026-081173",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-081161",
+    "visit_id": "V-2026-081173",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

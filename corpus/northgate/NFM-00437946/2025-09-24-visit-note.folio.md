@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K5YPJP40XZKTS6X3MAQ96V9C"
+id: "01K5YPJP404A3DNNWVTQ1XY6RJ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00437946"
 effective: "2025-09-24T13:00:00-05:00"
@@ -16,48 +16,43 @@ schema:
 ---
 Annual exam.
 
+insulin glargine: started 10 units at bedtime today (A1c 8.5)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-092468",
+    "visit_id": "V-2025-092449",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-092468",
+    "visit_id": "V-2025-092449",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-092468",
+    "visit_id": "V-2025-092449",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-092468",
+    "visit_id": "V-2025-092449",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2025-092468",
+    "visit_id": "V-2025-092449",
     "rank": 4,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
-  },
-  "dx_5": {
-    "type": "billing_dx",
-    "visit_id": "V-2025-092468",
-    "rank": 5,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01EYYE5PY0YCBPD7FY1ZVHQD4W"
+id: "01EYYE5PY0HZDD9PVQ259P9DQ2"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00437946"
 effective: "2021-02-19T13:30:00-06:00"
@@ -22,20 +22,20 @@ lisinopril: dose changed to 20 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-021964",
+    "visit_id": "V-2021-021967",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-021964",
+    "visit_id": "V-2021-021967",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-021964",
+    "visit_id": "V-2021-021967",
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"

@@ -18,7 +18,7 @@ New patient, establish care.
 
 metformin: dose changed to 500 mg twice daily today (eGFR 40)
 
-insulin glargine: started 10 units at bedtime today (A1c 8.4)
+dulaglutide: started 0.5 mg weekly today (A1c 8.4)
 
 ```json payload
 {

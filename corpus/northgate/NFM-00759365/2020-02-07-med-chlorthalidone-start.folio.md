@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01E0GGEXFGKYRP90CE45KBD2JZ"
+id: "01E0GGEXFGCH3CQCKFYAZHKAEP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00759365"
 effective: "2020-02-07T13:01:00-06:00"
@@ -14,13 +14,13 @@ schema:
   type: "ChartEvent"
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
-<ref id="med_1">BP above goal. Chlorthalidone started, 12.5 mg daily.</ref>
+<ref id="med_1">start chlorthalidone: BP above goal.</ref>
 
 ```json payload
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-40647",
+    "med_id": "ML-40484",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "chlorthalidone 25 MG Oral Tablet", "rxnorm": "197499" },
@@ -28,7 +28,7 @@ schema:
     "frequency": "QD",
     "sig": "Take 1/2 tablet by mouth daily",
     "reason_text": "BP above goal",
-    "visit_id": "V-2020-020781"
+    "visit_id": "V-2020-020762"
   }
 }
 ```

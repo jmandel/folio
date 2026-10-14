@@ -28,8 +28,9 @@ New patient, establish care.
     "type": "billing_dx",
     "visit_id": "V-2023-122658",
     "rank": 1,
-    "icd10cm": "I10",
-    "display": "Essential (primary) hypertension"
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

@@ -37,14 +37,6 @@ Chronic care visit.
     "rank": 2,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
-  },
-  "dx_3": {
-    "type": "billing_dx",
-    "visit_id": "V-2022-062939",
-    "rank": 3,
-    "icd10cm": "F33.0",
-    "display": "Major depressive disorder, recurrent, mild",
-    "restricted": "BH"
   }
 }
 ```

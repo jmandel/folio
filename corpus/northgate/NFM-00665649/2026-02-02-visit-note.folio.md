@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KGGNMV10ARS8VWC8R96G1VSX"
+id: "01KGGNMV1019AWD62GQCH8J2AW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00665649"
 effective: "2026-02-02T14:20:00-06:00"
@@ -16,26 +16,24 @@ schema:
 ---
 Chronic care visit.
 
-insulin glargine: dose changed to 14 units at bedtime today (A1c 8.7)
-
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-020228",
+    "visit_id": "V-2026-020292",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-020228",
+    "visit_id": "V-2026-020292",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-020228",
+    "visit_id": "V-2026-020292",
     "rank": 2,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

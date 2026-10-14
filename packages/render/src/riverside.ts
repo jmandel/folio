@@ -34,6 +34,10 @@ const LABS: Record<Analyte, LabDef> = {
   platelets: { code: "PLT", loinc: "777-3", name: "Platelets", unit: "10*3/uL", range: () => "150-400", dec: 0 },
   a1c: { code: "A1C", loinc: "4548-4", name: "Hemoglobin A1c", unit: "%", range: () => "4.0-5.6", dec: 1 },
   uacr: { code: "UACR", loinc: "9318-7", name: "Albumin/creatinine ratio", unit: "mg/g", range: () => "<30", dec: 0 },
+  cholesterol: { code: "CHOL", loinc: "2093-3", name: "Cholesterol", unit: "mg/dL", range: () => "<200", dec: 0 },
+  triglycerides: { code: "TRIG", loinc: "2571-8", name: "Triglycerides", unit: "mg/dL", range: () => "<150", dec: 0 },
+  hdl: { code: "HDL", loinc: "2085-9", name: "HDL cholesterol", unit: "mg/dL", range: () => ">39", dec: 0 },
+  ldl: { code: "LDLC", loinc: "13457-7", name: "LDL cholesterol, calculated", unit: "mg/dL", range: () => "<100", dec: 0 },
 };
 
 const PANELS: Record<string, { local_code: string; loinc?: string; name: string }> = {

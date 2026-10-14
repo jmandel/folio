@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01HH5JDG20240QH6KFPJEX5XYA"
+id: "01HH5JDG20WFXEB3Y7J4KEXB8X"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00312161"
 effective: "2023-12-08T10:02:00-06:00"
@@ -26,13 +26,13 @@ amlodipine: started 5 mg daily today (replacing lisinopril (angioedema))
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2023-120887",
+    "visit_id": "V-2023-120871",
     "visit_type": "office",
     "reason": "ED follow-up: angioedema"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2023-120887",
+    "visit_id": "V-2023-120871",
     "rank": 1,
     "icd10cm": "T78.3XXA",
     "display": "Angioneurotic edema, initial encounter"

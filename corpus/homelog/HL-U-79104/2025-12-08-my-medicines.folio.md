@@ -40,16 +40,6 @@ My Medicines, saved 8 December 2025.
   "med_3": {
     "type": "my_med",
     "homelog_med_id": "med_3",
-    "name": "Semaglutide",
-    "picked_from_search": { "rxnorm": "1991302", "display": "semaglutide" },
-    "strength_text": "1 mg pen",
-    "how_i_take_it": "once a week, Sunday",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_4": {
-    "type": "my_med",
-    "homelog_med_id": "med_4",
     "name": "Losartan",
     "picked_from_search": { "rxnorm": "979485", "display": "losartan potassium 50 MG Oral Tablet" },
     "strength_text": "50 mg",
@@ -57,10 +47,10 @@ My Medicines, saved 8 December 2025.
     "status": "taking",
     "kind": "prescription"
   },
-  "med_5": {
+  "med_4": {
     "type": "my_med",
-    "homelog_med_id": "med_5",
-    "name": "Jardiance",
+    "homelog_med_id": "med_4",
+    "name": "Empagliflozin",
     "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
@@ -69,10 +59,10 @@ My Medicines, saved 8 December 2025.
     "kind": "prescription",
     "note": "euglycemic DKA"
   },
-  "med_6": {
+  "med_5": {
     "type": "my_med",
-    "homelog_med_id": "med_6",
-    "name": "Ibuprofen",
+    "homelog_med_id": "med_5",
+    "name": "Advil",
     "picked_from_search": { "rxnorm": "310965", "display": "ibuprofen 200 MG Oral Tablet" },
     "strength_text": "200 mg",
     "how_i_take_it": "2 when my back hurts, a few times a week",

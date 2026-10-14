@@ -34,9 +34,18 @@ My Medicines, saved 8 May 2026.
     "type": "my_med",
     "homelog_med_id": "med_2",
     "name": "Lipitor",
-    "picked_from_search": { "rxnorm": "617311", "display": "atorvastatin 40 MG Oral Tablet" },
     "strength_text": "40 mg",
     "how_i_take_it": "bedtime",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_3": {
+    "type": "my_med",
+    "homelog_med_id": "med_3",
+    "name": "Empagliflozin",
+    "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
+    "strength_text": "10 mg",
+    "how_i_take_it": "morning",
     "status": "taking",
     "kind": "prescription"
   }

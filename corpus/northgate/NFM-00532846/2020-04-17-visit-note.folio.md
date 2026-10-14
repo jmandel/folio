@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01E64RJY10BPCPX17DMPM6BKQJ"
+id: "01E64RJY103021JJYY7RKYG5MP"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00532846"
 effective: "2020-04-17T09:20:00-05:00"
@@ -20,27 +20,27 @@ Annual exam.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-041795",
+    "visit_id": "V-2020-041761",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041795",
+    "visit_id": "V-2020-041761",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041795",
+    "visit_id": "V-2020-041761",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2020-041795",
+    "visit_id": "V-2020-041761",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

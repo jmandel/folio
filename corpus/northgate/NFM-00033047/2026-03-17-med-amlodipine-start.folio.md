@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KKYP23AG2KWFRPPNACK8HY67"
+id: "01KKYP23AGHPS59DGT5MDMEWHB"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00033047"
 effective: "2026-03-17T14:58:00-05:00"
@@ -19,7 +19,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-42713",
+    "med_id": "ML-41878",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "amlodipine 10 MG Oral Tablet", "rxnorm": "308135" },

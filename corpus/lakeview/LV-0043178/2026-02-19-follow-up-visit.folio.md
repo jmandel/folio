@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KHW8J9F0Q8MZ2CA16T3CVDSZ"
+id: "01KHW8J9F0ZHVMGNWVHKD7B0QE"
 issuer: "did:web:lakeview-labs.example"
 patient: "LV-0043178"
 effective: "2026-02-19T11:40:00-06:00"
@@ -12,7 +12,7 @@ author:
 schema:
   url: "https://lakeview-labs.example/folio/schemas/lakeview-v1.d.ts"
   type: "ClinicRow"
-  sha256: "b823507917ec647381f06ddbfc088123747e9ca94e38173b0dc2a3203d0868ad"
+  sha256: "e884e9fb615bfd349db84eb77033d4a6175aa14694e8462cd769a9285a8bb252"
 ---
 - <ref id="bp_sys">BP 136/80, HR 85, weight 102.3 kg at 2026-02-19 11:44</ref>
 - <ref id="dx_ckd">Chronic kidney disease (stage 3a A1), onset 2022-09-17</ref>
@@ -25,7 +25,7 @@ schema:
 {
   "visit": {
     "type": "CLINIC_VISIT",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "VISIT_TYPE": "FU",
     "VISIT_AT": "2026-02-19T11:40:00-06:00",
     "PROVIDER_NPI": "1999000066",
@@ -34,7 +34,7 @@ schema:
   },
   "dx_ckd": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "DX_RANK": 1,
     "ICD10CM": "N18.31",
     "DX_TEXT": "Chronic kidney disease, stage 3a",
@@ -42,7 +42,7 @@ schema:
   },
   "dx_dm": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "DX_RANK": 2,
     "ICD10CM": "E11.22",
     "DX_TEXT": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
@@ -50,7 +50,7 @@ schema:
   },
   "dx_htn": {
     "type": "VISIT_DX",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "DX_RANK": 3,
     "ICD10CM": "I12.9",
     "DX_TEXT": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
@@ -58,7 +58,7 @@ schema:
   },
   "bp_sys": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "VITAL_CODE": "BPS",
     "VALUE_NUM": 136,
     "UNIT_CODE": "mmHg",
@@ -67,7 +67,7 @@ schema:
   },
   "bp_dia": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "VITAL_CODE": "BPD",
     "VALUE_NUM": 80,
     "UNIT_CODE": "mmHg",
@@ -76,7 +76,7 @@ schema:
   },
   "hr": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "VITAL_CODE": "HR",
     "VALUE_NUM": 85,
     "UNIT_CODE": "/min",
@@ -85,7 +85,7 @@ schema:
   },
   "wt": {
     "type": "VITAL",
-    "VISIT_ID": "NV-105056",
+    "VISIT_ID": "NV-119863",
     "VITAL_CODE": "WT",
     "VALUE_NUM": 102.3,
     "UNIT_CODE": "kg",

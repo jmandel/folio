@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01K0FJMGM0HCMXMVMBE601290Z"
+id: "01K0FJMGM0PCJWJKS9ZJR9QD1T"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00283863"
 effective: "2025-07-18T10:30:00-05:00"
@@ -18,36 +18,44 @@ Annual exam.
 
 metformin: stopped today (eGFR 29)
 
-insulin glargine: started 10 units at bedtime today (A1c 8.3)
+insulin glargine: started 10 units at bedtime today (A1c 8.8)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2025-071811",
+    "visit_id": "V-2025-071886",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2025-071811",
+    "visit_id": "V-2025-071886",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2025-071811",
+    "visit_id": "V-2025-071886",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2025-071811",
+    "visit_id": "V-2025-071886",
     "rank": 3,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
+  },
+  "dx_4": {
+    "type": "billing_dx",
+    "visit_id": "V-2025-071886",
+    "rank": 4,
+    "icd10cm": "F33.0",
+    "display": "Major depressive disorder, recurrent, mild",
+    "restricted": "BH"
   }
 }
 ```

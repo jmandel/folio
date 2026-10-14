@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J1TMT110K8DPF6EHJ4N9H20D"
+id: "01J1TMT110E3DZJR3HSMWTXGX5"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00968157"
 effective: "2024-07-02T10:50:00-05:00"
@@ -22,37 +22,30 @@ metformin: dose changed to 500 mg twice daily today (eGFR 45)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2024-070294",
+    "visit_id": "V-2024-070262",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2024-070294",
+    "visit_id": "V-2024-070262",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2024-070294",
+    "visit_id": "V-2024-070262",
     "rank": 2,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2024-070294",
+    "visit_id": "V-2024-070262",
     "rank": 3,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"
-  },
-  "dx_4": {
-    "type": "billing_dx",
-    "visit_id": "V-2024-070294",
-    "rank": 4,
-    "icd10cm": "E78.5",
-    "display": "Hyperlipidemia, unspecified"
   }
 }
 ```

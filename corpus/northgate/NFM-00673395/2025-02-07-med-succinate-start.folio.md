@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JKH532BG58EEWS83W8QTTXQF"
+id: "01JKH532BGKQE5P24VFFSDA31S"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00673395"
 effective: "2025-02-07T15:29:00-06:00"
@@ -19,7 +19,7 @@ schema:
 {
   "med_1": {
     "type": "med_event",
-    "med_id": "ML-32509",
+    "med_id": "ML-25107",
     "action": "start",
     "origin": "northgate",
     "drug": { "name": "24 HR metoprolol succinate 50 MG Extended Release Oral Tablet", "rxnorm": "866436" },

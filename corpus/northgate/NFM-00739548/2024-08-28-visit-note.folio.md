@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01J6D3Z1F0374QT6J699VKE2GZ"
+id: "01J6D3Z1F04ZY1VCNGHC86DTDW"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00739548"
 effective: "2024-08-28T10:30:00-05:00"
@@ -15,6 +15,8 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Diabetes follow-up.
+
+metformin: dose changed to 1000 mg twice daily today (A1c 8.3)
 
 ```json payload
 {

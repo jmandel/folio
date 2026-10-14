@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01G90GMWN06CKRK0C0QBQ63VEV"
+id: "01G90GMWN0NK3HW6H138AKGXJ8"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00801357"
 effective: "2022-07-27T11:20:00-05:00"
@@ -16,21 +16,19 @@ schema:
 ---
 Chronic care visit.
 
-metformin: dose changed to 1000 mg twice daily today (A1c 8.4)
-
 lisinopril: dose changed to 20 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2022-072773",
+    "visit_id": "V-2022-072716",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2022-072773",
+    "visit_id": "V-2022-072716",
     "rank": 1,
     "icd10cm": "N18.31",
     "display": "Chronic kidney disease, stage 3a"

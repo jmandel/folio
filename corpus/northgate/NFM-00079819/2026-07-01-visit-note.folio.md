@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KWFPE820RY6JT3FDPZPRY9E6"
+id: "01KWFPE820TBAFK2FKX1NAC4ZD"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00079819"
 effective: "2026-07-01T13:10:00-05:00"
@@ -22,13 +22,13 @@ chlorthalidone: started 12.5 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-070191",
+    "visit_id": "V-2026-070155",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-070191",
+    "visit_id": "V-2026-070155",
     "rank": 1,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

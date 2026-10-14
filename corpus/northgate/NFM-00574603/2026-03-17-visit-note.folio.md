@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KKYCGVR0RCDG248CMQZSN4TK"
+id: "01KKYCGVR0583MCAS53Z71FH4J"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00574603"
 effective: "2026-03-17T09:45:00-05:00"
@@ -16,11 +16,13 @@ schema:
 ---
 Diabetes follow-up.
 
+dapagliflozin: started 10 mg daily today (A1c 8.6)
+
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-031742",
+    "visit_id": "V-2026-031794",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   }

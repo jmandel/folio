@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JT1NRCX0284AE0ANYWA9YD5E"
+id: "01JT1NRCX0R76WG8R1DPZ2JFFW"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00827796"
 effective: "2025-04-29T19:43:00Z"
@@ -14,25 +14,18 @@ schema:
   type: "RiversideEntry"
   sha256: "3c7974c615bd3549c9f0a077ac238a503fe8bc93e4d92c817c68a38719ccee33"
 ---
-## Endocrinology consult
+## Consult note
 
-**Reason for consult:** euglycemic DKA.
-
-**History.** The patient was admitted 4/28 with ketoacidosis, glucose 192 and beta-hydroxybutyrate 4.2 on arrival. The IV insulin infusion ran from 4/28 15:22 until 09:00 today. Allergy: lisinopril (cough).
-
-**Assessment and plan**
-
-1. <ref id="dx_dka">Euglycemic DKA, SGLT2 inhibitor-associated</ref>, improving. <ref id="sc_glargine">Insulin glargine 18 units subcutaneously daily, started 4/29 at 07:00,</ref> overlapped the infusion before it came off, and continues.
-2. <ref id="med_empagliflozin">Recommend against restarting empagliflozin at discharge.</ref> Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
-3. Metformin and hydrochlorothiazide are held; losartan and semaglutide continue, as in the primary team's orders.
-
-Thank you for this consult. We will follow along.
+- <ref id="dx_dka">diagnosis "Euglycemic DKA, SGLT2 inhibitor-associated", status active</ref>
+- <ref id="med_empagliflozin">home med empagliflozin 10 mg tablet, 10 mg 1 tab PO daily: held (advise_against) "Recommend against restarting at discharge"</ref>
+- <ref id="sc_glargine">inpatient order insulin glargine SubQ 18 units daily, started 4/29 07:00, still running (local times)</ref>
+- Endocrinology advises against restarting any SGLT2 inhibitor; a future re-challenge would need written sick-day guidance first.
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6322209",
+    "encounter_id": "RRH-ENC-6374142",
     "document_kind": "consult",
     "class": "inpatient",
     "service": "Endocrinology",
@@ -49,7 +42,7 @@ Thank you for this consult. We will follow along.
   "bhb_1": {
     "type": "result",
     "test": { "local_code": "BHB", "name": "Beta-hydroxybutyrate" },
-    "accession": "L25118-6863",
+    "accession": "L25118-1608",
     "collected": "2025-04-28T19:28:00Z",
     "specimen": "serum",
     "status": "final",
@@ -99,14 +92,6 @@ Thank you for this consult. We will follow along.
     "status": "held",
     "restart_advice": "advise_against",
     "instructions": "Recommend against restarting at discharge"
-  },
-  "med_semaglutide": {
-    "type": "home_med",
-    "drug_name": "semaglutide pen",
-    "rxnorm_ingredient": "1991302",
-    "dose_text": "0.5 mg",
-    "sig": "0.5 mg SubQ weekly",
-    "status": "continue"
   },
   "med_losartan": {
     "type": "home_med",

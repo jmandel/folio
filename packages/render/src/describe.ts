@@ -99,7 +99,7 @@ const CONDITION_WORDS: Record<string, string> = {
 const SHORT: Record<string, string> = {
   creatinine: "Cr", egfr: "eGFR", potassium: "K", sodium: "Na", chloride: "Cl", bicarbonate: "bicarbonate", "anion-gap": "anion gap", bun: "BUN",
   glucose: "glucose", a1c: "A1c", uacr: "UACR", platelets: "platelets", wbc: "WBC", hemoglobin: "Hgb", bhb: "beta-hydroxybutyrate", ph: "venous pH",
-  pco2: "pCO2", lipase: "lipase", troponin: "troponin I",
+  pco2: "pCO2", lipase: "lipase", troponin: "troponin I", cholesterol: "total cholesterol", triglycerides: "TG", hdl: "HDL", ldl: "LDL",
 };
 const UNIT: Record<string, string> = { a1c: "%", uacr: " mg/g", creatinine: "", egfr: "", potassium: "", sodium: "", glucose: "", platelets: "K", wbc: "K" };
 

@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JEW47VM0V33FZZXSQ3XZBCEJ"
+id: "01JEW47VM0WS4MJN9MFRTNMTKF"
 issuer: "did:web:riverside-regional.example"
 patient: "RRH-00453627"
 effective: "2024-12-09T01:30:00Z"
@@ -17,31 +17,19 @@ schema:
 ---
 ## Discharge summary
 
-**Diagnoses.** <ref id="dx_aki">Acute kidney injury, resolved.</ref> Hyperkalemia, resolved.
-
-**Hospital course.** The patient was admitted with diarrhea for four days, a creatinine of 1.67 and a potassium of 6.4. <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref> The potassium was treated in the ED and the patient received IV normal saline, with steady improvement. The home blood pressure and diabetes medicines that could contribute were held in hospital.
-
-**Condition at discharge.** Vitals on the day of discharge at 11:30: BP 121/73, HR 85, RR 17, T 98.7 F, SpO2 94%. The patient is eating and drinking normally and the diarrhea has stopped. The final panel, drawn at 06:20 on 12/11, showed sodium 136, potassium 5.0, chloride 99, bicarbonate 25, anion gap 12, urea nitrogen 34, creatinine 0.96, eGFR 85 and glucose 144.
-
-**Allergies:** NKDA.
-
-**Discharge medications**
-
-- <ref id="med_metformin">Metformin 500 mg twice daily with meals: continue.</ref>
-- Carvedilol 12.5 mg twice daily: continue.
-- Atorvastatin 40 mg nightly: continue.
-- <ref id="med_losartan">Losartan 100 mg daily: held; the PCP will decide on restarting after a repeat BMP.</ref>
-- <ref id="med_hydrochlorothiazide">Hydrochlorothiazide 25 mg daily: held; the PCP will decide after a repeat BMP.</ref>
-- <ref id="med_furosemide">Furosemide 40 mg daily: held; the PCP will decide after a repeat BMP.</ref>
-- <ref id="med_spironolactone">Spironolactone 25 mg daily: stopped.</ref>
-
-**Follow-up.** Primary care at Northgate Family Medicine within 1 week for a repeat BMP and a decision about restarting the held blood pressure medicines. The patient should return sooner for recurrent diarrhea, dizziness or weakness.
+- <ref id="med_hydrochlorothiazide">home med hydrochlorothiazide 25 mg tablet, 25 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
+- <ref id="med_furosemide">home med furosemide 40 mg tablet, 40 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide after a repeat BMP"</ref>
+- <ref id="med_losartan">home med losartan 100 mg tablet, 100 mg 1 tab PO daily: held (prescriber_decides) "PCP to decide on restarting after a repeat BMP"</ref>
+- <ref id="med_spironolactone">home med spironolactone 25 mg tablet, 25 mg 1 tab PO daily: stopped</ref>
+- <ref id="dx_aki">diagnosis "Acute kidney injury", status resolved</ref>
+- <ref id="med_metformin">home med metformin 500 mg tablet, 500 mg 1 tab PO BID with meals: continue</ref>
+- <ref id="precipitant">AKI attributed to volume depletion from diarrhea for four days while continuing the ARB and diuretic.</ref>
 
 ```json payload
 {
   "enc": {
     "type": "encounter",
-    "encounter_id": "RRH-ENC-6217776",
+    "encounter_id": "RRH-ENC-6987721",
     "document_kind": "discharge_summary",
     "class": "inpatient",
     "service": "Hospital Medicine",
@@ -77,7 +65,7 @@ schema:
   "bmp_dc": {
     "type": "panel",
     "panel": { "local_code": "BMP", "loinc": "51990-0", "name": "Basic metabolic panel" },
-    "accession": "L24346-8116",
+    "accession": "L24346-5944",
     "collected": "2024-12-11T12:20:00Z",
     "specimen": "serum",
     "status": "final",

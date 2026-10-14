@@ -14,7 +14,7 @@
       "status": "active",
       "since": "2024-11-26",
       "sources": ["B", "P"],
-      "basis": ["m_100"]
+      "basis": ["m_110"]
     },
     {
       "medication": "atorvastatin",
@@ -40,7 +40,7 @@
       "status": "active",
       "since": "2022-05-03",
       "sources": ["B", "P"],
-      "basis": ["m_54"]
+      "basis": ["m_57"]
     },
     {
       "medication": "empagliflozin",
@@ -56,6 +56,19 @@
       "basis": ["m_8"]
     },
     {
+      "medication": "insulin glargine",
+      "rxnorm_ingredient": "274783",
+      "product": "insulin glargine 100 UNT/ML Pen Injector",
+      "rxnorm_product": "847230",
+      "dose": { "value": 10, "unit": "units" },
+      "dose_text": "10 units",
+      "frequency": "QHS",
+      "status": "active",
+      "since": "2024-02-29",
+      "sources": ["B", "P"],
+      "basis": ["m_96"]
+    },
+    {
       "medication": "losartan",
       "rxnorm_ingredient": "52175",
       "product": "losartan potassium 100 MG Oral Tablet",
@@ -66,7 +79,7 @@
       "status": "active",
       "since": "2021-07-12",
       "sources": ["B", "P"],
-      "basis": ["m_33"]
+      "basis": ["m_34"]
     },
     {
       "medication": "metformin",
@@ -89,9 +102,9 @@
       "dose_text": "0.5 mg",
       "frequency": "QW",
       "status": "active",
-      "since": "2024-02-29",
+      "since": "2023-04-18",
       "sources": ["B", "P"],
-      "basis": ["m_86"]
+      "basis": ["m_76"]
     }
   ]
 }

@@ -12,7 +12,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_127"]
+      "basis": ["l_132"]
     },
     "potassium": {
       "analyte": "potassium",
@@ -23,7 +23,7 @@
       "collected_local_date": "2026-03-20",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_37"]
+      "basis": ["l_42"]
     },
     "chloride": {
       "analyte": "chloride",
@@ -34,7 +34,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_129"]
+      "basis": ["l_134"]
     },
     "bicarbonate": {
       "analyte": "bicarbonate",
@@ -45,7 +45,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_130"]
+      "basis": ["l_135"]
     },
     "anion-gap": {
       "analyte": "anion-gap",
@@ -56,7 +56,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_131"]
+      "basis": ["l_136"]
     },
     "bun": {
       "analyte": "bun",
@@ -67,7 +67,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_132"]
+      "basis": ["l_137"]
     },
     "creatinine": {
       "analyte": "creatinine",
@@ -78,7 +78,7 @@
       "collected_local_date": "2026-03-20",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_36"]
+      "basis": ["l_41"]
     },
     "egfr": {
       "analyte": "egfr",
@@ -91,7 +91,7 @@
       "equation": "ckd-epi-2021",
       "reported": [{ "equation": "ckd-epi-2021", "value": 41 }],
       "sources": ["B", "C"],
-      "basis": ["l_36_egfr"]
+      "basis": ["l_41_egfr"]
     },
     "glucose": {
       "analyte": "glucose",
@@ -102,7 +102,7 @@
       "collected_local_date": "2026-01-28",
       "setting": "inpatient",
       "sources": ["A"],
-      "basis": ["l_134"]
+      "basis": ["l_139"]
     },
     "uacr": {
       "analyte": "uacr",
@@ -113,18 +113,62 @@
       "collected_local_date": "2026-03-20",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_38"]
+      "basis": ["l_43"]
     },
     "a1c": {
       "analyte": "a1c",
-      "value": 7.4,
+      "value": 7.2,
       "unit": "%",
       "loinc": "4548-4",
       "collected": "2026-03-20T07:53:00-05:00",
       "collected_local_date": "2026-03-20",
       "setting": "outpatient",
       "sources": ["B", "C"],
-      "basis": ["l_39"]
+      "basis": ["l_44"]
+    },
+    "cholesterol": {
+      "analyte": "cholesterol",
+      "value": 178,
+      "unit": "mg/dL",
+      "loinc": "2093-3",
+      "collected": "2025-06-17T07:22:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_34"]
+    },
+    "triglycerides": {
+      "analyte": "triglycerides",
+      "value": 213,
+      "unit": "mg/dL",
+      "loinc": "2571-8",
+      "collected": "2025-06-17T07:22:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_35"]
+    },
+    "hdl": {
+      "analyte": "hdl",
+      "value": 54,
+      "unit": "mg/dL",
+      "loinc": "2085-9",
+      "collected": "2025-06-17T07:22:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_36"]
+    },
+    "ldl": {
+      "analyte": "ldl",
+      "value": 81,
+      "unit": "mg/dL",
+      "loinc": "13457-7",
+      "collected": "2025-06-17T07:22:00-05:00",
+      "collected_local_date": "2025-06-17",
+      "setting": "outpatient",
+      "sources": ["B", "C"],
+      "basis": ["l_37"]
     },
     "wbc": {
       "analyte": "wbc",
@@ -135,7 +179,7 @@
       "collected_local_date": "2026-01-24",
       "setting": "ed",
       "sources": ["A"],
-      "basis": ["l_102"]
+      "basis": ["l_107"]
     },
     "hemoglobin": {
       "analyte": "hemoglobin",
@@ -146,7 +190,7 @@
       "collected_local_date": "2026-01-24",
       "setting": "ed",
       "sources": ["A"],
-      "basis": ["l_103"]
+      "basis": ["l_108"]
     },
     "platelets": {
       "analyte": "platelets",
@@ -157,7 +201,7 @@
       "collected_local_date": "2026-01-24",
       "setting": "ed",
       "sources": ["A"],
-      "basis": ["l_104"]
+      "basis": ["l_109"]
     }
   }
 }

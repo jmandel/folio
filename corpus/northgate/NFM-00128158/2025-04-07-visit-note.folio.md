@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01JR8ZGZF0RPPJPJ5TRXWAEFPG"
+id: "01JR8ZGZF086C98ER269GHYR1Z"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00128158"
 effective: "2025-04-07T10:50:00-05:00"
@@ -15,6 +15,8 @@ schema:
   sha256: "6acf8173f46feaa52ea3fe53c95021debee891743166026f1f29596c2ce1b58b"
 ---
 Annual exam.
+
+dulaglutide: started 0.5 mg weekly today (A1c 8.1)
 
 ```json payload
 {

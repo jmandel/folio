@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01DWAS0Q306WD0JKJX6BNW80N4"
+id: "01DWAS0Q30KBN01V5JW2REAFWM"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00825789"
 effective: "2019-12-17T12:45:00-06:00"
@@ -22,27 +22,27 @@ lisinopril: dose changed to 40 mg daily today (BP above goal)
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2019-121787",
+    "visit_id": "V-2019-121786",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2019-121787",
+    "visit_id": "V-2019-121786",
     "rank": 1,
     "icd10cm": "N18.32",
     "display": "Chronic kidney disease, stage 3b"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2019-121787",
+    "visit_id": "V-2019-121786",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2019-121787",
+    "visit_id": "V-2019-121786",
     "rank": 3,
     "icd10cm": "E11.22",
     "display": "Type 2 diabetes mellitus with diabetic chronic kidney disease"

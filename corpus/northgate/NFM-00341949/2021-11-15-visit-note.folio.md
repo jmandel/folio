@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FMJKZN609NC9DEB9HW582KTF"
+id: "01FMJKZN60SVC92XE5CQR1GZ9K"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00341949"
 effective: "2021-11-15T12:40:00-06:00"
@@ -20,34 +20,34 @@ Diabetes follow-up.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-111592",
+    "visit_id": "V-2021-111532",
     "visit_type": "office",
     "reason": "Diabetes follow-up"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-111592",
+    "visit_id": "V-2021-111532",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2021-111592",
+    "visit_id": "V-2021-111532",
     "rank": 2,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2021-111592",
+    "visit_id": "V-2021-111532",
     "rank": 3,
     "icd10cm": "E78.5",
     "display": "Hyperlipidemia, unspecified"
   },
   "dx_4": {
     "type": "billing_dx",
-    "visit_id": "V-2021-111592",
+    "visit_id": "V-2021-111532",
     "rank": 4,
     "icd10cm": "I50.22",
     "display": "Chronic systolic (congestive) heart failure"

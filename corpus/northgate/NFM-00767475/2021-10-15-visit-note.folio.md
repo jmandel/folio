@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01FJ30JY105PDKR9H0JFHT8ATP"
+id: "01FJ30JY10ZXVZE7B0TBRFYHY4"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00767475"
 effective: "2021-10-15T12:20:00-05:00"
@@ -26,13 +26,13 @@ lisinopril intolerance: dry cough
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2021-101568",
+    "visit_id": "V-2021-101541",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2021-101568",
+    "visit_id": "V-2021-101541",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"

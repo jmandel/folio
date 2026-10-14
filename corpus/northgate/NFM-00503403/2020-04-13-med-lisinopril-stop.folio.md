@@ -1,10 +1,10 @@
 ---
 folio: "0.1"
-id: "01E5T2YZRGCEAJD5TFE54ZSNAN"
+id: "01E5T30TBGCEAJD5TFE54ZSNAN"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00503403"
-effective: "2020-04-13T10:36:00-05:00"
-recorded: "2020-04-13T10:36:42-05:00"
+effective: "2020-04-13T10:37:00-05:00"
+recorded: "2020-04-13T10:37:42-05:00"
 author:
   id: "urn:northgate-fm.example:staff:dkhan"
   name: "Daniel Khan, MD"
@@ -29,7 +29,7 @@ schema:
     "sig": "Take 1 tablet by mouth daily",
     "stop_reason": "adverse_reaction",
     "reason_text": "dry cough",
-    "visit_id": "V-2020-041386"
+    "visit_id": "V-2020-041322"
   }
 }
 ```

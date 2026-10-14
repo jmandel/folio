@@ -53,7 +53,17 @@ My Medicines, saved 25 December 2023.
   "med_4": {
     "type": "my_med",
     "homelog_med_id": "med_4",
-    "name": "Empagliflozin",
+    "name": "Semaglutide",
+    "picked_from_search": { "rxnorm": "1991302", "display": "semaglutide" },
+    "strength_text": "1 mg pen",
+    "how_i_take_it": "once a week, Sunday",
+    "status": "taking",
+    "kind": "prescription"
+  },
+  "med_5": {
+    "type": "my_med",
+    "homelog_med_id": "med_5",
+    "name": "Jardiance",
     "picked_from_search": { "rxnorm": "1545658", "display": "empagliflozin 10 MG Oral Tablet" },
     "strength_text": "10 mg",
     "how_i_take_it": "morning",
@@ -62,23 +72,13 @@ My Medicines, saved 25 December 2023.
     "kind": "prescription",
     "note": "euglycemic DKA"
   },
-  "med_5": {
+  "med_6": {
     "type": "my_med",
-    "homelog_med_id": "med_5",
+    "homelog_med_id": "med_6",
     "name": "Cozaar",
     "picked_from_search": { "rxnorm": "979485", "display": "losartan potassium 50 MG Oral Tablet" },
     "strength_text": "50 mg",
     "how_i_take_it": "morning",
-    "status": "taking",
-    "kind": "prescription"
-  },
-  "med_6": {
-    "type": "my_med",
-    "homelog_med_id": "med_6",
-    "name": "Ozempic",
-    "picked_from_search": { "rxnorm": "1991302", "display": "semaglutide" },
-    "strength_text": "1 mg pen",
-    "how_i_take_it": "once a week, Sunday",
     "status": "taking",
     "kind": "prescription"
   }

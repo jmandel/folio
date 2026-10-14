@@ -58,10 +58,10 @@ My Medicines, saved 17 April 2026.
   "med_5": {
     "type": "my_med",
     "homelog_med_id": "med_5",
-    "name": "Insulin glargine",
-    "picked_from_search": { "rxnorm": "847230", "display": "insulin glargine 100 UNT/ML Pen Injector" },
-    "strength_text": "100 units/mL pen",
-    "how_i_take_it": "10 units at bedtime",
+    "name": "Dulaglutide",
+    "picked_from_search": { "rxnorm": "1551291", "display": "dulaglutide" },
+    "strength_text": "1.5 mg pen",
+    "how_i_take_it": "once a week, Sunday",
     "status": "taking",
     "kind": "prescription"
   }

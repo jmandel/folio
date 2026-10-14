@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01KHMSEA60HN9AKQTTH32TEX4Z"
+id: "01KHMSEA60RM6Q37V7QJX2Q2MZ"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00302644"
 effective: "2026-02-16T15:10:00-06:00"
@@ -16,33 +16,35 @@ schema:
 ---
 Annual exam.
 
+dulaglutide: started 0.5 mg weekly today (A1c 8.1)
+
 lisinopril: dose changed to 40 mg daily today (BP above goal)
 
 ```json payload
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2026-021661",
+    "visit_id": "V-2026-021634",
     "visit_type": "office",
     "reason": "Annual exam"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2026-021661",
+    "visit_id": "V-2026-021634",
     "rank": 1,
     "icd10cm": "Z00.00",
     "display": "Encounter for general adult medical examination without abnormal findings"
   },
   "dx_2": {
     "type": "billing_dx",
-    "visit_id": "V-2026-021661",
+    "visit_id": "V-2026-021634",
     "rank": 2,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
   },
   "dx_3": {
     "type": "billing_dx",
-    "visit_id": "V-2026-021661",
+    "visit_id": "V-2026-021634",
     "rank": 3,
     "icd10cm": "E11.9",
     "display": "Type 2 diabetes mellitus without complications"

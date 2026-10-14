@@ -1,6 +1,6 @@
 ---
 folio: "0.1"
-id: "01ECB54M00BQYBKKZTVCDAAHN9"
+id: "01ECB54M0008VS5HS108HE6244"
 issuer: "did:web:northgate-fm.example"
 patient: "NFM-00924817"
 effective: "2020-07-03T10:30:00-05:00"
@@ -20,13 +20,13 @@ Chronic care visit.
 {
   "visit": {
     "type": "visit",
-    "visit_id": "V-2020-070371",
+    "visit_id": "V-2020-070334",
     "visit_type": "office",
     "reason": "Chronic care visit"
   },
   "dx_1": {
     "type": "billing_dx",
-    "visit_id": "V-2020-070371",
+    "visit_id": "V-2020-070334",
     "rank": 1,
     "icd10cm": "I10",
     "display": "Essential (primary) hypertension"
