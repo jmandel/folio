@@ -35,6 +35,13 @@
     "packages/render": {
       "name": "@folio/render",
     },
+    "packages/sharing": {
+      "name": "@folio/sharing",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@folio/core": "workspace:*",
+      },
+    },
     "packages/sync": {
       "name": "@folio/sync",
       "version": "0.1.0",
@@ -52,6 +59,7 @@
       "name": "@folio/site",
       "dependencies": {
         "@folio/core": "workspace:*",
+        "@folio/sharing": "workspace:*",
         "highlight.js": "11.11.1",
         "markdown-it": "14.1.0",
         "react": "19.1.0",
@@ -165,6 +173,8 @@
     "@folio/personal-agent": ["@folio/personal-agent@workspace:packages/personal-agent"],
 
     "@folio/render": ["@folio/render@workspace:packages/render"],
+
+    "@folio/sharing": ["@folio/sharing@workspace:packages/sharing"],
 
     "@folio/site": ["@folio/site@workspace:site"],
 

@@ -109,6 +109,13 @@ key and an audience is a candidate for the agent-to-agent stage.)
 
 A sync node serves each item as a presentation of all its units.
 
+Note (not normative). This profile does not say how a holder decides which units to show. The
+reference stack's sharing view lets the patient pick a policy (which sensitive topics stay private,
+whether medicines are listed anyway) and turns it into a decision per unit with rules over the
+codes and fields in each entry (`packages/sharing`). Whatever the policy, the result is a set of
+unit ids, and the presentation and its verification are as described here. A policy that
+withholds a unit can still change what the shown prose means; see [Context loss](#context-loss).
+
 ## Verification
 
 A receiver MUST:
