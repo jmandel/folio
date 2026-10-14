@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "nodes": "bun packages/sync/src/cli.ts",
     "agent": "bun packages/personal-agent/src/cli.ts",
-    "gen-keys": "bun packages/core/scripts/gen-dev-keys.ts"
+    "gen-keys": "bun packages/core/scripts/gen-dev-keys.ts",
+    "sign": "bun packages/render/src/cli/sign.ts"
   },
   "devDependencies": {
     "bun-types": "1.3.14",

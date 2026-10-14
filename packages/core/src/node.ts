@@ -25,7 +25,7 @@ export function loadDidDocument(keysDir: string): DidDocument {
   return JSON.parse(readFileSync(join(keysDir, "did.json"), "utf8"));
 }
 
-/** Recursively lists `*.folio.md` and `*.folio.json` files under a directory, sorted by path. */
+/** Recursively lists `*.folio.md`, `*.folio.json` and pre-signed `*.folio.sd-jwt` files under a directory, sorted by path. */
 export function listItemFiles(dir: string): string[] {
   const out: string[] = [];
   const walk = (d: string) => {
@@ -33,7 +33,7 @@ export function listItemFiles(dir: string): string[] {
       if (name.startsWith(".")) continue;
       const p = join(d, name);
       if (statSync(p).isDirectory()) walk(p);
-      else if (name.endsWith(".folio.md") || name.endsWith(".folio.json")) out.push(p);
+      else if (name.endsWith(".folio.md") || name.endsWith(".folio.json") || name.endsWith(".folio.sd-jwt")) out.push(p);
     }
   };
   walk(dir);
