@@ -1,9 +1,17 @@
 // Default reader view (spec/record-item.md#default-reader-view): every item not superseded or
 // retracted by another item from the same issuer. Works over any set of items, from any issuers.
 
-import { itemKey, type Envelope } from "./item.ts";
+import { itemKey } from "./item.ts";
 
-export interface ViewResult<T extends Envelope> {
+/** What the view needs from an item (an Item, an Envelope, or an index row). */
+export interface Linkable {
+  issuer: string;
+  id: string;
+  supersedes?: string[];
+  retracts?: string[];
+}
+
+export interface ViewResult<T extends Linkable> {
   /** Items in the default view, in input order. */
   current: T[];
   /** Hidden items: key → keys of the items that superseded it. */
@@ -19,7 +27,7 @@ export interface ViewResult<T extends Envelope> {
   conflicts: { item: string; by: string[] }[];
 }
 
-export function defaultView<T extends Envelope>(items: T[]): ViewResult<T> {
+export function defaultView<T extends Linkable>(items: T[]): ViewResult<T> {
   const byKey = new Map(items.map((it) => [itemKey(it), it]));
   const superseded = new Map<string, string[]>();
   const retracted = new Map<string, string[]>();
