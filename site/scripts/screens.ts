@@ -1,4 +1,4 @@
-// bun site/scripts/screens.ts [--no-screens] [--out work/stage4-screens] [--only home,record] [--full]
+// bun site/scripts/screens.ts [--no-screens] [--no-smoke] [--out work/stage4-screens] [--only home,record] [--full]
 //
 // Serves site/dist under /folio/ (as GitHub Pages will), then drives headless Chromium:
 //   1. smoke test: every shown patient's items verify in the browser (0 failures), a one-character
@@ -14,7 +14,7 @@ import { chromium, type Page } from "playwright-core";
 
 const ROOT = resolve(import.meta.dir, "../..");
 const DIST = join(ROOT, "site/dist");
-const { values } = parseArgs({ options: { "no-screens": { type: "boolean" }, full: { type: "boolean" }, only: { type: "string" }, out: { type: "string", default: "work/stage4-screens" } } });
+const { values } = parseArgs({ options: { "no-screens": { type: "boolean" }, "no-smoke": { type: "boolean" }, full: { type: "boolean" }, only: { type: "string" }, out: { type: "string", default: "work/stage4-screens" } } });
 if (!existsSync(join(DIST, "index.html"))) throw new Error("site/dist is missing: run `bun run site:build` first");
 
 const server = Bun.serve({
@@ -50,7 +50,7 @@ const fail = (m: string) => {
 };
 
 // ─── smoke test ────────────────────────────────────────────────────────────────────────────────
-{
+if (!values["no-smoke"]) {
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 720 } });
   const page = await ctx.newPage();
   page.on("pageerror", (e) => fail(`page error: ${e.message}`));
@@ -93,27 +93,98 @@ const fail = (m: string) => {
     const s = page.getByTestId("share-summary");
     return { ok: await s.getAttribute("data-ok"), total: await s.getAttribute("data-total"), withheld: +(await s.getAttribute("data-withheld"))!, text: (await s.innerText()).replace(/\s+/g, " ") };
   };
-  for (const [preset, expectWithheld, words] of [["private", 5, true], ["everything", 0, false], ["private_meds", 1, true]] as const) {
-    await page.goto("about:blank");
-    await page.goto(`${BASE}#/sharing?preset=${preset}`);
+  // What Linda reads is computed from the records and the current choice. For each state: the
+  // selected choice's text names exactly the withheld and shared sensitive things, only topics that
+  // occur are listed, and the context-loss note is present exactly when sertraline is withheld.
+  const HP = "your November 2024 hospital admission note";
+  const LV = "your July kidney-clinic note";
+  const TEXT = {
+    private: `The clinic will not see your depression diagnosis (in ${HP}) and sertraline (on three medicine lists and in one sentence of ${LV}). It will see everything else in these five records.`,
+    everything: "The clinic will see everything in these five records, including your depression diagnosis and sertraline.",
+    private_meds: `The clinic will not see your depression diagnosis (in ${HP}). It will see sertraline (on three medicine lists and in one sentence of ${LV}), and everything else in these five records. Doctors know what sertraline is usually taken for, so the clinic may guess why you take it.`,
+  };
+  const ABSENT = "These records contain nothing about alcohol or drug use, sexual or reproductive health, HIV or other sexually transmitted infections, or genetic tests.";
+  const state = async () => ({
+    preset: await page.getByTestId("policy-panel").getAttribute("data-preset"),
+    text: (await page.locator(".preset.on [data-testid='choice-text']").innerText()).replace(/\s+/g, " ").trim(),
+    topics: await page.locator("[data-testid='topics'] [data-topic]").evaluateAll((els) => els.map((e) => `${(e as HTMLElement).dataset.topic}:${(e as HTMLElement).dataset.private}`)),
+    topicText: (await page.getByTestId("topics").innerText()).replace(/\s+/g, " "),
+    contextLoss: await page.getByTestId("context-loss").count(),
+    suggestion: await page.getByTestId("suggestion").count(),
+  });
+  const expectState = async (name: string, want: { preset: string; text: string; priv: string; held: string[]; seen: string[]; loss: boolean; withheld: number }) => {
     await settle();
     const r = await summary();
-    const sugg = await page.getByTestId("suggestion").count();
-    if (r.ok !== r.total || r.withheld !== expectWithheld || (words && !/appears? nowhere/.test(r.text)) || sugg !== (preset === "private" ? 1 : 0))
-      fail(`sharing ${preset}: ${r.text} (withheld ${r.withheld}, suggestions ${sugg})`);
-    else console.log(`sharing ${preset}: ${r.text}`);
+    const st = await state();
+    const problems: string[] = [];
+    if (r.ok !== r.total) problems.push(`verified ${r.ok}/${r.total}`);
+    if (r.withheld !== want.withheld) problems.push(`withheld ${r.withheld}`);
+    if (st.preset !== want.preset) problems.push(`preset ${st.preset}`);
+    if (st.text !== want.text) problems.push(`text "${st.text}"`);
+    if (st.topics.join() !== `mental_health:${want.priv}`) problems.push(`topics ${st.topics.join()}`);
+    if (!st.topicText.includes(ABSENT)) problems.push("absent-topics line missing");
+    if (/Nothing in these records/.test(st.topicText)) problems.push("per-topic 'Nothing in these records' row");
+    const held = /Kept private: ([^.]*)\./.exec(st.topicText)?.[1] ?? "";
+    const seen = /The clinic will see: ([^.]*)\./.exec(st.topicText)?.[1] ?? "";
+    if (held !== want.held.join(" and ") || seen !== want.seen.join(" and ")) problems.push(`topic lines held "${held}" seen "${seen}"`);
+    if ((st.contextLoss > 0) !== want.loss || (st.suggestion > 0) !== want.loss) problems.push(`context-loss ${st.contextLoss}, suggestion ${st.suggestion}`);
+    if (want.loss && !(await page.getByTestId("context-loss").innerText()).includes("Chlorthalidone likely")) problems.push("context-loss quote missing");
+    if (problems.length) fail(`sharing ${name}: ${problems.join("; ")}`);
+    else console.log(`sharing ${name}: ${r.text}`);
+  };
+  const D = "your depression diagnosis", S = "sertraline";
+  for (const [preset, w] of [
+    ["private", { preset: "private", text: TEXT.private, priv: "1", held: [D, S], seen: [], loss: true, withheld: 5 }],
+    ["everything", { preset: "everything", text: TEXT.everything, priv: "0", held: [], seen: [D, S], loss: false, withheld: 0 }],
+    ["private_meds", { preset: "private_meds", text: TEXT.private_meds, priv: "1", held: [D], seen: [S], loss: false, withheld: 1 }],
+  ] as const) {
+    await page.goto("about:blank");
+    await page.goto(`${BASE}#/sharing?preset=${preset}`);
+    await expectState(preset, w);
+    if (preset === "private" && !/appears? nowhere/.test((await summary()).text)) fail("sharing private: withheld words found in what is sent");
   }
+  // Custom states from the topic toggle.
+  await page.goto("about:blank");
+  await page.goto(`${BASE}#/sharing`);
+  await settle();
+  await page.locator("[data-topic='mental_health'] input").click();
+  await expectState("custom (mental health unticked)", { preset: "custom", text: TEXT.everything, priv: "0", held: [], seen: [D, S], loss: false, withheld: 0 });
+  await page.goto("about:blank");
+  await page.goto(`${BASE}#/sharing?preset=everything`);
+  await settle();
+  await page.locator("[data-topic='mental_health'] input").click();
+  await expectState("custom (only mental health ticked)", { preset: "custom", text: TEXT.private, priv: "1", held: [D, S], seen: [], loss: true, withheld: 5 });
   // The suggested refinement re-shares the medicine and keeps the diagnosis private.
   await page.goto("about:blank");
   await page.goto(`${BASE}#/sharing`);
   await settle();
   await page.getByTestId("suggestion").getByRole("button").click();
-  await settle();
+  await expectState("after the suggestion", { preset: "private_meds", text: TEXT.private_meds, priv: "1", held: [D], seen: [S], loss: false, withheld: 1 });
+  // The recorded conversation: playing it sets its starting choice, the agreed change is applied,
+  // and changing settings afterwards is noticed.
   {
-    const r = await summary();
-    const preset = await page.getByTestId("policy-panel").getAttribute("data-preset");
-    if (r.ok !== r.total || r.withheld !== 1 || preset !== "private_meds") fail(`sharing refinement: ${r.text}, preset ${preset}`);
-    else console.log(`sharing refinement: ${r.text}`);
+    await page.goto("about:blank");
+    await page.goto(`${BASE}#/sharing?preset=everything&chat=1`);
+    await settle();
+    const chat = page.getByTestId("chat");
+    const chatState = async () => (await page.getByTestId("chat-state").innerText()).replace(/\s+/g, " ");
+    const problems: string[] = [];
+    if (!(await chatState()).includes("This example conversation starts from “Keep sensitive topics private”")) problems.push(`intro: ${await chatState()}`);
+    await chat.getByRole("button", { name: "Play" }).click();
+    await page.waitForSelector("[data-testid='policy-panel'][data-preset='private']", { timeout: 5_000 });
+    await page.waitForSelector("[data-testid='chat'][data-shown='2']", { timeout: 10_000 });
+    if ((await page.getByTestId("policy-panel").getAttribute("data-preset")) !== "private") problems.push("before agreement, choice is not private");
+    await page.waitForSelector("[data-testid='chat'][data-shown='6']", { timeout: 20_000 });
+    await page.waitForSelector("[data-testid='policy-panel'][data-preset='private_meds']", { timeout: 5_000 });
+    if (await chat.getAttribute("data-off-track")) problems.push("off track after replay");
+    await page.locator(".preset[data-preset='everything'] input").click();
+    await page.waitForSelector("[data-testid='chat'][data-off-track='1']", { timeout: 5_000 });
+    if (!(await chatState()).includes("no longer match")) problems.push(`after change: ${await chatState()}`);
+    await chat.getByRole("button", { name: "Replay from the start" }).click();
+    await page.waitForSelector("[data-testid='policy-panel'][data-preset='private']", { timeout: 5_000 });
+    if (await chat.getAttribute("data-off-track")) problems.push("off track after replaying");
+    if (problems.length) fail(`sharing chat: ${problems.join("; ")}`);
+    else console.log("sharing chat: replay sets “Keep sensitive topics private”, applies the agreed change, and notices later changes");
   }
   // Front page: every quoted item verifies, every citation resolves, and every link into the workbench lands.
   await page.goto(`${BASE}#/`);
@@ -195,6 +266,19 @@ if (!values["no-screens"]) {
     { name: "sharing-everything", hash: "#/sharing?preset=everything", prep: async (p) => void (await p.waitForSelector('[data-testid="share-summary"]')) },
     { name: "sharing-meds", hash: "#/sharing?preset=private_meds", prep: async (p) => void (await p.waitForSelector('[data-testid="share-summary"]')) },
     {
+      name: "sharing-custom",
+      hash: "#/sharing?preset=private_meds",
+      prep: async (p) => {
+        await p.waitForSelector('[data-testid="detail-layer"]');
+        await p.locator('[data-testid="detail-layer"] > summary').click();
+        await p.locator('.unit[data-key$="#na_sertraline"] input').click();
+        await p.waitForSelector('[data-testid="policy-panel"][data-preset="custom"]');
+        await p.locator('[data-testid="detail-layer"] > summary').click();
+        await p.waitForSelector(".caveat");
+        await p.evaluate(() => window.scrollTo(0, 0));
+      },
+    },
+    {
       name: "sharing-detail",
       hash: "#/sharing?detail=1",
       prep: async (p) => {
@@ -204,20 +288,28 @@ if (!values["no-screens"]) {
     },
     {
       name: "sharing-chat",
-      hash: "#/sharing?chat=recorded",
+      hash: "#/sharing?chat=recorded&turns=2",
       prep: async (p) => {
         await p.waitForSelector('[data-testid="chat-proposal"]');
-        await p.locator('[data-testid="chat"] .chat-msg.user').first().evaluate((e) => e.scrollIntoView({ block: "start" }));
+        await p.getByTestId("chat-state").evaluate((e) => window.scrollBy(0, e.getBoundingClientRect().top - 70));
       },
     },
     {
       name: "sharing-chat-applied",
       hash: "#/sharing?chat=recorded",
       prep: async (p) => {
-        await p.waitForSelector('[data-testid="chat-proposal"]');
-        await p.getByTestId("chat-proposal").last().getByRole("button", { name: "Apply" }).click();
         await p.waitForSelector('[data-testid="policy-panel"][data-preset="private_meds"]');
         await p.locator('[data-testid="chat-proposal"]').last().evaluate((e) => e.scrollIntoView({ block: "center" }));
+      },
+    },
+    {
+      name: "sharing-chat-stale",
+      hash: "#/sharing?chat=recorded",
+      prep: async (p) => {
+        await p.waitForSelector('[data-testid="policy-panel"][data-preset="private_meds"]');
+        await p.locator(".preset[data-preset='everything'] input").click();
+        await p.waitForSelector("[data-testid='chat'][data-off-track='1']");
+        await p.getByTestId("chat-state").evaluate((e) => e.scrollIntoView({ block: "center" }));
       },
     },
     { name: "sources", hash: "#/sources/lakeview?tab=schema" },

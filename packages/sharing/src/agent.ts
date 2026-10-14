@@ -4,7 +4,8 @@
 // a JSON policy. The site shows what the policy would do and applies it only when she says so.
 
 import { CATEGORIES, PRESETS, PURPOSE, presetOf, type CategoryId, type Policy } from "./categories.ts";
-import type { Decision, Suggestion } from "./policy.ts";
+import { decide, type Decision, type Suggestion } from "./policy.ts";
+import { describeShare } from "./describe.ts";
 import { RULES } from "./rules.ts";
 
 export interface ItemSummary {
@@ -13,6 +14,8 @@ export interface ItemSummary {
   title: string;
   source: string;
   date: string;
+  /** How Linda's app names it in a sentence ("your July kidney-clinic note"). */
+  name?: string;
   /** What is always shared with this item (issuer, author and role, type, dates, prose outside parts). */
   alwaysShared: string;
 }
@@ -28,7 +31,14 @@ export interface AgentContext {
 
 export function systemPrompt(ctx: AgentContext): string {
   const cats = CATEGORIES.map((c) => `- \`${c.id}\` (${c.label}): ${c.covers}`).join("\n");
-  const presets = PRESETS.map((p) => `- "${p.label}": clinic sees ${p.sees} Clinic does not see: ${p.notSees} Policy: ${JSON.stringify({ private: p.policy.private, shareMedicines: p.policy.shareMedicines })}`).join("\n");
+  const names = (key: string) => {
+    const it = ctx.items.find((i) => i.key === key);
+    return { name: it?.name ?? `the ${it?.title ?? key}`, medicineList: /medicine list/i.test(it?.name ?? "") };
+  };
+  const opts = { names, partLabel: (d: Decision) => ctx.partSummary(d).slice(0, 60), records: ctx.items.length };
+  const parts = ctx.decisions.map((d) => d.part);
+  const presets = PRESETS.map((p) => `- "${p.label}" ${JSON.stringify({ private: p.policy.private, shareMedicines: p.policy.shareMedicines })}: ${describeShare(decide(parts, p.policy), opts).text}`).join("\n");
+  const now = describeShare(ctx.decisions, opts).text;
   const rules = RULES.map((r) => `- ${r.id} → ${r.category} (${r.basis}): ${describeMatch(r.match)}. ${r.because}`).join("\n");
   const items = ctx.items
     .map((it) => {
@@ -70,7 +80,9 @@ The records she is sending and what the current policy does with each part:
 
 ${items}
 
-Current policy: ${JSON.stringify(ctx.policy)} (${presetOf(ctx.policy) === "custom" ? "custom" : `preset "${PRESETS.find((p) => p.id === presetOf(ctx.policy))!.label}"`})
+Current policy, as of this message: ${JSON.stringify(ctx.policy)} (${presetOf(ctx.policy) === "custom" ? "custom" : `preset "${PRESETS.find((p) => p.id === presetOf(ctx.policy))!.label}"`})
+What Linda's app tells her about the current policy: ${now}
+She can change her settings between messages. Earlier messages in this conversation may describe settings that no longer apply; always reason from the current policy above, and make any proposed policy a change to it.
 
 Concerns the site has found with the current policy:
 ${sugg}

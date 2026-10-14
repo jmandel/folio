@@ -55,8 +55,8 @@ export interface Suggestion {
   evidence: Decision[];
   /** The medicine names found in the withheld parts. */
   medicines: string[];
-  /** Apply this to the policy to take the suggestion. */
-  patch: Partial<Policy>;
+  /** The policy with the medicine shared and everything else unchanged. */
+  apply: (p: Policy) => Policy;
 }
 
 function mentions(d: Decision, names: string[]): string[] {
@@ -93,20 +93,26 @@ function resultValues(entry: unknown): { loinc: string; value: number }[] {
 }
 
 /**
- * Suggestions arise when the policy hides a medicine that may explain something the clinic will
- * see. Each suggests listing medicines while keeping the rest of the topic private.
+ * A context problem: the current decisions withhold a medicine that may explain something the
+ * clinic will see (sertraline withheld while a shared part shows low sodium). Each one comes with a
+ * fix that lists the medicine and keeps the rest of the topic private. Found from the decisions
+ * alone, so it holds for any choice, preset or not.
  */
-export function suggestions(decisions: Decision[], policy: Policy): Suggestion[] {
-  if (policy.shareMedicines) return [];
+export function suggestions(decisions: Decision[]): Suggestion[] {
   const out: Suggestion[] = [];
   for (const rule of CONTEXT_RULES) {
-    // Only parts the policy (not a per-part choice) withholds, and only ones the medicine switch would share.
-    const hidden = decisions.filter((d) => !d.share && d.via === "private" && d.medicineOnly && mentions(d, rule.medicines).length);
+    const hidden = decisions.filter((d) => !d.share && d.medicineOnly && mentions(d, rule.medicines).length);
     if (!hidden.length) continue;
     const evidence = decisions.filter((d) => d.share && shows(d, rule.shows));
     if (!evidence.length) continue;
     const medicines = [...new Set(hidden.flatMap((d) => mentions(d, rule.medicines)))];
-    out.push({ id: rule.id, rule, hidden, evidence, medicines, patch: { shareMedicines: true } });
+    const keys = new Set(hidden.map((d) => d.key));
+    const apply = (p: Policy): Policy => ({
+      ...p,
+      shareMedicines: true,
+      overrides: Object.fromEntries(Object.entries(p.overrides).filter(([k, v]) => !(keys.has(k) && v === "withhold"))),
+    });
+    out.push({ id: rule.id, rule, hidden, evidence, medicines, apply });
   }
   return out;
 }

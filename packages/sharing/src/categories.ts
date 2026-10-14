@@ -10,8 +10,10 @@ export interface Category {
   id: CategoryId;
   /** Short name shown on the toggle. */
   label: string;
-  /** What the category covers, in plain words. */
+  /** What the category covers, in plain words (for the agent and the notes). */
   covers: string;
+  /** The topic as it reads after "nothing about": "alcohol or drug use". */
+  about: string;
   /** HL7 v3 ActCode sensitivity codes this category corresponds to. */
   hl7: string[];
   /** Laws or rules that treat this topic specially (for the notes and the agent, not the patient). */
@@ -21,6 +23,7 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   {
     id: "mental_health",
+    about: "mental health",
     label: "Mental health",
     covers: "Depression, anxiety and other mental health conditions, and medicines mainly used for them, such as sertraline.",
     hl7: ["MH", "BH", "PSY"],
@@ -28,6 +31,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "substance_use",
+    about: "alcohol or drug use",
     label: "Alcohol and drug use",
     covers: "Alcohol or drug use problems and their treatment, such as methadone or buprenorphine. Tobacco is not included.",
     hl7: ["SUD", "ETH", "ETHUD", "OPIOIDUD"],
@@ -35,6 +39,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "sexual_reproductive",
+    about: "sexual or reproductive health",
     label: "Sexual and reproductive health",
     covers: "Pregnancy, birth control, fertility treatment, abortion and other sexual health care.",
     hl7: ["SEX", "PREGNANT"],
@@ -42,6 +47,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "hiv_sti",
+    about: "HIV or other sexually transmitted infections",
     label: "HIV and sexually transmitted infections",
     covers: "HIV status, HIV and STI tests and results, and the medicines that treat them.",
     hl7: ["HIV", "STD"],
@@ -49,6 +55,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "genetic",
+    about: "genetic tests",
     label: "Genetic test results",
     covers: "Genetic tests and inherited conditions found by them, such as a BRCA result.",
     hl7: ["GDIS"],
@@ -73,38 +80,17 @@ export type PresetId = "everything" | "private" | "private_meds";
 export interface Preset {
   id: PresetId;
   label: string;
-  /** What the clinic will see. */
-  sees: string;
-  /** What the clinic will not see. */
-  notSees: string;
   policy: Policy;
 }
 
 const ALL: CategoryId[] = CATEGORIES.map((c) => c.id);
 
+// What each choice shows and hides is not written here: it depends on the records being sent, so
+// the site describes it from the decisions (see describe.ts).
 export const PRESETS: Preset[] = [
-  {
-    id: "everything",
-    label: "Share everything",
-    sees: "Everything in these records, including any mental health, alcohol or drug use, sexual health, HIV or genetic information.",
-    notSees: "Nothing is held back.",
-    policy: { private: [], shareMedicines: false, overrides: {} },
-  },
-  {
-    id: "private",
-    label: "Keep sensitive topics private",
-    sees: "Your kidney, diabetes, blood pressure and hospital records, test results, and every medicine that is not tied to a private topic.",
-    notSees:
-      "Anything about mental health, alcohol or drug use, sexual and reproductive health, HIV and sexually transmitted infections, or genetic tests. That includes medicines used for these, such as sertraline.",
-    policy: { private: ALL, shareMedicines: false, overrides: {} },
-  },
-  {
-    id: "private_meds",
-    label: "Keep sensitive topics private, but list all my medicines",
-    sees: "Everything except the private topics, plus every medicine you take, including sertraline. Doctors know what most medicines are used for, so the clinic may guess why you take it.",
-    notSees: "Diagnoses, notes and test results about the private topics.",
-    policy: { private: ALL, shareMedicines: true, overrides: {} },
-  },
+  { id: "everything", label: "Share everything", policy: { private: [], shareMedicines: false, overrides: {} } },
+  { id: "private", label: "Keep sensitive topics private", policy: { private: ALL, shareMedicines: false, overrides: {} } },
+  { id: "private_meds", label: "Keep sensitive topics private, but list all my medicines", policy: { private: ALL, shareMedicines: true, overrides: {} } },
 ];
 
 export const DEFAULT_PRESET: PresetId = "private";

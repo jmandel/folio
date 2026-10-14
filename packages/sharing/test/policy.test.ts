@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
 import {
   CATEGORIES,
+  RECORDED_START,
+  absentText,
+  describeShare,
+  topicState,
   PRESETS,
   RECORDED,
-  applyPatch,
   classify,
   decide,
   icdMatches,
@@ -62,7 +65,7 @@ describe("referral items", () => {
   test("the policy suggests sharing the medicine because sertraline may explain the low sodium", () => {
     const policy = presetPolicy("private");
     const ds = decide(parts, policy);
-    const s = suggestions(ds, policy);
+    const s = suggestions(ds);
     expect(s.map((x) => x.id)).toEqual(["antidepressant-low-sodium"]);
     expect(s[0].medicines).toEqual(["sertraline"]);
     expect(s[0].hidden.map((d) => d.key).sort()).toEqual([`${DC}#med_sertraline`, `${HL}#med_5`, `${LV}#na_sertraline`, `${HP}#med_sertraline`].sort());
@@ -75,15 +78,15 @@ describe("referral items", () => {
 
   test("taking the suggestion re-shares the sertraline entries and keeps the diagnosis private", () => {
     const policy = presetPolicy("private");
-    const [s] = suggestions(decide(parts, policy), policy);
-    const refined = applyPatch(policy, s.patch);
+    const [s] = suggestions(decide(parts, policy));
+    const refined = s.apply(policy);
     expect(presetOf(refined)).toBe("private_meds");
     const ds = decide(parts, refined);
     expect(withheld(ds)).toEqual([`${HP}#hx_mdd`]);
     const med = ds.find((d) => d.key === `${HP}#med_sertraline`)!;
     expect(med.share).toBe(true);
     expect(med.via).toBe("medicine");
-    expect(suggestions(ds, refined)).toEqual([]);
+    expect(suggestions(ds)).toEqual([]);
   });
 
   test("an override wins over the policy", () => {
@@ -92,9 +95,12 @@ describe("referral items", () => {
     expect(withheld(decide(parts, p))).toEqual([`${HP}#hx_mdd`, `${LV}#na_sertraline`].sort());
   });
 
-  test("a withheld medicine chosen by override does not produce a suggestion", () => {
+  test("a medicine withheld by a per-part choice also produces a suggestion, and the fix drops that choice", () => {
     const p = { ...presetPolicy("everything"), overrides: { [`${HL}#med_5`]: "withhold" as const } };
-    expect(suggestions(decide(parts, p), p)).toEqual([]);
+    const [s, ...rest] = suggestions(decide(parts, p));
+    expect(rest).toEqual([]);
+    expect(s.hidden.map((d) => d.key)).toEqual([`${HL}#med_5`]);
+    expect(withheld(decide(parts, s.apply(p)))).toEqual([]);
   });
 });
 
@@ -152,7 +158,7 @@ describe("agent", () => {
       decisions: ds,
       partSummary: (d) => d.part.spanTexts[0] ?? d.part.id,
       policy,
-      suggestions: suggestions(ds, policy),
+      suggestions: suggestions(ds),
     });
     expect(prompt).toContain(`${HP}#hx_mdd`);
     expect(prompt).toContain("WITHHELD");
@@ -180,5 +186,106 @@ describe("agent", () => {
     const after = new Set(withheld(decide(parts, last.policy!)));
     expect([...before].filter((k) => !after.has(k)).length).toBe(4);
     expect([...after]).toEqual([`${HP}#hx_mdd`]);
+  });
+});
+
+// ─── what Linda reads ──────────────────────────────────────────────────────────────────────────
+
+describe("descriptions come from the records and the current choice", () => {
+  const parts = referralParts();
+  const NAMES: Record<string, { name: string; medicineList?: boolean }> = {
+    [HP]: { name: "your November 2024 hospital admission note" },
+    [DC]: { name: "your November 2024 hospital discharge summary" },
+    ["northgate/2024-11-12-visit-note.folio.md"]: { name: "your November 2024 primary-care visit note" },
+    [HL]: { name: "your May HomeLog medicine list", medicineList: true },
+    [LV]: { name: "your July kidney-clinic note" },
+  };
+  const opts = { names: (k: string) => NAMES[k], partLabel: (d: Decision) => d.part.spanTexts[0] ?? d.part.id, records: 5 };
+  const sum = (p: ReturnType<typeof presetPolicy>) => describeShare(decide(parts, p), opts);
+  const labels = (ms: { thing: { label: string } }[]) => ms.map((m) => m.thing.label);
+
+  test("keep sensitive topics private: names the diagnosis and sertraline, and where they are", () => {
+    const s = sum(presetPolicy("private"));
+    expect(labels(s.withheld)).toEqual(["your depression diagnosis", "sertraline"]);
+    expect(labels(s.shared)).toEqual([]);
+    expect(s.text).toBe(
+      "The clinic will not see your depression diagnosis (in your November 2024 hospital admission note) and sertraline (on three medicine lists and in one sentence of your July kidney-clinic note). It will see everything else in these five records.",
+    );
+  });
+
+  test("share everything: says the clinic sees the diagnosis and sertraline", () => {
+    const s = sum(presetPolicy("everything"));
+    expect(s.withheld).toEqual([]);
+    expect(labels(s.shared)).toEqual(["your depression diagnosis", "sertraline"]);
+    expect(s.text).toBe("The clinic will see everything in these five records, including your depression diagnosis and sertraline.");
+  });
+
+  test("list all my medicines: hides the diagnosis, shows sertraline", () => {
+    const s = sum(presetPolicy("private_meds"));
+    expect(labels(s.withheld)).toEqual(["your depression diagnosis"]);
+    expect(labels(s.shared)).toEqual(["sertraline"]);
+    expect(s.text).toBe(
+      "The clinic will not see your depression diagnosis (in your November 2024 hospital admission note). It will see sertraline (on three medicine lists and in one sentence of your July kidney-clinic note), and everything else in these five records. Doctors know what sertraline is usually taken for, so the clinic may guess why you take it.",
+    );
+  });
+
+  test("a custom choice is described the same way", () => {
+    const p = { ...presetPolicy("private_meds"), overrides: { [`${LV}#na_sertraline`]: "withhold" as const } };
+    const s = sum(p);
+    expect(presetOf(p)).toBe("custom");
+    expect(s.withheld.map((m) => `${m.thing.label} (${m.where})`)).toEqual([
+      "your depression diagnosis (in your November 2024 hospital admission note)",
+      "sertraline (in one sentence of your July kidney-clinic note)",
+    ]);
+    expect(s.shared.map((m) => `${m.thing.label} (${m.where})`)).toEqual(["sertraline (on three medicine lists)"]);
+    expect(topicState(s, "mental_health")).toEqual({
+      seen: ["sertraline (on three medicine lists)"],
+      hidden: ["your depression diagnosis", "sertraline (in one sentence of your July kidney-clinic note)"],
+    });
+    // Unticking mental health from the default leaves nothing private in these records.
+    const off = { ...presetPolicy("private"), private: presetPolicy("private").private.filter((c) => c !== "mental_health") };
+    expect(presetOf(off)).toBe("custom");
+    expect(sum(off).text).toBe(sum(presetPolicy("everything")).text);
+  });
+
+  test("only mental health occurs; the other four go in one line", () => {
+    const s = sum(presetPolicy("private"));
+    expect(s.present).toEqual(["mental_health"]);
+    expect(absentText(s)).toBe(
+      "These records contain nothing about alcohol or drug use, sexual or reproductive health, HIV or other sexually transmitted infections, or genetic tests.",
+    );
+    expect(topicState(s, "mental_health")).toEqual({ seen: [], hidden: ["your depression diagnosis", "sertraline"] });
+    expect(topicState(sum(presetPolicy("private_meds")), "mental_health")).toEqual({ seen: ["sertraline"], hidden: ["your depression diagnosis"] });
+    expect(topicState(sum(presetPolicy("everything")), "mental_health")).toEqual({ seen: ["your depression diagnosis", "sertraline"], hidden: [] });
+  });
+
+  test("the record set drives the description", () => {
+    const fewer = parts.filter((p) => p.item !== LV && p.item !== HL);
+    const s = describeShare(decide(fewer, presetPolicy("private")), { ...opts, records: 3 });
+    expect(s.text).toBe(
+      "The clinic will not see your depression diagnosis (in your November 2024 hospital admission note) and sertraline (on two medicine lists). It will see everything else in these three records.",
+    );
+  });
+
+  test("the context problem exists exactly when sertraline is withheld", () => {
+    const cases: [string, ReturnType<typeof presetPolicy>, number][] = [
+      ["private", presetPolicy("private"), 1],
+      ["everything", presetPolicy("everything"), 0],
+      ["private_meds", presetPolicy("private_meds"), 0],
+      ["custom: one sentence withheld", { ...presetPolicy("private_meds"), overrides: { [`${LV}#na_sertraline`]: "withhold" } }, 1],
+      ["custom: mental health shared", { ...presetPolicy("private"), private: ["genetic"] }, 0],
+    ];
+    for (const [name, p, n] of cases) {
+      const ds = decide(parts, p);
+      const sertralineHidden = ds.some((d) => !d.share && /sertraline/i.test(JSON.stringify(d.part)));
+      expect([name, suggestions(ds).length]).toEqual([name, n]);
+      expect([name, sertralineHidden]).toEqual([name, n > 0]);
+    }
+  });
+
+  test("the recorded conversation starts from the default choice", () => {
+    expect(RECORDED_START).toBe("private");
+    expect(RECORDED.filter((t) => t.applies).length).toBe(1);
+    expect(RECORDED.find((t) => t.applies)!.role).toBe("assistant");
   });
 });
